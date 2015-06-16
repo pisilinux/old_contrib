@@ -1,0 +1,84 @@
+<PISI>
+    <Source>
+        <Name>lxqt-common</Name>
+        <Homepage>http://www.lxde.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>data</IsA>
+        <Summary>Common data to run a LXQt session.</Summary>
+        <Description>Common data file required for running an lxde-qt session</Description>
+        <Archive sha1sum="0bd727c31495c055c83a2c6a06b201a7707341a5" type="targz">http://downloads.lxqt.org/lxqt/0.9.1/lxqt-common-0.9.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>liblxqt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lxqt-common</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>lxqt-panel</Dependency>
+            <Dependency>lxqt-session</Dependency>
+            <Dependency>libfm-qt</Dependency>
+            <Dependency>pcmanfm-qt</Dependency>
+            <Dependency>pisilinux-default-settings-lxqt</Dependency>
+            <Dependency>lxqt-policykit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/themes/lxqt</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/desktop-directories/lxqt-leave.directory">lxqt-leave.directory</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/desktop-directories/lxqt-settings.directory">lxqt-settings.directory</AdditionalFile>
+        </AdditionalFiles>
+        <Replaces>
+            <Package>lxde-common</Package>
+            <Package>gpicview</Package>
+            <Package>lxlauncher</Package>
+            <Package>lxtask</Package>
+            <Package>lxqt-config-randr</Package>
+        </Replaces>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2015-05-13</Date>
+            <Version>0.9.1</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            <Email>vedat@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2015-02-10</Date>
+            <Version>0.9.0</Version>
+            <Comment>version bump and compiled qt5</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            <Email>vedat@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-11-07</Date>
+            <Version>0.8.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            <Email>vedat@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2014-05-02</Date>
+            <Version>0.7.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Vedat Demir</Name>
+            <Email>vedat@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

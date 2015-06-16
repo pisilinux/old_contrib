@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xfce4-smartbookmark-plugin</Name>
+        <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-smartbookmark-plugin</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A plugin allows you to send requests directly to your browser to make search</Summary>
+        <Description>xfce4-smartbookmark-plugin is a plugin allows you to send requests directly to your browser and perform a custom search.</Description>
+        <Archive sha1sum="fc6bf7fd82193fcceb5398a597dcc24fc1bf9958" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.4/xfce4-smartbookmark-plugin-0.4.6.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xfce4-panel-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xfce4-smartbookmark-plugin</Name>
+        <RuntimeDependencies>
+            <Dependency>xfce4-panel</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libxfce4util</Dependency>
+            <Dependency>libxfce4ui</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/xfce4</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2015-03-24</Date>
+            <Version>0.4.6</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2015-03-05</Date>
+            <Version>0.4.5</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2013-08-17</Date>
+            <Version>0.4.4</Version>
+            <Comment>Dep Fixed</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-05-05</Date>
+            <Version>0.4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

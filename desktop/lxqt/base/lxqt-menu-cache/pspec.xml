@@ -1,0 +1,85 @@
+<PISI>
+    <Source>
+        <Name>lxqt-menu-cache</Name>
+        <Homepage>http://lxde.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app</IsA>
+        <Summary>freedesktop.org desktop menus for LXDE</Summary>
+        <Description>Library used to read freedesktop.org menus</Description>
+        <Archive sha1sum="e7b3854109f9826472cf9795e924acebe5e27861" type="tarxz">mirrors://sourceforge/lxde/menu-cache/1.0/menu-cache-1.0.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>libfm-extra</Dependency>
+            <Dependency>libfm-qt-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lxqt-menu-cache</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libfm-extra</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+        <Replaces>
+            <Package>lxde-menu-cache</Package>
+        </Replaces>
+    </Package>
+
+    <Package>
+        <Name>lxqt-menu-cache-devel</Name>
+        <Summary>Development files for lxqt-menu-cache</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+        <Replaces>
+            <Package>lxde-menu-cache-devel</Package>
+        </Replaces>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2015-05-22</Date>
+            <Version>1.0.0</Version>
+            <Comment>version bump to 1.0.0 from rc</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2015-02-10</Date>
+            <Version>1.0.0</Version>
+            <Comment>rebuild for qt5</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-11-07</Date>
+            <Version>1.0.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2014-05-02</Date>
+            <Version>0.5.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Vedat Demir</Name>
+            <Email>vedat@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
+

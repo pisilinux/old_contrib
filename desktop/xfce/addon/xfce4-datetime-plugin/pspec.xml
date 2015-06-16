@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xfce4-datetime-plugin</Name>
+        <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.xfce.addon</PartOf>
+        <Summary>This plugin shows the date and time in the panel</Summary>
+        <Description>xfce4-datetime-plugin shows the date and time in the panel, and a calendar appears when you left-click on it.</Description>
+        <Archive sha1sum="5a7e665fcfd06859c45e14b7063d719b5b26885f" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.6/xfce4-datetime-plugin-0.6.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>xfce4-panel-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xfce4-datetime-plugin</Name>
+        <RuntimeDependencies>
+            <Dependency>xfce4-panel</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxfce4ui</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxfce4util</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/xfce4</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2015-03-04</Date>
+            <Version>0.6.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2013-08-26</Date>
+            <Version>0.6.1</Version>
+            <Comment>Release bump.</Comment>
+            <Name>Serdar Soytetir</Name>
+            <Email>kaptan@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-05-03</Date>
+            <Version>0.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

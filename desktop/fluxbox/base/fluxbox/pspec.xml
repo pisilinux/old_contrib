@@ -33,7 +33,6 @@
     <Package>
         <Name>fluxbox</Name>
         <RuntimeDependencies>
-            <Dependency>xorg-server</Dependency>
             <Dependency>imlib2</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>libXext</Dependency>

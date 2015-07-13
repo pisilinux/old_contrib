@@ -8929,6 +8929,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
             <Description xml:lang="tr">perl-Linux-Desktopfiles masaüstü dosyalarını almak ve ayrıştırmak için Perl modülüdür</Description>
             <Archive type="targz" sha1sum="caf718ecfd2a219ccf84104b30df609ebf1d8e61">http://cpan.metacpan.org/authors/id/T/TR/TRIZEN/Linux-DesktopFiles-0.08.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>perl</Dependency>
                 <Dependency>perl-Module-Build</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/perl/perl-Linux-Desktopfiles/pspec.xml</SourceURI>
@@ -8936,6 +8937,7 @@ thunar-volman is installed and configured properly, and you plug in your digical
         <Package>
             <Name>perl-Linux-Desktopfiles</Name>
             <RuntimeDependencies>
+                <Dependency>perl</Dependency>
                 <Dependency>perl-Module-Build</Dependency>
                 <Dependency>perl-Data-Dump</Dependency>
             </RuntimeDependencies>

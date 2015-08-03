@@ -24,3 +24,8 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
     pisitools.dodoc("AUTHORS", "COPYING")
+    #pisitools.remove("/usr/include/libfm-1.0/fm-version.h")
+    pisitools.remove("/usr/include/libfm-1.0/fm-extra.h")
+    pisitools.remove("/usr/include/libfm-1.0/fm-xml-file.h")
+    pisitools.remove("/usr/lib/libfm-extra*")
+    pisitools.remove("/usr/lib/pkgconfig/libfm-extra.pc")

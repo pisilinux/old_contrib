@@ -12,11 +12,16 @@
         <Description>Daemon use for power management and auto-suspend.</Description>
         <Archive sha1sum="85082a36c14ae20fcff7dd9585e3cd9aa73cde00" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-powermanagement-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>upower-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">lid.patch</Patch>
@@ -29,6 +34,8 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>liblxqt</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-svg</Dependency>
         </RuntimeDependencies>
         <Files>

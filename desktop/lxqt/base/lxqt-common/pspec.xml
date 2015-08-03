@@ -29,6 +29,7 @@
             <Dependency>pcmanfm-qt</Dependency>
             <Dependency>pisilinux-default-settings-lxqt</Dependency>
             <Dependency>lxqt-policykit</Dependency>
+            <Dependency>icon-theme-compass</Dependency>  <!--for default icon theme-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -42,12 +43,6 @@
             <AdditionalFile owner="root" permission="0644" target="/usr/share/desktop-directories/lxqt-leave.directory">lxqt-leave.directory</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/desktop-directories/lxqt-settings.directory">lxqt-settings.directory</AdditionalFile>
         </AdditionalFiles>
-        <Replaces>
-            <Package>lxde-common</Package>
-            <Package>gpicview</Package>
-            <Package>lxlauncher</Package>
-            <Package>lxtask</Package>
-        </Replaces>
     </Package>
 
     <History>

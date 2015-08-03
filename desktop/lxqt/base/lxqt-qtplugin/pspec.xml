@@ -12,14 +12,20 @@
         <Description>LXDE-Qt platform integration plugin for Qt</Description>
         <Archive sha1sum="c0c66496e28343c22f2956232a2664aaa94660aa" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-qtplugin-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lxqt-qtplugin</Name>
         <RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

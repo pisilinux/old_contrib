@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Icewm
+Comment=Simple and fast window manger
+Exec=icewm-session
+Terminal=False
+TryExec=icewm
+
+[Window Manager]
+SessionManaged=true
+# vi: encoding=utf-8

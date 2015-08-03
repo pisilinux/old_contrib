@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>icewm</Name>
+        <Homepage>http://www.icewm.org/</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>A Window Manager designed for speed, usability, and consistency</Summary>
+        <Description>A Window Manager designed for speed, usability, and consistency</Description>
+        <Archive sha1sum="dc9155227129be14aced00c24c572356e0fa5cd8" type="targz">http://downloads.sourceforge.net/sourceforge/icewm/icewm-1.3.8.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXft-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>icewm-1.3.8-remain_power.patch</Patch>
+            <Patch>icewm-1.3.8-shutdown-reboot-command.patch</Patch>
+            <!--<Patch>icewm-cpustatus.patch</Patch>-->
+            <Patch>ignore_workarea_hints.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>icewm</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXinerama</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/icewm-xdg-menu">icewm-xdg-menu</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/share/icewm/icewm-startup">icewm-startup</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/xsessions/icewm.desktop">icewm.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-07-24</Date>
+            <Version>1.3.8</Version>
+            <Comment>First release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

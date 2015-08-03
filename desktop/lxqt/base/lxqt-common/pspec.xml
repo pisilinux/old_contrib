@@ -29,7 +29,7 @@
             <Dependency>pcmanfm-qt</Dependency>
             <Dependency>pisilinux-default-settings-lxqt</Dependency>
             <Dependency>lxqt-policykit</Dependency>
-            <Dependency>icon-theme-compass</Dependency>  <!--for default icon theme-->
+            <Dependency>icon-theme-ardis</Dependency>  <!--for default icon theme-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>

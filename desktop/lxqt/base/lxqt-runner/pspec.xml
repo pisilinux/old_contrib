@@ -12,15 +12,25 @@
         <Description>Tool used to launch programs quickly by typing their names</Description>
         <Archive sha1sum="b82727e827a11ca0f8ecb4c3e5356648410cfab6" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-runner-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>liblxqt-devel</Dependency>
-            <Dependency>lxqt-globalkeys-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>lxqt-menu-cache-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-script-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>lxqt-globalkeys-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lxqt-runner</Name>
         <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>libqtxdg</Dependency>
             <Dependency>lxqt-menu-cache</Dependency>
             <Dependency>qt5-base</Dependency>

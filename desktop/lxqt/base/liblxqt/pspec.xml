@@ -12,9 +12,12 @@
         <Description>Core utility library for all LXDE-Qt components</Description>
         <Archive sha1sum="a36ca1d3d111e06925e02b5442322ba365bb2002" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/liblxqt-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>libgcc</Dependency>
             <Dependency>cmake</Dependency>
             <Dependency>glibc-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>pkgconfig</Dependency>
@@ -28,6 +31,7 @@
         <Name>liblxqt</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>libqtxdg</Dependency>
             <Dependency>kwindowsystem</Dependency>
         </RuntimeDependencies>
@@ -36,7 +40,7 @@
             <Path fileType="data">/usr/share</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="usr/share/lxqt/translations/liblxqt/liblxqt_tr">liblxqt_tr.qm</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/liblxqt/liblxqt_tr.qm">liblxqt_tr.qm</AdditionalFile>
         </AdditionalFiles>
     </Package>
 

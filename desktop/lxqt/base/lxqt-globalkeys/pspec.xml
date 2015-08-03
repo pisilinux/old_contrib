@@ -12,17 +12,23 @@
         <Description>LXQt daemon and library for global keyboard shortcuts registration.</Description>
         <Archive sha1sum="4fe35c70efb59f2578ddb99c1c9a137541c184f1" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-globalkeys-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>liblxqt</Dependency>
-            <Dependency>libX11</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lxqt-globalkeys</Name>
         <RuntimeDependencies>
-        <Dependency>qt5-base</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
             <Dependency>liblxqt</Dependency>
         </RuntimeDependencies>
         <Files>

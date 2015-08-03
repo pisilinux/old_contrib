@@ -12,7 +12,12 @@
         <Description>Notification daemon</Description>
         <Archive sha1sum="410afcfd88b6f9a8efbf11f95bf65806c652c876" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-notificationd-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -20,6 +25,7 @@
         <Name>lxqt-notificationd</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>liblxqt</Dependency>
             <Dependency>libqtxdg</Dependency>
             <Dependency>kwindowsystem</Dependency>

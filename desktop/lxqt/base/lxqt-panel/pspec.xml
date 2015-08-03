@@ -15,26 +15,21 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency>icu4c-devel</Dependency>
             <Dependency>liblxqt-devel</Dependency>
-            <Dependency>desktop-file-utils</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
             <Dependency>liblxqt-mount-devel</Dependency>
-            <Dependency>libqtxdg-devel</Dependency>
             <Dependency>libsysstat-devel</Dependency>
             <Dependency>lxqt-globalkeys-devel</Dependency>
             <Dependency>lxqt-menu-cache-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>libXcomposite-devel</Dependency>
             <Dependency>lm_sensors-devel</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>xcb-util-devel</Dependency>
-            <Dependency>network-manager-applet-devel</Dependency>
-            <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libstatgrab</Dependency>
-            <Dependency>libX11-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
             <Dependency>kguiaddons-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libXcomposite-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>cmake</Dependency>
         </BuildDependencies>
         <Patches>
             <!--Fixed menü event and some translations -->
@@ -45,7 +40,7 @@
     <Package>
         <Name>lxqt-panel</Name>
         <RuntimeDependencies>
-			<Dependency>glib2</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>kguiaddons</Dependency>

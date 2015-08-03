@@ -11,13 +11,17 @@
         <Summary>Library used to query system info and statistics</Summary>
         <Description>Library to query system statistics (net, resource usage, ...)</Description>
         <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
         <Archive sha1sum="aedfa4db99c231c79908fc22c302a693557c97b8" type="targz">http://downloads.lxqt.org/libsysstat/0.3.0/libsysstat-0.3.0.tar.gz</Archive>
     </Source>
     <Package>
         <Name>libsysstat</Name>
         <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

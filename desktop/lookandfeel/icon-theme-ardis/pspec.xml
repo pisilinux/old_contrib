@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>icon-theme-ardis</Name>
+        <Homepage>https://github.com/KotusWorks/Ardis-icon-theme</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>Ardis Icon Theme for DE</Summary>
+        <Description>Ardis Icon Theme for DE</Description>
+        <!--<Archive sha1sum="0204fe1a766a6ca72b902628c9e690bbdce001f4" type="targz">http://nitrux.in/downloads/files/free/compass-icon-theme-kde-1.3.3.tar.gz</Archive>-->
+        <Archive sha1sum="b30db2ac203832d9e80d78ccf0f450b50719defd" type="targz">/home/PisiLinux/İndirilenler/ardis-icon-theme-1.0.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>icon-theme-ardis</Name>
+        <Files>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+
+        <AdditionalFiles>
+            <!--<AdditionalFile target="/usr/share/icons/Compass/places/big/start-here-kde.svg">icons/scalable.svg</AdditionalFile>
+            <AdditionalFile target="/usr/share/icons/Compass/places/big/start-here-pisilinux.svg">icons/scalable.svg</AdditionalFile>
+            <AdditionalFile target="/usr/share/icons/Compass/places/big/distributor-logo-pisilinux.svg">icons/scalable.svg</AdditionalFile>
+            <AdditionalFile target="/usr/share/icons/Compass/actions/scalable/list-add.png">icons/list-add.png</AdditionalFile>
+            <AdditionalFile target="/usr/share/icons/Compass/actions/scalable/application-exit.png">icons/application-exit.png</AdditionalFile>-->
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-08-03</Date>
+            <Version>1.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

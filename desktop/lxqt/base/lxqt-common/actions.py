@@ -23,7 +23,7 @@ def install():
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
     pisitools.domove("/usr/=/usr/share/cmake", "/usr/share")
     pisitools.removeDir("/usr/=/")
-    pisitools.remove("/usr/share/desktop-directories/*.directory")        
+    pisitools.remove("/usr/share/desktop-directories/*.directory")
     #Removed default theme items for pisilinux-default-settings-lxqt
     pisitools.remove("/usr/share/lxqt/themes/Ambiance/mainmenu.svg")
     pisitools.remove("/usr/share/lxqt/themes/Dark/mainmenu.svg")

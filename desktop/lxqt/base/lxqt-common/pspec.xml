@@ -13,6 +13,9 @@
         <Archive sha1sum="0bd727c31495c055c83a2c6a06b201a7707341a5" type="targz">http://downloads.lxqt.org/lxqt/0.9.1/lxqt-common-0.9.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>liblxqt-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -44,7 +47,6 @@
             <Package>gpicview</Package>
             <Package>lxlauncher</Package>
             <Package>lxtask</Package>
-            <Package>lxqt-config-randr</Package>
         </Replaces>
     </Package>
 

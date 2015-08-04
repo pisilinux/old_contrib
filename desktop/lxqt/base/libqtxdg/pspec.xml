@@ -13,11 +13,13 @@
         <Archive sha1sum="e365261bcede47ff28265b5e260ac89d9bff0388" type="tarxz">http://downloads.lxqt.org/libqtxdg/1.2.0/libqtxdg-1.2.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libgcc</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>libqtxdg</Name>
         <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

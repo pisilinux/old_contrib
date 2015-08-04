@@ -12,7 +12,12 @@
         <Description>Image viewer and screenshot tool.</Description>
         <Archive sha1sum="208c8ad4d4580ea388fb18dbb02090d470b32250" type="targz">http://downloads.lxqt.org/lximage-qt/0.4.0/lximage-qt-0.4.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>pcmanfm-qt-devel</Dependency>
             <Dependency>libexif-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
@@ -29,6 +34,8 @@
             <Path fileType="executable">/usr/bin</Path>
         </Files>
         <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>libexif</Dependency>
             <Dependency>libfm-qt</Dependency>

@@ -12,13 +12,18 @@
         <Description>About dialog of LXDE-Qt</Description>
         <Archive sha1sum="fa9e29a1ab1594c5b213806fb24442e0c25b7855" type="tarxz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-about-0.9.0.tar.xz</Archive>
         <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
             <Dependency>liblxqt-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lxqt-about</Name>
         <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
             <Dependency>liblxqt</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>

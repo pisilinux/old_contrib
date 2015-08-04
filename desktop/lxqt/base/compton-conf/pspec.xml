@@ -16,6 +16,7 @@
             <Dependency>libconfig-devel</Dependency>
             <Dependency>pkgconfig</Dependency>
             <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
         </BuildDependencies>
     </Source>
     <Package>

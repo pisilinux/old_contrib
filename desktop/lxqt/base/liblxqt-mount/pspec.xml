@@ -12,16 +12,20 @@
         <Description>Core utility library for all LXDE-Qt components</Description>
         <Archive sha1sum="134047ced2f1f64ec0bf546e35b234d107d86aac" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/liblxqt-mount-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>libXfixes-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>liblxqt-mount</Name>
         <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>

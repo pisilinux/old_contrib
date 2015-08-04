@@ -12,6 +12,9 @@
         <Description>File manager and desktop icon manager (Qt port of PCManFM and libfm)</Description>
         <Archive sha1sum="1e28798978df395482fd904fa0212595486e6346" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/pcmanfm-qt-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb-devel</Dependency>
             <Dependency>libfm-qt-devel</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>lxqt-menu-cache-devel</Dependency>
@@ -19,6 +22,7 @@
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-tools-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
+            <Dependency>cmake</Dependency>
         </BuildDependencies>
         <Patches>
              <Patch>desktop.patch</Patch>
@@ -29,6 +33,9 @@
     <Package>
         <Name>pcmanfm-qt</Name>
         <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>libfm-qt</Dependency>
             <Dependency>qt5-x11extras</Dependency>

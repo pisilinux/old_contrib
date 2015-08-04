@@ -12,16 +12,21 @@
         <Description>The LXQt policykit authentication agent</Description>
         <Archive sha1sum="5bae535aad0c67ad40afac190405dc1279bc8c22" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-policykit-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>polkit-qt-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lxqt-policykit</Name>
         <RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
             <Dependency>polkit-qt</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>liblxqt</Dependency>

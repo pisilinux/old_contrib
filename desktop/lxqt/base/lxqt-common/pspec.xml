@@ -13,6 +13,9 @@
         <Archive sha1sum="0bd727c31495c055c83a2c6a06b201a7707341a5" type="targz">http://downloads.lxqt.org/lxqt/0.9.1/lxqt-common-0.9.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>liblxqt-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,6 +29,7 @@
             <Dependency>pcmanfm-qt</Dependency>
             <Dependency>pisilinux-default-settings-lxqt</Dependency>
             <Dependency>lxqt-policykit</Dependency>
+            <Dependency>icon-theme-ardis</Dependency>  <!--for default icon theme-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -39,13 +43,6 @@
             <AdditionalFile owner="root" permission="0644" target="/usr/share/desktop-directories/lxqt-leave.directory">lxqt-leave.directory</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/desktop-directories/lxqt-settings.directory">lxqt-settings.directory</AdditionalFile>
         </AdditionalFiles>
-        <Replaces>
-            <Package>lxde-common</Package>
-            <Package>gpicview</Package>
-            <Package>lxlauncher</Package>
-            <Package>lxtask</Package>
-            <Package>lxqt-config-randr</Package>
-        </Replaces>
     </Package>
 
     <History>

@@ -12,14 +12,21 @@
         <Description>An alternative session manager ported from the original razor-session</Description>
         <Archive sha1sum="f7a2681bc9596e5db889608f6ea4c969a14073da" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-session-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>cmake</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lxqt-session</Name>
         <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>libqtxdg</Dependency>
             <Dependency>liblxqt</Dependency>
             <Dependency>qt5-base</Dependency>

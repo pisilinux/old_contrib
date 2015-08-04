@@ -25,7 +25,8 @@
             <Dependency versionFrom="0.13.0">vala-devel</Dependency>
             <Dependency versionFrom="0.102">dbus-glib-devel</Dependency>
             <Dependency versionFrom="0.1.4">lxqt-menu-data</Dependency>
-            <Dependency versionFrom="1.0.5">udisks-devel</Dependency>
+            <Dependency>udisks2-devel</Dependency>
+            <Dependency>lxqt-menu-cache-devel</Dependency>
             <Dependency versionFrom="2.22.0">gtk2-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -46,10 +47,12 @@
         </Files>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>dbus-glib</Dependency>
             <Dependency>libfm-extra</Dependency>
+            <Dependency>lxqt-menu-cache</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>libexif</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
@@ -62,7 +65,9 @@
         <Name>libfm-qt-devel</Name>
         <Summary>Development headers for libfm-qt</Summary>
         <RuntimeDependencies>
+            <Dependency release="current">libfm-qt</Dependency>
             <Dependency>gtk2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include/libfm-1.0</Path>
@@ -73,18 +78,7 @@
             <Package>libfm-devel</Package>
         </Replaces>
     </Package>
-    <Package>
-        <Name>libfm-extra</Name>
-        <RuntimeDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>glib2</Dependency>
-        </RuntimeDependencies>
-        <Files>
-	    <Path fileType="library">/usr/lib/libfm-extra.so*</Path>
-	    <Path fileType="library">/usr/lib/pkgconfig/libfm-extra.pc</Path>
-            <Path fileType="header">/usr/include/libfm</Path>
-        </Files>
-    </Package>
+
     <History>
         <Update release="4">
             <Date>2015-05-13</Date>

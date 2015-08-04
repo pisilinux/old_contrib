@@ -12,6 +12,10 @@
         <Description>LXQt system administration tool</Description>
         <Archive sha1sum="786e9c303187ff961707e9108da80e39527dda78" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-admin-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+			<Dependency>glib2-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
             <Dependency>liboobs-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -19,6 +23,8 @@
     <Package>
         <Name>lxqt-admin</Name>
         <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>liblxqt</Dependency>
             <Dependency>liboobs</Dependency>

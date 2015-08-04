@@ -12,8 +12,7 @@ def setup():
     autotools.configure("--prefix=/usr     \
                          --sysconfdir=/etc \
                          --with-pam        \
-                         --with-systemdsystemunitdir=no \
-                         --enable-gtk3")
+                         --with-systemdsystemunitdir=no")
 
 def build():
     autotools.make()
@@ -23,5 +22,5 @@ def install():
 
     #install Pisi Linux default theme
     pisitools.insinto("/usr/share/lxdm/themes", "lxdm-pisilinux-theme")
-    pisitools.remove("/usr/share/lxdm/themes/lxdm-pisilinux-theme/login.png")
+    #pisitools.remove("/usr/share/lxdm/themes/lxdm-pisilinux-theme/login.png")
     pisitools.dodoc("COPYING", "AUTHORS", "TODO", "README", "ChangeLog", "NEWS")

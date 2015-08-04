@@ -1,0 +1,12 @@
+diff -Nuar yali-theme-pisilinux-0.4.orig/setup.py yali-theme-pisilinux-0.4/setup.py
+--- yali-theme-pisilinux-0.4.orig/setup.py	2014-08-04 23:46:14.000000000 +0300
++++ yali-theme-pisilinux-0.4/setup.py	2015-08-04 23:05:22.826854571 +0300
+@@ -19,7 +19,7 @@
+         build.run(self)
+ 
+         self.mkpath(self.build_base)
+-        self.spawn(["rcc", "-binary", "data.qrc", "-o", "%s/data.rcc" % self.build_base])
++        self.spawn(["rcc-qt4", "-binary", "data.qrc", "-o", "%s/data.rcc" % self.build_base])
+ 
+ 
+ class Install(install):

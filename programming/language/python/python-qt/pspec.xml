@@ -39,6 +39,7 @@
             <Dependency release="current">python3-qt</Dependency>
             <Dependency release="current">python3-qt-webkit</Dependency>
             <Dependency release="current">python3-qt-phonon</Dependency-->
+	    <Dependency>python-devel</Dependency>
             <Dependency>sip-devel</Dependency>
         </RuntimeDependencies>
         <Files>

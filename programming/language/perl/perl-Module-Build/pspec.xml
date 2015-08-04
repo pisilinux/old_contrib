@@ -23,7 +23,7 @@
         <Name>perl-Module-Build</Name>
         <RuntimeDependencies>
             <Dependency>perl</Dependency>
-            <Dependency>perl-docs</Dependency>
+            <!--Dependency>perl-docs</Dependency-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

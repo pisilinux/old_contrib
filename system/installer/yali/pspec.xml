@@ -39,9 +39,11 @@
             <Dependency>xfsprogs</Dependency>
             <Dependency>xdm</Dependency>
             <Dependency>comar</Dependency>
-            <!--Dependency>panda</Dependency-->
+            <Dependency>panda</Dependency>
+            <Dependency>zorg</Dependency>
             <Dependency>python-pyaspects</Dependency>
             <Dependency>pisilinux-python</Dependency>
+            <Dependency>pisilinux-python-xorg</Dependency>
             <Dependency>syslinux</Dependency>
             <Dependency>pyqtermwidget</Dependency>
             <!-- disable gfx family , find a proper solution for its menu generation -->
@@ -51,7 +53,7 @@
             <Dependency>yali-branding-pisilinux</Dependency>
             <Dependency>yali-theme-pisilinux</Dependency>
             <Dependency>python-udev</Dependency>
-            <!--Dependency>pisilinux-desktop-services</Dependency-->
+            <Dependency>pisilinux-desktop-services</Dependency>
             <!--
             pardusman should add locale packages according to the selected languages.
             IsA tags could be used to decide which packages to be installed.

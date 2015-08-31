@@ -12,7 +12,7 @@
         <IsA>data</IsA>
         <Summary>PiSi Linux theme files for YALI</Summary>
         <Description>yali-branding includes PiSi Linux theme files for YALI(Yet Another Linux Installer).</Description>
-        <Archive sha1sum="8de25ce1eee7fa692ca491505d2ad881b47b7c29" type="tarxz">http://source.pisilinux.org/1.0/yali-theme-pisilinux-0.4.tar.xz</Archive>
+        <Archive sha1sum="21638e502c96e45e4a9e63c540ca7dbc58b68946" type="tarxz">http://source.pisilinux.org/1.0/yali-theme-pisilinux-0.4.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>qt-devel</Dependency>
         </BuildDependencies>
@@ -31,7 +31,7 @@
 
     <History>
           <Update release="11">
-            <Date>2015-08-04</Date>
+            <Date>2015-08-31</Date>
             <Version>0.4</Version>
             <Comment>fix, ebuild for pisi-2.0, </Comment>
             <Name>Ertuğrul Erata</Name>

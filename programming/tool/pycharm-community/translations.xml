@@ -1,0 +1,7 @@
+<PISI>
+    <Source>
+        <Name>pycharm-community</Name>
+        <Summary xml:lang="tr">Güçlü bir Python ve Django IDE uygulamasıdır.</Summary>
+        <Description xml:lang="tr">Güçlü bir Python ve Django IDE uygulamasıdır. Topluluk sürümü.</Description>
+    </Source>
+</PISI>

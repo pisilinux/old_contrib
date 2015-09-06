@@ -1,0 +1,26 @@
+--- settings.conf.in	2015-08-20 13:04:29.576990406 +0300
++++ config/pcmanfm-qt/lxqt/settings.conf.in	2015-08-20 13:11:53.670000539 +0300
+@@ -1,11 +1,11 @@
+ [System]
+-IconThemeName=elementary
++IconThemeName=ardis
+ SuCommand=gksu %s
+ TerminalCommand=
+ Archiver=file-roller
+ SIUnit=false
+-TerminalDirCommand=xterm
+-TerminalExecCommand=xterm -e %s
++TerminalDirCommand=qterminal
++TerminalExecCommand=qterminal -e %s
+
+ [Behavior]
+ BookmarkOpenMethod=0
+@@ -15,7 +15,7 @@
+
+ [Desktop]
+ WallpaperMode=stretch
+-Wallpaper=@LXQT_SHARE_DIR@/themes/light/simple_blue_widescreen.png
++Wallpaper=@LXQT_SHARE_DIR@/themes/Dark/dark.png
+ BgColor=#000000
+ FgColor=#ffffff
+ ShadowColor=#000000

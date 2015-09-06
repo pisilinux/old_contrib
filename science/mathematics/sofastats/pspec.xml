@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sofastats</Name>
+        <Homepage>http://www.sofastatistics.com</Homepage>
+        <Packager>
+            <Name>Ayhan YALÇINSOY</Name>
+            <Email>ayhanyalcinsoyn@pisilinux.org</Email>
+        </Packager>
+        <License>AGPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>SOFA is a statistics, analysis, and reporting program.</Summary>
+        <Description>SOFA - Statistics Open For All The user-friendly, open-source statistics, analysis, and reporting package.</Description>
+        <Archive sha1sum="0143b92c19e89e2f749581ad0b1a101372d07ede" type="targz">http://skylink.dl.sourceforge.net/project/sofastatistics/sofastatistics/1.4.5/sofastats-1.4.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+            <Dependency>wxPython-devel</Dependency>
+            <Dependency>python-numpy</Dependency>
+            <Dependency>mysql-python</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sofastats</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>pyPdf</Dependency>
+            <Dependency>wxPython</Dependency>
+            <Dependency>mysql-python</Dependency>
+            <Dependency>python-numpy</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>postgresql-python</Dependency>
+            <Dependency>python-matplotlib</Dependency>
+            <Dependency>python-webkit-gtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+           <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/sofastats/</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="localedata">/usr/share/sofastats/locale/tr_TR/LC_MESSAGES/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/sofa.png">sofa.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/sofa.desktop">sofa.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/sofastats/locale/tr_TR/LC_MESSAGES/sofastats.mo">sofastats.mo</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2015-08-16</Date>
+            <Version>1.4.5</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan YALÇINSOY</Name>
+            <Email>ayhanyalcinsoyn@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2013-03-18</Date>
+            <Version>1.4.3</Version>
+            <Comment>First release</Comment>
+            <Name>Ayhan YALÇINSOY</Name>
+            <Email>ayhanyalcinsoyn@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

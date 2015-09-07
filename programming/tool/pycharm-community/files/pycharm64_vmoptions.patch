@@ -1,0 +1,9 @@
+--- pycharm64.vmoptions	2015-06-20 15:01:50.348682416 +0300
++++ bin/pycharm64.vmoptions	2015-06-20 15:02:34.859680141 +0300
+@@ -8,3 +8,5 @@
+ -Dsun.io.useCanonCaches=false
+ -Djava.net.preferIPv4Stack=true
+ -Dawt.useSystemAAFontSettings=lcd
++-Dawt.useSystemAAFontSettings=on
++-Dswing.aatext=true
+\ Dosya sonunda yenisatır yok.

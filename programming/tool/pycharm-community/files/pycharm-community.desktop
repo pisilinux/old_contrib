@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=PyCharm
+Name[tr]=Python IDE
+Icon=pycharm
+GenericName=Python and Django IDE
+GenericName[tr]=Python ve Django Geliştirme Ortamı
+Comment=Powerful Python and Django IDE. Community edition.
+Exec=/usr/bin/pycharm
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+StartupNotify=true
+StartupWMClass=jetbrains-pycharm

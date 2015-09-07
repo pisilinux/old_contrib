@@ -1,0 +1,62 @@
+<PISI>
+    <Source>
+        <Name>pycharm-community</Name>
+        <Homepage>https://www.jetbrains.com/pycharm</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>Apache</License>
+        <Icon>pycharm</Icon>
+        <IsA>app</IsA>
+        <Summary>Powerful Python and Django IDE. Community edition.</Summary>
+        <Description>Powerful Python and Django IDE. Community edition.</Description>
+        <Archive sha1sum="3b8b9946016a7ba583ef93ffbeed120ed0a648a0" type="targz">http://download.jetbrains.com/python/pycharm-community-4.5.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glibc-32bit</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>pycharm64_vmoptions.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>pycharm-community</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glibc-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="pixmap">/usr/share/pixmaps</Path>
+            <Path fileType="executable">/opt/pycharm-community/bin</Path>
+            <Path fileType="data">/opt/pycharm-community/plugins</Path>
+            <Path fileType="data">/opt/pycharm-community/license</Path>
+            <Path fileType="data">/opt/pycharm-community/helpers</Path>
+            <Path fileType="data">/opt/pycharm-community/help</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="library">/opt/pycharm-community/lib</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pycharm-community.desktop">pycharm-community.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2015-06-20</Date>
+            <Version>4.5.2</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2015-05-28</Date>
+            <Version>4.5.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
+

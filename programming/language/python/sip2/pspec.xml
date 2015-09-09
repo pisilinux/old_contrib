@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>sip</Name>
+        <Name>sip2</Name>
         <Homepage>http://www.riverbankcomputing.co.uk/sip</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
@@ -24,7 +24,7 @@
     </Source>
 
     <Package>
-        <Name>sip</Name>
+        <Name>sip2</Name>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
@@ -35,10 +35,10 @@
     </Package>
 
     <Package>
-        <Name>python-sip</Name>
+        <Name>python-sip2</Name>
         <Summary>Python 2.x SIP bindings for C and C++ libraries</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">sip</Dependency>
+            <Dependency release="current">sip2</Dependency>
             <Dependency>python</Dependency>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
@@ -60,11 +60,11 @@
     </Package-->
 
     <Package>
-        <Name>sip-devel</Name>
+        <Name>sip2-devel</Name>
         <Summary>Development files for sip</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">sip</Dependency>
-            <Dependency release="current">python-sip</Dependency>
+            <Dependency release="current">sip2</Dependency>
+            <Dependency release="current">python-sip2</Dependency>
             <!--Dependency release="current">python3-sip</Dependency-->
         </RuntimeDependencies>
         <Files>

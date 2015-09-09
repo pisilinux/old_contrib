@@ -16,7 +16,7 @@
         <BuildDependencies>
             <Dependency>qt-devel</Dependency>
             <Dependency>python-qt-devel</Dependency>
-            <Dependency>sip-devel</Dependency>
+            <Dependency>sip2-devel</Dependency>
             <Dependency>qtermwidget-devel</Dependency>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>

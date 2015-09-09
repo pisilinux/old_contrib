@@ -1,0 +1,110 @@
+<PISI>
+    <Source>
+        <Name>gcstar</Name>
+        <Homepage>www.gcstar.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>GCstar is a free open source application for managing your collections.</Summary>
+        <Description>GCstar is a free open source application for managing your collections. Detailed information on each item can be automatically retrieved from the internet and you can store additional data, such as the location or who you've lent it to. You may also search and filter your collection by many criteria.</Description>
+        <Archive sha1sum="e3a3d907432069e10b1f0d5154d29393dceddeb6" type="targz">https://dl.dropboxusercontent.com/u/71120717/gcstar-1.7.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Gtk2</Dependency>
+            <Dependency>perl-Date-Calc</Dependency>
+            <Dependency>perl-HTTP-Cookies</Dependency>
+            <Dependency>perl-DateTime-Format-Strptime</Dependency>
+            <Dependency>perl-Digest-MD5</Dependency>
+            <Dependency>perl-FindBin-libs</Dependency>
+            <Dependency>perl-GD</Dependency>
+            <Dependency>perl-GD-TextUtil</Dependency>
+            <Dependency>perl-HTTP-Cookies</Dependency>
+            <Dependency>perl-MP3-Info</Dependency>
+            <Dependency>perl-MP3-Tag</Dependency>
+            <Dependency>perl-Net-FreeDB</Dependency>
+            <Dependency>perl-Ogg-Vorbis-Header-PurePerl</Dependency>
+            <Dependency>perl-CDDB-File</Dependency>
+            <Dependency>perl-Class-Load</Dependency>
+            <Dependency>perl-Module-Implementation</Dependency>
+            <Dependency>perl-Module-Runtime</Dependency>
+            <Dependency>perl-Test-Output</Dependency>
+            <Dependency>perl-Try-Tiny</Dependency>
+            <Dependency>perl-Data-OptList</Dependency>
+            <Dependency>perl-Date-Calc</Dependency>
+            <Dependency>perl-DateTime</Dependency>
+            <Dependency>perl-DateTime-Locale</Dependency>
+            <Dependency>perl-DateTime-TimeZone</Dependency>
+            <Dependency>perl-Dist-CheckConflicts</Dependency>
+            <Dependency>perl-GD-Graph</Dependency>
+            <Dependency>perl-Package-DeprecationManager</Dependency>
+            <Dependency>perl-Package-Stash</Dependency>
+            <Dependency>perl-Params-Validate</Dependency>
+            <Dependency>perl-Sub-Install</Dependency>
+            <Dependency>perl-Sub-Exporter</Dependency>
+            <Dependency>perl-Test-Fatal</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gcstar</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-Gtk2</Dependency>
+            <Dependency>perl-Date-Calc</Dependency>
+            <Dependency>perl-HTTP-Cookies</Dependency>
+            <Dependency>perl-DateTime-Format-Strptime</Dependency>
+            <Dependency>perl-Digest-MD5</Dependency>
+            <Dependency>perl-FindBin-libs</Dependency>
+            <Dependency>perl-GD</Dependency>
+            <Dependency>perl-GD-TextUtil</Dependency>
+            <Dependency>perl-HTTP-Cookies</Dependency>
+            <Dependency>perl-MP3-Info</Dependency>
+            <Dependency>perl-MP3-Tag</Dependency>
+            <Dependency>perl-Net-FreeDB</Dependency>
+            <Dependency>perl-Ogg-Vorbis-Header-PurePerl</Dependency>
+            <Dependency>perl-CDDB-File</Dependency>
+            <Dependency>perl-Class-Load</Dependency>
+            <Dependency>perl-Module-Implementation</Dependency>
+            <Dependency>perl-Module-Runtime</Dependency>
+            <Dependency>perl-Test-Output</Dependency>
+            <Dependency>perl-Try-Tiny</Dependency>
+            <Dependency>perl-Data-OptList</Dependency>
+            <Dependency>perl-Date-Calc</Dependency>
+            <Dependency>perl-DateTime</Dependency>
+            <Dependency>perl-DateTime-Locale</Dependency>
+            <Dependency>perl-DateTime-TimeZone</Dependency>
+            <Dependency>perl-Dist-CheckConflicts</Dependency>
+            <Dependency>perl-GD-Graph</Dependency>
+            <Dependency>perl-Package-DeprecationManager</Dependency>
+            <Dependency>perl-Package-Stash</Dependency>
+            <Dependency>perl-Params-Validate</Dependency>
+            <Dependency>perl-Sub-Install</Dependency>
+            <Dependency>perl-Sub-Exporter</Dependency>
+            <Dependency>perl-Test-Fatal</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/gcstar</Path>
+            <Path fileType="data">/usr/share/gcstar</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="man">/usr/man/man1</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2014-08-30</Date>
+            <Version>1.7.0.1</Version>
+            <Comment>First release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

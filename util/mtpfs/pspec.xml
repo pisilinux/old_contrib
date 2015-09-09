@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>mtpfs</Name>
+        <Homepage>http://www.adebenham.com/mtpfs/</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <Icon>mtpfs</Icon>
+        <IsA>app</IsA>
+        <Summary>A FUSE filesystem that supports reading and writing from any MTP device</Summary>
+        <Description>A FUSE filesystem that supports reading and writing from any MTP device</Description>
+        <Archive sha1sum="8810f2b48fab8f86db871c5a4dd53d0452e7bd9f" type="targz">http://www.adebenham.com/files/mtp/mtpfs-1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>fuse-devel</Dependency>
+            <Dependency>libmtp-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libid3tag-devel</Dependency>
+            <Dependency>libmad-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>mtpfs</Name>
+        <RuntimeDependencies>
+            <Dependency>fuse</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libmad</Dependency>
+            <Dependency>libmtp</Dependency>
+            <Dependency>libid3tag</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-09-02</Date>
+            <Version>1.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
+

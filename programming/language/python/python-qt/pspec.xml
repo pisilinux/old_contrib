@@ -17,11 +17,7 @@
         <BuildDependencies>
             <Dependency>qt-devel</Dependency>
             <Dependency>sip2-devel</Dependency>
-	    <Dependency>python-devel</Dependency>
-            <!--Dependency>qt-webkit</Dependency>
-            <Dependency>python3</Dependency>
-            <Dependency>dbus-python3</Dependency>
-            <Dependency>qt-assistant-compat-devel</Dependency-->
+            <Dependency>python-devel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>add_gettext_support.patch</Patch>
@@ -34,12 +30,7 @@
         <RuntimeDependencies>
             <Dependency>qt-devel</Dependency>
             <Dependency release="current">python-qt</Dependency>
-            <!--Dependency release="current">python-qt-webkit</Dependency>
-            <Dependency release="current">python-qt-phonon</Dependency>
-            <Dependency release="current">python3-qt</Dependency>
-            <Dependency release="current">python3-qt-webkit</Dependency>
-            <Dependency release="current">python3-qt-phonon</Dependency-->
-	    <Dependency>python-devel</Dependency>
+            <Dependency>python-devel</Dependency>
             <Dependency>sip2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -52,9 +43,9 @@
         <Summary>Common files shared between python-qt and python3-qt</Summary>
         <RuntimeDependencies>
             <Dependency>qt</Dependency>
-            <Dependency>sip2</Dependency>
-	    <Dependency>libgcc</Dependency>
-	    <Dependency>python</Dependency>
+            <Dependency>python-sip2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>python</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin/pylupdate4</Path>
@@ -71,7 +62,6 @@
         <RuntimeDependencies>
             <Dependency release="current">python-qt-common</Dependency>
             <Dependency>qt</Dependency>
-            <Dependency>sip2</Dependency>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -79,88 +69,6 @@
             <Path fileType="library">/usr/lib/python2*</Path>
         </Files>
     </Package>
-
-    <!--Package>
-        <Name>python3-qt</Name>
-        <Summary>A set of Python 3.x bindings for the Qt 4.x Toolkit</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">python-qt-common</Dependency>
-            <Dependency>qt</Dependency>
-            <Dependency>python3-sip</Dependency>
-            <Dependency>qt-assistant-compat</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin/pyuic4-python3</Path>
-            <Path fileType="library">/usr/lib/python3*</Path>
-        </Files>
-    </Package-->
-
-    <!--Package>
-        <Name>python-qt-webkit</Name>
-        <Summary>Python 2.x bindings for QtWebkit library</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">python-qt</Dependency>
-            <Dependency>qt-webkit</Dependency>
-            <Dependency>qt</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/python2*/site-packages/PyQt4/*WebKit*</Path>
-            <Path fileType="library">/usr/lib/python2*/site-packages/PyQt4/uic/widget-plugins/*webkit*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>python3-qt-webkit</Name>
-        <Summary>Python 3.x bindings for QtWebkit library</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">python3-qt</Dependency>
-            <Dependency>qt-webkit</Dependency>
-            <Dependency>qt</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/python3*/site-packages/PyQt4/*WebKit*</Path>
-            <Path fileType="library">/usr/lib/python3*/site-packages/PyQt4/uic/widget-plugins/*webkit*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>python-qt-phonon</Name>
-        <Summary>Python 2.x bindings for Phonon multimedia library</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">python-qt</Dependency>
-            <Dependency>qt</Dependency>
-            <Dependency>phonon</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/python2*/site-packages/PyQt4/*phonon*</Path>
-            <Path fileType="library">/usr/lib/python2*/site-packages/PyQt4/uic/widget-plugins/*phonon*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>python3-qt-phonon</Name>
-        <Summary>Python 3.x bindings for Phonon multimedia library</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">python3-qt</Dependency>
-            <Dependency>qt</Dependency>
-            <Dependency>phonon</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/python3*/site-packages/PyQt4/*phonon*</Path>
-            <Path fileType="library">/usr/lib/python3*/site-packages/PyQt4/uic/widget-plugins/*phonon*</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>python-qt-docs</Name>
-        <Summary>Documentation for python-qt bindings</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">python-qt</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="doc">/usr/share/doc/python-qt/html</Path>
-        </Files>
-    </Package-->
 
     <History>
          <Update release="10">

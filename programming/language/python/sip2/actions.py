@@ -10,7 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import get
 
-WorkDir = "%s-%s" % (get.srcNAME(),  get.srcVERSION())
+WorkDir = "sip-%s" % get.srcVERSION()
 py2dir = get.curPYTHON()
 
 def setup():

@@ -18,6 +18,8 @@
             <Dependency>intltool</Dependency>
             <Dependency>xfce4-dev-tools</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -27,7 +29,9 @@
             <Dependency>atk</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
+            <Dependency>freetype</Dependency>
             <Dependency>fontconfig</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libxfce4ui</Dependency>
@@ -49,8 +53,10 @@
         <Name>garcon-devel</Name>
         <Summary>garcon development files</Summary>
         <RuntimeDependencies>
+            <Dependency release="current">garcon</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

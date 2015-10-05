@@ -15,8 +15,10 @@
         <Description>Gigolo allows you to quickly connect/mount local and remote filesystems and manage bookmarks of such.</Description>
         <Archive sha1sum="36818e1443de6aaaabd96f092e599cf6d398c97f" type="tarbz2">http://archive.xfce.org/src/apps/gigolo/0.4/gigolo-0.4.2.tar.bz2</Archive>
         <BuildDependencies>
-            <Description>gtk2-devel</Description>
+            <Dependency>gtk2-devel</Dependency>
             <Dependency>intltool</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>gettext</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,7 +26,8 @@
         <Name>gigolo</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-            <Dependency>gvfs</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

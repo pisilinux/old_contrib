@@ -13,19 +13,26 @@
         <Summary>A power manager for the Xfce desktop</Summary>
         <Description>This software is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption.
                     (such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, xfce4-power-manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
-        <Archive sha1sum="1eb60d61e5befd963a863c4475a86363554a88cd" type="tarbz2">http://archive.xfce.org/src/xfce/xfce4-power-manager/1.4/xfce4-power-manager-1.4.4.tar.bz2</Archive>
-        <BuildDependencies>>
-            <Dependency>upower</Dependency>
-            <Dependency>libXrandr-devel</Dependency>
+        <Archive sha1sum="432e34cbd9e7f8e9ab2f81e3abb10ec7ed7b8c1f" type="tarbz2">http://archive.xfce.org/src/xfce/xfce4-power-manager/1.5/xfce4-power-manager-1.5.2.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
             <Dependency>xfconf-devel</Dependency>
-            <Dependency>libxfce4util-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>xfce4-panel-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <!--<Dependency>upower</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            
+            <Dependency>libxfce4util-devel</Dependency>
             <Dependency>libglade-devel</Dependency>
             <Dependency>polkit-devel</Dependency>
             <Dependency>ConsoleKit-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>libnotify-devel</Dependency>
-            <Dependency>xfce4-panel-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>-->
         </BuildDependencies>
     </Source>
 
@@ -59,6 +66,13 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2015-10-06</Date>
+            <Version>1.5.2</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="9">
             <Date>2015-05-19</Date>
             <Version>1.4.4</Version>

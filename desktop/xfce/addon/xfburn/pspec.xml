@@ -17,8 +17,8 @@
         <BuildDependencies>
             <Dependency versionFrom="4.8.0">libxfce4ui-devel</Dependency>
             <Dependency>thunar-vfs-devel</Dependency>
-<!--             <Dependency versionFrom="0.4.2">libburn-devel</Dependency> -->
-<!--             <Dependency versionFrom="0.6.2">libisofs-devel</Dependency>             -->
+            <Dependency versionFrom="0.4.2">libburn-devel</Dependency>
+            <Dependency versionFrom="0.6.2">libisofs-devel</Dependency>
             <Dependency versionFrom="0.34">dbus-glib-devel</Dependency>
             <Dependency>exo-devel</Dependency>
             <Dependency>librsvg-devel</Dependency>
@@ -34,16 +34,14 @@
     <Package>
         <Name>xfburn</Name>
         <RuntimeDependencies>
-            <Dependency>libburn</Dependency>
-            <Dependency>desktop-file-utils</Dependency>
-            <Dependency>gstreamer</Dependency>
-            <Dependency>thunar-vfs</Dependency>
-            <Dependency>libxfcegui4</Dependency>
-            <Dependency>libxfce4ui</Dependency>
-            <Dependency>libisofs</Dependency>
-            <Dependency>gtk2</Dependency>
             <Dependency>exo</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libburn</Dependency>
+            <Dependency>libisofs</Dependency>
+            <Dependency>gstreamer</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxfce4ui</Dependency>
             <Dependency>libxfce4util</Dependency>
             <Dependency>gst-plugins-base</Dependency>
         </RuntimeDependencies>

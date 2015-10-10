@@ -15,9 +15,7 @@
         <Description>Xfce4-mixer is a volume control application for the Xfce Desktop Environment. It provides both a volume control plugin for the Xfce Panel and a standalone mixer application. It supports all audio systems supported by GStreamer project.</Description>
         <Archive sha1sum="8d2fda90f293603496bd23426486315ccf8d06f9" type="tarbz2">http://archive.xfce.org/src/apps/xfce4-mixer/4.10/xfce4-mixer-4.10.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>intltool</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>xfconf-devel</Dependency>
@@ -33,9 +31,10 @@
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
             <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>xfconf</Dependency>
+            <Dependency>dbus-glib</Dependency>
             <Dependency>gstreamer</Dependency>
-            <Dependency>keybinder</Dependency>
             <Dependency>libunique</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libxfce4ui</Dependency>

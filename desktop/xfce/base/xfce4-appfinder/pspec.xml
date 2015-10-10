@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+ <?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
@@ -15,13 +15,12 @@
         <Description>Xfce4-appfinder is a useful software that permits you to find every application in the system supporting desktop entry format.</Description>
         <Archive sha1sum="c6fe75b140e6c864654e9485e30a4718cdfd7321" type="tarbz2">http://archive.xfce.org/src/xfce/xfce4-appfinder/4.12/xfce4-appfinder-4.12.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>libxfce4util-devel</Dependency>
-            <Dependency>Thunar-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
             <Dependency>xfconf-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>garcon-devel</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,6 +29,7 @@
         <RuntimeDependencies>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>libxfce4util</Dependency>
             <Dependency>xfconf</Dependency>
             <Dependency>libxfce4ui</Dependency>

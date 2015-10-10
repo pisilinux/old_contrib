@@ -15,9 +15,9 @@
         <Description>Reads your hardware sensor values and displays them in your panel</Description>
         <Archive sha1sum="5bf26deacc942f1c5c596517432a8eb055b825f8" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-sensors-plugin/1.2/xfce4-sensors-plugin-1.2.6.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>intltool</Dependency>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
-            <Dependency>libxfce4util-devel</Dependency>
             <Dependency>xfce4-panel-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -25,14 +25,12 @@
     <Package>
         <Name>xfce4-sensors-plugin</Name>
         <RuntimeDependencies>
-            <Dependency>atk</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>libnotify</Dependency>
             <Dependency>libxfce4ui</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>fontconfig</Dependency>
             <Dependency>xfce4-panel</Dependency>
             <Dependency>libxfce4util</Dependency>
         </RuntimeDependencies>

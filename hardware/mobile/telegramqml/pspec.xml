@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>telegramqml</Name>
+        <Homepage>https://github.com/Aseman-Land/TelegramQML</Homepage>
+        <Packager>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Telegram API tools for QtQml and Qml</Summary>
+        <Description>Telegram API tools for QtQML and Qml, based on Cutegram-Core and libqtelegram.</Description>
+        <Archive sha1sum="a9cbca1aace828907c6008b9e5397ad445a49712" type="targz">https://github.com/Aseman-Land/TelegramQML/archive/v0.9.1-stable.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>            
+            <Dependency>qt5-multimedia-devel</Dependency>            
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>qt5-quick1-devel</Dependency>
+            <Dependency>qt5-graphicaleffects</Dependency>
+            <Dependency>qt5-quickcontrols</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-imageformats</Dependency>
+            <Dependency>qt5-xmlpatterns-devel</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>plasma-nm</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>qt5-sql-mysql</Dependency>
+            <Dependency>libtelegram-ae-devel</Dependency>
+        </BuildDependencies>   
+    </Source>
+
+    <Package>
+        <Name>telegramqml</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libgcc</Dependency>            
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>libtelegram-ae</Dependency>
+        </RuntimeDependencies> 
+        <Files>
+            <Path fileType="library">/usr/lib/lib*.so*</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="doc">/usr/share</Path>            
+        </Files>
+    </Package> 
+    
+    <Package>
+        <Name>telegramqml-devel</Name>
+        <Summary>Development files for telegramqml</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">telegramqml</Dependency>            
+        </RuntimeDependencies> 
+        <Files>            
+            <Path fileType="header">/usr/include/telegramqml</Path>                        
+        </Files>
+    </Package>   
+
+    <History>        
+        <Update release="1">
+            <Date>2015-12-02</Date>
+            <Version>0.9.1</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -12477,6 +12477,51 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>master-pdf-editor</Name>
+            <Homepage>http://code-industry.net/free-pdf-editor.php</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>custom</License>
+            <IsA>app:gui</IsA>
+            <PartOf>editor</PartOf>
+            <Summary xml:lang="en">A complete solution for creation and editing PDF files. (Free for non-commercial use) - Qt5 version</Summary>
+            <Description xml:lang="en">Master PDF Editor provides you advanced functions for working with PDF format.</Description>
+            <Archive type="targz" sha1sum="7f3ee0a15e75a4bd03467b9d24ed2b6848840cfc">http://get.code-industry.net/public/master-pdf-editor-3.5.10_qt5.amd64.tar.gz</Archive>
+            <SourceURI>editor/master-pdf-editor/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>master-pdf-editor</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/opt/master-pdf-editor-3/lang</Path>
+                <Path fileType="license">/usr/share/doc/master-pdf-editor</Path>
+                <Path fileType="icon">/usr/share/pixmaps</Path>
+                <Path fileType="application">/usr/share/applications</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/masterpdfeditor3.desktop" permission="0644" owner="root">masterpdfeditor3.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/masterpdfeditor3.png" permission="0644" owner="root">masterpdfeditor3.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2015-12-08</Date>
+                <Version>3.5.10</Version>
+                <Comment>First release</Comment>
+                <Name>Stefan Gronewold</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>geany</Name>
             <Homepage>http://www.geany.org</Homepage>
             <Packager>

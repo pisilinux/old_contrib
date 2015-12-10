@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>qtav</Name>
+        <Homepage>http://www.qtav.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>LGPL</License>
+        <Summary>A cross-platform multimedia playback framework based on Qt and FFmpeg	</Summary>
+        <Description>A multimedia playback framework based on Qt + FFmpeg. Cross platform. High performace. Easy to use and develop.</Description>
+        <Archive sha1sum="223c737175d4b99233b85b095272f73a57b46b5f" type="targz">https://github.com/wang-bin/QtAV/archive/v1.8.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>openal-devel</Dependency>            
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+             <Dependency>libXv-devel</Dependency>
+             <Dependency>portaudio-devel</Dependency>
+            <Dependency>libass-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>            
+            <Dependency>extra-cmake-modules</Dependency>
+        </BuildDependencies>        
+    </Source>
+
+    <Package>
+        <Name>qtav</Name>
+        <IsA>app:gui</IsA>        
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>openal</Dependency>
+            <Dependency>ffmpeg</Dependency>            
+            <Dependency>libgcc</Dependency>
+            <Dependency>libXv</Dependency>
+            <Dependency>libass</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+        <Files> 
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/qt5</Path>
+            <Path fileType="man">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package> 
+    <Package>
+        <Name>qtav-devel</Name>
+        <Summary>Development files for qtav</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">qtav</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>            
+        </Files>
+    </Package>
+
+    <History>        
+        <Update release="1">
+            <Date>2015-12-09</Date>
+            <Version>1.8.0</Version>
+            <Comment>First release</Comment>
+            <Name>Stefan Gronewold</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

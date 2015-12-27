@@ -16,7 +16,8 @@
         <Archive sha1sum="8a8c15bc2ec0d9ae52ecbc179e5024bef0191ab8" type="tarbz2">http://archive.xfce.org/src/apps/xfce4-dict/0.7/xfce4-dict-0.7.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xfce4-panel-devel</Dependency>
-            <Dependency>libxfcegui4-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,10 +25,10 @@
         <Name>xfce4-dict</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>libxfcegui4</Dependency>
             <Dependency>libxfce4ui</Dependency>
             <Dependency>xfce4-panel</Dependency>
             <Dependency>libxfce4util</Dependency>

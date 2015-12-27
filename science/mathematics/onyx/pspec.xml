@@ -1,0 +1,72 @@
+<PISI>
+    <Source>
+        <Name>onyx</Name>
+        <Homepage>http://onyx.brandmaier.de</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>Onyx license</License>
+        <IsA>app:gui</IsA>
+        <Summary>Structural Equation Modelling</Summary>
+        <Description>Structural Equation Modelling</Description>
+        <BuildDependencies>
+            <Dependency>jdk7-openjdk</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="5afef78fd3d61b0ce93f35efd7a47f8fef4fc5a8" type="targz">https://dl.dropboxusercontent.com/u/71120717/onyx-1.0.932.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>onyx</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/share/onyx/</Path>
+            <Path fileType="doc">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/onyx.png">onyx.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/onyx.desktop">onyx.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <RuntimeDependencies>
+            <Dependency>jre7-openjdk</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2015-11-08</Date>
+            <Version>1.0.932</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2015-07-23</Date>
+            <Version>1.0.911</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2015-05-23</Date>
+            <Version>1.0.894</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-10-13</Date>
+            <Version>1.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2014-06-13</Date>
+            <Version>0.9</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
+

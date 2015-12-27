@@ -15,15 +15,16 @@
         <Archive sha1sum="dc5e824c738520229174ba9481f0cab35be4870f" type="tarxz">mirrors://gnome/libxklavier/5.3/libxklavier-5.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk-doc</Dependency>
+            <Dependency>intltool</Dependency>
             <Dependency>iso-codes</Dependency>
-            <Dependency>libXi-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
-            <Dependency>docbook-xsl</Dependency>
-            <Dependency>libX11-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
             <Dependency>libxslt-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
             <Dependency>libxkbfile-devel</Dependency>
-            <Dependency>xorg-server-devel</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
         </BuildDependencies>
     </Source>
 

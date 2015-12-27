@@ -11,11 +11,11 @@ from pisi.actionsapi import get
 
 
 def setup():
-    autotools.configure("--disable-static \
-                         --disable-rpath \
-                         --enable-gtk-doc \
-                         --enable-xkb-support \
-                         --enable-xmodmap-support")
+    shelltools.system("./autogen.sh")
+    autotools.configure("--with-xkb-bin-base=/usr/bin \
+                         --with-xkb-base=/usr/share/X11/xkb \
+                         --disable-static \
+                         --enable-gtk-doc")
 
 def build():
     autotools.make()

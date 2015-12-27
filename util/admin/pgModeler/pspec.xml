@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pgModeler</Name>
+        <Homepage>http://www.pgmodeler.com.br/</Homepage>
+        <Packager>
+            <Name>Ertuğrul Erata</Name>
+            <Email>ertugrulerata@gmail.comAR</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>PostgreSQL Database Modeler</Summary>
+        <Description>PostgreSQL Database Modeler: an open source CASE tool for modeling PostgreSQL databases</Description>
+        <Archive sha1sum="8ebe1ccee98be0464ace0cc9b12243f61cfc691b" type="targz">https://github.com/pgmodeler/pgmodeler/archive/v0.8.2-alpha.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>shared-mime-info</Dependency>
+            <Dependency>doxygen</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-sql-postgresql</Dependency>
+            <Dependency>postgresql-server</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pgModeler</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/pgmodeler</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pgModeler.desktop">pgModeler.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-10-13</Date>
+            <Version>0.8.2_p1</Version>
+            <Comment>First release</Comment>
+            <Name>Ertuğrul Erata</Name>
+            <Email>ertugrulerata@gmail.comAR</Email>
+        </Update>
+    </History>
+</PISI>

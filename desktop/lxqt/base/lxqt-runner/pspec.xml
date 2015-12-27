@@ -10,42 +10,48 @@
         <IsA>app</IsA>
         <Summary>The LXQt application launcher</Summary>
         <Description>Tool used to launch programs quickly by typing their names</Description>
-        <Archive sha1sum="b82727e827a11ca0f8ecb4c3e5356648410cfab6" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-runner-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>cmake</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>lxqt-globalkeys-devel</Dependency>
             <Dependency>lxqt-menu-cache-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-script-devel</Dependency>
-            <Dependency>liblxqt-devel</Dependency>
-            <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency>lxqt-globalkeys-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="be7ecfa9dede0b970fa88cff5310cd094fda690d" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-runner-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-runner</Name>
+        <Summary>Development files for PCManFM</Summary>
         <RuntimeDependencies>
             <Dependency>glib2</Dependency>
+            <Dependency>kwindowsystem</Dependency>
             <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
             <Dependency>libqtxdg</Dependency>
+            <Dependency>lxqt-globalkeys</Dependency>
             <Dependency>lxqt-menu-cache</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-script</Dependency>
-            <Dependency>liblxqt</Dependency>
-            <Dependency>kwindowsystem</Dependency>
-            <Dependency>lxqt-globalkeys</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/</Path>
         </Files>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>
@@ -69,4 +75,3 @@
         </Update>
     </History>
 </PISI>
-

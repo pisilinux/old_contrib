@@ -10,50 +10,53 @@
         <IsA>app</IsA>
         <Summary>LXQt session</Summary>
         <Description>An alternative session manager ported from the original razor-session</Description>
-        <Archive sha1sum="f7a2681bc9596e5db889608f6ea4c969a14073da" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-session-0.9.0.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency>cmake</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
-            <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="de929bf22ba33b97ab453c1e69d77f798c1c69f3" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-session-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-session</Name>
-        <RuntimeDependencies>
-            <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libqtxdg</Dependency>
-            <Dependency>liblxqt</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>kwindowsystem</Dependency>
-            <Dependency>qt5-x11extras</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-config-session.desktop">lxqt-config-session.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-reboot.desktop">lxqt-reboot.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-hibernate.desktop">lxqt-hibernate.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-logout.desktop">lxqt-logout.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-lockscreen.desktop">lxqt-lockscreen.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-shutdown.desktop">lxqt-shutdown.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-suspend.desktop">lxqt-suspend.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-session/lxqt-config-session_tr.qm">lxqt-config-session_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-config-session.desktop">lxqt-config-session.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/translations/lxqt-session/lxqt-config-session_tr.qm">lxqt-config-session_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-hibernate.desktop">lxqt-hibernate.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-lockscreen.desktop">lxqt-lockscreen.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-logout.desktop">lxqt-logout.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-reboot.desktop">lxqt-reboot.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-shutdown.desktop">lxqt-shutdown.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-suspend.desktop">lxqt-suspend.desktop</AdditionalFile>
         </AdditionalFiles>
-        <Replaces>
-            <Package>lxsession</Package>
-        </Replaces>
+        <Summary>Development files for PCManFM</Summary>
+        <RuntimeDependencies>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
+            <Dependency>libqtxdg</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>

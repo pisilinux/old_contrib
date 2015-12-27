@@ -14,12 +14,13 @@
             <Dependency>cmake</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="aedfa4db99c231c79908fc22c302a693557c97b8" type="targz">http://downloads.lxqt.org/libsysstat/0.3.0/libsysstat-0.3.0.tar.gz</Archive>
+        <Archive sha1sum="96857320c5525bbc4f062196a0422ffce04d4c74" type="tarxz">http://downloads.lxqt.org/libsysstat/0.3.1/libsysstat-0.3.1.tar.xz</Archive>
     </Source>
     <Package>
         <Name>libsysstat</Name>
+        <Summary>Development headers for lxqt-globalkeys</Summary>
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
@@ -29,11 +30,11 @@
             <Path fileType="data">/usr/share/</Path>
         </Files>
     </Package>
-
     <Package>
         <Name>libsysstat-devel</Name>
         <Summary>Development headers for libsysstat</Summary>
         <RuntimeDependencies>
+            <Dependency version="current">libsysstat</Dependency>
             <Dependency>qt5-base-devel</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -41,8 +42,14 @@
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.3.1</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.3.0</Version>

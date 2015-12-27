@@ -1,85 +1,81 @@
 <PISI>
     <Source>
         <Name>lxqt-config</Name>
-        <Homepage>http://www.lxde.org</Homepage>
+        <Homepage>http://www.lxqt.org</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Packager>
         <License>GPL2</License>
         <IsA>library</IsA>
-        <Summary>LXQt system configuration.</Summary>
-        <Description>LXDE-Qt system configurations (control center)</Description>
+        <Summary>Common base library for LXQt components.</Summary>
+        <Description>Core utility library for all LXDE-Qt components</Description>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
             <Dependency>cmake</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
-            <Dependency>libXcursor-devel</Dependency>
-            <Dependency>qt5-x11extras</Dependency>
-            <Dependency>liblxqt-devel</Dependency>
-            <Dependency>libqtxdg-devel</Dependency>
-            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency versionFrom="1.3.0">libqtxdg-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-qdbusviewer</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>libXcursor-devel</Dependency>
+            <Dependency>libkscreen-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="31324a96f6247352bc0d71f2cc386ab8c709c2d2" type="targz">https://github.com/lxde/lxqt-config/archive/0.9.0.tar.gz</Archive>
+        <Archive sha1sum="79a37107c1edd00a166aed91dad48fdc7f20b8df" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-config-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-config</Name>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="config">/etc</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="data">/usr/share/lxqt</Path>
-            <Path fileType="data">/usr/share/cmake/qtxdg</Path>
-            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share</Path>
         </Files>
-        <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>libXcursor</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>qt5-x11extras</Dependency>
-            <Dependency>liblxqt</Dependency>
-            <Dependency>libqtxdg</Dependency>
-            <Dependency>libXfixes</Dependency>
-        </RuntimeDependencies>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-config-file-associations.desktop">lxqt-config-file-associations.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-config-input.desktop">lxqt-config-input.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-config-monitor.desktop">lxqt-config-monitor.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-config-cursor/lxqt-config-cursor_tr.qm">lxqt-config-cursor_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-config-file-associations/lxqt-config-file-associations_tr.qm">lxqt-config-file-associations_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-config-input/lxqt-config-input_tr.qm">lxqt-config-input_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-config-monitor/lxqt-config-monitor_tr.qm">lxqt-config-monitor_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-config-notificationd/lxqt-config-notificationd_tr.qm">lxqt-config-notificationd_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-config-powermanagement/lxqt-config-powermanagement_tr.qm">lxqt-config-powermanagement_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-cursor_tr.qm" group="root">lxqt-config-cursor_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-file-associations.desktop" group="root">lxqt-config-file-associations.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-file-associations_tr.qm" group="root">lxqt-config-file-associations_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-input.desktop" group="root">lxqt-config-input.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-input_tr.qm" group="root">lxqt-config-input_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-monitor.desktop" group="root">lxqt-config-monitor.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-monitor_tr.qm" group="root">lxqt-config-monitor_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-notificationd_tr.qm" group="root">lxqt-config-notificationd_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-config/lxqt-config-powermanagement_tr.qm" group="root">lxqt-config-powermanagement_tr.qm</AdditionalFile>
         </AdditionalFiles>
-        <Replaces>
-            <Package>lxappearance</Package>
-            <Package>lxrandr</Package>
-            <Package>lxinput</Package>
-        </Replaces>
+        <Summary>Python binding of terminal widget for Qt</Summary>
+        <RuntimeDependencies>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency versionFrom="1.3.0">libqtxdg</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
     </Package>
-
+    
     <History>
         <Update release="4">
-            <Date>2015-05-13</Date>
-            <Version>0.9.0</Version>
-            <Comment>version bump and compiled with qt5</Comment>
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Update>
         <Update release="3">
-            <Date>2014-11-07</Date>
+            <Date>2015-05-13</Date>
+            <Version>0.9.0</Version>
+            <Comment>version bump. and compiled with qt5</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-10-21</Date>
             <Version>0.8.0</Version>
-            <Comment>version bump.</Comment>
+            <Comment>version bump. and add tr support</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Update>
@@ -92,4 +88,3 @@
         </Update>
     </History>
 </PISI>
-

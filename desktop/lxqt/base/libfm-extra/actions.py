@@ -21,4 +21,8 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.remove("/usr/include/libfm")
+    pisitools.dodir("/usr/include/libfm")
+    pisitools.domove("/usr/include/libfm-1.0/*", "/usr/include/libfm")
+    pisitools.removeDir("/usr/include/libfm-1.0")
     pisitools.dodoc("AUTHORS", "COPYING")

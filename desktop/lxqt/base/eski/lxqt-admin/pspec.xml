@@ -10,36 +10,36 @@
         <IsA>app</IsA>
         <Summary>LXQt system administration tool</Summary>
         <Description>LXQt system administration tool</Description>
-        <Archive sha1sum="786e9c303187ff961707e9108da80e39527dda78" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-admin-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-			<Dependency>glib2-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
             <Dependency>liblxqt-devel</Dependency>
-            <Dependency>liboobs-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="bf8a2bf5340486403335b4f24754f6bc06172bb1" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-admin-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-admin</Name>
-        <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>liblxqt</Dependency>
-            <Dependency>liboobs</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-admin-time.desktop">lxqt-admin-time.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-admin-user.desktop">lxqt-admin-user.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_tr.qm">lxqt-admin-time_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-admin-time.desktop">lxqt-admin-time.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/translations/lxqt-admin-time/lxqt-admin-time_tr.qm">lxqt-admin-time_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-admin-user.desktop">lxqt-admin-user.desktop</AdditionalFile>
         </AdditionalFiles>
+        <Summary>Development files for PCManFM</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <History>
         <Update release="3">
             <Date>2015-05-13</Date>

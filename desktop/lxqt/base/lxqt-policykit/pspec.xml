@@ -10,28 +10,21 @@
         <IsA>app:gui</IsA>
         <Summary>Policykit agent</Summary>
         <Description>The LXQt policykit authentication agent</Description>
-        <Archive sha1sum="5bae535aad0c67ad40afac190405dc1279bc8c22" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-policykit-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>cmake</Dependency>
-            <Dependency>liblxqt-devel</Dependency>
-            <Dependency>libqtxdg-devel</Dependency>
-            <Dependency>polkit-qt-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>polkit-devel</Dependency>
+            <Dependency>polkit-qt-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="5280b6e6f4d2a71bf6607f1e65beb9cab547bc16" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-policykit-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-policykit</Name>
-        <RuntimeDependencies>
-			<Dependency>libgcc</Dependency>
-            <Dependency>polkit-qt</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>liblxqt</Dependency>
-            <Dependency>libqtxdg</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="executable">/usr/libexec</Path>
@@ -39,14 +32,25 @@
             <Path fileType="localedata">/usr/share/lxqt/translations</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_pt.qm">lxqt-policykit-agent_pt.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/translations/lxqt-policykit-agent/lxqt-policykit-agent_pt.qm">lxqt-policykit-agent_pt.qm</AdditionalFile>
         </AdditionalFiles>
-        <Replaces>
-            <Package>lxpolkit</Package>
-        </Replaces>
+        <Summary>Development files for PCManFM</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
+            <Dependency>libqtxdg</Dependency>
+            <Dependency>polkit-qt</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>

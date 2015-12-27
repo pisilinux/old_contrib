@@ -10,53 +10,58 @@
         <IsA>app</IsA>
         <Summary>Daemon used to register global keyboard shortcuts</Summary>
         <Description>LXQt daemon and library for global keyboard shortcuts registration.</Description>
-        <Archive sha1sum="4fe35c70efb59f2578ddb99c1c9a137541c184f1" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-globalkeys-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency>cmake</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
-            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="161cb4ed278dfcfdc1803cc04a601b5acc689f30" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-globalkeys-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-globalkeys</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-config-globalkeyshortcuts.desktop">lxqt-config-globalkeyshortcuts.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <Summary>Development headers for libqtxdg</Summary>
         <RuntimeDependencies>
             <Dependency>libX11</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency>qt5-base</Dependency>
             <Dependency>liblxqt</Dependency>
+            <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="data">/usr/share</Path>
-            <Path fileType="library">/usr/lib</Path>
-        </Files>
-        <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lxqt-config-globalkeyshortcuts.desktop">lxqt-config-globalkeyshortcuts.desktop</AdditionalFile>
-        </AdditionalFiles>
-        <Replaces>
-            <Package>lxshortcut</Package>
-        </Replaces>
     </Package>
-
     <Package>
         <Name>lxqt-globalkeys-devel</Name>
-        <Summary>Development headers for lxqt-globalkeys</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">lxqt-globalkeys</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-globalkeys/lxqt-config-globalkeyshortcuts.desktop" group="root">lxqt-config-globalkeyshortcuts.desktop</AdditionalFile>
+        </AdditionalFiles>
+        <Summary>Development headers for lxqt-globalkeys</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lxqt-globalkeys</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>
@@ -80,4 +85,3 @@
         </Update>
     </History>
 </PISI>
-

@@ -10,89 +10,93 @@
         <IsA>app</IsA>
         <Summary>Desktop panel</Summary>
         <Description>The LXQt desktop panel</Description>
-            <Archive sha1sum="cbdb633ca69e56fc465b434acbfa1b8e90a91d53" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-panel-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libX11-devel</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>liblxqt-devel</Dependency>
-            <Dependency>liblxqt-mount-devel</Dependency>
-            <Dependency>libsysstat-devel</Dependency>
-            <Dependency>lxqt-globalkeys-devel</Dependency>
-            <Dependency>lxqt-menu-cache-devel</Dependency>
-            <Dependency>pulseaudio-libs-devel</Dependency>
             <Dependency>alsa-lib-devel</Dependency>
-            <Dependency>lm_sensors-devel</Dependency>
-            <Dependency>libstatgrab</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>glib2-devel</Dependency>
             <Dependency>kguiaddons-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
             <Dependency>libXcomposite-devel</Dependency>
             <Dependency>libXdamage-devel</Dependency>
-            <Dependency>cmake</Dependency>
+            <Dependency>libdbusmenu-qt-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>libxkbcommon-devel</Dependency>
+            <Dependency>lm_sensors-devel</Dependency>
+            <Dependency>lxqt-globalkeys-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>solid-devel</Dependency>
+            <Dependency>lxqt-menu-cache-devel</Dependency>
+            <Dependency>libsysstat-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <!--Fixed menü event and some translations -->
-            <Patch>menu_doesnt_exist.patch</Patch>
-        </Patches>
+        <Archive sha1sum="c70dc07abe9d35c6f0a41c12813f71f7350c3eac" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-panel-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-panel</Name>
-        <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>libX11</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>kguiaddons</Dependency>
-            <Dependency>libXdamage</Dependency>
-            <Dependency>kwindowsystem</Dependency>
-            <Dependency>liblxqt-mount</Dependency>
-            <Dependency>lxqt-globalkeys</Dependency>
-            <Dependency>libsysstat</Dependency>
-            <Dependency>alsa-lib</Dependency>
-            <Dependency>pulseaudio-libs</Dependency>
-            <Dependency>libXcomposite</Dependency>
-            <Dependency>libXrender</Dependency>
-            <Dependency>lm_sensors</Dependency>
-            <Dependency>libstatgrab</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>qt5-x11extras</Dependency>
-            <Dependency>liblxqt</Dependency>
-            <Dependency>libqtxdg</Dependency>
-            <Dependency>lxqt-menu-cache</Dependency>
-        </RuntimeDependencies>
         <Files>
+            <Path fileType="config">/etc/lxqt</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share</Path>
-            <Path fileType="config">/etc/lxqt</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-panel/lxqt-panel_tr.qm">lxqt-panel_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/translations/lxqt-panel/networkmonitor/networkmonitor_tr.qm">networkmonitor_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/lxqt/lxqt-panel/networkmonitor.desktop">networkmonitor.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/translations/lxqt-panel/lxqt-panel_tr.qm">lxqt-panel_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/lxqt-panel/networkmonitor.desktop">networkmonitor.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/translations/lxqt-panel/networkmonitor/networkmonitor_tr.qm">networkmonitor_tr.qm</AdditionalFile>
         </AdditionalFiles>
-        <Replaces>
-            <Package>lxpanel</Package>
-        </Replaces>
+        <Summary>Development files for lxqt-menu-cache</Summary>
+        <RuntimeDependencies>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXcomposite</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libdbusmenu-qt</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
+            <Dependency>libqtxdg</Dependency>
+            <Dependency>libsysstat</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libxkbcommon</Dependency>
+            <Dependency>lm_sensors</Dependency>
+            <Dependency>lxqt-globalkeys</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>solid</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <Package>
         <Name>lxqt-panel-devel</Name>
-        <Summary>Development headers for lxqt-panel</Summary>
         <Files>
             <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
-        <Replaces>
-            <Package>lxpanel-devel</Package>
-        </Replaces>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-panel/lxqt-panel_tr.qm" group="root">lxqt-panel_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-panel/networkmonitor.desktop" group="root">networkmonitor.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt-panel/networkmonitor_tr.qm" group="root">networkmonitor_tr.qm</AdditionalFile>
+        </AdditionalFiles>
+        <Summary>Development headers for lxqt-panel</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lxqt-panel</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>
@@ -116,4 +120,3 @@
         </Update>
     </History>
 </PISI>
-

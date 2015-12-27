@@ -1,0 +1,46 @@
+<PISI>
+    <Source>
+        <Name>lxqt-openssh-askpass</Name>
+        <Homepage>https://github.com/lxde</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app</IsA>
+        <Summary>LXQt system administration tool</Summary>
+        <Description>LXQt openssh password prompt</Description>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>lxqt-config</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="287293c5a9508ce2c9734af2b981a377b19e85a9" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-openssh-askpass-0.10.0.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>lxqt-openssh-askpass</Name>
+        <Summary>LXQt openssh password prompt</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>lxqt-config</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>first release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -14,13 +14,13 @@
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>glib2-devel</Dependency>
-	    <Dependency>libX11-devel</Dependency>
-	    <Dependency>libgcc</Dependency>
-	    <Dependency>libxml2-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxml2-devel</Dependency>
             <Dependency versionFrom="3.5.2">openbox-devel</Dependency>
             <Dependency>pkgconfig</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -29,9 +29,9 @@
         <Name>obconf-qt</Name>
         <RuntimeDependencies>
             <Dependency>glib2</Dependency>
-	    <Dependency>libX11</Dependency>
-	    <Dependency>libgcc</Dependency>
-	    <Dependency>libxml2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxml2</Dependency>
             <Dependency versionFrom="3.5.2">openbox</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-x11extras</Dependency>

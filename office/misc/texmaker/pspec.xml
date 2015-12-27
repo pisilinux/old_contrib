@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>texmaker</Name>
+        <Homepage>http://www.xm1math.net/texmaker/index.html</Homepage>
+        <Packager>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <PartOf>office</PartOf>
+        <Summary>Free cross-platform LaTeX editor</Summary>
+        <Description>Texmaker is a free, modern and cross-platform LaTeX editor for linux, macosx and windows systems that integrates many tools needed to develop documents with LaTeX, in just one application.</Description>
+        <BuildDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>qt5-script-devel</Dependency>
+            <Dependency>qt5-quick1-devel</Dependency>
+            <Dependency>ghostscript-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="tarbz2" sha1sum="ffa4c08a9fe2dde61eb18c6105f231e3c0ebd2ea">http://www.xm1math.net/texmaker/texmaker-4.5.tar.bz2</Archive>
+    </Source>
+    <Package>
+        <Name>texmaker</Name>
+        <Summary>Free cross-platform LaTeX editor</Summary>
+        <RuntimeDependencies>            
+            <Dependency>ghostscript</Dependency>
+            <Dependency>poppler-qt5</Dependency>
+            <Dependency>qt5-script</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-webkit</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>            
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-11-05</Date>
+            <Version>4.5</Version>
+            <Comment>First Release</Comment>
+            <Name>Stefan Gronewold (groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

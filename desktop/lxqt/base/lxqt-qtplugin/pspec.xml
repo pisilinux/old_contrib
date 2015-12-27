@@ -10,22 +10,23 @@
         <IsA>app</IsA>
         <Summary>LXQt platform integration for Qt</Summary>
         <Description>LXDE-Qt platform integration plugin for Qt</Description>
-        <Archive sha1sum="c0c66496e28343c22f2956232a2664aaa94660aa" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-qtplugin-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libdbusmenu-qt-devel</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
-            <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="b4d32584daf8d4bbb5e5c30eb481b0431fa60686" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-qtplugin-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-qtplugin</Name>
+        <Summary>Development files for PCManFM</Summary>
         <RuntimeDependencies>
-			<Dependency>libgcc</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -33,8 +34,14 @@
             <Path fileType="data">/usr/share</Path>
         </Files>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>
@@ -58,4 +65,3 @@
         </Update>
     </History>
 </PISI>
-

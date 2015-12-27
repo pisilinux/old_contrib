@@ -10,33 +10,40 @@
         <IsA>app</IsA>
         <Summary>LXQt notification daemon and library.</Summary>
         <Description>Notification daemon</Description>
-        <Archive sha1sum="410afcfd88b6f9a8efbf11f95bf65806c652c876" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/lxqt-notificationd-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libgcc</Dependency>
             <Dependency>cmake</Dependency>
-            <Dependency>liblxqt-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="c8b905fc65afaafceb4725e1fbc5caf92292c54e" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-notificationd-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>lxqt-notificationd</Name>
+        <Summary>Development headers for lxqt-globalkeys</Summary>
         <RuntimeDependencies>
-            <Dependency>qt5-base</Dependency>
+            <Dependency>kwindowsystem</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>liblxqt</Dependency>
             <Dependency>libqtxdg</Dependency>
-            <Dependency>kwindowsystem</Dependency>
+            <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/</Path>
         </Files>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>
@@ -60,4 +67,3 @@
         </Update>
     </History>
 </PISI>
-

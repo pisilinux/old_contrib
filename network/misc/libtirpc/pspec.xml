@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libtirpc</Name>
+        <Homepage>http://sourceforge.net/projects/libtirpc</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Transport Independent RPC library</Summary>
+        <Description>libtirpc contains a port of Sun's transport-independent RPC library to Linux. The library is intended as a replacement for the RPC code in the GNU C library, providing among others support for RPC (and in turn, NFS) over IPv6.</Description>
+        <Archive sha1sum="8da1636f98b5909c0d587e7534bc1e91f5c1a970" type="tarbz2">http://sourceforge.net/projects/libtirpc/files/libtirpc/1.0.1/libtirpc-1.0.1.tar.bz2/download</Archive>
+        <BuildDependencies>
+            <Dependency>mit-kerberos</Dependency>
+            <Dependency>e2fsprogs-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>Makefile_am.patch</Patch>
+            <Patch>libtirpc-0.2.1-fortify.patch</Patch>
+            <Patch>add_missing_rwlock_unlocks_in_xprt_register.diff</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>libtirpc</Name>
+        <RuntimeDependencies>
+            <Dependency>mit-kerberos</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib/*.so.*</Path>
+            <Path fileType="man">/usr/share/man/man5</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>libtirpc-devel</Name>
+        <Summary>Development files for libtirpc</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libtirpc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/tirpc/netconfig.h</Path>
+            <Path fileType="header">/usr/include/tirpc/rpc</Path>
+            <Path fileType="header">/usr/include/tirpc/rpcsvc</Path>
+            <Path fileType="library">/usr/lib/*.so</Path>
+            <Path fileType="library">/usr/lib32/*.so</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libtirpc-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for libtirpc</Summary>
+        <BuildType>emul32</BuildType>
+        <BuildDependencies>
+            <Dependency>glibc-32bit</Dependency>
+        </BuildDependencies>
+        <RuntimeDependencies>
+            <Dependency>libtirpc</Dependency>
+            <Dependency>glibc-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32/*.so.*</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="6">
+            <Date>2015-12-25</Date>
+            <Version>1.0.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Alihan Öztürk</Name>
+            <Email>alihan@pisilinux.org</Email>
+        </Update>
+        <Update release="5">
+            <Date>2014-04-03</Date>
+            <Version>0.2.4</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Marcin Bojara</Name>
+            <Email>marcin@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
+            <Date>2014-02-20</Date>
+            <Version>0.2.2</Version>
+            <Comment>Rebuild Unused</Comment>
+            <Name>Varol Maksutoğlu</Name>
+            <Email>waroi@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2013-07-27</Date>
+            <Version>0.2.2</Version>
+            <Comment>Move pc files to devel pack, rebuild</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2013-07-27</Date>
+            <Version>0.2.2</Version>
+            <Comment>Move 32bit .pc files to 32bit package</Comment>
+            <Name>Fatih Turgel</Name>
+            <Email>hitaf@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-10-05</Date>
+            <Version>0.2.2</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

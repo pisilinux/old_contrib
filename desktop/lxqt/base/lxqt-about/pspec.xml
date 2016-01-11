@@ -33,6 +33,7 @@
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>liblxqt</Dependency>
+            <Dependency>libqtxdg</Dependency>
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
     </Package>

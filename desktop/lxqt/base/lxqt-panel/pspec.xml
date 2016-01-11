@@ -52,6 +52,7 @@
         </AdditionalFiles>
         <Summary>Development files for lxqt-menu-cache</Summary>
         <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>kwindowsystem</Dependency>
             <Dependency>libX11</Dependency>
@@ -71,6 +72,7 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>solid</Dependency>
+            <Dependency>lxqt-menu-cache</Dependency>
         </RuntimeDependencies>
     </Package>
     <Package>

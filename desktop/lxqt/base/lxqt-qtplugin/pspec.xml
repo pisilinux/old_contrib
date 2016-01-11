@@ -28,6 +28,7 @@
         <RuntimeDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>qt5-base</Dependency>
+            <Dependency>libdbusmenu-qt</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

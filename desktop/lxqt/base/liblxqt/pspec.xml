@@ -50,9 +50,10 @@
         </Files>
         <Summary>Development headers for liblxqt</Summary>
         <RuntimeDependencies>
-            <Dependency>liblxqt</Dependency>
+            <Dependency release="current">liblxqt</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
         </RuntimeDependencies>
     </Package>
     <History>

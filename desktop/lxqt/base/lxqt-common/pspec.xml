@@ -41,7 +41,7 @@
             <Dependency>lxqt-policykit</Dependency>
             <Dependency>lxqt-session</Dependency>
             <Dependency>pcmanfm-qt</Dependency>
-            <Dependency>pisilinux-default-settings-lxqt</Dependency>
+<!--             <Dependency>pisilinux-default-settings-lxqt</Dependency> -->
         </RuntimeDependencies>
     </Package>
     <History>

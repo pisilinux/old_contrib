@@ -139,6 +139,77 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libnfsidmap</Name>
+            <Homepage>http://www.citi.umich.edu/projects/nfsv4/linux/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>library</IsA>
+            <PartOf>programming.misc</PartOf>
+            <Summary xml:lang="fr">Librairie de mapping (lien) d&apos;ID nom de NFSv4.</Summary>
+            <Summary xml:lang="en">NFSv4 ID name mapping library</Summary>
+            <Summary xml:lang="tr">NFSv4 ID isim haritalandırma (mapping) kitaplığı</Summary>
+            <Description xml:lang="en">libnfsidmap is a library holding multiple methods of mapping names to id&apos;s and visa versa, mainly for NFSv4.</Description>
+            <Description xml:lang="tr">libnfsidmap, çeşitli isim ve kimlik eşleştirme metodları içeren bir kitaplıktır. Genellikle NFSv4 için kullanılır.</Description>
+            <Archive type="tarbz2" sha1sum="2b57d7299a59a51d2434a2a7231725b2d61916a4">https://fedorapeople.org/~steved/libnfsidmap/0.26/libnfsidmap-0.26.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>openldap-client</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/misc/libnfsidmap/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libnfsidmap</Name>
+            <RuntimeDependencies>
+                <Dependency>openldap-client</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/*.so.*</Path>
+                <Path fileType="library">/usr/lib/libnfsidmap/*.so</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libnfsidmap-devel</Name>
+            <Summary xml:lang="en">Development files for libnfsidmap</Summary>
+            <Summary xml:lang="tr">libnfsidmap için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="3">libnfsidmap</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/*.so</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2015-12-25</Date>
+                <Version>0.26</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-10-27</Date>
+                <Version>0.25</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Yusuf Aydemir</Name>
+                <Email>yusuf.aydemir@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-06-19</Date>
+                <Version>0.24</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libxklavier</Name>
             <Homepage>http://www.freedesktop.org/Software/LibXklavier</Homepage>
             <Packager>
@@ -491,6 +562,69 @@
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ruby-gtk2</Name>
+            <Homepage>http://ruby-gnome2.sourceforge.jp/</Homepage>
+            <Packager>
+                <Name>Merve Yüzbaşıoğlu</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LLGPL-2.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.ruby</PartOf>
+            <Summary xml:lang="en">GNOME 2 bindings for Ruby</Summary>
+            <Summary xml:lang="tr">Ruby için GNOME 2 bağlayıcıları</Summary>
+            <Description xml:lang="en">Ruby-gtk2 is a set of bindings for the GNOME-2.x libraries to use from Ruby.</Description>
+            <Description xml:lang="tr">ruby-gtk2, GNOME 2 kütüphaneleri için bağlayıcıları içerir.</Description>
+            <Archive sha1sum="d3dcbebc4e3c22d99cb657fab32e83f23812c003">mirrors://sourceforge/ruby-gnome2/ruby-gtk2-2.2.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>atk-devel</Dependency>
+                <Dependency>ruby-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/ruby/ruby-gtk2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ruby-gtk2</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>ruby</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2014-05-24</Date>
+                <Version>2.2.0</Version>
+                <Comment>Version Bump.</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-02-11</Date>
+                <Version>2.1.0</Version>
+                <Comment>Version Bump.</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-05-03</Date>
+                <Version>1.1.3</Version>
+                <Comment>First release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1308,6 +1442,115 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>nfs-utils</Name>
+            <Homepage>http://nfs.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>service</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">NFS client and server</Summary>
+            <Summary xml:lang="tr">NFS istemcisi ve sunucusu</Summary>
+            <Description xml:lang="en">Contains NFS (Network File System) client and server. It is possible to mount a network resource as a file system using the NFS protocol.</Description>
+            <Description xml:lang="tr">nfs-utils, NFS (Ağ dosya sistemi) istemcisi ve sunucusunu içerir.</Description>
+            <Archive type="tarbz2" sha1sum="7c561e6a22a626aed93766bdb0c34e9a4e77b9e7">mirrors://sourceforge/nfs/nfs-utils-1.3.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libtirpc-devel</Dependency>
+                <Dependency>libcap-devel</Dependency>
+                <Dependency>tcp-wrappers-devel</Dependency>
+                <Dependency>libevent-devel</Dependency>
+                <Dependency>libnfsidmap-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>device-mapper-devel</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>e2fsprogs-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">nfs-utils-1.2.1-statdpath-man.patch</Patch>
+                <Patch level="1">nfs-utils-1.2.1-exp-subtree-warn-off.patch</Patch>
+                <Patch level="1">nfs-utils-1.2.3-sm-notify-res_init.patch</Patch>
+                <Patch level="1">nfs-utils-1.2.5-idmap-errmsg.patch</Patch>
+            </Patches>
+            <SourceURI>network/share/nfs-utils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>nfs-utils</Name>
+            <RuntimeDependencies>
+                <Dependency>libcap</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>keyutils</Dependency>
+                <Dependency>libevent</Dependency>
+                <Dependency>libtirpc</Dependency>
+                <Dependency>e2fsprogs</Dependency>
+                <Dependency>libnfsidmap</Dependency>
+                <Dependency>mit-kerberos</Dependency>
+                <Dependency>tcp-wrappers</Dependency>
+                <Dependency>device-mapper</Dependency>
+                <Dependency>libutil-linux</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="library">/var/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Provides>
+                <COMAR script="nfs-common.py" name="nfs_common">System.Service</COMAR>
+                <COMAR script="nfs-server.py" name="nfs_server">System.Service</COMAR>
+            </Provides>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/exports" permission="0644" owner="root">exports</AdditionalFile>
+                <AdditionalFile target="/etc/conf.d/nfs" permission="0644" owner="root">nfs.confd</AdditionalFile>
+                <AdditionalFile target="/etc/idmapd.conf" permission="0644" owner="root">idmapd.conf</AdditionalFile>
+                <AdditionalFile target="/etc/gssapi_mech.conf" permission="0644" owner="root">gssapi_mech.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2015-12-25</Date>
+                <Version>1.3.3</Version>
+                <Comment>Version bump</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-11-27</Date>
+                <Version>1.2.9</Version>
+                <Comment>Version bump</Comment>
+                <Name>Richard de Bruin</Name>
+                <Email>richdb@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-07-28</Date>
+                <Version>1.2.8</Version>
+                <Comment>Dep Fixed</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-05-11</Date>
+                <Version>1.2.8</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ertan Güven</Name>
+                <Email>ertan@pisilinux.org</Email>
+            </Update>
+            <Update release="1" type="security">
+                <Date>2011-07-08</Date>
+                <Version>1.2.3</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>chromium-browser</Name>
             <Homepage>http://code.google.com/chromium</Homepage>
             <Packager>
@@ -1659,6 +1902,215 @@
                 <Comment>First Release</Comment>
                 <Name>Richard de Bruin</Name>
                 <Email>richdb@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libtirpc</Name>
+            <Homepage>http://sourceforge.net/projects/libtirpc</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">Transport Independent RPC library</Summary>
+            <Summary xml:lang="tr">Aktarma bağımsız RPC kitaplığı</Summary>
+            <Description xml:lang="en">libtirpc contains a port of Sun&apos;s transport-independent RPC library to Linux. The library is intended as a replacement for the RPC code in the GNU C library, providing among others support for RPC (and in turn, NFS) over IPv6.</Description>
+            <Description xml:lang="tr">libtirpc, Sun firmasının aktarma bağımsız RPC kitaplığının Linux&apos;a uyarlanmış halini içerir. Bu kitaplık GNU C kitaplığının içindeki RPC kodlarının yerini almayı, IPv6 üzerinden RPC desteği ile birlikte, amaçlar.</Description>
+            <Archive type="tarbz2" sha1sum="8da1636f98b5909c0d587e7534bc1e91f5c1a970">http://sourceforge.net/projects/libtirpc/files/libtirpc/1.0.1/libtirpc-1.0.1.tar.bz2/download</Archive>
+            <BuildDependencies>
+                <Dependency>mit-kerberos</Dependency>
+                <Dependency>e2fsprogs-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>Makefile_am.patch</Patch>
+                <Patch>libtirpc-0.2.1-fortify.patch</Patch>
+                <Patch>add_missing_rwlock_unlocks_in_xprt_register.diff</Patch>
+            </Patches>
+            <SourceURI>network/misc/libtirpc/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libtirpc</Name>
+            <RuntimeDependencies>
+                <Dependency>mit-kerberos</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib/*.so.*</Path>
+                <Path fileType="man">/usr/share/man/man5</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libtirpc-devel</Name>
+            <Summary xml:lang="en">Development files for libtirpc</Summary>
+            <Summary xml:lang="tr">libtirpc için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="6">libtirpc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/tirpc/netconfig.h</Path>
+                <Path fileType="header">/usr/include/tirpc/rpc</Path>
+                <Path fileType="header">/usr/include/tirpc/rpcsvc</Path>
+                <Path fileType="library">/usr/lib/*.so</Path>
+                <Path fileType="library">/usr/lib32/*.so</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="library">/usr/lib32/pkgconfig</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libtirpc-32bit</Name>
+            <Summary xml:lang="en">32-bit shared libraries for libtirpc</Summary>
+            <PartOf>emul32</PartOf>
+            <BuildType>emul32</BuildType>
+            <BuildDependencies>
+                <Dependency>glibc-32bit</Dependency>
+            </BuildDependencies>
+            <RuntimeDependencies>
+                <Dependency>libtirpc</Dependency>
+                <Dependency>glibc-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib32/*.so.*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2015-12-25</Date>
+                <Version>1.0.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-04-03</Date>
+                <Version>0.2.4</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-02-20</Date>
+                <Version>0.2.2</Version>
+                <Comment>Rebuild Unused</Comment>
+                <Name>Varol Maksutoğlu</Name>
+                <Email>waroi@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-07-27</Date>
+                <Version>0.2.2</Version>
+                <Comment>Move pc files to devel pack, rebuild</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-07-27</Date>
+                <Version>0.2.2</Version>
+                <Comment>Move 32bit .pc files to 32bit package</Comment>
+                <Name>Fatih Turgel</Name>
+                <Email>hitaf@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-10-05</Date>
+                <Version>0.2.2</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libgssglue</Name>
+            <Homepage>http://www.citi.umich.edu/projects/nfsv4/linux/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">exports a gssapi interface which calls other random gssapi libraries</Summary>
+            <Summary xml:lang="tr">Diğer raslantısal gssapi kitaplıklarına çağrı yapan gssapi arayüzünü dışa aktaran kitaplık</Summary>
+            <Description xml:lang="en">libgssglue provides a gssapi interface, but does not implement any gssapi mechanisms itself; instead it calls other gssapi functions (e.g., those provided by MIT Kerberos), depending on the requested mechanism, to do the work.</Description>
+            <Description xml:lang="tr">libgssglue herhangi bir gssapi mekanizma gerçekleştirimi yapmadan istenilen mekanizmaya bakarak diğer gssapi fonsiyonlarına (örn:MIT Kerberos tarafından sağlanan) ulaşabilmek için bir arayüz (API) sunar.</Description>
+            <Archive type="targz" sha1sum="a8edc4f6a1d4dcd80ad52d18226fc65fa8850af1">http://www.citi.umich.edu/projects/nfsv4/linux/libgssglue/libgssglue-0.4.tar.gz</Archive>
+            <Patches>
+                <Patch level="1">libgssglue-0.1-gssglue.patch</Patch>
+            </Patches>
+            <SourceURI>network/misc/libgssglue/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libgssglue</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/*.so.*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgssglue-devel</Name>
+            <Summary xml:lang="en">libgssglue development files</Summary>
+            <Summary xml:lang="tr">libgssglue geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="5">libgssglue</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/gssglue/gssapi</Path>
+                <Path fileType="library">/usr/lib/*.so</Path>
+                <Path fileType="library">/usr/lib32/*.so</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib32/pkgconfig</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgssglue-32bit</Name>
+            <Summary xml:lang="en">32-bit shared libraries for libgssglue</Summary>
+            <PartOf>emul32</PartOf>
+            <BuildType>emul32</BuildType>
+            <BuildDependencies>
+                <Dependency>glibc-32bit</Dependency>
+            </BuildDependencies>
+            <RuntimeDependencies>
+                <Dependency release="5">libgssglue</Dependency>
+                <Dependency>glibc-32bit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib32/*.so.*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2015-12-25</Date>
+                <Version>0.4</Version>
+                <Comment>rebuild</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-03-09</Date>
+                <Version>0.4</Version>
+                <Comment>rebuild</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvarice@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-07-27</Date>
+                <Version>0.4</Version>
+                <Comment>Move pc files to devel pack, rebuild</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-11-22</Date>
+                <Version>0.4</Version>
+                <Comment>First release</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -12876,6 +13328,64 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>htmlcxx</Name>
+            <Homepage>http://htmlcxx.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPL</License>
+            <IsA>app:library</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">htmlcxx is a simple non-validating css1 and html parser for C++</Summary>
+            <Description xml:lang="en">htmlcxx is the name of both the library and the utility application that comes with this package. Although the htmlcxx (the application) is mostly useless for programming, you can use it to easily see how htmlcxx (the library) would parse your html code.</Description>
+            <Archive type="targz" sha1sum="0d8205a0d1296fd228af2001b1d990e9257c104c">http://sourceforge.net/projects/htmlcxx/files/htmlcxx/0.86/htmlcxx-0.86.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>flex</Dependency>
+                <Dependency>bison</Dependency>
+                <Dependency>libtool</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">fix-gcc-4.6-ftbfs.patch</Patch>
+                <Patch level="1">reduce-linking.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/sound/htmlcxx/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>htmlcxx</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>htmlcxx-devel</Name>
+            <Summary xml:lang="en">Development files for htmlcxx</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">htmlcxx</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2012-12-30</Date>
+                <Version>0.86</Version>
+                <Comment>First release</Comment>
+                <Name>Stefan Gronewold</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libmikmod</Name>
             <Homepage>http://mikmod.raphnet.net/</Homepage>
             <Packager>
@@ -13196,6 +13706,138 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Comment>First release</Comment>
                 <Name>Mathias Freire</Name>
                 <Email>mathiasfreire45@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>handbrake</Name>
+            <Homepage>http://handbrake.fr/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv1</License>
+            <IsA>app</IsA>
+            <PartOf>multimedia.editor</PartOf>
+            <Summary xml:lang="en">Multithreaded video transcoder</Summary>
+            <Summary xml:lang="tr">Çoklu görev destekli video kodlama/düzenleme aracı</Summary>
+            <Description xml:lang="en">The program is also used to convert DVDs so they can be viewed on iPods, iPhones and most media players.</Description>
+            <Description xml:lang="tr">Handbrake,Video dosyalarını portatif medya oynatıcıları için düzenleyebilmenin yanısıra çözünürlülük değişimi desteğide sunan özgür video kodlama ve düzenleme aracıdır.</Description>
+            <Icon>HandBrake</Icon>
+            <Archive type="tarbz2" sha1sum="857c1c0c274f086424ce7863940c5ee0fd065c40">https://handbrake.fr/rotation.php?file=HandBrake-0.10.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>bzip2</Dependency>
+                <Dependency>python</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>gettext-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>lame-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>at-spi2-core-devel</Dependency>
+                <Dependency>x264-devel</Dependency>
+                <Dependency>libogg-devel</Dependency>
+                <Dependency>libass-devel</Dependency>
+                <Dependency>fribidi-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libbluray-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+                <Dependency>libtheora-devel</Dependency>
+                <Dependency>dbus-glib-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>libsamplerate-devel</Dependency>
+                <Dependency>gst-plugins-base-next-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">Do-not-require-wget-or-curl.patch</Patch>
+                <Patch level="1">use-libtoolize.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/editor/handbrake/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>handbrake</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>lame</Dependency>
+                <Dependency>x264</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libass</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>libbluray</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gst-libav-next</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>libtheora</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libsamplerate</Dependency>
+                <Dependency>gstreamer-next</Dependency>
+                <Dependency>gst-plugins-base-next</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>dbus-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="library">/usr/lib/python2.7</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2016-01-06</Date>
+                <Version>0.10.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold (groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2015-04-30</Date>
+                <Version>0.10.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Idris KALP</Name>
+                <Email>idriskalp@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2015-02-20</Date>
+                <Version>0.10.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Hakan Yıldız</Name>
+                <Email>hknyldz93@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-06-18</Date>
+                <Version>0.9.9</Version>
+                <Comment>Rebuild for gcc</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-06-07</Date>
+                <Version>0.9.9</Version>
+                <Comment>rebuild</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-12-05</Date>
+                <Version>0.9.9</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

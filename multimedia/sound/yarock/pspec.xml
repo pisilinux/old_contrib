@@ -21,7 +21,7 @@
             <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-xmlpatterns-devel</Dependency>
             <Dependency>qt5-webkit-devel</Dependency>
-            <Dependency>mpv-player</Dependency>
+            <Dependency>mpv-player-devel</Dependency>
             <Dependency>htmlcxx-devel</Dependency>
             <Dependency>taglib-devel</Dependency> 
             </BuildDependencies>

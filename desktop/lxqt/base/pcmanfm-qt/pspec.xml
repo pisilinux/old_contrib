@@ -10,70 +10,68 @@
         <IsA>app:gui</IsA>
         <Summary>The LXQt file manager, Qt port of PCManFM</Summary>
         <Description>File manager and desktop icon manager (Qt port of PCManFM and libfm)</Description>
-        <Archive sha1sum="1e28798978df395482fd904fa0212595486e6346" type="targz">http://downloads.lxqt.org/lxqt/0.9.0/pcmanfm-qt-0.9.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb-devel</Dependency>
-            <Dependency>libfm-qt-devel</Dependency>
-            <Dependency>liblxqt-devel</Dependency>
-            <Dependency>lxqt-menu-cache-devel</Dependency>
-            <Dependency>libqtxdg-devel</Dependency>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>cmake</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libfm-qt-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>lxqt-menu-cache-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
         </BuildDependencies>
-        <Patches>
-             <Patch>desktop.patch</Patch>
-             <Patch>desktop-pref.patch</Patch>
-        </Patches>
+        <Archive sha1sum="ffb276293b63935addea73ab4b2ce756856aa91a" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/pcmanfm-qt-0.10.0.tar.xz</Archive>
     </Source>
-
     <Package>
         <Name>pcmanfm-qt</Name>
-        <RuntimeDependencies>
-            <Dependency>glib2</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>libxcb</Dependency>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>libfm-qt</Dependency>
-            <Dependency>qt5-x11extras</Dependency>
-            <Dependency>lxqt-menu-cache</Dependency>
-        </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="data">/usr/share/</Path>
             <Path fileType="config">/etc/pcmanfm-qt</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/libfm-qt/translations/libfm-qt_tr.qm">libfm-qt_tr.qm</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pcmanfm-qt/translations/pcmanfm-qt_tr.qm">pcmanfm-qt_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/libfm-qt/translations/libfm-qt_tr.qm">libfm-qt_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/pcmanfm-qt/translations/pcmanfm-qt_tr.qm">pcmanfm-qt_tr.qm</AdditionalFile>
         </AdditionalFiles>
-        <Replaces>
-            <Package>pcmanfm</Package>
-        </Replaces>
+        <Summary>Development headers for lxqt-panel</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>libfm-qt</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>lxqt-menu-cache</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <Package>
         <Name>pcmanfm-qt-devel</Name>
-        <Summary>Development files for PCManFM</Summary>
-        <Description>Development files for PCManFM</Description>
-        <RuntimeDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>libfm-qt-devel</Dependency>
-        </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
             <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
-        <Replaces>
-            <Package>pcmanfm-devel</Package>
-        </Replaces>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/pcmanfm-qt/libfm-qt_tr.qm" group="root">libfm-qt_tr.qm</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/pcmanfm-qt/pcmanfm-qt_tr.qm" group="root">pcmanfm-qt_tr.qm</AdditionalFile>
+        </AdditionalFiles>
+        <Summary>Development files for PCManFM</Summary>
+        <RuntimeDependencies>
+            <Dependency>libfm-qt-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </RuntimeDependencies>
     </Package>
-
     <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="3">
             <Date>2015-05-13</Date>
             <Version>0.9.0</Version>
@@ -97,4 +95,3 @@
         </Update>
     </History>
 </PISI>
-

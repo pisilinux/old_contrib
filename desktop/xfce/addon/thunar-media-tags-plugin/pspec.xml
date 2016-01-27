@@ -18,8 +18,12 @@
         <BuildDependencies>
             <Dependency>Thunar-devel</Dependency>
             <Dependency>taglib-devel</Dependency>
-            <Dependency>exo-devel</Dependency>
-            <Dependency>atk-devel</Dependency>
+            <Dependency versionFrom="0.5.0">exo-devel</Dependency>
+            <Dependency versionFrom="4.6.0">libxfce4util-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>taglib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -27,6 +31,7 @@
         <Name>thunar-media-tags-plugin</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>Thunar</Dependency>
             <Dependency>taglib</Dependency>
             <Dependency>exo</Dependency>

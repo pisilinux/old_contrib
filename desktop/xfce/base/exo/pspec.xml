@@ -14,11 +14,13 @@
         <IsA>library</IsA>
         <Summary>Xfce extension library</Summary>
         <Description>exo is an extension library to Xfce, developed by os-cillation. While Xfce comes with quite a few libraries that are targeted at desktop development, exo is targeted at application development.</Description>
-        <Archive sha1sum="85847a06182c316c42222b8cfcfab3a710fa96cc" type="tarbz2">mirrors://xfce/src/xfce/exo/0.10/exo-0.10.4.tar.bz2</Archive>
+        <Archive sha1sum="1edbd1eeda577ff0a0473145490b33eb8f9c24c4" type="tarbz2">mirrors://xfce/src/xfce/exo/0.10/exo-0.10.7.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>perl-URI</Dependency>
             <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>perl-URI</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -28,8 +30,10 @@
             <Dependency>libxfce4ui</Dependency>
             <Dependency>atk</Dependency>
             <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libxfce4util</Dependency>
         </RuntimeDependencies>
@@ -78,6 +82,13 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2015-10-03</Date>
+            <Version>0.10.7</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="9">
             <Date>2015-03-23</Date>
             <Version>0.10.4</Version>

@@ -16,12 +16,14 @@
             <Dependency>cmake</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-tools-devel</Dependency>
+            <Dependency>binutils</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
             <Dependency>pcmanfm-qt-devel</Dependency>
             <Dependency>libexif-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency>libfm-qt-devel</Dependency>
+            <Dependency versionFrom="1.2">libfm-qt-devel</Dependency>
+            <Dependency>qt5-qdbusviewer</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>desktop.patch</Patch>

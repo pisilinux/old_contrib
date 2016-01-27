@@ -16,6 +16,8 @@
         <Archive sha1sum="5a7e665fcfd06859c45e14b7063d719b5b26885f" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.6/xfce4-datetime-plugin-0.6.2.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xfce4-panel-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,9 +26,9 @@
         <RuntimeDependencies>
             <Dependency>xfce4-panel</Dependency>
             <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>libxfce4ui</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libxfce4util</Dependency>
         </RuntimeDependencies>
         <Files>

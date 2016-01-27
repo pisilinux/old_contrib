@@ -5,21 +5,25 @@
 
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import get
+from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
-
 
 def setup():
     shelltools.makedirs("build")
     shelltools.cd("build")
-    cmaketools.configure("-DCMAKE_BUILD_TYPE=release \
-			-DCMAKE_INSTALL_PREFIX=/usr \
-			-DUSE_QTMIMETYPES=OFF \
-			-DUSE_QT5=ON", sourceDir="..")
-
+    cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
+                          -DCMAKE_BUILD_TYPE=Release \
+                          -DLXQT_ETC_XDG_DIR=/usr/share/cmake/qt5xdg \
+                          -DKF5WindowSystem_DIR=/usr/lib/cmake/KF5WindowSystem \
+                          -DLXQT_LIBRARY_DIRS=lib", sourceDir="..")
 def build():
     shelltools.cd("build")
     cmaketools.make()
+    #pisitools.dosed("CMakeFiles/Export/share/cmake/lxqt/lxqt-targets-release.cmake", "lib64", "lib")
 
 def install():
     shelltools.cd("build")
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.domove("/usr/lib64/*", "usr/lib/")
+    pisitools.removeDir("/usr/lib64")
+    

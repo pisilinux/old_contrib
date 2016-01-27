@@ -15,20 +15,18 @@
         <Description>The Thunar VCS Plugin adds Subversion and GIT actions to the context menu of thunar. This gives a SVN integration and GIT integration to Thunar.</Description>
         <Archive sha1sum="221c633ec2bdf7c0d9d008ad9cd5094ddbc90ce1" type="tarbz2">http://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.1/thunar-vcs-plugin-0.1.4.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>xfce4-panel-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>Thunar-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>exo-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>thunar-vcs-plugin</Name>
         <RuntimeDependencies>
-            <Dependency>subversion</Dependency>
-            <Dependency>apr</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>libxfce4util</Dependency>
         </RuntimeDependencies>
         <Files>

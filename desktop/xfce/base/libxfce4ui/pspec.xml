@@ -14,17 +14,13 @@
         <Description>libxfce4ui is a various GTK+ widgets for Xfce desktop environment.</Description>
         <Archive sha1sum="ef687867bd087b5fc2befee0e8ca1a281f6bf165" type="tarbz2">http://archive.xfce.org/src/xfce/libxfce4ui/4.12/libxfce4ui-4.12.1.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>gtk3-docs</Dependency>
-            <Dependency>atk-devel</Dependency>
-            <Dependency>gtk3-devel</Dependency>
-            <Dependency>libSM-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>libICE-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
             <Dependency>xfconf-devel</Dependency>
             <Dependency>xfce4-dev-tools</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
             <Dependency>startup-notification-devel</Dependency>
+            <Dependency>intltool</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -33,11 +29,10 @@
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
             <Dependency>gtk2</Dependency>
-            <Dependency>gtk3</Dependency>
             <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>libSM</Dependency>
-            <Dependency>libICE</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>xfconf</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libxfce4util</Dependency>
@@ -57,8 +52,8 @@
     <Package>
         <Name>libxfce4ui-devel</Name>
         <RuntimeDependencies>
+            <Dependency release="current">libxfce4ui</Dependency>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>gtk3-devel</Dependency>
             <Dependency>xfconf-devel</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
         </RuntimeDependencies>

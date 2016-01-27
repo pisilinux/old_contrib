@@ -14,11 +14,12 @@
         <Description>Mousepad is a text editor for Xfce.</Description>
         <Archive sha1sum="ebadaadc02184b01230666dc12f8ab90032876f9" type="tarbz2">http://archive.xfce.org/src/apps/mousepad/0.4/mousepad-0.4.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
             <Dependency>exo-devel</Dependency>
-            <Dependency>xfce4-dev-tools</Dependency>
-            <Dependency>gtksourceview3-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
             <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
             <AdditionalFiles>
                 <AdditionalFile target="po/tr.po">tr.po</AdditionalFile>
@@ -28,9 +29,12 @@
     <Package>
         <Name>mousepad</Name>
         <RuntimeDependencies>
-            <Dependency>gtk3</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>gtksourceview3</Dependency>
+            <Dependency>dbus-glib</Dependency>
+            <Dependency>gtksourceview</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

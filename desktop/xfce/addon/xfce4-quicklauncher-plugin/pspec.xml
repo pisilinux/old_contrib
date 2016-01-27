@@ -16,6 +16,8 @@
         <Archive sha1sum="ad2b7b344ddb611cee25ee130c1f2d4765072fa1" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-quicklauncher-plugin/1.9/xfce4-quicklauncher-plugin-1.9.4.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>xfce4-panel-devel</Dependency>
+            <Dependency>perl-XML-Parser</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
         </BuildDependencies>
     </Source>
 

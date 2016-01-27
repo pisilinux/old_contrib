@@ -14,9 +14,9 @@
         <Description>xfce4-smartbookmark-plugin is a plugin allows you to send requests directly to your browser and perform a custom search.</Description>
         <Archive sha1sum="fc6bf7fd82193fcceb5398a597dcc24fc1bf9958" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.4/xfce4-smartbookmark-plugin-0.4.6.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>xfce4-panel-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>libxfce4util-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,6 +25,7 @@
         <RuntimeDependencies>
             <Dependency>xfce4-panel</Dependency>
             <Dependency>gtk2</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>libxfce4util</Dependency>
             <Dependency>libxfce4ui</Dependency>
         </RuntimeDependencies>

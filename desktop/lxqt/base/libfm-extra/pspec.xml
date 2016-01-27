@@ -10,16 +10,17 @@
         <IsA>library</IsA>
         <Summary>Core library of PCManFM file manager</Summary>
         <Description>libfm is a Core library of PCManFM file manager</Description>
-        <Archive sha1sum="8e29e6ab86a49db25bf6133c5936839a49aa9420" type="targz">https://github.com/lxde/libfm/archive/1.2.3.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
             <Dependency>gtk-doc</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>gettext-devel</Dependency>
         </BuildDependencies>
+        <Archive sha1sum="8e29e6ab86a49db25bf6133c5936839a49aa9420" type="targz">https://github.com/lxde/libfm/archive/1.2.3.tar.gz</Archive>
     </Source>
     <Package>
         <Name>libfm-extra</Name>
+        <Summary>Development headers for libfm-qt</Summary>
         <RuntimeDependencies>
             <Dependency>glib2</Dependency>
             <Dependency>glib2-devel</Dependency>

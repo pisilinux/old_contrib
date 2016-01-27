@@ -10,8 +10,8 @@ from pisi.actionsapi import get
 
 def setup():
     pisitools.dosed("src/ui/gui/gen-dot-desktop.sh", "Math;", "")
-    autotools.configure("--prefix=/usr \
-                         --sysconfdir=/etc \
+    autotools.configure("--disable-rpath \
+                         --disable-static \
                          --without-libreadline-prefix")
 
 def build():

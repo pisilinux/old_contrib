@@ -1,0 +1,49 @@
+<PISI>
+    <Source>
+        <Name>lxqt-sudo</Name>
+        <Homepage>http://lxqt.org/</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <PartOf>desktop.toolkit</PartOf>
+        <IsA>app:gui</IsA>
+        <Summary>Python binding of terminal widget for Qt</Summary>
+        <Description>LXQt privilege program (lxsu).</Description>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+        </BuildDependencies>
+        <Icon>lxqt-sudo</Icon>
+        <Archive sha1sum="36cd432c5de5ee1cbcb5250fbda2c2ccede25e0f" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-sudo-0.10.0.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>lxqt-sudo</Name>
+        <Summary>LXQt privilege program (lxsu).</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

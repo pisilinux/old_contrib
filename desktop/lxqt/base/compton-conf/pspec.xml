@@ -13,6 +13,7 @@
         <Archive sha1sum="8401534e94298895cc7cb668c0ed81916a229ef1" type="zip">http://source.pisilinux.org/1.0/compton-conf-master-28012015.zip</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
             <Dependency>libconfig-devel</Dependency>
             <Dependency>pkgconfig</Dependency>
             <Dependency>libgcc</Dependency>

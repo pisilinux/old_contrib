@@ -16,6 +16,8 @@
         <Description>Xfce4-systemload-plugin is a plugin which displays the current CPU load, the memory in use, the swap space and the system uptime in the Xfce panel.</Description>
         <Archive sha1sum="05de6cebb2c2c4934f808932ce7711059850a7a5" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-systemload-plugin/1.1/xfce4-systemload-plugin-1.1.2.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>xfce4-panel-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -24,7 +26,7 @@
         <Name>xfce4-systemload-plugin</Name>
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
-            <Dependency>upower</Dependency>
+            <Dependency>glib2</Dependency>
             <Dependency>libxfce4ui</Dependency>
             <Dependency>xfce4-panel</Dependency>
             <Dependency>libxfce4util</Dependency>

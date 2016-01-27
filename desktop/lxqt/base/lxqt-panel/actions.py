@@ -24,7 +24,7 @@ def build():
 def install():
     shelltools.cd("build")
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
-    pisitools.domove("/usr/=/usr/share/cmake", "/usr/share")
-    pisitools.removeDir("/usr/=")
-    shelltools.cd("..")
-    pisitools.dodoc("AUTHORS", "COPYING")
+    #pisitools.domove("/usr/=/usr/share/cmake", "/usr/share")
+    #pisitools.removeDir("/usr/=")
+    #shelltools.cd("..")
+    #pisitools.dodoc("AUTHORS", "COPYING")

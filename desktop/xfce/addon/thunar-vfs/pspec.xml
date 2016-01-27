@@ -15,15 +15,17 @@
         <Description>thunar-vfs is a virtual filesystem shipped with the Thunar 1.0 and earlier releases.</Description>
         <Archive sha1sum="fe63138c9324946bdd7013c29284c22d4c8f94c5" type="tarbz2">http://archive.xfce.org/src/xfce/thunar-vfs/1.2/thunar-vfs-1.2.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>Thunar-devel</Dependency>
-            <Dependency>exo-devel</Dependency>
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>gamin-devel</Dependency>
-            <Dependency>gconf-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
-            <Dependency>startup-notification-devel</Dependency>
+            <Dependency versionFrom="0.5.4">exo-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency versionFrom="0.4">startup-notification-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency versionFrom="1.2.2">libpng-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gettext</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">tr-po.patch</Patch>
@@ -33,14 +35,15 @@
     <Package>
         <Name>thunar-vfs</Name>
         <RuntimeDependencies>
-            <Dependency>Thunar</Dependency>
-            <Dependency>exo</Dependency>
-            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>exo</Dependency>            
             <Dependency>gtk2</Dependency>
-            <Dependency>gamin</Dependency>
-            <Dependency>gconf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>freetype</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libxfce4util</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
             <Dependency>startup-notification</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -56,7 +59,7 @@
         <Name>thunar-vfs-devel</Name>
         <RuntimeDependencies>
             <Dependency release="current">thunar-vfs</Dependency>
-            <Dependency>Thunar-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
             <Dependency>exo-devel</Dependency>
         </RuntimeDependencies>
         <Files>

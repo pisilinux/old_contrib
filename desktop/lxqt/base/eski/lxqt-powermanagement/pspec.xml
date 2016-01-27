@@ -1,0 +1,81 @@
+<PISI>
+    <Source>
+        <Name>lxqt-powermanagement</Name>
+        <Homepage>http://www.lxde.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app:gui</IsA>
+        <Summary>LXQt power management daemon.</Summary>
+        <Description>Daemon use for power management and auto-suspend.</Description>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>solid-devel</Dependency>
+            <Dependency>upower-devel</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="55d2b881b2cae4694415086f4b621d794dacc34f" type="tarxz">http://downloads.lxqt.org/lxqt/0.10.0/lxqt-powermanagement-0.10.0.tar.xz</Archive>
+        <Patches>
+            <Patch level="1">lid.patch</Patch>
+            <Patch level="1">lidwatcher.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>lxqt-powermanagement</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-config-powermanagement.desktop">lxqt-config-powermanagement.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/translations/lxqt-powermanagement/lxqt-powermanagement_tr.qm">lxqt-powermanagement_tr.qm</AdditionalFile>
+        </AdditionalFiles>
+        <Summary>Development files for PCManFM</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-svg</Dependency>
+        </RuntimeDependencies>
+    </Package>
+    <History>
+        <Update release="4">
+            <Date>2015-11-03</Date>
+            <Version>0.10.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2015-05-13</Date>
+            <Version>0.9.0</Version>
+            <Comment>version bump and compiled with qt5.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-10-21</Date>
+            <Version>0.8.0</Version>
+            <Comment>version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2014-04-25</Date>
+            <Version>0.7.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Vedat Demir</Name>
+            <Email>vedat@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

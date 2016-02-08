@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Simple Direct Media Layer 2.0 series</Summary>
         <Description>libsdl is a cross-platform multimedia library designed to provide low level access to audio, keyboard, mouse, joystick, 3D hardware via OpenGL, and 2D video framebuffer.</Description>
-        <Archive sha1sum="21c45586a4e94d7622e371340edec5da40d06ecc" type="targz">http://www.libsdl.org/release/SDL2-2.0.3.tar.gz</Archive>
+        <Archive sha1sum="470a23dfc4b6220c687925ebbe5fe96287f8fb08" type="targz">http://www.libsdl.org/release/SDL2-2.0.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>mesa-devel</Dependency>
             <Dependency>libXv-devel</Dependency>
@@ -95,8 +95,7 @@
             <Dependency>libXrender-32bit</Dependency>
             <Dependency>libXinerama-32bit</Dependency>
             <Dependency>libXScrnSaver-32bit</Dependency>
-            <Dependency>pulseaudio-libs-32bit</Dependency>
-	    <Dependency>libgcc-32bit</Dependency>
+            <Dependency>pulseaudio-libs-32bit</Dependency>	    
         </BuildDependencies>
         <RuntimeDependencies>	    
             <Dependency>mesa-32bit</Dependency>
@@ -111,6 +110,7 @@
             <Dependency>libXScrnSaver-32bit</Dependency>
             <Dependency>libXScrnSaver-32bit</Dependency>
             <Dependency>pulseaudio-libs-32bit</Dependency>
+            <Dependency>glibc-32bit</Dependency>
             <Dependency release="current">libsdl2</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -119,6 +119,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2016-02-08</Date>
+            <Version>2.0.4</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2014-06-11</Date>
             <Version>2.0.3</Version>

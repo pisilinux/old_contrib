@@ -14,4 +14,3 @@ def install():
     pisitools.dosbin("asleap")
     pisitools.dosbin("genkeys")
     pisitools.dodoc("COPYING", "README", "THANKS")
-    

@@ -14,5 +14,4 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    pisitools.insinto("/lib/udev/rules.d", "files/60-rfkill.rules")
     pisitools.dodoc("COPYING", "README")

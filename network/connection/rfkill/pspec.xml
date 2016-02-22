@@ -22,7 +22,7 @@
             <Path fileType="data">/lib/udev/rules.d</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="lib/udev/rules.d/">60-rfkill.rules</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/lib/udev/rules.d/60-rfkill.rules">rules.d</AdditionalFile>
         </AdditionalFiles>
     </Package>
 

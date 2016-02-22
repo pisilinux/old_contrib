@@ -26,6 +26,5 @@ def build():
 
 def install():
     pisitools.dosbin("tcpdump")
-
     pisitools.doman("tcpdump.1")
     pisitools.dodoc("CHANGES", "LICENSE", "README", "CREDITS", "PLATFORMS", "VERSION", "*.awk")

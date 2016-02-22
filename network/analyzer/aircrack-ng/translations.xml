@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aircrack-ng</Name>
+        <Summary xml:lang="tr">Kablosuz ağ zaafiyetlerinden yararlanan bir araç.</Summary>
+        <Description xml:lang="tr">802.11 paket toplama aracı airodump, 802.11 injection aracı aireplay, wep ve wpa psk kırma aracı aircrack ve toplanan paketleri deşifre etme aracı airdecapi barındıran, kısaca kablosuz ağ kartınız destekliyorsa şifreli olan kablosuz ağları kırabilen yazılım paketidir.</Description>
+    </Source>
+</PISI>

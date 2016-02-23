@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>pixiewps</Name>
+        <Summary xml:lang="tr">WPS için çevrimdışı saldırı aracı.</Summary>
+        <Description xml:lang="tr">Pixiewps, WPS pinlerine çevrimdışı kabadayı(brute force) saldırısı yaparak düşük ya da entropisi bulunmayan bağlantı noktalarını sömürmeye yarayan(pixie dust attack) C ile yazılmış bir kablosuz ağ zaafiyet aracıdır. Sadece eğitim amaçlı kullanılmak üzere tasarlanmıştır.</Description>
+    </Source>
+</PISI>

@@ -13,5 +13,5 @@ def build():
     autotools.make()
 
 def install():
-    pisitools.dosbin("pixiewps", "usr/local/bin")
+    pisitools.dosbin("pixiewps", "usr/bin")
     pisitools.dodoc("../LICENSE.md", "../README.md")

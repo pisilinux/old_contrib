@@ -23,7 +23,7 @@
         </RuntimeDependencies>
         <Summary>Offline attack for WPS pin</Summary>
         <Files>
-            <Path fileType="executable">/usr/local/bin</Path>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>

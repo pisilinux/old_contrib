@@ -1,0 +1,39 @@
+<PISI>
+    <Source>
+        <Name>pixiewps</Name>
+        <Homepage>https://github.com/wiire/pixiewps/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <PartOf>network</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Offline attack for WPS pin</Summary>
+        <Description>Pixiewps is a tool written in C used to bruteforce offline the WPS pin exploiting the low or non-existing entropy of some APs (pixie dust attack). It is meant for educational purposes only.</Description>
+        <BuildDependencies>
+            <Dependency>openssl-devel</Dependency>
+        </BuildDependencies>
+        <Archive type="targz" sha1sum="6c4e8816680e8cd7f15d5b2277745b853ec6e21d">https://github.com/wiire/pixiewps/archive/v1.2.2.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>pixiewps</Name>
+        <RuntimeDependencies>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
+        <Summary>Offline attack for WPS pin</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-02-23</Date>
+            <Version>1.2.2</Version>
+            <Comment>First Docker Built</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

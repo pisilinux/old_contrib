@@ -15305,6 +15305,48 @@ So this nice simple GUI to control the composite manager, the settings are self 
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>sublime-text3</Name>
+            <Homepage>http://www.sublimetext.com</Homepage>
+            <Packager>
+                <Name>Stefan Gronewold</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Packager>
+            <License>Sublime Text</License>
+            <IsA>app:gui</IsA>
+            <PartOf>editor</PartOf>
+            <Summary xml:lang="en">Sophisticated text editor</Summary>
+            <Description xml:lang="en">Sublime Text is a sophisticated text editor for code, markup and prose.</Description>
+            <Archive type="tarbz2" sha1sum="78b980305f470de3069578b5ea164226eb7a0ca1">https://download.sublimetext.com/sublime_text_3_build_3103_x64.tar.bz2</Archive>
+            <SourceURI>editor/sublime-text3/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sublime-text3</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/</Path>
+                <Path fileType="data">/usr/share/icons/hicolor/</Path>
+                <Path fileType="data">/usr/share/applications/</Path>
+                <Path fileType="data">/opt/sublime_text_3</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/sublime_text.desktop" owner="root">sublime_text.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2016-02-23</Date>
+                <Version>3103</Version>
+                <Comment>First release.</Comment>
+                <Name>Stefan Gronewold</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>sublime-text2</Name>
             <Homepage>http://www.sublimetext.com</Homepage>
             <Packager>

@@ -14,12 +14,17 @@
         <IsA>app:console</IsA>
         <Summary>The GNOME virtual file-system libraries</Summary>
         <Description>gnome-vfs is the GNOME virtual file system. It is the foundation of the Nautilus file manager. It provides a modular architecture and ships with several modules that implement support for file systems, http, ftp and others.</Description>
-        <Archive sha1sum="0dc634e7dd979fd218f378902c0ca1af80738961" type="tarbz2">mirrors://gnome/gnome-vfs/2.24/gnome-vfs-2.24.4.tar.bz2</Archive>
+        <Archive sha1sum="0dc634e7dd979fd218f378902c0ca1af80738961" type="tarbz2">http://ftp.gnome.org/mirror/gnome.org/sources/gnome-vfs/2.24/gnome-vfs-2.24.4.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>gamin-devel</Dependency>
             <Dependency>avahi-glib-devel</Dependency>
             <Dependency>mit-kerberos</Dependency>
             <Dependency>gconf-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
         </BuildDependencies>
         <Patches>
              <Patch level="1">gnome-vfs-2.9.90-modules-conf.patch</Patch>
@@ -47,6 +52,12 @@
             <Dependency>avahi-glib</Dependency>
             <Dependency>avahi-libs</Dependency>
             <Dependency>gconf</Dependency>
+            <Dependency>dbus</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>dbus-glib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
@@ -84,6 +95,7 @@
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>gconf-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
             <Dependency release="current">gnome-vfs</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -93,6 +105,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2016-02-25</Date>
+            <Version>2.24.4</Version>
+            <Comment>Rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
         <Update release="4">
             <Date>2014-05-20</Date>
             <Version>2.24.4</Version>

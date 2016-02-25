@@ -14,6 +14,7 @@
         <Description>gconf is a Gnome Configuration System.</Description>
         <Archive sha1sum="a90d3ac08dc454f927c8d3024f52d4d57e3ff613" type="tarxz">mirrors://gnome/GConf/3.2/GConf-3.2.6.tar.xz</Archive>
         <BuildDependencies>
+            <Dependency>dbus-devel</Dependency>
             <Dependency versionFrom="0.9">gtk-doc</Dependency>
             <Dependency>intltool</Dependency>
             <Dependency>gtk3-devel</Dependency>
@@ -36,6 +37,7 @@
     <Package>
         <Name>gconf</Name>
         <RuntimeDependencies>
+            <Dependency>dbus</Dependency>
             <Dependency>gtk3</Dependency>
             <Dependency>orbit2</Dependency>
             <Dependency>libxml2</Dependency>
@@ -87,6 +89,8 @@
         <RuntimeDependencies>
             <Dependency release="current">gconf</Dependency>
             <Dependency>orbit2-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

@@ -18,6 +18,7 @@ def setup():
                          --disable-static \
                          --disable-orbit \
                          --disable-silent-rules \
+                         --disable-introspection \
                          --enable-defaults-service \
                          --with-gtk=3.0 \
                         ")
@@ -26,8 +27,8 @@ def setup():
     pisitools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
 def build():
-    autotools.make("pkglibdir=/usr/lib/GConf")
-    #autotools.make()
+    #autotools.make("pkglibdir=/usr/lib/GConf")
+    autotools.make()
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())

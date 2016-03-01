@@ -12,13 +12,15 @@
         <IsA>app:console</IsA>
         <Summary>Mesa demos</Summary>
         <Description>Mesa is an open-source implementation of the OpenGL specification - a system for rendering interactive 3D graphics.</Description>
-        <Archive sha1sum="e1a66ac63eebba4f950f95d830f34a6005167116" type="tarbz2">ftp://ftp.freedesktop.org/pub/mesa/demos/8.2.0/mesa-demos-8.2.0.tar.bz2</Archive>
+        <Archive sha1sum="468a8f24938ab07e2e31828cf961515371d45b56" type="tarbz2">ftp://ftp.freedesktop.org/pub/mesa/demos/8.3.0/mesa-demos-8.3.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>glew-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
             <Dependency>mesa-glu-devel</Dependency>
-            <Dependency>freeglut-devel</Dependency> 
+            <Dependency>freeglut-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,7 +32,6 @@
             <Dependency>libXext</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>mesa-glu</Dependency>
-	    <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share/mesa-demos</Path>
@@ -44,6 +45,7 @@
         <Summary>Mesa utilities</Summary>
         <RuntimeDependencies>
             <Dependency>mesa</Dependency>
+            <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -56,8 +58,9 @@
         <Summary>32-bit shared libraries for mesa</Summary>
         <BuildType>emul32</BuildType>
         <BuildDependencies>
-            <Dependency>mesa-32bit</Dependency>      	    
-            <Dependency>glew-32bit</Dependency>	    
+            <Dependency>mesa-32bit</Dependency>
+            <Dependency>glew-32bit</Dependency>
+            <Dependency>freeglut-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
             <Dependency>glew-32bit</Dependency>
@@ -65,8 +68,9 @@
             <Dependency>libX11-32bit</Dependency>
             <Dependency>libXext-32bit</Dependency>
             <Dependency>freeglut-32bit</Dependency>
-	    <Dependency>mesa-glu-32bit</Dependency>
-	    <Dependency>glibc-32bit</Dependency>
+            <Dependency>mesa-glu-32bit</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glibc-32bit</Dependency>
             <Dependency release="current">mesa-demos</Dependency>
         </RuntimeDependencies>
 
@@ -77,7 +81,14 @@
         </Files>
     </Package>
     
-    <History>
+    <History>           
+        <Update release="10">
+            <Date>2016-03-01</Date>
+            <Version>8.3.0</Version>
+            <Comment>Release bump.</Comment>
+            <Name>Stefan Gronewold</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
       <Update release="9">
             <Date>2015-01-20</Date>
             <Version>8.2.0</Version>

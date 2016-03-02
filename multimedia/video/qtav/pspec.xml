@@ -11,7 +11,7 @@
         <License>LGPL</License>
         <Summary>A cross-platform multimedia playback framework based on Qt and FFmpeg	</Summary>
         <Description>A multimedia playback framework based on Qt + FFmpeg. Cross platform. High performace. Easy to use and develop.</Description>
-        <Archive sha1sum="223c737175d4b99233b85b095272f73a57b46b5f" type="targz">https://github.com/wang-bin/QtAV/archive/v1.8.0.tar.gz</Archive>
+        <Archive sha1sum="982b0c5540a491eba1168d665924575a2c05197a" type="targz">https://github.com/wang-bin/QtAV/archive/v1.10.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>openal-devel</Dependency>            
@@ -59,7 +59,14 @@
         </Files>
     </Package>
 
-    <History>        
+    <History>
+        <Update release="2">
+            <Date>2016-03-02</Date>
+            <Version>1.10.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2015-12-09</Date>
             <Version>1.8.0</Version>

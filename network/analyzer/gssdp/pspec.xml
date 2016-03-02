@@ -15,10 +15,11 @@
         <Description>GSSDP implements resource discovery and announcement over SSDP and is part of gUPnP.</Description>
         <Archive sha1sum="47059b413d7403b93c3e23c33740fab8d82cfa42" type="tarxz">mirrors://gnome/gssdp/0.14/gssdp-0.14.14.tar.xz</Archive>
         <BuildDependencies>
+            <Dependency>gobject-introspection-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <!--<Dependency>vala-devel</Dependency>-->
+            <Dependency>vala-devel</Dependency>
         </BuildDependencies>
         <Patches>
         </Patches>
@@ -27,10 +28,11 @@
     <Package>
         <Name>gssdp</Name>
         <RuntimeDependencies>
+            <Dependency>gobject-introspection</Dependency>
             <Dependency>libsoup</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>gtk3</Dependency>
-            <!--<Dependency>vala</Dependency>-->
+            <Dependency>vala</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

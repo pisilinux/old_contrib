@@ -12,7 +12,9 @@ from pisi.actionsapi import get
 
 def setup():
     #autotools.autoreconf("-fi")
-    autotools.configure("--disable-static")
+    autotools.configure("--disable-static \
+                         --with-html-dir=%s/usr/share/doc/%s/html"
+                         % (get.installDIR(), get.srcNAME()))
 
 def build():
     autotools.make()

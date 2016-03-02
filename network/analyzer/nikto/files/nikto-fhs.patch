@@ -1,0 +1,19 @@
+--- nikto.conf.orig	2010-07-12 16:11:57.234501404 +0300
++++ nikto.conf	2010-07-12 16:14:14.530251214 +0300
+@@ -64,10 +64,10 @@
+ CHECKMETHODS=HEAD GET
+ 
+ # If you want to specify the location of any of the files, specify them here
+-# EXECDIR=/opt/nikto				# Location of Nikto
+-# PLUGINDIR=/opt/nikto/plugins			# Location of plugin dir
+-# DBDIR=/opt/nikto/databases			# Location of database dir
+-# TEMPLATEDIR=/opt/nikto/templates		# Location of template dir
+-# DOCDIR=/opt/nikto/docs			# Location of docs dir
++EXECDIR=/usr/bin                               # Location of Nikto
++PLUGINDIR=/usr/share/nikto/plugins             # Location of plugin dir
++DBDIR=/usr/share/nikto/databases		# Location of database dir
++TEMPLATEDIR=/usr/share/nikto/templates         # Location of template dir
++DOCDIR=/usr/share/doc                          # Location of docs dir
+ 
+ # Default plugin macros
+ @@MUTATE=dictionary;subdomain

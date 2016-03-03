@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>macchanger</Name>
+        <Summary xml:lang="tr">Ağ arayüzlerinin MAC adresi görüntüleme değiştirme aracı.</Summary>
+        <Description xml:lang="tr">Ağ arayüzlerinin MAC adresi görüntülenmesi için kullanılan bir GNU/Linux aracıdır.</Description>
+    </Source>
+</PISI>

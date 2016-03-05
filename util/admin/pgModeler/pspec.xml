@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>PostgreSQL Database Modeler</Summary>
         <Description>PostgreSQL Database Modeler: an open source CASE tool for modeling PostgreSQL databases</Description>
-        <Archive sha1sum="8ebe1ccee98be0464ace0cc9b12243f61cfc691b" type="targz">https://github.com/pgmodeler/pgmodeler/archive/v0.8.2-alpha.tar.gz</Archive>
+        <Archive sha1sum="99305c6c6439f8b39b41b74dbfcbe1826196f4c0" type="targz">https://github.com/pgmodeler/pgmodeler/archive/v0.8.2-beta.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
@@ -45,6 +45,13 @@
     </Package>
 
     <History>
+         <Update release="1">
+            <Date>2016-02-02</Date>
+            <Version>0.8.2_p2</Version>
+            <Comment>Version bump to beta</Comment>
+            <Name>Ertuğrul Erata</Name>
+            <Email>ertugrulerata@gmail.comAR</Email>
+        </Update>
         <Update release="1">
             <Date>2015-10-13</Date>
             <Version>0.8.2_p1</Version>

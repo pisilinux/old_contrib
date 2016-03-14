@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libnetfilter_queue</Name>
+        <Summary xml:lang="tr">Kernel paket filtresi tarafından kuyruklanan paketlere kullanıcı alanı APIsi sağlayan bir kütüphane.</Summary>
+        <Description xml:lang="tr">Kernel paket filtresi tarafından kuyruklanan paketlere kullanıcı alanı APIsi sağlayan bir kütüphanedir. Eski ip_queue / libipq mekanizmasını onaylayan sistemin bir paçasıdır.</Description>
+    </Source>
+    
+    <Package>
+        <Name>libnetfilter_queue-devel</Name>
+        <Summary xml:lang="tr">libnetfilter_queue için geliştirme dosyaları</Summary>
+    </Package>
+</PISI>

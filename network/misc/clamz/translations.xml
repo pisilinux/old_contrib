@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>clamz</Name>
+        <Summary xml:lang="tr">Amazon'dan MP3 indirme aracı</Summary>
+        <Description xml:lang="tr">Clamz, Amazon.com'un müzik sayfasından MP3 indirmeye yarayan bir komut satırı aracıdır. Programın amacı Amazon.com'un resmi indirme aracı yerine kullanılmaktır(Amazon.com'un özgün aracı ücretsiz değil ve sadece çalıştırılabilir dosya şeklindedir, kaynak dosyası bulunmamaktadır.). Clamz ile Amazon.com'dan satın aldığınız müzikleri ister tek tek, ister albüm şeklinde indirebilirsiniz.</Description>
+    </Source>
+</PISI>

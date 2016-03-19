@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>flvstreamer</Name>
+        <Summary xml:lang="tr">Ses ve görüntü akışları için bir istemci</Summary>
+        <Description xml:lang="tr">flvstreamer, her türlü flash ya da rtmp sunucularından ses ve görüntü içeriğini alma amaçlı bir açık kaynaklı ve komut satırlı bir RTMP istemcisidir.</Description>
+    </Source>
+</PISI>

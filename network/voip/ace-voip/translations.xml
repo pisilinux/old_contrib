@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>ace-voip</Name>
+        <Summary xml:lang="tr">ACE, güçlü bir VoIP birleşik dizin sayma aracıdır.</Summary>
+        <Description xml:lang="tr">ACE (Automated Corporate Enumerator - Birleşik Otomasyonlu Sayaç) verilen telefonun ekranındaki arayüzündeki ad ve uzantıları indirmek için IP telefonun davranışlarını taklit edebilen güçlü bir VoIP birleşik dizin sayma aracıdır.</Description>
+    </Source>
+</PISI>

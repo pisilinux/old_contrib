@@ -15,13 +15,12 @@
         <Archive sha1sum="4b4815e11dfb70408c2810ea6dfb2e0a6d2dd7bf" type="tarxz">https://github.com/tatsuhiro-t/aria2/releases/download/release-1.21.0/aria2-1.21.0.tar.xz</Archive>
         <BuildDependencies>
 	    <Dependency>gmp-devel</Dependency>
+	    <Dependency>zlib-devel</Dependency>
 	    <Dependency>c-ares-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
 	    <Dependency>nettle-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
-	    <Dependency>libssh2-devel</Dependency>
 	    <Dependency>libxml2-devel</Dependency>
-            <Dependency>libgcrypt-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -29,13 +28,13 @@
         <Name>aria2</Name>
         <RuntimeDependencies>
             <Dependency>gmp</Dependency>
+	    <Dependency>zlib</Dependency>
 	    <Dependency>c-ares</Dependency>
 	    <Dependency>gnutls</Dependency>
             <Dependency>nettle</Dependency>
             <Dependency>sqlite</Dependency>
-	    <Dependency>libssh2</Dependency>
 	    <Dependency>libxml2</Dependency>
-            <Dependency>libgcrypt</Dependency>
+            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

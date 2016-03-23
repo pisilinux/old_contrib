@@ -58,7 +58,7 @@
         <Update release="6">
             <Date>2016-03-23</Date>
             <Version>5.15.2</Version>
-            <Comment>Rebuilt with docker</Comment>
+            <Comment>Version, bump, rebuilt with docker</Comment>
             <Name>İbrahim KARAGÜZEL</Name>
             <Email>karaguzelibrahim@gmail.com</Email>
         </Update>

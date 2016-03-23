@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>protobuf-c</Name>
+        <Summary xml:lang="tr">Google Protokol Arabelleklerinin C Uygulaması</Summary>
+        <Description xml:lang="tr">protobuf-c, Google Protokol Arabelleklerinin veri serileştirmesi biçimi için bir C Uygulamasıdır. libgadu paketi için gereklidir.</Description>
+    </Source>
+</PISI>

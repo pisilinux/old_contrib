@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>stunnel</Name>
+        <Summary xml:lang="tr">TLS/SSL - Port Çevireci.</Summary>
+        <Description xml:lang="tr">Stunnel paketi istemciler ile güvenli kanallar üzerinden iletişim kurabilmek için rasgele TCP bağlantılarını şifreleyen bir program içerir.</Description>
+    </Source>
+</PISI>

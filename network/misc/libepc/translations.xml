@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libepc</Name>
+        <Summary xml:lang="tr">Kolay Yayma ve Tüketme (Easy Publish and Consume) Kütüphanesi</Summary>
+        <Description xml:lang="tr">Ağ üzerinde kolaylıkla yayma ve tüketme yapabilen bir kütüphane.</Description>
+    </Source>
+
+    <Package>
+        <Name>libepc-devel</Name>
+        <Summary xml:lang="tr">libepc için geliştirme dosyaları.</Summary>
+    </Package>
+</PISI>

@@ -17,6 +17,7 @@
 
     <Package>
         <Name>python-dpkt</Name>
+        <Summary>Python library for interacting with and creating packets.</Summary>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>

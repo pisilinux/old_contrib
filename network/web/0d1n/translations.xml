@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>0d1n</Name>
+        <Summary xml:lang="tr">01dn, libCurl kütüphanesi kullanılarak C ile yazılan, HTTP içeriklerini bulanıklaştıran bir ağ güvenlik aracıdır.</Summary>
+        <Description xml:lang="tr">0d1n, açık kaynak kodlu bir bruteforce ve bulanıklaştırma yapabilen bir ağ uygulamadır. Amacı, anomalileri aramak ve bu aramayı otomatasyona bağlamaktır. Başka bir bakış açısıyla bu aramalar ağ parametreleri, dosyalar, dizinler ve formları oluşturabilir, böylece bu anomalilerdeki zaafiyetler izlenebilir.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-dpkt</Name>
+        <Summary xml:lang="tr">python-dpkt, paket yaratan ve paketlerle etkileşebilen bir python kitaplığıdır.</Summary>
+        <Description xml:lang="tr">python-dpkt, temel TCP/IP protokolleri için basit ve hızlı bir paket yaratma/çözümleme python modülüdür.</Description>
+    </Source>
+</PISI>

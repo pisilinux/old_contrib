@@ -11,10 +11,10 @@
         <IsA>app:console</IsA>
         <Summary>Web security tool to make fuzzing at HTTP inputs, made in C with libCurl.</Summary>
         <Description>0d1n is a Open Source web application bruteforcer and Fuzzer, its objective is to automate exhaustive tests to search anomalies. At other point view this anomalies can be a vulnerability, These tests can follow web parameters, files, directories, forms and others.</Description>
+        <Archive sha1sum="70372273564d1105201114f60414fac027d5564c" type="targz">https://github.com/CoolerVoid/0d1n/archive/2.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>curl-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="70372273564d1105201114f60414fac027d5564c" type="targz">https://github.com/CoolerVoid/0d1n/archive/2.1.tar.gz</Archive>
     </Source>
     <Package>
         <Name>0d1n</Name>

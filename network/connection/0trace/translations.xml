@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>0trace</Name>
+        <Summary xml:lang="tr">Bir hop numaralandırma aracı</Summary>
+        <Description xml:lang="tr">0trace kurulu bir TCP bağlantısına -HTTP ya da SMTP gibi- hop ("traceroute") numaralandırması yapabilen bir araçtır.</Description>
+    </Source>
+</PISI>

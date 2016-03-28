@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-pypcap</Name>
+        <Summary xml:lang="tr">Python pcap modülü</Summary>
+        <Description xml:lang="tr">python-pypcap, libpcap için basitleştirilmiş, nesne tabanlı bir Python dönüştürücüsüdür.</Description>
+    </Source>
+</PISI>

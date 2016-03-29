@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>bluelog</Name>
@@ -11,11 +13,11 @@
         <IsA>app:console</IsA>
         <Summary>Bluelog is a Linux Bluetooth scanner with optional daemon mode and web front-end.</Summary>
         <Description>Bluelog is a Linux Bluetooth scanner with optional daemon mode and web front-end, designed for site surveys and traffic monitoring. It's intended to be run for long periods of time in a static location to determine how many discoverable Bluetooth devices there are in the area.</Description>
+        <Archive type="targz" sha1sum="04fe6a63fd07838df89db7df2788085d48c996cd">ftp://ftp.digifail.com/software/bluelog/bluelog-1.1.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>bluez-libs-devel</Dependency>
             <Dependency>wget</Dependency>
         </BuildDependencies>
-        <Archive type="targz" sha1sum="04fe6a63fd07838df89db7df2788085d48c996cd">ftp://ftp.digifail.com/software/bluelog/bluelog-1.1.2.tar.gz</Archive>
     </Source>
     <Package>
         <Name>bluelog</Name>

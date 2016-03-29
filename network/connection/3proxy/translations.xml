@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>3proxy</Name>
+        <Summary xml:lang="tr">Küçük bir proxy sunucusu</Summary>
+        <Description xml:lang="tr">3proxy karşılıklı platformlarda çalışabilen bir ücretsiz proxy sunucusudur.</Description>
+    </Source>
+</PISI>

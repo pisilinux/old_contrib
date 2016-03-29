@@ -1,0 +1,40 @@
+<PISI>
+    <Source>
+        <Name>0trace</Name>
+        <Homepage>https://jon.oberheide.org/0trace/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>A hop enumeration tool</Summary>
+        <Description>This tool enables the user to perform hop enumeration ("traceroute") within an established TCP connection, such as a HTTP or SMTP session. This is opposed to sending stray packets, as traceroute-type tools usually do.</Description>
+        <Archive sha1sum="2dd1844809634166e730c5be3fba919a570b86e5" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/0trace-1.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libdnet-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>0trace</Name>
+        <RuntimeDependencies>
+            <Dependency>libdnet</Dependency>
+            <Dependency>python-dpkt</Dependency>
+            <Dependency>python-pypcap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-28</Date>
+            <Version>1.5</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

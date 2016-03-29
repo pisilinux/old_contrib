@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-pypcap</Name>
+        <Homepage>https://github.com/pynetwork/pypcap</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>Python pcap module</Summary>
+        <Description>This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
+        <Archive sha1sum="8a8c0ffdac9eb844afbcedeb6ac758ff5aa60619" type="targz">https://github.com/pynetwork/pypcap/archive/v1.1.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pypcap</Name>
+        <Summary>Python pcap module</Summary>
+        <RuntimeDependencies>
+            <Dependency>libpcap</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-28</Date>
+            <Version>1.1.4</Version>
+            <Comment>First release, rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

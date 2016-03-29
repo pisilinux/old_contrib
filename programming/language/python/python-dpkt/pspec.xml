@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-dpkt</Name>
+        <Homepage>https://github.com/kbandla/dpkt</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Python library for interacting with and creating packets.</Summary>
+        <Description>A fast, simple packet creation/parsing python module with definitions for the basic TCP/IP protocols.</Description>
+        <Archive sha1sum="6c7bc8229edbfcfe556b79f7692b45ab744b4370" type="targz">https://github.com/kbandla/dpkt/archive/v1.8.7.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-dpkt</Name>
+        <Summary>Python library for interacting with and creating packets.</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-28</Date>
+            <Version>1.8.7</Version>
+            <Comment>First release, rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

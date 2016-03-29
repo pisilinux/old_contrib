@@ -1,0 +1,40 @@
+<PISI>
+    <Source>
+        <Name>3proxy</Name>
+        <Homepage>http://3proxy.ru/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <Summary>Tiny free proxy server.</Summary>
+        <Description>3Proxy tiny free proxy server is really tiny cross-platform -Win32/Win64/Unix- freeware proxy servers set. It includes HTTP proxy with HTTPS and FTP support, SOCKSv4/SOCKSv4.5/SOCKSv5 proxy (socks/socks.exe), POP3 proxy, SMTP proxy, AIM/ICQ proxy (icqpr/icqpr.exe), MSN messenger / Live messenger proxy (msnpr/msnpr.exe), FTP proxy, caching DNS proxy, TCP and UDP portmappers.</Description>
+        <Archive sha1sum="3784ffbdf8a73b95f653daa127dc1181c420341d" type="targz">https://github.com/z3APA3A/3proxy/archive/3proxy-0.8.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>openssl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>3proxy</Name>
+        <RuntimeDependencies>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-28</Date>
+            <Version>0.8.6</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -10,6 +10,6 @@ from pisi.actionsapi import pythonmodules
 
 
 def install():
-    pisitools.insinto("/usr/sbin/", "0trace.py")
-    shelltools.chmod(get.installDIR() + "/usr/sbin/0trace.py", mode=0755)
-    pisitools.dosym("/usr/sbin/0trace.py", "/usr/sbin/0trace")
+    pisitools.insinto("/usr/bin/", "0trace.py")
+    shelltools.chmod(get.installDIR() + "/usr/bin/0trace.py", mode=0755)
+    pisitools.dosym("/usr/bin/0trace.py", "/usr/bin/0trace")

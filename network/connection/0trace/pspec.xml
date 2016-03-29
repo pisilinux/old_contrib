@@ -26,7 +26,7 @@
             <Dependency>python-pypcap</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
         </Files>
     </Package>
 

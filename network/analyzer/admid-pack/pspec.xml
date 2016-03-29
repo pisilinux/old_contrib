@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>admid-pack</Name>
+        <Homepage>http://packetstormsecurity.com/files/10080/ADMid-pkg.tgz.html</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <Summary>ADM DNS spoofing tools</Summary>
+        <Description>Uses a variety of active and passive methods to spoof DNS packets. Very powerful.</Description>
+        <Archive sha1sum="6e3b7ea5e5b0f90d410c540ca2aff28ac2adbc1e" type="targz">http://packetstorm.foofus.com/groups/ADM/ADM-DNS-SPOOF/ADMid-pkg.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>libpcap-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>admid-pack</Name>
+        <Summary>ADM DNS spoofing tools</Summary>
+        <RuntimeDependencies>
+            <Dependency>libpcap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-29</Date>
+            <Version>0.1</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

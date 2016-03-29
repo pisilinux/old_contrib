@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>admid-pack</Name>
+        <Summary xml:lang="tr">DNS Yanıltma Aracı</Summary>
+        <Description xml:lang="tr">ADM, Ağ paketlerini yanlış IP'ye gönderen bir araçtır. - DNS paketlerini yanlış veya sahte yerlere göndermek için çeşitli etkin ya da etkin olmayan yöntemleri kullanır.</Description>
+    </Source>
+</PISI>

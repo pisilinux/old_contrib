@@ -11,6 +11,6 @@ def build():
     autotools.make()
 
 def install():
-    pisitools.dosbin("asleap")
-    pisitools.dosbin("genkeys")
+    pisitools.dobin("asleap")
+    pisitools.dobin("genkeys")
     pisitools.dodoc("COPYING", "README", "THANKS")

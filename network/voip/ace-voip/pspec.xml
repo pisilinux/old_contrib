@@ -1,3 +1,5 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>ace-voip</Name>
@@ -11,11 +13,12 @@
         <IsA>app:console</IsA>
         <Summary>ACE is a simple yet powerful VoIP Corporate Directory enumeration tool.</Summary>
         <Description>ACE (Automated Corporate Enumerator) is a simple yet powerful VoIP Corporate Directory enumeration tool that mimics the behavior of an IP Phone in order to download the name and extension entries that a given phone can display on its screen interface.</Description>
+        <Archive sha1sum="747aee37f74e71101317809797cdaed7077dd29e" type="targz">https://sourceforge.net/projects/ucsniff/files/ace/ace-1.10.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libpcap-devel</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="747aee37f74e71101317809797cdaed7077dd29e" type="targz">https://sourceforge.net/projects/ucsniff/files/ace/ace-1.10.tar.gz</Archive>
     </Source>
+
     <Package>
         <Name>ace-voip</Name>
         <Summary>ACE is a simple yet powerful VoIP Corporate Directory enumeration tool.</Summary>
@@ -23,9 +26,10 @@
             <Dependency>libpcap</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
         </Files>
     </Package>
+
     <History>
         <Update release="1">
             <Date>2016-02-11</Date>

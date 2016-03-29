@@ -11,5 +11,5 @@ def build():
     autotools.make()
 
 def install():
-    pisitools.dosbin("bluesnarfer")
+    pisitools.dobin("bluesnarfer")
     pisitools.dodoc("README")

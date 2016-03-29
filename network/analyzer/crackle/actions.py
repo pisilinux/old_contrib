@@ -13,5 +13,5 @@ def build():
     autotools.make()
 
 def install():
-    pisitools.dosbin("crackle", "usr/local/bin")
+    pisitools.dobin("crackle")
     pisitools.dodoc("AUTHORS", "COPYING", "README")

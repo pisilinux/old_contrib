@@ -10,7 +10,7 @@ from pisi.actionsapi import pythonmodules
 
 
 def install():
-    pisitools.insinto("/usr/sbin/", "acccheck.pl")
-    shelltools.chmod(get.installDIR() + "/usr/sbin/acccheck.pl", mode=0755)
-    pisitools.dosym("/usr/sbin/acccheck.pl", "/usr/sbin/acccheck")
+    pisitools.insinto("/usr/bin/", "acccheck.pl")
+    shelltools.chmod(get.installDIR() + "/usr/bin/acccheck.pl", mode=0755)
+    pisitools.dosym("/usr/bin/acccheck.pl", "/usr/bin/acccheck")
     pisitools.dodoc("COPYING*", "README*")

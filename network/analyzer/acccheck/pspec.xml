@@ -22,7 +22,7 @@
             <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc/</Path>
         </Files>
     </Package>

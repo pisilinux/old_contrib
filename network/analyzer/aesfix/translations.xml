@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aesfix</Name>
+        <Summary xml:lang="tr">Rastgele erişimli bellekte(RAM) aes anahtarı bulmaya yarayan bir araç.</Summary>
+        <Description xml:lang="tr">Rastgele erişimli bellekte(RAM) aes anahtarı bulmaya yarayan bir araç. AES anahtar zamanlayıcısında bit hatalarını düzeltir.</Description>
+    </Source>
+</PISI>

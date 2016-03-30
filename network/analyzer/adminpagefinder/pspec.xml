@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>adminpagefinder</Name>
+        <Homepage>http://packetstormsecurity.com/files/112855/Admin-Page-Finder-Script.html</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>app:console</IsA>
+        <Summary>An Admin Page Finder</Summary>
+        <Description>This python script looks for a large amount of possible administrative interfaces on a given site.</Description>
+        <Archive sha1sum="9556deddc1b47168ad95a5258ce6e76347fe3500" type="binary">http://packetstorm.foofus.com/UNIX/utilities/AdminpageFinder.py.txt</Archive>
+    </Source>
+
+    <Package>
+        <Name>adminpagefinder</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-30</Date>
+            <Version>0.1</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

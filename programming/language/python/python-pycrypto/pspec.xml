@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-pycrypto</Name>
+        <Homepage>https://www.dlitz.net/software/pycrypto/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>Python pycrypto module</Summary>
+        <Description>A collection of cryptographic algorithms and protocols, implemented for use from Python2.</Description>
+        <Archive sha1sum="aeda3ed41caf1766409d4efc689b9ca30ad6aeb2" type="targz">https://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/pycrypto-2.6.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>gmp-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pycrypto</Name>
+        <Summary>Python pycrypto module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-pycrypto</Name>
+        <Summary>Python3 pycrypto module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-31</Date>
+            <Version>2.6.1</Version>
+            <Comment>First Pisi Release Built with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

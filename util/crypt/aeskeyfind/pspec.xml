@@ -9,7 +9,7 @@
             <Email>karaguzelibrahim@gmail.com</Email>
         </Packager>
         <License>BSD</License>
-        <PartOf>network</PartOf>
+        <PartOf>util.crypt</PartOf>
         <IsA>app:console</IsA>
         <Summary>A tool for locating AES keys in a captured memory image.</Summary>
         <Description>This program illustrates automatic techniques for locating 128-bit and 256-bit AES keys in a captured memory image.</Description>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aesfix</Name>
+        <Summary xml:lang="tr">AES anahtar zamanlayıcısında bit hatalarını düzelten bir araç.</Summary>
+        <Description xml:lang="tr">AES anahtar zamanlayıcısında bit hatalarını düzeltir. Aeskeyfind programının çıktısıyla birlikte kullanılmalıdır.</Description>
+    </Source>
+</PISI>

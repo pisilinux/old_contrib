@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>aespipe</Name>
+        <Homepage>http://loop-aes.sourceforge.net/aespipe/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>util.crypt</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>AES-encryption tool with loop-AES support.</Summary>
+        <Description>aespipe is an encryption tool that reads from standard input and writes to standard output. It uses the AES (Rijndael) cipher. aespipe can be used for non-destructive in-place encryption of existing disk partitions for use with the loop-AES encrypted loopback kernel module.</Description>
+        <Archive sha1sum="f16b7e70c9d98c97563a11bbfdb7f70dba752934" type="tarbz2">http://loop-aes.sourceforge.net/aespipe/aespipe-v2.4d.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>aespipe</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-30</Date>
+            <Version>2.4d</Version>
+            <Comment>First Pisi Built with Docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

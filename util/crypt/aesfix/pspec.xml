@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>aesfix</Name>
+        <Homepage>http://citp.princeton.edu/memory/code/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <PartOf>util.crypt</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>A tool for correcting bit errors in an AES key schedule.</Summary>
+        <Description>This program illustrates a technique for correcting bit errors in an AES key schedule. It should be used with the output of the aeskeyfind program.</Description>
+        <Archive sha1sum="436008680839480bc8a873fdcc91886da16d8f5e" type="targz">http://citp.princeton.edu/memory-content/src/aesfix-1.0.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>aesfix</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/aesfix/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-30</Date>
+            <Version>1.0.1</Version>
+            <Comment>First Pisi Built with Docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

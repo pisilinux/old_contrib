@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>admsnmp</Name>
+        <Homepage>https://www.freshports.org/security/ADMsnmp/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>network</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>ADM SNMP audit scanner.</Summary>
+        <Description>ADMsnmp can brute force the snmp community name (with a wordfile) or make a wordfile list derived the hostname.</Description>
+        <Archive sha1sum="0e8cb98a47c7e473389d6cc512da76d021d0910d" type="targz">http://examples.oreilly.com/networksa/tools/ADMsnmp.0.1.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>admsnmp</Name>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/admsnmp/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-30</Date>
+            <Version>0.1</Version>
+            <Comment>First Release, Built with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

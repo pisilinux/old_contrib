@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aespipe</Name>
+        <Summary xml:lang="tr">AES-döngü desteği de olan bir AES-şifreleme aracı.</Summary>
+        <Description xml:lang="tr">aespipe standard girdiyi okuyup standard çıktıya yazabilen bir aes-şifreleme aracıdır. AES (Rijndael) şifrelemesini kullanır.</Description>
+    </Source>
+</PISI>

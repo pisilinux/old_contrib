@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>adminpagefinder</Name>
+        <Summary xml:lang="tr">Bir yönetici arayüzü tarayıcısı</Summary>
+        <Description xml:lang="tr">Bu python betiği verilen ağ betindeki birçok olası admin/yönetici arayüzünü tarar.</Description>
+    </Source>
+</PISI>

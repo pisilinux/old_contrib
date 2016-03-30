@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>admsnmp</Name>
+        <Summary xml:lang="tr">ADM SNMP denetim tarayıcısı.</Summary>
+        <Description xml:lang="tr">ADMsnmp snmp (Simple Network Management Protocol) protokolüne söz listesi kullanarak ya da makine/sistem adından söz listesi üreterek kabadayı saldırısı düzenleyebilen bir araçtır. ADMsnmp erişilen MIB yazdırılabilir mi ve geçerli tüm topluluk adlarını raporlayabilir.</Description>
+    </Source>
+</PISI>

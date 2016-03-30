@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aeskeyfind</Name>
+        <Summary xml:lang="tr">Rastgele erişimli bellek(RAM) imajından aes anahtarı bulmaya yarayan bir araç.</Summary>
+        <Description xml:lang="tr">Bu program RAM'den alınan imajlarda 128-bit ve 256-bit AES anahtarları çeşitli algoritmalarla ve basit entropi testleriyle arayabilir.</Description>
+    </Source>
+</PISI>

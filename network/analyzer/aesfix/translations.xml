@@ -2,7 +2,7 @@
 <PISI>
     <Source>
         <Name>aesfix</Name>
-        <Summary xml:lang="tr">Rastgele erişimli bellekte(RAM) aes anahtarı bulmaya yarayan bir araç.</Summary>
-        <Description xml:lang="tr">Rastgele erişimli bellekte(RAM) aes anahtarı bulmaya yarayan bir araç. AES anahtar zamanlayıcısında bit hatalarını düzeltir.</Description>
+        <Summary xml:lang="tr">AES anahtar zamanlayıcısında bit hatalarını düzelten bir araç.</Summary>
+        <Description xml:lang="tr">AES anahtar zamanlayıcısında bit hatalarını düzeltir. Aeskeyfind programının çıktısıyla birlikte kullanılmalıdır.</Description>
     </Source>
 </PISI>

@@ -9,7 +9,7 @@
             <Email>karaguzelibrahim@gmail.com</Email>
         </Packager>
         <License>BSD</License>
-        <PartOf>network</PartOf>
+        <PartOf>util.crypt</PartOf>
         <IsA>app:console</IsA>
         <Summary>A tool for correcting bit errors in an AES key schedule.</Summary>
         <Description>This program illustrates a technique for correcting bit errors in an AES key schedule. It should be used with the output of the aeskeyfind program.</Description>

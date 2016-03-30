@@ -15,4 +15,4 @@ def build():
     autotools.make()
 
 def install():
-    pisitools.dosbin("ace")
+    pisitools.dobin("ace")

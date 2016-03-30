@@ -4,13 +4,15 @@
 # See the file http://www.gnu.org/copyleft/gpl.txt
 
 from pisi.actionsapi import get
+from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import pythonmodules
+WorkDir="ADMIDpack" + "/src/"
 
+def build():
+    shelltools.system('make CC="gcc $CFLAGS"')
 
 def install():
-    pisitools.insinto("/usr/bin/", "acccheck.pl")
-    shelltools.chmod(get.installDIR() + "/usr/bin/acccheck.pl", mode=0755)
-    pisitools.dosym("/usr/bin/acccheck.pl", "/usr/bin/acccheck")
-    pisitools.dodoc("COPYING*", "README*")
+    pisitools.dobin("../ADMbin/ADM*")
+    pisitools.insinto("/usr/share/doc/admid-pack", "../Docs/*")

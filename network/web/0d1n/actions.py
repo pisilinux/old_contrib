@@ -12,5 +12,5 @@ def build():
     autotools.make()
 
 def install():
-    pisitools.insinto("/usr/sbin", "0d1n")
+    pisitools.insinto("/usr/bin", "0d1n")
     pisitools.insinto("/usr/share/doc/","doc/")

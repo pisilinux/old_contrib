@@ -2,39 +2,39 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>bluesnarfer</Name>
-        <Homepage>http://www.alighieri.org/project.html</Homepage>
+        <Name>admid-pack</Name>
+        <Homepage>http://packetstormsecurity.com/files/10080/ADMid-pkg.tgz.html</Homepage>
         <Packager>
             <Name>İbrahim KARAGÜZEL</Name>
             <Email>karaguzelibrahim@gmail.com</Email>
         </Packager>
-        <License>GPLv2</License>
-        <PartOf>network</PartOf>
+        <License>GPL</License>
         <IsA>app:console</IsA>
-        <Summary>A Bluetooth bluesnarfing Utility.</Summary>
-        <Description>rfcomm connection to bdaddr and send/recv AT command from gsm extension.</Description>
-        <Archive sha1sum="558ec3d0b97d31ac7061e129fa262296b7d75659" type="targz">http://www.alighieri.org/tools/bluesnarfer.tar.gz</Archive>
+        <Summary>ADM DNS spoofing tools</Summary>
+        <Description>Uses a variety of active and passive methods to spoof DNS packets. Very powerful.</Description>
+        <Archive sha1sum="6e3b7ea5e5b0f90d410c540ca2aff28ac2adbc1e" type="targz">http://packetstorm.foofus.com/groups/ADM/ADM-DNS-SPOOF/ADMid-pkg.tgz</Archive>
         <BuildDependencies>
-            <Dependency>bluez-libs-devel</Dependency>
+            <Dependency>libpcap-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>bluesnarfer</Name>
+        <Name>admid-pack</Name>
+        <Summary>ADM DNS spoofing tools</Summary>
         <RuntimeDependencies>
-            <Dependency>bluez-libs</Dependency>
+            <Dependency>libpcap</Dependency>
         </RuntimeDependencies>
-        <Summary>A Bluetooth bluesnarfing Utility.</Summary>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
+
     <History>
         <Update release="1">
-            <Date>2016-02-17</Date>
+            <Date>2016-03-29</Date>
             <Version>0.1</Version>
-            <Comment>First release, built with docker</Comment>
+            <Comment>First release, built with docker.</Comment>
             <Name>İbrahim KARAGÜZEL</Name>
             <Email>karaguzelibrahim@gmail.com</Email>
         </Update>

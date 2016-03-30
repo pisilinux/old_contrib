@@ -19,7 +19,7 @@ def build():
     autotools.make("-f Makefile.Linux prefix=/usr")
 
 def install():
-    pisitools.insinto("/usr/sbin", "src/3proxy")
+    pisitools.insinto("/usr/bin", "src/3proxy")
     pisitools.insinto("/usr/share/doc/", "doc/")
     pisitools.doman("man/*.8")
     pisitools.dodoc("authors", "copying", "README", "Release*")

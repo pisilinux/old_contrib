@@ -18,3 +18,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
     pisitools.dodoc("AUTHORS", "BUGLIST*", "README_L*", "ChangeLog", "COPYING", "NEWS", "README")
+    pisitools.insinto("/usr/share/doc/afflib/", "doc/*")

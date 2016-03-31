@@ -39,8 +39,6 @@
         <Summary>Advanced Forensics Format Library and Tools</Summary>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <!--<Path fileType="library">/var/lib/afflib</Path>-->
-            <Path fileType="library">/usr/local/lib</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/share</Path>

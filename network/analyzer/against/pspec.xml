@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>against</Name>
+        <Homepage>http://nullsecurity.net/tools/cracker.html</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>A very fast ssh attacking script</Summary>
+        <Description>against.py is a very fast ssh attacking script which includes a multithreaded port scanning module (tcp connect) for discovering possible targets and a multithreaded brute-forcing module which attacks parallel all discovered hosts or given ip addresses from a list.</Description>
+        <Archive sha1sum="1fb28fce619947efb808b741c18395904b7c238c" type="binary">https://raw.githubusercontent.com/nullsecuritynet/tools/master/cracker/against/release/against.py</Archive>
+    </Source>
+
+    <Package>
+        <Name>against</Name>
+        <RuntimeDependencies>
+            <Dependency>python-paramiko</Dependency>
+            <Dependency>python-ecdsa</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-31</Date>
+            <Version>0.2</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

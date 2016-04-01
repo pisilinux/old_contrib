@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>afflib</Name>
+        <Summary xml:lang="tr">İleri düzey forensic biçem kitaplığı ve araçları.</Summary>
+        <Description xml:lang="tr">İleri düzey forensic biçem kitaplığı ve araçları bilgisayar forensiği bilgisine ulaşmada ve depolama kullanılan kitaplık ve araçlardır.</Description>
+    </Source>
+    
+    <Package>
+        <Name>afflib-devel</Name>
+        <Summary xml:lang="tr">afflib için geliştirme dosyaları</Summary>
+    </Package>
+</PISI>

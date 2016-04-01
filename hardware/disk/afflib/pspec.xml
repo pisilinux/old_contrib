@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>afflib</Name>
+        <Homepage>https://github.com/sshock/AFFLIBv3</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <PartOf>hardware.disk</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Advanced Forensics Format Library and Tools</Summary>
+        <Description>The Advanced Forensic Format (AFF) is on-disk format for storing computer forensic information.</Description>
+        <Archive type="targz" sha1sum="72bb16fadd128d524a1a11a0a50ed0129fb50680">https://github.com/sshock/AFFLIBv3/archive/v3.7.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>fuse-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>afflib</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>fuse</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>openssl-devel</Dependency>
+        </RuntimeDependencies>
+        <Summary>Advanced Forensics Format Library and Tools</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>afflib-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">afflib</Dependency>
+        </RuntimeDependencies>
+        <Summary>Development files for afflib</Summary>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-03-31</Date>
+            <Version>3.7.7</Version>
+            <Comment>First Pisi Built with Docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

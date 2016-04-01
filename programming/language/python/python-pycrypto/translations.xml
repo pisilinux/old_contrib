@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-pycrypto</Name>
+        <Summary xml:lang="tr">Python pycrypto modülü</Summary>
+        <Description xml:lang="tr">python-pycrypto, Python2 için kriptografik algoritmalar ve protokoller içeren bir kitaplıktır.</Description>
+    </Source>
+    
+    <Package>
+        <Name>python3-pycrypto</Name>
+        <Summary xml:lang="tr">Python3 pycrypto modülü</Summary>
+        <Description xml:lang="tr">python3-pycrypto, Python3 için kriptografik algoritmalar ve protokoller içeren bir kitaplıktır.</Description>
+    </Package>
+</PISI>

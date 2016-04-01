@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>against</Name>
+        <Summary xml:lang="tr">Çok hızlı bir ssh saldırı betiği</Summary>
+        <Description xml:lang="tr">against.py çok iş parçacıklı port tarama modülü ve keşfedilen tüm sistemlerde veya listesi verilen ip adreslerinde kabadayı-saldırısıyapabilme modülü de içeren çok hızlı bir ssh saldırı betiğidir.</Description>
+    </Source>
+</PISI>

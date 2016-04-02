@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>par2cmdline</Name>
+        <Homepage>https://github.com/Parchive/par2cmdline</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <PartOf>util.archive</PartOf>
+        <Summary>Command line implementation of the PAR v2.0 specification</Summary>
+        <Description>par2cmdline is a program for creating and using PAR2 files to detect damage in data files and repair them if necessary. It can be used with any kind of file.</Description>
+        <Archive sha1sum="68541996fd7eca6a0c711134dbc4ad8884907d4a" type="targz">https://github.com/Parchive/par2cmdline/archive/v0.6.14.tar.gz</Archive>
+        <!--<Patches>
+            <Patch level="1">par2cmdline-0.4-gcc4.patch</Patch>
+            <Patch level="1">par2cmdline-0.4-letype.patch</Patch>
+            <Patch level="1">par2cmdline-0.4-offset.patch</Patch>
+        </Patches>-->
+    </Source>
+
+    <Package>
+        <Name>par2cmdline</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2016-04-03</Date>
+            <Version>0.6.14</Version>
+            <Comment>Version bump, rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-02-02</Date>
+            <Version>0.4</Version>
+            <Comment>rebuild.</Comment>
+            <Name>Alihan Öztürk</Name>
+            <Email>alihan@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2013-02-09</Date>
+            <Version>0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Richard de Bruin</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

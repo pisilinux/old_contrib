@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pbzip2</Name>
+        <Homepage>http://compression.ca/pbzip2/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>Parallel implementation of the bzip2</Summary>
+        <Description>PBZIP2 is a parallel implementation of the bzip2 block-sorting file compressor that uses pthreads and achieves near-linear speedup on SMP machines.</Description>
+        <Archive sha1sum="f61e65a7616a3492815d18689c202d0685fe167d" type="targz">https://launchpad.net/pbzip2/1.1/1.1.13/+download/pbzip2-1.1.13.tar.gz</Archive>
+        <!--<Patches>
+	  <Patch>pbzip2-1.1.2-makefile.patch</Patch> 
+        </Patches>-->
+    </Source>
+
+    <Package>
+        <Name>pbzip2</Name>
+        <RuntimeDependencies>
+            <Dependency>bzip2</Dependency>
+	    <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2016-04-03</Date>
+            <Version>1.1.13</Version>
+            <Comment>Version bump, rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2015-01-25</Date>
+            <Version>1.1.12</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-02-02</Date>
+            <Version>1.1.8</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Alihan Öztürk</Name>
+            <Email>alihan@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2011-11-21</Date>
+            <Version>1.1.6</Version>
+            <Comment>First release</Comment>
+            <Name>Pisi Linux Admins</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

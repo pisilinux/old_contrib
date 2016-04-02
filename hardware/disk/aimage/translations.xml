@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aimage</Name>
+        <Summary xml:lang="tr">Aimage (the advanced imager) AFF kitaplığını kullanan bir imaj aracıdır.</Summary>
+        <Description xml:lang="tr">Aimage raw, AFF, AFD, ya da AFM biçimlerinde dosyalar yaratabilir. AFF ve AFD biçimlerini sıkıştırılabilir ya da şıkıştırılan dosyaları açılabilir. Aimage ddrescue gibi akıllı hata düzeltmesine sahip bir araçtır. Aimage seçeneğe bağlı olarak veri kopyalanırken MD5 veya SHA-1 hash bilgisini sıkıştırabilir ve hesaplayabilir.</Description>
+    </Source>
+</PISI>

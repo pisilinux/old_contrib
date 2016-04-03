@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-xattr</Name>
+        <Summary xml:lang="tr">Python xattr modülü</Summary>
+        <Summary xml:lang="fr">Extension Python pour les attributs étendus de fichiers.</Summary>
+        <Description xml:lang="tr">python-xattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
+    </Source>
+
+    <Source>
+        <Name>python3-xattr</Name>
+        <Summary xml:lang="tr">Python3 xattr modülü</Summary>
+        <Description xml:lang="tr">python3-xattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
+    </Source>
+</PISI>

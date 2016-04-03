@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>aimage</Name>
+        <Homepage>http://www.forensicswiki.org/wiki/Aimage</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <PartOf>hardware.disk</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Aimage (the advanced imager) was an imaging tool that was part of AFF.</Summary>
+        <Description>Aimage can create files in raw, AFF, AFD, or AFM formats. AFF and AFD formats can be compressed or uncompressed. aimage can optionally compress and calculate MD5 or SHA-1 hash residues while the data is being copied. It had intelligent error recovery, similar to what is in ddrescue.</Description>
+        <Archive sha1sum="8f3136e9ad3204fb4c91149b3f01a32cc83e0371" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/aimage-3.2.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>afflib-devel</Dependency>
+            <Dependency>libbsd-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>aimage</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>afflib</Dependency>
+            <Dependency>libbsd</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Summary>Aimage (the advanced imager) was an imaging tool that was part of AFF.</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-02</Date>
+            <Version>3.2.5</Version>
+            <Comment>First Pisi Built with Docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

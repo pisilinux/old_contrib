@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>par2cmdline</Name>
+        <Summary xml:lang="tr">Bir PAR 2.0 uyumlu veri doğrulama ve onarma aracı.</Summary>
+        <Summary xml:lang="fr">Utilitaire en ligne de commande pour les fichiers PAR 2.0</Summary>
+        <Summary xml:lang="nl">Console commando voor de PAR 2.0 implementatie</Summary>
+        <Description xml:lang="tr">par2cmdline zarar gören dosyaları bulan, gerektiğinde onarmak için PAR2 dosyaları yaratan ve kullanan bir komut satırı aracıdır. Her türlü dosya ile kullanılabilir.</Description>
+    </Source>
+</PISI>

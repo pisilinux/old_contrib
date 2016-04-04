@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>airflood</Name>
+        <Summary xml:lang="tr">Airflood geliştirilmiş bir aireplay türü programdır.</Summary>
+        <Description xml:lang="tr">Airflood, erişim noktalarına DoS saldırısı yapılmasına olanak veren bir modifiye edilmiş aireplay programıdır. Bu program erişim noktasının istemci tablosunun rasgele MAC adresleriyle doldurarak ollanaksız bağlantılar yapılmasını sağlar.</Description>
+    </Source>
+</PISI>

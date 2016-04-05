@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>lorcon-old</Name>
+        <Homepage>https://code.google.com/archive/p/lorcon/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>network.analyzer</PartOf>
+        <IsA>library</IsA>
+        <Summary>LORCON wireless packet injection library</Summary>
+        <Description>LORCON is a sane interface for crafting and transmitting packets on wireless interfaces across multiple platforms.</Description>
+        <Archive sha1sum="dee20f0c2af8044631ca6c1159198d405a98c590" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/lorcon-old.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>subversion-devel</Dependency>
+            <Dependency>libnfnetlink-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lorcon-old</Name>
+        <RuntimeDependencies>
+            <Dependency>libnl</Dependency>
+            <Dependency>libpcap</Dependency>
+            <Dependency>subversion</Dependency>
+            <Dependency>libnfnetlink</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>lorcon-old-devel</Name>
+        <Summary>Development files for libdnet</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">lorcon-old</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-04</Date>
+            <Version>197</Version>
+            <Comment>First Pisi Built</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

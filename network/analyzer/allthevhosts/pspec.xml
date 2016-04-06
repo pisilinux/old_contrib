@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>allthevhosts</Name>
+        <Homepage>https://labs.portcullis.co.uk/tools/finding-all-the-vhosts/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <Summary>A vhost discovery tool that scrapes various web applications.</Summary>
+        <Description>This natty python 2 script scrapes a series of web applications (including bing and yougetsignal’s database) and looks at Subject Alternative Names in the SSL certificate to find as many web applications which resolve to an IP address as possible. No guarantees are made as to the completeness or accuracy of the data, but it’s the best we can do. It can give an insight into the attack surface associated with a given IP address, allowing testers to advise client in situations where the risk is out of their control.</Description>
+        <Archive sha1sum="13cb1648efb4ab3593f876b70cbffd31b2905694" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/allthevhosts-1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">allthevhosts.py.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>allthevhosts</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>python-requests</Dependency>
+            <Dependency>python-beautifulsoup4</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-06</Date>
+            <Version>1.0</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

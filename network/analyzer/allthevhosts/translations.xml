@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>allthevhosts</Name>
+        <Summary xml:lang="tr">Çeşitli ağ uygulamalarını tarayan bir vhost bulma aracı.</Summary>
+        <Description xml:lang="tr">Bu şık python betiği bing ve yougetsignal'in veritabanını da kullanarak bir seri ağ uygulamasını tarar ve SSL sertifikalarında "Subject Alternative Names" arayarak mümkün olduğunca IP çözebien ağ uygulamasını bulmaya çalışır. Sonucun netliği ve kesinliği hakkında garanti yok ama bu yapılanların en iyisi. Böylece bu testi uygulayanlar istemcilerine/müşterilerine riskin kendi kontrollerinin dışında nerede olduğunu söylemelerine olanak tanır.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>airpwn</Name>
+        <Summary xml:lang="tr">Airpwn 802.11(kablosuz) paket enjeksiyonu için bir uygulama çatısıdır.</Summary>
+        <Description xml:lang="tr">Airpwn 802.11(kablosuz) paket enjeksiyonu için bir uygulama çatısıdır. Airpwn gelen kablosuz paketleri dinler ve gelen veri ayar (config) dosyasındaki bir kalıba uyarsa içerik kablosuz bağlantı noktasından enjekte edilir.</Description>
+    </Source>
+</PISI>

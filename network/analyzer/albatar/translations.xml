@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>albatar</Name>
+        <Summary xml:lang="tr">Albatar bir SQLi açığını sömürebilen python betiği.</Summary>
+        <Description xml:lang="tr">Albatar bir SQLi açığını sömürebilen python betiği.</Description>
+    </Source>
+</PISI>

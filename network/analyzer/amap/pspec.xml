@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>amap</Name>
+        <Homepage>http://freeworld.thc.org/releases.php</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>network.analyzer</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Next-generation tool for assisting network penetration testing.</Summary>
+        <Description>Amap is a next-generation scanning tool, which identifies applications and services even if they are not listening on the default port by creating a bogus-communication and analyzing the responses.</Description>
+        <Archive sha1sum="79056f29a3b9e0a21062116aec3e966b1a46d7d3" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/amap-5.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>ca-certificates</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">pcre.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>amap</Name>
+        <RuntimeDependencies>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libpcap</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>ca-certificates</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/amap</Path>
+            <Path fileType="data">/usr/share/amap/etc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-06</Date>
+            <Version>5.4</Version>
+            <Comment>First Pisi Built</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

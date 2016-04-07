@@ -2,7 +2,7 @@
 <PISI>
     <Source>
         <Name>setconf</Name>
-        <Summary xml:lang="en">Ayar dosyalarını kolaylıkla düzenleyebilmek için kullanışlı bir araç.</Summary>
-        <Description xml:lang="en">Ayar dosyalarını kolaylıkla düzenleyebilmek için kullanışlı bir araç.</Description>
+        <Summary xml:lang="tr">Ayar dosyalarını kolaylıkla düzenleyebilmek için kullanışlı bir araç.</Summary>
+        <Description xml:lang="tr">Ayar dosyalarını kolaylıkla düzenleyebilmek için kullanışlı bir araç.</Description>
     </Source>
 </PISI>

@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-httplib2</Name>
+        <Homepage>https://github.com/jcgregorio/httplib2</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>A comprehensive HTTP client library in Python</Summary>
+        <Description>httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
+        <Archive sha1sum="3a2ba2fb5f6f2c51dd5fcfea7275f484c0a324d4" type="targz">https://github.com/jcgregorio/httplib2/archive/0.9.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <!--<Dependency>python-setuptools</Dependency>-->
+            <Dependency>python3-devel</Dependency>
+            <!--<Dependency>python-devel</Dependency>-->
+        </BuildDependencies>
+        <Patches>
+            <Patch>cert.patch</Patch>
+            <Patch>ssl_hostname.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>python-httplib2</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-httplib2</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2016-05-06</Date>
+            <Version>0.9.2</Version>
+            <Comment>Ruilt with Docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2013-11-09</Date>
+            <Version>0.8</Version>
+            <Comment>Version bump</Comment>
+            <Name>Burak Fazıl Ertürk</Name>
+            <Email>burakerturk@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-11-17</Date>
+            <Version>0.7.7</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

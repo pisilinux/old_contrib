@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>setconf</Name>
+        <Summary xml:lang="tr">Ayar dosyalarını kolaylıkla düzenleyebilmek için kullanışlı bir araç.</Summary>
+        <Description xml:lang="tr">Ayar dosyalarını kolaylıkla düzenleyebilmek için kullanışlı bir araç.</Description>
+    </Source>
+</PISI>

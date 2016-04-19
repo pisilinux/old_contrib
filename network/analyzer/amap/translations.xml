@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>amap</Name>
+        <Summary xml:lang="tr">Amap, gelecek nesil bir tarama aracıdır.</Summary>
+        <Description xml:lang="tr">Amap, varsayılan portta dinleme yapmıyor olsa bile uygulamaları ve hizmetleri ayırt edebilen gelecek nesil bir tarama aracıdır.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>unace</Name>
+        <Homepage>http://www.winace.com/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>An extraction tool for the proprietary ace archive format</Summary>
+        <Description>The unace utility is used  for  extracting,  testing  and  viewing  the contents of archives created with the ACE archiver.</Description>
+        <Archive sha1sum="f658f03aa6f663c1a90af85e3e8c6e7ef12adb42" type="targz">http://ftp.debian.org/debian/pool/non-free/u/unace-nonfree/unace-nonfree_2.5.orig.tar.gz</Archive>
+        <Patches>
+            <Patch>01-only-unace.patch</Patch>
+	    <Patch>02-no-io_h.patch</Patch>
+	    <Patch>03-gcc-call.patch</Patch>
+	    <Patch>04-64bit.patch</Patch>
+	    <Patch>05-warning-fixes.patch</Patch>
+	    <Patch>06-fix-bad-pointer-arith.patch</Patch>
+	    <Patch>07-fix-free-aliasing-issue.patch</Patch>
+	    <Patch>08-ulonglong-printf.patch</Patch>
+	    <Patch>09-utf8-filenames.patch</Patch>
+	    <Patch>10-uninorm-signedness.patch</Patch>
+	    <Patch>11-possibly-critical.patch</Patch>
+	    <Patch>12-cast-filetime.patch</Patch>
+	    <Patch>13-maximum-file-name-length.patch</Patch>
+	    <Patch>14-endianness-detection.patch</Patch>
+	    <Patch>15-format-security.patch</Patch>
+	    <Patch>16-buffer-overflows.patch</Patch>
+	    <Patch>17-undefined-behavior-strcpy.patch</Patch>
+	    <Patch>18-stack-corruption.patch</Patch>
+	    <Patch>19-max-allocate.patch</Patch>
+	    <Patch>20-isatty.diff</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>unace</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-04</Date>
+            <Version>2.5</Version>
+            <Comment>First Pisi Release, built with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

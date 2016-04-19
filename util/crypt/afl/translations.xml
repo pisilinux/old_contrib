@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>afl</Name>
+        <Summary xml:lang="tr">American fuzzy lop, ikilik dosya biçimleri için bir fuzzing aracıdır.</Summary>
+        <Description xml:lang="tr">American fuzzy lop hedeflenen çalıştırılabilir dosyalarda yeni iç durumları tetikleyebilen, kaliteli bir derleme zamanı ve güvenlik odaklı aracıdır. Bulanıklaştırılmış kodun işlevselliğini artırır.</Description>
+    </Source>
+</PISI>

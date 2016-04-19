@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>unace</Name>
+        <Summary xml:lang="tr">unace, ace arşivlerini açmaya yarayan araçtır.</Summary>
+        <Description xml:lang="tr">Unace aracı ticari bi yazılım olan winace'nin ace uzantılı arşiv dosyalarını açmaya görüntülemeye ve test etmeye yarayan bir arçtır.</Description>
+    </Source>
+</PISI>

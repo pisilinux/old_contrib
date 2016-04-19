@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>lorcon-old</Name>
+        <Summary xml:lang="tr">LORCON kablosuz ağlar için paket enjeksiyon kitaplığı</Summary>
+        <Description xml:lang="tr">LORCON kablosuz ağlar için paket enjeksiyon kitaplığıdır.</Description>
+    </Source>
+    
+    <Package>
+        <Name>lorcon-devel</Name>
+        <Summary xml:lang="tr">lorcon için geliştirme dosyaları</Summary>
+    </Package>
+</PISI>

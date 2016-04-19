@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>airpwn</Name>
+        <Homepage>http://airpwn.sourceforge.net</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>network.analyzer</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Airpwn is a framework for 802.11 (wireless) packet injection.</Summary>
+        <Description>Airpwn is a framework for 802.11 (wireless) packet injection. Airpwn listens to incoming wireless packets, and if the data matches a pattern specified in the config files, custom content is injected "spoofed" from the wireless access point. From the perspective of the wireless client, airpwn becomes the server.</Description>
+        <Archive sha1sum="30df2f76cbbf35a9aa4053fa622f5249f2960e88" type="targz">https://sourceforge.net/projects/airpwn/files/airpwn/1.4/airpwn-1.4.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>libnet-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>lorcon-old-devel</Dependency>
+            <Dependency>wireless-tools-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>airpwn</Name>
+        <RuntimeDependencies>
+            <Dependency>libnl</Dependency>
+            <Dependency>python</Dependency>
+            <Dependency>libnet</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libpcap</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>lorcon-old</Dependency>
+            <Dependency>wireless-tools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/usr/share/airpwn</Path>
+            <Path fileType="data">/usr/share/airpwn/conf</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-05</Date>
+            <Version>1.4</Version>
+            <Comment>First Pisi Built</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

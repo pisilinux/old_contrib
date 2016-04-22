@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>capstone</Name>
+        <Homepage>http://www.capstone-engine.org/index.html</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Capstone is a disassembly framework.</Summary>
+        <Description>Capstone is a lightweight multi-platform, multi-architecture disassembly framework.</Description>
+        <Archive sha1sum="6153bbb4a4141fd9e6996d646cf7c81953cfe75a" type="targz">https://github.com/aquynh/capstone/archive/3.0.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>glibc-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>capstone</Name>
+        <Summary>Capstone is a disassembly framework.</Summary>
+        <RuntimeDependencies>
+            <Dependency>glibc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/include</Path>
+            <Path fileType="doc">/usr/share/doc/capstone</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python-capstone</Name>
+        <Summary>Capstone module for python</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>capstone</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-capstone</Name>
+        <Summary>Capstone module for python3</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>capstone</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>3.0.4</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

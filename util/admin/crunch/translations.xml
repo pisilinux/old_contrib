@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>crunch</Name>
+        <Summary xml:lang="tr">Güçlü bir sözlük üreteci</Summary>
+        <Description xml:lang="tr">Verilen karakter setinin her türlü kombinasyon/permütasyonu ile sözcük listesi oluşturabilen bir sözlük üreteci.</Description>
+    </Source>
+</PISI>

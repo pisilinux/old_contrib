@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>crunch</Name>
+        <Homepage>https://sourceforge.net/projects/crunch-wordlist/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>util.admin</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>A wordlist generator for all combinations/permutations of a given character set.</Summary>
+        <Description>Crunch is a wordlist generator where you can specify a standard character set or a character set you specify. crunch can generate all possible combinations and permutations.</Description>
+        <Archive sha1sum="51bdf8b9dfb9e4486fa6a85e0224522569de4557" type="targz">https://sourceforge.net/projects/crunch-wordlist/files/crunch-wordlist/crunch-3.6.tgz</Archive>
+    </Source>
+
+    <Package>
+        <Name>crunch</Name>
+        <RuntimeDependencies>
+            <Dependency>glibc-32bit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>3.6</Version>
+            <Comment>First Pisi Built</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

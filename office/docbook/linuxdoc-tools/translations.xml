@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>linuxdoc-tools</Name>
+        <Summary xml:lang="tr">SGML kaynağını diğer biçimlere dönüştürür.</Summary>
+        <Description xml:lang="tr">LinuxDoc yüksek seviyede ayarlanabilir belge yazma metin biçimidir. SGML kaynağını diğer biçimlere dönüştürür.</Description>
+    </Source>
+</PISI>

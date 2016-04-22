@@ -15,4 +15,4 @@ def install():
     pisitools.dobin("crunch")
     pisitools.dodoc("COPYING")
     pisitools.doman("crunch.1")
-    pisitools.insinto("/usr/share/crunch", "charset.lst")
+    pisitools.insinto("/usr/share/crunch/", "charset.lst")

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>androidpincrack</Name>
+        <Summary xml:lang="tr">Android PIN Kırıcı</Summary>
+        <Description xml:lang="tr">AndroidPINCrack, sözcük listesi ile de kullanılabileb bir android PIN kırıcı python betiğidir.</Description>
+    </Source>
+</PISI>

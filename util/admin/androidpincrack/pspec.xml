@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>androidpincrack</Name>
+        <Homepage>https://github.com/PentesterES/AndroidPINCrack</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <Summary>Bruteforce the Android Passcode given the hash and salt.</Summary>
+        <Description>AndroidPINCrack is a Python script that bruteforce the Android Passcode given the hash and salt. Of course there are some other faster ways to crack than a python script, but it can be useful for numeric passcoders or wordlist attack.</Description>
+        <Archive sha1sum="294b54af4d2b73e6b1c83b78d9057691c8553921" type="binary">https://github.com/PentesterES/AndroidPINCrack/raw/master/AndroidPINCrack.py</Archive>
+        <Archive sha1sum="f8a0a42b7103bd9415b06e4096c983009e5c35d9" type="binary">https://github.com/PentesterES/AndroidPINCrack/raw/master/README.md</Archive>
+    </Source>
+
+    <Package>
+        <Name>androidpincrack</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.2</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

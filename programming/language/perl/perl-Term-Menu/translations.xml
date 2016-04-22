@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <PISI>
     <Source>
-        <Name>perl-term-menu</Name>
+        <Name>perl-Term-Menu</Name>
         <Summary xml:lang="tr">Terminal ekranında soru sordurabilen ve menü yazdırabilen bir perl eklentisi.</Summary>
         <Description xml:lang="tr">Term::Menu yüksek dereceli özelleştirilebilir bir perl eklentisidir. Kullanıcıdan bilgi almayı sağlar ve onlardan ne istediklerini sorabilir. Bağımlılıkları yoktur ve çok basit yazdırma komutları kullanır.</Description>
     </Source>

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>crypthook</Name>
+        <Homepage>https://github.com/chokepoint/CryptHook</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>network.misc</PartOf>
+        <IsA>library</IsA>
+        <Summary>TCP/UDP symmetric encryption tunnel wrapper.</Summary>
+        <Description>CryptHook is a modular implementation for securing existing applications with symmetrical block cipher encryption. It works by hooking the base system calls for network communication send/sendto and recv/recvfrom. CryptHook will work with existing applications that rely on these system calls.</Description>
+        <Archive sha1sum="9943f50e9273b2faca9b58a28910d0f7e2efd71c" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/crypthook-0.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>openssl-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>crypthook</Name>
+        <RuntimeDependencies>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/crypthook</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.0</Version>
+            <Comment>First Pisi Built</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

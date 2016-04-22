@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Term-Menu</Name>
+        <Homepage>http://search.cpan.org/~dazjorz/Term-Menu-0.10/lib/Term/Menu.pm</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>library</IsA>
+        <Summary>Perl extension for asking questions and printing menus at the terminal.</Summary>
+        <Description>Term::Menu is a highly tweakable module that eases the task of programming user interactivity. It helps you to get information from users, and to ask what they really want. It uses basic print commands, and has no dependancies</Description>
+        <Archive sha1sum="8e06e565938e8200f699af873f848eb2f8cade81" type="targz">http://search.cpan.org/CPAN/authors/id/D/DA/DAZJORZ/Term-Menu-0.10.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Term-Menu</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.10</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

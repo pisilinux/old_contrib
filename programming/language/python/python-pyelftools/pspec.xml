@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-pyelftools</Name>
+        <Homepage>https://github.com/eliben/pyelftools</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>Python library for analyzing ELF files and DWARF debugging information</Summary>
+        <Description>pyelftools is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information.</Description>
+        <Archive sha1sum="729b558605e5b033010ecd60705e0d5a61bc94ea" type="targz">https://github.com/eliben/pyelftools/archive/v0.23.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pyelftools</Name>
+        <Summary>Python library for analyzing ELF files and DWARF debugging information</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-pyelftools</Name>
+        <Summary>pyelftools module for python3</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.23</Version>
+            <Comment>First release, rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

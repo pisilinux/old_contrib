@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kismet</Name>
+        <Homepage>http://www.kismetwireless.net</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <Summary>802.11 layer2 wireless network detector, sniffer, and intrusion detection system.</Summary>
+        <Description>Kismet is a wireless network detector, sniffer, and intrusion detection system. Kismet works predominately with Wi-Fi (IEEE 802.11) networks, but can be expanded via plug-ins to handle other network types.</Description>
+        <Archive sha1sum="53fa78c841c1a942aa0a18711a717363ab790a6b" type="tarxz">http://www.kismetwireless.net/code/kismet-2016-01-R1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>libcap-devel</Dependency>
+            <Dependency>libnl-devel</Dependency>
+            <Dependency>bluez-libs</Dependency>
+            <Dependency>sox-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>gcc</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kismet</Name>
+        <RuntimeDependencies>
+            <Dependency>bluez-libs</Dependency>
+            <Dependency>libpcap</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libcap</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libnl</Dependency>
+            <Dependency>sox</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/kismet</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-23</Date>
+            <Version>2016.01</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

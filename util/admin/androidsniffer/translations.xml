@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>androidsniffer</Name>
+        <Summary xml:lang="tr">Android Dump Etme Aracı</Summary>
+        <Description xml:lang="tr">Andr01d Magic Dumper, arama geçmişi, rehber, kablosuz ağ ayarları, 3ncü parti yazılımların parolaları gibi verileri ve daha fazlasını dump etmenize yarayan bir perl betiğidir.</Description>
+    </Source>
+</PISI>

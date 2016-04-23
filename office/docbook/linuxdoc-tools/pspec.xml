@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>linuxdoc-tools</Name>
+        <Homepage>https://gitlab.com/agmartin/linuxdoc-tools</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <Summary>Convert LinuxDoc SGML source into other formats</Summary>
+        <Description>LinuxDoc sgml is a highly configurable text format for writing documentation, something like html only it's simpler and can be converted to various other formats, including html for websites. You write a LinuxDoc document using any text editor such as vim.</Description>
+        <Archive sha1sum="bc7347704fdec5d76c462d3b6ab8b668f093f487" type="targz">http://ftp.de.debian.org/debian/pool/main/l/linuxdoc-tools/linuxdoc-tools_0.9.69.orig.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>flex</Dependency>
+            <Dependency>groff</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>openjade</Dependency>
+        </BuildDependencies>
+        <!--<Patches>
+            <Patch level="1">jade_1.2.1-47.3.diff</Patch>
+        </Patches>-->
+    </Source>
+
+    <Package>
+        <Name>linuxdoc-tools</Name>
+        <RuntimeDependencies>
+            <Dependency>flex</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>openjade</Dependency>
+            <Dependency>groff-doc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <!--<AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/sgml/jade/dsssl/catalog">openjade-1.3.2.dsssl-catalog</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/sgml/jade/catalog">openjade-1.3.2.catalog</AdditionalFile>
+        </AdditionalFiles>-->
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-19</Date>
+            <Version>0.9.69</Version>
+            <Comment>First Pisi Built with Docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

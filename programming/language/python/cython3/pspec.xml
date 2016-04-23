@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cython3</Name>
+        <Homepage>http://www.cython.org</Homepage>
+        <Packager>
+            <Name>Pisi Linux Admins</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>C extensions for the Python3</Summary>
+        <Description>Cython3 is a language that makes writing C extensions for the Python3 language as easy as Python3 itself.</Description>
+        <Archive sha1sum="32f12b8dd976111668ef8ba7e716a850869a0bf6" type="targz">http://cython.org/release/Cython-0.24.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+            <!--<Dependency>python3-setuptools</Dependency>-->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cython3</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.24</Version>
+            <Comment>First release</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

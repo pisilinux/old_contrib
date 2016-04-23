@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>androidsniffer</Name>
+        <Homepage>https://packetstormsecurity.com/files/97464/Andr01d-Magic-Dumper-0.1.html</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>An Android Dump Tool</Summary>
+        <Description>Andr01d Magic Dumper is a perl script that lets you search for 3rd party passwords, dump the call log, dump contacts, dump wireless configuration, and more.</Description>
+        <Archive sha1sum="b913bb9358a275b823f8a04428d732ceaa9cba40" type="binary">https://github.com/ibrahimkaraguzel/Sources/raw/master/AndroidSniffer/AndroidSniffer.pl.txt</Archive>
+    </Source>
+
+    <Package>
+        <Name>androidsniffer</Name>
+        <Summary>An Android Dump Tool</Summary>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-dbi</Dependency>
+            <Dependency>perl-term-menu</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.1</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

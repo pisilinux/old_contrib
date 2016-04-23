@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-msgpack</Name>
+        <Homepage>http://msgpack.org/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>Python msgpack module</Summary>
+        <Description>MessagePack serializer implementation for Python.</Description>
+        <Archive sha1sum="d5a3869ab8149914bf0ead9db7bdeb0b83e661c9" type="targz">https://github.com/msgpack/msgpack-python/archive/0.4.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>cython3</Dependency>
+            <Dependency>cython</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-msgpack</Name>
+        <Summary>Python msgpack module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-msgpack</Name>
+        <Summary>Python3 msgpack module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.4.7</Version>
+            <Comment>First Pisi Release Built with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

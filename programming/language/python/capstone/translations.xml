@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>capstone</Name>
+        <Summary xml:lang="tr">Capstone Dissasembly Ortamı</Summary>
+        <Description xml:lang="tr">Capstone, hafif, çok-platformlu, çok mimarili bir disassembly ortamıdır.</Description>
+    </Source>
+    
+    <Package>
+        <Name>python-capstone</Name>
+        <Summary xml:lang="tr">Python için capstone modülü</Summary>
+        <Description xml:lang="tr">Python için capstone modülü</Description>
+    </Package>
+    
+    <Package>
+        <Name>python3-capstone</Name>
+        <Summary xml:lang="tr">Python3 için capstone modülü</Summary>
+        <Description xml:lang="tr">Python3 için capstone modülü</Description>
+    </Package>
+</PISI>

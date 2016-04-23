@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>crypthook</Name>
+        <Summary xml:lang="tr">TCP/UDP simetrik şifreleme tünel aracısı.</Summary>
+        <Description xml:lang="tr">CryptHook simetrik blok şifreleme kullanarak varolan uygulamaları güvenli hale getirebilen bir ara yazılımdır.</Description>
+    </Source>
+</PISI>

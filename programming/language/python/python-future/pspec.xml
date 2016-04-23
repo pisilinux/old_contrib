@@ -1,0 +1,62 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-future</Name>
+        <Homepage>http://python-future.org/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>Clean single-source support for Python 3 and 2</Summary>
+        <Description>python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</Description>
+        <Archive sha1sum="431bf8ff160e8e785a2f76c3e57c1b6c2b13b41a" type="targz">https://pypi.python.org/packages/source/f/future/future-0.15.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>0001-Remove-duplicate-assertion-in-builtins-tests.patch</Patch>
+            <Patch>remove-two-expected-failure-decorators.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>python-future</Name>
+        <Summary>Python future module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-future</Name>
+        <Summary>Python3 future module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>0.15.2</Version>
+            <Comment>First Pisi Release Built with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

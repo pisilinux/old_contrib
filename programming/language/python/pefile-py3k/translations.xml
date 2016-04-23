@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>pefile-py3k</Name>
+        <Summary xml:lang="tr">PE(Portable Executable) dosyaları çözümleyebilen bir python3 yordamı</Summary>
+        <Description xml:lang="tr">python3-pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
+    </Source>
+</PISI>

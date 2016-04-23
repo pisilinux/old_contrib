@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>plasma</Name>
+        <Summary xml:lang="tr">x86/ARM/MIPS için etkileşimli disassembler.</Summary>
+        <Description xml:lang="tr">PLASMA bir etkileşimli disassemblerdır. Eski adı Reverse olan Plasma renkli sözdizimiyle daha okunabilir bir assembly kodu üretir. Uygun python apisi ile betikler üretebilirsiniz.</Description>
+    </Source>
+</PISI>

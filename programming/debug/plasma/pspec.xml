@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>plasma</Name>
+        <Homepage>https://github.com/joelpx/plasma</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL3</License>
+        <PartOf>programming.debug</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Interactive disassembler for x86/ARM/MIPS.</Summary>
+        <Description>PLASMA is an interactive disassembler. It can generate a more readable assembly (pseudo code) with colored syntax. You can write scripts with the available Python api.</Description>
+        <Archive sha1sum="4cdc87a6c645937a2376b9665bcfcb2a9907a7d0" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/plasma-0.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-nose</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>plasma</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>pefile-py3k</Dependency>
+            <Dependency>python3-msgpack</Dependency>
+            <Dependency>python3-capstone</Dependency>
+            <Dependency>python3-pyelftools</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="data">/usr/share/plasma</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-23</Date>
+            <Version>0.0</Version>
+            <Comment>First Pisi Built with Docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

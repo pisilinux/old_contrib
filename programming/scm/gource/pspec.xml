@@ -19,10 +19,13 @@
             <Dependency>mesa-devel</Dependency>
             <Dependency>boost-devel</Dependency>
             <Dependency>libsdl2-devel</Dependency>
-            <Dependency>tinyxml-devel</Dependency>
-            <Dependency>sdl2-image-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <!--Dependency>tinyxml-devel</Dependency-->
+            <!--Dependency>sdl2-image-devel</Dependency-->
             <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>freefont</Dependency>
+            <!--Dependency>freefont</Dependency-->
+            <Dependency>sdl-image-devel</Dependency>
             <Dependency>glm</Dependency>
         </BuildDependencies>
     </Source>
@@ -31,12 +34,18 @@
         <Name>gource</Name>
         <RuntimeDependencies>
             <Dependency>glew</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libsdl</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>boost</Dependency>
             <Dependency>libsdl2</Dependency>
-            <Dependency>tinyxml</Dependency>
+            <!--Dependency>tinyxml</Dependency-->
             <Dependency>mesa-glu</Dependency>
-            <Dependency>sdl2-image</Dependency>
+            <!--Dependency>sdl2-image</Dependency-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

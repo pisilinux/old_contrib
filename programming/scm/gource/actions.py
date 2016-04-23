@@ -10,7 +10,7 @@ from pisi.actionsapi import get
 
 
 def setup():
-    autotools.configure("--with-tinyxml \
+    autotools.configure("--without-tinyxml \
                          --enable-ttf-font-dir=/usr/share/fonts/freefont/")
 
 def build():

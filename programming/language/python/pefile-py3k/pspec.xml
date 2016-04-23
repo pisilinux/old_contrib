@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pefile-py3k</Name>
+        <Homepage>https://github.com/simonzack/pefile-py3k</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Python3 module to read and work with PE files</Summary>
+        <Description>pefile is a multi-platform Python module to parse and work with Portable Executable (aka PE) files. Most of the information contained in the PE headers is accessible as well as all sections' details and their data.</Description>
+        <Archive sha1sum="5f71a53e12a165e85968b95db299b3a12e73f0dd" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/pefile-py3k-1.2.10.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pefile-py3k</Name>
+        <Summary>Python3 module to read and work with PE files</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-23</Date>
+            <Version>1.2.10</Version>
+            <Comment>First release, rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

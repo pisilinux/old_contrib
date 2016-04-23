@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>kismet</Name>
+        <Summary xml:lang="tr">802.11 layer2 wireless ağ bulma, izleme ve açık arama sistemi</Summary>
+        <Description xml:lang="tr">Kismet 802.11 layer2 wireless ağ bulma, izleme ve açık arama sistemidir. Kismet çoğunlukla Wi-Fi (IEEE 802.11) ağlarıyla çalışmkatadır, ancak eklentilerle diğer ağ dizimleriyle de çalışması sağlanabilir.</Description>
+    </Source>
+</PISI>

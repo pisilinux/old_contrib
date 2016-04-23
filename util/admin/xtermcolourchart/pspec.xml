@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xtermcolourchart</Name>
+        <Homepage>https://excess.org/article/2007/10/xterm-256-colour-chart-20/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>XTerm Colour Chart</Summary>
+        <Description>This tool shows the colour and colour codes of the terminal. Five different charts available in 256 and 88-colour modes. Origin and rotation of colour cube is now configurable. Size of colour cells is configurable.</Description>
+        <Archive sha1sum="d57c0d74bd867234f173c8ecc94674b699a04507" type="binary">https://excess.org/misc/xterm_colour_chart.py</Archive>
+    </Source>
+
+    <Package>
+        <Name>xtermcolourchart</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-23</Date>
+            <Version>2.0</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

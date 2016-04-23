@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>xtermcolourchart</Name>
+        <Summary xml:lang="tr">Terminal renkleri göstereci</Summary>
+        <Description xml:lang="tr">Terminal ekranında terminal renklerini ve kodlarını gösterebilen özelleştirilebilen bir araç.</Description>
+    </Source>
+</PISI>

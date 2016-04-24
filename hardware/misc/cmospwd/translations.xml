@@ -3,6 +3,6 @@
     <Source>
         <Name>cmospwd</Name>
         <Summary xml:lang="tr">BIOS'a erişen CMOS şifresini çözmeye yarayan bir araç.</Summary>
-        <Description xml:lang="tr">CmosPwd, cmos içerişindeki BIOS'a erişim sağlayan şifreyi çözmeye yarayan bir araçtır. CmosPwd ile cmos'u yedekleyebilir, eski haline döndürebilir ya da silebilirsiniz.</Description>
+        <Description xml:lang="tr">CmosPwd, cmos içerisindeki BIOS'a erişim sağlayan şifreyi çözmeye yarayan bir araçtır. CmosPwd ile cmos'u yedekleyebilir, eski haline döndürebilir ya da silebilirsiniz.</Description>
     </Source>
 </PISI>

@@ -15,6 +15,7 @@
         <Description>CmosPwd decrypts password stored in cmos used to access BIOS SETUP. With CmosPwd, you can also backup, restore and erase/kill cmos.</Description>
         <Archive sha1sum="71ef5ffe8c76b5177d32300b7992a91fb859419e" type="tarbz2">http://www.cgsecurity.org/cmospwd-5.0.tar.bz2</Archive>
     </Source>
+
     <Package>
         <Name>cmospwd</Name>
         <Summary>Decrypts password stored in CMOS used to access BIOS setup.</Summary>
@@ -23,9 +24,10 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
+
     <History>
         <Update release="1">
-            <Date>2016-04-23</Date>
+            <Date>2016-04-24</Date>
             <Version>5.0</Version>
             <Comment>First Pisi Built</Comment>
             <Name>İbrahim KARAGÜZEL</Name>

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cmospwd</Name>
+        <Homepage>http://www.cgsecurity.org/wiki/CmosPwd</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <PartOf>hardware.misc</PartOf>
+        <IsA>app:console</IsA>
+        <Summary>Decrypts password stored in CMOS used to access BIOS setup.</Summary>
+        <Description>CmosPwd decrypts password stored in cmos used to access BIOS SETUP. With CmosPwd, you can also backup, restore and erase/kill cmos.</Description>
+        <Archive sha1sum="71ef5ffe8c76b5177d32300b7992a91fb859419e" type="tarbz2">http://www.cgsecurity.org/cmospwd-5.0.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>cmospwd</Name>
+        <Summary>Decrypts password stored in CMOS used to access BIOS setup.</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-24</Date>
+            <Version>5.0</Version>
+            <Comment>First Pisi Built</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

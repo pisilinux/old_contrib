@@ -3,6 +3,6 @@
     <Source>
         <Name>sqlninja</Name>
         <Summary xml:lang="tr">SQL Enjeksiyon Aracı</Summary>
-        <Description xml:lang="tr">Microsoft SQL sunucusu kullanan aq uygulamalarını SQL Injection yöntemiyle exploit etmeye yarayan bir araç.</Description>
+        <Description xml:lang="tr">Microsoft SQL sunucusu kullanan ağ uygulamalarını SQL Injection yöntemiyle exploit etmeye yarayan bir araç.</Description>
     </Source>
 </PISI>

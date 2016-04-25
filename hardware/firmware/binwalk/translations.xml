@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>binwalk</Name>
+        <Summary xml:lang="tr">Firmware çözümleme aracı</Summary>
+        <Description xml:lang="tr">Binwalk, firmware imajlarında yüklü veriyi çıkartan, tersine mühendislik uygulayan veçözümleyen bir firmware çözümleme aracıdır.</Description>
+    </Source>
+</PISI>

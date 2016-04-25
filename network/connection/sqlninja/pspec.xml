@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sqlninja</Name>
+        <Homepage>http://sqlninja.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>SQL Injection Tool</Summary>
+        <Description>A tool targeted to exploit SQL Injection vulnerabilities on a web application that uses Microsoft SQL Server as its back-end.</Description>
+        <Archive sha1sum="14d01050138c9fab77274e9823708e82742cdc29" type="targz">http://downloads.sourceforge.net/sourceforge/sqlninja/sqlninja-0.2.999-alpha1.tgz</Archive>
+    </Source>
+
+    <Package>
+        <Name>sqlninja</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>perl-NetPacket</Dependency>
+            <Dependency>perl-Net-Pcap</Dependency>
+            <Dependency>perl-Net-DNS</Dependency>
+            <Dependency>perl-Net-RawIP</Dependency>
+            <Dependency>perl-IO-Socket-SSL</Dependency>
+            <Dependency>perl-DBI</Dependency>
+            <Dependency>perl-DBD-SQLite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="data">/usr/share/sqlninja/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-24</Date>
+            <Version>0.2.999</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

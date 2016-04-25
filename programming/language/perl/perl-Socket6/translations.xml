@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>perl-Socket6</Name>
+        <Summary xml:lang="tr">C socket.h başlığının IPv6 ile ilgili değişken ve tanımlamaları.</Summary>
+        <Description xml:lang="tr">Socket6 modülü çeşitli IPv6 fonksiyonlarına bağlayıcı rutinler sağlar.</Description>
+        <Description xml:lang="es">Módulo Socket6 facilita rutinas de unión a las funciones diferentes IPv6 </Description>
+    </Source>
+</PISI>

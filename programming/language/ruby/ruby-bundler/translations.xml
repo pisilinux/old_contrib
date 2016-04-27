@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>ruby-bundler</Name>
+        <Summary xml:lang="tr">Ruby kodu denetleme aracı</Summary>
+        <Description xml:lang="tr">ruby-bundler, ruby kodunun her makinede aynı olduğunun denetlenmesini sağlayan bir araçtır.</Description>
+    </Source>
+</PISI>

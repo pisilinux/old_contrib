@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>ruby-bundler</Name>
+        <Homepage>https://github.com/bundler/bundler</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <Summary>Bundler makes sure Ruby applications run the same code on every machine.</Summary>
+        <Description>Manages an application's dependencies through its entire life, across many machines, systematically and repeatably.</Description>
+        <!--<Archive sha1sum="b81a472ad79cbcfabbbc3d054a6ab621beffc1ce" type="">https://github.com/bundler/bundler/archive/v1.11.2.tar.gz</Archive>-->
+        <Archive sha1sum="8eb956dec72da753d3d2a2126c78508b17af434e" type="binary">https://rubygems.global.ssl.fastly.net/gems/bundler-1.11.2.gem</Archive>
+        <BuildDependencies>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>rubygems</Dependency>
+        </BuildDependencies> 
+    </Source>
+
+    <Package>
+        <Name>ruby-bundler</Name>
+        <RuntimeDependencies>
+            <Dependency>rubygems</Dependency>
+            <Dependency>ruby</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-26</Date>
+            <Version>4.11.21</Version>
+            <Comment>Version bump.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

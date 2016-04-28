@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>metasploit</Name>
+        <Homepage>http://www.metasploit.com/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>An advanced platform for developing, testing, and using vulnerability exploit code</Summary>
+        <Description>Metasploit provides useful information to people who perform penetration testing, IDS signature development, and exploit research. This project was created to provide information on exploit techniques and to create a useful resource for exploit developers and security professionals.</Description>
+        <Archive sha1sum="ef1df2beb85b596719bcf0dd4bed7bd6aef0b32e" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/metasploit-framework-4.11.21.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>git</Dependency>
+            <Dependency>wget</Dependency>
+            <Dependency>bison</Dependency>
+            <Dependency>libtool</Dependency>
+            <Dependency>autoconf</Dependency>
+            <Dependency>rubygems</Dependency>
+            <Dependency>apr-util</Dependency>
+            <Dependency>apr-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>ruby-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>jre7-openjdk</Dependency>
+            <Dependency>ruby-bundler</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libyaml-devel</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>subversion-devel</Dependency>
+            <Dependency>postgresql-server</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>metasploit</Name>
+        <RuntimeDependencies>
+            <Dependency>apr</Dependency>
+            <Dependency>git</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>nmap</Dependency>
+            <Dependency>ruby</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpcap</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>libyaml</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>pgadmin3</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>subversion</Dependency>
+            <Dependency>postgresql-lib</Dependency>
+            <Dependency>postgresql-server</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/metasploit</Path>
+            <Path fileType="data">/usr/share/metasploit</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2016-04-27</Date>
+            <Version>4.11.21</Version>
+            <Comment>Version bump.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2014-09-14</Date>
+            <Version>4.10.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Aydın Demirel</Name>
+            <Email>aydin.demirel@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2014-02-01</Date>
+            <Version>4.8.2</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvarice@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-09-01</Date>
+            <Version>4.4</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

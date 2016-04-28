@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-pefile</Name>
+        <Summary xml:lang="tr">PE(Portable Executable) dosyaları çözümleyebilen bir python yordamı</Summary>
+        <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
+    </Source>
+    
+    <Package>
+        <Name>python3-pefile</Name>
+        <Summary xml:lang="tr">Python3 pefile modülü</Summary>
+        <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
+    </Package>
+</PISI>

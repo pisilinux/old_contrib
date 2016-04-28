@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-pefile</Name>
+        <Homepage>https://github.com/erocarrera/pefile</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>Python module to read and work with PE files</Summary>
+        <Description>pefile is a multi-platform Python module to parse and work with Portable Executable (aka PE) files. Most of the information contained in the PE headers is accessible as well as all sections' details and their data.</Description>
+        <Archive sha1sum="ae252dc7c2350a8cd029083e8f6ffeaf8bec8b62" type="targz">https://github.com/ibrahimkaraguzel/Sources/raw/master/pefile-2016.3.28.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-future</Dependency>
+            <Dependency>python-future</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pefile</Name>
+        <Summary>Python pefile module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-future</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-pefile</Name>
+        <Summary>Python3 pefile module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-future</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-22</Date>
+            <Version>2016.3.28</Version>
+            <Comment>First Pisi Release Built with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

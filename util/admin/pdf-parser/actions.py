@@ -7,9 +7,7 @@ from pisi.actionsapi import get
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 
-
 def install():
-    #pisitools.insinto("/usr/bin", "%S/pdf-parser.py" % get.workDIR())
-    pisitools.dobin("pdf-parser.py")
+    pisitools.insinto("/usr/bin", "pdf-parser.py")
     shelltools.chmod(get.installDIR() + "/usr/bin/pdf-parser.py", mode=0755)
     pisitools.dosym("/usr/bin/pdf-parser.py", "/usr/bin/pdf-parser")

@@ -31,7 +31,7 @@ def build():
 
     shelltools.cd("..")
     shelltools.cd("../build_python3/python")
-    pythonmodules.compile(pyVer="3.4")
+    pythonmodules.compile(pyVer="3")
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
@@ -43,5 +43,5 @@ def install():
     
     shelltools.cd("..")
     shelltools.cd("../build_python3/python")
-    pythonmodules.install(pyVer="3.4")
+    pythonmodules.install(pyVer="3")
 

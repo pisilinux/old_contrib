@@ -11,9 +11,9 @@ from pisi.actionsapi import get
 WorkDir = "Cython-%s" % get.srcVERSION()
 
 def build():
-    pythonmodules.compile(pyVer="3.4")
+    pythonmodules.compile(pyVer="3")
 
 def install():
-    pythonmodules.install(pyVer="3.4")
+    pythonmodules.install(pyVer="3")
     pisitools.dodoc("COPYING*", "README*", "PKG-INFO")
 

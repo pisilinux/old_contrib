@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>pdfcrack</Name>
+        <Summary xml:lang="tr">PDF Parola Kırıcı</Summary>
+        <Description xml:lang="tr">PDF dosyalarında kaybolan parolaları geri getirir.</Description>
+    </Source>
+</PISI>

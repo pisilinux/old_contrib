@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>yara</Name>
+        <Summary xml:lang="tr">Kötücül Yazılım Çözümleme Aracı</Summary>
+        <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araçtır.</Description>
+    </Source>
+    
+    <Package>
+        <Name>python-yara</Name>
+        <Summary xml:lang="tr">Python için yara modülü</Summary>
+        <Description xml:lang="tr">Python için yara modülü</Description>
+    </Package>
+    
+    <Package>
+        <Name>python3-yara</Name>
+        <Summary xml:lang="tr">Python3 için yara modülü</Summary>
+        <Description xml:lang="tr">Python3 için yara modülü</Description>
+    </Package>
+</PISI>

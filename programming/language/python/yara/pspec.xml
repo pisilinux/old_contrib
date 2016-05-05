@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>yara</Name>
+        <Homepage>https://plusvic.github.io/yara/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>The pattern matching swiss knife for malware researchers.</Summary>
+        <Description>YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.</Description>
+        <Archive sha1sum="70756b291a08254de751726ee565cf454a1eb566" type="targz">https://github.com/plusvic/yara/archive/v3.4.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>file</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>yara</Name>
+        <Summary>The pattern matching swiss knife for malware researchers.</Summary>
+        <RuntimeDependencies>
+            <Dependency>openssl</Dependency>
+            <Dependency>file</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/include</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/yara</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python-yara</Name>
+        <Summary>Yara module for python</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+            <Dependency>yara</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-yara</Name>
+        <Summary>Yara module for python3</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>yara</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-05-05</Date>
+            <Version>3.4.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

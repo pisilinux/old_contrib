@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>conky</Name>
+        <Homepage>http://conky.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Hamit Giray Nart</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GNU/GPL3</License>
+        <IsA>app:gui</IsA>
+        <Summary>A system monitor for X</Summary>
+        <Description>Conky its a system monitor for X originally based on the torsmo code, but more kickass</Description>
+        <Archive sha1sum="7392523d2eb9e2044faae8d44cbd006b387d0a85" type="targz">https://codeload.github.com/brndnmtthws/conky/tar.gz/v1.10.2</Archive>
+        <BuildDependencies>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>lua-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libXft-devel</Dependency>
+            <Dependency>imlib2-devel</Dependency>
+           <Dependency>tolua++-devel</Dependency> -->
+            <Dependency>cmake</Dependency>
+            <Dependency>git</Dependency>
+            <Dependency>ncurses-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libXinerama-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+<!--              <Patch>makefile-roundup.patch</Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>conky</Name>
+        <RuntimeDependencies>
+            <Dependency>lua</Dependency>
+            <Dependency>cairo</Dependency> 
+            <Dependency>libSM</Dependency> 
+             <Dependency>libICE</Dependency> 
+            <Dependency>libXft</Dependency>
+            <Dependency>imlib2</Dependency>
+             <Dependency>tolua++</Dependency> 
+            <Dependency>libXext</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXdamage</Dependency>
+             <Dependency>libXrender</Dependency> 
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libXinerama</Dependency>
+            <Dependency>ncurses</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/conky</Path>
+            <Path fileType="doc">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/conky</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/conky/conky.conf">conky.conf</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/conky.png">conky.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/conky.desktop">conky.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        
+        <Update release="1">
+            <Date>2010-05-10</Date>
+            <Version>1.10.2</Version>
+            <Comment>first commit</Comment>
+            <Name>Ali Algul(gulle)</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

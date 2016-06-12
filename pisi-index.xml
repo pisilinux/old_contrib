@@ -865,6 +865,59 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gst-ffmpeg</Name>
+            <Homepage>http://gstreamer.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.video</PartOf>
+            <Summary xml:lang="en">FFmpeg support for gstreamer</Summary>
+            <Summary xml:lang="tr">Gstreamer için FFmpeg desteği</Summary>
+            <Description xml:lang="en">GStreamer FFmpeg plugin allows GStreamer to use FFmpeg functionality.</Description>
+            <Archive type="tarbz2" sha1sum="8de5c848638c16c6c6c14ce3b22eecd61ddeed44">http://gstreamer.freedesktop.org/src/gst-ffmpeg/gst-ffmpeg-0.10.13.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>liboil-devel</Dependency>
+                <Dependency>ffmpeg-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>yasm-devel</Dependency>
+                <Dependency>libsdl-devel</Dependency>
+                <Dependency>orc-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">gst-ffmpeg-0.10.13_gcc47.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/video/gst-ffmpeg/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gst-ffmpeg</Name>
+            <RuntimeDependencies>
+                <Dependency>orc</Dependency>
+                <Dependency>bzip2</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2016-05-28</Date>
+                <Version>0.10.13</Version>
+                <Comment>First release</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>qtav</Name>
             <Homepage>http://www.qtav.org/</Homepage>
             <Packager>

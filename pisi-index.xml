@@ -22512,6 +22512,127 @@ thunar-volman is installed and configured properly, and you plug in your digical
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>webkit-gtk3</Name>
+            <Homepage>http://webkitgtk.org</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <License>LGPLv2.1</License>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>network.misc</PartOf>
+            <Summary xml:lang="en">An opensource web browser engine for GTK+ applications</Summary>
+            <Description xml:lang="en">The GTK+ port of WebKit is intended to provide a browser component primarily for users of the portable GTK+ UI toolkit on platforms like Linux.</Description>
+            <Archive type="tarxz" sha1sum="e425ae86084ab6335dadb368c9e8f53600665d54">http://www.webkitgtk.org/releases/webkitgtk-2.4.11.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>ruby-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
+                <Dependency>libXt-devel</Dependency>
+                <Dependency>enchant-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>geoclue-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>libsecret-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>gstreamer-next-devel</Dependency>
+                <Dependency>gst-libav-next</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>gst-plugins-base-next-devel</Dependency>
+                <Dependency>gst-plugins-bad-next-devel</Dependency>
+                <Dependency>gst-plugins-good-next</Dependency>
+                <Dependency>which</Dependency>
+                <Dependency>icon-theme-hicolor</Dependency>
+                <Dependency>gperf</Dependency>
+                <Dependency>libSM-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/misc/webkit-gtk3/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>webkit-gtk3</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>icu4c</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>enchant</Dependency>
+                <Dependency>geoclue</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>libsecret</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gstreamer-next</Dependency>
+                <Dependency>gst-libav-next</Dependency>
+                <Dependency>gst-plugins-bad-next</Dependency>
+                <Dependency>gst-plugins-base-next</Dependency>
+                <Dependency>gst-plugins-good-next</Dependency>
+                <Dependency>gobject-introspection</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>webkit-gtk3-devel</Name>
+            <Summary xml:lang="en">Development files for GTK+ port of WebKit</Summary>
+            <IsA>library</IsA>
+            <IsA>data:doc</IsA>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency release="1">webkit-gtk3</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2016-06-05</Date>
+                <Version>2.4.11</Version>
+                <Comment>First release</Comment>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>vsftpd</Name>
             <Homepage>http://vsftpd.beasts.org/</Homepage>
             <Packager>

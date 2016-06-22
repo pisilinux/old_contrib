@@ -16,7 +16,7 @@ def build():
 
 def install():   
     qt5.install() 
-    pisitools.domove( "/usr/lib/qt5/bin/QMLPlayer", "/usr/bin")
-    pisitools.domove( "/usr/lib/qt5/bin/player", "/usr/bin")
+    pisitools.domove(  "/usr/lib/qt5/bin/QMLPlayer", "/usr/bin")
+    pisitools.domove("/usr/lib/qt5/bin/Player", "/usr/bin")
     
     pisitools.dodoc("Changelog", "README.md","gpl-3.0.txt", "lgpl-2.1.txt")

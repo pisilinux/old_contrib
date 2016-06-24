@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>keepassx</Name>
+        <Homepage>http://www.keepassx.org</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>BSD</License>
+        <Icon>keepassx</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Cross-platform password manager</Summary>
+        <Description>KeePassX is a free/open-source password manager which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key-disk.</Description>
+        <Archive sha1sum="6df109a54b87bbc6ee3ea5d3f2e9c06c45721116"  type="targz">https://github.com/groni/Sources/raw/master/keepassx-2.0.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>        
+    </Source>
+
+    <Package>
+        <Name>keepassx</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libXtst</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/icons/hicolor</Path>
+            <Path fileType="data">/usr/share/keepassx</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-05-27</Date>
+            <Version>2.0.2</Version>
+            <Comment>First Release.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>        
+    </History>
+</PISI>

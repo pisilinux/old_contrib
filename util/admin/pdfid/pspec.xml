@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pdfid</Name>
+        <Homepage>https://blog.didierstevens.com/programs/pdf-tools/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>Scan a file to look for certain PDF keywords.</Summary>
+        <Description>This tool is not a PDF parser, but it will scan a file to look for certain PDF keywords, allowing you to identify PDF documents that contain (for example) JavaScript or execute an action when opened. PDFiD will also handle name obfuscation.</Description>
+        <Archive sha1sum="acc5637a95583f1d550a0286896c244265e0fcbb" type="zip" target="pdfid-0.2.1">http://didierstevens.com/files/software/pdfid_v0_2_1.zip</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pdfid</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pdfid</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-05-04</Date>
+            <Version>0.2.1</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

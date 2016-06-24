@@ -8,10 +8,10 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import pythonmodules
 
 def build():
-    pythonmodules.compile(pyVer="3.4")
+    pythonmodules.compile(pyVer="3")
 
 
 def install():
-    pythonmodules.install(pyVer="3.4")
+    pythonmodules.install(pyVer="3")
 
     pisitools.dodoc("COPYING", "README")

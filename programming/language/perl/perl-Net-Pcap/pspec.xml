@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Net-Pcap</Name>
+        <Homepage>https://metacpan.org/release/Net-Pcap</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>Interface to pcap(3) LBL packet capture library</Summary>
+        <Description>The Net::Pcap module is a Perl binding to the LBL pcap(3) packet capture library.</Description>
+        <Archive sha1sum="eca0c42bf70cf9739a0f669d37df8c4815e1c836" type="targz">https://cpan.metacpan.org/authors/id/S/SA/SAPER/Net-Pcap-0.17.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>libpcap-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">makefile.patch</Patch>
+            <Patch level="1">listdatalinks.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>perl-Net-Pcap</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>libpcap</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-24</Date>
+            <Version>0.17</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

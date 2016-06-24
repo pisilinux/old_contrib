@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>pdfid</Name>
+        <Summary xml:lang="tr">PDF tanılama aracı</Summary>
+        <Description xml:lang="tr">Bu araç bir PDF çözümleme aracı değildir, onun yerine girdi olarak verilen bir dosyada PDF izi arar, böylece o dosyanın PDF olup olmadığını tanımlar. PDF dosyasının içerisinde çalışmaya hazır JAvascript kodu olup olmadığını bulabilir.</Description>
+    </Source>
+</PISI>

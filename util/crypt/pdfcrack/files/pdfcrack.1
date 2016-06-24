@@ -1,0 +1,72 @@
+.TH PDFCRACK 1 "October 26, 2011" "pdfcrack 0.11" ""
+.SH NAME
+\fBpdfcrack \- PDF files password cracker
+\fB
+.SH SYNOPSIS
+.nf
+.fam C
+\fBpdfcrack\fP -f \fIfilename\fP [\fIoptions\fP]
+.fam T
+.fi
+.SH DESCRIPTION
+\fBpdfcrack\fP is a simple tool for recovering passwords from pdf-documents. It should be able to handle all pdfs that uses the standard security handler but the pdf-parsing routines are a bit of a quick hack so you might stumble across some pdfs where the parser needs to be fixed to handle.
+.SH OPTIONS
+.TP
+.B
+\fB\-b, --bench\fP
+Perform benchmark and exit.
+.TP
+.B
+\fB\-c\fP, \fB--charset=\fP\fISTRING\fP
+Use the characters in \fISTRING\fP as charset.
+.TP
+.B
+\fB\-m\fP, \fB--maxpw=\fP\fIINTEGER\fP
+Stop when reaching \fIINTEGER\fP as password length.
+.TP
+.B
+\fB\-n\fP, \fB--minpw=\fP\fIINTEGER\fP
+Skip trying passwords shorter than \fIINTEGER\fP.
+.TP
+.B
+\fB\-l\fP, \fB--loadState=\fP\fIFILE\fP
+Continue from the state saved in \fIFILENAME\fP.
+.TP
+.B
+\fB\-o, --owner\fP
+Work with the ownerpassword.
+.TP
+.B
+\fB\-p\fP, \fB--password=\fP\fISTRING\fP
+Uses STRING as userpassword to speed up breaking ownerpassword (implies -o).
+.TP
+.B
+\fB\-q, --quiet\fP
+Run quietly.
+.TP
+.B
+\fB\-s, --permutate\fP
+Try permutating the passwords (currently only supports switching first character to uppercase).
+.TP
+.B
+\fB\-u, --user\fP
+Work with the userpassword (default).
+.TP
+.B
+\fB\-v, --version\fP
+Print version and exit.
+.TP
+.B
+\fB\-w\fP, \fB--wordlist=\fP\fIFILE\fP
+Use \fIFILE\fP as source of passwords to try.
+.SH AUTHOR
+Written by Nacho Barrientos Arias <chipi@criptonita.com> for the Debian GNU/Linux system (but may be used by others).
+.SH BUGS
+Report bugs to Henning Noren <confusion42@users.sourceforge.net>.
+.SH COPYRIGHT
+Copyright \(co 2006, Henning Noren <confusion42@users.sourceforge.net> \- All Rights Reserved. This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, Inc.
+.PP
+.nf
+.fam C
+http://sourceforge.net/projects/pdfcrack
+

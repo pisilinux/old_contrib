@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>peepdf</Name>
+        <Summary xml:lang="tr">PDF Çözümleme Aracı</Summary>
+        <Description xml:lang="tr">peepdf, bir PDF belgesinin zararlı yazılım içerip içermediğini anlamaya yarayan bir python betiğidir.</Description>
+    </Source>
+</PISI>

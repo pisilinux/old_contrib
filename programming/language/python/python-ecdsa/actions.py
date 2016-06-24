@@ -22,10 +22,10 @@ def build():
     pythonmodules.compile()
 
     shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.compile(pyVer="3.4")
+    pythonmodules.compile(pyVer="3")
 
 def install():
     pythonmodules.install()
     
     shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.install(pyVer="3.4")
+    pythonmodules.install(pyVer="3")

@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pdf-parser</Name>
+        <Homepage>https://blog.didierstevens.com/programs/pdf-tools/</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>A PDF Document Parsing Tool</Summary>
+        <Description>Parses a PDF document to identify the fundamental elements used in the analyzed file.</Description>
+        <Archive sha1sum="e2533ead38b6d06c6bc47dd676de278fc72023ec" type="zip" target="pdf-parser-0.6.4">http://didierstevens.com/files/software/pdf-parser_V0_6_4.zip</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>pdf-parser</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-05-03</Date>
+            <Version>0.6.4</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

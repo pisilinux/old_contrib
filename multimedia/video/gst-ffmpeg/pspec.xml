@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gst-ffmpeg</Name>
+        <Homepage>http://gstreamer.net/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>FFmpeg support for gstreamer</Summary>
+        <Description>GStreamer FFmpeg plugin allows GStreamer to use FFmpeg functionality.</Description>
+        <Archive sha1sum="8de5c848638c16c6c6c14ce3b22eecd61ddeed44" type="tarbz2">http://gstreamer.freedesktop.org/src/gst-ffmpeg/gst-ffmpeg-0.10.13.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>liboil-devel</Dependency>
+            <Dependency>ffmpeg-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>yasm-devel</Dependency>
+            <Dependency>libsdl-devel</Dependency>
+            <Dependency>orc-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">gst-ffmpeg-0.10.13_gcc47.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gst-ffmpeg</Name>
+        <RuntimeDependencies>
+            <Dependency>orc</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-05-28</Date>
+            <Version>0.10.13</Version>
+            <Comment>First release</Comment>
+            <Name>Serdar Soytetir</Name>
+            <Email>kaptan@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

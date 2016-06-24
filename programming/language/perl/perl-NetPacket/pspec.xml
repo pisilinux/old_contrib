@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-NetPacket</Name>
+        <Homepage>https://metacpan.org/release/NetPacket</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>assemble/disassemble network packets at the protocol level</Summary>
+        <Description>"NetPacket" provides a base class for a cluster of modules related to decoding and encoding of network protocols. Each "NetPacket" descendent module knows how to encode and decode packets for the network protocol it implements. Consult the documentation for the module in question for protocol-specific implementation.</Description>
+        <Archive sha1sum="7c8b931730c87b5538d98d4b5d717f1025ab60f7" type="targz">http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/NetPacket-1.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-NetPacket</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-04-24</Date>
+            <Version>1.6.0</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

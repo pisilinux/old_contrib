@@ -11,7 +11,7 @@
         <License>LGPL</License>
         <Summary>A cross-platform multimedia playback framework based on Qt and FFmpeg	</Summary>
         <Description>A multimedia playback framework based on Qt + FFmpeg. Cross platform. High performace. Easy to use and develop.</Description>
-        <Archive sha1sum="982b0c5540a491eba1168d665924575a2c05197a" type="targz">https://github.com/wang-bin/QtAV/archive/v1.10.0.tar.gz</Archive>
+        <Archive sha1sum="e9df4e653d62202c446bce70389338db6e84f691" type="targz">https://github.com/wang-bin/QtAV/archive/v1.11.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>openal-devel</Dependency>            
@@ -19,6 +19,10 @@
             <Dependency>zlib-devel</Dependency>
             <Dependency>ffmpeg-devel</Dependency>
              <Dependency>libXv-devel</Dependency>
+             <Dependency>mesa-devel</Dependency>
+            <Dependency>libva-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
              <Dependency>portaudio-devel</Dependency>
             <Dependency>libass-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
@@ -39,6 +43,10 @@
             <Dependency>libass</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>qt5-declarative</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>libva</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
         </RuntimeDependencies>
         <Files> 
             <Path fileType="executable">/usr/bin</Path>
@@ -60,6 +68,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2016-06-22</Date>
+            <Version>1.11.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2016-03-02</Date>
             <Version>1.10.0</Version>

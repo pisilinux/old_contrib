@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>peepdf</Name>
+        <Homepage>http://eternal-todo.com/tools/peepdf-pdf-analysis-tool</Homepage>
+        <Packager>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>A PDF Document Parsing Tool</Summary>
+        <Description>A Python tool to explore PDF files in order to find out if the file can be harmful or not</Description>
+        <Archive sha1sum="f2ac65fde10a44d2b561a6962674c8923d856db0" type="targz">http://eternal-todo.com/files/pdf/peepdf/peepdf_0.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>peepdf</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/peepdf</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-05-04</Date>
+            <Version>0.3</Version>
+            <Comment>First release, built with docker.</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

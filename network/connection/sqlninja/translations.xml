@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>sqlninja</Name>
+        <Summary xml:lang="tr">SQL Enjeksiyon Aracı</Summary>
+        <Description xml:lang="tr">Microsoft SQL sunucusu kullanan ağ uygulamalarını SQL Injection yöntemiyle exploit etmeye yarayan bir araç.</Description>
+    </Source>
+</PISI>

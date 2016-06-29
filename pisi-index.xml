@@ -359,6 +359,61 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>sdl-net</Name>
+            <Homepage>http://www.libsdl.org/projects/SDL_net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.misc</PartOf>
+            <Summary xml:lang="fr">Librairie réseau de SDL.</Summary>
+            <Summary xml:lang="en">SDL network library</Summary>
+            <Summary xml:lang="tr">SDL ağ kütüphanesi</Summary>
+            <Description xml:lang="en">sdl-mixer is a SDL library for network access.</Description>
+            <Description xml:lang="tr">sdl-net, SDL için ağ erişim kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="fd393059fef8d9925dc20662baa3b25e02b8405d">http://www.libsdl.org/projects/SDL_net/release/SDL_net-1.2.8.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/misc/sdl-net/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sdl-net</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>sdl-net-devel</Name>
+            <Summary xml:lang="en">Development files for sdl-net</Summary>
+            <Summary xml:lang="tr">sdl-net için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">sdl-net</Dependency>
+                <Dependency>libsdl-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2016-06-16</Date>
+                <Version>1.2.8</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Algul(gulle)</Name>
+                <Email>aligulle3801@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>sdl-gfx</Name>
             <Homepage>http://www.ferzkopp.net/Software/SDL_gfx-2.0/</Homepage>
             <Packager>
@@ -928,7 +983,7 @@
             <PartOf>multimedia.video</PartOf>
             <Summary xml:lang="en">A cross-platform multimedia playback framework based on Qt and FFmpeg</Summary>
             <Description xml:lang="en">A multimedia playback framework based on Qt + FFmpeg. Cross platform. High performace. Easy to use and develop.</Description>
-            <Archive type="targz" sha1sum="982b0c5540a491eba1168d665924575a2c05197a">https://github.com/wang-bin/QtAV/archive/v1.10.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="e9df4e653d62202c446bce70389338db6e84f691">https://github.com/wang-bin/QtAV/archive/v1.11.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>qt5-base-devel</Dependency>
                 <Dependency>openal-devel</Dependency>
@@ -936,6 +991,10 @@
                 <Dependency>zlib-devel</Dependency>
                 <Dependency>ffmpeg-devel</Dependency>
                 <Dependency>libXv-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>libva-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
                 <Dependency>portaudio-devel</Dependency>
                 <Dependency>libass-devel</Dependency>
                 <Dependency>pulseaudio-libs-devel</Dependency>
@@ -956,6 +1015,10 @@
                 <Dependency>libass</Dependency>
                 <Dependency>pulseaudio-libs</Dependency>
                 <Dependency>qt5-declarative</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>libva</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libXext</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -969,13 +1032,20 @@
             <Name>qtav-devel</Name>
             <Summary xml:lang="en">Development files for qtav</Summary>
             <RuntimeDependencies>
-                <Dependency release="2">qtav</Dependency>
+                <Dependency release="3">qtav</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2016-06-22</Date>
+                <Version>1.11.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
             <Update release="2">
                 <Date>2016-03-02</Date>
                 <Version>1.10.0</Version>
@@ -15492,6 +15562,141 @@ thunar-volman is installed and configured properly, and you plug in your digical
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>alienarena</Name>
+            <Homepage>http://red.planetarena.org</Homepage>
+            <Packager>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>COR-Entertainment-LLC</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">A standalone 3D first person shooter game</Summary>
+            <Summary xml:lang="tr">3 Boyutlu ilkgözden nişancılık oyunu</Summary>
+            <Description xml:lang="en">Alien Arena is a standalone 3D first person online deathmatch shooter crafted from the original source code of Quake II and Quake III.</Description>
+            <Description xml:lang="tr">Alien Arena, Quake 2 ve 3 oyunlarının kaynak kodlarından yola çıkılarak hazırlanmış çevrimiçi oynanabilen ilkgözden (first person) nişancılık (shooter) oyunudur.</Description>
+            <Icon>alienarena</Icon>
+            <Archive type="targz" sha1sum="7c52bfcc8a578167301ccac9d20997716dac8a37">http://red.planetarena.org/files/alienarena-7.66-linux20130827.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libXxf86dga-devel</Dependency>
+                <Dependency>libXxf86vm-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>openal-devel</Dependency>
+                <Dependency>ode-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>curl-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">use_home_dir.patch</Patch>
+            </Patches>
+            <SourceURI>game/fps/alienarena/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>alienarena</Name>
+            <RuntimeDependencies>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libXxf86dga</Dependency>
+                <Dependency>libXxf86vm</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>openal</Dependency>
+                <Dependency>ode</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>curl</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>freetype</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/alienarena</Path>
+                <Path fileType="library">/usr/share/alienarena</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/pixmaps/alienarena.png" permission="0644" owner="root">alienarena.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/alienarena.desktop" permission="0644" owner="root">alienarena.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2016-06-16</Date>
+                <Version>7.66</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Algul(gulle)</Name>
+                <Email>aligulle3801@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>opencity</Name>
+            <Homepage>http://www.opencity.info</Homepage>
+            <Packager>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>unknown</PartOf>
+            <Summary xml:lang="en">A city simulator game</Summary>
+            <Summary xml:lang="tr">Şehir benzetim oyunu</Summary>
+            <Description xml:lang="en">OpenCity is a city simulator game project written in standard C++ with OpenGL and SDL from scratch.</Description>
+            <Description xml:lang="tr">OpenCity standart C++ ile OpenGL ve SDL kullanılarak sıfırdan yazılmış bir şehir benzetim oyunudur.</Description>
+            <Icon>OpenCity</Icon>
+            <Archive type="tarbz2" sha1sum="f9fd35974fd45e6d8c4453417d01c56b1ef13bca">mirrors://sourceforge/opencity/opencity-0.0.6.5stable.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>libsdl-devel</Dependency>
+                <Dependency>sdl-net-devel</Dependency>
+                <Dependency>mesa-glu-devel</Dependency>
+                <Dependency>sdl-image-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>desktop.patch</Patch>
+                <Patch level="1">gcc-4.7-fixes.patch</Patch>
+                <Patch level="1">pisilinux-makefile.patch</Patch>
+            </Patches>
+            <SourceURI>game/simulation/opencity/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>opencity</Name>
+            <RuntimeDependencies>
+                <Dependency>mesa</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>mesa-glu</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc/opencity</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/applicaions</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2016-06-16</Date>
+                <Version>0.0.6.5</Version>
+                <Comment>First release</Comment>
+                <Name>Ali Algul(gulle)</Name>
+                <Email>aligulle3801@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>zaz</Name>
             <Homepage>http://zaz.sourceforge.net</Homepage>
             <Packager>
@@ -25284,100 +25489,6 @@ thunar-volman is installed and configured properly, and you plug in your digical
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>qupzilla</Name>
-            <Homepage>http://www.qupzilla.com/</Homepage>
-            <Packager>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>network.web</PartOf>
-            <Summary xml:lang="en">A fast open source browser based on WebKit core, written in Qt Framework, wayland port</Summary>
-            <Description xml:lang="en">A fast open source browser based on WebKit core, written in Qt Framework, wayland port</Description>
-            <Archive type="tarxz" sha1sum="db05bb206999b782df4d6ae96c6df24cba81944a">https://github.com/QupZilla/qupzilla/releases/download/v2.0.1/QupZilla-2.0.1.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>openssl-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>qt5-base-devel</Dependency>
-                <Dependency>qt5-webkit-devel</Dependency>
-                <Dependency>qt5-webengine-devel</Dependency>
-                <Dependency>qt5-x11extras-devel</Dependency>
-                <Dependency>qt5-svg-devel</Dependency>
-                <Dependency>qt5-sql-sqlite</Dependency>
-                <Dependency>qt5-declarative-devel</Dependency>
-                <Dependency>qt5-xmlpatterns-devel</Dependency>
-                <Dependency>qt5-phonon-devel</Dependency>
-                <Dependency>qt5-sensors-devel</Dependency>
-                <Dependency>qt5-script-devel</Dependency>
-                <Dependency>qt5-designer-devel</Dependency>
-                <Dependency>qt5-webchannel-devel</Dependency>
-                <Dependency>qt5-location-devel</Dependency>
-                <Dependency>qt5-imageformats</Dependency>
-                <Dependency>qt5-linguist</Dependency>
-                <Dependency>xcb-util-devel</Dependency>
-                <Dependency>libvpx-devel</Dependency>
-                <Dependency>libgnome-keyring-devel</Dependency>
-                <Dependency>kdelibs4-support-devel</Dependency>
-                <Dependency>kwallet-devel</Dependency>
-                <Dependency>hunspell-devel</Dependency>
-                <Dependency>gdb-devel</Dependency>
-                <Dependency>libmng-devel</Dependency>
-                <Dependency>lcms2-devel</Dependency>
-                <Dependency>tiff-devel</Dependency>
-                <Dependency>jbigkit-devel</Dependency>
-                <Dependency>nss-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="0">speeddial.diff</Patch>
-                <Patch level="0">preferences.diff</Patch>
-                <Patch level="0">browserwindow.diff</Patch>
-                <Patch level="0">defines.diff</Patch>
-                <Patch level="0">bookmarks_json.diff</Patch>
-            </Patches>
-            <SourceURI>network/web/qupzilla/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>qupzilla</Name>
-            <Summary xml:lang="en">Cross-platform QtWebKit browser</Summary>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-                <Dependency>libxcb</Dependency>
-                <Dependency>openssl</Dependency>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>qt5-webengine</Dependency>
-                <Dependency>qt5-x11extras</Dependency>
-                <Dependency>qt5-webchannel</Dependency>
-                <Dependency>qt5-declarative</Dependency>
-                <Dependency>hunspell</Dependency>
-                <Dependency>kwallet</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="library">/usr/qupzilla</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="data">/usr/share/appdata</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/bash-completion</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/qupzilla</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-06-18</Date>
-                <Version>2.0.1</Version>
-                <Comment>First release</Comment>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

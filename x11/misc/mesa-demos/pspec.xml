@@ -63,14 +63,14 @@
             <Dependency>freeglut-32bit</Dependency>
         </BuildDependencies>
         <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>glibc</Dependency>
             <Dependency>glew-32bit</Dependency>
             <Dependency>mesa-32bit</Dependency>
             <Dependency>libX11-32bit</Dependency>
             <Dependency>libXext-32bit</Dependency>
             <Dependency>freeglut-32bit</Dependency>
             <Dependency>mesa-glu-32bit</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>glibc-32bit</Dependency>
             <Dependency release="current">mesa-demos</Dependency>
         </RuntimeDependencies>
 

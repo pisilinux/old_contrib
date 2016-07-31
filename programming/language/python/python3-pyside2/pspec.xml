@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Python bindings for the Qt cross-platform application and UI framework</Summary>
         <Description>Provides Qt bindings for Python and related tools for binding generation</Description>
-        <Archive sha1sum="3c1473207b77cbfad3f15a89d6c4539f870d4c80" type="zip">https://github.com/PySide/pyside2/archive/master.zip</Archive>
+        <Archive sha1sum="242fb96dd84d53c7472c176905766a797ebeca50" type="zip">https://github.com/PySide/pyside2/archive/master.zip</Archive>
         <BuildDependencies>
             <Dependency>qt5-assistant-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>

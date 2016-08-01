@@ -11365,7 +11365,7 @@
             <Summary xml:lang="tr">Qt için Python</Summary>
             <Description xml:lang="en">Provides Qt bindings for Python and related tools for binding generation</Description>
             <Description xml:lang="tr">Qt için Python bağlayıcısı</Description>
-            <Archive type="zip" sha1sum="242fb96dd84d53c7472c176905766a797ebeca50">https://github.com/PySide/pyside2/archive/master.zip</Archive>
+            <Archive type="zip" sha1sum="242fb96dd84d53c7472c176905766a797ebeca50">https://sourceforge.net/projects/pisi-source/files/pyside2-master.zip/download</Archive>
             <BuildDependencies>
                 <Dependency>qt5-assistant-devel</Dependency>
                 <Dependency>qt5-base-devel</Dependency>
@@ -11455,7 +11455,7 @@
             <Summary xml:lang="tr">PySide2 için araçlar</Summary>
             <Description xml:lang="en">Provides Qt bindings for Python and related tools for binding generation</Description>
             <Description xml:lang="tr">PySide2 için araçları</Description>
-            <Archive type="zip" sha1sum="dd7b4b4d93069aeb741b5c654e1a03c64df291c6">https://github.com/PySide/pyside2-tools/archive/master.zip</Archive>
+            <Archive type="zip" sha1sum="dd7b4b4d93069aeb741b5c654e1a03c64df291c6">https://sourceforge.net/projects/pisi-source/files/pyside2-tools-master.zip/download</Archive>
             <BuildDependencies>
                 <Dependency>python3-shiboken2-devel</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -11689,7 +11689,7 @@
             <Summary xml:lang="tr">Python için destek kütüphanesi</Summary>
             <Description xml:lang="en">CPython bindings generator for C++ libraries</Description>
             <Description xml:lang="tr">C ++ kütüphaneleri için CPython bağlayıcıları</Description>
-            <Archive type="zip" sha1sum="7ac535a64f62f5b589ca566a0b43d4b956011ad8">https://github.com/PySide/shiboken2/archive/master.zip</Archive>
+            <Archive type="zip" sha1sum="7ac535a64f62f5b589ca566a0b43d4b956011ad8">https://sourceforge.net/projects/pisi-source/files/shiboken2-master.zip/download</Archive>
             <BuildDependencies>
                 <Dependency>qt5-base-devel</Dependency>
                 <Dependency>libxslt-devel</Dependency>

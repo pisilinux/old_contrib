@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-shiboken2</Name>
+        <Homepage>http://www.pyside.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Support library for Python2 bindings</Summary>
+        <Description>CPython bindings generator for C++ libraries</Description>
+        <Archive sha1sum="7ac535a64f62f5b589ca566a0b43d4b956011ad8" type="zip">https://sourceforge.net/projects/pisi-source/files/shiboken2-master.zip/download</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>qt5-xmlpatterns-devel</Dependency>
+            <Dependency>qt5-configuration-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-shiboken2</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="library">/usr/lib/python3.4/</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-shiboken2-devel</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-06-27</Date>
+            <Version>2.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Metehan Özbek</Name>
+            <Email>mthnzbk@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

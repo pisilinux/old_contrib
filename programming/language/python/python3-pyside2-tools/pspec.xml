@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-pyside2-tools</Name>
+        <Homepage>http://qt-project.org/wiki/PySide2</Homepage>
+        <Packager>
+            <Name>Metehan Özbek</Name>
+            <Email>mthnzbk@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Python bindings for the Qt cross-platform application and UI framework</Summary>
+        <Description>Provides Qt bindings for Python and related tools for binding generation</Description>
+        <Archive sha1sum="dd7b4b4d93069aeb741b5c654e1a03c64df291c6" type="zip">https://sourceforge.net/projects/pisi-source/files/pyside2-tools-master.zip/download</Archive>
+        <BuildDependencies>
+            <Dependency>python3-shiboken2-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-pyside2</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>python3-pyside2-tools</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-pyside2</Dependency>
+            <Dependency>python3-shiboken2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="bin">/usr/bin/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-06-07</Date>
+            <Version>2.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Metehan Özbek</Name>
+            <Email>mthnzbk@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

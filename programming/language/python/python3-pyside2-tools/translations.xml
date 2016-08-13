@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-pyside2-tools</Name>
+        <Summary xml:lang="tr">PySide2 için araçlar</Summary>
+        <Description xml:lang="tr">PySide2 için araçları</Description>
+    </Source>
+</PISI>

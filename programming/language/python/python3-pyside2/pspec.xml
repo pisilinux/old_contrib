@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-pyside2</Name>
+        <Homepage>http://qt-project.org/wiki/PySide2</Homepage>
+        <Packager>
+            <Name>Metehan Özbek</Name>
+            <Email>mthnzbk@gmail.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Python bindings for the Qt cross-platform application and UI framework</Summary>
+        <Description>Provides Qt bindings for Python and related tools for binding generation</Description>
+        <Archive sha1sum="242fb96dd84d53c7472c176905766a797ebeca50" type="zip">https://sourceforge.net/projects/pisi-source/files/pyside2-master.zip/download</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-assistant-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-configuration-devel</Dependency>
+            <Dependency>qt5-connectivity-devel</Dependency>
+            <Dependency>qt5-phonon-devel</Dependency>
+            <Dependency>qt5-webkit-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>qt5-enginio-devel</Dependency>
+            <Dependency>qt5-gstreamer-devel</Dependency>
+            <Dependency>qt5-location-devel</Dependency>
+            <Dependency>qt5-multimedia-devel</Dependency>
+            <Dependency>qt5-quick1-devel</Dependency>
+            <Dependency>qt5-quickcontrols2-devel</Dependency>
+            <Dependency>qt5-script-devel</Dependency>
+            <Dependency>qt5-sensors-devel</Dependency>
+            <Dependency>qt5-serialport-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-webchannel-devel</Dependency>
+            <Dependency>qt5-webengine-devel</Dependency>
+            <Dependency>qt5-websockets-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-xmlpatterns-devel</Dependency>
+            <Dependency>python3-shiboken2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>python3-pyside2</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-phonon</Dependency>
+            <Dependency>qt5-webkit</Dependency>
+            <Dependency>python3-shiboken2</Dependency>
+            <Dependency>qt5-assistant</Dependency>
+            <Dependency>qt5-configuration</Dependency>
+            <Dependency>qt5-connectivity</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+            <Dependency>qt5-designer</Dependency>
+            <Dependency>qt5-enginio</Dependency>
+            <Dependency>qt5-gstreamer</Dependency>
+            <Dependency>qt5-location</Dependency>
+            <Dependency>qt5-multimedia</Dependency>
+            <Dependency>qt5-quick1</Dependency>
+            <Dependency>qt5-quickcontrols2</Dependency>
+            <Dependency>qt5-script</Dependency>
+            <Dependency>qt5-sensors</Dependency>
+            <Dependency>qt5-serialport</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>qt5-webchannel</Dependency>
+            <Dependency>qt5-webengine</Dependency>
+            <Dependency>qt5-websockets</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>qt5-xmlpatterns</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include/</Path>
+            <Path fileType="library">/usr/lib/python2.7</Path>
+            <Path fileType="config">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-01-06</Date>
+            <Version>2.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Metehan Özbek</Name>
+            <Email>mthnzbk@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -6,17 +6,11 @@
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
-from pisi.actionsapi import shelltools
+
 def setup():
-    shelltools.export("GTK3","/usr/bin/gtk-launch")
-    autotools.configure("--prefix=/usr \
-                         --sysconfdir=/etc \
-                         --sbindir=/usr/bin \
-                         --libexecdir=/usr/lib \
-                         --localstatedir=/var \
-                         --disable-network-manager \
-                         --enable-polkit \
-                         --disable-debug")
+    autotools.configure("--disable-network-manager \
+                         --disable-debug \
+                         --disable-lxdepanel")
 
 def build():
     autotools.make()

@@ -14,39 +14,38 @@
         <Description>Xfce4-settings is a configuration manager for Xfce desktop environment.</Description>
         <Archive sha1sum="507a66ed160e44078f81051878c8644d5a5f344e" type="tarbz2">http://archive.xfce.org/src/xfce/xfce4-settings/4.12/xfce4-settings-4.12.0.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>libXi-devel</Dependency>
             <Dependency>libxklavier-devel</Dependency>
-            <Dependency>libnotify-devel</Dependency>
-            <Dependency>libcanberra-devel</Dependency>
-            <Dependency>exo-devel</Dependency>
-            <Dependency>libxfce4ui-devel</Dependency>
-            <Dependency>garcon-devel</Dependency>
-            <Dependency>intltool</Dependency>
-            <Dependency>libX11-devel</Dependency>
             <Dependency>libXcursor-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
-            <Dependency>upower-devel</Dependency>
-            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+            <Dependency>xfconf-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>exo-devel</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>libwnck2-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>garcon-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch>xfce4-settings-xml.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
         <Name>xfce4-settings</Name>
         <RuntimeDependencies>
             <Dependency>exo</Dependency>
-            <Dependency>dbus</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>libXi</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>garcon</Dependency>
-            <Dependency>libX11</Dependency>
             <Dependency>upower</Dependency>
             <Dependency>xfconf</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>libnotify</Dependency>
             <Dependency>libXrandr</Dependency>
             <Dependency>libxfce4ui</Dependency>
@@ -69,6 +68,13 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>2015-07-06</Date>
+            <Version>4.12.0</Version>
+            <Comment>fixed file conflict with pisilinux-settings</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
         <Update release="10">
             <Date>2015-03-02</Date>
             <Version>4.12.0</Version>

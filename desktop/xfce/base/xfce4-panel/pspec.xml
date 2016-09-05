@@ -17,22 +17,23 @@
         <Description>The Xfce4 panel supports multiple panels, with many options for their position, appearance, transparency and behavior. There are many items available by default to full fit a panel, like application launchers with detachable menus, a graphical pager, a tasklist, a clock, a system tray, a show / hide desktop switcher, and even more. It offers an easy way to add items using a dialog, and to move items accross different panels.</Description>
         <Archive sha1sum="5f0e51c7948bc4e3c46cad93ee772573a23efbc1" type="tarbz2">http://archive.xfce.org/src/xfce/xfce4-panel/4.12/xfce4-panel-4.12.0.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>intltool</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
-            <Dependency>libxfce4ui-devel</Dependency>
-            <Dependency>xfconf-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
             <Dependency>startup-notification-devel</Dependency>
-            <Dependency versionFrom="0.3.93">exo-devel</Dependency>
-            <Dependency versionFrom="0.1.5">garcon-devel</Dependency>
-            <Dependency versionFrom="2.30">libwnck2-devel</Dependency>
-            <Dependency>gtk3-docs</Dependency>
-            <Dependency>gettext</Dependency>
-            <Dependency>desktop-file-utils</Dependency>
-            <Dependency versionFrom="2.4.0">libxml2-devel</Dependency>
-            <Dependency>libxslt-devel</Dependency>
+            <Dependency>xfce4-dev-tools</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+            <Dependency>exo-devel</Dependency>
+            <Dependency>garcon-devel</Dependency>
+            <Dependency>libwnck2-devel</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
+            <Dependency>gtk-doc</Dependency>
         </BuildDependencies>
         <Patches>
-            <!--<Patch>time.patch</Patch>-->
+            <Patch>time.patch</Patch>
         </Patches>
     </Source>
 
@@ -41,20 +42,15 @@
         <RuntimeDependencies>
             <Dependency>atk</Dependency>
             <Dependency>exo</Dependency>
-            <Dependency>dbus</Dependency>
             <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
             <Dependency>cairo</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>garcon</Dependency>
-            <Dependency>libX11</Dependency>
             <Dependency>xfconf</Dependency>
             <Dependency>libXext</Dependency>
-            <Dependency>freetype</Dependency>
             <Dependency>libwnck2</Dependency>
-            <Dependency>dbus-glib</Dependency>
-            <Dependency>fontconfig</Dependency>
             <Dependency>libxfce4ui</Dependency>
             <Dependency>libxfce4util</Dependency>
         </RuntimeDependencies>
@@ -77,9 +73,8 @@
         <IsA>data:doc</IsA>
         <Summary>Development files for Xfce4 Panel</Summary>
         <RuntimeDependencies>
-            <Dependency release="current">xfce4-panel</Dependency>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
           <Dependency>libxfce4util-devel</Dependency>
         </RuntimeDependencies>
         <Files>

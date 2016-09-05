@@ -16,23 +16,18 @@
         <BuildDependencies>
             <Dependency>xfce4-dev-tools</Dependency>
             <Dependency>libxfce4util-devel</Dependency>
-            <Dependency>intltool</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
-            <!--<Dependency>perl-ExtUtils-Depends</Dependency>
+            <Dependency>perl-ExtUtils-Depends</Dependency>
             <Dependency>perl-ExtUtils-PkgConfig</Dependency>
             <Dependency>perl-Glib</Dependency>
-            <Dependency>gtk-doc</Dependency>-->
+            <Dependency>gtk-doc</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>xfconf</Name>
         <RuntimeDependencies>
-            <Dependency>dbus</Dependency>
-            <Dependency>glib2</Dependency>
-            <Dependency>dbus-glib</Dependency>
             <Dependency>libxfce4util</Dependency>
+            <Dependency>perl-Glib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -52,9 +47,7 @@
         <Summary>Xfconf development files</Summary>
         <RuntimeDependencies>
             <Dependency release="current">xfconf</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
-            <Dependency>dbus-glib-devel</Dependency>
+            <Dependency>libxfce4util-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>

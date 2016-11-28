@@ -10,12 +10,13 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def setup():
-    pass
-
-def build():
-    pass
+    shelltools.move("%s/micro-1.1.2" % get.workDIR(), "%s/src/github.com/zyedidia/micro" % get.workDIR())
 
 def install():
-    pisitools.dobin("micro")
-    pisitools.dodoc("LICENSE")
+    shelltools.cd("%s/src/github.com/zyedidia/micro" % get.workDIR())
+    shelltools.export("GOPATH", get.workDIR())
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.dobin("%s/bin/micro" % get.workDIR())
+    pisitools.dodoc("%s/src/github.com/zyedidia/micro/LICENSE" % get.workDIR(), "%s/src/github.com/zyedidia/micro/README.md" % get.workDIR())
+
 

@@ -5,7 +5,7 @@
         <Name>xclip</Name>
         <Homepage>https://github.com/astrand/xclip</Homepage>
         <Packager>
-            <Name>PisiLinux Community</Name>
+            <Name>Pisi Linux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
         <License>GPLv2</License>
@@ -41,7 +41,7 @@
 
     <History>
         <Update release="2">
-            <Date>2016-11-23</Date>
+            <Date>2016-11-28</Date>
             <Version>0.13</Version>
             <Comment>First release for Pisi 2.x</Comment>
             <Name>Erdem Ersoy</Name>

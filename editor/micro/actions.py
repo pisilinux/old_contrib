@@ -9,13 +9,15 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-def setup():
-    pass
+shelltools.export("GOPATH", get.workDIR())
+shelltools.export("GOBIN", "%s/usr/bin" % get.installDIR())
 
-def build():
-    pass
+def setup():
+    shelltools.move("%s/micro-1.1.2" % get.workDIR(), "%s/src/github.com/zyedidia/micro" % get.workDIR())
 
 def install():
-    pisitools.dobin("micro")
-    pisitools.dodoc("LICENSE")
+    shelltools.cd("%s/src/github.com/zyedidia/micro" % get.workDIR())
+    autotools.install()
+    pisitools.dodoc("%s/src/github.com/zyedidia/micro/LICENSE" % get.workDIR(), "%s/src/github.com/zyedidia/micro/README.md" % get.workDIR())
+
 

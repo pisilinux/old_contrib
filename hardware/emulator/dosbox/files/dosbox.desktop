@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=DOSBox
+Comment=Run DOS programs
+Comment[tr]=DOS programlarını çalıştır
+Icon=dosbox
+Exec=dosbox
+Terminal=false
+Categories=Game;Emulator;
+Keywords=DOS Emulator;

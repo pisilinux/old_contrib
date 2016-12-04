@@ -6,7 +6,6 @@
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def setup():
@@ -15,3 +14,5 @@ def setup():
 
 def install():
     autotools.rawInstall("DESTDIR='%s'" % get.installDIR())
+    pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README", "THANKS", "docs/README.video")
+

@@ -10,7 +10,7 @@ from pisi.actionsapi import get
 
 def setup():
     autotools.configure("--prefix=/usr \
-                                  --sysconfdir=/etc/dosbox")
+                         --sysconfdir=/etc/dosbox")
 
 def install():
     autotools.rawInstall("DESTDIR='%s'" % get.installDIR())

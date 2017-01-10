@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>A complete solution for creation and editing PDF files. (Free for non-commercial use) - Qt5 version</Summary>
         <Description>Master PDF Editor provides you advanced functions for working with PDF format.</Description>
-        <Archive sha1sum="0dc291676bf864a04a9f9deb775319fb1da0a189" type="targz">https://sourceforge.net/projects/pisilinux/files/source/master-pdf-editor-3.6.30_qt5.amd64.tar.gz</Archive>
+        <Archive sha1sum="da470d1530f4167dbffcfcfd24ad86c136c55e59" type="targz">https://sourceforge.net/projects/pisilinux/files/source/master-pdf-editor-4.0.10_qt5.amd64.tar.gz/download</Archive>
     </Source>
 
     <Package>
@@ -24,18 +24,25 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="data">/opt/master-pdf-editor-3/lang</Path>
+            <Path fileType="data">/opt/master-pdf-editor-4/lang</Path>
             <Path fileType="license">/usr/share/doc/master-pdf-editor</Path>
             <Path fileType="icon">/usr/share/pixmaps</Path>           
             <Path fileType="application">/usr/share/applications</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/masterpdfeditor3.desktop">masterpdfeditor3.desktop</AdditionalFile>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/masterpdfeditor3.png">masterpdfeditor3.png</AdditionalFile>            
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/masterpdfeditor4.desktop">masterpdfeditor4.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/masterpdfeditor4.png">masterpdfeditor4.png</AdditionalFile>            
         </AdditionalFiles>
     </Package>       
 
     <History>
+        <Update release="2">
+            <Date>2017-01-10</Date>
+            <Version>4.0.10</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update> 
         <Update release="1">
             <Date>2016-04-26</Date>
             <Version>3.6.30</Version>

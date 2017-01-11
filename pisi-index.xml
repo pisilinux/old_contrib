@@ -7685,7 +7685,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <PartOf>editor</PartOf>
             <Summary xml:lang="en">A complete solution for creation and editing PDF files. (Free for non-commercial use) - Qt5 version</Summary>
             <Description xml:lang="en">Master PDF Editor provides you advanced functions for working with PDF format.</Description>
-            <Archive type="targz" sha1sum="0dc291676bf864a04a9f9deb775319fb1da0a189">https://sourceforge.net/projects/pisilinux/files/source/master-pdf-editor-3.6.30_qt5.amd64.tar.gz</Archive>
+            <Archive type="targz" sha1sum="da470d1530f4167dbffcfcfd24ad86c136c55e59">https://sourceforge.net/projects/pisilinux/files/source/master-pdf-editor-4.0.10_qt5.amd64.tar.gz/download</Archive>
             <SourceURI>editor/master-pdf-editor/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -7696,17 +7696,24 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/opt/master-pdf-editor-3/lang</Path>
+                <Path fileType="data">/opt/master-pdf-editor-4/lang</Path>
                 <Path fileType="license">/usr/share/doc/master-pdf-editor</Path>
                 <Path fileType="icon">/usr/share/pixmaps</Path>
                 <Path fileType="application">/usr/share/applications</Path>
             </Files>
             <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/masterpdfeditor3.desktop" permission="0644" owner="root">masterpdfeditor3.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/share/pixmaps/masterpdfeditor3.png" permission="0644" owner="root">masterpdfeditor3.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/masterpdfeditor4.desktop" permission="0644" owner="root">masterpdfeditor4.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/masterpdfeditor4.png" permission="0644" owner="root">masterpdfeditor4.png</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2017-01-10</Date>
+                <Version>4.0.10</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-26</Date>
                 <Version>3.6.30</Version>
@@ -10233,6 +10240,107 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Comment>First release</Comment>
                 <Name>Stefan Gronewold</Name>
                 <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gstreamer-vaapi</Name>
+            <Homepage>http://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/</Homepage>
+            <Packager>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.video</PartOf>
+            <Summary xml:lang="en">GStreamer Multimedia Framework VA Plugins</Summary>
+            <Description xml:lang="en">gstreamer-vaapi, GStreamer Multimedia Framework VA Plugins.</Description>
+            <Archive type="tarbz2" sha1sum="053a7af120c72fda0b46450c4a94a752abf64a74">https://www.freedesktop.org/software/vaapi/releases/gstreamer-vaapi/gstreamer-vaapi-0.7.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>yasm-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>libva-devel</Dependency>
+                <Dependency>docbook-xsl</Dependency>
+                <Dependency>libdrm-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>wayland-cursor</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>gstreamer-next-devel</Dependency>
+                <Dependency>gst-plugins-bad-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gst-plugins-base-next-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/video/gstreamer-vaapi/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gstreamer-vaapi</Name>
+            <RuntimeDependencies>
+                <Dependency>yasm</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>libva</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libdrm</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>gst-plugins-bad</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gstreamer-vaapi-devel</Name>
+            <Summary xml:lang="en">Development files for gstreamer-vaapi</Summary>
+            <Summary xml:lang="tr">gstreamer için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency>libva-devel</Dependency>
+                <Dependency release="4">gstreamer-vaapi</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2016-06-09</Date>
+                <Version>0.7.0</Version>
+                <Comment>Release Bump</Comment>
+                <Name>Pisi Linux Community</Name>
+                <Email>admin@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2016-05-15</Date>
+                <Version>0.7.0</Version>
+                <Comment>Rebuild for new gstreamer-vaapi-next</Comment>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2016-05-02</Date>
+                <Version>0.7.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2015-07-23</Date>
+                <Version>0.6.0</Version>
+                <Comment>First release</Comment>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>ayhanyalcinsoy@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

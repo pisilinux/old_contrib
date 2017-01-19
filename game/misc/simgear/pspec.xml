@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>simgear</Name>
+        <Homepage>http://simgear.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Simgear game library</Summary>
+        <Description>Developement library for simulation games.</Description>
+        <Archive sha1sum="45cf751bbe27b4905a461d309c3ae1fdb651c1a1" type="tarbz2">http://mirrors.ibiblio.org/flightgear/ftp/release-2016.4/simgear-2016.4.4.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>OpenSceneGraph-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>mesa-glu-devel</Dependency>
+            <Dependency>openal-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">0001-remove-unneeded-header.patch</Patch>
+            <Patch level="1">0002-check-to-be-sure-that-n-is-not-being-set-as-format-t.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>simgear</Name>
+        <RuntimeDependencies>
+            <Dependency>curl</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>openal</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>OpenSceneGraph</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/SimGearCore/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>simgear-devel</Name>
+        <Summary>Development files for simgear</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">simgear</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-01-18</Date>
+            <Version>2016.4.4</Version>
+            <Comment>new release</Comment>
+            <Name>Ali Algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>>
+    </History>
+</PISI>

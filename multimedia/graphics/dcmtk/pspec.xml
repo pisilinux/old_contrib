@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>dcmtk</Name>
+        <Homepage>http://dicom.offis.de</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>The OFFIS DICOM toolkit</Summary>
+        <Description>DCMTK includes a collection of libraries and applications for examining, constructing and converting DICOM image files, handling offline media, sending and receiving images over a network connection, as well as demonstrative image storage and worklist servers.</Description>
+        <Archive sha1sum="f485217e7d5d8c1f3a585835270cfd930cf4c560" type="targz">http://saimei.acc.umu.se/mirror/raspbian/raspbian/pool/main/d/dcmtk/dcmtk_3.6.1~20160216.orig.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>tiff-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>dcmtk-asneeded.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>dcmtk</Name>
+        <RuntimeDependencies>
+            <Dependency>zlib</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>tiff</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>dcmtk-devel</Name>
+        <RuntimeDependencies>
+            <Dependency>dcmtk</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/wlistdb/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-01-17</Date>
+            <Version>3.6.1</Version>
+            <Comment>new rebuild</Comment>
+            <Name>Ali Algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

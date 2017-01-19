@@ -34,7 +34,11 @@
     <Package>
         <Name>OpenSceneGraph</Name>
         <RuntimeDependencies>
+            <Dependency>curl</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>libpng</Dependency>
             <Dependency>freetype</Dependency>
             <Dependency>giflib</Dependency>

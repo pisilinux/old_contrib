@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tesseract-tessdata</Name>
+        <Homepage>http://code.google.com/p/tesseract-ocr/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>app:console</IsA>
+        <Summary>Tesseract OCR Traineedata</Summary>
+        <Description>The Tesseract OCR Traineedata.</Description>        
+        <Archive sha1sum="6ea24cccf0e823da98589ccc75d51f0950618236" type="targz" target="tesseract-3.04.00/tessdata">https://github.com/tesseract-ocr/tessdata/archive/3.04.00.tar.gz</Archive>               
+    </Source>
+
+    <Package>
+        <Name>tesseract-tessdata</Name>
+        <RuntimeDependencies>            
+            <Dependency>tesseract</Dependency>
+        </RuntimeDependencies>
+        <Files>            
+            <Path fileType="data">/usr/share/tessdata</Path>            
+        </Files>
+    </Package>   
+
+    <History>
+        <Update release="6">
+            <Date>2017-01-18</Date>
+            <Version>3.04.00</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Stefan Gronewold</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="5">
+            <Date>2014-06-19</Date>
+            <Version>3.02.02</Version>
+            <Comment>Rebuild for gcc</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
+            <Date>2014-04-23</Date>
+            <Version>3.02.02</Version>
+            <Comment>Rebuild for webp.</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvarice@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2013-07-26</Date>
+            <Version>3.02.02</Version>
+            <Comment>Move *.pc files to devel pack, increase release no.</Comment>
+            <Name>Serdar Soytetir</Name>
+            <Email>kaptan@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2013-05-13</Date>
+            <Version>3.02.02</Version>
+            <Comment>V.Bump</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-08-29</Date>
+            <Version>3.01</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

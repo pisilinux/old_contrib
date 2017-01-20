@@ -20,7 +20,8 @@
         <Name>master-pdf-editor</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency>libgcc</Dependency>            
+            <Dependency>libgcc</Dependency>
+            <Dependency>sane-backends</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

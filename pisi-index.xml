@@ -6734,6 +6734,65 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>leptonica</Name>
+            <Homepage>http://code.google.com/p/leptonica/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.plugin</PartOf>
+            <Summary xml:lang="en">Leptonica Library</Summary>
+            <Description xml:lang="en">An open source C library for efficient image processing and image analysis operations.</Description>
+            <Archive type="targz" sha1sum="6769a388878279994aaabe0b167dd2691a8bd080">http://www.leptonica.com/source/leptonica-1.74.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>tiff-devel</Dependency>
+                <Dependency>giflib-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/plugin/leptonica/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>leptonica</Name>
+            <RuntimeDependencies>
+                <Dependency>webp</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>leptonica-devel</Name>
+            <Summary xml:lang="en">Development file for leptonica</Summary>
+            <Summary xml:lang="tr">leptonica için geliştirme dosyaları</Summary>
+            <Files>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include/leptonica</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2017-01-18</Date>
+                <Version>1.74.1</Version>
+                <Comment>First Release.</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libmms</Name>
             <Homepage>http://sourceforge.net/projects/libmms</Homepage>
             <Packager>
@@ -7079,6 +7138,52 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pythonmagick</Name>
+            <Homepage>http://www.imagemagick.org</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.converter</PartOf>
+            <Summary xml:lang="en">Python bindings for the ImageMagick</Summary>
+            <Summary xml:lang="tr">ImageMagick için Python bağlayıcıları</Summary>
+            <Description xml:lang="en">PythonMagick is an object oriented Python bindings for the ImageMagick library.</Description>
+            <Description xml:lang="tr">PythonMagick, ImageMagick kütüphanesi için nesne yönelimli Python bağlayıcılarıdır.</Description>
+            <Archive type="tarxz" sha1sum="76a588f6e5542e415be3c4e18a4156befd0efd0b">http://www.imagemagick.org/download/python/PythonMagick-0.9.12.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>python-devel</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>imagemagick-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/converter/pythonmagick/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pythonmagick</Name>
+            <RuntimeDependencies>
+                <Dependency>boost</Dependency>
+                <Dependency>imagemagick</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2016-02-08</Date>
+                <Version>0.9.12</Version>
+                <Comment>First release</Comment>
+                <Name>Stefan Gronewold</Name>
+                <Email>groni@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -7446,52 +7551,6 @@
                 <Comment>First release</Comment>
                 <Name>Anıl Özbek</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>pythonmagick</Name>
-            <Homepage>http://www.imagemagick.org</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>as-is</License>
-            <IsA>library</IsA>
-            <PartOf>multimedia.converter</PartOf>
-            <Summary xml:lang="en">Python bindings for the ImageMagick</Summary>
-            <Summary xml:lang="tr">ImageMagick için Python bağlayıcıları</Summary>
-            <Description xml:lang="en">PythonMagick is an object oriented Python bindings for the ImageMagick library.</Description>
-            <Description xml:lang="tr">PythonMagick, ImageMagick kütüphanesi için nesne yönelimli Python bağlayıcılarıdır.</Description>
-            <Archive type="tarxz" sha1sum="76a588f6e5542e415be3c4e18a4156befd0efd0b">http://www.imagemagick.org/download/python/PythonMagick-0.9.12.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>python-devel</Dependency>
-                <Dependency>boost-devel</Dependency>
-                <Dependency>imagemagick-devel</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>multimedia/coverter/pythonmagick/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>pythonmagick</Name>
-            <RuntimeDependencies>
-                <Dependency>boost</Dependency>
-                <Dependency>imagemagick</Dependency>
-                <Dependency>libgcc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-02-08</Date>
-                <Version>0.9.12</Version>
-                <Comment>First release</Comment>
-                <Name>Stefan Gronewold</Name>
-                <Email>groni@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

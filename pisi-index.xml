@@ -5263,6 +5263,47 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>patchelf</Name>
+            <Homepage>https://nixos.org/patchelf.html</Homepage>
+            <Packager>
+                <Name>Stefan Gronewold</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <PartOf>util.admin</PartOf>
+            <Summary xml:lang="en">Small utility to modify the dynamic linker and RPATH of ELF executables</Summary>
+            <Description xml:lang="en">Small utility to modify the dynamic linker and RPATH of ELF executables</Description>
+            <Archive type="targz" sha1sum="1eca0c0d2ef0768915b2e61214988301a7ca8fe8">https://nixos.org/releases/patchelf/patchelf-0.9/patchelf-0.9.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gcc</Dependency>
+                <Dependency>libgcc</Dependency>
+            </BuildDependencies>
+            <SourceURI>util/admin/patchelf/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>patchelf</Name>
+            <Summary xml:lang="en">Small utility to modify the dynamic linker and RPATH of ELF executables</Summary>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2017-01-23</Date>
+                <Version>0.9</Version>
+                <Comment>First Release</Comment>
+                <Name>Stefan Gronewold</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>androidsniffer</Name>
             <Homepage>https://packetstormsecurity.com/files/97464/Andr01d-Magic-Dumper-0.1.html</Homepage>
             <Packager>

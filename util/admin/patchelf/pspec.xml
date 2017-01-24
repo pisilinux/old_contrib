@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>patchelf</Name>
+        <Homepage>https://nixos.org/patchelf.html</Homepage>
+        <Packager>
+            <Name>Stefan Gronewold</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>Small utility to modify the dynamic linker and RPATH of ELF executables</Summary>
+        <Description>Small utility to modify the dynamic linker and RPATH of ELF executables</Description>
+        <BuildDependencies>
+            <Dependency>gcc</Dependency>
+            <Dependency>libgcc</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="1eca0c0d2ef0768915b2e61214988301a7ca8fe8" type="targz">https://nixos.org/releases/patchelf/patchelf-0.9/patchelf-0.9.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>patchelf</Name>
+        <Summary>Small utility to modify the dynamic linker and RPATH of ELF executables</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>         
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-01-23</Date>
+            <Version>0.9</Version>
+            <Comment>First Release</Comment>
+            <Name>Stefan Gronewold</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

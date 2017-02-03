@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>A complete solution for creation and editing PDF files. (Free for non-commercial use) - Qt5 version</Summary>
         <Description>Master PDF Editor provides you advanced functions for working with PDF format.</Description>
-        <Archive sha1sum="da470d1530f4167dbffcfcfd24ad86c136c55e59" type="targz">https://sourceforge.net/projects/pisilinux/files/source/master-pdf-editor-4.0.10_qt5.amd64.tar.gz/download</Archive>
+        <Archive sha1sum="26549ca453e1b6adde4c0557566b60bcefec445b" type="targz">http://get.code-industry.net/public/master-pdf-editor-4.0.30_qt5.amd64.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -22,6 +22,8 @@
             <Dependency>qt5-base</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>sane-backends</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>qt5-svg</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -37,6 +39,13 @@
     </Package>       
 
     <History>
+        <Update release="3">
+            <Date>2017-02-03</Date>
+            <Version>4.0.30</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Stefan Gronewold(groni)</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2017-01-10</Date>
             <Version>4.0.10</Version>

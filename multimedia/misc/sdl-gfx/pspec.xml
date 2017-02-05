@@ -12,9 +12,9 @@
         <IsA>library</IsA>
         <Summary>SDL graphics drawing primitives and other support functions</Summary>
         <Description>SDL_gfx library evolved out of the SDL_gfxPrimitives code which provided basic drawing routines such as lines, circles or polygons and SDL_rotozoom which implemented a interpolating rotozoomer for SDL surfaces.</Description>
-        <Archive sha1sum="a136873b71a8c00c0233db26e0c1dad9629b4209" type="targz">http://www.ferzkopp.net/Software/SDL2_gfx/SDL2_gfx-1.0.1.tar.gz</Archive>
+        <Archive sha1sum="20a89d0b71b7b790b830c70f17ed2c44100bc0f4" type="targz">https://freefr.dl.sourceforge.net/project/sdlgfx/SDL_gfx-2.0.25.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>libsdl-devel</Dependency>
+             <Dependency>libsdl-devel</Dependency> 
         </BuildDependencies>
         <!--
         <Patches>
@@ -26,7 +26,7 @@
     <Package>
         <Name>sdl-gfx</Name>
         <RuntimeDependencies>
-            <Dependency>libsdl2</Dependency>
+            <Dependency>libsdl</Dependency> 
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/</Path>
@@ -39,7 +39,7 @@
         <Summary>Development files for sdl-gfx</Summary>
         <RuntimeDependencies>
             <Dependency release="current">sdl-gfx</Dependency>
-           
+            <Dependency>libsdl-devel</Dependency> 
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
@@ -54,11 +54,12 @@
         <PartOf>emul32</PartOf>
         <Summary>32-bit shared libraries for sdl-gfx</Summary>
         <BuildType>emul32</BuildType>
-       
+        <BuildDependencies>
+            <Dependency>libsdl-32bit</Dependency>
+        </BuildDependencies>
         <RuntimeDependencies>
             <Dependency release="current">sdl-gfx</Dependency>
-            <Dependency>glibc-32bit</Dependency>
-	    <Dependency>libsdl2-32bit</Dependency>
+            <Dependency>libsdl-32bit</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib32/</Path>
@@ -66,7 +67,14 @@
     </Package>
 
     <History>
-      <Update release="4">
+      <Update release="5">
+            <Date>2017-02-03</Date>
+            <Version>2.0.25</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ali Algul(gulle)</Name>
+            <Email>alialgul@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
             <Date>2015-10-10</Date>
             <Version>1.0.1</Version>
             <Comment>Version bump.</Comment>

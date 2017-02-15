@@ -1,0 +1,43 @@
+
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>glm</Name>
+        <Homepage>http://glm.g-truc.net/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>C++ mathematics library</Summary>
+        <Description>C++ mathematics library for 3D software based on the OpenGL Shading Language (GLSL) specification</Description>
+        <Archive sha1sum="b46285d8fde08c8e49b92a800c4547634530c435" type="zip">https://github.com/g-truc/glm/releases/download/0.9.7.4/glm-0.9.7.4.zip</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>glm</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="header">/usr/lib/cmake</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>glm-doc</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-04-23</Date>
+            <Version>0.9.7.4</Version>
+            <Comment>First release</Comment>
+            <Name>Ertuğrul Erata</Name>
+            <Email>ertugrulerata@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

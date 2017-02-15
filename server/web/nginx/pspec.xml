@@ -17,6 +17,9 @@
             <Dependency>gd-devel</Dependency>
             <Dependency>geoip-devel</Dependency>
             <Dependency>libxslt-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -26,6 +29,9 @@
             <Dependency>gd</Dependency>
             <Dependency>geoip</Dependency>
             <Dependency>libxslt</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/nginx</Path>

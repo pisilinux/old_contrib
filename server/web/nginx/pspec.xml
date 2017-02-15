@@ -32,6 +32,8 @@
             <Dependency>libpcre</Dependency>
             <Dependency>openssl</Dependency>
             <Dependency>zlib</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>perl</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/nginx</Path>

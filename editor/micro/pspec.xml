@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>micro</Name>
+        <Homepage>https://micro-editor.github.io/</Homepage>
+        <Packager>
+            <Name>Pisi Linux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <Summary>A modern and intuitive terminal-based text editor</Summary>
+        <Description>Micro is a terminal-based text editor that aims to be easy to use and intuitive, while also taking advantage of the full capabilities of modern terminals.</Description>
+        <Archive sha1sum="5c63205391a8c2f5640286d27618ab8aec2c4d64" type="targz" target="src">https://github.com/zyedidia/micro/archive/v1.1.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>golang</Dependency>
+            <Dependency>make</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>micro</Name>
+        <RuntimeDependencies>
+            <Dependency>xclip</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2016-11-29</Date>
+            <Version>1.1.2</Version>
+            <Comment>First release</Comment>
+            <Name>Erdem Ersoy</Name>
+            <Email>erdemersoy@live.com</Email>
+        </Update>
+    </History>
+</PISI>

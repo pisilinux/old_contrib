@@ -4,12 +4,14 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from pisi.actionsapi import pythonmodules
+WorkDir = "elementary-xfce-0.7"
+
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir = "."
+
 
 def install():
-    pythonmodules.install()
-    pisitools.insinto("/usr/share/","./share/*")
+	pisitools.insinto("/usr/share/icons", "elementary-xfce-darker")
+

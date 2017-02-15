@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xclip</Name>
+        <Homepage>https://github.com/astrand/xclip</Homepage>
+        <Packager>
+            <Name>Pisi Linux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>xclip is a command line utility that is designed to run on any system with an X11 implementation.</Summary>
+        <Description>xclip is a command line utility that is designed to run on any system with an X11 implementation. It provides an interface to X selections ("the clipboard") from the command line.</Description>
+        <Archive sha1sum="0231194c2d244213f5b8d83e3e676aa3cb0ef8eb" type="targz">https://github.com/astrand/xclip/archive/0.13.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libXmu-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXt-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libXau-devel</Dependency>
+            <Dependency>libXdmcp-devel</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xclip</Name>
+        <RuntimeDependencies>
+            <Dependency>libXmu</Dependency>
+            <Dependency>libX11</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/local/share/man</Path>
+            <Path fileType="executable">/usr/local/bin</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2016-11-29</Date>
+            <Version>0.13</Version>
+            <Comment>First release for Pisi 2.x</Comment>
+            <Name>Erdem Ersoy</Name>
+            <Email>erdemersoy@live.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2015-02-20</Date>
+            <Version>0.12</Version>
+            <Comment>First release</Comment>
+            <Name>denizgu</Name>
+            <Email>denizgu@users.noreply.github.com</Email>
+        </Update>
+    </History>
+</PISI>

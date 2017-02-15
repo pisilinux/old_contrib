@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tesseract</Name>
+        <Homepage>http://code.google.com/p/tesseract-ocr/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>Apache-2.0</License>
+        <IsA>app:console</IsA>
+        <Summary>Tesseract OCR Engine</Summary>
+        <Description>The Tesseract OCR engine was one of the top 3 engines in the 1995 UNLV Accuracy test. Between 1995 and 2006 it had little work done on it, but it is probably one of the most accurate open source OCR engines available. The source code will read a binary, grey or color image and output text. A tiff reader is built in that will read uncompressed TIFF images.</Description>
+        <Archive sha1sum="359ffc1925f0270ca100a2b4c1d3b41f4b23701d" type="targz">https://github.com/tesseract-ocr/tesseract/archive/3.04.01.tar.gz</Archive>               
+        <BuildDependencies>
+            <Dependency>tiff-devel</Dependency>
+            <Dependency>leptonica-devel</Dependency>
+        </BuildDependencies>        
+    </Source>
+
+    <Package>
+        <Name>tesseract</Name>
+        <RuntimeDependencies>
+            <Dependency>tiff</Dependency>
+            <Dependency>leptonica</Dependency>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/tessdata</Path>
+            <Path fileType="man">/usr/share/man/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>tesseract-devel</Name>
+        <Summary>Development files and headers for tesseract</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tesseract</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2017-01-18</Date>
+            <Version>3.04.01</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Stefan Gronewold</Name>
+            <Email>groni@pisilinux.org</Email>
+        </Update>
+        <Update release="5">
+            <Date>2014-06-19</Date>
+            <Version>3.02.02</Version>
+            <Comment>Rebuild for gcc</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
+            <Date>2014-04-23</Date>
+            <Version>3.02.02</Version>
+            <Comment>Rebuild for webp.</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvarice@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2013-07-26</Date>
+            <Version>3.02.02</Version>
+            <Comment>Move *.pc files to devel pack, increase release no.</Comment>
+            <Name>Serdar Soytetir</Name>
+            <Email>kaptan@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2013-05-13</Date>
+            <Version>3.02.02</Version>
+            <Comment>V.Bump</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-08-29</Date>
+            <Version>3.01</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -10,13 +10,12 @@
         <IsA>app:gui</IsA>
         <Summary>İstatistik analiz programı</Summary>
         <Description>İstatistik analiz programı</Description>
+        <Archive type="targz" sha1sum="1dcd193be210b1be42c1285ffaaad59cdfad9521">http://ftp.gnu.org/gnu/pspp/pspp-0.10.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cairo-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
             <Dependency versionFrom="1.11">gsl-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>gtksourceview-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtksourceview3-devel</Dependency>
             <Dependency>plotutils-devel</Dependency>
             <Dependency>postgresql-lib</Dependency>
             <Dependency>ncurses-devel</Dependency>
@@ -24,15 +23,19 @@
             <Dependency>texinfo</Dependency>
             <Dependency>desktop-file-utils</Dependency>
             <Dependency>libxml2-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
+            
         </BuildDependencies>
-        <Archive type="targz" sha1sum="d79a573bb13c5c46e0875ddda19deb4cdf2a6333">http://ftp.gnu.org/gnu/pspp/pspp-0.8.5.tar.gz</Archive>
     </Source>
     <Package>
         <Name>pspp</Name>
         <Summary>Documents for PSPP</Summary>
         <RuntimeDependencies>
             <Dependency>gsl</Dependency>
-            <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
             <Dependency>zlib</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>glib2</Dependency>
@@ -40,8 +43,9 @@
             <Dependency>libxml2</Dependency>
             <Dependency>ncurses</Dependency>
             <Dependency>readline</Dependency>
-            <Dependency>gtksourceview</Dependency>
+            <Dependency>gtksourceview3</Dependency>
             <Dependency>postgresql-lib</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/pspp</Path>
@@ -56,7 +60,7 @@
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" target="/usr/share/pspp/pspp.desktop" group="root" permission="0644">pspp.desktop</AdditionalFile>
-            <AdditionalFile owner="root" target="/usr/share/pspp/pspp.mo" group="root" permission="0644">pspp.mo</AdditionalFile>
+            <AdditionalFile owner="root" target="/usr/share/locale/tr/LC_MESSAGES/pspp.mo" group="root" permission="0644">pspp.mo</AdditionalFile>
             <AdditionalFile owner="root" target="/usr/share/pspp/splash.png" permission="0644">splash.png</AdditionalFile>
         </AdditionalFiles>        
     </Package>
@@ -68,7 +72,7 @@
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" target="/usr/share/pspp/pspp.desktop" group="root" permission="0644">pspp.desktop</AdditionalFile>
-            <AdditionalFile owner="root" target="/usr/share/pspp/pspp.mo" group="root" permission="0644">pspp.mo</AdditionalFile>
+<!--             <AdditionalFile owner="root" target="/usr/share/pspp/pspp.mo" group="root" permission="0644">pspp.mo</AdditionalFile> -->
             <AdditionalFile owner="root" target="/usr/share/pspp/splash.png" group="root" permission="0644">splash.png</AdditionalFile>
         </AdditionalFiles>
         <Summary>Documents for PSPP</Summary>
@@ -77,82 +81,19 @@
         </RuntimeDependencies>
     </Package>
     <History>
-        <Update release="11">
-            <Date>2015-07-23</Date>
-            <Version>0.8.5</Version>
-            <Comment>version bump</Comment>
-            <Name>Ayhan Yalçınsoy</Name>
-            <Email>ayhanyalcinsoy@pisilinux.org</Email>
-        </Update>
-        <Update release="10">
-            <Date>2014-12-22</Date>
-            <Version>0.8.4</Version>
-            <Comment>pspp-mode for Emacs</Comment>
-            <Name>Ayhan Yalçınsoy</Name>
-            <Email>ayhanyalcinsoy@pisilinux.org</Email>
-        </Update>
-        <Update release="9">
-            <Date>2014-10-13</Date>
-            <Version>0.8.4</Version>
-            <Comment>version bump</Comment>
-            <Name>Ayhan Yalçınsoy</Name>
-            <Email>ayhanyalcinsoy@pisilinux.org</Email>
-        </Update>
-        <Update release="8">
-            <Date>2014-05-23</Date>
-            <Version>0.8.3</Version>
-            <Comment>v. bump</Comment>
-            <Name>Ayhan YALÇINSOY</Name>
-            <Email>ayhanyalcinsoy@pisilinux.org</Email>
-        </Update>
-        <Update release="7">
-            <Date>2014-01-15</Date>
-            <Version>0.8.2</Version>
-            <Comment>release bump</Comment>
-            <Name>Ayhan YALÇINSOY</Name>
-            <Email>ayhanyalcinsoy@pisilinux.org</Email>
-        </Update>
-        <Update release="6">
-            <Date>2013-11-05</Date>
-            <Version>0.8.1</Version>
-            <Comment>release bump</Comment>
-            <Name>Ayhan YALÇINSOY</Name>
-            <Email>ayhanyalcinsoy@pisilinux.org</Email>
-        </Update>
-        <Update release="5">
-            <Date>2013-09-28</Date>
-            <Version>0.8.1</Version>
-            <Comment>update</Comment>
-            <Name>Ayhan YALÇINSOY</Name>
-            <Email>ayhanyalcinsoy@pisilinux.org</Email>
-        </Update>
-        <Update release="4">
-            <Date>2013-06-18</Date>
-            <Version>0.7.9</Version>
-            <Comment>fixed patch</Comment>
-            <Name>Ayhan YALÇINSOY</Name>
-            <Email>ayhanyalcinsoy@gmail.com</Email>
-        </Update>
-        <Update release="3">
-            <Date>2013-03-16</Date>
-            <Version>0.7.9</Version>
-            <Comment>fixed patch</Comment>
-            <Name>Ayhan YALÇINSOY</Name>
-            <Email>ayhanyalcinsoy@gmail.com</Email>
-        </Update>
         <Update release="2">
-            <Date>2013-03-16</Date>
-            <Version>0.7.9</Version>
-            <Comment>update</Comment>
-            <Name>Ayhan YALÇINSOY</Name>
-            <Email>ayhanyalcinsoy@gmail.com</Email>
+            <Date>2016-12-10</Date>
+            <Version>0.10.2</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Update>
         <Update release="1">
-            <Date>2010-03-20</Date>
-            <Version>0.6.2</Version>
-            <Comment>First release</Comment>
-            <Name>Türker Sezer</Name>
-            <Email>turkersezer@tsdesign.info</Email>
+            <Date>2016-04-13</Date>
+            <Version>0.10.1</Version>
+            <Comment>version bump</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Update>
     </History>
 </PISI>

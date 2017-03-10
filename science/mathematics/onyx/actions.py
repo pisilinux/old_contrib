@@ -6,15 +6,8 @@
 from pisi.actionsapi import autotools
 from pisi.actionsapi import get
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 
-
-def setup():
-    pisitools.insinto("/usr/share/onyx/", "onyx-1.0-932.jar")
-
-#def build():
-    #autotools.make()
-
+WorkDir="onyx"
 def install():
-    pisitools.insinto("/usr/share/onyx/", "onyx-1.0-932.jar")
-    pisitools.insinto("/usr/share/onyx/", "onyx.sh")
-    pisitools.dosym("/usr/share/onyx/onyx.sh", "/usr/bin/onyx")
+    pisitools.insinto("/usr/share/onyx/", "onyx-1.0-947.jar")

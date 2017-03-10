@@ -1,0 +1,36 @@
+<PISI>
+    <Source>
+        <Name>lxmenu-data</Name>
+        <Homepage>http://www.lxde.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>data</IsA>
+        <Summary>freedesktop.org application menu definition files</Summary>
+        <Description>lxqt-menu-data is freedesktop.org application menu definition files</Description>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="5c3cba7d2061a490ad62c1e9c3f6120343df7712" type="tarxz">http://downloads.sourceforge.net/lxde/lxmenu-data-0.1.5.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>lxmenu-data</Name>
+        <Summary>Development files for PCManFM</Summary>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="data">/usr/share/desktop-directories</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-11-18</Date>
+            <Version>0.1.5</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

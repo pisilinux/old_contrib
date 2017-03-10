@@ -1,0 +1,47 @@
+<PISI>
+    <Source>
+        <Name>qps</Name>
+        <Homepage>https://github.com/QtDesktop/qps</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <Icon>qps</Icon>
+        <IsA>app</IsA>
+        <Summary>Qt Process Manager</Summary>
+        <Description>Qt Process Manager</Description>
+        <Archive sha1sum="299225051872b729c62243434a606b75c5ee1480" type="targz">https://github.com/QtDesktop/qps/archive/v1.10.16.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>libXrender-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <!--<Patch>cmakelist.patch</Patch>-->
+        </Patches>
+    </Source>
+    <Package>
+        <Name>qps</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+<!--             <AdditionalFile owner="root" permission="0644" target="usr/share/lxqt/translations/liblxqt/liblxqt_tr">liblxqt_tr.qm</AdditionalFile> -->
+        </AdditionalFiles>
+    </Package>
+    <History>
+      <Update release="1">
+            <Date>2016-12-17</Date>
+            <Version>1.10.16</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

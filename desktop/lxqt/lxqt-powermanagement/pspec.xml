@@ -1,0 +1,58 @@
+<PISI>
+    <Source>
+        <Name>lxqt-powermanagement</Name>
+        <Homepage>http://www.lxde.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>app:gui</IsA>
+        <Summary>LXQt power management daemon.</Summary>
+        <Description>Daemon use for power management and auto-suspend.</Description>
+        <Archive sha1sum="c32ce6be506bfde9912bc517da98c02147b965bb" type="tarxz">https://github.com/lxde/lxqt-powermanagement/releases/download/0.11.1/lxqt-powermanagement-0.11.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency versionFrom="0.11.1">liblxqt-devel</Dependency>
+            <Dependency>libqtxdg-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>solid-devel</Dependency>
+            <Dependency>upower-devel</Dependency>
+            <Dependency>kidletime-devel</Dependency>
+            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>lxqt-powermanagement</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>liblxqt</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>solid</Dependency>
+            <Dependency>libqtxdg</Dependency>
+            <Dependency>kidletime</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-config-powermanagement.desktop">lxqt-config-powermanagement.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-01-02</Date>
+            <Version>0.11.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

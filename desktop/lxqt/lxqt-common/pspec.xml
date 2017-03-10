@@ -1,0 +1,62 @@
+<PISI>
+    <Source>
+        <Name>lxqt-common</Name>
+        <Homepage>http://www.lxde.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>data</IsA>
+        <Summary>Common data to run a LXQt session.</Summary>
+        <Description>Common data file required for running an lxde-qt session</Description>
+        <Archive sha1sum="f515c42ff6740c48fbd672b521729ed0473e7cef" type="tarxz">https://github.com/lxde/lxqt-common/releases/download/0.11.1/lxqt-common-0.11.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency versionFrom="0.11.1">liblxqt-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>lxqt-common</Name>
+        <RuntimeDependencies>
+            <Dependency>noto-fonts</Dependency>
+            <Dependency>openbox</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/themes/lxqt</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/desktop-directories/lxqt-settings.directory">lxqt-settings.directory</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/desktop-directories/lxqt-leave.directory">lxqt-leave.directory</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/connection-editor.desktop">nm-connection-editor.desktop</AdditionalFile>
+<!--    Customizations for Pisi          -->
+            <AdditionalFile permission="0644" owner="root" target="/etc/pcmanfm-qt/lxqt/settings.conf">settings.conf</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/session.conf">session.conf</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/lxqt.conf">lxqt.conf</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/panel.conf">panel.conf</AdditionalFile>
+<!--  Adds pisi startup icon to Themes  -->
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/themes/ambiance/mainmenu.svg">mainmenu.svg</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/themes/dark/mainmenu.svg">mainmenu.svg</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/themes/frost/mainmenu.svg">mainmenu.svg</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/themes/kde-plasma/mainmenu.svg">mainmenu.svg</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/themes/light/mainmenu.svg">mainmenu.svg</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-01-02</Date>
+            <Version>0.11.1</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

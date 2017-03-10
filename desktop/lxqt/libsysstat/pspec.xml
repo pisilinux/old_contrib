@@ -1,0 +1,55 @@
+<PISI>
+    <Source>
+        <Name>libsysstat</Name>
+        <Homepage>http://www.lxqt.org</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPL2</License>
+        <IsA>library</IsA>
+        <Summary>Library used to query system info and statistics</Summary>
+        <Description>Library to query system statistics (net, resource usage, ...)</Description>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>lxqt-build-tools</Dependency>
+        </BuildDependencies>
+        <Archive sha1sum="f3c8985d7b5a33dcddae0aba641c2baa669338fe" type="tarxz">https://downloads.lxqt.org/libsysstat/0.3.3/libsysstat-0.3.3.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>libsysstat</Name>
+        <Summary>Development headers for lxqt-globalkeys</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>libsysstat-devel</Name>
+        <Summary>Development headers for libsysstat</Summary>
+        <RuntimeDependencies>
+            <Dependency version="current">libsysstat</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2016-12-28</Date>
+            <Version>0.3.3</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

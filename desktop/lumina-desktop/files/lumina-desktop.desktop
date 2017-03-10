@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Lumina-desktop
+Name[tr]=Lumina-desktop
+GenericName=Lumina-desktop
+GenericName[tr]=Lumina-desktop
+Icon=lumina-desktop
+Exec=lumina-desktop
+Terminal=false
+StartupNotify=false
+Categories=Application;Game;ArcadeGame;

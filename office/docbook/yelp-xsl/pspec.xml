@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>yelp-xsl</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LGPLv2.1</License>
+        <IsA>data</IsA>
+        <Summary>Yelp XSLT Stylesheets</Summary>
+        <Description>Package of yelp-xsl contains XSL stylesheets that are used by the yelp help browser.</Description>
+        <Archive sha1sum="3a73906bb0acef7acedf49df911ef6959e1a95f3" type="tarxz">https://git.gnome.org/browse/yelp-xsl/snapshot/yelp-xsl-3.20.1.tar.xz
+</Archive>
+        <BuildDependencies>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>itstool</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gettext-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>yelp-xsl</Name>
+        <Files>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/yelp-xsl</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>yelp-xsl-devel</Name>
+        <Summary>Development files for yelp-xsl</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">yelp-xsl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-05-09</Date>
+            <Version>3.20.1</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

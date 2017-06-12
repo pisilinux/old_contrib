@@ -1,0 +1,54 @@
+<PISI>
+    <Source>
+        <Name>wps-office</Name>
+        <Homepage>http://wps-community.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+ +          <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>LPGPL</License>
+        <PartOf>office</PartOf>
+        <Summary>Kingsoft Office Suite</Summary>
+        <Description>ingsoft Office (WPS Office), is an office productivity suite.</Description>
+        <Archive sha1sum="7e9b17572ed5cea50af24f01457f726fc558a515" type="tarxz">http://kdl.cc.ksosoft.com/wps-community/download/a21/wps-office_10.1.0.5672~a21_x86_64.tar.xz</Archive>
+    </Source>
+    <Package>
+        <Name>wps-office</Name>
+        <Summary>Kingsoft Office Suite</Summary>
+        <RuntimeDependencies>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libpng12</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="exectuable">/usr/bin</Path> 
+            <Path fileType="lib">/opt</Path> 
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/etc/fonts</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-06-12</Date>
+            <Version>10.1.0.5672</Version>
+            <Comment>ö</Comment>
+             <Name>PisiLinux Community</Name>
+ +          <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

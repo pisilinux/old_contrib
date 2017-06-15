@@ -1,0 +1,34 @@
+<PISI>
+    <Source>
+        <Name>wps-office-tr</Name>
+        <Homepage>https://sourceforge.net/projects/pisilinux/files/source/</Homepage>
+        <Packager>
+            <Name>Ali Algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Packager>
+        <License>unknow</License>
+        <PartOf>office</PartOf>
+        <Summary>turkce dil dosyası</Summary>
+        <Description>wps-ofis turkce dil dosyası</Description>
+        <Archive type="targz" sha1sum="fd86ee2e9598aa09d7abb4d37881f36fe60731ec">https://sourceforge.net/projects/pisilinux/files/source/tr_TR.tar.gz</Archive>
+    </Source>
+    <Package>
+        <Name>wps-office-tr</Name>
+        <Summary>turkce dil dosyası</Summary>
+        <RuntimeDependencies>
+            <Dependency>wps-office</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/mui/</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-06-12</Date>
+            <Version>1</Version>
+            <Comment>First release</Comment>
+            <Name>Ali Algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

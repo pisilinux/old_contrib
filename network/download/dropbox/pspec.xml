@@ -17,9 +17,8 @@
         <IsA>app:gui</IsA>
         <Summary>A Dropbox client</Summary>
         <Description>Dropbox is a Web-based file hosting service which uses cloud computing to enable users to store and share files and folders with others across the Internet using file synchronization.</Description>
-        <!--<Archive sha1sum="04bb1c6da23a634bc38b52cdd7747db08b6afdc6" type="targz" target="i686">https://dl.dropboxusercontent.com/u/17/dropbox-lnx.x86-3.8.8.tar.gz</Archive>-->
-        <Archive sha1sum="de0ebc2f300683c6b64432516ed69806739ae82d" type="targz" target="x86_64">https://dl.dropboxusercontent.com/u/17/dropbox-lnx.x86_64-3.8.8.tar.gz</Archive>
-        <Archive sha1sum="b08512b9364a26ebf8fa60b681f0b6be528770c6" type="targz" target="hede">http://kde-look.org/CONTENT/content-files/164789-dropbox-monochrome-tray-icons.tar.gz</Archive>
+        <Archive sha1sum="92ec567e494130878d144d32295ac2efeb2e45aa" type="targz" target="x86_64">https://dl.dropboxusercontent.com/u/17/dropbox-lnx.x86_64-33.4.23.tar.gz</Archive>
+        <Archive sha1sum="b08512b9364a26ebf8fa60b681f0b6be528770c6" type="targz" target="hede">https://dl.opendesktop.org/api/files/download/id/1466610813/164789-dropbox-monochrome-tray-icons.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -55,6 +54,13 @@
     </Package>
 
     <History>
+	 <Update release="11">
+            <Date>2017-08-24</Date>
+            <Version>33.4.23</Version>
+            <Comment>Version update</Comment>
+            <Name>Erkan IŞIK</Name>
+            <Email>info@erkanisik.com</Email>
+        </Update>    
         <Update release="10">
             <Date>2015-09-28</Date>
             <Version>3.8.8</Version>

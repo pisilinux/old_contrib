@@ -12,7 +12,7 @@
         <Description>Image viewer and screenshot tool.</Description>
         <Archive sha1sum="a2779bcce4d4f994096d0177a2e9af55e0cf1c10" type="tarxz">https://github.com/lxde/lximage-qt/releases/download/0.5.1/lximage-qt-0.5.1.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>glib2-devel</Dependency>
+            <!--<Dependency>glib2-devel</Dependency>
             <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
@@ -26,7 +26,7 @@
             <Dependency>menu-cache-devel</Dependency>
             <Dependency>lxqt-config</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>-->
         </BuildDependencies>
     </Source>
 

@@ -46,7 +46,7 @@
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>qt5-multimedia</Dependency>
             <Dependency>xcb-util-image</Dependency>
-            <Dependency>oxygen</Dependency>
+<!--             <Dependency>oxygen</Dependency> -->
             <Dependency>fluxbox</Dependency>
         </RuntimeDependencies>
         <Files>

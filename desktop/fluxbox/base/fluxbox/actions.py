@@ -13,8 +13,7 @@ def setup():
     autotools.configure("--enable-imlib2 \
                          --enable-xinerama \
                          --enable-xft \
-                         --enable-nls \
-                         --with-style=/usr/share/fluxbox/styles/green_tea")
+                         --enable-nls ")
 
 def build():
     autotools.make()

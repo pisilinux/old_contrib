@@ -12,13 +12,13 @@
         <Description>libfm is a Core library of PCManFM file manager</Description>
         <Archive sha1sum="c478ca0565d4f2f3b3a5563534f41f1cb2272d6e" type="tarxz">https://downloads.lxqt.org/libfm-qt/0.11.2/libfm-qt-0.11.2.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>cmake</Dependency>
+            <!--<Dependency>cmake</Dependency>
             <Dependency versionFrom="1.2.5">libfm-devel</Dependency>
             <Dependency versionFrom="5.6.2">qt5-base-devel</Dependency>
             <Dependency versionFrom="5.6.2">qt5-linguist</Dependency>
             <Dependency versionFrom="5.6.2">qt5-x11extras-devel</Dependency>
             <Dependency>lxqt-build-tools</Dependency>
-            <Dependency>menu-cache-devel</Dependency>
+            <Dependency>menu-cache-devel</Dependency>-->
         </BuildDependencies>
     </Source>
     <Package>

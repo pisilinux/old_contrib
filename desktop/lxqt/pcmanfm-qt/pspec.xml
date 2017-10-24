@@ -44,7 +44,6 @@
             <Dependency>breeze-icons</Dependency>
             <Dependency>gvfs</Dependency>
             <Dependency>udisks2</Dependency>
-            <Dependency>kwin</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc/pcmanfm-qt</Path>

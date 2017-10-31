@@ -8,14 +8,15 @@
         </Packager>
         <License>GPL2</License>
         <IsA>app:gui</IsA>
+        <Icon>lxqt</Icon>
         <Summary>LXQt power management daemon.</Summary>
         <Description>Daemon use for power management and auto-suspend.</Description>
-        <Archive sha1sum="c32ce6be506bfde9912bc517da98c02147b965bb" type="tarxz">https://github.com/lxde/lxqt-powermanagement/releases/download/0.11.1/lxqt-powermanagement-0.11.1.tar.xz</Archive>
+        <Archive sha1sum="8274a5917cf6c076f60a266d3321c540ed5b2a47" type="tarxz">https://github.com/lxde/lxqt-powermanagement/releases/download/0.12.0/lxqt-powermanagement-0.12.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency versionFrom="0.11.1">liblxqt-devel</Dependency>
+            <Dependency versionFrom="0.12.0">liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -24,7 +25,7 @@
             <Dependency>solid-devel</Dependency>
             <Dependency>upower-devel</Dependency>
             <Dependency>kidletime-devel</Dependency>
-            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+            <Dependency versionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -41,15 +42,16 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/</Path>
+            <Path fileType="config">/etc/autostart</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-config-powermanagement.desktop">lxqt-config-powermanagement.desktop</AdditionalFile>
+            <!--<AdditionalFile permission="0644" owner="root" target="/usr/share/applications/lxqt-config-powermanagement.desktop">lxqt-config-powermanagement.desktop</AdditionalFile>-->
         </AdditionalFiles>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2017-01-02</Date>
-            <Version>0.11.1</Version>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.12.0</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

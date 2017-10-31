@@ -11,7 +11,7 @@
         <IsA>app</IsA>
         <Summary>Qt Process Manager</Summary>
         <Description>Qt Process Manager</Description>
-        <Archive sha1sum="299225051872b729c62243434a606b75c5ee1480" type="targz">https://github.com/QtDesktop/qps/archive/v1.10.16.tar.gz</Archive>
+        <Archive sha1sum="d4f258df1e51cad0de511865189b1606cb30dcaa" type="tarxz">https://github.com/QtDesktop/qps/releases/download/1.10.17/qps-1.10.17.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
@@ -28,6 +28,7 @@
             <Dependency>qt5-base</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="executable">/usr/bin/qps</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share</Path>
         </Files>
@@ -37,8 +38,8 @@
     </Package>
     <History>
       <Update release="1">
-            <Date>2016-12-17</Date>
-            <Version>1.10.16</Version>
+            <Date>2017-10-24</Date>
+            <Version>1.10.17</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

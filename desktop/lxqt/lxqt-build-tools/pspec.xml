@@ -11,7 +11,7 @@
         <IsA>app:gui</IsA>
         <Summary>Various packaging tools and scripts for LXQt applications.</Summary>
         <Description>Various packaging tools and scripts for LXQt applications</Description>
-        <Archive sha1sum="8526a549242670ea833025227f6b00eb2fb5d97d" type="tarxz">https://github.com/lxde/lxqt-build-tools/releases/download/0.3.2/lxqt-build-tools-0.3.2.tar.xz</Archive>
+        <Archive sha1sum="651db404313e25d768cb28bbfa76aa7d51261275" type="tarxz">https://github.com/lxde/lxqt-build-tools/releases/download/0.4.0/lxqt-build-tools-0.4.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
@@ -27,9 +27,9 @@
     </Package>
     
     <History>
-        <Update release="1">
-            <Date>2017-03-08</Date>
-            <Version>0.3.2</Version>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.4.0</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

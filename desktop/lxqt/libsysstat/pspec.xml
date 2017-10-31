@@ -8,16 +8,17 @@
         </Packager>
         <License>GPL2</License>
         <IsA>library</IsA>
+        <Icon>lxqt</Icon>
         <Summary>Library used to query system info and statistics</Summary>
         <Description>Library to query system statistics (net, resource usage, ...)</Description>
+        <Archive sha1sum="43b7f185f1cc9352c0e86780ca826b83e421c991" type="tarxz">https://github.com/lxde/libsysstat/releases/download/0.4.0/libsysstat-0.4.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
-            <Dependency>lxqt-build-tools</Dependency>
+            <Dependency versionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
-        <Archive sha1sum="f3c8985d7b5a33dcddae0aba641c2baa669338fe" type="tarxz">https://downloads.lxqt.org/libsysstat/0.3.3/libsysstat-0.3.3.tar.xz</Archive>
     </Source>
     <Package>
         <Name>libsysstat</Name>
@@ -44,10 +45,10 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2016-12-28</Date>
-            <Version>0.3.3</Version>
-            <Comment>First Release</Comment>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.4.0</Version>
+            <Comment>Version Bump</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Update>

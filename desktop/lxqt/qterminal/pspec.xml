@@ -8,21 +8,22 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:gui</IsA>
+        <Icon>lxqt</Icon>
         <Summary>QT5-based multitab terminal emulator.</Summary>
         <Description>QT5-based multitab terminal emulator.</Description>
-        <Archive sha1sum="0a37c12fb95c7900135a99d52262003a7a8005f4" type="tarxz">https://github.com/lxde/qterminal/releases/download/0.7.1/qterminal-0.7.1.tar.xz</Archive>
+        <Archive sha1sum="77c6b307ae6aa55d1b86e81100dd5c33b4e27a17" type="tarxz">https://github.com/lxde/qterminal/releases/download/0.8.0/qterminal-0.8.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
             <Dependency>libxcb-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency versionFrom="0.7.0">qtermwidget5-devel</Dependency>
+            <Dependency versionFrom="0.8.0">qtermwidget5-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>lxqt-config</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+            <Dependency versionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -30,7 +31,7 @@
         <Name>qterminal</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
-            <Dependency versionFrom="0.7.0">qtermwidget5</Dependency>
+            <Dependency versionFrom="0.8.0">qtermwidget5</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/share</Path>
@@ -41,9 +42,9 @@
     </Package>
 
     <History>
-        <Update release="1">
-            <Date>2017-01-02</Date>
-            <Version>0.7.1</Version>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.8.0</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

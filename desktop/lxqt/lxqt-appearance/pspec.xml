@@ -7,11 +7,11 @@
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Packager>
         <License>GPL2</License>
-        <Icon>lxqt-menu-cache</Icon>
+        <Icon>lxqt</Icon>
         <IsA>app</IsA>
         <Summary>Feature-rich GTK+ theme switcher of the LXQT Desktop</Summary>
         <Description>Feature-rich GTK+ theme switcher of the LXQT Desktop</Description>
-        <Archive sha1sum="600304a2123dc4c7b5dde73595cc422876a820ad" type="tarxz">http://downloads.sourceforge.net/lxde/lxappearance-0.6.2.tar.xz</Archive>
+        <Archive sha1sum="1c281756b240694d0262edd9d40041d5b127d552" type="tarxz">http://downloads.sourceforge.net/lxde/lxappearance-0.6.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>dbus-glib-devel</Dependency>
@@ -50,9 +50,9 @@
     </Package>
 
     <History>
-        <Update release="1">
-            <Date>2016-12-17</Date>
-            <Version>0.6.2</Version>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.6.3</Version>
             <Comment>rebuild for qt5</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

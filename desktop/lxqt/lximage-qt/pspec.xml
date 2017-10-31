@@ -8,11 +8,12 @@
         </Packager>
         <License>GPL2</License>
         <IsA>app:gui</IsA>
+        <Icon>lxqt</Icon>
         <Summary>Image viewer and screenshot tool.</Summary>
         <Description>Image viewer and screenshot tool.</Description>
-        <Archive sha1sum="a2779bcce4d4f994096d0177a2e9af55e0cf1c10" type="tarxz">https://github.com/lxde/lximage-qt/releases/download/0.5.1/lximage-qt-0.5.1.tar.xz</Archive>
+        <Archive sha1sum="106823cd702359995ed3a21d662a07fe131b3947" type="tarxz">https://github.com/lxde/lximage-qt/releases/download/0.6.0/lximage-qt-0.6.0.tar.xz</Archive>
         <BuildDependencies>
-            <!--<Dependency>glib2-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
             <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
@@ -21,12 +22,12 @@
             <Dependency>qt5-linguist</Dependency>
             <Dependency>libexif-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
-            <Dependency versionFrom="0.11.1">libfm-qt-devel</Dependency>
+            <Dependency versionFrom="0.12.0">libfm-qt-devel</Dependency>
             <Dependency>qt5-qdbusviewer</Dependency>
             <Dependency>menu-cache-devel</Dependency>
-            <Dependency>lxqt-config</Dependency>
+            <Dependency versionFrom="0.12.0">lxqt-config</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>-->
+            <Dependency versionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -51,9 +52,9 @@
     </Package>
 
     <History>
-        <Update release="1">
-            <Date>2017-01-02</Date>
-            <Version>0.5.1</Version>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.6.0</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

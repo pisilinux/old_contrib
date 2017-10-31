@@ -25,5 +25,3 @@ def build():
 def install():
     shelltools.cd("build")
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
-    #remove to avoid file conflict from lxqt-common
-    pisitools.removeDir("/etc")

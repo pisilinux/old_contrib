@@ -8,14 +8,11 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import get
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import autotools
-
+WorkDir="lxmenu-data-%s" % get.srcVERSION()
 def setup():
     #shelltools.export("AUTOPOINT", "true")
-    #autotools.autoreconf("-fiv")
-    autotools.configure("--disable-static \
-                         --enable-nls \
-                         --enable-startup-notification \
-                         --docdir=/%s/%s" % (get.docDIR(), get.srcNAME()))
+    autotools.autoreconf("-fiv")
+    autotools.configure("--disable-static")
 
 def build():
     autotools.make()

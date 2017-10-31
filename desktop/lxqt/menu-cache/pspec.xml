@@ -8,6 +8,7 @@
         </Packager>
         <License>GPL2</License>
         <IsA>app</IsA>
+        <Icon>lxqt</Icon>
         <Summary>freedesktop.org desktop menus for LXDE</Summary>
         <Description>Library used to read freedesktop.org menus</Description>
         <BuildDependencies>

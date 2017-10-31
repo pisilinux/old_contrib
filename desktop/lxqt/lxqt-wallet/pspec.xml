@@ -8,9 +8,12 @@
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Packager>
-        <Summary>Qt-based wallet manager</Summary>
-        <Description>Qt-based wallet manager</Description>
+        <PartOf>desktop.toolkit</PartOf>
         <License>LGPLv2.1-linking-exception</License>
+        <IsA>app:gui</IsA>
+        <Icon>lxqt</Icon>
+        <Summary>Qt-based wallet manager</Summary>
+        <Description>Qt-based wallet manager</Description>        
         <Archive sha1sum="e3489916580f074d02bd09620a94bdf77a4420c6" type="tarxz">https://github.com/mhogomchungu/lxqt_wallet/releases/download/3.0.0/lxqt-wallet-3.0.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>

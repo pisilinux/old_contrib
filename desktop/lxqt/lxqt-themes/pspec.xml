@@ -1,6 +1,6 @@
 <PISI>
     <Source>
-        <Name>lxqt-common</Name>
+        <Name>lxqt-themes</Name>
         <Homepage>http://www.lxde.org</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
@@ -8,19 +8,20 @@
         </Packager>
         <License>GPL2</License>
         <IsA>data</IsA>
-        <Summary>Common data to run a LXQt session.</Summary>
-        <Description>Common data file required for running an lxde-qt session</Description>
-        <Archive sha1sum="f515c42ff6740c48fbd672b521729ed0473e7cef" type="tarxz">https://github.com/lxde/lxqt-common/releases/download/0.11.1/lxqt-common-0.11.1.tar.xz</Archive>
+        <Icon>lxqt</Icon>
+        <Summary>LXQt themes, graphics and icons.</Summary>
+        <Description>LXQt themes, graphics and icons</Description>
+        <Archive sha1sum="60e04cbb2c761889378714feeeae85fa6559a4e4" type="tarxz">https://github.com/lxde/lxqt-themes/releases/download/0.12.0/lxqt-themes-0.12.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
-            <Dependency versionFrom="0.11.1">liblxqt-devel</Dependency>
+            <Dependency versionFrom="0.12.0">liblxqt-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
-            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+            <Dependency versionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
-        <Name>lxqt-common</Name>
+        <Name>lxqt-themes</Name>
         <RuntimeDependencies>
             <Dependency>noto-fonts</Dependency>
             <Dependency>openbox</Dependency>
@@ -34,14 +35,14 @@
             <Path fileType="data">/usr/share/themes/lxqt</Path>
         </Files>
         <AdditionalFiles>
-            <AdditionalFile permission="0644" owner="root" target="/usr/share/desktop-directories/lxqt-settings.directory">lxqt-settings.directory</AdditionalFile>
+        <!--    <AdditionalFile permission="0644" owner="root" target="/usr/share/desktop-directories/lxqt-settings.directory">lxqt-settings.directory</AdditionalFile>
             <AdditionalFile permission="0644" owner="root" target="/usr/share/desktop-directories/lxqt-leave.directory">lxqt-leave.directory</AdditionalFile>
-            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/connection-editor.desktop">nm-connection-editor.desktop</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/connection-editor.desktop">nm-connection-editor.desktop</AdditionalFile>-->
 <!--    Customizations for Pisi          -->
-            <AdditionalFile permission="0644" owner="root" target="/etc/pcmanfm-qt/lxqt/settings.conf">settings.conf</AdditionalFile>
+           <!-- <AdditionalFile permission="0644" owner="root" target="/etc/pcmanfm-qt/lxqt/settings.conf">settings.conf</AdditionalFile>
             <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/session.conf">session.conf</AdditionalFile>
             <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/lxqt.conf">lxqt.conf</AdditionalFile>
-            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/panel.conf">panel.conf</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/panel.conf">panel.conf</AdditionalFile>-->
 <!--  Adds pisi startup icon to Themes  -->
             <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/themes/ambiance/mainmenu.svg">mainmenu.svg</AdditionalFile>
             <AdditionalFile permission="0644" owner="root" target="/usr/share/lxqt/themes/dark/mainmenu.svg">mainmenu.svg</AdditionalFile>
@@ -52,8 +53,8 @@
     </Package>
     <History>
         <Update release="1">
-            <Date>2017-01-02</Date>
-            <Version>0.11.1</Version>
+            <Date>2017-10-24</Date>
+            <Version>0.12.0</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

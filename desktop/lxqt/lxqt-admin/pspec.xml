@@ -8,9 +8,10 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app</IsA>
+        <Icon>lxqt</Icon>
         <Summary>LXQt system administration tool</Summary>
         <Description>LXQt system administration tool</Description>
-        <Archive sha1sum="2ff61d7bc3b3354551a71e09a4d13269b29032e7" type="tarxz">https://github.com/lxde/lxqt-admin/releases/download/0.11.1/lxqt-admin-0.11.1.tar.xz</Archive>
+        <Archive sha1sum="a8d72969391ec35e523363c3a5e8c943426d86c4" type="tarxz">https://github.com/lxde/lxqt-admin/releases/download/0.12.0/lxqt-admin-0.12.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>glib2-devel</Dependency>
@@ -19,7 +20,7 @@
             <Dependency versionFrom="0.11.1">liblxqt-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
-            <Dependency vesionFrom="0.3.0">lxqt-build-tools</Dependency>
+            <Dependency vesionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -40,9 +41,9 @@
         </RuntimeDependencies>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2017-01-02</Date>
-            <Version>0.11.1</Version>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.12.0</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

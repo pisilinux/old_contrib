@@ -1,0 +1,46 @@
+<PISI>
+    <Source>
+        <Name>meteo</Name>
+        <Homepage>https://github.com/dglent/meteo-qt</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>meteo-qt is an application to display weather information in desktop panels, desktop notifications and its own window.</Summary>
+        <Description>meteo-qt is an application to display weather information in desktop panels, desktop notifications and its own window.</Description>
+        <Archive sha1sum="6d4d7864bba21784da6dd0bf2ae7753c2405b6f7" type="targz">https://github.com/dglent/meteo-qt/archive/v0.9.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-qt5-devel</Dependency>
+            <Dependency>imagemagick-devel</Dependency>            
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>python3-requests</Dependency>
+        </BuildDependencies>        
+    </Source>
+    <Package>
+        <Name>meteo</Name>
+        <Summary>meteo-qt is an application to display weather information in desktop panels, desktop notifications and its own window.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <Dependency>python-lxml</Dependency>
+            <Dependency>python3-sip</Dependency>
+            <Dependency>python3-requests</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share</Path>
+            <Path fileType="library">/usr/lib</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-10-25</Date>
+            <Version>0.9.7</Version>
+            <Comment>First Release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

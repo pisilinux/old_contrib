@@ -8,9 +8,10 @@
         </Packager>
         <License>GPL2</License>
         <IsA>app</IsA>
+        <Icon>lxqt</Icon>
         <Summary>Desktop panel</Summary>
         <Description>The LXQt desktop panel</Description>
-        <Archive sha1sum="a3e436079ed289cab31df80e2e5fc14ad7ded2e8" type="tarxz">https://github.com/lxde/lxqt-panel/releases/download/0.11.1/lxqt-panel-0.11.1.tar.xz</Archive>
+        <Archive sha1sum="68b8229ec792c1cbae3bfed5f4a12eb9b766fe14" type="tarxz">https://github.com/lxde/lxqt-panel/releases/download/0.12.0/lxqt-panel-0.12.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>glib2-devel</Dependency>
@@ -21,7 +22,7 @@
             <Dependency>libXdamage-devel</Dependency>
             <Dependency>libdbusmenu-qt-devel</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency versionFrom="0.11.1">liblxqt-devel</Dependency>
+            <Dependency versionFrom="0.12.0">liblxqt-devel</Dependency>
             <Dependency>libqtxdg-devel</Dependency>
             <Dependency>libxkbcommon-devel</Dependency>
             <Dependency>lm_sensors-devel</Dependency>
@@ -38,7 +39,7 @@
             <Dependency>xcb-util-devel</Dependency>
             <Dependency>libXrender-devel</Dependency>
             <Dependency>desktop-file-utils</Dependency>
-            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+            <Dependency versionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -68,7 +69,7 @@
             <Dependency>pulseaudio-libs</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="config">/etc/lxqt</Path>
+            <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share</Path>
@@ -76,6 +77,16 @@
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
+        <AdditionalFiles>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/desktop-directories/lxqt-settings.directory">lxqt-settings.directory</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/desktop-directories/lxqt-leave.directory">lxqt-leave.directory</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/usr/share/applications/connection-editor.desktop">nm-connection-editor.desktop</AdditionalFile>
+<!--    Customizations for Pisi          -->
+            <!--<AdditionalFile permission="0644" owner="root" target="/etc/pcmanfm-qt/lxqt/settings.conf">settings.conf</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/session.conf">session.conf</AdditionalFile>
+            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/lxqt.conf">lxqt.conf</AdditionalFile>-->
+            <AdditionalFile permission="0644" owner="root" target="/etc/lxqt/panel.conf">panel.conf</AdditionalFile>
+        </AdditionalFiles>
     </Package>
     <Package>
         <Name>lxqt-panel-devel</Name>
@@ -90,9 +101,9 @@
     </Package>
     
     <History>
-        <Update release="1">
-            <Date>2017-01-02</Date>
-            <Version>0.11.1</Version>
+        <Update release="2">
+            <Date>2017-10-24</Date>
+            <Version>0.12.0</Version>
             <Comment>First Release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

@@ -8,23 +8,24 @@
         </Packager>
         <License>GPL2</License>
         <IsA>library</IsA>
+        <Icon>lxqt</Icon>
         <Summary>Common base library for LXQt components.</Summary>
         <Description>Core utility library for all LXDE-Qt components</Description>
-        <Archive sha1sum="3359a8d36f3e7aa15abf1fc879df642010dab273" type="tarxz">https://github.com/lxde/liblxqt/releases/download/0.11.1/liblxqt-0.11.1.tar.xz</Archive>
+        <Archive sha1sum="abc18a1b673612e2f4661e532f6a6a41298c5eb4" type="tarxz">https://github.com/lxde/liblxqt/releases/download/0.12.0/liblxqt-0.12.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
             <Dependency>glibc-devel</Dependency>
             <Dependency>kwindowsystem-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency versionFrom="2.0.0">libqtxdg-devel</Dependency>
+            <Dependency versionFrom="3.1.0">libqtxdg-devel</Dependency>
             <Dependency>pkgconfig</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-qdbusviewer</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>libXScrnSaver-devel</Dependency>
-            <Dependency versionFrom="0.3.0">lxqt-build-tools</Dependency>
+            <Dependency versionFrom="0.4.0">lxqt-build-tools</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
@@ -32,7 +33,7 @@
         <RuntimeDependencies>
             <Dependency>kwindowsystem</Dependency>
             <Dependency>libgcc</Dependency>
-            <Dependency versionFrom="1.3.0">libqtxdg</Dependency>
+            <Dependency versionFrom="3.1.0">libqtxdg</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>libX11</Dependency>
@@ -58,9 +59,9 @@
         </RuntimeDependencies>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2017-01-02</Date>
-            <Version>0.11.1</Version>
+        <Update release="2">
+            <Date>2017-10-23</Date>
+            <Version>0.12.0</Version>
             <Comment>first release</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

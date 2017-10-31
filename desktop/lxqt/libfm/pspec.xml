@@ -7,6 +7,7 @@
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Packager>
         <License>GPL2</License>
+        <Icon>lxqt</Icon>
         <IsA>library</IsA>
         <Summary>Core library of PCManFM file manager</Summary>
         <Description>libfm is a Core library of PCManFM file manager</Description>
@@ -72,10 +73,10 @@
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2016-12-28</Date>
+        <Update release="2">
+            <Date>2017-10-23</Date>
             <Version>1.2.5</Version>
-            <Comment>First Release</Comment>
+            <Comment>Release bump</Comment>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Update>

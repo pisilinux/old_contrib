@@ -12,8 +12,8 @@ def setup():
     shelltools.makedirs("build")
     shelltools.cd("build")
     cmaketools.configure("-DCMAKE_BUILD_TYPE=Release          \
-                                         -DPULL_TRANSLATIONS=no \
-                                         -DCMAKE_INSTALL_LIBDIR=lib", sourceDir="..")
+                          -DPULL_TRANSLATIONS=no \
+                          -DCMAKE_INSTALL_LIBDIR=lib", sourceDir="..")
 
 
 def build():

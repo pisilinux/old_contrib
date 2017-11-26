@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libgtop</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>System monitoring library</Summary>
+        <Description>libgtop is a library to get system specific data such as CPU and Memory Usage and information about running processes.</Description>
+        <Archive sha1sum="090fb62101ee85ba6bcbce5a438a2e8fe4e1615c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgtop/2.34/libgtop-2.34.2.tar.xz</Archive>
+         <BuildDependencies>
+           <Dependency>glib2-devel</Dependency>
+           <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgtop</Name>
+        <RuntimeDependencies>
+           <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgtop-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>libgtop reference documents</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgtop-devel</Name>
+        <Summary>Development files for libgtop</Summary>
+        <RuntimeDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency release="current">libgtop</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="info">/usr/share/info</Path>
+        </Files>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2017-03-20</Date>
+            <Version>2.34.2</Version>
+            <Comment>First release</Comment>
+            <Name>Ali ALGUL</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

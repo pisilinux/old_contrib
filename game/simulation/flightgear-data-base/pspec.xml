@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>flightgear-data-base</Name>
+        <Homepage>http://www.flightgear.org</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>flightgear</Icon>
+        <IsA>data</IsA>
+        <Summary>Flightgear data files</Summary>
+        <Description>Contains base data files for Flightgear simulator. You can also install additional data files, including the 3 DVD sized world map from the original website.</Description>
+        <Archive sha1sum="8daec4ca2b46cc9a4b3179c25bc79a0a86745faa" type="tarbz2">http://downloads.sourceforge.net/project/flightgear/release-2016.4/FlightGear-2016.4.4-data.tar.bz2</Archive>
+    </Source>
+
+    <Package>
+        <Name>flightgear-data-base</Name>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2017-01-18</Date>
+            <Version>2016.4.4</Version>
+            <Comment>new release</Comment>
+            <Name>Ali ALGÜL</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

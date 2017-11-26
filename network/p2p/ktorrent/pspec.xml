@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>ktorrent</Name>
+        <Homepage>https://download.kde.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A powerful BitTorrent client for KDE</Summary>
+        <Description>A powerful BitTorrent client for KDE</Description>
+        <Archive sha1sum="44da78db61d86a5551a17019f95bf905ad00d918" type="tarxz">https://download.kde.org/stable/ktorrent/5.1/ktorrent-5.1.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="2.1">libktorrent-devel</Dependency>
+             <Dependency versionFrom="5.15">kcmutils-devel</Dependency>
+             <Dependency versionFrom="5.15">kconfig-devel</Dependency>
+             <Dependency versionFrom="5.15">kconfigwidgets-devel</Dependency>
+             <Dependency versionFrom="5.15">kcoreaddons-devel</Dependency>
+             <Dependency versionFrom="5.15">kcrash-devel</Dependency>
+             <Dependency versionFrom="5.15">kdbusaddons-devel</Dependency>
+             <Dependency versionFrom="5.15">kdoctools-devel</Dependency>
+             <Dependency versionFrom="5.15">ki18n-devel</Dependency>
+             <Dependency versionFrom="5.15">kiconthemes-devel</Dependency>
+             <Dependency versionFrom="5.15">kio-devel</Dependency>
+             <Dependency versionFrom="5.15">knotifications-devel</Dependency>
+             <Dependency versionFrom="5.15">knotifyconfig-devel</Dependency>
+             <Dependency versionFrom="5.15">kparts-devel</Dependency>
+             <Dependency versionFrom="5.15">kservice-devel</Dependency>
+             <Dependency versionFrom="5.15">kwidgetsaddons-devel</Dependency>
+             <Dependency versionFrom="5.15">kwindowsystem-devel</Dependency>
+             <Dependency versionFrom="5.15">kxmlgui-devel</Dependency>
+             <Dependency versionFrom="5.15">solid-devel</Dependency>
+             <Dependency versionFrom="5.7.0">qt5-base-devel</Dependency>
+             <Dependency versionFrom="5.7.0">qt5-multimedia-devel</Dependency>
+             <Dependency versionFrom="5.7.0">qt5-script-devel</Dependency>
+             <Dependency>extra-cmake-modules</Dependency>
+             <Dependency>karchive-devel</Dependency>
+             <Dependency>kcompletion-devel</Dependency>
+             <Dependency>kitemviews-devel</Dependency>
+             <Dependency>ktextwidgets-devel</Dependency>
+             <Dependency>qt5-phonon-devel</Dependency>
+             <Dependency>taglib-devel</Dependency>
+             <Dependency>kross-devel</Dependency>
+             <Dependency>kplotting-devel</Dependency>
+             <Dependency>ksyndication-devel</Dependency>
+             <Dependency>kdewebkit-devel</Dependency>
+             <Dependency>kdnssd-devel</Dependency>
+             <Dependency>boost-devel</Dependency>
+             <Dependency>plasma-workspace-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    <Package>
+        <Name>ktorrent</Name>
+        <RuntimeDependencies>
+            <Dependency>kio</Dependency>
+            <Dependency>ki18n</Dependency>
+            <Dependency>kross</Dependency>
+            <Dependency>kcrash</Dependency>
+            <Dependency>kdnssd</Dependency>
+            <Dependency>kparts</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>karchive</Dependency>
+            <Dependency>kcmutils</Dependency>
+            <Dependency>kservice</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kdewebkit</Dependency>
+            <Dependency>kplotting</Dependency>
+            <Dependency>kitemviews</Dependency>
+            <Dependency>qt5-phonon</Dependency>
+            <Dependency>qt5-webkit</Dependency>
+            <Dependency>kcompletion</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kiconthemes</Dependency>
+            <Dependency>libktorrent</Dependency>
+            <Dependency>ksyndication</Dependency>
+            <Dependency>ktextwidgets</Dependency>
+            <Dependency>knotifyconfig</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>plasma-workspace</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/knotifications5</Path>
+            <Path fileType="data">/usr/share/ktorrent</Path>
+            <Path fileType="data">/usr/share/kxmlgui</Path>
+            <Path fileType="info">/usr/share/metainfo</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2017-10-09</Date>
+            <Version>5.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

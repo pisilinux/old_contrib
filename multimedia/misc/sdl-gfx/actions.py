@@ -14,11 +14,11 @@ from pisi.actionsapi import get
 
 def setup():
     pisitools.dosed("configure.in", "-O")
-    shelltools.makedirs("m4")
+    #shelltools.makedirs("m4")
 
     #autotools.autoreconf("-vfi")
 
-    options = "--disable-dependency-tracking \
+    options = "\
                --enable-mmx \
                --disable-static"
 

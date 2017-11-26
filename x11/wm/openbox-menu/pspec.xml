@@ -14,7 +14,7 @@
         <BuildDependencies>
             <Dependency>gtk2-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
-            <Dependency>lxqt-menu-cache-devel</Dependency>
+            <Dependency>menu-cache-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -23,7 +23,7 @@
         <RuntimeDependencies>
             <Dependency>gtk2</Dependency>
             <Dependency>glib2</Dependency>
-            <Dependency>lxqt-menu-cache</Dependency>
+            <Dependency>menu-cache</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/bin/</Path>

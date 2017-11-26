@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>lxqt-wallet</Name>
+        <Homepage>https://github.com/mhogomchungu/lxqt_wallet</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <PartOf>desktop.toolkit</PartOf>
+        <License>LGPLv2.1-linking-exception</License>
+        <IsA>app:gui</IsA>
+        <Icon>lxqt</Icon>
+        <Summary>Qt-based wallet manager</Summary>
+        <Description>Qt-based wallet manager</Description>        
+        <Archive sha1sum="e3489916580f074d02bd09620a94bdf77a4420c6" type="tarxz">https://github.com/mhogomchungu/lxqt_wallet/releases/download/3.0.0/lxqt-wallet-3.0.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency versionFrom="5.6.2">qt5-base-devel</Dependency>
+            <Dependency versionFrom="5.6.2">qt5-linguist</Dependency>
+            <Dependency>libsecret-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>kwallet-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>lxqt-wallet</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>kwallet</Dependency>
+            <Dependency>libsecret</Dependency>
+            <Dependency versionFrom="5.6.2">qt5-base</Dependency>            
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/liblxqt-wallet.*</Path>
+            <Path fileType="library">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localdata">/usr/share/lxqt/translations</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>lxqt-wallet-devel</Name>
+        <RuntimeDependencies>
+            <Dependency versionFrom="5.6.2">qt5-base-devel</Dependency>
+            <Dependency release="current">lxqt-wallet</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/lxqt</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/lxqt-wallet.pc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2015-10-16</Date>
+            <Version>3.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

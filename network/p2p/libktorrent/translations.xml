@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libktorrent</Name>
+        <Summary xml:lang="tr">A BitTorrent protocol implementation</Summary>
+        <Description xml:lang="tr">A BitTorrent protocol implementation</Description>
+    </Source>
+</PISI>

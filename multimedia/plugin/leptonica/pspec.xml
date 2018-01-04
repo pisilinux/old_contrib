@@ -13,7 +13,7 @@
         <IsA>app:console</IsA>
         <Summary>Leptonica Library</Summary>
         <Description>An open source C library for efficient image processing and image analysis operations.</Description>
-        <Archive sha1sum="6769a388878279994aaabe0b167dd2691a8bd080" type="targz">http://www.leptonica.com/source/leptonica-1.74.1.tar.gz</Archive>
+        <Archive sha1sum="c1977bd9e5fe9f75d8e4ad3ca4f42fb3db906a5a" type="targz">http://www.leptonica.com/source/leptonica-1.74.4.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>webp-devel</Dependency>
             <Dependency>tiff-devel</Dependency>
@@ -21,7 +21,10 @@
             <Dependency>zlib-devel</Dependency>
             <Dependency>libpng-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
-        </BuildDependencies>   
+        </BuildDependencies>
+        <!-- Patches>
+            <Patch>tesseract-pkgconfig.patch</Patch>
+        </Patches -->
     </Source>
 
     <Package>
@@ -51,6 +54,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2018-01-04</Date>
+            <Version>1.74.4</Version>
+            <Comment>Version Bump.</Comment>
+            <Name>Ali Cengiz Kurt(alick)</Name>
+            <Email>alicengizkurt@gmail.com</Email>
+        </Update>
         <Update release="1">
             <Date>2017-01-18</Date>
             <Version>1.74.1</Version>

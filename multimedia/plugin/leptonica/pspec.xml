@@ -22,9 +22,9 @@
             <Dependency>libpng-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
         </BuildDependencies>
-        <!-- Patches>
-            <Patch>tesseract-pkgconfig.patch</Patch>
-        </Patches -->
+        <Patches>
+            <Patch>lept-pkgconfig.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>

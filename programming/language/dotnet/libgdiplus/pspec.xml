@@ -26,12 +26,15 @@
     <Package>
         <Name>libgdiplus</Name>
         <RuntimeDependencies>
-            <Dependency>libjpeg-turbo</Dependency>
             <Dependency>tiff</Dependency>
-            <Dependency>giflib</Dependency>
-            <Dependency>libexif</Dependency>
             <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>freetype</Dependency>
             <Dependency>fontconfig</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -43,6 +46,7 @@
         <Name>libgdiplus-devel</Name>
         <RuntimeDependencies>
             <Dependency release="current">libgdiplus</Dependency>
+            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -51,7 +55,7 @@
 
     <History>
         <Update release="1">
-            <Date>2012-10-19</Date>
+            <Date>2018-01-06</Date>
             <Version>4.2</Version>
             <Comment>versıon bump</Comment>
             <Name>Ali Algul</Name>

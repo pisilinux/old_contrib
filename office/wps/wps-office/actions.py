@@ -17,7 +17,7 @@ def install():
       pisitools.insinto("/usr/share","resource/*")
       pisitools.insinto("etc/fonts/conf.avail","fontconfig/*")
       pisitools.insinto("/usr/share/fonts/wps-office","fonts/*")
-      pisitools.insinto("opt/kingsoft/wps-office/office6","office6/*")
+      pisitools.insinto("/usr/lib/kingsoft/wps-office/office6","office6/*")
 # Take a look at the source folder for these file as documentation.
 #    pisitools.dodoc("AUTHORS", "BUGS", "ChangeLog", "COPYING", "README")
 

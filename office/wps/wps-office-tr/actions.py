@@ -12,5 +12,5 @@ WorkDir="."
 
 
 def install():
-    pisitools.insinto("opt/kingsoft/wps-office/office6/mui/tr_TR","tr_TR/*")
+    pisitools.insinto("/usr/lib/kingsoft/wps-office/office6/mui/tr_TR","tr_TR/*")
 

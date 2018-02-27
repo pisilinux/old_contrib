@@ -1,0 +1,36 @@
+diff -Nuar a/et b/et
+--- a/et	2017-06-09 13:12:50.000000000 +0300
++++ b/et	2018-02-18 23:02:43.617502013 +0300
+@@ -7,7 +7,7 @@
+ if [ -d "${gBinPath}/office6" ]; then
+ 	gInstallPath=${gBinPath}
+ else
+-	gInstallPath=/opt/kingsoft/wps-office
++	gInstallPath=/usr/lib/kingsoft/wps-office
+ fi
+ gApp=et
+ gDaemon=0
+diff -Nuar a/wpp b/wpp
+--- a/wpp	2017-06-09 13:12:50.000000000 +0300
++++ b/wpp	2018-02-18 23:03:08.633500208 +0300
+@@ -7,7 +7,7 @@
+ if [ -d "${gBinPath}/office6" ]; then
+ 	gInstallPath=${gBinPath}
+ else
+-	gInstallPath=/opt/kingsoft/wps-office
++	gInstallPath=/usr/lib/kingsoft/wps-office
+ fi
+ gApp=wpp
+ gDaemon=0
+diff -Nuar a/wps b/wps
+--- a/wps	2017-06-09 13:12:50.000000000 +0300
++++ b/wps	2018-02-18 23:03:35.323498282 +0300
+@@ -7,7 +7,7 @@
+ if [ -d "${gBinPath}/office6" ]; then
+ 	gInstallPath=${gBinPath}
+ else
+-	gInstallPath=/opt/kingsoft/wps-office
++	gInstallPath=/usr/lib/kingsoft/wps-office
+ fi
+ gApp=wps
+ gDaemon=0

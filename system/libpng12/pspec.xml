@@ -1,4 +1,3 @@
- 
 <?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
@@ -7,14 +6,14 @@
         <Homepage>http://www.libpng.org</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
+            <Email>admin@pisilinux.org</Email>
         </Packager>
         <License>as-is</License>
         <IsA>library</IsA>
         <PartOf>library</PartOf>
         <Summary>Portable Network Graphics library</Summary>
         <Description>The Portable Network Graphics (PNG) format was designed to replace the older and simpler GIF format and, to some extent, the much more complex TIFF format. Project's main aim is to concentrate on two major uses: the World Wide Web (WWW) and image-editing.</Description>
-        <Archive sha1sum="c4d1881a376836a45688446624fd5d834ea118f0" type="tarbz2">mirrors://sourceforge/libpng/libpng-1.2.50.tar.bz2</Archive>
+        <Archive sha1sum="4376e9ae6cf23efe63975067c4f135ff1777671a" type="tarxz">mirrors://sourceforge/libpng/libpng12/1.2.59/libpng-1.2.59.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
@@ -47,7 +46,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
             <Path fileType="data">/usr/lib32/pkgconfig</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
@@ -71,6 +70,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2018-02-27</Date>
+            <Version>1.2.59</Version>
+            <Comment>Version bump</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2013-09-23</Date>
             <Version>1.2.50</Version>
@@ -78,6 +84,5 @@
             <Name>Burak Fazıl Ertürk</Name>
             <Email>burakerturk@pisilinux.org</Email>
         </Update>
-        
     </History>
 </PISI>

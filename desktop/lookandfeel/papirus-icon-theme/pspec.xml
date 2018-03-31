@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>papirus-icon-theme</Name>
+        <Homepage>https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/</Homepage>
+        <Packager>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Packager>
+        <License>any</License>
+        <IsA>library</IsA>
+        <Summary>Papirus simge teması</Summary>
+        <Description>Papirus simge teması</Description>
+        <Archive sha1sum="572bc30c841474ad74b68e9b76cbdc7e24990c80" type="targz">https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/archive/20180311.tar.gz</Archive>
+        <!--
+        <BuildDependencies>
+            <Dependency>Dep1-devel</Dependency>
+            <Dependency>Dep2-devel</Dependency>
+            <Dependency>Dep3-devel</Dependency>
+            <Dependency versionFrom="">Dep4-devel</Dependency>
+        </BuildDependencies>
+        -->
+        <!--
+        <Patches>
+            <Patch>papirus-icon-theme.patch</Patch>
+            <Patch level="1">papirus-icon-theme.patch</Patch>
+        </Patches>
+        -->
+    </Source>
+
+    <Package>
+        <Name>papirus-icon-theme</Name>
+        <!--
+        <RuntimeDependencies>
+            <Dependency>Dep1</Dependency>
+            <Dependency>Dep2</Dependency>
+            <Dependency>Dep3</Dependency>
+            <Dependency versionFrom="">Dep4</Dependency>
+        </RuntimeDependencies>
+        -->
+        <Files>
+            <Path fileType="data">/usr/share/icons</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-03-31</Date>
+            <Version>20180311</Version>
+            <Comment>First release</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

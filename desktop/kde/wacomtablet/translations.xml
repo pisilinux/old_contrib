@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>wacomtablet</Name>
+        <Summary xml:lang="tr">KDE GUI for the Wacom Linux Drivers</Summary>
+        <Description xml:lang="tr">Linux Wacom Projesi, Linux işletim sistemi altında Wacom tabletlerini yapılandırmak ve çalıştırmak için sürücüleri, kütüphaneleri ve belgeleri yönetir.</Description>
+    </Source>
+</PISI>

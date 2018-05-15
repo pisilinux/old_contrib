@@ -1,0 +1,42 @@
+<PISI>
+    <Source>
+        <Name>i2c-tools</Name>
+        <Homepage>https://mirrors.edge.kernel.org/</Homepage>
+        <Packager>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A heterogeneous set of I2C tools for Linux</Summary>
+        <Description>A heterogeneous set of I2C tools for Linux</Description>
+        <Archive type="tarxz" sha1sum="6b4073128e5810b05f1958b4f6c860c8b19c7acf">https://mirrors.edge.kernel.org/pub/software/utils/i2c-tools/i2c-tools-4.0.tar.xz</Archive>
+        <Patches>
+            <Patch level="1">0001-i2c-tools-i2cbusses-Avoid-buffer-overflows-in-sysfs-.patch</Patch>
+            <Patch level="1">0002-tools-i2cbusses-Check-the-return-value-of-snprintf.patch</Patch>
+            <Patch level="1">0003-py-smbus-Fix-FSF-address-in-smbusmodule.c.patch</Patch>
+        </Patches>
+    </Source>
+    <Package>
+        <Name>i2c-tools</Name>
+        <Summary>A heterogeneous set of I2C tools for Linux</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-05-11</Date>
+            <Version>4.0</Version>
+            <Comment>First release</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>ddcutil</Name>
+        <Summary xml:lang="tr">ddcutil</Summary>
+        <Description xml:lang="tr">ddcutil</Description>
+    </Source>
+</PISI>

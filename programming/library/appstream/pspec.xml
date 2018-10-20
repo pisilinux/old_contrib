@@ -30,6 +30,8 @@
             <Dependency>libyaml-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>gperf</Dependency>
             <Dependency versionFrom="1.54.1">gobject-introspection-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -45,16 +47,20 @@
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc</Path>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="data">/usr/share</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="info">/usr/share/metainfo</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gettext</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/share/libalpm</Path>
         </Files>
-        <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/libalpm/hooks/update-appstream-cache.hook">update-appstream-cache.hook</AdditionalFile>
-        </AdditionalFiles>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
     </Package>
+    
     <Package>
         <Name>appstream-qt5</Name>
         <RuntimeDependencies>
@@ -67,6 +73,7 @@
             <Path fileType="library">/usr/lib/libAppStreamQt.*</Path>
         </Files>
     </Package>
+    
     <Package>
         <Name>appstream-qt5-devel</Name>
         <Summary>Development files for appstream</Summary>
@@ -78,6 +85,7 @@
             <Path fileType="data">/usr/lib/cmake</Path>
         </Files>
     </Package>
+    
     <Package>
         <Name>appstream-devel</Name>
         <Summary>Development files for appstream</Summary>
@@ -90,9 +98,10 @@
             <Path fileType="data">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
+    
     <History>
         <Update release="1">
-            <Date>2018-05-07</Date>
+            <Date>2018-10-20</Date>
             <Version>0.12.0</Version>
             <Comment>First release</Comment>
             <Name>PisiLinux Community</Name>

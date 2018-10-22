@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>woeusb</Name>
+        <Homepage>https://github.com/slacka/WoeUSB</Homepage>
+        <Packager>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>Create a Windows USB stick installer</Summary>
+        <Description>A Linux program to create a Windows USB stick installer from a real Windows DVD or image. The important part is that you should format usb stick in NTFS.</Description>
+        <Archive sha1sum="dd4aa7454cc6c40be8300b877a71ef4cbd11f55b" type="targz">https://github.com/slacka/WoeUSB/archive/v3.2.10.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>m4</Dependency>
+            <Dependency>wxGTK-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>woeusb</Name>
+        <RuntimeDependencies>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>parted</Dependency>
+            <Dependency>ntfs-3g</Dependency>
+            <Dependency>dosfstools</Dependency>
+        </RuntimeDependencies>
+
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc/woeusb</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-10-22</Date>
+            <Version>3.2.10</Version>
+            <Comment>First release</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

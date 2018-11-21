@@ -41,6 +41,7 @@
             <Dependency versionFrom="5.0.1">llvm-clang-devel</Dependency>
             <Dependency versionFrom="1.2">libxshmfence-devel</Dependency>
             <Dependency>automake</Dependency>
+            <Dependency>libclc-devel</Dependency>
             <Dependency>libva-devel</Dependency>
             <Dependency>libunwind-devel</Dependency>
             <Dependency>lm_sensors-devel</Dependency>

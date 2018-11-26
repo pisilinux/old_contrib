@@ -18,8 +18,7 @@
         <Summary>A Dropbox client</Summary>
         <Description>Dropbox is a Web-based file hosting service which uses cloud computing to enable users to store and share files and folders with others across the Internet using file synchronization.</Description>
         <Archive sha1sum="cdebb2724b99256ee87ea4b8cd1f9caaebe7e5f1" type="targz" target="x86_64">https://clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-lnx.x86_64-61.4.95.tar.gz</Archive>
-        <Archive sha1sum="b08512b9364a26ebf8fa60b681f0b6be528770c6" type="targz" target="hede">https://dl.opendesktop.org/api/files/download/id/1466610813/164789-dropbox-monochrome-tray-icons.tar.gz</Archive>
-    </Source>
+      </Source>
 
     <Package>
         <Name>dropbox</Name>

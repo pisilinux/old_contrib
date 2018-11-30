@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>jsoncpp</Name>
+        <Summary xml:lang="tr">JSON, tamamen programlama dillerinden bağımsız, ancak C türevi dillere (C, C++, C#, Java, JavaScript, Perl, Python ve daha pek çoğu), yazılış bakımından çok benzeyen bir veri tanımlama formatıdır. </Summary>
+        <Description xml:lang="tr">JSON (JavaScript Object Notation) hafif bir veri değişim formatıdır. İnsanların okuyup yazabilmesi kolaydır. Makinaların tarayıp, yaratabilmesi kolaydır. JavaScript Programlama Dili, Standard ECMA-262 3.Yayın - Aralık 1999, versiyonunun alt kümesi üzerine kurulmuştur. JSON, tamamen programlama dillerinden bağımsız, ancak C türevi dillere (C, C++, C#, Java, JavaScript, Perl, Python ve daha pek çoğu), yazılış bakımından çok benzeyen bir veri tanımlama formatıdır. Bu özellikler, JSON'u veri değiştokuşu için ideal hale getirmektedir.</Description>
+    </Source>
+</PISI>

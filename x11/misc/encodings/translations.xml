@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>encodings</Name>
+        <Summary xml:lang="tr">X.org font encoding files
+</Summary>
+        <Description xml:lang="tr">X.org font encoding files
+</Description>
+    </Source>
+</PISI>

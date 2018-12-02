@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>mkfontscale</Name>
+        <Summary xml:lang="tr">Create an index of scalable font files for X
+</Summary>
+        <Description xml:lang="tr">Create an index of scalable font files for X
+</Description>
+    </Source>
+</PISI>

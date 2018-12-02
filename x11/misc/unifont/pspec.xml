@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>unifont</Name>
+        <Homepage>http://unifoundry.com/unifont.html</Homepage>
+        <Packager>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Packager>
+        <License>GPL</License>
+        <License>custom</License>
+        <IsA>data:font</IsA>
+        <Summary>GNU Unifont Glyphs</Summary>
+        <Description>GNU Unifont Glyphs.</Description>
+        <Archive sha1sum="3dd9229579b3a4c75c032fc22be6e7fae612a113" type="binary">http://ftp.gnu.org/gnu/unifont/unifont-11.0.02/unifont-11.0.02.ttf</Archive>
+    </Source>
+
+    <Package>
+        <Name>unifont</Name>
+        <RuntimeDependencies>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>font-util</Dependency>
+            <Dependency>encodings</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/fonts/unifont</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="2">
+            <Date>2018-12-02</Date>
+            <Version>11.0.02</Version>
+            <Comment>RuntimeDependencies eklendi</Comment>
+            <Name>AYDIN ATMACA</Name>
+            <Email>aydinatmaca@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2018-12-01</Date>
+            <Version>11.0.02</Version>
+            <Comment>First release.</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

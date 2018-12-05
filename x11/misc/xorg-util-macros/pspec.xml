@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xorg-util-macros</Name>
+        <Homepage>https://github.com/freedesktop/xorg-macros</Homepage>
+        <Packager>
+            <Name>AYDIN ATMACA</Name>
+            <Email>aydinatmaca@gmail.com</Email>
+        </Packager>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>X.Org Autotools macros</Summary>
+        <Description>X.Org Autotools macros</Description>
+        <Archive sha1sum="1d13cb41db614d955f7a1f4304ce2049a699e24d" type="targz">https://github.com/freedesktop/xorg-macros/archive/util-macros-1.19.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>util-macros</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="fonts">/usr/share/fonts</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-11-30</Date>
+            <Version>1.19.1</Version>
+            <Comment>First release</Comment>
+            <Name>AYDIN ATMACA</Name>
+            <Email>aydinatmaca@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

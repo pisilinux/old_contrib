@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>jq</Name>
+        <Homepage>https://github.com/stedolan/jq</Homepage>
+        <Packager>
+            <Name>AYDIN ATMACA</Name>
+            <Email>aydinatmaca@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>jq is a lightweight and flexible command-line JSON processor.</Summary>
+        <Description>jq is a lightweight and flexible command-line JSON processor.</Description>
+        <Archive sha1sum="73bcbdc45be4db907a864e829b06cd869f77f4f7" type="targz">https://github.com/stedolan/jq/releases/download/jq-1.6/jq-1.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glibc-devel</Dependency>
+            <Dependency>glibc</Dependency>
+            <Dependency>oniguruma</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>jq</Name>
+        <RuntimeDependencies>
+            <Dependency>oniguruma</Dependency>
+            <Dependency>autoconf</Dependency>
+            <Dependency>automake</Dependency>
+            <Dependency>bison</Dependency>
+            <Dependency>flex</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="all">/</Path>
+            <!--
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            -->
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-06</Date>
+            <Version>1.6</Version>
+            <Comment>First release</Comment>
+            <Name>AYDIN ATMACA</Name>
+            <Email>aydinatmaca@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>oniguruma</Name>
+        <Summary xml:lang="tr">a regular expressions library</Summary>
+        <Description xml:lang="tr">a regular expressions library</Description>
+    </Source>
+</PISI>

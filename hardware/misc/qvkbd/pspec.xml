@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>qvkbd</Name>
+        <Homepage>https://github.com/KivApple/qvkbd</Homepage>
+        <Packager>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:gui</IsA>
+        <Summary>A virtual keyboard written in C++ and QML.</Summary>
+        <Description>qvkbd A virtual keyboard written in C++ and QML.</Description>
+        <Archive sha1sum="6be850808668fcc5622e220a52c47327173459be" type="zip">https://github.com/KivApple/qvkbd/archive/master.zip</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>qvkbd</Name>
+        <RuntimeDependencies>
+            <Dependency>libX11</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-12-08</Date>
+            <Version>20181119</Version>
+            <Comment>First release.</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -32,7 +32,7 @@ def setup():
                      -Dgallium-extra-hud=true \
                      -Dgallium-vdpau=true \
                      -Dgallium-xvmc=true \
-                     -Dgallium-va=true \
+                     -Dgallium-va=false \
                      -Dgallium-xa=true \
                      -Dgallium-nine=true \
                      -Dvulkan-drivers=amd,intel \
@@ -67,7 +67,7 @@ def setup():
     elif get.ARCH() == "x86_64":
         options += " -Dclang-libdir-path=/usr/lib \
                      -Dgallium-omx=bellagio \
-                     -Dlmsensors=true \
+                     -Dlmsensors=false \
                      -Dgallium-opencl=icd .."
 
     shelltools.system(options)

@@ -97,7 +97,7 @@ def setup():
     elif get.ARCH() == "x86_64":
         options += " -Dclang-libdir-path=/usr/lib \
                      -Dgallium-omx=bellagio \
-                     -Dlmsensors=true \
+                     -Dlmsensors=false \
                      -Dgallium-opencl=icd .."
 
     shelltools.system(options)

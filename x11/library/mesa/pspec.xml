@@ -43,7 +43,7 @@
             <Dependency>automake</Dependency>
             <Dependency>libclc-devel</Dependency>
             <Dependency>libunwind-devel</Dependency>
-            <Dependency>lm_sensors-devel</Dependency>
+            <!--Dependency>lm_sensors-devel mesa çember</Dependency-->
             <Dependency>wayland-protocols-devel</Dependency>
             <Dependency>libXrandr-devel</Dependency>
         </BuildDependencies>
@@ -84,7 +84,7 @@
             <Dependency>libomxil-bellagio</Dependency>
             <Dependency>nettle</Dependency>
             <Dependency>libunwind</Dependency>
-            <Dependency>lm_sensors</Dependency>
+            <!--Dependency>lm_sensors</Dependency-->
             <Dependency versionFrom="1.2">libxshmfence</Dependency>
             <Dependency versionFrom="5.0.1">llvm</Dependency>
             <Dependency versionFrom="5.0.1">llvm-clang</Dependency>

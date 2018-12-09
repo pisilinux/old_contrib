@@ -42,7 +42,6 @@
             <Dependency versionFrom="1.2">libxshmfence-devel</Dependency>
             <Dependency>automake</Dependency>
             <Dependency>libclc-devel</Dependency>
-            <Dependency>libva-devel</Dependency>
             <Dependency>libunwind-devel</Dependency>
             <Dependency>lm_sensors-devel</Dependency>
             <Dependency>wayland-protocols-devel</Dependency>
@@ -159,7 +158,6 @@
             <Dependency>libdrm-nouveau-32bit</Dependency>
             <Dependency>libxshmfence-32bit</Dependency>
             <Dependency>nettle-32bit</Dependency>
-            <Dependency>libva-32bit</Dependency>
             <Dependency>libunwind-32bit</Dependency>
             <Dependency versionFrom="5.0.1">llvm-32bit</Dependency>
             <Dependency>libXrandr-32bit</Dependency>

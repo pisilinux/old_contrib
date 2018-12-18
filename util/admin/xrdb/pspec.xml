@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xrdb</Name>
+        <Homepage>https://xorg.freedesktop.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>Apache</License>
+        <IsA>library</IsA>
+        <Summary>xrdp an open source RDP server</Summary>
+        <Description>xrdp açık kaynaklı bir RDP sunucusu. RDP istemcileri FreeRDP, rdesktop, NeutrinoRDP ve Microsoft Uzak Masaüstü</Description>
+        <Archive sha1sum="f43f422af49a16eedce8fedab7aaae44fe4856d1" type="targz">https://github.com/neutrinolabs/xrdp/releases/download/v0.9.8/xrdp-0.9.8.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>pam-devel</Dependency>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+        </BuildDependencies>
+        <!--
+        <Patches>
+            <Patch>xrdb.patch</Patch>
+            <Patch level="1">xrdb.patch</Patch>
+        </Patches>
+        -->
+    </Source>
+
+    <Package>
+        <Name>xrdb</Name>
+        <RuntimeDependencies>
+            <Dependency>pam</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libXrandr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>xrdb-devel</Name>
+        <Summary>Development files for xrdb</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">xrdb</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2018-12-19</Date>
+            <Version>0.9.8</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

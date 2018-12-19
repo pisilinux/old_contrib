@@ -13,7 +13,12 @@ def setup():
                          --enable-jpeg=yes \
                          --enable-tjpeg=yes \
                          --enable-fuse=yes \
+                         --enable-opus=yes \
+                         --enable-rfxcodec=yes \
+                         --enable-mp3lame=yes \
                          --enable-kerberos=yes \
+                         --enable-painter=yes \
+                         --enable-vsock=yes \
                          --enable-ipv6only=yes \
                          --enable-ipv6=yes")
 

@@ -9,7 +9,13 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure()
+    autotools.configure("--enable-pixman=yes \
+                         --enable-jpeg=yes \
+                         --enable-tjpeg=yes \
+                         --enable-fuse=yes \
+                         --enable-kerberos=yes \
+                         --enable-ipv6only=yes \
+                         --enable-ipv6=yes")
 
 def build():
     autotools.make()

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <PISI>
     <Source>
-        <Name>xrdb</Name>
+        <Name>xrdp</Name>
         <Summary xml:lang="tr">xrdp açık kaynaklı bir RDP sunucusu. RDP istemcileri FreeRDP, rdesktop, NeutrinoRDP ve Microsoft Uzak Masaüstü</Summary>
         <Description xml:lang="tr">xrdp açık kaynaklı bir RDP sunucusu. RDP istemcileri FreeRDP, rdesktop, NeutrinoRDP ve Microsoft Uzak Masaüstü</Description>
     </Source>

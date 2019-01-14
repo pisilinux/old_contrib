@@ -15,8 +15,7 @@ def setup():
                          --enable-pcre2test-libreadline \
                          --enable-pcre2-32 \
                          --enable-pcre2-16 \
-                         --enable-utf \
-                         --enable-unicode-properties \
+                         --enable-unicode \
                          --enable-cpp \
                          --docdir=/%s/%s \
                          --disable-static" % (get.docDIR(), get.srcNAME()))

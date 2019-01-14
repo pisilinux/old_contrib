@@ -16,7 +16,6 @@ def setup():
                          --enable-pcre2-32 \
                          --enable-pcre2-16 \
                          --enable-unicode \
-                         --enable-cpp \
                          --docdir=/%s/%s \
                          --disable-static" % (get.docDIR(), get.srcNAME()))
     

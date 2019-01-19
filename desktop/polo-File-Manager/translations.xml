@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>polo-File-Manager</Name>
+        <Summary xml:lang="tr">Polo is a modern, light-weight file manager for Linux with support for multiple panes and tabs; support for archives, and much more.</Summary>
+        <Description xml:lang="tr">Polo is a modern, light-weight file manager for Linux with support for multiple panes and tabs; support for archives, and much more.</Description>
+    </Source>
+</PISI>

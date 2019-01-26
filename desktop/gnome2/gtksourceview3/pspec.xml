@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gtksourceview3</Name>
+        <Homepage>https://wiki.gnome.org/Projects/GtkSourceView</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>A text widget adding syntax highlighting and more to GNOME</Summary>
+        <Description>A text widget adding syntax highlighting and more to GNOME</Description>
+        <Archive sha1sum="0e83221694aac1407c75250331c5b2967dacbe2f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtksourceview/3.22/gtksourceview-3.22.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>itstool</Dependency>
+            <Dependency>valgrind</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>gettext-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gtksourceview3</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>gtksourceview3-devel</Name>
+        <Summary>Development files for gtksourceview3</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtksourceview3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>gtksourceview3-docs</Name>
+        <Summary>Development files for gtksourceview3</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtksourceview3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-01-26</Date>
+            <Version>3.22.2</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

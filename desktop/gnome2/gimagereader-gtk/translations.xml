@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gimagereader-gtk</Name>
+        <Summary xml:lang="tr">Gtk front-end to tesseract-ocr</Summary>
+        <Description xml:lang="tr">GTK ön uç tesseract-ocr için</Description>
+    </Source>
+</PISI>

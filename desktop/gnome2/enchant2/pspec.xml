@@ -19,6 +19,7 @@
             <Dependency>glib2-devel</Dependency>
             <Dependency>aspell-devel</Dependency>
             <Dependency>hunspell-devel</Dependency>
+            <Dependency>dbus-glib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -47,6 +48,18 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/enchant-2/enchant_aspell.so</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>enchant2-zemberek</Name>
+        <Summary>zemberek backend for Enchant2</Summary>
+        <RuntimeDependencies>
+            <Dependency>enchant2</Dependency>
+            <Dependency>zemberek-office</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/enchant-2/enchant_zemberek.so</Path>
         </Files>
     </Package>
 

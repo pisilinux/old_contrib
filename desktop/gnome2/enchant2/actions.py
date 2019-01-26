@@ -13,7 +13,8 @@ def setup():
     shelltools.system("./bootstrap")
     #autotools.autoreconf("-f")
     autotools.configure("--disable-static \
-                         --enable-aspell \
+                         --with-aspell \
+                         --with-zemberek \
                          --with-myspell-dir=/usr/share/hunspell \
                          --disable-ispell")
     

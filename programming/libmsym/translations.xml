@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libmsym</Name>
+        <Summary xml:lang="tr">libmsym is a C library dealing with point group symmetry in molecules.</Summary>
+        <Description xml:lang="tr">libmsym, moleküllerde nokta grubu simetrisi ile ilgilenen bir C kütüphanesidir.</Description>
+    </Source>
+</PISI>

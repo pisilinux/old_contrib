@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python3-pyside2-tools</Name>
-        <Homepage>http://qt-project.org/wiki/PySide2</Homepage>
+        <Homepage>https://qt-project.org/wiki/PySide2</Homepage>
         <Packager>
             <Name>Metehan Özbek</Name>
             <Email>mthnzbk@gmail.com</Email>
@@ -24,6 +24,7 @@
     <Package>
         <Name>python3-pyside2-tools</Name>
         <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
             <Dependency>python3-pyside2</Dependency>
             <Dependency>python3-shiboken2</Dependency>
         </RuntimeDependencies>

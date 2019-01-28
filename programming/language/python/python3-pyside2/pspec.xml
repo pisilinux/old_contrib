@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python3-pyside2</Name>
-        <Homepage>http://qt-project.org/wiki/PySide2</Homepage>
+        <Homepage>https://qt-project.org/wiki/PySide2</Homepage>
         <Packager>
             <Name>Metehan Özbek</Name>
             <Email>mthnzbk@gmail.com</Email>

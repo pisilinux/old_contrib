@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python3-shiboken2</Name>
-        <Homepage>http://www.pyside.org</Homepage>
+        <Homepage>https://www.pyside.org</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

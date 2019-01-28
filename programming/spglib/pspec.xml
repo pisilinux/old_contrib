@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>spglib</Name>
+        <Homepage>https://atztogo.github.io/spglib/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>library</IsA>
+        <Summary>C library for finding and handling crystal symmetries</Summary>
+        <Description>C library for finding and handling crystal symmetries</Description>
+        <Archive sha1sum="abcf6d40c678d3a2e81a8bb450b0705f12280368" type="targz">https://github.com/atztogo/spglib/archive/v1.11.2.1.tar.gz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>spglib</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>spglib-devel</Name>
+        <Summary>Development files for spglib</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">spglib</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-01-27</Date>
+            <Version>1.11.2.1</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

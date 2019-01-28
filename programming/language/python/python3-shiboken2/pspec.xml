@@ -2,20 +2,24 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-shiboken2</Name>
-        <Homepage>http://www.pyside.org</Homepage>
+        <Name>python3-shiboken2</Name>
+        <Homepage>https://www.pyside.org</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Packager>
         <License>LGPLv2</License>
         <IsA>library</IsA>
-        <Summary>Support library for Python2 bindings</Summary>
+        <Summary>Support library for Python3 bindings</Summary>
         <Description>CPython bindings generator for C++ libraries</Description>
-        <Archive sha1sum="7ac535a64f62f5b589ca566a0b43d4b956011ad8" type="zip">https://sourceforge.net/projects/pisi-source/files/shiboken2-master.zip/download</Archive>
+        <Archive sha1sum="d3ca02a28dd8107f5d3a9b40426ae4131195b07d" type="tarxz">https://download.qt.io/official_releases/QtForPython/pyside2/PySide2-5.12.0-src/pyside-setup-everywhere-src-5.12.0.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>llvm</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>python3-devel</Dependency>
             <Dependency>libxslt-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>llvm-clang-devel</Dependency>
             <Dependency>qt5-xmlpatterns-devel</Dependency>
             <Dependency>qt5-configuration-devel</Dependency>
         </BuildDependencies>
@@ -26,7 +30,10 @@
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>libxslt</Dependency>
+            <Dependency>libxml2</Dependency>
             <Dependency>python3</Dependency>
+            <Dependency>llvm-clang</Dependency>
+            <Dependency>qt5-xmlpatterns</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -48,8 +55,8 @@
 
     <History>
         <Update release="1">
-            <Date>2016-06-27</Date>
-            <Version>2.0</Version>
+            <Date>2019-01-28</Date>
+            <Version>5.12.0</Version>
             <Comment>First release.</Comment>
             <Name>Metehan Özbek</Name>
             <Email>mthnzbk@gmail.com</Email>

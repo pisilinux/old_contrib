@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gimagereader-gtk</Name>
+        <Homepage>https://github.com/manisandro/gImageReader</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>Gtk front-end to tesseract-ocr</Summary>
+        <Description>GTK ön uç tesseract-ocr için</Description>
+        <Archive sha1sum="7e41907899df0a87ba8210e1daab0c14d64eb3bb" type="tarxz">https://github.com/manisandro/gImageReader/releases/download/v3.3.0/gimagereader-3.3.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>djvu-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gtkmm3-devel</Dependency>
+            <Dependency>podofo-devel</Dependency>
+            <Dependency>libzip-devel</Dependency>
+            <Dependency>enchant2-devel</Dependency>
+            <Dependency>tesseract-devel</Dependency>
+            <Dependency>libxmlpp-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>gtkspellmm-devel</Dependency>
+            <Dependency>python3-pygobject3-devel</Dependency>
+            <Dependency>sane-backends-devel</Dependency>
+            <Dependency>poppler-glib-devel</Dependency>
+            <Dependency>gtksourceviewmm-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gimagereader-gtk</Name>
+        <RuntimeDependencies>
+            <Dependency>djvu</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>atkmm</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libzip</Dependency>
+            <Dependency>podofo</Dependency>
+            <Dependency>cairomm</Dependency>
+            <Dependency>libgomp</Dependency>
+            <Dependency>pangomm</Dependency>
+            <Dependency>libxmlpp</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>libsigc++</Dependency>
+            <Dependency>tesseract</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gtkspellmm</Dependency>
+            <Dependency>poppler-glib</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+            <Dependency>libutil-linux</Dependency>
+            <Dependency>sane-backends</Dependency>
+            <Dependency>gtksourceviewmm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-01-26</Date>
+            <Version>3.3.0</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -10,22 +10,20 @@ from pisi.actionsapi import get
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import shelltools
 
-WorkDir = "pyside2-master"
+#WorkDir = "pyside2-master"
 
 def setup():
+    shelltools.cd("sources/pyside2")
     shelltools.makedirs("build3")
     shelltools.cd("build3")
     cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
-                            -DCMAKE_BUILD_TYPE=Release \
-                            -DUSE_PYTHON_VERSION=3.4 \
-                            -DPYTHON_EXECUTABLE=/usr/bin/python3 -DPYTHON_INCLUDE_DIR=/usr/include/python3.4m \
-                            -DPYTHON_LIBRARY=/usr/lib/libpython3.4m.so -DPYTHON_SUFFIX=-python3.4 \
-                            -DBUILD_TESTS=OFF", sourceDir="..")
+                          -DBUILD_TESTS=OFF \
+                          -DUSE_PYTHON_VERSION=3", sourceDir="..")
 
 def build():
-    shelltools.cd("build3")
+    shelltools.cd("sources/pyside2/build3")
     autotools.make()
 
 def install():
-    shelltools.cd("build3")
+    shelltools.cd("sources/pyside2/build3")
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())

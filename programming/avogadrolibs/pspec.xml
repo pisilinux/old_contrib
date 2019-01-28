@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>avogadrolibs</Name>
+        <Homepage>https://www.openchemistry.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>library</IsA>
+        <Summary>Libraries that provide 3D rendering, visualization, analysis and data processing useful in computational chemistry, molecular modeling, bioinformatics, materials science, and related areas</Summary>
+        <Description>Hesaplamalı kimya, moleküler modelleme, biyoinformatik, malzeme bilimi ve ilgili alanlarda 3B oluşturma, görselleştirme, analiz ve veri işlemeyi sağlayan kütüphaneler </Description>
+        <Archive sha1sum="b12de652ad9b4639410d53ff7da2845f662b5dfe" type="targz">https://github.com/OpenChemistry/avogadrolibs/archive/1.91.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>eigen3</Dependency>
+            <Dependency>glew-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
+            <Dependency>spglib-devel</Dependency>
+            <Dependency>libmsym-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>molequeue-devel</Dependency>
+            <Dependency>libarchive-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>avogadrolibs</Name>
+        <RuntimeDependencies>
+            <Dependency>glew</Dependency>
+            <Dependency>mesa</Dependency>
+            <Dependency>spglib</Dependency>
+            <Dependency>libmsym</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>molequeue</Dependency>
+            <Dependency>libarchive</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>avogadrolibs-devel</Name>
+        <Summary>Development files for avogadrolibs</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">avogadrolibs</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-01-27</Date>
+            <Version>1.91.0</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

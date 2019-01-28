@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gtksourceview3</Name>
+        <Summary xml:lang="tr">A text widget adding syntax highlighting and more to GNOME</Summary>
+        <Description xml:lang="tr">A text widget adding syntax highlighting and more to GNOME</Description>
+    </Source>
+</PISI>

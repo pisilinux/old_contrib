@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python3-pyside2</Name>
-        <Homepage>http://qt-project.org/wiki/PySide2</Homepage>
+        <Homepage>https://qt-project.org/wiki/PySide2</Homepage>
         <Packager>
             <Name>Metehan Özbek</Name>
             <Email>mthnzbk@gmail.com</Email>
@@ -12,8 +12,16 @@
         <IsA>library</IsA>
         <Summary>Python bindings for the Qt cross-platform application and UI framework</Summary>
         <Description>Provides Qt bindings for Python and related tools for binding generation</Description>
-        <Archive sha1sum="242fb96dd84d53c7472c176905766a797ebeca50" type="zip">https://sourceforge.net/projects/pisi-source/files/pyside2-master.zip/download</Archive>
+        <Archive sha1sum="d3ca02a28dd8107f5d3a9b40426ae4131195b07d" type="tarxz">https://download.qt.io/official_releases/QtForPython/pyside2/PySide2-5.12.0-src/pyside-setup-everywhere-src-5.12.0.tar.xz</Archive>
         <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>llvm</Dependency>
+            <Dependency>llvm-clang-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>qt5-sql-odbc</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
+            <Dependency>qt5-sql-mysql</Dependency>
+            <Dependency>qt5-sql-postgresql</Dependency>
             <Dependency>qt5-assistant-devel</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>qt5-configuration-devel</Dependency>
@@ -26,7 +34,7 @@
             <Dependency>qt5-gstreamer-devel</Dependency>
             <Dependency>qt5-location-devel</Dependency>
             <Dependency>qt5-multimedia-devel</Dependency>
-            <Dependency>qt5-quick1-devel</Dependency>
+            <Dependency>qt5-quickcontrols</Dependency>
             <Dependency>qt5-quickcontrols2-devel</Dependency>
             <Dependency>qt5-script-devel</Dependency>
             <Dependency>qt5-sensors-devel</Dependency>
@@ -37,13 +45,23 @@
             <Dependency>qt5-websockets-devel</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>qt5-xmlpatterns-devel</Dependency>
+            <Dependency>qt5-scxml-devel</Dependency>
+            <Dependency>qt5-speech-devel</Dependency>
+            <Dependency>qt5-charts-devel</Dependency>
+            <Dependency>qt5-3d-devel</Dependency>
+            <Dependency>qt5-datavis3d-devel</Dependency>
             <Dependency>python3-shiboken2-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>python3-pyside2</Name>
         <RuntimeDependencies>
+            <Dependency>qt5-3d</Dependency>
             <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-scxml</Dependency>
+            <Dependency>qt5-charts</Dependency>
+            <Dependency>qt5-speech</Dependency>
+            <Dependency>qt5-datavis3d</Dependency>
             <Dependency>qt5-phonon</Dependency>
             <Dependency>qt5-webkit</Dependency>
             <Dependency>python3-shiboken2</Dependency>
@@ -56,7 +74,6 @@
             <Dependency>qt5-gstreamer</Dependency>
             <Dependency>qt5-location</Dependency>
             <Dependency>qt5-multimedia</Dependency>
-            <Dependency>qt5-quick1</Dependency>
             <Dependency>qt5-quickcontrols2</Dependency>
             <Dependency>qt5-script</Dependency>
             <Dependency>qt5-sensors</Dependency>
@@ -80,7 +97,7 @@
     <History>
         <Update release="1">
             <Date>2015-01-06</Date>
-            <Version>2.0</Version>
+            <Version>5.12.0</Version>
             <Comment>First release.</Comment>
             <Name>Metehan Özbek</Name>
             <Email>mthnzbk@gmail.com</Email>

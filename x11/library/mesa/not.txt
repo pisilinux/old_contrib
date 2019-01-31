@@ -1,7 +1,0 @@
-- old.actions.py ile derleyebilmemiz için usr/bin/python2.7 ye usr/bin/python2 linki atılması gerekiyor
-
-
--Dgallium-opencl=icd  libclc devel istiyor
-
--Dgallium-opencl=disabled libclc'ye ihtiyaç duymuyor
-

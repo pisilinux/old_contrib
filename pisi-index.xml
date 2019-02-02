@@ -7955,6 +7955,50 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>sgvrecord</Name>
+            <Homepage>https://github.com/yucefsourani/sgvrecord</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.video</PartOf>
+            <Summary xml:lang="en">Simple Tool To Record Screen</Summary>
+            <Summary xml:lang="tr">Simple Tool To Record Screen</Summary>
+            <Description xml:lang="en">Simple Tool To Record Screen</Description>
+            <Description xml:lang="tr">Simple Tool To Record Screen</Description>
+            <Archive type="targz" sha1sum="993fb38c712e12c9051a09c820768dedf596f7fa">https://github.com/Rmys/sgvrecord/archive/v1.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/video/sgvrecord/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sgvrecord</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/app*</Path>
+                <Path fileType="info">/usr/share/icons</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-02-02</Date>
+                <Version>1.0</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>handbrake</Name>
             <Homepage>http://handbrake.fr/</Homepage>
             <Packager>
@@ -13278,7 +13322,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
     <SpecFile>
         <Source>
             <Name>libwnck3</Name>
-            <Homepage>http://www.gnome.org/</Homepage>
+            <Homepage>https://www.gnome.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -13292,7 +13336,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Description xml:lang="fr">Ce paquet contient les librairies statiques et les fichier d&apos;entête nécessaires pour développer des applications utilisant libwnck.</Description>
             <Description xml:lang="en">libwnck (pronounced &quot;libwink&quot;) is used to implement pagers, tasklists, and other such things. It allows applications to monitor information about open windows, workspaces, their names/icons, and so forth.</Description>
             <Description xml:lang="tr">libwnck sayfalayıcı, görev listesi ve benzeri birimleri gerçeklemek için kullanılır ve uygulamalara açık pencereler, çalışma alanları, simgeler hakkında bilgi sunar.</Description>
-            <Archive type="tarxz" sha1sum="109c7b312442c66f13c1ef3465e882446906d13e">http://ftp.acc.umu.se/pub/GNOME/sources/libwnck/3.4/libwnck-3.4.7.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="872ae099ab27e4a7fcf82f569bb261c0a00be920">http://ftp.acc.umu.se/pub/GNOME/sources/libwnck/3.30/libwnck-3.30.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -13336,7 +13380,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>libXres-devel</Dependency>
                 <Dependency>startup-notification-devel</Dependency>
-                <Dependency release="5">libwnck3</Dependency>
+                <Dependency release="1">libwnck3</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -13351,44 +13395,16 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Summary xml:lang="en">Documentation package for libwnck3</Summary>
             <Summary xml:lang="tr">libwnck3 için dökümantasyon belgeleri</Summary>
             <RuntimeDependencies>
-                <Dependency release="5">libwnck3</Dependency>
+                <Dependency release="1">libwnck3</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/usr/share/gtk-doc/html/libwnck-3.0/</Path>
             </Files>
         </Package>
         <History>
-            <Update release="5">
-                <Date>2014-05-18</Date>
-                <Version>3.4.7</Version>
-                <Comment>Rebuild.</Comment>
-                <Name>Serdar Soytetir</Name>
-                <Email>kaptan@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2013-10-08</Date>
-                <Version>3.4.7</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Serdar Soytetir</Name>
-                <Email>kaptan@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2013-08-17</Date>
-                <Version>3.4.5</Version>
-                <Comment>Release bump</Comment>
-                <Name>Serdar Soytetir</Name>
-                <Email>kaptan@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-02-24</Date>
-                <Version>3.4.5</Version>
-                <Comment>New version</Comment>
-                <Name>Ertan Güven</Name>
-                <Email>ertan@pisilinux.org</Email>
-            </Update>
             <Update release="1">
-                <Date>2012-08-26</Date>
-                <Version>3.4.4</Version>
+                <Date>2019-01-02</Date>
+                <Version>3.30.0</Version>
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>

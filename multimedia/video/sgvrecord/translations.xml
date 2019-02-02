@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>sgvrecord</Name>
+        <Summary xml:lang="tr">Simple Tool To Record Screen</Summary>
+        <Description xml:lang="tr">Simple Tool To Record Screen</Description>
+    </Source>
+</PISI>

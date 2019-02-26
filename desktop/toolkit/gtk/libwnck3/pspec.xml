@@ -39,6 +39,7 @@
             <Dependency>startup-notification</Dependency>
         </RuntimeDependencies>
         <Files>
+            <Path fileType="executable">/usr/bin/wnckprop</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="executable">/usr/bin</Path>
@@ -63,7 +64,6 @@
             <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="executable">/usr/bin/wnckprop</Path>
             <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
     </Package>

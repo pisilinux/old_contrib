@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>libwnck3</Name>
-        <Homepage>https://www.gnome.org/</Homepage>
+        <Homepage>http://www.gnome.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -42,7 +42,9 @@
             <Path fileType="executable">/usr/bin/wnckprop</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
         </Files>
     </Package>
@@ -62,9 +64,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="header">/usr/include</Path>
-            <Path fileType="data">/usr/share/gir-1.0</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
-            <Path fileType="data">/usr/lib/girepository-1.0</Path>
         </Files>
     </Package>
 
@@ -82,7 +82,7 @@
     <History>
         <Update release="1">
             <Date>2019-01-02</Date>
-            <Version>3.30.0</Version>
+            <Version>3.4.4</Version>
             <Comment>First release</Comment>
             <Name>Osman Erkan</Name>
             <Email>osman.erkan@pisilinux.org</Email>

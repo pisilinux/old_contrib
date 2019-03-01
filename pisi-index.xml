@@ -13362,9 +13362,12 @@ So this nice simple GUI to control the composite manager, the settings are self 
                 <Dependency>startup-notification</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="executable">/usr/bin/wnckprop</Path>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/gir-1.0</Path>
                 <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/lib/girepository-1.0</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
             </Files>
         </Package>
@@ -13384,10 +13387,7 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/share/gir-1.0</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="executable">/usr/bin/wnckprop</Path>
-                <Path fileType="data">/usr/lib/girepository-1.0</Path>
             </Files>
         </Package>
         <Package>
@@ -23804,6 +23804,60 @@ So this nice simple GUI to control the composite manager, the settings are self 
             <Update release="1">
                 <Date>2018-10-20</Date>
                 <Version>0.12.0</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>kvantum</Name>
+            <Homepage>https://github.com/tsujan/Kvantum</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
+            <Description xml:lang="en">Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
+            <Archive type="targz" sha1sum="d1abbd0ac85dde50e8591e18173de932ecc4690b">https://github.com/tsujan/Kvantum/archive/V0.10.9.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>qt5-svg-devel</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>icon-theme-hicolor</Dependency>
+                <Dependency>kwindowsystem-devel</Dependency>
+                <Dependency>qt5-x11extras-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-designer-devel</Dependency>
+                <Dependency>qt5-assistant-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/library/kvantum/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>kvantum</Name>
+            <RuntimeDependencies>
+                <Dependency>libX11</Dependency>
+                <Dependency>qt5-svg</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>kwindowsystem</Dependency>
+                <Dependency>qt5-x11extras</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/Kvantum</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-03-01</Date>
+                <Version>0.10.9</Version>
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>

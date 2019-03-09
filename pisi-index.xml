@@ -8131,6 +8131,65 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>pulseaudio-qt</Name>
+            <Homepage>https://kde.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">Libpulse için Qt bağları</Summary>
+            <Description xml:lang="en">Libpulse için Qt bağları</Description>
+            <Archive type="tarxz" sha1sum="0e535827d417185d72a2f07146f808d1db9c2dfc">https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.0.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency versionFrom="5.12.0">qt5-base-devel</Dependency>
+                <Dependency versionFrom="5.12.0">qt5-declarative</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>extra-cmake-modules</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>kcoreaddons-devel</Dependency>
+                <Dependency>kdoctools-devel</Dependency>
+                <Dependency>ki18n-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/pulseaudio-qt/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pulseaudio-qt</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>pulseaudio-qt-devel</Name>
+            <Summary xml:lang="en">Development files for pulseaudio-qt</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">pulseaudio-qt</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/cmake</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-03-09</Date>
+                <Version>1.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>t1lib</Name>
             <Homepage>ftp://metalab.unc.edu/pub/Linux/libs/graphics/</Homepage>
             <Packager>
@@ -25811,4 +25870,80 @@ So this nice simple GUI to control the composite manager, the settings are self 
             </Update>
         </History>
     </SpecFile>
+    <Package>
+        <Name>pulseaudio-qt5-devel</Name>
+        <Summary xml:lang="en">Development files for pulseaudio-qt5</Summary>
+        <Description xml:lang="en">Libpulse için Qt bağları</Description>
+        <Description xml:lang="tr">Libpulse için Qt bağları</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.devel</PartOf>
+        <License>LGPLv3</License>
+        <RuntimeDependencies>
+            <Dependency release="1">pulseaudio-qt5</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="1">
+                <Date>2019-03-09</Date>
+                <Version>1.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>45521</InstalledSize>
+        <PackageSize>10028</PackageSize>
+        <PackageHash>b9709e44f8e65916df2c3e4ec3f5835c55472965</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>multimedia/sound/pulseaudio-qt/pulseaudio-qt5-devel-1.0.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pulseaudio-qt5</Name>
+            <Homepage>https://kde.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>pulseaudio-qt5</Name>
+        <Summary xml:lang="en">Libpulse için Qt bağları</Summary>
+        <Summary xml:lang="tr">Libpulse için Qt bağları</Summary>
+        <Description xml:lang="en">Libpulse için Qt bağları</Description>
+        <Description xml:lang="tr">Libpulse için Qt bağları</Description>
+        <IsA>library</IsA>
+        <PartOf>unknown</PartOf>
+        <License>LGPLv3</License>
+        <History>
+            <Update release="1">
+                <Date>2019-03-09</Date>
+                <Version>1.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>localhost</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>333889</InstalledSize>
+        <PackageSize>79947</PackageSize>
+        <PackageHash>d3b91162539b1495334fdbc2dee645b3e3289bc8</PackageHash>
+        <InstallTarHash>f05e6ed537b2ee39a6eb1f0de1e41d203be391c7</InstallTarHash>
+        <PackageURI>multimedia/sound/pulseaudio-qt/pulseaudio-qt5-1.0.0-1-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>pulseaudio-qt5</Name>
+            <Homepage>https://kde.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
 </PISI>

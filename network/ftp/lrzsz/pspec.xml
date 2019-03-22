@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>lrzsz</Name>
+        <Homepage>https://www.ohse.de/uwe/software/lrzsz.html</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>xmodem, ymodem and zmodem file transfer protocols</Summary>
+        <Description>xmodem, ymodem and zmodem file transfer protocols</Description>
+        <Archive sha1sum="451e6a1813dfb71a412c973acd1b88b9ee3f28c4" type="targz">https://www.ohse.de/uwe/releases/lrzsz-0.12.20.tar.gz</Archive>
+        <BuildDependencies>
+        </BuildDependencies>
+        <Patches>
+            <Patch>lrzsz.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>lrzsz</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-03-19</Date>
+            <Version>0.12.20</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

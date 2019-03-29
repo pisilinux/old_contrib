@@ -12,16 +12,13 @@
         <IsA>library</IsA>
         <Summary>Libpulse için Qt bağları</Summary>
         <Description>Libpulse için Qt bağları</Description>
-        <Archive sha1sum="0e535827d417185d72a2f07146f808d1db9c2dfc" type="tarxz">https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.0.0.tar.xz</Archive>
+        <Archive sha1sum="6e562137fae21e261a9fdbf7c4ee5e4a2dbaa9d6" type="tarxz">https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.0.1.tar.xz</Archive>
         <BuildDependencies>
             <Dependency versionFrom="5.12.0">qt5-base-devel</Dependency>
-            <Dependency versionFrom="5.12.0">qt5-declarative</Dependency>
+            <Dependency versionFrom="5.12.0">qt5-declarative-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
             <Dependency>glib2-devel</Dependency>
-            <Dependency>kcoreaddons-devel</Dependency>
-            <Dependency>kdoctools-devel</Dependency>
-            <Dependency>ki18n-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -52,8 +49,8 @@
     
     <History>
         <Update release="1">
-            <Date>2019-03-09</Date>
-            <Version>1.0.0</Version>
+            <Date>2019-03-29</Date>
+            <Version>1.0.1</Version>
             <Comment>First release</Comment>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gradio</Name>
+        <Summary xml:lang="tr">A GTK3 app for finding and listening to internet radio stations.</Summary>
+        <Description xml:lang="tr">A GTK3 app for finding and listening to internet radio stations.</Description>
+    </Source>
+</PISI>

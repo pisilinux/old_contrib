@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>graphviz</Name>
-        <Homepage>http://www.graphviz.org</Homepage>
+        <Homepage>http://www.graphviz.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -12,8 +12,15 @@
         <IsA>app:console</IsA>
         <IsA>app:gui</IsA>
         <Summary>Open source graph drawing software</Summary>
-        <Description>Graphviz is open source graph visualization software which has web and interactive graphical interfaces, and auxiliary tools and libraries. Graphviz has many useful features for diagrams, such as options for colors, fonts, tabular node layouts, line styles, and custom shapes.</Description>
-        <Archive sha1sum="8a44d19bcdb50df1bd8e649de472ebf868468888" type="targz">http://www.graphviz.org/pub/graphviz/stable/SOURCES/graphviz-2.40.1.tar.gz</Archive>
+        <Description>
+            Graphviz is open source graph visualization software which has web and interactive graphical \
+            interfaces, and auxiliary tools and libraries. Graphviz has many useful features for diagrams, \
+            such as options for colors, fonts, tabular node layouts, line styles, and custom shapes.
+        </Description>
+        <Archive sha1sum="8a44d19bcdb50df1bd8e649de472ebf868468888" type="targz">
+<!--            http://www.graphviz.org/pub/graphviz/stable/SOURCES/graphviz-2.40.1.tar.gz -->
+            https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz
+        </Archive>
         <BuildDependencies>
             <Dependency>gd-devel</Dependency>
             <Dependency>pango-devel</Dependency>

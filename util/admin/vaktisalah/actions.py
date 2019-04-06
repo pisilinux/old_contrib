@@ -20,6 +20,6 @@ def build():
     qt5.make()
 
 def install():
-    qt5.install("INSTALL_ROOT=%s PREFIX=/usr install" % get.installDIR())
+    qt5.install()
 
-    #pisitools.dodoc("AUTHORS", "BUGS", "ChangeLog", "COPYING", "NEWS", "README")
+    pisitools.dodoc("LICENSE", "README*")

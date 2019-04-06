@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vaktisalah</Name>
+        <Homepage>https://github.com/eminfedar/vaktisalah</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Vakt-i Salah (Times of Prayer)</Summary>
+        <Description>Vakt-i Salah (Times of Prayer)</Description>
+        <Archive sha1sum="cb9b41a36d32427ea8b337552b0832cd0fea3cf5" type="targz">https://github.com/eminfedar/vaktisalah/archive/v1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt5-base-devel</Dependency>
+<!--             <Dependency>qt5-assistant-devel</Dependency> -->
+            <Dependency>qt5-multimedia-devel</Dependency>
+            <Dependency>qt5-declarative-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vaktisalah</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>qt5-declarative</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/VaktiSalah.desktop">VaktiSalah.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/vaktisalah.png">vaktisalah.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-04-06</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

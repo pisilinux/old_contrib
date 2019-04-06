@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA> 
         <Summary>Sophisticated text editor</Summary>
         <Description>Sublime Text is a sophisticated text editor for code, markup and prose.</Description>
-        <Archive sha1sum="e3d248c4f6f158d5ce2d813fd3ad02d2d95b476f" type="tarbz2">https://download.sublimetext.com/sublime_text_3_build_3200_x64.tar.bz2</Archive>
+        <Archive sha1sum="2034a6c594539c4fc9ed5cdbef679c47c077bfce" type="tarbz2">https://download.sublimetext.com/sublime_text_3_build_3207_x64.tar.bz2</Archive>
     </Source>
   
     <Package>
@@ -33,6 +33,13 @@
     </Package>
   
     <History>
+	<Update release="8">
+            <Date>2019-04-07</Date>
+            <Version>3201/Version>
+            <Comment>version dump.</Comment>
+	    <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>
 	<Update release="7">
             <Date>2019-03-13</Date>
             <Version>3200</Version>
@@ -51,35 +58,35 @@
             <Date>2018-05-08</Date>
             <Version>3170</Version>
             <Comment>user release.</Comment>
-	          <Name>Erkan IŞIK</Name>
+	    <Name>Erkan IŞIK</Name>
             <Email>info@erkanisik.com</Email>
         </Update>   
 	      <Update release="4">
             <Date>2017-11-26</Date>
             <Version>3143</Version>
             <Comment>user release.</Comment>
-	          <Name>Erkan IŞIK</Name>
+	    <Name>Erkan IŞIK</Name>
             <Email>info@erkanisik.com</Email>
         </Update>
 	      <Update release="3">
             <Date>2017-09-17</Date>
             <Version>3144</Version>
             <Comment>Developer release.</Comment>
-	          <Name>Erkan IŞIK</Name>
+	    <Name>Erkan IŞIK</Name>
             <Email>info@erkanisik.com</Email>
         </Update>
-	      <Update release="2">
+	    <Update release="2">
             <Date>2017-07-14</Date>
             <Version>3126</Version>
             <Comment>Second release.</Comment>
-	          <Name>Erkan IŞIK</Name>
+	    <Name>Erkan IŞIK</Name>
             <Email>info@erkanisik.com</Email>
         </Update>    
         <Update release="1">
             <Date>2016-02-23</Date>
             <Version>3103</Version>
             <Comment>First release.</Comment>
-	          <Name>Stefan Gronewold</Name>
+	    <Name>Stefan Gronewold</Name>
             <Email>groni@pisilinux.org</Email>
         </Update>
     </History>

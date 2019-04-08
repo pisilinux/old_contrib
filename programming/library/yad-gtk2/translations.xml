@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <PISI>
     <Source>
-        <Name>yad</Name>
+        <Name>yad-gtk2</Name>
         <Summary xml:lang="tr"> fork of zenity - display graphical dialogs from shell scripts or command line - for gtk2</Summary>
         <Description xml:lang="tr"> fork of zenity - display graphical dialogs from shell scripts or command line - for gtk2</Description>
     </Source>

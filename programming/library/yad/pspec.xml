@@ -19,6 +19,7 @@
             <Dependency>gtk3-devel</Dependency>
             <Dependency>gtkspell3-devel</Dependency>
             <Dependency>gettext-devel</Dependency>
+            <Dependency>shared-mime-info</Dependency>
         </BuildDependencies>
     </Source>
 

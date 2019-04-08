@@ -24,6 +24,9 @@
 
     <Package>
         <Name>yad</Name>
+        <Conflicts>
+            <Package>yad-gtk2</Package>
+        </Conflicts>
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
             <Dependency>cairo</Dependency>

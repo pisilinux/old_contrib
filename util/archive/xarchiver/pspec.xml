@@ -4,7 +4,6 @@
     <Source>
         <Name>xarchiver</Name>
         <Homepage>http://xarchiver.sourceforge.net/</Homepage>
-        <Homepage>https://github.com/ib/xarchiver</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -67,7 +66,7 @@
         <Update release="6">
             <Date>2019-04-15</Date>
             <Version>0.5.4.14</Version>
-            <Comment>Version bump from git</Comment>
+            <Comment>Version bump from git branch</Comment>
             <Name>fury</Name>
             <Email>wascheme@tuta.io</Email>
         </Update>

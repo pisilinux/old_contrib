@@ -4,21 +4,29 @@
     <Source>
         <Name>xarchiver</Name>
         <Homepage>http://xarchiver.sourceforge.net/</Homepage>
+        <Homepage>https://github.com/ib/xarchiver</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
-        <License>GPLv2+</License>
+        <License>GPLv2</License>
         <Icon>xarchiver</Icon>
         <IsA>app:gui</IsA>
-        <Summary>A lightweight GTK+2 archiving/compression tool</Summary>
-        <Description>Xarchiver is a GTK+2 only frontend to 7z, zip, rar, tar, bzip2, gzip, arj, lha, rpm and deb (open and extract only). Xarchiver allows you to create, add, extract and delete files in the above formats. 7z, zip, rar, arj password protected archives are supported.</Description>
-        <Archive sha1sum="4a02a6f77b03be72065f19dd98db1fa5325d3bb6" type="tarbz2">mirrors://sourceforge/xarchiver/xarchiver-0.5.4.tar.bz2</Archive>
+        <Summary>
+            A lightweight GTK+3 archiving/compression tool(continuation of the Xfce master branch).
+        </Summary>
+        <Description>
+            GTK+3 frontend to 7z, zip, rar, tar, bzip2, gzip, arj, lha, rpm and deb(open and extract only). Xarchiver allows you to create, add, extract and delete files in the above formats. 7z, zip, rar, arj password protected archives are supported.
+        </Description>
+        <Archive sha1sum="db763b3eaf926ebfc78ba0f647902d0d3764a813" type="targz">
+            https://codeload.github.com/ib/xarchiver/tar.gz/0.5.4.14
+        </Archive>
         <BuildDependencies>
-	    <Dependency>intltool</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-	    <Dependency>glib2-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
             <Dependency>pango-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
             <Dependency>gdk-pixbuf-devel</Dependency>
         </BuildDependencies>
         <Patches>
@@ -29,27 +37,40 @@
     <Package>
         <Name>xarchiver</Name>
         <RuntimeDependencies>
-            <Dependency>gtk2</Dependency>
-	    <Dependency>glib2</Dependency>
+            <Dependency>gtk3</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>p7zip</Dependency>
-            <Dependency>unarj</Dependency>
-            <Dependency>unrar</Dependency>
-            <Dependency>xdg-utils</Dependency>
+            <Dependency>libxslt</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>rar</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>p7zip</Dependency>
+<!--            <Dependency>unarj</Dependency> -->
+            <Dependency>unrar</Dependency>
+            <Dependency>libzip</Dependency>
+            <Dependency>libarchive</Dependency>
+            <Dependency>xdg-utils</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="executable">/usr/libexec</Path>
+<!--            <Path fileType="executable">/usr/libexec</Path> -->
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/pixmaps</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/pixmaps/xarchiver</Path>
+            <Path fileType="data">/usr/share/doc/xarchiver/images</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="doc">/usr/share/doc/xarchiver</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>2019-04-15</Date>
+            <Version>0.5.4.14</Version>
+            <Comment>Version bump from git</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
         <Update release="5">
             <Date>2016-04-03</Date>
             <Version>0.5.4</Version>

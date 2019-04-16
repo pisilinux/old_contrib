@@ -5,17 +5,22 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-
 def setup():
-	autotools.configure()
+	autotools.configure("--prefix=/usr --enable-gtk3=no")
 	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
 	autotools.make()
 
 def install():
-	pisitools.dodoc('AUTHORS', 'ChangeLog', 'ChangeLog.pre-0-17',
-	                'COPYING', 'HACKING', 'INSTALL', 'NEWS', 'README',
-	                'README.I18N', 'README.Packagers', 'THANKS', 'TODO')
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
+	pisitools.dodoc("AUTHORS", \
+	"ChangeLog", \
+	"COPYING", \
+	"HACKING", \
+	"INSTALL", \
+	"NEWS", \
+	"README*", \
+	"THANKS", \
+	"TODO")

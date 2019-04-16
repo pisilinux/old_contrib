@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>geany</Name>
-        <Homepage>http://www.geany.org</Homepage>
+        <Homepage>https://geany.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -11,13 +11,19 @@
         <License>GPLv2</License>
         <IsA>app:gui</IsA>
         <Summary>GTK+ based fast and lightweight IDE</Summary>
-        <Description>GTK+ based fast and lightweight IDE</Description>
-        <Archive sha1sum="d4ad448d88a7d7f8c576469c264409051f7d32a7" type="tarbz2">http://download.geany.org/geany-1.24.1.tar.bz2</Archive>
+        <Description>
+            Geany is a text editor using the GTK+ toolkit with basic features of an integrated development environment.
+        </Description>
+        <Archive sha1sum="3655455e1faca93f9ce73f35cdf9005016fd2c25" type="tarbz2">
+            https://download.geany.org/geany-1.34.1.tar.bz2
+        </Archive>
         <BuildDependencies>
-            <Dependency>intltool</Dependency>
+            
             <Dependency>libgcc</Dependency>
-            <Dependency>gtk2-devel</Dependency>
+            <Dependency>intltool</Dependency>
             <Dependency>vte-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+<!--            <Dependency>gtk3-devel</Dependency> -->
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -25,22 +31,25 @@
     <Package>
         <Name>geany</Name>
         <RuntimeDependencies>
+            <Dependency>vte</Dependency>
             <Dependency>gtk2</Dependency>
+<!--            <Dependency>gtk3</Dependency> -->
+            <Dependency>glib2</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>glib2</Dependency>
             <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/geany</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib</Path>
             <Path fileType="library">/usr/lib/geany</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/geany/*</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="doc">/usr/share/doc/geany/*</Path>
         </Files>
     </Package>
 
@@ -53,11 +62,18 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
-            <Path fileType="include">/usr/include/</Path>
+            <Path fileType="include">/usr/include/geany/*</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2019-04-16</Date>
+            <Version>1.34.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
         <Update release="6">
             <Date>2014-06-04</Date>
             <Version>1.24.1</Version>

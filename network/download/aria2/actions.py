@@ -4,22 +4,24 @@
 # See the file http://www.gnu.org/licenses/gpl.txt
 
 from pisi.actionsapi import autotools
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure("--enable-bittorrent \
-                         --enable-metalink \
-                         --enable-epoll \
-                         --enable-nls \
-                         --disable-rpath \
-                         --with-gnutls \
-                         --with-openssl \
-                         --with-sqlite3 \
-                         --with-libxml2 \
-                         --with-libcares \
-                         --with-libz \
-                         --with-ca-bundle=/etc/pki/tls/certs/ca-bundle.crt")
+    autotools.configure("--prefix=/usr \
+    --enable-bittorrent \
+    --enable-metalink \
+    --enable-epoll \
+    --enable-nls \
+    --disable-rpath \
+    --with-gnutls \
+    --with-openssl \
+    --with-sqlite3 \
+    --with-libxml2 \
+    --with-libcares \
+    --with-libz \
+    --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt")
 
 def build():
     autotools.make("-C po update-gmo")
@@ -27,4 +29,10 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    pisitools.dodoc("ABOUT*", "AUTHORS", "ChangeLog", "COPYING", "LICENSE*", "NEWS", "README*")
+
+    pisitools.dodoc("AUTHORS", \
+    "COPYING", \
+    "INSTALL", \
+    "LICENSE.OpenSSL", \
+    "NEWS", \
+    "README*")

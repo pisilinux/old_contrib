@@ -28,7 +28,6 @@
             <Dependency>sqlite-devel</Dependency>
             <Dependency>libxml2-devel</Dependency>
             <Dependency>libssh2-devel</Dependency>
-            <Dependency>python-sphinx</Dependency>
         </BuildDependencies>
     </Source>
 

@@ -13,7 +13,9 @@
         <IsA>app:gui</IsA>
         <Summary>The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Summary>
         <Description>The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Description>
-        <Archive sha1sum="b6a8b38271ca3967f1c8982ba86adf513786bc17" type="targz">https://github.com/trueos/lumina/archive/v1.2.0-p1.tar.gz</Archive>
+        <Archive sha1sum="b6a8b38271ca3967f1c8982ba86adf513786bc17" type="targz">
+            https://github.com/trueos/lumina/archive/v1.2.0-p1.tar.gz
+        </Archive>
         <BuildDependencies>
             <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
             <Dependency versionFrom="5.7.1">qt5-multimedia-devel</Dependency>
@@ -66,7 +68,6 @@
             <Path fileType="data">/usr/share/lumina-desktop/fluxbox*</Path>
             <Path fileType="data">/usr/share/lumina-desktop/globs2</Path>
             <Path fileType="data">/usr/share/lumina-desktop/desktop-background.jpg</Path>
-            
         </Files>
     </Package>
     
@@ -214,10 +215,7 @@
             <Path fileType="localdata">/usr/share/lumina-desktop/i18n/l-calc*</Path>
         </Files>
     </Package>
-    <!--
-        <AdditionalFiles>
-            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/lumina-desktop.desktop">lumina-desktop.desktop</AdditionalFile>
-    </AdditionalFiles>-->
+    
     <History>
         <Update release="1">
             <Date>2017-03-09</Date>

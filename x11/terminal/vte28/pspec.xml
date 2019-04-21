@@ -59,48 +59,51 @@
             <Dependency>pango</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>gnutls</Dependency>
-            <Dependency>libpcre2</Dependency>
+            <Dependency>libpcre</Dependency>
             <Dependency>ncurses</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="config">/etc/profile.d</Path>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="executable">/usr/libexec</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin/vte</Path>
+            <Path fileType="library">/usr/lib/libvte.so</Path>
+            <Path fileType="library">/usr/lib/libvte.so.9</Path>
+            <Path fileType="library">/usr/lib/libvte.so.9.2800.2</Path>
+            <Path fileType="library">/usr/lib/girepository-1.0/Vte-0.0.typelib</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/gtk-2.0</Path>
+            <Path fileType="library">/usr/lib/vte</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share</Path>
-            <Path fileType="data">/usr/share/vte</Path>
-            <Path fileType="data">/usr/share/pygtk</Path>
             <Path fileType="data">/usr/share/gir-1.0/Vte-0.0.gir</Path>
+            <Path fileType="data">/usr/share/pygtk/2.0/defs</Path>
+            <Path fileType="data">/usr/share/vte/termcap-0.0</Path>
+            <Path fileType="doc">/usr/share/doc/vte28</Path>
         </Files>
     </Package>
 
     <Package>
         <Name>vte28-docs</Name>
         <IsA>data:doc</IsA>
-        <Summary>GTK reference documents for vte</Summary>
+        <Summary>GTK reference documents for vte28</Summary>
         <Files>
-            <Path fileType="doc">/usr/share/gtk-doc</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/vte-0.0</Path>
         </Files>
     </Package>
 
     <Package>
         <Name>vte28-devel</Name>
-        <Summary>Development files for vte</Summary>
+        <Summary>Development files for vte28</Summary>
         <RuntimeDependencies>
             <Dependency release="current">vte28</Dependency>
-            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
             <Dependency>pango-devel</Dependency>
             <Dependency>cairo-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>
-            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include/vte-0.0/vte</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/pyvte.pc</Path>
+            <Path fileType="library">/usr/lib/pkgconfig/vte.pc</Path>
         </Files>
     </Package>
 

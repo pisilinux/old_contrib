@@ -13,7 +13,8 @@ def setup():
 	--enable-geanypy \
 	--enable-geanypg \
 	--enable-spellcheck \
-	--enable-multiterm")
+	--enable-multiterm \
+	--enable-geanygendoc")
 
 def build():
 	autotools.make()

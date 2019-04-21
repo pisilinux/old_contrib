@@ -20,7 +20,7 @@
         <BuildDependencies>
             <Dependency>libgcc</Dependency>
             <Dependency>intltool</Dependency>
-            <Dependency>vte-devel</Dependency>
+            <Dependency>vte28-devel</Dependency>
             <Dependency>gtk2-devel</Dependency>
 <!--            <Dependency>gtk3-devel</Dependency> -->
             <Dependency>glib2-devel</Dependency>
@@ -30,7 +30,7 @@
     <Package>
         <Name>geany</Name>
         <RuntimeDependencies>
-            <Dependency>vte</Dependency>
+            <Dependency>vte28</Dependency>
             <Dependency>gtk2</Dependency>
 <!--            <Dependency>gtk3</Dependency> -->
             <Dependency>glib2</Dependency>

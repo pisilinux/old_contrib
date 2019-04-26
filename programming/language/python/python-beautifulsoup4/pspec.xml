@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python-beautifulsoup4</Name>
-        <Homepage>http://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
+        <Homepage>https://www.crummy.com/software/BeautifulSoup/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -11,14 +11,17 @@
         <License>MIT</License>
         <IsA>library</IsA>
         <Summary>HTML/XML parser for quick-turnaround applications like screen-scraping</Summary>
-        <Description>Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.</Description>
-        <Archive sha1sum="3252d89e8b3bbed0cff47f89d98ca6221cdc3d03" type="targz">https://www.crummy.com/software/BeautifulSoup/bs4/download/4.4/beautifulsoup4-4.4.1.tar.gz</Archive>
+        <Description>
+            Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.
+        </Description>
+        <Archive sha1sum="1000ef6113d020d5140d556862107c3d502dd5ed" type="targz">
+            https://www.crummy.com/software/BeautifulSoup/bs4/download/4.7/beautifulsoup4-4.7.1.tar.gz
+        </Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>python-lxml</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -44,6 +47,13 @@
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>2019-04-25</Date>
+            <Version>4.7.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
         <Update release="3">
             <Date>2016-04-05</Date>
             <Version>4.4.1</Version>

@@ -11,8 +11,8 @@
         <License>GPLv3</License>
         <IsA>app:gui</IsA>
         <Summary>Create a Windows USB stick installer</Summary>
-        <Description>A Linux program to create a Windows USB stick installer from a real Windows DVD or image. The important part is that you should format usb stick in NTFS.</Description>
-        <Archive sha1sum="dd4aa7454cc6c40be8300b877a71ef4cbd11f55b" type="targz">https://github.com/slacka/WoeUSB/archive/v3.2.10.tar.gz</Archive>
+        <Description>A Linux program to create a Windows USB stick installer from a real Windows DVD or iso image. The important part is that you should format usb stick in NTFS.</Description>
+        <Archive sha1sum="f37d2929db349cbe408ea5489ccbe57ccc9cdb1a" type="targz">https://github.com/slacka/WoeUSB/archive/v3.3.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>m4</Dependency>
             <Dependency>wxGTK-devel</Dependency>
@@ -37,6 +37,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-06-04</Date>
+            <Version>3.3.0</Version>
+            <Comment>ver. bump</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2018-10-22</Date>
             <Version>3.2.10</Version>

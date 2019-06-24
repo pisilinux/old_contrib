@@ -1,0 +1,90 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>opusfile</Name>
+        <Homepage>http://www.opus-codec.org/</Homepage>
+        <Packager>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Stand-alone decoder library for .opus streams</Summary>
+        <Description>
+            The opusfile and opusurl libraries provide a high-level API for decoding and seeking within .opus files on disk or over http(s).
+        </Description>
+        <Archive sha1sum="fc3bf2a73be16836a16d9e55ff1097de3835dce3" type="targz">
+            https://archive.mozilla.org/pub/opus/opusfile-0.11.tar.gz
+        </Archive>
+        <BuildDependencies>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>openssl-32bit</Dependency>
+            <Dependency>libopus-devel</Dependency>
+            <Dependency>libopus-32bit</Dependency>
+            <Dependency>libogg-devel</Dependency>
+            <Dependency>libogg-32bit</Dependency>
+            <Dependency>doxygen</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>opusfile</Name>
+        <RuntimeDependencies>
+            <Dependency>libopus</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>libogg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>opusfile-devel</Name>
+        <Summary>Development files for opusfile</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">opusfile</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="library">/usr/lib32/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>opusfile-docs</Name>
+        <Summary>document files for opusfile</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">opusfile</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>opusfile-32bit</Name>
+        <PartOf>emul32</PartOf>
+        <Summary>32-bit shared libraries for opusfile</Summary>
+        <BuildType>emul32</BuildType>
+        <RuntimeDependencies>
+            <Dependency release="current">opusfile</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib32</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-06-24</Date>
+            <Version>0.11</Version>
+            <Comment>First build.</Comment>
+            <Email>wascheme@tuta.io</Email>
+            <Name>fury</Name>
+        </Update>
+    </History>
+</PISI>

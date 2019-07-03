@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xfce4-terminal</Name>
+		<Homepage>https://www.xfce.org/</Homepage>
+		<Packager>
+			<Name>Ayhan Yalçınsoy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<PartOf>desktop.xfce.base</PartOf>
+		<Icon>utilities-terminal</Icon>
+		<IsA>app:gui</IsA>
+		<Summary>Terminal for Xfce</Summary>
+		<Description>
+			Terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.
+		</Description>
+		<Archive sha1sum="11117241f5891ea1fd831e86b0db57ed37a60ee2" type="tarbz2">
+			https://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.8.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>vte-devel</Dependency>
+			<Dependency>gnutls-devel</Dependency>
+			<Dependency>libpcre2-devel</Dependency>
+			<Dependency>libxfce4ui-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>xfce4-terminal</Name>
+		<RuntimeDependencies>
+			<Dependency>vte</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>gnutls</Dependency>
+			<Dependency>libpcre2</Dependency>
+			<Dependency>libxfce4ui</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="9">
+			<Date>2019-07-03</Date>
+			<Version>0.8.8</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="8">
+			<Date>2015-03-04</Date>
+			<Version>0.6.3</Version>
+			<Comment>Rebuild</Comment>
+			<Name>Ayhan Yalçınsoy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Update>
+		<Update release="7">
+			<Date>2014-06-10</Date>
+			<Version>0.6.3</Version>
+			<Comment>Release bump.</Comment>
+			<Name>Alihan Öztürk</Name>
+			<Email>alihan@pisilinux.org</Email>
+		</Update>
+		<Update release="6">
+			<Date>2014-05-27</Date>
+			<Version>0.6.3</Version>
+			<Comment>Version Bump</Comment>
+			<Name>Kamil Atlı</Name>
+			<Email>suvarice@gmail.com</Email>
+		</Update>
+		<Update release="5">
+			<Date>2013-10-10</Date>
+			<Version>0.6.2</Version>
+			<Comment>Cleanup.</Comment>
+			<Name>Kamil Atlı</Name>
+			<Email>suvarice@gmail.com</Email>
+		</Update>
+		<Update release="4">
+			<Date>2013-08-22</Date>
+			<Version>0.6.2</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Marcin Bojara</Name>
+			<Email>marcin@pisilinux.org</Email>
+		</Update>
+		<Update release="3">
+			<Date>2013-08-17</Date>
+			<Version>0.6.1</Version>
+			<Comment>Dep Fixed</Comment>
+			<Name>Erdinç Gültekin</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2013-04-06</Date>
+			<Version>0.6.1</Version>
+			<Comment>Version bump</Comment>
+			<Name>Ertan Güven</Name>
+			<Email>ertan@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2011-09-16</Date>
+			<Version>0.4.8</Version>
+			<Comment>First release</Comment>
+			<Name>Alper Tekinalp</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>

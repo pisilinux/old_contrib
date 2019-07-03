@@ -6,16 +6,22 @@
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
 
 def setup():
-    autotools.configure()
+	autotools.configure("--prefix=/usr \
+	--enable-dbus-start-daemon \
+	--with-x")
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    autotools.install()
-    
-    pisitools.remove("/usr/share/icons/hicolor/icon-theme.cache")
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README")
+	pisitools.removeDir("usr/lib/systemd")
+
+	pisitools.dodoc("AUTHORS", \
+	"ChangeLog", \
+	"COPYING", \
+	"README")

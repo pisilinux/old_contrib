@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>xfce4-weather-plugin</Name>
+		<Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<PartOf>desktop.xfce.addon</PartOf>
+		<IsA>plugin</IsA>
+		<Summary>A weather plugin for the Xfce desktop environment</Summary>
+		<Description>
+			Originally written by Bob Schlärmann, this panel plugin shows information about your local weather in the panel, using forecast data provided by met.no.
+		</Description>
+		<Archive sha1sum="bebe36416b2f46812e7b4c54eb359ddf088a5ca5" type="tarbz2">
+			https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.9/xfce4-weather-plugin-0.9.1.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>libsoup-devel</Dependency>
+			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>xfce4-panel-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+	<Package>
+		<Name>xfce4-weather-plugin</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>libsoup</Dependency>
+			<Dependency>libxfce4ui</Dependency>
+			<Dependency>xfce4-panel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+	<History>
+		<Update release="1">
+			<Date>2019-07-03</Date>
+			<Version>0.9.1</Version>
+			<Comment>First build.</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
+	</History>
+</PISI>

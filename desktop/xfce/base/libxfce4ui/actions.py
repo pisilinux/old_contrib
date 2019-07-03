@@ -1,0 +1,34 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+#
+# Licensed under the GNU General Public License, version 3.
+# See the file http://www.gnu.org/licenses/gpl.txt
+
+from pisi.actionsapi import autotools
+from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
+
+def setup():
+	autotools.configure("--prefix=/usr \
+	--disable-gtk-doc \
+	--disable-static \
+	--enable-gtk2 \
+	--enable-vala \
+	--enable-introspection \
+	--with-vendor-info='Pisi Linux'")
+
+	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
+
+def build():
+	autotools.make()
+
+def install():
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+	pisitools.dodoc("NEWS", \
+	"COPYING", \
+	"README", \
+	"TODO", \
+	"ChangeLog", \
+	"AUTHORS", \
+	"THANKS")

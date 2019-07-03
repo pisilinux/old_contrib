@@ -7,19 +7,21 @@
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
-from pisi.actionsapi import shelltools
 
 def setup():
-    autotools.configure("--prefix=/usr \
-                        --disable-static \
-                        --disable-debug")
-
+	autotools.configure("\
+	--prefix=/usr \
+	--enable-gtk3 \
+	--disable-static")
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    pisitools.domo("po/tr.po", "tr", "mousepad.mo")
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	#pisitools.domo("po/tr.po", "tr", "mousepad.mo")
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", \
+	"COPYING", \
+	"NEWS", \
+	"README")

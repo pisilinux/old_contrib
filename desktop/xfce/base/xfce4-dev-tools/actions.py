@@ -6,7 +6,6 @@
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
-#from pisi.actionsapi import shelltools
 
 def setup():
 	autotools.configure("--prefix=/usr")

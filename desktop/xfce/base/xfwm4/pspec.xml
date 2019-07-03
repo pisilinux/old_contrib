@@ -79,7 +79,7 @@
 		<Update release="9">
 			<Date>2019-07-03</Date>
 			<Version>4.13.3</Version>
-			<Comment>Rebuild from git.</Comment>
+			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>

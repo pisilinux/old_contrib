@@ -19,12 +19,12 @@
             https://archive.xfce.org/xfce/4.14pre2/src/xfce4-power-manager-1.6.3.tar.bz2
         </Archive>
         <BuildDependencies>
-			<Dependency>intltool</Dependency>
-			<Dependency>gtk2-devel</Dependency>
-			<Dependency>gtk3-devel</Dependency>
-			<Dependency>dbus-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>libSM-devel</Dependency>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
             <Dependency>libICE-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>xfconf-devel</Dependency>
@@ -66,7 +66,7 @@
             <Dependency>libxfce4util</Dependency>
         </RuntimeDependencies>
         <Files>
-			<Path fileType="config">/etc/xdg/autostart</Path>
+            <Path fileType="config">/etc/xdg/autostart</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share</Path>

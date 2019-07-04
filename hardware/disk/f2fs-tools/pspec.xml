@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>f2fs-tools</Name>
+		<Homepage>https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/about/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>lilian2water@gmail.com</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:console</IsA>
+		<Summary>Userland tools for the f2fs filesystem</Summary>
+		<Description>Userland tools for the f2fs filesystem</Description>
+		<Archive sha1sum="387425e264ed9f16d69e2ffd9bda829dbce75e77" type="targz">
+			https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.12.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libutil-linux-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+	<Package>
+		<Name>f2fs-tools</Name>
+		<RuntimeDependencies>
+			<Dependency>libutil-linux</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/sbin</Path>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="man">/usr/share/man/man8</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+	<History>
+		<Update release="1">
+			<Date>2019-07-04</Date>
+			<Version>1.12.0</Version>
+			<Comment>First build</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
+	</History>
+</PISI>

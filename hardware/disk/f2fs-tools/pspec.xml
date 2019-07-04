@@ -6,7 +6,7 @@
 		<Homepage>https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/about/</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>lilian2water@gmail.com</Email>
+			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:console</IsA>

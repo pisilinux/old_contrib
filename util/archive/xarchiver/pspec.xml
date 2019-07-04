@@ -29,7 +29,9 @@
             <Dependency>gdk-pixbuf-devel</Dependency>
         </BuildDependencies>
         <Patches>
-	  <!--<Patch level="1">xarchiver-0.5.3-add-mime-types.patch</Patch> -->
+            <!--
+            <Patch level="1">xarchiver-0.5.3-add-mime-types.patch</Patch>
+            -->
         </Patches>
     </Source>
 
@@ -41,17 +43,16 @@
             <Dependency>libxslt</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>rar</Dependency>
+            <Dependency>lzip</Dependency>
             <Dependency>bzip2</Dependency>
             <Dependency>p7zip</Dependency>
-<!--            <Dependency>unarj</Dependency> -->
             <Dependency>unrar</Dependency>
             <Dependency>libzip</Dependency>
-            <Dependency>libarchive</Dependency>
             <Dependency>xdg-utils</Dependency>
+            <Dependency>libarchive</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-<!--            <Path fileType="executable">/usr/libexec</Path> -->
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/share/icons</Path>
             <Path fileType="data">/usr/share/pixmaps/xarchiver</Path>

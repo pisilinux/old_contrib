@@ -33,17 +33,16 @@
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="library">/usr/lib</Path>
-			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="man">/usr/share/man/man1</Path>
-			<Path fileType="doc">/usr/share/doc/ctpl</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 	<Package>
 		<Name>ctpl-docs</Name>
 		<Summary>GTK reference documents for ctpl</Summary>
 		<Files>
-			<Path fileType="doc">/usr/share/gtk-doc/html/ctpl</Path>
+			<Path fileType="doc">/usr/share/gtk-doc</Path>
 		</Files>
 	</Package>
 	<Package>
@@ -53,7 +52,7 @@
 			<Dependency release="current">ctpl</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="header">/usr/include/ctpl</Path>
+			<Path fileType="header">/usr/include</Path>
 			<Path fileType="library">/usr/lib/pkgconfig</Path>
 		</Files>
 	</Package>

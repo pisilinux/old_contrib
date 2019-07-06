@@ -13,7 +13,6 @@ def setup():
 	--prefix=/usr \
 	--disable-static \
 	--disable-polkit \
-	--disable-systemd \
 	--disable-legacy-sm \
 	--with-x")
 

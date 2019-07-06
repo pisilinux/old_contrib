@@ -17,7 +17,6 @@ def setup():
 	--disable-dependency-tracking \
 	--disable-static \
 	--enable-startup-notification \
-	--enable-xpresent \
 	--enable-randr \
 	--enable-xsync")
 

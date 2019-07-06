@@ -10,11 +10,10 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("--prefix=/usr \
-	--enable-startup-notification \
+	--enable-notifications \
 	--enable-introspection \
 	--enable-gio-unix \
 	--enable-gudev \
-	--enable-dbus \
 	--enable-exif \
 	--enable-pcre \
 	--disable-gtk-doc \

@@ -28,6 +28,8 @@
 			<Dependency>cairo-devel</Dependency>
 			<Dependency>pango-devel</Dependency>
 			<Dependency>xfconf-devel</Dependency>
+			<Dependency>upower-devel</Dependency>
+			<Dependency>colord-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
@@ -41,6 +43,7 @@
 			<Dependency>libcanberra-devel</Dependency>
 			<Dependency>libxklavier-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
+			<Dependency>xorg-input-libinput-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -58,6 +61,8 @@
 			<Dependency>garcon</Dependency>
 			<Dependency>upower</Dependency>
 			<Dependency>xfconf</Dependency>
+			<Dependency>upower</Dependency>
+			<Dependency>colord</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>libXrandr</Dependency>
 			<Dependency>libxfce4ui</Dependency>
@@ -66,6 +71,7 @@
 			<Dependency>libXcursor</Dependency>
 			<Dependency>libxklavier</Dependency>
 			<Dependency>libxfce4util</Dependency>
+			<Dependency>xorg-input-libinput</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>

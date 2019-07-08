@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.4.4
+Type=Application
+Name=notifyd
+Comment=notification daemon
+Exec=/usr/lib/xfce4/notifyd/xfce4-notifyd
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+

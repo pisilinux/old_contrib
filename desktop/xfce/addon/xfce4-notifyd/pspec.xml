@@ -49,6 +49,9 @@
 			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
+		<AdditionalFiles>
+			<AdditionalFile owner="root" permission="0644" target="/etc/xdg/autostart/notifyd-autostart.desktop">notifyd-autostart.desktop</AdditionalFile>
+		</AdditionalFiles>
 	</Package>
 
 	<History>

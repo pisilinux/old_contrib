@@ -24,6 +24,7 @@ def build():
 	autotools.make()
 
 def install():
+	pisitools.dosed("scripts/xinitrc", "exec xfce4-session", "exec dbus-launch --exit-with-session xfce4-session")
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", \

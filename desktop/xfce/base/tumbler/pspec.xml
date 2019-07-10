@@ -75,7 +75,7 @@
 		<Update release="10">
 			<Date>2019-07-10</Date>
 			<Version>0.2.5</Version>
-			<Comment>First build.</Comment>
+			<Comment>Ver. bump</Comment>
 			<Email>wascheme@tuta.io</Email>
 			<Name>fury</Name>
 		</Update>

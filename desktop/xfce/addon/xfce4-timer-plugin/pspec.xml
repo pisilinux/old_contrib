@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>xfce4-timer-plugin</Name>
-        <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin</Homepage>
+        <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -12,9 +12,15 @@
         <Icon>xfce4-panel</Icon>
         <IsA>app:gui</IsA>
         <Summary>Timer plugin for Xfce4 panel</Summary>
-        <Description>With this plugin you can add timers (alarm or countdown) to your Xfce panel. You can display a warning window and/or run a custom command when alarm rings, repeat alarms etc.</Description>
-        <Archive sha1sum="aa37ccf7dad36000f413fd7dd29068da4858c8fe" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.6/xfce4-timer-plugin-1.6.0.tar.bz2</Archive>
+        <Description>
+            With this plugin you can add timers (alarm or countdown) to your Xfce panel. You can display a warning window and/or run a custom command when alarm rings, repeat alarms etc.
+        </Description>
+        <Archive sha1sum="f8f502eaee45843652ec869b730a92064d42e483" type="tarbz2">
+            https://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/xfce4-timer-plugin-1.7.0.tar.bz2
+        </Archive>
         <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>libxfce4ui-devel</Dependency>
             <Dependency>xfce4-panel-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -22,7 +28,7 @@
     <Package>
         <Name>xfce4-timer-plugin</Name>
         <RuntimeDependencies>
-            <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>libxfce4ui</Dependency>
@@ -30,15 +36,21 @@
             <Dependency>libxfce4util</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/xfce4</Path>
-            <Path fileType="data">/usr/share/icons/</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-07-11</Date>
+            <Version>1.7.0</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
         <Update release="3">
             <Date>2015-03-05</Date>
             <Version>1.6.0</Version>

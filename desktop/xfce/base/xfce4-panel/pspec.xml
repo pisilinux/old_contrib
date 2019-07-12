@@ -26,7 +26,6 @@
 			<Dependency>exo-devel</Dependency>
 			<Dependency>dbus-devel</Dependency>
 			<Dependency>vala-devel</Dependency>
-			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>cairo-devel</Dependency>
@@ -36,7 +35,6 @@
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
 			<Dependency>gettext-devel</Dependency>
-			<Dependency>libwnck2-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>freetype-devel</Dependency>
 			<Dependency>xfce4-dev-tools</Dependency>
@@ -54,7 +52,6 @@
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
 			<Dependency>exo</Dependency>
-			<Dependency>gtk2</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>dbus</Dependency>
 			<Dependency>libSM</Dependency>

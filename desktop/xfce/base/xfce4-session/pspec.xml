@@ -31,6 +31,7 @@
 			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libICE-devel</Dependency>
+			<Dependency>polkit-devel</Dependency>
 			<Dependency>libwnck2-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>xorg-app-devel</Dependency>
@@ -55,6 +56,7 @@
 			<Dependency>libSM</Dependency>
 			<Dependency>libX11</Dependency>
 			<Dependency>libICE</Dependency>
+			<Dependency>polkit</Dependency>
 			<Dependency>xfconf</Dependency>
 			<Dependency>xorg-app</Dependency>
 			<Dependency>libwnck2</Dependency>

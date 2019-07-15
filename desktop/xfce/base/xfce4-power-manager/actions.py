@@ -10,7 +10,7 @@ from pisi.actionsapi import get
 def setup():
     autotools.configure("\
     --enable-network-manager \
-    --disable-polkit \
+    --enable-polkit \
     --with-x")
 
 def build():

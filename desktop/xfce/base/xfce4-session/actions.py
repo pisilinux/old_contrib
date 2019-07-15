@@ -11,8 +11,8 @@ from pisi.actionsapi import get
 def setup():
 	autotools.configure("\
 	--prefix=/usr \
+	--enable-polkit \
 	--disable-static \
-	--disable-polkit \
 	--disable-legacy-sm \
 	--with-x")
 

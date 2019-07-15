@@ -28,7 +28,6 @@
 			<Dependency>dbus-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>libpng-devel</Dependency>
-			<Dependency>freetype-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 

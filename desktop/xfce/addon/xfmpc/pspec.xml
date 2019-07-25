@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <Icon>xfmpc</Icon>
         <IsA>app:gui</IsA>
-	<PartOf>desktop.xfce.addon</PartOf>
+        <PartOf>desktop.xfce.addon</PartOf>
         <Summary>A MPD client for Xfce4</Summary>
         <Description>Xfmpc is a MPD (Music Player Daemon) client focusing on low footprint for Xfce desktop environment.</Description>
         <Archive sha1sum="40e12fb4cb2c5571934956e2842b5d29b2c96845" type="tarbz2">http://archive.xfce.org/src/apps/xfmpc/0.2/xfmpc-0.2.2.tar.bz2</Archive>
@@ -54,20 +54,20 @@
            <Comment>Rebuild</Comment>
            <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
-       </Update>
-       <Update release="2">
+        </Update>
+        <Update release="2">
            <Date>2013-08-26</Date>
            <Version>0.2.2</Version>
            <Comment>Release bump.</Comment>
            <Name>Serdar Soytetir</Name>
            <Email>kaptan@pisilinux.org</Email>
-       </Update>
-       <Update release="1">
+        </Update>
+        <Update release="1">
            <Date>2012-05-04</Date>
            <Version>0.2.2</Version>
             <Comment>First release</Comment>
            <Name>Erdinç Gültekin</Name>
            <Email>admins@pisilinux.org</Email>
-       </Update>
+        </Update>
     </History>
 </PISI>

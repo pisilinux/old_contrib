@@ -27,7 +27,6 @@
 			<Dependency>libxml2-devel</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>gettext</Dependency>
-			<Dependency>taglib-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 

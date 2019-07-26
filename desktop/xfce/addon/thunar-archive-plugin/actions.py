@@ -5,13 +5,17 @@
 # See the file http://www.gnu.org/copyleft/gpl.txt.
 
 from pisi.actionsapi import autotools
-from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
+from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 
 def setup():
-#	pisitools.dosed("configure", "thunarx-1", "thunarx-2")
-
-	autotools.configure("--disable-static --disable-dependency-tracking")
+	#shelltools.export("LDFLAGS", "%s -lgtk-x11-2.0 -lthunarx-2" % get.LDFLAGS())
+	autotools.configure("--prefix=/usr \
+	--sysconfdir=/etc \
+	--libexecdir=/usr/lib/xfce4 \
+	--localstatedir=/var \
+	--disable-static")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
@@ -21,5 +25,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "TODO")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
 

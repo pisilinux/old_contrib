@@ -7,11 +7,17 @@
 from pisi.actionsapi import autotools
 from pisi.actionsapi import get
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 
 def setup():
-	autotools.configure()
+	#shelltools.export("LDFLAGS", "%s -lgtk-x11-2.0 -lthunarx-2" % get.LDFLAGS())
+	autotools.configure("--prefix=/usr \
+	--sysconfdir=/etc \
+	--libexecdir=/usr/lib/xfce4 \
+	--localstatedir=/var \
+	--disable-static")
 
-	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
 def build():
 	autotools.make()

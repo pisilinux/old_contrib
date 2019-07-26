@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>dcraw</Name>
-        <Homepage>http://www.cybercom.net/~dcoffin/dcraw/</Homepage>
+        <Homepage>https://www.dechifro.org/dcraw/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -12,11 +12,13 @@
         <IsA>app:console</IsA>
         <Summary>Command-line tool for RAW photo processing</Summary>
         <Description>dcraw is a command-line tool for processing RAW photographs.</Description>
-        <Archive sha1sum="6821b898e7e0a23c010937adcc50097e51bdf9d7" type="targz">http://cybercom.net/~dcoffin/dcraw/archive/dcraw-9.23.0.tar.gz</Archive>
+        <Archive sha1sum="321662c99c0201f4886b61817cdedfc850cc7b3b" type="targz">
+            https://www.dechifro.org/dcraw/archive/dcraw-9.28.0.tar.gz
+        </Archive>
         <BuildDependencies>
             <Dependency>libjpeg-turbo-devel</Dependency>
-            <Dependency>lcms2-devel</Dependency>
             <Dependency>jasper-devel</Dependency>
+            <Dependency>lcms2-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -25,7 +27,7 @@
         <RuntimeDependencies>
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>jasper</Dependency>
-            <Dependency>lcms</Dependency>
+            <Dependency>lcms2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="localedata">/usr/share/locale</Path>
@@ -35,6 +37,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2019-07-26</Date>
+            <Version>9.28.0</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
         <Update release="4">
             <Date>2015-02-16</Date>
             <Version>9.23.0</Version>

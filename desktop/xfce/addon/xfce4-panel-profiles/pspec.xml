@@ -2,41 +2,42 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>thunar-vcs-plugin</Name>
-		<Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin</Homepage>
+		<Name>xfce4-panel-profiles</Name>
+		<Homepage>https://git.xfce.org/apps/xfce4-panel-profiles/about/</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
 		</Packager>
-		<License>GPLv2</License>
-		<IsA>library</IsA>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
 		<PartOf>desktop.xfce.addon</PartOf>
-		<Summary>An SVN integration and GIT integration to Thunar</Summary>
+		<Summary>A simple application to manage Xfce panel layouts</Summary>
 		<Description>
-			The Thunar VCS Plugin adds Subversion and GIT actions to the context menu of thunar. This gives a SVN integration and GIT integration to Thunar.
+			With the modular Xfce Panel, a multitude of panel layouts can be created. This tool makes it possible to backup, restore, import, and export these panel layouts.
 		</Description>
-		<Archive sha1sum="bf94601c450165e63267343f9460367883b84c5a" type="tarbz2">
-			http://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.2/thunar-vcs-plugin-0.2.0.tar.bz2
+		<Archive sha1sum="572c942b7cc2729e27ed54ca03bab8f658f9e50d" type="tarbz2">
+			http://archive.xfce.org/src/apps/xfce4-panel-profiles/1.0/xfce4-panel-profiles-1.0.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
-			<Dependency>thunar-devel</Dependency>
 			<Dependency>intltool</Dependency>
-			<Dependency>exo-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>xfce4-panel-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
-		<Name>thunar-vcs-plugin</Name>
+		<Name>xfce4-panel-profiles</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk3</Dependency>
 			<Dependency>cairo</Dependency>
-			<Dependency>glib2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libxfce4ui</Dependency>
+			<Dependency>xfce4-panel</Dependency>
 			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="executable">/usr/libexec</Path>
-			<Path fileType="library">/usr/lib</Path>
-			<Path fileType="doc">/usr/share</Path>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
@@ -44,29 +45,29 @@
 
 	<History>
 		<Update release="4">
-			<Date>2019-07-26</Date>
-			<Version>0.2.0</Version>
-			<Comment>Ver. bump</Comment>
+			<Date>2019-07-13</Date>
+			<Version>1.0.8</Version>
+			<Comment>Fork.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>
 		<Update release="3">
-			<Date>2015-03-02</Date>
-			<Version>0.1.4</Version>
-			<Comment>rebuild and remove unneeded deps</Comment>
+			<Date>2015-03-05</Date>
+			<Version>0.0.1</Version>
+			<Comment>Rebuild</Comment>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
 		</Update>
 		<Update release="2">
 			<Date>2013-08-26</Date>
-			<Version>0.1.4</Version>
+			<Version>0.0.1</Version>
 			<Comment>Release bump.</Comment>
 			<Name>Serdar Soytetir</Name>
 			<Email>kaptan@pisilinux.org</Email>
 		</Update>
 		<Update release="1">
 			<Date>2012-05-03</Date>
-			<Version>0.1.4</Version>
+			<Version>0.0.1</Version>
 			<Comment>First release</Comment>
 			<Name>Erdinç Gültekin</Name>
 			<Email>admins@pisilinux.org</Email>

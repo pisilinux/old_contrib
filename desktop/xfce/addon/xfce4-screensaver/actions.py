@@ -16,6 +16,7 @@ def setup():
 	--enable-authentication-scheme=pam \
 	--enable-locking \
 	--enable-pam \
+	--without-systemd \
 	--with-pam-auth-type=system \
 	--with-console-kit \
 	--with-mit-ext \

@@ -16,8 +16,8 @@
 		<Description>
 			The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.
 		</Description>
-		<Archive sha1sum="713ffe6a6068f382cbc907f071cb35ed803c590a" type="tarbz2">
-			https://archive.xfce.org/xfce/4.14pre2/src/xfwm4-4.13.3.tar.bz2
+		<Archive sha1sum="a279bae3f6955cb1708c10b745d08d7ded8d79fe" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14pre3/src/xfwm4-4.13.4.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -50,10 +50,12 @@
 			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
+			<Dependency>libXi</Dependency>
 			<Dependency>libepoxy</Dependency>
 			<Dependency>libXrandr</Dependency>
 			<Dependency>libXfixes</Dependency>
 			<Dependency>libXrender</Dependency>
+			<Dependency>libXinerama</Dependency>
 			<Dependency>libxfce4util</Dependency>
 			<Dependency>libXcomposite</Dependency>
 			<Dependency>startup-notification</Dependency>
@@ -76,6 +78,13 @@
 	</Package>
 
 	<History>
+		<Update release="10">
+			<Date>2019-07-28</Date>
+			<Version>4.13.4</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="9">
 			<Date>2019-07-03</Date>
 			<Version>4.13.3</Version>

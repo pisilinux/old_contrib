@@ -10,12 +10,12 @@ from pisi.actionsapi import pisitools
 
 def setup():
 	autotools.configure("\
-	--prefix=/usr \
 	--sysconfdir=/etc \
-	--libexecdir=/usr/lib \
-	--localstatedir=/var \
+	--prefix=/usr \
+	\
 	--disable-gtk-doc \
 	--disable-static \
+	\
 	--enable-introspection \
 	--enable-vala \
 	--with-x")

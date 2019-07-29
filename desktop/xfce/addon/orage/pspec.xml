@@ -18,18 +18,18 @@
 			http://archive.xfce.org/src/apps/orage/4.12/orage-4.12.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
-			<Dependency>intltool</Dependency>
 			<Dependency>gettext</Dependency>
+			<Dependency>intltool</Dependency>
 			<Dependency>db-devel</Dependency>
 			<Dependency>popt-devel</Dependency>
 			<Dependency>dbus-glib-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
 			<!--
 			<Dependency>libical-devel</Dependency>
 			-->
 			<Dependency>libxfce4util-devel</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -48,29 +48,24 @@
 			<Dependency>freetype</Dependency>
 			<Dependency>dbus-glib</Dependency>
 			<Dependency>libnotify</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>fontconfig</Dependency>
 			<Dependency>xfce4-panel</Dependency>
 			<Dependency>libxfce4util</Dependency>
-			<Dependency>gdk-pixbuf</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="library">/usr/lib</Path>
-			<Path fileType="doc">/usr/share/doc</Path>
-			<Path fileType="doc">/usr/share/orage/doc</Path>
-			<Path fileType="data">/usr/share/icons</Path>
-			<Path fileType="data">/usr/share/dbus-1</Path>
-			<Path fileType="data">/usr/share/orage</Path>
-			<Path fileType="data">/usr/share/xfce4</Path>
-			<Path fileType="data">/usr/share/applications</Path>
+			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="8">
-			<Date>2019-07-26</Date>
+			<Date>2019-07-28</Date>
 			<Version>4.12.1</Version>
 			<Comment>Rebuild</Comment>
 			<Name>fury</Name>

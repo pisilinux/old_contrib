@@ -16,7 +16,7 @@
 			Xfconf is a hirerchical (tree-like) configuration system for the Xfce graphical desktop environment.
 		</Description>
 		<Archive sha1sum="c5aab94ef25a3f4c606b9e5cff32c555b5139c3c" type="tarbz2">
-			https://archive.xfce.org/xfce/4.14pre2/src/xfconf-4.13.8.tar.bz2
+			http://archive.xfce.org/xfce/4.14pre3/src/xfconf-4.13.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -44,7 +44,6 @@
 			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
-			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
@@ -68,7 +67,7 @@
 
 	<History>
 		<Update release="9">
-			<Date>2019-07-02</Date>
+			<Date>2019-07-28</Date>
 			<Version>4.13.8</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>

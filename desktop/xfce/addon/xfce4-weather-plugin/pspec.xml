@@ -27,6 +27,7 @@
 			<Dependency>xfce4-panel-devel</Dependency>
 		</BuildDependencies>
 	</Source>
+
 	<Package>
 		<Name>xfce4-weather-plugin</Name>
 		<RuntimeDependencies>
@@ -39,12 +40,14 @@
 		<Files>
 			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
+
 	<History>
 		<Update release="1">
-			<Date>2019-07-03</Date>
+			<Date>2019-07-28</Date>
 			<Version>0.9.1</Version>
 			<Comment>First build.</Comment>
 			<Email>wascheme@tuta.io</Email>

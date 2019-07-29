@@ -22,21 +22,21 @@
 			<Dependency>gst-plugins-base-devel</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
 			<Dependency>keybinder-devel</Dependency>
+			<Dependency>xfconf-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>xfce4-volumed-pulse</Name>
 		<RuntimeDependencies>
-			<Dependency>gtk3</Dependency>
 			<Dependency>gst-plugins-base</Dependency>
 			<Dependency>pulseaudio-libs</Dependency>
 			<Dependency>gstreamer</Dependency>
 			<Dependency>libnotify</Dependency>
-			<Dependency>xfconf</Dependency>
 			<Dependency>keybinder</Dependency>
+			<Dependency>xfconf</Dependency>
+			<Dependency>gtk3</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc/xdg/autostart/</Path>

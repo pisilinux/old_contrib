@@ -15,13 +15,14 @@
 		<Description>
 			Mousepad aims to be an easy-to-use and fast editor. Our target is an editor for quickly editing text files, not a development environment or an editor with a huge bunch of plugins. On the other hand we try to use the latest Gtk+ features available, which means that if Gtk adds something new in a major release that is useful for the editor, we will likely bump the Gtk dependency and integrate this new feature in Mousepad.
 		</Description>
-		<Archive sha1sum="da034ac3711c273e71e0c2b194c12d72a9ca087a" type="tarbz2">
-			https://archive.xfce.org/src/apps/mousepad/0.4/mousepad-0.4.1.tar.bz2
+		<Archive sha1sum="26f0a2860973c4acd425dc8b5e7736ba6cb9a459" type="tarbz2">
+			http://archive.xfce.org/src/apps/mousepad/0.4/mousepad-0.4.2.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
+			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libxml2-devel</Dependency>
 			<Dependency>gtksourceview3-devel</Dependency>
 		</BuildDependencies>
@@ -36,7 +37,9 @@
 		<Name>mousepad</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>pango</Dependency>
+			<Dependency>xfconf</Dependency>
 			<Dependency>libxml2</Dependency>
 			<Dependency>gtksourceview3</Dependency>
 		</RuntimeDependencies>
@@ -49,6 +52,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2019-07-28</Date>
+			<Version>0.4.2</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2019-07-03</Date>
 			<Version>0.4.1</Version>

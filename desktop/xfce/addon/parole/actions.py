@@ -6,23 +6,28 @@
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def setup():
-#    shelltools.export("LDFLAGS", "%s -lX11" % get.LDFLAGS())
-    shelltools.makedirs("m4")
-    shelltools.system("/usr/bin/xdt-autogen")
-    autotools.configure("--disable-dependency-tracking \
-                         --enable-libnotify \
-                         --enable-taglib")
+#	shelltools.export("LDFLAGS", "%s -lX11" % get.LDFLAGS())
+#	shelltools.makedirs("m4")
+#	shelltools.system("/usr/bin/xdt-autogen")
+	autotools.configure("\
+	--disable-dependency-tracking \
+	--disable-clutter \
+	--enable-gtk-doc \
+	--enable-notify-plugin \
+	--enable-tray-plugin \
+	--enable-mpris2-plugin \
+	--enable-taglib")
 
-    pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
+	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "ChangeLog*", "COPYING", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "INSTALL", "NEWS", "README", "THANKS", "TODO")
+

@@ -21,7 +21,9 @@
 			<Dependency>polkit-devel</Dependency>
 			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
+			<!--
 			<Dependency>xfce4-session-devel</Dependency>
+			-->
 		</BuildDependencies>
 	</Source>
 	<Package>

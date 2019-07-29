@@ -25,6 +25,9 @@
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>keybinder-devel</Dependency>
+			<!-- deprecated. -->
+			<Dependency>dbus-glib-devel</Dependency>
+			<!-- -->
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>pulseaudio-libs-devel</Dependency>
@@ -40,6 +43,9 @@
 			<Dependency>libwnck3</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>keybinder</Dependency>
+			<!-- deprecated. -->
+			<Dependency>dbus-glib</Dependency>
+			<!-- -->
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>xfce4-panel</Dependency>

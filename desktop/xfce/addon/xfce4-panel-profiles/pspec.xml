@@ -15,8 +15,8 @@
 		<Description>
 			With the modular Xfce Panel, a multitude of panel layouts can be created. This tool makes it possible to backup, restore, import, and export these panel layouts.
 		</Description>
-		<Archive sha1sum="572c942b7cc2729e27ed54ca03bab8f658f9e50d" type="tarbz2">
-			http://archive.xfce.org/src/apps/xfce4-panel-profiles/1.0/xfce4-panel-profiles-1.0.8.tar.bz2
+		<Archive sha1sum="9be1ba0c12b9b826a766f30c20ae4acbd0df1957" type="tarbz2">
+			http://archive.xfce.org/src/apps/xfce4-panel-profiles/1.0/xfce4-panel-profiles-1.0.9.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -44,6 +44,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2019-07-28</Date>
+			<Version>1.0.9</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2019-07-13</Date>
 			<Version>1.0.8</Version>

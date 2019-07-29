@@ -15,8 +15,8 @@
 		<Description>
 			Libxfce4util is a basic utility non-GUI functions for Xfce desktop environment.
 		</Description>
-		<Archive sha1sum="b4467aa4af83c995b7278ab8c3513f07b39af5d2" type="tarbz2">
-			https://archive.xfce.org/xfce/4.14pre2/src/libxfce4util-4.13.4.tar.bz2
+		<Archive sha1sum="0961209a787fc23f14c5e7ba8502ad61d51e4dc4" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14pre3/src/libxfce4util-4.13.5.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -36,7 +36,6 @@
 			<Path fileType="executable">/usr/sbin</Path>
 			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
-			<Path fileType="data">/usr/share/gir-1.0/</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
@@ -61,6 +60,13 @@
 	</Package>
 
 	<History>
+		<Update release="10">
+			<Date>2019-07-28</Date>
+			<Version>4.13.5</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="9">
 			<Date>2019-07-02</Date>
 			<Version>4.13.4</Version>

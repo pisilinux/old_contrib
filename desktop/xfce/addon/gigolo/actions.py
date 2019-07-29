@@ -9,12 +9,12 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure()
+	autotools.configure()
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("README", "COPYING", "AUTHORS", "ChangeLog")
+	pisitools.dodoc("README", "COPYING", "AUTHORS", "ChangeLog")

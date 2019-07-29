@@ -13,12 +13,16 @@ def setup():
 	--prefix=/usr \
 	--sysconfdir=/etc \
 	--localstatedir=/var \
-	--libexecdir=/usr/lib \
+	\
 	--disable-dependency-tracking \
 	--disable-static \
+	\
 	--enable-startup-notification \
+	--enable-compositor \
+	--enable-epoxy \
 	--enable-randr \
-	--enable-xsync")
+	--enable-xsync \
+	--with-x")
 
 def build():
 	autotools.make()

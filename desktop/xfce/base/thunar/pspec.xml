@@ -17,8 +17,8 @@
 		<Description>
 			Thunar has been designed from the ground up to be fast and easy-to-use. Its user interface is clean and intuitive, and does not include any confusing or useless options. Thunar is fast and responsive with a good start up time and directory load time. Thunar is accessible using Assistive Technologies and is fully standarts compliant.
 		</Description>
-		<Archive sha1sum="94b9bec3458907af15443c755c3142902ab32692" type="tarbz2">
-			https://archive.xfce.org/xfce/4.14pre2/src/Thunar-1.8.7.tar.bz2
+		<Archive sha1sum="76a9617088981b9b76d6f4ddb03fee750a7645ff" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14pre3/src/Thunar-1.8.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -37,13 +37,13 @@
 			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libexif-devel</Dependency>
 			<Dependency>libpcre-devel</Dependency>
+			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>libgudev-devel</Dependency>
 			<Dependency>xfce4-dev-tools</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>fontconfig-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
-			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
@@ -68,11 +68,11 @@
 			<Dependency>xfconf</Dependency>
 			<Dependency>libexif</Dependency>
 			<Dependency>libpcre</Dependency>
+			<Dependency>libpcre2</Dependency>
 			<Dependency>libgudev</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
-			<Dependency>xfce4-panel</Dependency>
 			<Dependency>libxfce4util</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
 		</RuntimeDependencies>
@@ -97,7 +97,7 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>
-			<Path fileType="data">/usr/lib/pkgconfig</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
 		</Files>
 	</Package>
 
@@ -114,6 +114,13 @@
 	</Package>
 
 	<History>
+		<Update release="11">
+			<Date>2019-07-28</Date>
+			<Version>1.8.8</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="10">
 			<Date>2019-07-03</Date>
 			<Version>1.8.7</Version>

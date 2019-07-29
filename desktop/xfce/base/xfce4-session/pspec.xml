@@ -75,6 +75,7 @@
 		</Files>
 	</Package>
 
+	<!--
 	<Package>
 		<Name>xfce4-session-devel</Name>
 		<IsA>library</IsA>
@@ -90,6 +91,7 @@
 			<Path fileType="data">/usr/lib/pkgconfig</Path>
 		</Files>
 	</Package>
+	-->
 
 	<History>
 		<Update release="11">

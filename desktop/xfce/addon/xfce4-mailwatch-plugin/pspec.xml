@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app</IsA>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>A mailbox plugin for Xfce4</Summary>
 		<Description>A mailbox watch/check plugin for the Xfce4 panel</Description>
 		<Archive sha1sum="d0ab5e543211b951e01242efeb4ab3145db5c4c4" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-mailwatch-plugin/1.2/xfce4-mailwatch-plugin-1.2.0.tar.bz2</Archive>

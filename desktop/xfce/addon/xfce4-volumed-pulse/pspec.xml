@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>Fork of xfce4-volumed with support for PulseAudio</Summary>
 		<Description>
 			Basic daemon enabling the XF86 Volume keys and supporting synchronous volume notifications

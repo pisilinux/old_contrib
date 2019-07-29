@@ -9,7 +9,7 @@
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2+</License>
-		<PartOf>editor.emacs</PartOf>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<IsA>app:gui</IsA>
 		<Summary>Sensors plugin for Xfce4 Panel</Summary>
 		<Description>Reads your hardware sensor values and displays them in your panel</Description>

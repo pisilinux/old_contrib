@@ -11,6 +11,7 @@
 		<License>GPLv2</License>
 		<Icon>xfce4-panel</Icon>
 		<IsA>app:gui</IsA>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>Timer plugin for Xfce4 panel</Summary>
 		<Description>
 			With this plugin you can add timers (alarm or countdown) to your Xfce panel. You can display a warning window and/or run a custom command when alarm rings, repeat alarms etc.

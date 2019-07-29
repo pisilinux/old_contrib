@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>library</IsA>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>This plugin is used to display stats from a wireless lan interface</Summary>
 		<Description>
 			xfce4-wavelan-plugin shows signal quality as percentage.This plugin is quite easy to use.

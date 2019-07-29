@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>library</IsA>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>Thunar Shares Plugin</Summary>
 		<Description>
 			The Thunar Shares Plugin (thunar-shares-plugin) allows you to quickly share a folder using Samba from Thunar (the XFCE file manager) without requiring root access.

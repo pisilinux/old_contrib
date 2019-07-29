@@ -9,6 +9,7 @@
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
+		<PartOf>desktop.xfce.base</PartOf>
 		<Icon>xfce4-appfinder</Icon>
 		<IsA>app:gui</IsA>
 		<Summary>Xfce application finder</Summary>

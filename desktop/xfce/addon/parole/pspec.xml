@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:gui</IsA>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>A modern simple media player</Summary>
 		<Description>
 			Parole is a modern simple media player based on the GStreamer framework and written to fit well in the Xfce desktop. Parole is designed with simplicity, speed and resource usage in mind.

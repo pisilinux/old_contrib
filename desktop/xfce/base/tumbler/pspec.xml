@@ -9,6 +9,7 @@
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
+		<PartOf>desktop.xfce.base</PartOf>
 		<IsA>app:gui</IsA>
 		<Summary>A thumbnail service</Summary>
 		<Description>Tumbler is a thumbnail service for the filemanager of Xfce desktop environment.</Description>

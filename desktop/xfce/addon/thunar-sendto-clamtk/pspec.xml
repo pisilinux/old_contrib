@@ -10,7 +10,6 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>data</IsA>
-        <PartOf>desktop.xfce.addon</PartOf>
         <Summary>Right-click send-to ClamTk functionality within Thunar</Summary>
         <Description>thunar-sendto-clamtk is a small package to add right-click send-to ClamTk functionality within Thunar.</Description>
         <Archive sha1sum="45cf84521f35260de650362195856c3bc5444d30" type="targz">https://bitbucket.org/dave_theunsub/thunar-sendto-clamtk/downloads/thunar-sendto-clamtk-0.05.tar.gz</Archive>

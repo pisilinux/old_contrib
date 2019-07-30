@@ -62,6 +62,7 @@
 			<Dependency>libwnck3</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>xfce-polkit</Dependency>
 			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>

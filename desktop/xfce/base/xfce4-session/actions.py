@@ -16,7 +16,7 @@ def setup():
 	--disable-legacy-sm \
 	--with-x")
 
-	pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
+	#pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
 	#pisitools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
 	#pisitools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
@@ -24,7 +24,7 @@ def build():
 	autotools.make()
 
 def install():
-	pisitools.dosed("scripts/xinitrc", "exec xfce4-session", "exec dbus-launch --exit-with-session xfce4-session")
+	#pisitools.dosed("scripts/xinitrc", "exec xfce4-session", "exec dbus-launch --exit-with-session xfce4-session")
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", \

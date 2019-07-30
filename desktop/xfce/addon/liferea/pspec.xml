@@ -11,7 +11,6 @@
         <License>GPLv2</License>
         <Icon>liferea</Icon>
         <IsA>app:gui</IsA>
-        <PartOf>desktop.xfce.addon</PartOf>
         <Summary>News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds</Summary>
         <Description>Liferea (abbreviation of Linux Feed Reader) is a news aggreagator for RSS/RDF feeds which also supports CDF channels, Atom/Echo/PIE feeds and OCS or OPML directories. It is a simple FeedReader clone for Unix.</Description>
         <Archive sha1sum="ffdd505d01473b1ec29a3da292632f474b9b83fb" type="tarbz2">https://github.com/lwindolf/liferea/releases/download/v1.10.14/liferea-1.10.14.tar.bz2</Archive>

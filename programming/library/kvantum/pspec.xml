@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
         <Description>Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
-        <Archive sha1sum="d1abbd0ac85dde50e8591e18173de932ecc4690b" type="targz">https://github.com/tsujan/Kvantum/archive/V0.10.9.tar.gz</Archive>
+        <Archive sha1sum="8c05c0c77686e297eee654f56712db9deb8623b9" type="targz">https://github.com/tsujan/Kvantum/archive/V0.11.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
@@ -43,8 +43,15 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <History>
+        <Update release="2">
+            <Date>2019-07-30</Date>
+            <Version>0.11.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2019-03-01</Date>
             <Version>0.10.9</Version>

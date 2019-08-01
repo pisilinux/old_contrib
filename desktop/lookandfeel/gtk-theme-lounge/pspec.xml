@@ -10,7 +10,6 @@
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>data</IsA>
-		<PartOf>lookandfeel</PartOf>
 		<Summary>Simple and clean gtk theme</Summary>
 		<Description>
 			Simple and clean gtk theme, based on original Adwaita(supported: gtk2, gtk3, xfce 4.12+).
@@ -41,7 +40,7 @@
 	<History>
 		<Update release="1">
 			<Date>2019-08-01</Date>
-			<Version>1.20.0</Version>
+			<Version>1.20</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

@@ -33,7 +33,9 @@
 			<Dependency>glib2</Dependency>
 			<Dependency>polkit</Dependency>
 			<Dependency>libpcre2</Dependency>
+			<!--
 			<Dependency>xfce4-session</Dependency>
+			-->
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>

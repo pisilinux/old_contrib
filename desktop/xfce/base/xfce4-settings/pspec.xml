@@ -75,6 +75,7 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>
+			<Path fileType="config">/etc/xdg/xfce-mimeapps.list</Path>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="data">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>

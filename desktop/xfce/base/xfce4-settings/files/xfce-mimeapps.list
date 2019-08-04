@@ -1,0 +1,25 @@
+[Default Applications]
+application/pdf=evince.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+application/x-rar=org.gnome.FileRoller.desktop;
+application/x-compressed-tar=org.gnome.FileRoller.desktop;
+application/x-tar=org.gnome.FileRoller.desktop;
+application/x-xz=org.gnome.FileRoller.desktop;
+application/gzip=org.gnome.FileRoller.desktop;
+application/x-7z-compressed=org.gnome.FileRoller.desktop;
+application/x-xz-compressed-tar=org.gnome.FileRoller.desktop;
+application/x-bzip-compressed-tar=org.gnome.FileRoller.desktop;
+image/jpeg=ristretto.desktop;
+image/png=ristretto.desktop;
+image/gif=ristretto.desktop;
+image/x-ms-bmp=ristretto.desktop;
+audio/flac=mpv.desktop;
+audio/mpeg=mpv.desktop;
+audio/mp4=mpv.desktop;
+video/mp4=mpv.desktop;
+text/plain=mousepad.desktop;
+text/x-python=mousepad.desktop;
+text/x-python3=mousepad.desktop;
+application/xml=mousepad.desktop;
+application/xml-dtd=mousepad.desktop;
+application/x-pisi=packagemanager-helper.desktop;

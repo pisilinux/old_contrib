@@ -75,12 +75,16 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>
+			<Path fileType="config">/etc/xdg/xfce-mimeapps.list</Path>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="data">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
+		<AdditionalFiles>
+			<AdditionalFile owner="root" permission="644" target="/etc/xdg/xfce-mimeapps.list">xfce-mimeapps.list</AdditionalFile>
+		</AdditionalFiles>
 		<Provides>
 			<COMAR script="package.py">System.Package</COMAR>
 		</Provides>

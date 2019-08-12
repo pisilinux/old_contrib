@@ -15,8 +15,8 @@
 		<Description>
 			thunar-volman is an extension for the Thunar File Manager, which enables automatic management of removable drives and media. For example, if thunar-volman is installed and configured properly, and you plug in your digical camera, it will automatically spawn your preferred photo application and import the new pictures from your camera.
 		</Description>
-		<Archive sha1sum="9f81e84bf25ae4857faaf2eb529538af2a84b8ae" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/thunar-volman-0.9.4.tar.bz2
+		<Archive sha1sum="04efe6610c376d2541eac4e6615a9ffef720f872" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/thunar-volman-0.9.5.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -60,6 +60,13 @@
 	</Package>
 
 	<History>
+		<Update release="10">
+			<Date>2019-08-12</Date>
+			<Version>0.9.5</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="9">
 			<Date>2019-07-28</Date>
 			<Version>0.9.4</Version>

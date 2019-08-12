@@ -15,8 +15,8 @@
 		<Description>
 			Xfce4-dev-tools contains common tools required by Xfce developers and people that want to build Xfce from SVN. In addition, this package contains the Xfce developer's handbook.
 		</Description>
-		<Archive sha1sum="ce6ce8cf4601557bc7dd7b63eccd728385a3ae87" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/xfce4-dev-tools-4.13.0.tar.bz2
+		<Archive sha1sum="ed962b5b28b57f3626cc11508bee257667bf7384" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/xfce4-dev-tools-4.14.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>glib2-devel</Dependency>
@@ -33,6 +33,13 @@
 	</Package>
 
 	<History>
+		<Update release="9">
+			<Date>2019-08-12</Date>
+			<Version>4.14.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="8">
 			<Date>2019-07-02</Date>
 			<Version>4.13.0</Version>

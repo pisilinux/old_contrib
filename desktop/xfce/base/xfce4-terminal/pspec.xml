@@ -33,9 +33,16 @@
 		<RuntimeDependencies>
 			<Dependency>vte</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>xfconf</Dependency>
 			<Dependency>gnutls</Dependency>
 			<Dependency>libpcre2</Dependency>
 			<Dependency>libxfce4ui</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>

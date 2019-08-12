@@ -24,7 +24,7 @@ def build():
 	autotools.make()
 
 def install():
-#	shelltools.system("sed -i '96s/\<exec\>/& dbus-launch --exit-with-session/' scripts/xinitrc")
+#	shelltools.system("sed -i '102s/\<exec\>/& dbus-launch --exit-with-session/' scripts/xinitrc")
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", \

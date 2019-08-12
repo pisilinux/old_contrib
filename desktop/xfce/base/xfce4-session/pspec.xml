@@ -14,8 +14,8 @@
 		<IsA>app:console</IsA>
 		<Summary>Xfce session manager</Summary>
 		<Description>The session manager allows the user to save sessions and restore them after login. It is capable of saving several different sessions. It comes with three splash screen engines. And at last it helps you to log out, reboot, and shutdown the system.</Description>
-		<Archive sha1sum="1b012afed1c67174199b6cd0f40231921ad17f26" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/xfce4-session-4.13.4.tar.bz2
+		<Archive sha1sum="8f3e224c1bd82c172f59f58bbe89aea347f99d7a" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/xfce4-session-4.14.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -95,6 +95,13 @@
 	-->
 
 	<History>
+		<Update release="12">
+			<Date>2019-08-12</Date>
+			<Version>4.14.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="11">
 			<Date>2019-07-28</Date>
 			<Version>4.13.4</Version>

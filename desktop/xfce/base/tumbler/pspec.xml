@@ -9,12 +9,11 @@
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
-		<PartOf>desktop.xfce.base</PartOf>
 		<IsA>app:gui</IsA>
 		<Summary>A thumbnail service</Summary>
 		<Description>Tumbler is a thumbnail service for the filemanager of Xfce desktop environment.</Description>
-		<Archive sha1sum="9a2ddc651e68851f77637f62bf1c775161a323d5" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/tumbler-0.2.6.tar.bz2
+		<Archive sha1sum="f45f6e7fe1a7c38072bead3b5f18514671a18908" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/tumbler-0.2.7.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gdk-pixbuf-devel</Dependency>
@@ -33,28 +32,29 @@
 	</Source>
 
 	<Package>
-	<Name>tumbler</Name>
-	<RuntimeDependencies>
-		<Dependency>cairo</Dependency>
-		<Dependency>libgsf</Dependency>
-		<Dependency>gdk-pixbuf</Dependency>
-		<Dependency>poppler-glib</Dependency>
-		<Dependency>libjpeg-turbo</Dependency>
-		<Dependency>gst-plugins-base</Dependency>
-		<Dependency>curl</Dependency>
-		<Dependency>dbus</Dependency>
-		<Dependency>glib2</Dependency>
-		<Dependency>libpng</Dependency>
-		<Dependency>freetype</Dependency>
-		<Dependency>gtk3</Dependency>
-	</RuntimeDependencies>
-	<Files>
-		<Path fileType="library">/usr/lib</Path>
-		<Path fileType="data">/usr/share/</Path>
-		<Path fileType="doc">/usr/share/doc</Path>
-		<Path fileType="localedata">/usr/share/locale</Path>
-		<Path fileType="config">/etc/xdg/tumbler/tumbler.rc</Path>
-	</Files>
+		<Name>tumbler</Name>
+		<RuntimeDependencies>
+			<Dependency>cairo</Dependency>
+			<Dependency>libgsf</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>poppler-glib</Dependency>
+			<Dependency>libjpeg-turbo</Dependency>
+			<Dependency>gst-plugins-base</Dependency>
+			<Dependency>curl</Dependency>
+			<Dependency>dbus</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>gstreamer</Dependency>
+			<Dependency>gtk3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share/</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="config">/etc/xdg/tumbler/tumbler.rc</Path>
+		</Files>
 	</Package>
 
 	<Package>
@@ -72,6 +72,13 @@
 	</Package>
 
 	<History>
+		<Update release="12">
+			<Date>2019-08-12</Date>
+			<Version>0.2.7</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
 		<Update release="11">
 			<Date>2019-07-28</Date>
 			<Version>0.2.6</Version>

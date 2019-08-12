@@ -9,15 +9,19 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 
 def setup():
-	autotools.configure("\
-	--prefix=/usr \
+	autotools.configure("--prefix=/usr \
 	--enable-colord \
 	--enable-xrandr \
 	--enable-xcursor \
+	--enable-gio-unix \
 	--enable-libnotify \
 	--enable-libxklavier \
-	--enable-pluggable-dialogs \
+	--enable-upower-glib \
+	--enable-xorg-libinput \
 	--enable-sound-settings \
+	--enable-pluggable-dialogs \
+	\
+	--disable-debug \
 	--disable-static")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")

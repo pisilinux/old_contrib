@@ -11,6 +11,7 @@
 		<License>GPLv2</License>
 		<Icon>xfce4-appfinder</Icon>
 		<IsA>app:gui</IsA>
+		<PartOf>desktop.xfce.base</PartOf>
 		<Summary>Xfce application finder</Summary>
 		<Description>Xfce4-appfinder is a useful software that permits you to find every application in the system supporting desktop entry format.</Description>
 		<Archive sha1sum="d0ceed5c05b6e411d1538d9727c818a52f441cf2" type="tarbz2">

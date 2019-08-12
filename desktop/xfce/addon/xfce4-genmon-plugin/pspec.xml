@@ -10,6 +10,7 @@
 		</Packager>
 		<License>LGPLv2.1</License>
 		<IsA>library</IsA>
+		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>Display cyclically run script or program output onto the panel</Summary>
 		<Description>
 			This plugin cyclically spawns the indicated script/program, captures its output (stdout) and displays the resulting string into the panel. The string can also contain markup to displayed an image, a bar, a button and a personalized tooltip.

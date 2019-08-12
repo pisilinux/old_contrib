@@ -15,8 +15,8 @@
 		<Description>
 			Xfce4-settings is a configuration manager for Xfce desktop environment.
 		</Description>
-		<Archive sha1sum="f636f0ece4b4564a32924cfcd327ba2546963aac" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/xfce4-settings-4.13.8.tar.bz2
+		<Archive sha1sum="8240e44f24fce635e02c3c80039c5d0ed67f3758" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/xfce4-settings-4.14.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -91,6 +91,13 @@
 	</Package>
 
 	<History>
+		<Update release="15">
+			<Date>2019-08-12</Date>
+			<Version>4.14.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="14">
 			<Date>2019-07-28</Date>
 			<Version>4.13.8</Version>

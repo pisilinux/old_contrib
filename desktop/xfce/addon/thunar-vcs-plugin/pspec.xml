@@ -19,18 +19,23 @@
 			http://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.2/thunar-vcs-plugin-0.2.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
-			<Dependency>thunar-devel</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
+			<Dependency>thunar-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>thunar-vcs-plugin</Name>
 		<RuntimeDependencies>
+			<Dependency>exo</Dependency>
+			<Dependency>atk</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
 			<Dependency>glib2</Dependency>
+			<Dependency>thunar</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>

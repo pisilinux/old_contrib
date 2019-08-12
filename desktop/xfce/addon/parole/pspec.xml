@@ -15,8 +15,8 @@
 		<Description>
 			Parole is a modern simple media player based on the GStreamer framework and written to fit well in the Xfce desktop. Parole is designed with simplicity, speed and resource usage in mind.
 		</Description>
-		<Archive sha1sum="f71cfb936d24ff3ed18810ffdd49aa5cbb1ea343" type="tarbz2">
-			http://archive.xfce.org/src/apps/parole/1.0/parole-1.0.3.tar.bz2
+		<Archive sha1sum="190e09b77f04076f2e7279b0fd3142628a4caf35" type="tarbz2">
+			http://archive.xfce.org/src/apps/parole/1.0/parole-1.0.4.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -59,6 +59,8 @@
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>libxfce4util</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>dbus</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>taglib</Dependency>
 			<Dependency>xfconf</Dependency>
@@ -85,6 +87,13 @@
 	</Package>
 
 	<History>
+		<Update release="10">
+			<Date>2019-08-12</Date>
+			<Version>1.0.4</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="9">
 			<Date>2019-07-28</Date>
 			<Version>1.0.3</Version>

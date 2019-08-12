@@ -17,8 +17,8 @@
 		<Description>
 			exo is an extension library to Xfce, developed by os-cillation. While Xfce comes with quite a few libraries that are targeted at desktop development, exo is targeted at application development.
 		</Description>
-		<Archive sha1sum="eb799d4d951ebc095248090fb90fc716dd87b83a" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/exo-0.12.7.tar.bz2
+		<Archive sha1sum="46c8c05cc87546750ab81c690bae58a37e7a1953" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/exo-0.12.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -85,6 +85,13 @@
 	</Package>
 
 	<History>
+		<Update release="13">
+			<Date>2019-08-11</Date>
+			<Version>0.12.8</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="12">
 			<Date>2019-07-28</Date>
 			<Version>0.12.7</Version>

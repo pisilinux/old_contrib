@@ -15,8 +15,8 @@
 		<Description>
 			libxfce4ui is a various GTK+ widgets for Xfce desktop environment.
 		</Description>
-		<Archive sha1sum="29267859410eb45f73e21a31fd8aff62ead872e0" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/libxfce4ui-4.13.7.tar.bz2
+		<Archive sha1sum="5f8f80879de493f0478a5108be890cb869fb89d6" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/libxfce4ui-4.14.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -82,6 +82,13 @@
 	</Package>
 
 	<History>
+		<Update release="14">
+			<Date>2019-08-12</Date>
+			<Version>4.14.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="13">
 			<Date>2019-07-28</Date>
 			<Version>4.13.7</Version>

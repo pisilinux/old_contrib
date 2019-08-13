@@ -13,7 +13,9 @@
 		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>A module allows to take periodical breaks from the computer</Summary>
 		<Description>This plugin makes it possible to take periodical breaks from the computer every X minutes. During breaks it locks your screen. It optionally allows you to postpone breaks for a certain time.</Description>
-		<Archive sha1sum="c311374d47792feba5682d329aeae82c7cccc993" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.0/xfce4-time-out-plugin-1.0.2.tar.bz2</Archive>
+		<Archive sha1sum="280ad845069e83aee986f0cc59b1060666afe992" type="tarbz2">
+			http://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.0/xfce4-time-out-plugin-1.0.3.tar.bz2
+		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
@@ -25,6 +27,7 @@
 		<Name>xfce4-time-out-plugin</Name>
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>fontconfig</Dependency>
 			<Dependency>libxfce4ui</Dependency>
@@ -43,6 +46,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2019-08-13</Date>
+			<Version>1.0.3</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2015-03-24</Date>
 			<Version>1.0.2</Version>

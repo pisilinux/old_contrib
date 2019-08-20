@@ -30,6 +30,8 @@
 		<Name>keybinder</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libX11</Dependency>
 			<Dependency>gobject-introspection</Dependency>
 		</RuntimeDependencies>
 		<Files>

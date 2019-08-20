@@ -10,8 +10,19 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("--prefix=/usr \
-	--disable-static \
-	--enable-gstreamer-thumbnailer")
+	--enable-gstreamer-thumbnailer \
+	--enable-poppler-thumbnailer \
+	--enable-desktop-thumbnailer \
+	--enable-pixbuf-thumbnailer \
+	--enable-cover-thumbnailer \
+	--enable-font-thumbnailer \
+	--enable-jpeg-thumbnailer \
+	--enable-odf-thumbnailer \
+	--enable-xdg-cache \
+	\
+	--disable-ffmpeg-thumbnailer \
+	--disable-raw-thumbnailer \
+	--disable-static")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 

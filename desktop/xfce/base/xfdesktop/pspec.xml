@@ -17,8 +17,8 @@
 		<Description>
 			The desktop manager sets the background image, provides a right-click menu to launch applications and can optionally show files (including application launchers) or iconified windows. It includes gradient support for background color, saturation support for background image, real multiscreen and xinerama support, and it provides a desktop menu editor.
 		</Description>
-		<Archive sha1sum="b152598f8d96fef41eae4901ef418e29802d3609" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/xfdesktop-4.13.6.tar.bz2
+		<Archive sha1sum="2332b02c131d5ced61bf6276deef23d69bf852c6" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/xfdesktop-4.14.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -76,6 +76,13 @@
 	</Package>
 
 	<History>
+		<Update release="13">
+			<Date>2019-08-12</Date>
+			<Version>4.14.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="12">
 			<Date>2019-07-28</Date>
 			<Version>4.13.6</Version>

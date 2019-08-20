@@ -18,8 +18,8 @@
 		<Description>
 			The Xfce4 panel supports multiple panels, with many options for their position, appearance, transparency and behavior. There are many items available by default to full fit a panel, like application launchers with detachable menus, a graphical pager, a tasklist, a clock, a system tray, a show / hide desktop switcher, and even more. It offers an easy way to add items using a dialog, and to move items accross different panels.
 		</Description>
-		<Archive sha1sum="47e87533644ba55fffe52a1d9c66b3d711133a7f" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/xfce4-panel-4.13.7.tar.bz2
+		<Archive sha1sum="400b499b2c4d02302e2e6df2885c1dc4e0c53509" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/xfce4-panel-4.14.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -99,6 +99,13 @@
 	</Package>
 
 	<History>
+		<Update release="11">
+			<Date>2019-08-12</Date>
+			<Version>4.14.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="10">
 			<Date>2019-07-28</Date>
 			<Version>4.13.7</Version>

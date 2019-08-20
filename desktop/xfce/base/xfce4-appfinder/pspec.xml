@@ -9,19 +9,19 @@
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
-		<PartOf>desktop.xfce.base</PartOf>
 		<Icon>xfce4-appfinder</Icon>
 		<IsA>app:gui</IsA>
+		<PartOf>desktop.xfce.base</PartOf>
 		<Summary>Xfce application finder</Summary>
 		<Description>Xfce4-appfinder is a useful software that permits you to find every application in the system supporting desktop entry format.</Description>
-		<Archive sha1sum="cef55645e251405f857005792bdf8e942a0c0e88" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14pre3/src/xfce4-appfinder-4.13.5.tar.bz2
+		<Archive sha1sum="d0ceed5c05b6e411d1538d9727c818a52f441cf2" type="tarbz2">
+			http://archive.xfce.org/xfce/4.14/src/xfce4-appfinder-4.14.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>thunar-devel</Dependency>
 			<Dependency>xfconf-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
@@ -33,9 +33,9 @@
 	<Package>
 		<Name>xfce4-appfinder</Name>
 		<RuntimeDependencies>
-			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4util</Dependency>
 			<Dependency>libxfce4ui</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>xfconf</Dependency>
 			<Dependency>garcon</Dependency>
 			<Dependency>glib2</Dependency>
@@ -50,6 +50,13 @@
 	</Package>
 
 	<History>
+		<Update release="11">
+			<Date>2019-08-12</Date>
+			<Version>4.14.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="10">
 			<Date>2019-07-28</Date>
 			<Version>4.13.5</Version>

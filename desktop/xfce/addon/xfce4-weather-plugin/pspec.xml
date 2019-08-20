@@ -15,8 +15,8 @@
 		<Description>
 			Originally written by Bob Schlärmann, this panel plugin shows information about your local weather in the panel, using forecast data provided by met.no.
 		</Description>
-		<Archive sha1sum="bebe36416b2f46812e7b4c54eb359ddf088a5ca5" type="tarbz2">
-			https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.9/xfce4-weather-plugin-0.9.1.tar.bz2
+		<Archive sha1sum="a5b9432ac4439cc685cba152af3a3aa80b81c931" type="tarbz2">
+			http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.10/xfce4-weather-plugin-0.10.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -32,10 +32,14 @@
 		<Name>xfce4-weather-plugin</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
 			<Dependency>libxml2</Dependency>
 			<Dependency>libsoup</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>xfce4-panel</Dependency>
+			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib</Path>
@@ -46,6 +50,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2019-08-11</Date>
+			<Version>0.10.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
 		<Update release="1">
 			<Date>2019-07-28</Date>
 			<Version>0.9.1</Version>

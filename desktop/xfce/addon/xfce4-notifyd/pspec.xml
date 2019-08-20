@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-notifyd</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://git.xfce.org/apps/xfce4-notifyd/about/</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>

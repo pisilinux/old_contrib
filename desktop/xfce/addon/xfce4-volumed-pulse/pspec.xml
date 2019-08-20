@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-volumed-pulse</Name>
-		<Homepage>https://github.com/xfce-mirror/xfce4-volumed-pulse</Homepage>
+		<Homepage>https://git.xfce.org/apps/xfce4-volumed-pulse/about/</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

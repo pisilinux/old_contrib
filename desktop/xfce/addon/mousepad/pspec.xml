@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>mousepad</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://git.xfce.org/apps/mousepad/about/</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>

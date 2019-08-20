@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-screensaver</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://git.xfce.org/apps/xfce4-screensaver/about/</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

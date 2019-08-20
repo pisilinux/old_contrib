@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>parole</Name>
-		<Homepage>http://goodies.xfce.org/projects/applications/parole</Homepage>
+		<Homepage>https://docs.xfce.org/apps/parole/start</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

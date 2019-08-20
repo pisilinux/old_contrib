@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-terminal</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://docs.xfce.org/apps/terminal/start</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>thunar-volman</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-volman</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

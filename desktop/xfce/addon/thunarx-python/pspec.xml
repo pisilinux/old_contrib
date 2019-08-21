@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>thunarx-python</Name>
-		<Homepage>http://git.xfce.org/bindings/thunarx-python/</Homepage>
+		<Homepage>https://git.xfce.org/bindings/thunarx-python/about/</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

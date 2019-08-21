@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-terminal</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://docs.xfce.org/apps/terminal/start</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -17,7 +17,7 @@
 			Terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.
 		</Description>
 		<Archive sha1sum="11117241f5891ea1fd831e86b0db57ed37a60ee2" type="tarbz2">
-			https://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.8.tar.bz2
+			http://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>

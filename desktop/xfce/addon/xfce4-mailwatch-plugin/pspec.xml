@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-mailwatch-plugin</Name>
-		<Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin</Homepage>
+		<Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

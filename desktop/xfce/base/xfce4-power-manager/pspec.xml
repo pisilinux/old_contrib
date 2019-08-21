@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-power-manager</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://goodies.xfce.org/projects/applications/xfce4-power-manager</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

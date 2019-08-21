@@ -1,0 +1,17 @@
+--- a/scripts/xinitrc.in.in	2019-08-21 15:37:15.477003863 +0300
++++ b/scripts/xinitrc.in.in	2019-08-21 15:55:25.643018617 +0300
+@@ -78,11 +78,9 @@
+ # load local modmap
+ test -r $HOME/.Xmodmap && xmodmap $HOME/.Xmodmap
+ 
+-# if XAUTHLOCALHOSTNAME is not set in systemd user session, starting of xfce4-notifyd, DISPLAY etc. will fail
+-if command -v systemctl >/dev/null 2>&1 && systemctl --user list-jobs >/dev/null 2>&1; then # user session is running
+-  dbus-update-activation-environment --systemd XAUTHLOCALHOSTNAME=$XAUTHLOCALHOSTNAME
+-fi
+-
++if which dbus-update-activation-environment >/dev/null 2>/dev/null ; then
++  dbus-update-activation-environment --systemd --all
++fi
+ 
+ # check if we start xfce4-session with ck-launch-session. this is only
+ # required for starting from a console, not a login manager

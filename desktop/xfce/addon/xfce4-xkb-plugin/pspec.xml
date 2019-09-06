@@ -17,7 +17,7 @@
 			A plugin for the Xfce4 panel displaying keyboard layout. The plugin may be used as an indicator for the current layout and to switch layouts.
 		</Description>
 		<Archive sha1sum="bac2c00a167465424e1f424b61f0c4322a319f90" type="tarbz2">
-			https://mirror.netcologne.de/xfce/src/panel-plugins/xfce4-xkb-plugin/0.8/xfce4-xkb-plugin-0.8.1.tar.bz2
+			http://archive.xfce.org/src/panel-plugins/xfce4-xkb-plugin/0.8/xfce4-xkb-plugin-0.8.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>

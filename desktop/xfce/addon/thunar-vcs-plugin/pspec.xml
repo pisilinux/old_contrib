@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>thunar-vcs-plugin</Name>
-		<Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin</Homepage>
+		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

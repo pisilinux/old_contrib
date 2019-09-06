@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>thunar-media-tags-plugin</Name>
-		<Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-media-tags-plugin</Homepage>
+		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-media-tags-plugin</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

@@ -26,6 +26,7 @@
 			<Dependency>exo-devel</Dependency>
 			<Dependency>dbus-devel</Dependency>
 			<Dependency>vala-devel</Dependency>
+			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>cairo-devel</Dependency>
@@ -37,7 +38,7 @@
 			<Dependency>gettext-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>freetype-devel</Dependency>
-			<Dependency>xfce4-dev-tools</Dependency>
+<!--			<Dependency>xfce4-dev-tools</Dependency>-->
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>fontconfig-devel</Dependency>
@@ -45,6 +46,9 @@
 			<Dependency>startup-notification-devel</Dependency>
 			<Dependency>gobject-introspection-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">fixsystray.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>
@@ -52,6 +56,7 @@
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
 			<Dependency>exo</Dependency>
+			<Dependency>gtk2</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>dbus</Dependency>
 			<Dependency>libSM</Dependency>

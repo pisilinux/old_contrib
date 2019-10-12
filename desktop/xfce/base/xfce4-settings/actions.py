@@ -11,7 +11,7 @@ from pisi.actionsapi import shelltools
 
 def setup():
 	shelltools.system("sed -i '9s/empty/pisilinux-gtk2/' xfsettingsd/xsettings.xml")
-	shelltools.system("sed -i '10s/empty/Adwaita/' xfsettingsd/xsettings.xml")
+	shelltools.system("sed -i '10s/empty/maia/' xfsettingsd/xsettings.xml")
 	shelltools.system("sed -i '43s:\"\":\"Adwaita\":' xfsettingsd/xsettings.xml")
 
 	autotools.configure("--prefix=/usr \

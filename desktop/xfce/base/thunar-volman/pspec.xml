@@ -43,6 +43,7 @@
 		<RuntimeDependencies>
 			<Dependency>exo</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>gvfs</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>xfconf</Dependency>

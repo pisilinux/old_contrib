@@ -54,6 +54,9 @@
 			<Dependency>atk</Dependency>
 			<Dependency>gtk2</Dependency>
 			<Dependency>gtk3</Dependency>
+			<!-- mount does not work if dbus -autolaunch run from sddm.
+			<Dependency>lxdm</Dependency>
+			-->
 			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>

@@ -75,9 +75,11 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>
+			<!--
 			<Path fileType="config">/etc/xdg/xfce-mimeapps.list</Path>
 			<Path fileType="config">/etc/xdg/xfce4/scripts/additional-logout</Path>
 			<Path fileType="data">/etc/xdg/autostart/additional-logout.desktop</Path>
+			-->
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="data">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
@@ -85,9 +87,11 @@
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 		<AdditionalFiles>
+			<!--
 			<AdditionalFile owner="root" permission="644" target="/etc/xdg/xfce-mimeapps.list">xfce-mimeapps.list</AdditionalFile>
 			<AdditionalFile owner="root" permission="755" target="/etc/xdg/xfce4/scripts/additional-logout">additional-logout</AdditionalFile>
 			<AdditionalFile owner="root" permission="644" target="/etc/xdg/autostart/additional-logout.desktop">additional-logout.desktop</AdditionalFile>
+			-->
 		</AdditionalFiles>
 		<Provides>
 			<COMAR script="package.py">System.Package</COMAR>

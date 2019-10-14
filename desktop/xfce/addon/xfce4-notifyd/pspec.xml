@@ -42,7 +42,7 @@
 			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="config">/etc/xdg/autostart/notifyd-autostart.desktop</Path>
+<!--			<Path fileType="config">/etc/xdg/autostart/notifyd-autostart.desktop</Path> -->
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
@@ -51,7 +51,7 @@
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 		<AdditionalFiles>
-			<AdditionalFile owner="root" permission="0644" target="/etc/xdg/autostart/notifyd-autostart.desktop">notifyd-autostart.desktop</AdditionalFile>
+<!--			<AdditionalFile owner="root" permission="0644" target="/etc/xdg/autostart/notifyd-autostart.desktop">notifyd-autostart.desktop</AdditionalFile> -->
 		</AdditionalFiles>
 	</Package>
 

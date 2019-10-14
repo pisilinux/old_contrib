@@ -7,12 +7,12 @@
 from pisi.actionsapi import get
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
+#from pisi.actionsapi import shelltools
 
 def setup():
-	shelltools.system("sed -i '9s/empty/pisilinux-gtk2/' xfsettingsd/xsettings.xml")
-	shelltools.system("sed -i '10s/empty/maia/' xfsettingsd/xsettings.xml")
-	shelltools.system("sed -i '43s:\"\":\"Adwaita\":' xfsettingsd/xsettings.xml")
+#	shelltools.system("sed -i '9s/empty/pisilinux-gtk2/' xfsettingsd/xsettings.xml")
+#	shelltools.system("sed -i '10s/empty/maia/' xfsettingsd/xsettings.xml")
+#	shelltools.system("sed -i '43s:\"\":\"Adwaita\":' xfsettingsd/xsettings.xml")
 
 	autotools.configure("--prefix=/usr \
 	--enable-colord \

@@ -10,12 +10,15 @@ from pisi.actionsapi import get
 def setup():
 	shelltools.system("sed -i '91a\ \ GtkMenuBar::window-dragging\ =\ 1' src/gtk2/main.rc.in")
 	shelltools.system("sed -i '92a\ \ GtkToolbar::window-dragging\ =\ 1' src/gtk2/main.rc.in")
+	shelltools.system("sed -i '41s/\#\#/#/' src/gtk2/gtkrc.in")
 
 	shelltools.system("\
 	meson \
 	\
-	-Dicons=false \
-	-Dgtk2-solid-menu=true \
+	-Dgtk2_solid_menu=true \
+	-Dscale_style=fancy \
+	-Dstyle=flat \
+	-Dicons=true \
 	\
 	. build")
 

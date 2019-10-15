@@ -8,7 +8,7 @@
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
-		<Summary>CTPL</Summary>
+		<Summary>CTPL − C Template (Parser) Library</Summary>
 		<Description>
 			CTPL is a template engine library written in C and distributed under the terms of the GNU GPLv3+
 		</Description>

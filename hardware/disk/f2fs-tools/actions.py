@@ -10,7 +10,8 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import get
 
 def setup():
-	shelltools.system("sed -i '16,17d' tools/Makefile.am")
+	#shelltools.system("sed -i '16,17d' tools/Makefile.am")
+
 	shelltools.system("./autogen.sh")
 	autotools.configure("--without-selinux")
 

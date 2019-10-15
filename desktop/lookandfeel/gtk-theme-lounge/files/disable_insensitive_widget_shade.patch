@@ -1,0 +1,34 @@
+# gtk2 hack from "MaD for Xfce" theme. https://www.opendesktop.org/u/thefrankenstein
+--- a/src/gtk2/gtkrc.in	2019-09-23 21:06:03.023853224 +0300
++++ b/src/gtk2/gtkrc.in	2019-09-23 21:09:04.327836807 +0300
+@@ -43,6 +43,30 @@
+ gtk-auto-mnemonics              = 1
+ gtk-primary-button-warps-slider = 1
+ 
++style "fix_ugly_text"
++{
++  engine "murrine"
++    {
++      textstyle   = 0
++      text_shade  = 1.0
++    }
++}
++
++class "GtkLabel"                                           style "fix_ugly_text"
++class "GtkImage"                                           style "fix_ugly_text"
++class "GtkComboBox"                                        style "fix_ugly_text"
++class "GtkCellView"                                        style "fix_ugly_text"
++class "GtkMenuItem"                                        style "fix_ugly_text"
++widget_class "*.<GtkButton>.<GtkLabel>"                    style "fix_ugly_text"
++widget_class "*.<GtkComboBox>.<GtkCellView>"               style "fix_ugly_text"
++widget_class "*<GtkImage>*"                                style "fix_ugly_text"
++widget_class "*.<GtkLabel>"                                style:highest "fix_ugly_text"
++widget_class "*.<GtkMenuItem>.*"                           style:highest "fix_ugly_text"
++widget_class "*<GtkMenuBar>*<GtkLabel>*"                   style:highest "fix_ugly_text"
++widget_class "*<GtkToolbar>*<GtkButton>*<GtkLabel>*"       style:highest "fix_ugly_text"
++widget_class "*<GtkToolbar>*<GtkLabel>*"                   style:highest "fix_ugly_text"
++widget_class "*<GtkButton>*<GtkLabel>*"                    style:highest "fix_ugly_text"
++
+ # And hand over the control to the theme files
+ include "main.rc"
+ include "apps.rc"

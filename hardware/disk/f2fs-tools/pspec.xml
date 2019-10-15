@@ -12,13 +12,14 @@
 		<IsA>app:console</IsA>
 		<Summary>Userland tools for the f2fs filesystem</Summary>
 		<Description>Userland tools for the f2fs filesystem</Description>
-		<Archive sha1sum="387425e264ed9f16d69e2ffd9bda829dbce75e77" type="targz">
-			https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.12.0.tar.gz
+		<Archive sha1sum="39c4827bedae3c7c26145b2b32e266a368f408b2" type="targz">
+			https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.13.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>libutil-linux-devel</Dependency>
 		</BuildDependencies>
 	</Source>
+
 	<Package>
 		<Name>f2fs-tools</Name>
 		<RuntimeDependencies>
@@ -32,7 +33,15 @@
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
+
 	<History>
+		<Update release="2">
+			<Date>2019-10-15</Date>
+			<Version>1.13.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
 		<Update release="1">
 			<Date>2019-07-04</Date>
 			<Version>1.12.0</Version>

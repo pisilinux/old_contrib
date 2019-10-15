@@ -14,7 +14,8 @@ def setup():
 	--enable-geanypg \
 	--enable-spellcheck \
 	--enable-multiterm \
-	--enable-geanygendoc")
+	--enable-geanygendoc \
+	--enable-gtkspell=yes")
 
 def build():
 	autotools.make()

@@ -26,7 +26,7 @@ def setup():
     --with-libssh2 \
     --with-libcares \
     --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt \
-    --with-bashcompletiondir=/usr/share/bash-completion/bash_completion")
+    --with-bashcompletiondir=/usr/share/bash-completion/completions")
 
 def build():
     autotools.make("-C po update-gmo")

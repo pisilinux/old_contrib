@@ -10,13 +10,15 @@ from pisi.actionsapi import get
 
 def setup():
     autotools.configure("--prefix=/usr \
-    --disable-plugin \
+    \
+    --enable-gtk3 --enable-plugin \
+    \
     --disable-dependency-tracking")
 
 def build():
-    autotools.make()
+    autotools.make("PLUGINDIR=/usr/lib/xfce4/thunar-archive-plugin")
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    autotools.rawInstall("DESTDIR=%s PLUGINDIR=/usr/lib/xfce4/thunar-archive-plugin" % get.installDIR())
 
     pisitools.dodoc("COPYING", "README")

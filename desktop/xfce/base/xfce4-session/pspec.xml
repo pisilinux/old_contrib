@@ -42,9 +42,8 @@
 			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<!--
+			<!-- it must on low level, later... -->
 			<Patch level="1">xinitrc.patch</Patch>
-			-->
 		</Patches>
 	</Source>
 

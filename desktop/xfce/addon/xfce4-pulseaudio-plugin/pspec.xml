@@ -50,8 +50,8 @@
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>xfce4-panel</Dependency>
+			<Dependency>pavucontrol</Dependency>
 			<Dependency>libxfce4util</Dependency>
-			<Dependency>pavucontrol-qt</Dependency>
 			<Dependency>pulseaudio-libs</Dependency>
 		</RuntimeDependencies>
 		<Files>

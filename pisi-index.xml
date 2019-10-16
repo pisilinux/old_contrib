@@ -4905,7 +4905,7 @@
             <Summary xml:lang="tr">Parçalı ve yarım kalan dosyaları indirme özelliğine sahip bir indirme aracı</Summary>
             <Description xml:lang="en">aria2 is a download utility with resuming and segmented downloading. Supported protocols are HTTP, HTTPS, FTP and BitTorrent. It also supports Metalink version 3.0.</Description>
             <Description xml:lang="tr">Aria2 parçalı indirme ve yarım kalan indirmeleri devam ettirme özelliklerine sahip olan bir indirme aracıdır.</Description>
-            <Archive type="tarxz" sha1sum="7a804bc7b0788c90f2c62e9eb2249da96d84569b">https://github.com/tatsuhiro-t/aria2/releases/download/release-1.34.0/aria2-1.34.0.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="1e4f8dba13e6eb5860b90c567a9c03d2c4be8f18">https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>gmp-devel</Dependency>
                 <Dependency>zlib-devel</Dependency>
@@ -4936,6 +4936,7 @@
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/bash-completion</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -4944,7 +4945,7 @@
         <Package>
             <Name>aria2-devel</Name>
             <RuntimeDependencies>
-                <Dependency release="9">aria2</Dependency>
+                <Dependency release="10">aria2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/pkgconfig</Path>
@@ -4952,6 +4953,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="10">
+                <Date>2019-10-15</Date>
+                <Version>1.35.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="9">
                 <Date>2019-07-04</Date>
                 <Version>1.34.0</Version>
@@ -7279,6 +7287,47 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>exfat-linux</Name>
+            <Homepage>https://github.com/arter97/exfat-linux</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>driver</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">exFAT filesystem module for Linux kernel</Summary>
+            <Description xml:lang="en">This exFAT filesystem module for Linux kernel is based on sdFAT drivers by Samsung, which is used with their smartphone lineups.</Description>
+            <Archive type="targz" sha1sum="9725a30410a3816536077a42e676e9b86133ce3c">https://codeload.github.com/arter97/exfat-linux/tar.gz/2.2.0-2arter97</Archive>
+            <BuildDependencies>
+                <Dependency>kernel</Dependency>
+                <Dependency>linux-firmware</Dependency>
+                <Dependency>kernel-module-headers</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/exfat-linux/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>exfat-linux</Name>
+            <RuntimeDependencies>
+                <Dependency>exfat-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/lib/modules</Path>
+                <Path fileType="doc">/usr/share/doc/exfat-linux</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-15</Date>
+                <Version>2.2.0</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>mtools</Name>
             <Homepage>http://mtools.linux.lu/</Homepage>
             <Packager>
@@ -7479,7 +7528,7 @@
             <PartOf>hardware.disk</PartOf>
             <Summary xml:lang="en">Userland tools for the f2fs filesystem</Summary>
             <Description xml:lang="en">Userland tools for the f2fs filesystem</Description>
-            <Archive type="targz" sha1sum="387425e264ed9f16d69e2ffd9bda829dbce75e77">https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.12.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="39c4827bedae3c7c26145b2b32e266a368f408b2">https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.13.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libutil-linux-devel</Dependency>
             </BuildDependencies>
@@ -7499,6 +7548,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-10-15</Date>
+                <Version>1.13.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-07-04</Date>
                 <Version>1.12.0</Version>
@@ -8640,6 +8696,75 @@
                 <Version>1.0.1</Version>
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pavucontrol</Name>
+            <Homepage>https://freedesktop.org/software/pulseaudio/pavucontrol/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">PulseAudio Volume Control</Summary>
+            <Description xml:lang="en">PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool (&quot;mixer&quot;) for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control both the volume of hardware devices and of each playback stream separately.</Description>
+            <Archive type="tarxz" sha1sum="9db2fb0f10f481730a0da3d7b85d2982966d67e4">http://freedesktop.org/software/pulseaudio/pavucontrol/pavucontrol-4.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtkmm3-devel</Dependency>
+                <Dependency>libsigc++-devel</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>libcanberra-gtk-devel</Dependency>
+                <Dependency>libcanberra-gtk3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/pavucontrol/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pavucontrol</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>atkmm</Dependency>
+                <Dependency>gtkmm3</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>libcanberra</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>libcanberra-gtk3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2019-10-03</Date>
+                <Version>4.0</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-07-14</Date>
+                <Version>2.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-11-13</Date>
+                <Version>1.0</Version>
+                <Comment>First release</Comment>
+                <Name>Erdinç gültekin</Name>
                 <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
@@ -12792,7 +12917,7 @@
             </Packager>
             <License>GPLv3</License>
             <PartOf>programming.misc</PartOf>
-            <Summary xml:lang="en">CTPL</Summary>
+            <Summary xml:lang="en">CTPL − C Template (Parser) Library</Summary>
             <Description xml:lang="en">CTPL is a template engine library written in C and distributed under the terms of the GNU GPLv3+</Description>
             <Archive type="targz" sha1sum="5bdf50ee35a0e183f98eb0f455ccc7e1b87b8bd8">http://download.tuxfamily.org/ctpl/releases/ctpl-0.3.4.tar.gz</Archive>
             <BuildDependencies>
@@ -13781,6 +13906,59 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libcurl-gnutls</Name>
+            <Homepage>https://curl.haxx.se/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>MIT</License>
+            <License>X11</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">A utility for getting files from remote servers</Summary>
+            <Description xml:lang="en">curl is a command line tool for transferring data with URL syntax, supporting various protocols.</Description>
+            <Archive type="tarbz2" sha1sum="b18fdcd24a53ae4effe0ab4c62e620b734d3687a">http://curl.haxx.se/download/curl-7.64.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>glibc-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>libidn2-devel</Dependency>
+                <Dependency>libssh2-devel</Dependency>
+                <Dependency>ca-certificates</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>curl-ac.patch</Patch>
+            </Patches>
+            <SourceURI>programming/library/libcurl-gnutls/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libcurl-gnutls</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libidn2</Dependency>
+                <Dependency>libssh2</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>ca-certificates</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/libcurl-gnutls*</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-08-02</Date>
+                <Version>7.64.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Mustafa Cinasal</Name>
+                <Email>muscnsl@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>glm</Name>
             <Homepage>http://glm.g-truc.net/</Homepage>
             <Packager>
@@ -13892,7 +14070,7 @@
             <PartOf>programming.library</PartOf>
             <Summary xml:lang="en">Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
             <Description xml:lang="en">Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
-            <Archive type="targz" sha1sum="8c05c0c77686e297eee654f56712db9deb8623b9">https://github.com/tsujan/Kvantum/archive/V0.11.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="2becf47a4fb8fe2189a3daafbd06bc9fe76d6086">https://github.com/tsujan/Kvantum/archive/V0.12.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>qt5-svg-devel</Dependency>
@@ -13924,6 +14102,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-10-14</Date>
+                <Version>0.12.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-07-30</Date>
                 <Version>0.11.2</Version>
@@ -16693,6 +16878,43 @@
                 <Comment>First release</Comment>
                 <Name>Erdinç Gültekin</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-appinfo</Name>
+            <Homepage>http://developer.pardus.org.tr</Homepage>
+            <Packager>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Package metadata service</Summary>
+            <Summary xml:lang="tr">Paket detaylı bilgi servisi</Summary>
+            <Description xml:lang="en">python-appinfo is python module for creating or getting package information from defined remote appinfo server.</Description>
+            <Description xml:lang="tr">python-appinfo, uzak appinfo sunucularından paket bilgilerini getirmeye ve bu bilgiler için veritabanı yaratmaya yarayan python modülleri içerir.</Description>
+            <Archive type="targz" sha1sum="1408644e633afe6a749364f65de5d666d4580f5c">https://sourceforge.net/projects/pisilinux/files/1.0/source/appinfo-0.2.tar.gz</Archive>
+            <SourceURI>programming/language/python/python-appinfo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-appinfo</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-09-24</Date>
+                <Version>0.2</Version>
+                <Comment>First release</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -20366,97 +20588,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>sublime-text3</Name>
-            <Homepage>http://www.sublimetext.com</Homepage>
-            <Packager>
-                <Name>Stefan Gronewold</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Packager>
-            <License>Sublime Text</License>
-            <IsA>app:gui</IsA>
-            <PartOf>editor</PartOf>
-            <Summary xml:lang="en">Sophisticated text editor</Summary>
-            <Description xml:lang="en">Sublime Text is a sophisticated text editor for code, markup and prose.</Description>
-            <Archive type="tarbz2" sha1sum="2034a6c594539c4fc9ed5cdbef679c47c077bfce">https://download.sublimetext.com/sublime_text_3_build_3207_x64.tar.bz2</Archive>
-            <SourceURI>editor/sublime-text3/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>sublime-text3</Name>
-            <RuntimeDependencies>
-                <Dependency>glib2</Dependency>
-                <Dependency>libX11</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/</Path>
-                <Path fileType="data">/usr/share/icons/hicolor/</Path>
-                <Path fileType="data">/usr/share/applications/</Path>
-                <Path fileType="data">/opt/sublime_text_3</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/sublime_text.desktop" owner="root">sublime_text.desktop</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="8">
-                <Date>2019-04-07</Date>
-                <Version>3207</Version>
-                <Comment>version dump.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>erkanisik@pisilinux.org</Email>
-            </Update>
-            <Update release="7">
-                <Date>2019-03-13</Date>
-                <Version>3200</Version>
-                <Comment>version fix.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>erkanisik@pisilinux.org</Email>
-            </Update>
-            <Update release="6">
-                <Date>2018-05-14</Date>
-                <Version>3176</Version>
-                <Comment>version fix.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>info@erkanisik.com</Email>
-            </Update>
-            <Update release="5">
-                <Date>2018-05-08</Date>
-                <Version>3170</Version>
-                <Comment>user release.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>info@erkanisik.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2017-11-26</Date>
-                <Version>3143</Version>
-                <Comment>user release.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>info@erkanisik.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2017-09-17</Date>
-                <Version>3144</Version>
-                <Comment>Developer release.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>info@erkanisik.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2017-07-14</Date>
-                <Version>3126</Version>
-                <Comment>Second release.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>info@erkanisik.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-02-23</Date>
-                <Version>3103</Version>
-                <Comment>First release.</Comment>
-                <Name>Stefan Gronewold</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>micro</Name>
             <Homepage>https://micro-editor.github.io/</Homepage>
             <Packager>
@@ -20499,49 +20630,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>sublime-text2</Name>
-            <Homepage>http://www.sublimetext.com</Homepage>
-            <Packager>
-                <Name>Stefan Gronewold</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Packager>
-            <License>Sublime Text</License>
-            <IsA>app:gui</IsA>
-            <PartOf>editor</PartOf>
-            <Summary xml:lang="en">Sophisticated text editor</Summary>
-            <Description xml:lang="en">Sublime Text is a sophisticated text editor for code, markup and prose.</Description>
-            <Archive type="tarbz2" sha1sum="c48f10369042d38b10fd3bc72f2b48bce60316d9">http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2%20x64.tar.bz2</Archive>
-            <SourceURI>editor/sublime-text2/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>sublime-text2</Name>
-            <RuntimeDependencies>
-                <Dependency>glib2</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libgcc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/</Path>
-                <Path fileType="data">/usr/share/icons/hicolor/</Path>
-                <Path fileType="data">/usr/share/applications/</Path>
-                <Path fileType="data">/opt/sublime-text</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/sublime-text.desktop" owner="root">sublime-text.desktop</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-02-23</Date>
-                <Version>2.0.2</Version>
-                <Comment>First release.</Comment>
-                <Name>Stefan Gronewold</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>geany-plugins</Name>
             <Homepage>https://plugins.geany.org/</Homepage>
             <Packager>
@@ -20554,7 +20642,7 @@
             <PartOf>editor</PartOf>
             <Summary xml:lang="en">Plugins for Geany</Summary>
             <Description xml:lang="en">Plugins for Geany</Description>
-            <Archive type="tarbz2" sha1sum="18d576bdf0052ed3a429a3b76bc331df1253745d">https://plugins.geany.org/geany-plugins/geany-plugins-1.35.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="537842e76efa000e56d3f77bb6f5f9e750c9c265">https://plugins.geany.org/geany-plugins/geany-plugins-1.36.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>vala-devel</Dependency>
@@ -20565,8 +20653,10 @@
                 <Dependency>gconf-devel</Dependency>
                 <Dependency>gpgme-devel</Dependency>
                 <Dependency>python-devel</Dependency>
-                <Dependency>enchant-devel</Dependency>
                 <Dependency>libgit2-devel</Dependency>
+                <Dependency>enchant-devel</Dependency>
+                <Dependency>enchant2-devel</Dependency>
+                <Dependency>gtkspell-devel</Dependency>
                 <Dependency>libwnck2-devel</Dependency>
                 <Dependency>python-gtk-devel</Dependency>
                 <Dependency>webkit-gtk2-devel</Dependency>
@@ -20584,8 +20674,10 @@
                 <Dependency>gconf</Dependency>
                 <Dependency>gpgme</Dependency>
                 <Dependency>python</Dependency>
-                <Dependency>enchant</Dependency>
                 <Dependency>libgit2</Dependency>
+                <Dependency>enchant</Dependency>
+                <Dependency>enchant2</Dependency>
+                <Dependency>gtkspell</Dependency>
                 <Dependency>libwnck2</Dependency>
                 <Dependency>python-gtk</Dependency>
                 <Dependency>webkit-gtk2</Dependency>
@@ -20598,6 +20690,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-10-15</Date>
+                <Version>1.36</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-07-05</Date>
                 <Version>1.35</Version>
@@ -20696,12 +20795,12 @@
             <PartOf>editor</PartOf>
             <Summary xml:lang="en">GTK+ based fast and lightweight IDE</Summary>
             <Description xml:lang="en">GTK+ based fast and lightweight IDE</Description>
-            <Archive type="tarbz2" sha1sum="142cce7610340108e4b3e4241ce6aa2f63741c36">https://download.geany.org/geany-1.35.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="6a9b42286a4b00c4c5f5b1b60db704704ca85c50">https://download.geany.org/geany-1.36.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>libgcc</Dependency>
                 <Dependency>intltool</Dependency>
-                <Dependency>vte28-devel</Dependency>
                 <Dependency>gtk2-devel</Dependency>
+                <Dependency>vte28-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
             </BuildDependencies>
             <SourceURI>editor/geany/pspec.xml</SourceURI>
@@ -20709,13 +20808,13 @@
         <Package>
             <Name>geany</Name>
             <RuntimeDependencies>
-                <Dependency>vte28</Dependency>
                 <Dependency>gtk2</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>vte28</Dependency>
                 <Dependency>libgcc</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -20731,7 +20830,7 @@
             <Summary xml:lang="en">geany için geliştirme dosyaları</Summary>
             <Summary xml:lang="tr">geany için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="8">geany</Dependency>
+                <Dependency release="9">geany</Dependency>
                 <Dependency>gtk2-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -20740,6 +20839,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2019-10-15</Date>
+                <Version>1.36</Version>
+                <Comment>Version bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="8">
                 <Date>2019-07-05</Date>
                 <Version>1.35</Version>
@@ -20919,7 +21025,7 @@
     <SpecFile>
         <Source>
             <Name>parole</Name>
-            <Homepage>http://goodies.xfce.org/projects/applications/parole</Homepage>
+            <Homepage>https://docs.xfce.org/apps/parole/start</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -20931,7 +21037,7 @@
             <Summary xml:lang="tr">Basit ve modern bir medya oynatıcı</Summary>
             <Description xml:lang="en">Parole is a modern simple media player based on the GStreamer framework and written to fit well in the Xfce desktop. Parole is designed with simplicity, speed and resource usage in mind.</Description>
             <Description xml:lang="tr">Parole GStreamer üzerine Xfce masaüstüne iyi uyum sağlayacak şekilde yazılmış basit ve modern bir medya oynatıcıdır. Basitlik, hız ve kaynak kullanımı göz önünde tutularak yazılmıştır.</Description>
-            <Archive type="tarbz2" sha1sum="f71cfb936d24ff3ed18810ffdd49aa5cbb1ea343">http://archive.xfce.org/src/apps/parole/1.0/parole-1.0.3.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="190e09b77f04076f2e7279b0fd3142628a4caf35">http://archive.xfce.org/src/apps/parole/1.0/parole-1.0.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>python-six</Dependency>
@@ -20964,6 +21070,8 @@
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>libxfce4util</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>taglib</Dependency>
                 <Dependency>xfconf</Dependency>
@@ -20981,7 +21089,7 @@
             <Summary xml:lang="en">Development files for parole</Summary>
             <Summary xml:lang="tr">parole için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="9">parole</Dependency>
+                <Dependency release="10">parole</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -20989,6 +21097,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="10">
+                <Date>2019-08-12</Date>
+                <Version>1.0.4</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="9">
                 <Date>2019-07-28</Date>
                 <Version>1.0.3</Version>
@@ -21057,7 +21172,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-datetime-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -21069,7 +21184,7 @@
             <Summary xml:lang="tr">Panelde tarih ve zamanı gösteren eklenti</Summary>
             <Description xml:lang="en">xfce4-datetime-plugin shows the date and time in the panel, and a calendar appears when you left-click on it.</Description>
             <Description xml:lang="tr">xfce4-datetime-plugin panelde tarih ve zamanı gösterir ve sol tıladığınızda bir takvim açılır.</Description>
-            <Archive type="tarbz2" sha1sum="13f5611661ddba4e0fbfb5be5c0f15c02e8a7a23">http://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.7/xfce4-datetime-plugin-0.7.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="2d7ed667d6c2f5e8b9f4eb80cb001d2473ae2a60">http://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.8/xfce4-datetime-plugin-0.8.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>xfce4-panel-devel</Dependency>
                 <Dependency>intltool</Dependency>
@@ -21095,6 +21210,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2019-08-12</Date>
+                <Version>0.8.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="4">
                 <Date>2019-07-13</Date>
                 <Version>0.7.1</Version>
@@ -21246,7 +21368,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-diskperf-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -21337,7 +21459,7 @@
             <Description xml:lang="en">With this plugin you can add timers (alarm or countdown) to your Xfce panel. You can display a warning window and/or run a custom command when alarm rings, repeat alarms etc.</Description>
             <Description>Xfce4-timer-plugin, ayarladığınız zamanda bir pencere açarak sizi uyaran Xfce4 panel eklentisidir.</Description>
             <Icon>xfce4-panel</Icon>
-            <Archive type="tarbz2" sha1sum="f8f502eaee45843652ec869b730a92064d42e483">https://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/xfce4-timer-plugin-1.7.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="f8f502eaee45843652ec869b730a92064d42e483">http://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/xfce4-timer-plugin-1.7.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
@@ -21406,7 +21528,7 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">Quick access to folders, documents, and removable media</Summary>
             <Description xml:lang="en">The plugin adds a small button to the panel. Clicking on it opens a menu, which shows: 1) System folders: home directory, trash, desktop, file system 2) Removable media 3) User-defined bookmarks 4) Recent Documents</Description>
-            <Archive type="tarbz2" sha1sum="8bf88d48295c9555f07cd568b2093b1a5a27d166">http://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/1.8/xfce4-places-plugin-1.8.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="9aaeb694bd16c3292b00ec16e0546b7672d6b30d">http://archive.xfce.org/src/panel-plugins/xfce4-places-plugin/1.8/xfce4-places-plugin-1.8.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -21425,6 +21547,8 @@
                 <Dependency>gtk3</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>exo</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>libxfce4util</Dependency>
                 <Dependency>libnotify</Dependency>
@@ -21439,6 +21563,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-08-11</Date>
+                <Version>1.8.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-07-28</Date>
                 <Version>1.8.0</Version>
@@ -21539,7 +21670,7 @@
             <Summary xml:lang="tr">GIO/GVfs kullanarak uzak dosya sistemleri için bağlantıları yönetme arayüzü</Summary>
             <Description xml:lang="en">Gigolo allows you to quickly connect/mount local and remote filesystems and manage bookmarks of such.</Description>
             <Description xml:lang="tr">Gigolo, yerel ve uzak dosya sistemlerinin kolayca bağlanmasını ve yönetilmesini sağlayan bir arayüzdür.</Description>
-            <Archive type="tarbz2" sha1sum="f71694535de66cbac2130c86d413eb5122d9080f">https://archive.xfce.org/src/apps/gigolo/0.4/gigolo-0.4.91.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="2663bc0ad0a81e73cc8238231ebbfef63ab3b196">http://archive.xfce.org/src/apps/gigolo/0.5/gigolo-0.5.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -21559,13 +21690,20 @@
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2019-08-13</Date>
+                <Version>0.5.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="6">
                 <Date>2019-07-03</Date>
                 <Version>0.4.91</Version>
@@ -21684,7 +21822,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-volumed-pulse</Name>
-            <Homepage>https://github.com/xfce-mirror/xfce4-volumed-pulse</Homepage>
+            <Homepage>https://git.xfce.org/apps/xfce4-volumed-pulse/about/</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -21758,7 +21896,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-notes-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin</Homepage>
             <Packager>
                 <Name>Alper Tekinalp</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -21837,7 +21975,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-notifyd</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://git.xfce.org/apps/xfce4-notifyd/about/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -21849,7 +21987,7 @@
             <Summary xml:lang="tr">Bir uyarı gösterici</Summary>
             <Description xml:lang="en">The Xfce Notify Daemon (xfce4-notifyd for short) is a smallish program that implements the “server-side” portion of the Freedesktop desktop notifications specification.</Description>
             <Description xml:lang="tr">Xfce Notify Daemon Freedesktop masaüstü uyarı sisteminin sunucu tarafını gerçekleştiren küçük bir uygulamadır.</Description>
-            <Archive type="tarbz2" sha1sum="4ff6270b95960540f34e66af76145ed3c874a282">https://archive.xfce.org/src/apps/xfce4-notifyd/0.4/xfce4-notifyd-0.4.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="4ff6270b95960540f34e66af76145ed3c874a282">http://archive.xfce.org/src/apps/xfce4-notifyd/0.4/xfce4-notifyd-0.4.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>libX11-devel</Dependency>
@@ -21874,7 +22012,6 @@
                 <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="config">/etc/xdg/autostart/notifyd-autostart.desktop</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="data">/usr/share</Path>
@@ -21882,9 +22019,6 @@
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/etc/xdg/autostart/notifyd-autostart.desktop" permission="0644" owner="root">notifyd-autostart.desktop</AdditionalFile>
-            </AdditionalFiles>
         </Package>
         <History>
             <Update release="4">
@@ -21920,7 +22054,7 @@
     <SpecFile>
         <Source>
             <Name>mousepad</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://git.xfce.org/apps/mousepad/about/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -22001,7 +22135,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-screenshooter</Name>
-            <Homepage>https://git.xfce.org/apps/xfce4-screenshooter/about/</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/applications/xfce4-screenshooter</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -22013,7 +22147,7 @@
             <Summary xml:lang="tr">Ekran görüntüsü alma eklentisi</Summary>
             <Description xml:lang="en">This application allows you to capture the entire screen, the active window or a selected region.</Description>
             <Description xml:lang="tr">xfce4-screenshooter ekranın bir kısmının, tamamının ya da sadece aktif pencerenin ekran görüntüsünü almanızı sağlar.</Description>
-            <Archive type="tarbz2" sha1sum="e5eabcb8a311d167cc35686c8aec3ca5e25f40d8">https://archive.xfce.org/src/apps/xfce4-screenshooter/1.9/xfce4-screenshooter-1.9.5.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="e5eabcb8a311d167cc35686c8aec3ca5e25f40d8">http://archive.xfce.org/src/apps/xfce4-screenshooter/1.9/xfce4-screenshooter-1.9.5.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -22091,7 +22225,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-mount-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-mount-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -22179,7 +22313,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-mailwatch-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -22246,7 +22380,7 @@
     <SpecFile>
         <Source>
             <Name>thunar-vcs-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -22260,18 +22394,23 @@
             <Description xml:lang="tr">thunar-vcs-plugin, Thunar için Subversion ve Git entegrasyonu sağlayan bir modüldür.</Description>
             <Archive type="tarbz2" sha1sum="bf94601c450165e63267343f9460367883b84c5a">http://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.2/thunar-vcs-plugin-0.2.0.tar.bz2</Archive>
             <BuildDependencies>
-                <Dependency>thunar-devel</Dependency>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
+                <Dependency>thunar-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/addon/thunar-vcs-plugin/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>thunar-vcs-plugin</Name>
             <RuntimeDependencies>
+                <Dependency>exo</Dependency>
+                <Dependency>atk</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
                 <Dependency>glib2</Dependency>
+                <Dependency>thunar</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -22341,6 +22480,8 @@
             <Name>keybinder</Name>
             <RuntimeDependencies>
                 <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
                 <Dependency>gobject-introspection</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -22434,7 +22575,7 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">Display cyclically run script or program output onto the panel</Summary>
             <Description xml:lang="en">This plugin cyclically spawns the indicated script/program, captures its output (stdout) and displays the resulting string into the panel. The string can also contain markup to displayed an image, a bar, a button and a personalized tooltip.</Description>
-            <Archive type="tarbz2" sha1sum="e7a41a6fb47d2ef4a803e19bf0917f99eeb21257">http://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/4.0/xfce4-genmon-plugin-4.0.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="cffc57ae3bce3ac0b3d5a6a055ef533907bb398c">http://archive.xfce.org/src/panel-plugins/xfce4-genmon-plugin/4.0/xfce4-genmon-plugin-4.0.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -22447,8 +22588,11 @@
             <Name>xfce4-genmon-plugin</Name>
             <RuntimeDependencies>
                 <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -22458,6 +22602,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-08-11</Date>
+                <Version>4.0.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-07-26</Date>
                 <Version>4.0.1</Version>
@@ -22482,7 +22633,7 @@
             <Summary xml:lang="tr">Xfce ses çıkışını denetleyen bir eklenti</Summary>
             <Description xml:lang="en">Xfce4-pulseaudio-plugin is a panel plugin for controlling an audio output volume of the PulseAudio mixer</Description>
             <Description xml:lang="tr">Xfce ses çıkışını denetleyen bir eklenti</Description>
-            <Archive type="tarbz2" sha1sum="5237b64e2fdb604ac84885a48f91f9580c16b5b0">https://mirror.netcologne.de/xfce/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/xfce4-pulseaudio-plugin-0.4.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="512aeeaaf78e93c53695d9e43328d6e5b76f5b17">http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/xfce4-pulseaudio-plugin-0.4.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -22501,6 +22652,7 @@
             <Name>xfce4-pulseaudio-plugin</Name>
             <RuntimeDependencies>
                 <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>libX11</Dependency>
                 <Dependency>libwnck3</Dependency>
@@ -22522,6 +22674,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-08-11</Date>
+                <Version>0.4.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-07-03</Date>
                 <Version>0.4.1</Version>
@@ -22561,7 +22720,7 @@
             <Summary xml:lang="tr">Xfce4 için pil izleme paneli eklentisi</Summary>
             <Description xml:lang="en">A battery monitor panel plugin for Xfce4, compatible with APM and ACPI, for Linux and *BSD.</Description>
             <Description xml:lang="tr">Xfce4 için bir pil izleme paneli eklentisidir, Linux ve *BSD için APM ve ACPI ile uyumludur.</Description>
-            <Archive type="tarbz2" sha1sum="5f6d397968dd69893a754e58efd90f129a9a8355">http://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.1/xfce4-battery-plugin-1.1.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="e3796a6cc3921d8b52a4d6fd5bb83fd4806af091">http://archive.xfce.org/src/panel-plugins/xfce4-battery-plugin/1.1/xfce4-battery-plugin-1.1.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -22588,6 +22747,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2019-08-13</Date>
+                <Version>1.1.3</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="6">
                 <Date>2019-07-30</Date>
                 <Version>1.1.2</Version>
@@ -22635,7 +22801,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-clipman-plugin</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -22691,7 +22857,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-systemload-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -22793,7 +22959,7 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">A weather plugin for the Xfce desktop environment</Summary>
             <Description xml:lang="en">Originally written by Bob Schlärmann, this panel plugin shows information about your local weather in the panel, using forecast data provided by met.no.</Description>
-            <Archive type="tarbz2" sha1sum="bebe36416b2f46812e7b4c54eb359ddf088a5ca5">https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.9/xfce4-weather-plugin-0.9.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="a5b9432ac4439cc685cba152af3a3aa80b81c931">http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.10/xfce4-weather-plugin-0.10.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -22808,10 +22974,14 @@
             <Name>xfce4-weather-plugin</Name>
             <RuntimeDependencies>
                 <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
                 <Dependency>libxml2</Dependency>
                 <Dependency>libsoup</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -22821,6 +22991,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-08-11</Date>
+                <Version>0.10.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-07-28</Date>
                 <Version>0.9.1</Version>
@@ -22859,7 +23036,6 @@
                 <Dependency>glib2</Dependency>
                 <Dependency>polkit</Dependency>
                 <Dependency>libpcre2</Dependency>
-                <Dependency>xfce4-session</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc</Path>
@@ -22880,7 +23056,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-screensaver</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://git.xfce.org/apps/xfce4-screensaver/about/</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -22891,7 +23067,7 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">Xfce Screensaver</Summary>
             <Description xml:lang="en">xfce4-screensaver is a screen saver and locker that aims to have simple, sane, secure defaults and be well integrated with the desktop.</Description>
-            <Archive type="tarbz2" sha1sum="4b39a9ed685d30c05284e731caae9a7fa7c5a24d">http://archive.xfce.org/src/apps/xfce4-screensaver/0.1/xfce4-screensaver-0.1.7.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="7021dad215b2abc964e400881c5a98fa8b7b3d5f">http://archive.xfce.org/src/apps/xfce4-screensaver/0.1/xfce4-screensaver-0.1.8.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>pam-devel</Dependency>
@@ -22899,6 +23075,7 @@
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>xfconf-devel</Dependency>
                 <Dependency>garcon-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
                 <Dependency>dbus-glib-devel</Dependency>
                 <Dependency>libxklavier-devel</Dependency>
                 <Dependency>libXScrnSaver-devel</Dependency>
@@ -22910,10 +23087,20 @@
             <RuntimeDependencies>
                 <Dependency>pam</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libX11</Dependency>
                 <Dependency>shadow</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>garcon</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libwnck3</Dependency>
                 <Dependency>dbus-glib</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
                 <Dependency>libxklavier</Dependency>
                 <Dependency>libXScrnSaver</Dependency>
             </RuntimeDependencies>
@@ -22928,6 +23115,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-08-12</Date>
+                <Version>0.1.8</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-07-28</Date>
                 <Version>0.1.7</Version>
@@ -22947,7 +23141,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-dict</Name>
-            <Homepage>http://goodies.xfce.org/projects/applications/xfce4-dict</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/applications/xfce4-dict</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23029,7 +23223,7 @@
     <SpecFile>
         <Source>
             <Name>thunarx-python</Name>
-            <Homepage>http://git.xfce.org/bindings/thunarx-python/</Homepage>
+            <Homepage>https://git.xfce.org/bindings/thunarx-python/about/</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23179,7 +23373,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-smartbookmark-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-smartbookmark-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23256,7 +23450,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-wavelan-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-wavelan-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23396,8 +23590,113 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>ristretto</Name>
+            <Homepage>https://docs.xfce.org/apps/ristretto/start</Homepage>
+            <Packager>
+                <Name>Engin Manap</Name>
+                <Email>enginmanap@comu.edu.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">Image viewer for Xfce</Summary>
+            <Summary xml:lang="tr">Xfce için resim göstericisi</Summary>
+            <Description xml:lang="en">Ristretto is a fast and lightweight picture-viewer for the Xfce desktop environment.</Description>
+            <Description xml:lang="tr">Ristretto, Xfce masaüstü ortamı için hızlı ve hafif bir resim görüntüleyicisidir.</Description>
+            <Archive type="tarbz2" sha1sum="88f2a4fcb704892f1906ba365189160abc6da961">http://archive.xfce.org/src/apps/ristretto/0.10/ristretto-0.10.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libgsf-devel</Dependency>
+                <Dependency>libexif-devel</Dependency>
+                <Dependency>tumbler-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>poppler-glib-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/addon/ristretto/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ristretto</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>file</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>xfconf</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="7">
+                <Date>2019-08-09</Date>
+                <Version>0.10.0</Version>
+                <Comment>GTK+3 port.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="6">
+                <Date>2015-03-02</Date>
+                <Version>0.8.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-05-31</Date>
+                <Version>0.6.3</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Burak Fazıl Ertürk</Name>
+                <Email>burakerturk@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-10-11</Date>
+                <Version>0.6.3</Version>
+                <Comment>minor bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-08-17</Date>
+                <Version>0.6.3</Version>
+                <Comment>version bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-06-15</Date>
+                <Version>0.6.3</Version>
+                <Comment>Sha1sum Fixed</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-10-17</Date>
+                <Version>0.6.3</Version>
+                <Comment>First release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>thunar-media-tags-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/thunar-plugins/thunar-media-tags-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-media-tags-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23653,7 +23952,7 @@
             <Description xml:lang="en">A plugin for the Xfce4 panel displaying keyboard layout. The plugin may be used as an indicator for the current layout and to switch layouts.</Description>
             <Description xml:lang="tr">xfce4-xkb-plugin ile Xfce4 panelinden klavye yerleşimini bir iki tıklamayla değiştirebilir, uygulama veya pencere içinde de farklı klavye yerleşimi kullanabilirsiniz. Ayrıca klavye geçiş kısayollarını destekler.</Description>
             <Icon>gnome-dev-keyboard</Icon>
-            <Archive type="tarbz2" sha1sum="bac2c00a167465424e1f424b61f0c4322a319f90">https://mirror.netcologne.de/xfce/src/panel-plugins/xfce4-xkb-plugin/0.8/xfce4-xkb-plugin-0.8.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="bac2c00a167465424e1f424b61f0c4322a319f90">http://archive.xfce.org/src/panel-plugins/xfce4-xkb-plugin/0.8/xfce4-xkb-plugin-0.8.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -23724,7 +24023,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-time-out-plugin</Name>
-            <Homepage>http://goodies.xfce.org/projects/panel-plugins/es/xfce4-time-out-plugin</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-time-out-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23736,7 +24035,7 @@
             <Summary xml:lang="tr">Periyodik bir şekilde bilgisayardan kopmayı sağlayan bir eklenti</Summary>
             <Description xml:lang="en">This plugin makes it possible to take periodical breaks from the computer every X minutes. During breaks it locks your screen. It optionally allows you to postpone breaks for a certain time.</Description>
             <Description xml:lang="tr">Bu, X dakika aralıklarla bilgisayardan kopmalara izin veren bir modüldür. Kopmalar sırasında ekran kilitlenir. Seçimli olarak kırılmaları ertelemeye izin verir.</Description>
-            <Archive type="tarbz2" sha1sum="c311374d47792feba5682d329aeae82c7cccc993">http://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.0/xfce4-time-out-plugin-1.0.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="280ad845069e83aee986f0cc59b1060666afe992">http://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.0/xfce4-time-out-plugin-1.0.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
@@ -23748,6 +24047,7 @@
             <Name>xfce4-time-out-plugin</Name>
             <RuntimeDependencies>
                 <Dependency>atk</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>fontconfig</Dependency>
                 <Dependency>libxfce4ui</Dependency>
@@ -23765,6 +24065,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2019-08-13</Date>
+                <Version>1.0.3</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="4">
                 <Date>2015-03-24</Date>
                 <Version>1.0.2</Version>
@@ -24006,7 +24313,7 @@
             <Description xml:lang="en">Xfconf is a hirerchical (tree-like) configuration system for the Xfce graphical desktop environment.</Description>
             <Description xml:lang="tr">xfconf, Xfce masaüstü yöneticisi için yazılmış, ağaç tipi hiyerarşik yapılandırma sistemidir.</Description>
             <Description xml:lang="pl">Xfconf jest prostym systemem przechowywania i odpytywania konfiguracji.</Description>
-            <Archive type="tarbz2" sha1sum="c5aab94ef25a3f4c606b9e5cff32c555b5139c3c">http://archive.xfce.org/xfce/4.14pre3/src/xfconf-4.13.8.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="edfa24dd862bc39d6002f40f6b9b3974c59fa250">http://archive.xfce.org/xfce/4.14/src/xfconf-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>glib2-devel</Dependency>
@@ -24039,7 +24346,7 @@
             <IsA>library</IsA>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="9">xfconf</Dependency>
+                <Dependency release="10">xfconf</Dependency>
                 <Dependency>dbus-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
             </RuntimeDependencies>
@@ -24050,6 +24357,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="10">
+                <Date>2019-08-12</Date>
+                <Version>4.14.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="9">
                 <Date>2019-07-28</Date>
                 <Version>4.13.8</Version>
@@ -24133,12 +24447,12 @@
             <Description xml:lang="tr">Xfce4-appfinder, kullanıcının sisteminde yüklü, masastünde doğrudan çalışabilen her uygulamayı bulmasını sağlayan, kullanışlı bir uygulama bulucudur.</Description>
             <Description xml:lang="pl">Wyszukiwanie aplikacji dla środowiska graficznego Xfce4. Wyszukuje zainstalowane w systemie aplikacje.</Description>
             <Icon>xfce4-appfinder</Icon>
-            <Archive type="tarbz2" sha1sum="cef55645e251405f857005792bdf8e942a0c0e88">http://archive.xfce.org/xfce/4.14pre3/src/xfce4-appfinder-4.13.5.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="d0ceed5c05b6e411d1538d9727c818a52f441cf2">http://archive.xfce.org/xfce/4.14/src/xfce4-appfinder-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>thunar-devel</Dependency>
                 <Dependency>xfconf-devel</Dependency>
                 <Dependency>garcon-devel</Dependency>
@@ -24150,9 +24464,9 @@
         <Package>
             <Name>xfce4-appfinder</Name>
             <RuntimeDependencies>
-                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4util</Dependency>
                 <Dependency>libxfce4ui</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>garcon</Dependency>
                 <Dependency>glib2</Dependency>
@@ -24166,6 +24480,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2019-08-12</Date>
+                <Version>4.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-07-28</Date>
                 <Version>4.13.5</Version>
@@ -24241,7 +24562,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-power-manager</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/applications/xfce4-power-manager</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -24251,7 +24572,7 @@
             <PartOf>desktop.xfce.base</PartOf>
             <Summary xml:lang="en">A power manager for the Xfce desktop</Summary>
             <Description xml:lang="en">This software is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption(such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, xfce4-power-manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
-            <Archive type="tarbz2" sha1sum="0b652d6d58b4fa87257a16ce47cdfd9557db5510">http://archive.xfce.org/xfce/4.14pre3/src/xfce4-power-manager-1.6.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="d50e77401b81f5118d4db424546b7b712dd71beb">http://archive.xfce.org/xfce/4.14/src/xfce4-power-manager-1.6.5.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk2-devel</Dependency>
@@ -24311,6 +24632,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2019-08-12</Date>
+                <Version>1.6.5</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="12">
                 <Date>2019-07-28</Date>
                 <Version>1.6.4</Version>
@@ -24415,7 +24743,7 @@
             <Description xml:lang="tr">Xfce4 pencere yöneticisi, uygulama pencerelerinin ekrana yerleştirmeyi sağlar, pencerelerin güzel görünmesini sağlar, çalışma alanlarını ve sanal masaüstlerini yönetir ve doğal olarak çoklu ekran kipini destekler.</Description>
             <Description xml:lang="pl"> Pakiet zawiera xfwm4, który jest menedżerem okiem do Xfce4. Jest on zaprojektowany do uruchamiania z resztą środowiska Xfce4.</Description>
             <Icon>xfwm4</Icon>
-            <Archive type="tarbz2" sha1sum="a279bae3f6955cb1708c10b745d08d7ded8d79fe">http://archive.xfce.org/xfce/4.14pre3/src/xfwm4-4.13.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="08a16f03a5dea56e5628c03780106153f71c92bc">http://archive.xfce.org/xfce/4.14/src/xfwm4-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -24426,7 +24754,6 @@
                 <Dependency>libXrender-devel</Dependency>
                 <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>libXdamage-devel</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
                 <Dependency>libXcomposite-devel</Dependency>
                 <Dependency>startup-notification-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
@@ -24453,7 +24780,6 @@
                 <Dependency>libXfixes</Dependency>
                 <Dependency>libXrender</Dependency>
                 <Dependency>libXinerama</Dependency>
-                <Dependency>libxfce4util</Dependency>
                 <Dependency>libXcomposite</Dependency>
                 <Dependency>startup-notification</Dependency>
                 <Dependency>libxfce4util</Dependency>
@@ -24474,6 +24800,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2019-08-12</Date>
+                <Version>4.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-07-28</Date>
                 <Version>4.13.4</Version>
@@ -24561,7 +24894,7 @@
             <Summary xml:lang="tr">Bir önizleme servisi</Summary>
             <Description xml:lang="en">Tumbler is a thumbnail service for the filemanager of Xfce desktop environment.</Description>
             <Description xml:lang="tr">Tumbler Xfce masaüstü ortamının dosya yöneticisi için bir önizleme servisidir.</Description>
-            <Archive type="tarbz2" sha1sum="9a2ddc651e68851f77637f62bf1c775161a323d5">http://archive.xfce.org/xfce/4.14pre3/src/tumbler-0.2.6.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="f45f6e7fe1a7c38072bead3b5f18514671a18908">http://archive.xfce.org/xfce/4.14/src/tumbler-0.2.7.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>freetype-devel</Dependency>
@@ -24592,6 +24925,7 @@
                 <Dependency>glib2</Dependency>
                 <Dependency>libpng</Dependency>
                 <Dependency>freetype</Dependency>
+                <Dependency>gstreamer</Dependency>
                 <Dependency>gtk3</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -24607,7 +24941,7 @@
             <Summary xml:lang="en">Development files for tumbler</Summary>
             <Summary xml:lang="tr">tumbler için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="11">tumbler</Dependency>
+                <Dependency release="12">tumbler</Dependency>
                 <Dependency>glib2-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -24617,6 +24951,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2019-08-12</Date>
+                <Version>0.2.7</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="11">
                 <Date>2019-07-28</Date>
                 <Version>0.2.6</Version>
@@ -24699,7 +25040,7 @@
     <SpecFile>
         <Source>
             <Name>pisilinux-default-settings-xfce</Name>
-            <Homepage>http://www.pisilinux.org</Homepage>
+            <Homepage>https://www.pisilinux.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -24711,28 +25052,26 @@
             <Summary xml:lang="tr">Pisilinux xfce öntanımlı ayarları</Summary>
             <Description xml:lang="en">This package contains the xfce default settings for Pisilinux.</Description>
             <Description xml:lang="tr">Bu paket, PisiLinux xfce için öntanımlı ayarları içerir.</Description>
-            <Archive type="tarxz" sha1sum="fdcdc8d9a7132a1206b15c67ec9cd688f2e260e9">https://sourceforge.net/projects/pisi-source/files/PisiLinux-xfce/pisilinux-default-settings-xfce-0.2.1.tar.xz</Archive>
+            <Archive type="targz" sha1sum="ec098f2c6b83afdcd74f1f820ea2c8d7231acce1">https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.tar.gz</Archive>
             <SourceURI>desktop/xfce/base/pisilinux-default-settings-xfce/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>pisilinux-default-settings-xfce</Name>
-            <RuntimeDependencies>
-                <Dependency>xfce4-settings</Dependency>
-                <Dependency>polkit-gnome</Dependency>
-                <Dependency>network-manager-applet</Dependency>
-            </RuntimeDependencies>
             <Files>
-                <Path fileType="data">/usr/share/backgrounds/xfce</Path>
-                <Path fileType="data">/usr/share/icons/*</Path>
-                <Path fileType="data">/usr/share/themes/*</Path>
-                <Path fileType="config">/etc/xdg/xfce4/xfconf/xfce-perchannel-xml</Path>
-                <Path fileType="config">/etc/xdg/xfce4/terminal</Path>
+                <Path fileType="config">/etc/skel/.config</Path>
+                <Path fileType="config">/etc/xdg/autostart/additional-logout.desktop</Path>
+                <Path fileType="config">/etc/xdg/xfce4/scripts/additional-logout</Path>
+                <Path fileType="data">/usr/share</Path>
             </Files>
-            <Provides>
-                <COMAR script="package.py">System.Package</COMAR>
-            </Provides>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-10-14</Date>
+                <Version>2.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-09-08</Date>
                 <Version>0.2.1</Version>
@@ -24757,7 +25096,7 @@
             <Summary xml:lang="tr">Xfce menü kitaplığı</Summary>
             <Description xml:lang="en">garcon is an implementation of the freedesktop.org menu specification replacing the former Xfce menu library libxfce4menu. It is based on GLib/GIO only and aims at covering the entire specification except for legacy menus.</Description>
             <Description xml:lang="tr">garcon, Xfce&apos;nin eski menü kitaplığı olan libxfce4menu&apos;nun freedesktop.org menü standartlarına uygun hale getirilmiş, Xfce&apos;nin yeni menü kitaplığıdır. Sadece GLib/GIO kullanılarak yazılmıştır ve eski menüler hariç tüm özellikleri kapsamayı amaçlamaktadır.</Description>
-            <Archive type="tarbz2" sha1sum="014f0b1699a56c1a0738238a07008a5b487892ad">http://archive.xfce.org/xfce/4.14pre3/src/garcon-0.6.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="014f0b1699a56c1a0738238a07008a5b487892ad">http://archive.xfce.org/xfce/4.14/src/garcon-0.6.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk2-devel</Dependency>
@@ -24918,7 +25257,7 @@
             <Summary xml:lang="tr">Xfce eklenti kitaplığı</Summary>
             <Description xml:lang="en">exo is an extension library to Xfce, developed by os-cillation. While Xfce comes with quite a few libraries that are targeted at desktop development, exo is targeted at application development.</Description>
             <Description xml:lang="tr">exo, os-cillation tarafından geliştirilen Xfce eklenti kitaplığıdır. Xfce masaüstü ortamını hedefleyen az kitaplıkla gelirken, exo uygulama geliştirmeyi hedefliyor.</Description>
-            <Archive type="tarbz2" sha1sum="eb799d4d951ebc095248090fb90fc716dd87b83a">http://archive.xfce.org/xfce/4.14pre3/src/exo-0.12.7.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="46c8c05cc87546750ab81c690bae58a37e7a1953">http://archive.xfce.org/xfce/4.14/src/exo-0.12.8.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>perl-URI</Dependency>
@@ -24960,7 +25299,7 @@
             <Summary xml:lang="en">Development files for exo</Summary>
             <Summary xml:lang="tr">exo geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="12">exo</Dependency>
+                <Dependency release="13">exo</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -24976,13 +25315,20 @@
             <Summary xml:lang="tr">exo belgeleri</Summary>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="12">exo</Dependency>
+                <Dependency release="13">exo</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2019-08-11</Date>
+                <Version>0.12.8</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="12">
                 <Date>2019-07-28</Date>
                 <Version>0.12.7</Version>
@@ -25072,7 +25418,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-terminal</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://docs.xfce.org/apps/terminal/start</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -25083,7 +25429,7 @@
             <Summary xml:lang="en">Terminal for Xfce</Summary>
             <Description xml:lang="en">Terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.</Description>
             <Icon>utilities-terminal</Icon>
-            <Archive type="tarbz2" sha1sum="11117241f5891ea1fd831e86b0db57ed37a60ee2">https://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.8.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="11117241f5891ea1fd831e86b0db57ed37a60ee2">http://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.8.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>vte-devel</Dependency>
@@ -25098,9 +25444,16 @@
             <RuntimeDependencies>
                 <Dependency>vte</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>xfconf</Dependency>
                 <Dependency>gnutls</Dependency>
                 <Dependency>libpcre2</Dependency>
                 <Dependency>libxfce4ui</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -25179,7 +25532,7 @@
     <SpecFile>
         <Source>
             <Name>thunar-volman</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-volman</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -25191,7 +25544,7 @@
             <Summary xml:lang="tr">Xfce dosya yöneticisi Thunar için bir eklenti</Summary>
             <Description xml:lang="en">thunar-volman is an extension for the Thunar File Manager, which enables automatic management of removable drives and media. For example, if thunar-volman is installed and configured properly, and you plug in your digical camera, it will automatically spawn your preferred photo application and import the new pictures from your camera.</Description>
             <Description xml:lang="tr">thunar-volman çıkarılabilir sürücüler ve medyanın otomatik olarak yönetimini sağlayan, Xfce dosya yöneticisi Thunar için bir eklentidir.Örneğin, Thunar-Volman doğru şekilde kurulup yapılandırıldığında, sayısal kameranızdan resim almanızı sağlayacaktır.</Description>
-            <Archive type="tarbz2" sha1sum="9f81e84bf25ae4857faaf2eb529538af2a84b8ae">http://archive.xfce.org/xfce/4.14pre3/src/thunar-volman-0.9.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="04efe6610c376d2541eac4e6615a9ffef720f872">http://archive.xfce.org/xfce/4.14/src/thunar-volman-0.9.5.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -25212,6 +25565,7 @@
             <RuntimeDependencies>
                 <Dependency>exo</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>gvfs</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>xfconf</Dependency>
@@ -25228,6 +25582,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="10">
+                <Date>2019-08-12</Date>
+                <Version>0.9.5</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="9">
                 <Date>2019-07-28</Date>
                 <Version>0.9.4</Version>
@@ -25313,12 +25674,13 @@
             <Description xml:lang="tr">Xfce4 paneli, farklı pozisyon, görünüm ve davranış gibi ayarlara sahip birden fazla paneli destekleyebilmektedir. Uygulama başlatıcı tipinde ayrılabilir menüler, grafiksel sayfalayıcı, görev çubuğu, saat, sistem çekmecesi, masaüstünü gizleme / görüntüleme ve bir panelde olabilecek birçok şeyi içinde barındırır. Ayrıca, diyalog penceresi kullanarak kolayca panel öğesi eklemeye ve panelden panele öğe taşımaya izin verir.</Description>
             <Description xml:lang="pl">Jest to panel dostarczany przez projekt środowiska graficznego Xfce4. Jeśli użytkownik chce posiadać wielofunkcyjny panel, który może obsługiwać aplety i tym podobne programy, to Xfce4 Panel może być wart wypróbowania. </Description>
             <Icon>xfce4-panel</Icon>
-            <Archive type="tarbz2" sha1sum="47e87533644ba55fffe52a1d9c66b3d711133a7f">http://archive.xfce.org/xfce/4.14pre3/src/xfce4-panel-4.13.7.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="400b499b2c4d02302e2e6df2885c1dc4e0c53509">http://archive.xfce.org/xfce/4.14/src/xfce4-panel-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
@@ -25330,7 +25692,6 @@
                 <Dependency>gettext-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
                 <Dependency>freetype-devel</Dependency>
-                <Dependency>xfce4-dev-tools</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>fontconfig-devel</Dependency>
@@ -25338,6 +25699,9 @@
                 <Dependency>startup-notification-devel</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch level="1">fixsystray.patch</Patch>
+            </Patches>
             <SourceURI>desktop/xfce/base/xfce4-panel/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -25345,6 +25709,7 @@
             <RuntimeDependencies>
                 <Dependency>atk</Dependency>
                 <Dependency>exo</Dependency>
+                <Dependency>gtk2</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>dbus</Dependency>
                 <Dependency>libSM</Dependency>
@@ -25383,7 +25748,7 @@
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
-                <Dependency release="10">xfce4-panel</Dependency>
+                <Dependency release="11">xfce4-panel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -25392,6 +25757,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2019-08-12</Date>
+                <Version>4.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-07-28</Date>
                 <Version>4.13.7</Version>
@@ -25479,7 +25851,7 @@
             <Summary xml:lang="en">Xfce file manager</Summary>
             <Description xml:lang="en">Thunar has been designed from the ground up to be fast and easy-to-use. Its user interface is clean and intuitive, and does not include any confusing or useless options. Thunar is fast and responsive with a good start up time and directory load time. Thunar is accessible using Assistive Technologies and is fully standarts compliant.</Description>
             <Icon>Thunar</Icon>
-            <Archive type="tarbz2" sha1sum="76a9617088981b9b76d6f4ddb03fee750a7645ff">http://archive.xfce.org/xfce/4.14pre3/src/Thunar-1.8.8.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="7a9f00320c4046da868e6c37f0f5f8d8b7b0fba8">http://archive.xfce.org/xfce/4.14/src/Thunar-1.8.9.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
@@ -25551,7 +25923,7 @@
             <Summary xml:lang="en">Thunar development files</Summary>
             <IsA>library</IsA>
             <RuntimeDependencies>
-                <Dependency release="11">thunar</Dependency>
+                <Dependency release="12">thunar</Dependency>
                 <Dependency>gtk3-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -25564,13 +25936,20 @@
             <Summary xml:lang="en">Thunar reference documents</Summary>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="11">thunar</Dependency>
+                <Dependency release="12">thunar</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2019-08-12</Date>
+                <Version>1.8.9</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="11">
                 <Date>2019-07-28</Date>
                 <Version>1.8.8</Version>
@@ -25667,7 +26046,7 @@
             <Description xml:lang="en">Xfce4-settings is a configuration manager for Xfce desktop environment.</Description>
             <Description xml:lang="tr">Xfce4-settings, Xfce masaüstü yöneticisi için yazılmış ayar yöneticisidir.</Description>
             <Description xml:lang="pl">Xfce4-settings jest interfejsem menedżera ustawień Xfce4. Wywodzi się z kilku różnych komponentów do konfiguracji niezależnych od aplikacji, ustawień wewnątrz xfconf.</Description>
-            <Archive type="tarbz2" sha1sum="f636f0ece4b4564a32924cfcd327ba2546963aac">http://archive.xfce.org/xfce/4.14pre3/src/xfce4-settings-4.13.8.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="8240e44f24fce635e02c3c80039c5d0ed67f3758">http://archive.xfce.org/xfce/4.14/src/xfce4-settings-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -25736,6 +26115,13 @@
             </Provides>
         </Package>
         <History>
+            <Update release="15">
+                <Date>2019-08-12</Date>
+                <Version>4.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="14">
                 <Date>2019-07-28</Date>
                 <Version>4.13.8</Version>
@@ -25855,7 +26241,7 @@
             <Description xml:lang="tr">Xfce masaüstü yöneticisi arkaplan resmini belirler, uygulamaları başlatmak, simge durumuna küçültülmüş pencereleri veya dosya seçeneklerini göstermek için sağ tık menüsünü hazırlar. Arkaplan rengi için gradyan desteği, arkaplan resmi için doygunluk desteği, gerçek çoklu ekran ve xinerama desteği içerir. Ayrıca, masaüstü menü düzenleme aracını da bünyesinde barındırır.</Description>
             <Description xml:lang="pl">xfdesktop4 ustawia obraz tła pulpitu, udostępnia menu pod prawym przyciskiem myszy do uruchamiania aplikacji oraz, opcjonalnie, może pokazywać pliki lub zminimalizowane okna.</Description>
             <Icon>xfce4_xicon1</Icon>
-            <Archive type="tarbz2" sha1sum="b152598f8d96fef41eae4901ef418e29802d3609">http://archive.xfce.org/xfce/4.14pre3/src/xfdesktop-4.13.6.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="2332b02c131d5ced61bf6276deef23d69bf852c6">http://archive.xfce.org/xfce/4.14/src/xfdesktop-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -25911,6 +26297,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2019-08-12</Date>
+                <Version>4.14.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="12">
                 <Date>2019-07-28</Date>
                 <Version>4.13.6</Version>
@@ -26012,7 +26405,7 @@
             <Summary xml:lang="tr">Xfce arayüz kitaplığı</Summary>
             <Description xml:lang="en">libxfce4ui is a various GTK+ widgets for Xfce desktop environment.</Description>
             <Description xml:lang="tr">libxfce4ui, Xfce masaüstü ortamı için çeşitli GTK+ eklentileri içeren kitaplıktır.</Description>
-            <Archive type="tarbz2" sha1sum="29267859410eb45f73e21a31fd8aff62ead872e0">http://archive.xfce.org/xfce/4.14pre3/src/libxfce4ui-4.13.7.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="5f8f80879de493f0478a5108be890cb869fb89d6">http://archive.xfce.org/xfce/4.14/src/libxfce4ui-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
@@ -26076,6 +26469,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="14">
+                <Date>2019-08-12</Date>
+                <Version>4.14.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="13">
                 <Date>2019-07-28</Date>
                 <Version>4.13.7</Version>
@@ -26184,7 +26584,7 @@
             <Summary xml:lang="tr">Xfce için basit yardımcı uygulama kitaplığı</Summary>
             <Description xml:lang="en">Libxfce4util is a basic utility non-GUI functions for Xfce desktop environment.</Description>
             <Description xml:lang="tr">libxfce4util, grafik arayüz fonksiyonlarını içermeyen, Xfce masaüstü yöneticisi için yazılmış basit bir uygulama kitaplığıdır.</Description>
-            <Archive type="tarbz2" sha1sum="0961209a787fc23f14c5e7ba8502ad61d51e4dc4">http://archive.xfce.org/xfce/4.14pre3/src/libxfce4util-4.13.5.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="8aafc9765102f104e9366f341e9eabf38bd71a16">http://archive.xfce.org/xfce/4.14/src/libxfce4util-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>vala-devel</Dependency>
@@ -26214,7 +26614,7 @@
             <IsA>library</IsA>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="10">libxfce4util</Dependency>
+                <Dependency release="11">libxfce4util</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
@@ -26226,6 +26626,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2019-08-12</Date>
+                <Version>4.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-07-28</Date>
                 <Version>4.13.5</Version>
@@ -26316,7 +26723,7 @@
             <Description xml:lang="en">The session manager allows the user to save sessions and restore them after login. It is capable of saving several different sessions. It comes with three splash screen engines. And at last it helps you to log out, reboot, and shutdown the system.</Description>
             <Description xml:lang="tr">Xfce oturum yöneticisi, kullanıcıların oturumlarını kaydetmesine ve giriş yaptıktan sonra tekrar oturumu çağırmalarına izin verir. Birden fazla, farklı oturumları kaydetmede oldukça başarılıdır. Pakette üç tane örnek açılış teması var ve son olarak, sistemi kapatırken, yeniden başlatırken veya çıkarken kullanıcılara yardımcı olur.</Description>
             <Description xml:lang="pl">Xfce4-session jest zgodny z &quot;menedżerem sesji&quot; X11 zaprojektowanym do użycia ze środowiskiem graficznym Xfce4. Podczas wylogowywania, menedżer sesji zapisuje wszystkie uruchomione aplikacje. Przy ponownym zalogowaniu, przywraca je z oknami na tych samych pozycjach.</Description>
-            <Archive type="tarbz2" sha1sum="1b012afed1c67174199b6cd0f40231921ad17f26">http://archive.xfce.org/xfce/4.14pre3/src/xfce4-session-4.13.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="8f3e224c1bd82c172f59f58bbe89aea347f99d7a">http://archive.xfce.org/xfce/4.14/src/xfce4-session-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
@@ -26341,6 +26748,9 @@
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch level="1">xinitrc.patch</Patch>
+            </Patches>
             <SourceURI>desktop/xfce/base/xfce4-session/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -26376,6 +26786,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2019-08-12</Date>
+                <Version>4.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="11">
                 <Date>2019-07-28</Date>
                 <Version>4.13.4</Version>
@@ -26470,7 +26887,7 @@
             <Summary xml:lang="tr">Xfce geliştirme araçları</Summary>
             <Description xml:lang="en">Xfce4-dev-tools contains common tools required by Xfce developers and people that want to build Xfce from SVN. In addition, this package contains the Xfce developer&apos;s handbook.</Description>
             <Description xml:lang="tr">Xfce4-dev-tools paketi, Xfce geliştiricileri ve SVN&apos;den Xfce inşa edecek kullanıcılar için gerekli temel araçları içine alır. Buna ek olarak pakette Xfce geliştiricileri için el kitabı da yer almaktadır.</Description>
-            <Archive type="tarbz2" sha1sum="ce6ce8cf4601557bc7dd7b63eccd728385a3ae87">http://archive.xfce.org/xfce/4.14pre3/src/xfce4-dev-tools-4.13.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="ed962b5b28b57f3626cc11508bee257667bf7384">http://archive.xfce.org/xfce/4.14/src/xfce4-dev-tools-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>glib2-devel</Dependency>
             </BuildDependencies>
@@ -26485,6 +26902,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2019-08-12</Date>
+                <Version>4.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="8">
                 <Date>2019-07-02</Date>
                 <Version>4.13.0</Version>
@@ -26803,7 +27227,7 @@
             <Description xml:lang="en">The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Description>
             <Description xml:lang="tr">UNIX benzeri sistemlerde kullanım için tasarlanmış sistem arayüzlü hafif bir Masaüstü ortamıdır..</Description>
             <Icon>lumina-desktop</Icon>
-            <Archive type="targz" sha1sum="b6a8b38271ca3967f1c8982ba86adf513786bc17">https://github.com/trueos/lumina/archive/v1.2.0-p1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="5694be83131183ebe1b9402bcf6f30913d72749c">https://github.com/lumina-desktop/lumina/archive/v1.5.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
                 <Dependency versionFrom="5.7.1">qt5-multimedia-devel</Dependency>
@@ -26991,6 +27415,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-07-13</Date>
+                <Version>1.5.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Erkan IŞIK</Name>
+                <Email>erkanisik@pisilinux.org</Email>
+            </Update>
             <Update release="1">
                 <Date>2017-03-09</Date>
                 <Version>1.2.0</Version>
@@ -29209,6 +29640,65 @@
                 <Comment>First release</Comment>
                 <Name>Mustafa Cinasal</Name>
                 <Email>muscnsl@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gtk-theme-lounge</Name>
+            <Homepage>https://github.com/monday15/lounge-gtk-theme</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.lookandfeel</PartOf>
+            <Summary xml:lang="en">Simple and clean gtk theme</Summary>
+            <Description xml:lang="en">Simple and clean gtk theme, based on original Adwaita(supported: gtk2, gtk3, xfce 4.12+).</Description>
+            <Archive type="targz" sha1sum="d9eb101f72e20197ae95cf4e9d18a5ee499e9af5">https://github.com/monday15/lounge-gtk-theme/archive/1.21.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gtk2-engines-murrine</Dependency>
+                <Dependency>sassc</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">disable_insensitive_widget_shade.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/lookandfeel/gtk-theme-lounge/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtk-theme-lounge</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>gtk2-engines-murrine</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/themes</Path>
+                <Path fileType="data">/usr/share/themes/Lounge</Path>
+                <Path fileType="data">/usr/share/themes/Lounge-compact</Path>
+                <Path fileType="data">/usr/share/themes/Lounge-night</Path>
+                <Path fileType="data">/usr/share/themes/Lounge-night-compact</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/icons/Lounge-aux</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2019-10-02</Date>
+                <Version>1.21.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="1">
+                <Date>2019-08-01</Date>
+                <Version>1.20</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>

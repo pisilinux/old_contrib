@@ -18,11 +18,12 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>glib2-devel</Dependency>
-			<Dependency>glibmm-devel</Dependency>
+<!--			<Dependency>glibmm-devel</Dependency> -->
 			<Dependency>gtk-doc</Dependency>
 			<Dependency>python-six</Dependency>
 		</BuildDependencies>
 	</Source>
+
 	<Package>
 		<Name>ctpl</Name>
 		<RuntimeDependencies>
@@ -38,6 +39,7 @@
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
+
 	<Package>
 		<Name>ctpl-docs</Name>
 		<Summary>GTK reference documents for ctpl</Summary>
@@ -45,6 +47,7 @@
 			<Path fileType="doc">/usr/share/gtk-doc</Path>
 		</Files>
 	</Package>
+
 	<Package>
 		<Name>ctpl-devel</Name>
 		<Summary>Development files for ctpl</Summary>
@@ -56,7 +59,15 @@
 			<Path fileType="library">/usr/lib/pkgconfig</Path>
 		</Files>
 	</Package>
+
 	<History>
+		<Update release="2">
+			<Date>2019.10.18</Date>
+			<Version>0.3.4</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="1">
 			<Date>2019.04.21</Date>
 			<Version>0.3.4</Version>

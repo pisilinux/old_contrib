@@ -12,8 +12,8 @@
 		<IsA>data</IsA>
 		<Summary>PisiLinux default settings for xfce</Summary>
 		<Description>This package contains the xfce default settings for Pisilinux.</Description>
-		<Archive sha1sum="ec098f2c6b83afdcd74f1f820ea2c8d7231acce1" type="targz">
-			https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.tar.gz
+		<Archive sha1sum="6233d274eb164cb268f543b3931f1da5aecd9a33" type="targz">
+			https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.1.tar.gz
 		</Archive>
 	</Source>
 
@@ -25,6 +25,7 @@
 			<Dependency>xfce4-panel</Dependency>
 			<Dependency>xfdesktop</Dependency>
 			<Dependency>xfwm4</Dependency>
+			<Dependency>orage</Dependency>
 			<Dependency>xfce4-notifyd</Dependency>
 			<Dependency>xfce4-session</Dependency>
 			<Dependency>xfce4-xkb-plugin</Dependency>
@@ -46,8 +47,8 @@
 
 	<History>
 		<Update release="2">
-			<Date>2019-10-14</Date>
-			<Version>2.0</Version>
+			<Date>2019-10-19</Date>
+			<Version>2.0.1</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

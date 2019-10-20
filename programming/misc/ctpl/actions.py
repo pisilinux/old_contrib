@@ -9,7 +9,12 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--prefix=/usr")
+	autotools.configure("--prefix=/usr \
+	\
+	--disable-static \
+	--disable-rpath \
+	\
+	--enable-cli-tool")
 
 def build():
 	autotools.make()

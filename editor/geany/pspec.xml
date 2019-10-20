@@ -21,8 +21,9 @@
             <Dependency>libgcc</Dependency>
             <Dependency>intltool</Dependency>
             <Dependency>gtk2-devel</Dependency>
-            <Dependency>vte28-devel</Dependency>
-<!--            <Dependency>gtk3-devel</Dependency> -->
+       <!-- <Dependency>vte28-devel</Dependency> -->
+            <Dependency>vte-devel</Dependency>
+<!-- <Dependency>gtk3-devel</Dependency> -->
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -35,7 +36,8 @@
             <Dependency>glib2</Dependency>
             <Dependency>cairo</Dependency>
             <Dependency>pango</Dependency>
-            <Dependency>vte28</Dependency>
+            <!-- <Dependency>vte28-devel</Dependency> -->
+            <Dependency>vte-devel</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
         </RuntimeDependencies>

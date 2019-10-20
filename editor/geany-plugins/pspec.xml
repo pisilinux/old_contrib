@@ -20,7 +20,8 @@
 			<Dependency>intltool</Dependency>
 			<Dependency>vala-devel</Dependency>
 			<Dependency>ctpl-devel</Dependency>
-			<Dependency>vte28-devel</Dependency>
+		<!--	<Dependency>vte28-devel</Dependency> -->
+			<Dependency>vte-devel</Dependency>
 			<Dependency>geany-devel</Dependency>
 			<Dependency>lua51-devel</Dependency>
 			<Dependency>gconf-devel</Dependency>
@@ -41,7 +42,8 @@
 		<RuntimeDependencies>
 			<Dependency>vala</Dependency>
 			<Dependency>ctpl</Dependency>
-			<Dependency>vte28</Dependency>
+		<!--	<Dependency>vte28-devel</Dependency> -->
+			<Dependency>vte-devel</Dependency>
 			<Dependency>geany</Dependency>
 			<Dependency>lua51</Dependency>
 			<Dependency>gconf</Dependency>

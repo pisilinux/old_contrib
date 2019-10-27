@@ -50,7 +50,6 @@
             <Dependency>libzip</Dependency>
             <Dependency>xdg-utils</Dependency>
             <Dependency>libarchive</Dependency>
-            <Dependency>thunar-archive-plugin</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

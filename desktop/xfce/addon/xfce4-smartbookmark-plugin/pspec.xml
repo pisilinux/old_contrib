@@ -13,8 +13,8 @@
 		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>A plugin allows you to send requests directly to your browser to make search</Summary>
 		<Description>xfce4-smartbookmark-plugin is a plugin allows you to send requests directly to your browser and perform a custom search.</Description>
-		<Archive sha1sum="19f3902de849ca3a0f0123db2182a9b2172133f8" type="tarbz2">
-			http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.5/xfce4-smartbookmark-plugin-0.5.0.tar.bz2
+		<Archive sha1sum="0b806fb1ecade453a44b3bc8d1b7bec29026dab0" type="tarbz2">
+			http://archive.xfce.org/src/panel-plugins/xfce4-smartbookmark-plugin/0.5/xfce4-smartbookmark-plugin-0.5.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -41,6 +41,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2019-10-27</Date>
+			<Version>0.5.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2019-07-26</Date>
 			<Version>0.5.0</Version>

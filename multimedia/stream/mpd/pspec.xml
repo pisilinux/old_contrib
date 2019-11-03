@@ -116,13 +116,15 @@
 		<Files>
 			<Path fileType="config">/etc</Path>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="data">/usr/lib/tmpfiles.d/</Path>
+<!--			<Path fileType="data">/usr/lib/tmpfiles.d/</Path> -->
 			<Path fileType="data">/usr/share/icons</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 		<AdditionalFiles>
+			<!--
 			<AdditionalFile owner="mpd" group="audio" permission="0640" target="/etc/mpd.conf">mpd.conf</AdditionalFile>
 			<AdditionalFile owner="root" permission="0644" target="/usr/lib/tmpfiles.d/mpd.conf">tmpfiles.conf</AdditionalFile>
+			-->
 		</AdditionalFiles>
 		<Provides>
 			<!--

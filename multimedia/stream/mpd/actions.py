@@ -104,4 +104,5 @@ def install():
 	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README.md")
+	pisitools.insinto("/etc", "doc/mpdconf.example", "mpd.conf")
 

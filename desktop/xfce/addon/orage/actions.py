@@ -10,9 +10,12 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("\
+	\
 	--disable-static \
-	--disable-libical \
+	\
+	--enable-libical \
 	--enable-reentrant \
+	\
 	--with-bdb4")
 
 def build():

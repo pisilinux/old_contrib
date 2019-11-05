@@ -26,6 +26,7 @@
 			<Dependency>xfdesktop</Dependency>
 			<Dependency>xfwm4</Dependency>
 			<Dependency>orage</Dependency>
+			<Dependency>nocsd</Dependency>
 			<Dependency>xfce4-notifyd</Dependency>
 			<Dependency>xfce4-session</Dependency>
 			<Dependency>xfce4-xkb-plugin</Dependency>
@@ -34,6 +35,7 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc/skel/.config</Path>
+			<Path fileType="config">/etc/env.d/02xfce_specific</Path>
 			<Path fileType="config">/etc/xdg/autostart/additional-logout.desktop</Path>
 			<Path fileType="config">/etc/xdg/xfce4/scripts/additional-logout</Path>
 			<Path fileType="data">/usr/share</Path>
@@ -43,6 +45,9 @@
 			<COMAR script="package.py">System.Package</COMAR>
 			-->
 		</Provides>
+		<AdditionalFiles>
+			<AdditionalFile owner="root" permission="0644" target="/etc/env.d/02xfce_specific">02xfce_specific</AdditionalFile>
+		</AdditionalFiles>
 	</Package>
 
 	<History>

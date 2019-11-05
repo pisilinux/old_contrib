@@ -26,11 +26,12 @@
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
-			<!--
 			<Dependency>libical-devel</Dependency>
-			-->
 			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">libical3.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>

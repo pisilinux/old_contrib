@@ -22,6 +22,7 @@
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
 			<Dependency>thunar-devel</Dependency>
+			<Dependency>subversion-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 

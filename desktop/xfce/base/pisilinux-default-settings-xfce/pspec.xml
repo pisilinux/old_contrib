@@ -12,8 +12,8 @@
 		<IsA>data</IsA>
 		<Summary>PisiLinux default settings for xfce</Summary>
 		<Description>This package contains the xfce default settings for Pisilinux.</Description>
-		<Archive sha1sum="6233d274eb164cb268f543b3931f1da5aecd9a33" type="targz">
-			https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.1.tar.gz
+		<Archive sha1sum="cf4f9deffd37d24f80e575479fa166275d0523a3" type="targz">
+			https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.2.tar.gz
 		</Archive>
 	</Source>
 
@@ -52,8 +52,8 @@
 
 	<History>
 		<Update release="2">
-			<Date>2019-10-19</Date>
-			<Version>2.0.1</Version>
+			<Date>2019-11-06</Date>
+			<Version>2.0.2</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

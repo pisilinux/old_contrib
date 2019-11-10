@@ -10,8 +10,11 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import pythonmodules
 WorkDir="ADMIDpack" + "/src/"
 
+def setup():
+    pisitools.dosed("Makefile", " -lpcap", " -Wl,--as-needed -shared -lpcap ")
+
 def build():
-    shelltools.system('make CC="gcc $CFLAGS"')
+    shelltools.system('make CC="gcc $CFLAGS -Wno-unused-result -Wno-int-to-pointer-cast -Wno-implicit-function-declaration"')
 
 def install():
     pisitools.dobin("../ADMbin/ADM*")

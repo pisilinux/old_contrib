@@ -13422,37 +13422,58 @@
     <SpecFile>
         <Source>
             <Name>cython3</Name>
-            <Homepage>http://www.cython.org</Homepage>
+            <Homepage>https://cython.org/</Homepage>
             <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
             </Packager>
             <License>Apache-2.0</License>
             <IsA>app:console</IsA>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">C extensions for the Python3</Summary>
+            <Summary xml:lang="en">C extensions for the Python</Summary>
             <Summary xml:lang="tr">Python3 için C eklentileri</Summary>
-            <Description xml:lang="en">Cython3 is a language that makes writing C extensions for the Python3 language as easy as Python3 itself.</Description>
+            <Description xml:lang="en">Cython is a language that makes writing C extensions for the Python language as easy as Python itself.</Description>
             <Description xml:lang="tr">Cython3, Python3 için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
-            <Archive type="targz" sha1sum="32f12b8dd976111668ef8ba7e716a850869a0bf6">http://cython.org/release/Cython-0.24.tar.gz</Archive>
+            <Archive type="targz" sha1sum="db2286ea3b3a6060c4294f9c3df652c5b4f60fca">https://github.com/cython/cython/archive/0.29.14.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/cython3/pspec.xml</SourceURI>
         </Source>
+        <Package>
+            <Name>cython</Name>
+            <Summary xml:lang="tr">Python için C eklentileri</Summary>
+            <Description xml:lang="tr">Cython, Python için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
+            <RuntimeDependencies>
+                <Dependency>python</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/cython3</Path>
+            </Files>
+        </Package>
         <Package>
             <Name>cython3</Name>
             <RuntimeDependencies>
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-11</Date>
+                <Version>0.29.14</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-22</Date>
                 <Version>0.24</Version>
@@ -14458,9 +14479,9 @@
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
-                <Dependency>python3</Dependency>
-                <Dependency>python</Dependency>
-                <Dependency>glibc</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>glibc-devel</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/capstone/pspec.xml</SourceURI>
         </Source>

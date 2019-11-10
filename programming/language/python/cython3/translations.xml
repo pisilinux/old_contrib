@@ -5,4 +5,10 @@
         <Summary xml:lang="tr">Python3 için C eklentileri</Summary>
         <Description xml:lang="tr">Cython3, Python3 için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
     </Source>
+    
+    <Package>
+        <Name>cython</Name>
+        <Summary xml:lang="tr">Python için C eklentileri</Summary>
+        <Description xml:lang="tr">Cython, Python için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
+    </Package>
 </PISI>

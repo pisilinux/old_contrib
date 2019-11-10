@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-sphinxcontrib-websupport</Name>
+        <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
+        <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
+    </Source>
+    
+    <Package>
+        <Name>python3-sphinxcontrib-websupport</Name>
+        <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
+        <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
+    </Package>
+</PISI>

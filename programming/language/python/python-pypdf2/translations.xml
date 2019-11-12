@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-pypdf2</Name>
+        <Summary xml:lang="tr">Python pypdf2 modülü</Summary>
+        <Description xml:lang="tr">python-pypdf2, Python2 için kriptografik algoritmalar ve protokoller içeren bir kitaplıktır.</Description>
+    </Source>
+    
+    <Package>
+        <Name>python3-pypdf2</Name>
+        <Summary xml:lang="tr">Python3 pypdf2 modülü</Summary>
+        <Description xml:lang="tr">python3-pypdf2, Python2 için kriptografik algoritmalar ve protokoller içeren bir kitaplıktır.</Description>
+    </Package>
+</PISI>

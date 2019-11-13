@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tlp</Name>
+        <Homepage>https://linrunner.de/en/tlp/tlp.html</Homepage>
+        <Packager>
+            <Name>Ali Algul</Name>
+            <Email>alialgul@pisilinux.org</Email>
+        </Packager>
+        <License>GPL3</License>
+        <Summary>Linux Advanced Power Management</Summary>
+        <Description>TLP brings you the benefits of advanced power management for Linux without the need to understand every technical detail.</Description>
+        <BuildDependencies> 
+        </BuildDependencies>
+        <Archive sha1sum="335b3c914b6e2769fb7dff8eaab7d48fb498c93e" type="targz">https://github.com/linrunner/TLP/archive/1.2.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>tlp</Name>
+        <Summary>Linux Advanced Power Management</Summary>
+
+        <Files>
+           <Path fileType="exectuable">/usr/bin</Path>
+           <Path fileType="exectuable">/usr/sbin/tlp</Path>
+           <Path fileType="libary">/lib/elogind/system-sleep</Path>
+           <Path fileType="libary">/lib/systemd/system</Path>
+           <Path fileType="libary">/lib/udev/tlp-usb-udev</Path>
+           <Path fileType="libary">/lib/udev/rules.d/85-tlp.rules</Path>
+           <Path fileType="libary">/var/lib/tlp</Path>
+           <Path fileType="config">/etc</Path>
+           <Path fileType="data">/usr/share</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <Package>
+        <Name>tlp-rdw</Name>
+        <Summary>Linux Advanced Power Management - Radio Device Wizard</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">tlp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+           <Path fileType="exectuable">/usr/bin/tlp-rdw</Path>
+           <Path fileType="libary">/lib/udev/rules.d/85-tlp-rdw.rules</Path>
+           <Path fileType="libary">/lib/udev/tlp-rdw-udev</Path>
+           <Path fileType="data">/etc/NetworkManager/dispatcher.d/99tlp-rdw-nm</Path>
+           <Path fileType="data">/usr/share/bash-completion/completions/tlp-rdw</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-13</Date>
+            <Version>1.2.2</Version>
+            <Comment>First release</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -12,6 +12,6 @@ def setup():
 
 
 def install():
-    pisitools.insinto("/usr/bin/", "AdminpageFinder.py.txt")
-    shelltools.chmod(get.installDIR() + "/usr/bin/AdminpageFinder.py.txt", mode=0755)
-    pisitools.dosym("/usr/bin/AdminpageFinder.py.txt", "/usr/bin/adminpagefinder")
+    pisitools.insinto("/usr/share/AdminpageFinder/", "AdminpageFinder.py.txt")
+    shelltools.chmod(get.installDIR() + "/usr/share/AdminpageFinder/AdminpageFinder.py.txt", mode=0755)
+    pisitools.dosym("/usr/share/AdminpageFinder/AdminpageFinder.py.txt", "/usr/bin/adminpagefinder")

@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 
     
 def build():
-    shelltools.system("gcc $CFLAGS snmp.c -o admsnmp")
+    shelltools.system("gcc $CFLAGS snmp.c -o admsnmp -Wno-unused-result -Wno-incompatible-pointer-types")
 
 def install():
     pisitools.insinto("/usr/bin", "admsnmp")

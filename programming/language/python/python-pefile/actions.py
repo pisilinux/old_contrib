@@ -16,14 +16,6 @@ def setup():
     shelltools.makedirs("build_python3")
     shelltools.copytree("./%s" % WorkDir,  "build_python3")
     shelltools.cd(WorkDir)
-    
-    pisitools.dosed("../build_python3/pefile-2016.3.28/setup.py", \
-                    "'pefile.py', 'r'", \
-                    "'pefile.py', 'r', encoding='utf-8'")
-    
-    pisitools.dosed("../build_python3/pefile-2016.3.28/setup.py", \
-                    "import sys", \
-                    "import sys\nfrom io import open")
 
 def build():
     pythonmodules.compile()

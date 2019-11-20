@@ -15,8 +15,8 @@
 		<Description>
 			Xfburn is a simple CD/DVD burning tool based on libburnia libraries.
 		</Description>
-		<Archive sha1sum="578bd2527b9eb1781dd76a380d4e7c2553f67fb2" type="tarbz2">
-			http://archive.xfce.org/src/apps/xfburn/0.6/xfburn-0.6.0.tar.bz2
+		<Archive sha1sum="59df1b810205758708e2e6d7694fdd2b1d7580bb" type="tarbz2">
+			https://archive.xfce.org/src/apps/xfburn/0.6/xfburn-0.6.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>libxfce4ui-devel</Dependency>
@@ -56,8 +56,8 @@
 
 	<History>
 		<Update release="6">
-			<Date>2019-11-03</Date>
-			<Version>0.6.0</Version>
+			<Date>2019-11-19</Date>
+			<Version>0.6.1</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

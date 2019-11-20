@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-session</Name>
@@ -82,24 +82,6 @@
 			<Path fileType="man">/usr/share/man</Path>
 		</Files>
 	</Package>
-
-	<!--
-	<Package>
-		<Name>xfce4-session-devel</Name>
-		<IsA>library</IsA>
-		<IsA>data:doc</IsA>
-		<Summary>Xfce4 Session development files</Summary>
-		<RuntimeDependencies>
-			<Dependency release="current">xfce4-session</Dependency>
-			<Dependency>xfconf-devel</Dependency>
-			<Dependency>libxfce4ui-devel</Dependency>
-		</RuntimeDependencies>
-		<Files>
-			<Path fileType="header">/usr/include</Path>
-			<Path fileType="data">/usr/lib/pkgconfig</Path>
-		</Files>
-	</Package>
-	-->
 
 	<History>
 		<Update release="12">
@@ -188,3 +170,4 @@
 		</Update>
 	</History>
 </PISI>
+

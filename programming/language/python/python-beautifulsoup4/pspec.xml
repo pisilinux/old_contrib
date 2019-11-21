@@ -9,24 +9,24 @@
             <Email>admins@pisilinux.org</Email>
         </Packager>
         <License>MIT</License>
+        <PartOf>programming.language.python</PartOf>
         <IsA>library</IsA>
         <Summary>HTML/XML parser for quick-turnaround applications like screen-scraping</Summary>
         <Description>Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.</Description>
-        <Archive sha1sum="3252d89e8b3bbed0cff47f89d98ca6221cdc3d03" type="targz">https://www.crummy.com/software/BeautifulSoup/bs4/download/4.4/beautifulsoup4-4.4.1.tar.gz</Archive>
+        <Archive sha1sum="afec76610be96ce8141bf56885bea55ff458d457" type="targz">https://pypi.io/packages/source/b/beautifulsoup4/beautifulsoup4-4.8.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>python-lxml</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>python-beautifulsoup4</Name>
-        <RuntimeDependencies>
-            <Dependency>python</Dependency>
-        </RuntimeDependencies>
+        <!--<RuntimeDependencies>
+            <Dependency>python-soupsieve</Dependency>
+        </RuntimeDependencies>-->
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -35,15 +35,22 @@
 
     <Package>
         <Name>python3-beautifulsoup4</Name>
-        <RuntimeDependencies>
-            <Dependency>python3</Dependency>
-        </RuntimeDependencies>
+        <!--<RuntimeDependencies>
+            <Dependency>python3-soupsieve</Dependency>
+        </RuntimeDependencies>-->
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
         </Files>
     </Package>
     
     <History>
+        <Update release="4">
+            <Date>2019-11-21</Date>
+            <Version>4.8.1</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="3">
             <Date>2016-04-05</Date>
             <Version>4.4.1</Version>

@@ -19,15 +19,11 @@
             <Dependency>python-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <!--<Dependency>python3-setuptools</Dependency>-->
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>cython</Name>
-        <RuntimeDependencies>
-            <Dependency>python</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>

@@ -5,17 +5,16 @@
         <Name>python-pycrypto</Name>
         <Homepage>https://www.dlitz.net/software/pycrypto/</Homepage>
         <Packager>
-            <Name>İbrahim KARAGÜZEL</Name>
-            <Email>karaguzelibrahim@gmail.com</Email>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>as-is</License>
+        <License>PD</License>
         <PartOf>programming.language.python</PartOf>
         <IsA>library</IsA>
         <Summary>Python pycrypto module</Summary>
         <Description>A collection of cryptographic algorithms and protocols, implemented for use from Python2.</Description>
-        <Archive sha1sum="aeda3ed41caf1766409d4efc689b9ca30ad6aeb2" type="targz">https://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/pycrypto-2.6.1.tar.gz</Archive>
+        <Archive sha1sum="077feba65e9018df81d11e1a9f703a8b03fc8ec5" type="targz">https://github.com/dlitz/pycrypto/archive/v2.7a1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>gmp-devel</Dependency>
@@ -26,7 +25,6 @@
         <Name>python-pycrypto</Name>
         <Summary>Python pycrypto module</Summary>
         <RuntimeDependencies>
-            <Dependency>python</Dependency>
             <Dependency>gmp</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -48,6 +46,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-11-21</Date>
+            <Version>2.7a.1</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2016-03-31</Date>
             <Version>2.6.1</Version>

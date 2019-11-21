@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="pycrypto-%s" % get.srcVERSION()
+WorkDir="pycrypto-2.7a1"
 
 def setup():
     shelltools.cd("..")
@@ -18,6 +18,8 @@ def setup():
     shelltools.cd(WorkDir)
 
 def build():
+    shelltools.export("CFLAGS", "-fno-strict-aliasing -Wno-discarded-array-qualifiers -Wno-unused-const-variable -Wno-bool-compare -Wno-tautological-compare")
+    shelltools.export("LDSHARED", "x86_64-pc-linux-gnu-gcc -Wl,-O1,--as-needed -shared -lpthread -Wl,-O1 -Wl,-z,relro -Wl,--hash-style=gnu -Wl,--as-needed -Wl,--sort-common")
     pythonmodules.compile()
 
     shelltools.cd("../build_python3/%s" % WorkDir)
@@ -28,7 +30,3 @@ def install():
     
     shelltools.cd("../build_python3/%s" % WorkDir)
     pythonmodules.install(pyVer="3")
-
-    pisitools.dodoc("ACKS", "ChangeLog", "COPYRIGHT","PKG-INFO", "MANIFEST*", "README", "TODO")
-    pisitools.insinto("/usr/share/doc/python-pycrypto/", "LEGAL/")
-    pisitools.insinto("/usr/share/doc/python-pycrypto/", "Doc/")

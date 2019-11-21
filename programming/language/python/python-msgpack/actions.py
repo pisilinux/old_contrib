@@ -28,5 +28,3 @@ def install():
     
     shelltools.cd("../build_python3/%s" % WorkDir)
     pythonmodules.install(pyVer="3")
-
-    pisitools.dodoc("MANIFEST*", "COPYING", "README*", "ChangeLog*")

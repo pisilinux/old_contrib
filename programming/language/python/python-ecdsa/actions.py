@@ -15,7 +15,6 @@ def setup():
     shelltools.cd("..")
     shelltools.makedirs("build_python3")
     shelltools.copytree("./%s" % WorkDir,  "build_python3")
-    shelltools.system("sed -ie 's#/usr/bin/env python#/usr/bin/env python3#' python-ecdsa-python-ecdsa-0.13/ecdsa/*.py")
     shelltools.cd(WorkDir)
 
 def build():

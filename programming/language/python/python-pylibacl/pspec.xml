@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-libacl</Name>
+        <Name>python-pylibacl</Name>
         <Homepage>http://pylibacl.k1024.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
@@ -12,27 +12,38 @@
         <IsA>library</IsA>
         <Summary>This python 2.2+ extension module allows you to manipulate the POSIX.1e Access Control Lists present in some os/filesystem combinations</Summary>
         <Description>python-libacl is a C extension module for Python which implements POSIX ACLs manipulation. It is a wrapper on top of the systems's acl C library.</Description>
-        <Archive sha1sum="9d10c6e7bbb41e9e1c7617c09dff702bef493303" type="targz">https://github.com/iustin/pylibacl/archive/pylibacl-v0.5.3.tar.gz</Archive>
+        <Archive sha1sum="a59eac60d52fca738603805749321471c175b918" type="targz">https://pylibacl.k1024.org/downloads/pylibacl-0.5.4.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
             <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
             <Dependency>acl-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-libacl</Name>
-        <RuntimeDependencies>
-            <Dependency>python</Dependency>
-            <Dependency>acl</Dependency>
-        </RuntimeDependencies>
+        <Name>python-pylibacl</Name>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
+        <Package>
+        <Name>python3-pylibacl</Name>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-11-21</Date>
+            <Version>0.5.4</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="3">
             <Date>2016-04-03</Date>
             <Version>0.5.3</Version>

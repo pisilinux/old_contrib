@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="msgpack-python-%s" % get.srcVERSION()
+WorkDir="pylibacl-%s" % get.srcVERSION()
 
 def setup():
     shelltools.cd("..")
@@ -18,6 +18,8 @@ def setup():
     shelltools.cd(WorkDir)
 
 def build():
+    shelltools.export("CFLAGS", "-Wno-strict-aliasing %s" % get.CFLAGS())
+    shelltools.export("LDSHARED", "x86_64-pc-linux-gnu-gcc -Wl,-O1,--as-needed -shared -lpthread -Wl,-O1 -Wl,-z,relro -Wl,--hash-style=gnu -Wl,--as-needed -Wl,--sort-common")
     pythonmodules.compile()
 
     shelltools.cd("../build_python3/%s" % WorkDir)

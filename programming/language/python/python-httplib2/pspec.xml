@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python-httplib2</Name>
-        <Homepage>https://github.com/jcgregorio/httplib2</Homepage>
+        <Homepage>https://github.com/httplib2/httplib2</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -12,24 +12,17 @@
         <IsA>library</IsA>
         <Summary>A comprehensive HTTP client library in Python</Summary>
         <Description>httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
-        <Archive sha1sum="3a2ba2fb5f6f2c51dd5fcfea7275f484c0a324d4" type="targz">https://github.com/jcgregorio/httplib2/archive/0.9.2.tar.gz</Archive>
+        <Archive sha1sum="667ab86056d46a6329c9651791427be73c0ae764" type="targz">https://github.com/httplib2/httplib2/archive/v0.14.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
-            <!--<Dependency>python-setuptools</Dependency>-->
+            <Dependency>python-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
-            <!--<Dependency>python-devel</Dependency>-->
+            <Dependency>python-devel</Dependency>
         </BuildDependencies>
-        <Patches>
-            <Patch>cert.patch</Patch>
-            <Patch>ssl_hostname.patch</Patch>
-        </Patches>
     </Source>
 
     <Package>
         <Name>python-httplib2</Name>
-        <RuntimeDependencies>
-            <Dependency>python</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
@@ -38,15 +31,19 @@
     
     <Package>
         <Name>python3-httplib2</Name>
-        <RuntimeDependencies>
-            <Dependency>python3</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-11-21</Date>
+            <Version>0.14.0</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="3">
             <Date>2016-05-06</Date>
             <Version>0.9.2</Version>

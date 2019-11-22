@@ -2243,7 +2243,7 @@
             <Summary xml:lang="tr">Basit bir CD/DVD yazma aracı</Summary>
             <Description xml:lang="en">Xfburn is a simple CD/DVD burning tool based on libburnia libraries.</Description>
             <Description xml:lang="tr">Xfburn libburnia kitaplıklarını kullanan basit bir CD/DVD yazma aracıdır.</Description>
-            <Archive type="tarbz2" sha1sum="578bd2527b9eb1781dd76a380d4e7c2553f67fb2">http://archive.xfce.org/src/apps/xfburn/0.6/xfburn-0.6.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="59df1b810205758708e2e6d7694fdd2b1d7580bb">https://archive.xfce.org/src/apps/xfburn/0.6/xfburn-0.6.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>gstreamer-devel</Dependency>
@@ -2281,8 +2281,8 @@
         </Package>
         <History>
             <Update release="6">
-                <Date>2019-11-03</Date>
-                <Version>0.6.0</Version>
+                <Date>2019-11-19</Date>
+                <Version>0.6.1</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -3248,7 +3248,7 @@
             <Summary xml:lang="tr">Ekran görüntüsü alma eklentisi</Summary>
             <Description xml:lang="en">This application allows you to capture the entire screen, the active window or a selected region.</Description>
             <Description xml:lang="tr">xfce4-screenshooter ekranın bir kısmının, tamamının ya da sadece aktif pencerenin ekran görüntüsünü almanızı sağlar.</Description>
-            <Archive type="tarbz2" sha1sum="e7a0b34fadd82d84d4197706d5b8fd383f312747">http://archive.xfce.org/src/apps/xfce4-screenshooter/1.9/xfce4-screenshooter-1.9.6.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="27d3da35265957148fc06f0605246d72d3b8d59d">https://archive.xfce.org/src/apps/xfce4-screenshooter/1.9/xfce4-screenshooter-1.9.7.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -3287,8 +3287,8 @@
         </Package>
         <History>
             <Update release="6">
-                <Date>2019-10-16</Date>
-                <Version>1.9.6</Version>
+                <Date>2019-11-19</Date>
+                <Version>1.9.7</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -4825,7 +4825,7 @@
             <Summary xml:lang="tr">Basit ve modern bir medya oynatıcı</Summary>
             <Description xml:lang="en">Parole is a modern simple media player based on the GStreamer framework and written to fit well in the Xfce desktop. Parole is designed with simplicity, speed and resource usage in mind.</Description>
             <Description xml:lang="tr">Parole GStreamer üzerine Xfce masaüstüne iyi uyum sağlayacak şekilde yazılmış basit ve modern bir medya oynatıcıdır. Basitlik, hız ve kaynak kullanımı göz önünde tutularak yazılmıştır.</Description>
-            <Archive type="tarbz2" sha1sum="190e09b77f04076f2e7279b0fd3142628a4caf35">http://archive.xfce.org/src/apps/parole/1.0/parole-1.0.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="6bf27fd73628ea010e4f2f7c4746445256c52fc4">https://archive.xfce.org/src/apps/parole/1.0/parole-1.0.5.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>python-six</Dependency>
@@ -4877,7 +4877,7 @@
             <Summary xml:lang="en">Development files for parole</Summary>
             <Summary xml:lang="tr">parole için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="10">parole</Dependency>
+                <Dependency release="11">parole</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -4885,6 +4885,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2019-11-19</Date>
+                <Version>1.0.5</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-08-12</Date>
                 <Version>1.0.4</Version>
@@ -6998,7 +7005,7 @@
             <Summary xml:lang="en">Xfce file manager</Summary>
             <Description xml:lang="en">Thunar has been designed from the ground up to be fast and easy-to-use. Its user interface is clean and intuitive, and does not include any confusing or useless options. Thunar is fast and responsive with a good start up time and directory load time. Thunar is accessible using Assistive Technologies and is fully standarts compliant.</Description>
             <Icon>Thunar</Icon>
-            <Archive type="tarbz2" sha1sum="7a9f00320c4046da868e6c37f0f5f8d8b7b0fba8">http://archive.xfce.org/xfce/4.14/src/Thunar-1.8.9.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="9d28412592946f29f61f5553845a1112a5117f7a">https://archive.xfce.org/src/xfce/thunar/1.8/thunar-1.8.11.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
@@ -7070,7 +7077,7 @@
             <Summary xml:lang="en">Thunar development files</Summary>
             <IsA>library</IsA>
             <RuntimeDependencies>
-                <Dependency release="12">thunar</Dependency>
+                <Dependency release="13">thunar</Dependency>
                 <Dependency>gtk3-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -7083,13 +7090,20 @@
             <Summary xml:lang="en">Thunar reference documents</Summary>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="12">thunar</Dependency>
+                <Dependency release="13">thunar</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2019-11-19</Date>
+                <Version>1.8.11</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="12">
                 <Date>2019-08-12</Date>
                 <Version>1.8.9</Version>
@@ -8680,7 +8694,7 @@
             <PartOf>desktop.lookandfeel</PartOf>
             <Summary xml:lang="en">Simple and clean gtk theme</Summary>
             <Description xml:lang="en">Simple and clean gtk theme, based on original Adwaita(supported: gtk2, gtk3, xfce 4.12+).</Description>
-            <Archive type="targz" sha1sum="7f6b00e26cd2a0309b0155a9dbc1f5a23b32eff5">https://github.com/monday15/lounge-gtk-theme/archive/1.22.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4fb7dd0749d303bea27701d3e2fcbdb9d03ed226">https://github.com/monday15/lounge-gtk-theme/archive/1.24.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>meson</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -8710,6 +8724,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-19</Date>
+                <Version>1.24</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-11-03</Date>
                 <Version>1.22</Version>
@@ -9920,6 +9941,68 @@
                 <Date>2018-12-08</Date>
                 <Version>20181119</Version>
                 <Comment>First release.</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>tlp</Name>
+            <Homepage>https://linrunner.de/en/tlp/tlp.html</Homepage>
+            <Packager>
+                <Name>Ali Algul</Name>
+                <Email>alialgul@pisilinux.org</Email>
+            </Packager>
+            <License>GPL3</License>
+            <PartOf>hardware.misc</PartOf>
+            <Summary xml:lang="en">Linux Advanced Power Management</Summary>
+            <Summary xml:lang="tr">Linux Gelişmiş Güç Yönetimi</Summary>
+            <Description xml:lang="en">TLP brings you the benefits of advanced power management for Linux without the need to understand every technical detail.</Description>
+            <Description xml:lang="tr">TLP, her teknik ayrıntıyı anlamadan Linux için gelişmiş güç yönetiminin avantajlarını sunar.</Description>
+            <Archive type="targz" sha1sum="335b3c914b6e2769fb7dff8eaab7d48fb498c93e">https://github.com/linrunner/TLP/archive/1.2.2.tar.gz</Archive>
+            <SourceURI>hardware/misc/tlp/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tlp</Name>
+            <Summary xml:lang="en">Linux Advanced Power Management</Summary>
+            <Files>
+                <Path fileType="exectuable">/usr/bin</Path>
+                <Path fileType="exectuable">/usr/sbin/tlp</Path>
+                <Path fileType="libary">/lib/elogind/system-sleep</Path>
+                <Path fileType="libary">/lib/systemd/system</Path>
+                <Path fileType="libary">/lib/udev/tlp-usb-udev</Path>
+                <Path fileType="libary">/lib/udev/rules.d/85-tlp.rules</Path>
+                <Path fileType="libary">/var/lib/tlp</Path>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+            <Provides>
+                <COMAR script="package.py">System.Package</COMAR>
+            </Provides>
+        </Package>
+        <Package>
+            <Name>tlp-rdw</Name>
+            <Summary xml:lang="en">Linux Advanced Power Management - Radio Device Wizard</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">tlp</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="exectuable">/usr/bin/tlp-rdw</Path>
+                <Path fileType="libary">/lib/udev/rules.d/85-tlp-rdw.rules</Path>
+                <Path fileType="libary">/lib/udev/tlp-rdw-udev</Path>
+                <Path fileType="data">/etc/NetworkManager/dispatcher.d/99tlp-rdw-nm</Path>
+                <Path fileType="data">/usr/share/bash-completion/completions/tlp-rdw</Path>
+            </Files>
+            <Provides>
+                <COMAR script="package.py">System.Package</COMAR>
+            </Provides>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-13</Date>
+                <Version>1.2.2</Version>
+                <Comment>First release</Comment>
                 <Name>Kamil Atlı</Name>
                 <Email>suvari@pisilinux.org</Email>
             </Update>
@@ -13299,7 +13382,7 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-libacl</Name>
+            <Name>python-pylibacl</Name>
             <Homepage>http://pylibacl.k1024.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
@@ -13313,26 +13396,40 @@
             <Description xml:lang="fr">Ce module d&apos;extension de python 2.2+ permet de manipuler les Listes de Contrôle d&apos;Accès POSIX.1e présentes dans certaines combinaisons de systèmes d&apos;exploitations/systèmes de fichiers.</Description>
             <Description xml:lang="en">python-libacl is a C extension module for Python which implements POSIX ACLs manipulation. It is a wrapper on top of the systems&apos;s acl C library.</Description>
             <Description xml:lang="tr">Bu python 2.2+ eklentisi sayesinde bazı işletim sistemi/dosya sistemi kombinasyonlarındaki POSIX.1e Erişim Kontrol Listeleri işlenebilir.</Description>
-            <Archive type="targz" sha1sum="9d10c6e7bbb41e9e1c7617c09dff702bef493303">https://github.com/iustin/pylibacl/archive/pylibacl-v0.5.3.tar.gz</Archive>
+            <Archive type="targz" sha1sum="a59eac60d52fca738603805749321471c175b918">https://pylibacl.k1024.org/downloads/pylibacl-0.5.4.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
                 <Dependency>acl-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>programming/language/python/python-libacl/pspec.xml</SourceURI>
+            <SourceURI>programming/language/python/python-pylibacl/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>python-libacl</Name>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-                <Dependency>acl</Dependency>
-            </RuntimeDependencies>
+            <Name>python-pylibacl</Name>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
+        <Package>
+            <Name>python3-pylibacl</Name>
+            <Summary xml:lang="tr">POSIX.1e Access Control Listelerini manipüle eden bir python 2.2+ eklentisi.</Summary>
+            <Description xml:lang="fr">Ce module d&apos;extension de python 2.2+ permet de manipuler les Listes de Contrôle d&apos;Accès POSIX.1e présentes dans certaines combinaisons de systèmes d&apos;exploitations/systèmes de fichiers.</Description>
+            <Description xml:lang="tr">Bu python 2.2+ eklentisi sayesinde bazı işletim sistemi/dosya sistemi kombinasyonlarındaki POSIX.1e Erişim Kontrol Listeleri işlenebilir.</Description>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-21</Date>
+                <Version>0.5.4</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-04-03</Date>
                 <Version>0.5.3</Version>
@@ -13412,7 +13509,7 @@
         <History>
             <Update release="1">
                 <Date>2019-11-07</Date>
-                <Version>2.8</Version>
+                <Version>1.13.2</Version>
                 <Comment>First pisi release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -13448,9 +13545,6 @@
             <Name>cython</Name>
             <Summary xml:lang="tr">Python için C eklentileri</Summary>
             <Description xml:lang="tr">Cython, Python için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
@@ -13721,20 +13815,18 @@
             <Name>python-pefile</Name>
             <Homepage>https://github.com/erocarrera/pefile</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>MIT</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">Python module to read and work with PE files</Summary>
-            <Summary xml:lang="tr">PE(Portable Executable) dosyaları çözümleyebilen bir python yordamı</Summary>
+            <Summary xml:lang="tr">Python pefile modülü</Summary>
             <Description xml:lang="en">pefile is a multi-platform Python module to parse and work with Portable Executable (aka PE) files. Most of the information contained in the PE headers is accessible as well as all sections&apos; details and their data.</Description>
             <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
-            <Archive type="targz" sha1sum="ae252dc7c2350a8cd029083e8f6ffeaf8bec8b62">https://github.com/ibrahimkaraguzel/Sources/raw/master/pefile-2016.3.28.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4cadf66db1e8640733054f7b2e1920900dfed704">https://github.com/erocarrera/pefile/releases/download/v2019.4.18/pefile-2019.4.18.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python3-future</Dependency>
-                <Dependency>python-future</Dependency>
                 <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
@@ -13743,10 +13835,6 @@
         <Package>
             <Name>python-pefile</Name>
             <Summary xml:lang="en">Python pefile module</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-future</Dependency>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib/python2*</Path>
@@ -13758,21 +13846,93 @@
             <Summary xml:lang="en">Python3 pefile module</Summary>
             <Summary xml:lang="tr">Python3 pefile modülü</Summary>
             <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
-            <RuntimeDependencies>
-                <Dependency>python3-future</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-20</Date>
+                <Version>2019.4.18</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-22</Date>
                 <Version>2016.3.28</Version>
                 <Comment>First Pisi Release Built with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-pysqlite</Name>
+            <Homepage>https://github.com/ghaering/pysqlite</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>PSF-2.2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python sqlite bindings</Summary>
+            <Summary xml:lang="tr">Python sqlite bağlayıcıları</Summary>
+            <Description xml:lang="fr">pysqlite est une interface pour bases de données SQLite conforme à DB-API 2.0. pysqlite rend le puissant moteur embarqué SQL SQLite disponible pour les programmeurs Python. Elle demeure aussi compatible que possible avec les spécifications de l&apos;API de bases de données 2.0, mais expose également une large partie de l&apos;API native de SQLite, afin qu&apos;il soit par exemple possible de créer des fonctions et des agrégats (aggregates) SQL utilisateur depuis Python.</Description>
+            <Description xml:lang="en">pysqlite is a DB-API 2.0-compliant database interface for SQLite. pysqlite makes the powerful embedded SQL engine SQLite available to Python programmers. It stays compatible with the Python database API specification 2.0 as much as possible, but also exposes most of SQLite&apos;s native API, so that it is for example possible to create user-defined SQL functions and aggregates in Python.</Description>
+            <Description xml:lang="tr">pysqlite, SQLite için bir DB-API 2.0 uyumlu veri tabanı ara yüzüdür. pysql güçlü gömülü SQL motoru SQLite&apos;ı Python programcılarına uygun hale getirir. Python veri tabanı API 2.0 teknik özelliklerine olabildiğince uyumlu kalır, ama aynı zamanda SQLite&apos;ın doğal API&apos;sinin çoğunu meydana çıkarır, böylece örneğin, Python ile kullanıcı tanımlı SQL fonksiyonları ve kümeler oluşturmak mümkündür.</Description>
+            <Description xml:lang="es">pysqlite es una interfaz para SQLite, compatible con DB-API 2.0. pysqlite disponibiliza al potente y embebido motor SQLite a programadores de Python. Mantiene la mayor compatibilidad posible con la especificación del API 2.0 de bases de datos Python, pero también expone la mayoría del API nativo de SQLite, lo que permite por ejemplo crear funciones SQL definidos por el usuario, y agregados en Python.</Description>
+            <Archive type="targz" sha1sum="70e6ed5e771b1b584ffe23f93e3eb1ceef44895a">https://pypi.io/packages/source/p/pysqlite/pysqlite-2.8.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-pysqlite/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pysqlite</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/python-pysqlite</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2019-11-21</Date>
+                <Version>2.8.3</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2015-10-10</Date>
+                <Version>2.8.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ali Algul(gulle)</Name>
+                <Email>alialgul@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-11-04</Date>
+                <Version>2.6.3</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-02-02</Date>
+                <Version>2.6.3</Version>
+                <Comment>bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2010-10-13</Date>
+                <Version>2.6.0</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -13792,10 +13952,10 @@
             <Description xml:lang="en">python-paramiko is a module for python 2.2 (or higher) that implements the SSH2 protocol for secure (encrypted and authenticated) connections to remote machines.</Description>
             <Description xml:lang="tr">Paramiko, python 2.2 ya da üzeri için, uzak makinelere güvenli (şifrelenmiş ve doğrulanmış) bağlantılar kurmak amacıyla SSH2 protokolünü uygulayan bir Python Modülüdür.</Description>
             <Description xml:lang="es">paramiko es un módulo para python 2.2 (o posterior) que implementa el protocolo SSH2 para conexiones seguras (encriptado y autenticado) con equipos remotos.</Description>
-            <Archive type="targz" sha1sum="adf3afcc9e5a3f299a20639771f587a803924443">https://github.com/paramiko/paramiko/archive/v1.16.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="9e6cab36109afba7c5513cf4c371fda961ffd294">https://github.com/paramiko/paramiko/archive/2.6.0.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python3-pycrypto</Dependency>
-                <Dependency>python-pycrypto</Dependency>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
@@ -13804,13 +13964,9 @@
         <Package>
             <Name>python-paramiko</Name>
             <Summary xml:lang="en">Paramiko module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-pycrypto</Dependency>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc/python-paramiko</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <Package>
@@ -13818,15 +13974,18 @@
             <Summary xml:lang="en">Paramiko module for python3</Summary>
             <Summary xml:lang="tr">Python3 için SSH2 Protokolü Uygulaması</Summary>
             <Description xml:lang="tr">Paramiko, python 2.2 ya da üzeri için, uzak makinelere güvenli (şifrelenmiş ve doğrulanmış) bağlantılar kurmak amacıyla SSH2 protokolünü uygulayan bir Python Modülüdür.</Description>
-            <RuntimeDependencies>
-                <Dependency>python3-pycrypto</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-22</Date>
+                <Version>2.6.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-03-31</Date>
                 <Version>1.16.0</Version>
@@ -13915,6 +14074,57 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-sphinxcontrib-websupport</Name>
+            <Homepage>https://www.sphinx-doc.org/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Sphinx API for Web Apps</Summary>
+            <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
+            <Description xml:lang="en">python-sphinxcontrib-websupport is the Sphinx documentation generator.</Description>
+            <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
+            <Archive type="targz" sha1sum="5675e157af122cfab6abd4b14f80cb360b6c307a">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.1.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-sphinxcontrib-websupport/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-sphinxcontrib-websupport</Name>
+            <Summary xml:lang="en">sphinxcontrib-websupport module for python</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/python-sphinxcontrib-websupport</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>python3-sphinxcontrib-websupport</Name>
+            <Summary xml:lang="en">sphinxcontrib-websupport module for python3</Summary>
+            <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
+            <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-13</Date>
+                <Version>1.1.2</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-appinfo</Name>
             <Homepage>http://developer.pardus.org.tr</Homepage>
             <Packager>
@@ -13952,8 +14162,48 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-pynacl</Name>
+            <Homepage>https://github.com/pyca/pynacl/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Apache</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python binding to the Networking and Cryptography (NaCl) library</Summary>
+            <Summary xml:lang="tr">Python için NaCl modülü</Summary>
+            <Description xml:lang="en">python-pynacl PyNaCl is a Python binding to libsodium, which is a fork of the Networking and Cryptography library. These libraries have a stated goal of improving usability, security and speed.</Description>
+            <Description xml:lang="tr">PyNaCl, ağ ve kriptografi kitaplığınından geliştirilen libsodium kitaplığının python modülüdür.</Description>
+            <Archive type="targz" sha1sum="c078953e5643ad4ff7881a4627f5147eb5c76cf4">https://pypi.org/packages/source/P/PyNaCl/PyNaCl-1.3.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-pynacl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pynacl</Name>
+            <Summary xml:lang="en">PyNaCl module for python</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-25</Date>
+                <Version>1.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-httplib2</Name>
-            <Homepage>https://github.com/jcgregorio/httplib2</Homepage>
+            <Homepage>https://github.com/httplib2/httplib2</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -13965,22 +14215,17 @@
             <Summary xml:lang="tr">HTTP istemci kitaplığı</Summary>
             <Description xml:lang="en">httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
             <Description xml:lang="tr">python-httplib2, diğer HTTP kütüphanelerinin desteklemediği bir çok özellik içeren bir HTTP istemci kitaplığıdır</Description>
-            <Archive type="targz" sha1sum="3a2ba2fb5f6f2c51dd5fcfea7275f484c0a324d4">https://github.com/jcgregorio/httplib2/archive/0.9.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="667ab86056d46a6329c9651791427be73c0ae764">https://github.com/httplib2/httplib2/archive/v0.14.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
+                <Dependency>python-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch>cert.patch</Patch>
-                <Patch>ssl_hostname.patch</Patch>
-            </Patches>
             <SourceURI>programming/language/python/python-httplib2/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>python-httplib2</Name>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -13990,14 +14235,18 @@
             <Name>python3-httplib2</Name>
             <Summary xml:lang="tr">Python3 için HTTP istemci kitaplığı</Summary>
             <Description xml:lang="tr">python3-httplib2, diğer HTTP kütüphanelerinin desteklemediği bir çok özellik içeren bir HTTP istemci kitaplığıdır</Description>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-21</Date>
+                <Version>0.14.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-05-06</Date>
                 <Version>0.9.2</Version>
@@ -14124,78 +14373,11 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>pysqlite</Name>
-            <Homepage>http://oss.itsystementwicklung.de/trac/pysqlite</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>PSF-2.2</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Python sqlite bindings</Summary>
-            <Summary xml:lang="tr">Python sqlite bağlayıcıları</Summary>
-            <Description xml:lang="fr">pysqlite est une interface pour bases de données SQLite conforme à DB-API 2.0. pysqlite rend le puissant moteur embarqué SQL SQLite disponible pour les programmeurs Python. Elle demeure aussi compatible que possible avec les spécifications de l&apos;API de bases de données 2.0, mais expose également une large partie de l&apos;API native de SQLite, afin qu&apos;il soit par exemple possible de créer des fonctions et des agrégats (aggregates) SQL utilisateur depuis Python.</Description>
-            <Description xml:lang="en">pysqlite is a DB-API 2.0-compliant database interface for SQLite. pysqlite makes the powerful embedded SQL engine SQLite available to Python programmers. It stays compatible with the Python database API specification 2.0 as much as possible, but also exposes most of SQLite&apos;s native API, so that it is for example possible to create user-defined SQL functions and aggregates in Python.</Description>
-            <Description xml:lang="tr">pysqlite, SQLite için bir DB-API 2.0 uyumlu veri tabanı ara yüzüdür. pysql güçlü gömülü SQL motoru SQLite&apos;ı Python programcılarına uygun hale getirir. Python veri tabanı API 2.0 teknik özelliklerine olabildiğince uyumlu kalır, ama aynı zamanda SQLite&apos;ın doğal API&apos;sinin çoğunu meydana çıkarır, böylece örneğin, Python ile kullanıcı tanımlı SQL fonksiyonları ve kümeler oluşturmak mümkündür.</Description>
-            <Description xml:lang="es">pysqlite es una interfaz para SQLite, compatible con DB-API 2.0. pysqlite disponibiliza al potente y embebido motor SQLite a programadores de Python. Mantiene la mayor compatibilidad posible con la especificación del API 2.0 de bases de datos Python, pero también expone la mayoría del API nativo de SQLite, lo que permite por ejemplo crear funciones SQL definidos por el usuario, y agregados en Python.</Description>
-            <Archive type="targz" sha1sum="ea2c7946400305a92b7670ec6758c012490db70f">https://pypi.python.org/packages/source/p/pysqlite/pysqlite-2.8.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>sqlite-devel</Dependency>
-                <Dependency>python-sphinx</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/pysqlite/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>pysqlite</Name>
-            <RuntimeDependencies>
-                <Dependency>sqlite</Dependency>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2015-10-10</Date>
-                <Version>2.8.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Ali Algul(gulle)</Name>
-                <Email>alialgul@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2013-11-04</Date>
-                <Version>2.6.3</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-02-02</Date>
-                <Version>2.6.3</Version>
-                <Comment>bump</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2010-10-13</Date>
-                <Version>2.6.0</Version>
-                <Comment>First release</Comment>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-future</Name>
             <Homepage>http://python-future.org/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>MIT</License>
             <IsA>library</IsA>
@@ -14204,25 +14386,18 @@
             <Summary xml:lang="tr">Python future modülü</Summary>
             <Description xml:lang="en">python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</Description>
             <Description xml:lang="tr">python-future python2 ile python3 arasındaki kayıp uyumluluk katmanıdır. Python2 ile Python3 arasında python3 uyumlu bir kod katmanı kullanabilmenizi sağlar.</Description>
-            <Archive type="targz" sha1sum="431bf8ff160e8e785a2f76c3e57c1b6c2b13b41a">https://pypi.python.org/packages/source/f/future/future-0.15.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="d8c8b2d3889fc22bb38f049ed8e3dbdc35a83d6e">https://pypi.io/packages/source/f/future/future-0.18.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch>0001-Remove-duplicate-assertion-in-builtins-tests.patch</Patch>
-                <Patch>remove-two-expected-failure-decorators.patch</Patch>
-            </Patches>
             <SourceURI>programming/language/python/python-future/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>python-future</Name>
             <Summary xml:lang="en">Python future module</Summary>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib/python2*</Path>
@@ -14234,14 +14409,18 @@
             <Summary xml:lang="en">Python3 future module</Summary>
             <Summary xml:lang="tr">Python3 future modülü</Summary>
             <Description xml:lang="tr">python-future python2 ile python3 arasındaki kayıp uyumluluk katmanıdır. Python2 ile Python3 arasında python3 uyumlu bir kod katmanı kullanabilmenizi sağlar.</Description>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-20</Date>
+                <Version>0.18.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-22</Date>
                 <Version>0.15.2</Version>
@@ -14266,21 +14445,17 @@
             <Summary xml:lang="tr">Ekran çıktısından ayıklama gibi uygulamalarda kolaylık sağlayan HTML/XML ayıklayıcısı</Summary>
             <Description xml:lang="en">Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.</Description>
             <Description xml:lang="tr">Beautiful Soup, geçersiz SGML&apos;leri keyfi bir şekilde ayıklar ve ayıklanmış ağaç üzerinden ilerleme ve arama işlemleri için çeşitli Python deyimleri ve metodları sağlar.</Description>
-            <Archive type="targz" sha1sum="3252d89e8b3bbed0cff47f89d98ca6221cdc3d03">https://www.crummy.com/software/BeautifulSoup/bs4/download/4.4/beautifulsoup4-4.4.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="afec76610be96ce8141bf56885bea55ff458d457">https://pypi.io/packages/source/b/beautifulsoup4/beautifulsoup4-4.8.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
-                <Dependency>python-lxml</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/python-beautifulsoup4/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>python-beautifulsoup4</Name>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -14290,14 +14465,18 @@
             <Name>python3-beautifulsoup4</Name>
             <Summary xml:lang="tr">Python3 beautifulsoup4 modülü</Summary>
             <Description xml:lang="tr">Beautiful Soup, geçersiz SGML&apos;leri keyfi bir şekilde ayıklar ve ayıklanmış ağaç üzerinden ilerleme ve arama işlemleri için çeşitli Python deyimleri ve metodları sağlar.</Description>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-21</Date>
+                <Version>4.8.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-04-05</Date>
                 <Version>4.4.1</Version>
@@ -14318,6 +14497,45 @@
                 <Comment>First release</Comment>
                 <Name>Fatih Turgel</Name>
                 <Email>hitaf@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-typing</Name>
+            <Homepage>https://pypi.org/project/typing/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>PSF</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Backport of the standard library typing module</Summary>
+            <Summary xml:lang="tr">Geriye dönük Python 2.7 typing bağlayıcıları</Summary>
+            <Description xml:lang="en">This is a backport of the standard library typing module to Python versions older than 3.5. Typing defines a standard notation for Python function and variable type annotations. The notation can be used for documenting code in a concise, standard format, and it has been designed to also be used by static and runtime type checkers, static analyzers, IDEs and other tools.</Description>
+            <Description xml:lang="tr">Python 3.5&apos;dan önceki sürümler için geriye dönüklük destegi saglayan pyton2 bağlayıcısıdır.</Description>
+            <Archive type="targz" sha1sum="f977239c310a5dd5ae5b6cb598d76eba45b92ed6">https://pypi.io/packages/source/t/typing/typing-3.7.4.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-typing/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-typing</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/python-typing</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-13</Date>
+                <Version>3.7.4.1</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -14546,8 +14764,8 @@
             <Name>python-ecdsa</Name>
             <Homepage>https://github.com/warner/python-ecdsa</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>MIT</License>
             <IsA>library</IsA>
@@ -14556,7 +14774,7 @@
             <Summary xml:lang="tr">Python için ECDSA Kriptografi Uygulaması</Summary>
             <Description xml:lang="en">This is an easy-to-use implementation of ECDSA cryptography (Elliptic Curve Digital Signature Algorithm), implemented purely in Python, released under the MIT license. With this library, you can quickly create keypairs (signing key and verifying key), sign messages, and verify the signatures. The keys and signatures are very short, making them easy to handle and incorporate into other protocols.</Description>
             <Description xml:lang="tr">Python için kolay kullanımlı, MIT lisanslı ECDSA kriptografi (Elliptic Curve Digital Signature Algorithm) modülü. Bu kitaplık ile hızlıca anahtar oluşturabilir (giriş ahahtarı ve doğrulama anahtarı), iletileri imzalayabilir ve imzalarınızı doğrulayabilirsiniz. Anahtar ile imzalar çok hısadır ve diğer protokollere bütünlleştirmek oldukça kolaydır.</Description>
-            <Archive type="targz" sha1sum="89e198ddd4c09d0bb9184bf77bbf2b3b604440c7">https://github.com/warner/python-ecdsa/archive/python-ecdsa-0.13.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c9b68248324938789ebce5035d089a10358243d5">https://github.com/warner/python-ecdsa/archive/python-ecdsa-0.14.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
@@ -14568,9 +14786,6 @@
         <Package>
             <Name>python-ecdsa</Name>
             <Summary xml:lang="en">ECDSA module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc/python-ecdsa</Path>
@@ -14581,14 +14796,18 @@
             <Summary xml:lang="en">ECDSA module for python3</Summary>
             <Summary xml:lang="tr">Python3 için ECDSA Kriptografi Uygulaması</Summary>
             <Description xml:lang="tr">Python3 için kolay kullanımlı, MIT lisanslı ECDSA kriptografi (Elliptic Curve Digital Signature Algorithm) modülü. Bu kitaplık ile hızlıca anahtar oluşturabilir (giriş ahahtarı ve doğrulama anahtarı), iletileri imzalayabilir ve imzalarınızı doğrulayabilirsiniz. Anahtar ile imzalar çok hısadır ve diğer protokollere bütünlleştirmek oldukça kolaydır.</Description>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-21</Date>
+                <Version>0.14.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-01</Date>
                 <Version>0.13</Version>
@@ -14603,8 +14822,8 @@
             <Name>python-msgpack</Name>
             <Homepage>http://msgpack.org/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>Apache</License>
             <IsA>library</IsA>
@@ -14613,23 +14832,18 @@
             <Summary xml:lang="tr">Python msgpack modülü</Summary>
             <Description xml:lang="en">MessagePack serializer implementation for Python.</Description>
             <Description xml:lang="tr">python-msgpack, Python için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="d5a3869ab8149914bf0ead9db7bdeb0b83e661c9">https://github.com/msgpack/msgpack-python/archive/0.4.7.tar.gz</Archive>
+            <Archive type="targz" sha1sum="883ae054b3fd3e4c4c1d97f13fd0c2d7fa7e3499">https://github.com/msgpack/msgpack-python/archive/v0.6.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
-                <Dependency>cython3</Dependency>
-                <Dependency>cython</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/python-msgpack/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>python-msgpack</Name>
             <Summary xml:lang="en">Python msgpack module</Summary>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -14640,14 +14854,18 @@
             <Summary xml:lang="en">Python3 msgpack module</Summary>
             <Summary xml:lang="tr">Python3 msgpack modülü</Summary>
             <Description xml:lang="tr">python3-msgpack, Python3 için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-22</Date>
+                <Version>0.6.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-22</Date>
                 <Version>0.4.7</Version>
@@ -14659,11 +14877,66 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-pypdf2</Name>
+            <Homepage>https://mstamy2.github.com/PyPDF2</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">A utility to read and write pdfs with Python</Summary>
+            <Summary xml:lang="tr">Python pypdf2 modülü</Summary>
+            <Description xml:lang="en">PyPDF2 is a pure-python PDF toolkit originating from the pyPdf project. PyPDF2 can extract data from PDF files, or manipulate existing PDFs to produce a new file. PyPDF2 is compatible with Python versions 2.6, 2.7, and 3.2 - 3.5.</Description>
+            <Description xml:lang="tr">python-pypdf2, Python2 için kriptografik algoritmalar ve protokoller içeren bir kitaplıktır.</Description>
+            <Archive type="targz" sha1sum="29859e086b6e78459feb660ba24f3b22773e11c1">https://github.com/mstamy2/PyPDF2/archive/1.26.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-pypdf2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pypdf2</Name>
+            <Summary xml:lang="en">Python pyPDF2 module</Summary>
+            <RuntimeDependencies>
+                <Dependency>python</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/python-pypdf2</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>python3-pypdf2</Name>
+            <Summary xml:lang="en">Python3 pyPDF2 module</Summary>
+            <Summary xml:lang="tr">Python3 pypdf2 modülü</Summary>
+            <Description xml:lang="tr">python3-pypdf2, Python2 için kriptografik algoritmalar ve protokoller içeren bir kitaplıktır.</Description>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-12</Date>
+                <Version>1.26.0</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-dpkt</Name>
             <Homepage>https://github.com/kbandla/dpkt</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>BSD</License>
             <IsA>library</IsA>
@@ -14672,7 +14945,7 @@
             <Summary xml:lang="tr">python-dpkt, paket yaratan ve paketlerle etkileşebilen bir python kitaplığıdır.</Summary>
             <Description xml:lang="en">A fast, simple packet creation/parsing python module with definitions for the basic TCP/IP protocols.</Description>
             <Description xml:lang="tr">python-dpkt, temel TCP/IP protokolleri için basit ve hızlı bir paket yaratma/çözümleme python modülüdür.</Description>
-            <Archive type="targz" sha1sum="6c7bc8229edbfcfe556b79f7692b45ab744b4370">https://github.com/kbandla/dpkt/archive/v1.8.7.tar.gz</Archive>
+            <Archive type="targz" sha1sum="6710e0d1b4fc4540fdd087189d8d99d4ee27879a">https://github.com/kbandla/dpkt/archive/v1.9.2.tar.gz</Archive>
             <SourceURI>programming/language/python/python-dpkt/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -14684,6 +14957,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-21</Date>
+                <Version>1.9.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-28</Date>
                 <Version>1.8.7</Version>
@@ -14844,19 +15124,18 @@
             <Name>python-pycrypto</Name>
             <Homepage>https://www.dlitz.net/software/pycrypto/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
-            <License>as-is</License>
+            <License>PD</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">Python pycrypto module</Summary>
             <Summary xml:lang="tr">Python pycrypto modülü</Summary>
             <Description xml:lang="en">A collection of cryptographic algorithms and protocols, implemented for use from Python2.</Description>
             <Description xml:lang="tr">python-pycrypto, Python2 için kriptografik algoritmalar ve protokoller içeren bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="aeda3ed41caf1766409d4efc689b9ca30ad6aeb2">https://ftp.dlitz.net/pub/dlitz/crypto/pycrypto/pycrypto-2.6.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="077feba65e9018df81d11e1a9f703a8b03fc8ec5">https://github.com/dlitz/pycrypto/archive/v2.7a1.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
                 <Dependency>gmp-devel</Dependency>
@@ -14867,7 +15146,6 @@
             <Name>python-pycrypto</Name>
             <Summary xml:lang="en">Python pycrypto module</Summary>
             <RuntimeDependencies>
-                <Dependency>python</Dependency>
                 <Dependency>gmp</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -14889,6 +15167,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-21</Date>
+                <Version>2.7a.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-31</Date>
                 <Version>2.6.1</Version>
@@ -14900,44 +15185,44 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>pefile-py3k</Name>
-            <Homepage>https://github.com/simonzack/pefile-py3k</Homepage>
+            <Name>python3-pynacl</Name>
+            <Homepage>https://github.com/pyca/pynacl/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
-            <License>as-is</License>
-            <IsA>app:console</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Python3 module to read and work with PE files</Summary>
-            <Summary xml:lang="tr">PE(Portable Executable) dosyaları çözümleyebilen bir python3 yordamı</Summary>
-            <Description xml:lang="en">pefile is a multi-platform Python module to parse and work with Portable Executable (aka PE) files. Most of the information contained in the PE headers is accessible as well as all sections&apos; details and their data.</Description>
-            <Description xml:lang="tr">python3-pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
-            <Archive type="targz" sha1sum="5f71a53e12a165e85968b95db299b3a12e73f0dd">https://github.com/ibrahimkaraguzel/Sources/raw/master/pefile-py3k-1.2.10.tar.gz</Archive>
+            <License>Apache</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 binding to the Networking and Cryptography (NaCl) library</Summary>
+            <Summary xml:lang="tr">Python3 için NaCl modülü</Summary>
+            <Description xml:lang="en">python3-pynacl PyNaCl is a Python3 binding to libsodium, which is a fork of the Networking and Cryptography library. These libraries have a stated goal of improving usability, security and speed.</Description>
+            <Description xml:lang="tr">PyNaCl, ağ ve kriptografi kitaplığınından geliştirilen libsodium kitaplığının python3 modülüdür.</Description>
+            <Archive type="targz" sha1sum="c078953e5643ad4ff7881a4627f5147eb5c76cf4">https://pypi.org/packages/source/P/PyNaCl/PyNaCl-1.3.0.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>programming/language/python/pefile-py3k/pspec.xml</SourceURI>
+            <SourceURI>programming/language/python3/python3-pynacl/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>pefile-py3k</Name>
-            <Summary xml:lang="en">Python3 module to read and work with PE files</Summary>
+            <Name>python3-pynacl</Name>
+            <Summary xml:lang="en">PyNaCl module for python3</Summary>
             <RuntimeDependencies>
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2016-04-23</Date>
-                <Version>1.2.10</Version>
-                <Comment>First release, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Date>2019-11-25</Date>
+                <Version>1.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -24543,8 +24828,8 @@
             <Name>admid-pack</Name>
             <Homepage>http://packetstormsecurity.com/files/10080/ADMid-pkg.tgz.html</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>GPL</License>
             <IsA>app:console</IsA>
@@ -24553,7 +24838,7 @@
             <Summary xml:lang="tr">DNS Yanıltma Aracı</Summary>
             <Description xml:lang="en">Uses a variety of active and passive methods to spoof DNS packets. Very powerful.</Description>
             <Description xml:lang="tr">ADM, Ağ paketlerini yanlış IP&apos;ye gönderen bir araçtır. - DNS paketlerini yanlış veya sahte yerlere göndermek için çeşitli etkin ya da etkin olmayan yöntemleri kullanır.</Description>
-            <Archive type="targz" sha1sum="6e3b7ea5e5b0f90d410c540ca2aff28ac2adbc1e">http://packetstorm.foofus.com/groups/ADM/ADM-DNS-SPOOF/ADMid-pkg.tgz</Archive>
+            <Archive type="targz" sha1sum="6e3b7ea5e5b0f90d410c540ca2aff28ac2adbc1e">https://dl.packetstormsecurity.net/groups/ADM/ADM-DNS-SPOOF/ADMid-pkg.tgz</Archive>
             <BuildDependencies>
                 <Dependency>libpcap-devel</Dependency>
             </BuildDependencies>
@@ -24571,6 +24856,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-05</Date>
+                <Version>0.1</Version>
+                <Comment>Pisi Linux 2.1.1 fix</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-29</Date>
                 <Version>0.1</Version>
@@ -24623,8 +24915,8 @@
             <Name>admsnmp</Name>
             <Homepage>https://www.freshports.org/security/ADMsnmp/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>GPL</License>
             <IsA>app:console</IsA>
@@ -24633,17 +24925,11 @@
             <Summary xml:lang="tr">ADM SNMP denetim tarayıcısı.</Summary>
             <Description xml:lang="en">ADMsnmp can brute force the snmp community name (with a wordfile) or make a wordfile list derived the hostname.</Description>
             <Description xml:lang="tr">ADMsnmp snmp (Simple Network Management Protocol) protokolüne söz listesi kullanarak ya da makine/sistem adından söz listesi üreterek kabadayı saldırısı düzenleyebilen bir araçtır. ADMsnmp erişilen MIB yazdırılabilir mi ve geçerli tüm topluluk adlarını raporlayabilir.</Description>
-            <Archive type="targz" sha1sum="0e8cb98a47c7e473389d6cc512da76d021d0910d">http://examples.oreilly.com/networksa/tools/ADMsnmp.0.1.tgz</Archive>
-            <BuildDependencies>
-                <Dependency>glibc-devel</Dependency>
-            </BuildDependencies>
+            <Archive type="targz" sha1sum="0e8cb98a47c7e473389d6cc512da76d021d0910d">https://dl.packetstormsecurity.net/groups/ADM/ADMsnmp.0.1.tgz</Archive>
             <SourceURI>network/analyzer/admsnmp/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>admsnmp</Name>
-            <RuntimeDependencies>
-                <Dependency>glibc</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -24651,6 +24937,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-05</Date>
+                <Version>0.1</Version>
+                <Comment>Pisi 2.1.1 fix</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-30</Date>
                 <Version>0.1</Version>
@@ -24665,8 +24958,8 @@
             <Name>adminpagefinder</Name>
             <Homepage>http://packetstormsecurity.com/files/112855/Admin-Page-Finder-Script.html</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>custom</License>
             <IsA>app:console</IsA>
@@ -24675,16 +24968,24 @@
             <Summary xml:lang="tr">Bir yönetici arayüzü tarayıcısı</Summary>
             <Description xml:lang="en">This python script looks for a large amount of possible administrative interfaces on a given site.</Description>
             <Description xml:lang="tr">Bu python betiği verilen ağ betindeki birçok olası admin/yönetici arayüzünü tarar.</Description>
-            <Archive type="binary" sha1sum="9556deddc1b47168ad95a5258ce6e76347fe3500">http://packetstorm.foofus.com/UNIX/utilities/AdminpageFinder.py.txt</Archive>
+            <Archive type="binary" sha1sum="9556deddc1b47168ad95a5258ce6e76347fe3500">https://dl.packetstormsecurity.net/UNIX/utilities/AdminpageFinder.py.txt</Archive>
             <SourceURI>network/analyzer/adminpagefinder/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>adminpagefinder</Name>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/share</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-05</Date>
+                <Version>0.1</Version>
+                <Comment>Pisi 2.1.1 fix</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-30</Date>
                 <Version>0.1</Version>

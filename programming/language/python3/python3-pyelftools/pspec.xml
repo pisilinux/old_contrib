@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-pyelftools</Name>
+        <Name>python3-pyelftools</Name>
         <Homepage>https://github.com/eliben/pyelftools</Homepage>
         <Packager>
             <Name>Blue DeviL</Name>
@@ -10,18 +10,18 @@
         </Packager>
         <License>Public Domain</License>
         <IsA>library</IsA>
-        <Summary>Python library for analyzing ELF files and DWARF debugging information</Summary>
+        <Summary>Python3 library for analyzing ELF files and DWARF debugging information</Summary>
         <Description>pyelftools is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information.</Description>
         <Archive sha1sum="95c9dc38c4d4572bf320634884772f3cac9e1d84" type="targz">https://github.com/eliben/pyelftools/archive/v0.25.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-pyelftools</Name>
-        <Summary>Python library for analyzing ELF files and DWARF debugging information</Summary>
+        <Name>python3-pyelftools</Name>
+        <Summary>Python3 library for analyzing ELF files and DWARF debugging information</Summary>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib</Path>

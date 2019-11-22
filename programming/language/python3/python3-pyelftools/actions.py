@@ -10,10 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def build():
-    pythonmodules.compile()
-    
-def check():
-    pythonmodules.compile("test")
+    pythonmodules.compile(pyVer="3")
 
 def install():
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")

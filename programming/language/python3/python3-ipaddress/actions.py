@@ -10,10 +10,7 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def build():
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
 
 def install():
-    pythonmodules.install()
-
-    for dirs in ["demos", "tests"]:
-        pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)
+    pythonmodules.install(pyVer="3")

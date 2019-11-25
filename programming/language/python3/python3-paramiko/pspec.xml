@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-paramiko</Name>
+        <Name>python3-paramiko</Name>
         <Homepage>http://www.lag.net/paramiko/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
@@ -14,19 +14,19 @@
         <Description>python-paramiko is a module for python 2.2 (or higher) that implements the SSH2 protocol for secure (encrypted and authenticated) connections to remote machines.</Description>
         <Archive sha1sum="9e6cab36109afba7c5513cf4c371fda961ffd294" type="targz">https://github.com/paramiko/paramiko/archive/2.6.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-paramiko</Name>
-        <Summary>Paramiko module for python</Summary>
+        <Name>python3-paramiko</Name>
+        <Summary>Paramiko module for python3</Summary>
         <RuntimeDependencies>
-            <Dependency>python-cryptography</Dependency>
-            <Dependency>python-ipaddress</Dependency>
-            <Dependency>python-pynacl</Dependency>
-            <Dependency>python-bcrypt</Dependency>
+            <Dependency>python3-cryptography</Dependency>
+            <Dependency>python3-pynacl</Dependency>
+            <Dependency>python3-bcrypt</Dependency>
+            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

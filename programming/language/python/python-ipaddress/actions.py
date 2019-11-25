@@ -14,6 +14,3 @@ def build():
 
 def install():
     pythonmodules.install()
-
-    for dirs in ["demos", "tests"]:
-        pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)

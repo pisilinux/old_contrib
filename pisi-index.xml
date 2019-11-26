@@ -1597,7 +1597,7 @@
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>desktop.kde</PartOf>
             <Summary xml:lang="en">KDE GUI for the Wacom Linux Drivers</Summary>
             <Summary xml:lang="tr">KDE GUI for the Wacom Linux Drivers</Summary>
             <Description xml:lang="en">Linux Wacom Projesi, Linux işletim sistemi altında Wacom tabletlerini yapılandırmak ve çalıştırmak için sürücüleri, kütüphaneleri ve belgeleri yönetir.</Description>
@@ -9086,7 +9086,7 @@
             </Packager>
             <License>BSD</License>
             <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">Perl-compatible regular expression library</Summary>
             <Description xml:lang="en">The PCRE (Perl Compatible Regular Expressions) library is a set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5.</Description>
             <Archive type="targz" sha1sum="26d2fbcc7c7cf633d954a978530ce0b8b9b10472">ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre2-10.30.tar.gz</Archive>
@@ -9162,7 +9162,7 @@
             </Packager>
             <License>GPLv2</License>
             <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>system.devel</PartOf>
             <Summary xml:lang="en">A libc optimized for small size</Summary>
             <Summary xml:lang="tr">Düşük boyut için optimize edilmiş C kütüphanesi</Summary>
             <Description xml:lang="en">dietlibc is a libc that is optimized for small size. It can be used to create small statically linked binaries for Linux on various architectures.</Description>
@@ -11638,7 +11638,7 @@
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>programming.environment</PartOf>
             <Summary xml:lang="en">A free C++ IDE built to meet the most demanding needs of its users</Summary>
             <Summary xml:lang="tr">C++ için bütünleşik geliştirme araçlarını barındıran özgür yazılım</Summary>
             <Description xml:lang="en">Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.</Description>
@@ -11720,7 +11720,7 @@
             <License>X11</License>
             <IsA>app:console</IsA>
             <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>programming.language.dotnet</PartOf>
             <Summary xml:lang="fr">Librairie de classe et environnement d&apos;exécution (runtime) de Mono, un compilateur/interpréteur C#.</Summary>
             <Summary xml:lang="en">Mono runtime and class libraries, a C# compiler/interpreter</Summary>
             <Summary xml:lang="tr">C# derleyici ve yorumlayıcı</Summary>
@@ -12087,7 +12087,7 @@
             </Packager>
             <License>GPLv3</License>
             <IsA>app:console</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>programming.language.dotnet</PartOf>
             <Summary xml:lang="en">A wrist friendly language for the CLI</Summary>
             <Summary xml:lang="tr">Ortak dil altyapısı için bilek dostu bir programlama dili</Summary>
             <Description xml:lang="en">Boo is a new object oriented statically typed programming language for the Common Language Infrastructure with a python inspired syntax and a special focus on language and compiler extensibility.</Description>
@@ -12133,7 +12133,7 @@
             </Packager>
             <License>LGPLv2.1</License>
             <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>programming.language.dotnet</PartOf>
             <Summary xml:lang="fr">Gtk# est un lien (binding) en langage C# pour la boîte à outils GTK2.</Summary>
             <Summary xml:lang="en">A C# language binding for the GTK+</Summary>
             <Summary xml:lang="tr">Gtk için C# bağlayıcıları</Summary>
@@ -12199,7 +12199,7 @@
             </Packager>
             <License>MIT</License>
             <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>programming.language.dotnet</PartOf>
             <Summary xml:lang="fr">Librairie pour utiliser System.Drawing avec Mono.</Summary>
             <Summary xml:lang="en">Library for using System.Drawing with Mono</Summary>
             <Summary xml:lang="tr">Mono ile System.Drawing kullanmak için gerekli kitaplığı</Summary>
@@ -13954,9 +13954,7 @@
             <Description xml:lang="es">paramiko es un módulo para python 2.2 (o posterior) que implementa el protocolo SSH2 para conexiones seguras (encriptado y autenticado) con equipos remotos.</Description>
             <Archive type="targz" sha1sum="9e6cab36109afba7c5513cf4c371fda961ffd294">https://github.com/paramiko/paramiko/archive/2.6.0.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/python-paramiko/pspec.xml</SourceURI>
@@ -13964,18 +13962,15 @@
         <Package>
             <Name>python-paramiko</Name>
             <Summary xml:lang="en">Paramiko module for python</Summary>
+            <RuntimeDependencies>
+                <Dependency>python-cryptography</Dependency>
+                <Dependency>python-ipaddress</Dependency>
+                <Dependency>python-pynacl</Dependency>
+                <Dependency>python-bcrypt</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python3-paramiko</Name>
-            <Summary xml:lang="en">Paramiko module for python3</Summary>
-            <Summary xml:lang="tr">Python3 için SSH2 Protokolü Uygulaması</Summary>
-            <Description xml:lang="tr">Paramiko, python 2.2 ya da üzeri için, uzak makinelere güvenli (şifrelenmiş ve doğrulanmış) bağlantılar kurmak amacıyla SSH2 protokolünü uygulayan bir Python Modülüdür.</Description>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
@@ -14373,6 +14368,46 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-ipaddress</Name>
+            <Homepage>https://github.com/phihag/ipaddress</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>PSFL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python 3.3+&apos;s ipaddress for older Python versions</Summary>
+            <Summary xml:lang="tr">Python için ipaddress modülü</Summary>
+            <Description xml:lang="en">python-ipaddress ipaddress provides the capabilities to create, manipulate and operate on IPv4 and IPv6 addresses and networks. This module is a backport for python 2.7 and python versions up to 3.2.</Description>
+            <Description xml:lang="tr">python-ipaddress modülü Python3.3 ile gelen ipaddress modülünün python 2.7 ve python 3.2&apos;ye kadar olan sürümlerinde de çalışmasını sağlar.</Description>
+            <Archive type="targz" sha1sum="8446393aaedd42401926f4469486b939dcd3fca9">https://github.com/phihag/ipaddress/archive/v1.0.23.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-ipaddress/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-ipaddress</Name>
+            <Summary xml:lang="en">ipaddress module for python</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-25</Date>
+                <Version>1.0.23</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-future</Name>
             <Homepage>http://python-future.org/</Homepage>
             <Packager>
@@ -14544,19 +14579,19 @@
             <Name>python-pyelftools</Name>
             <Homepage>https://github.com/eliben/pyelftools</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
-            <License>as-is</License>
+            <License>Public Domain</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">Python library for analyzing ELF files and DWARF debugging information</Summary>
-            <Summary xml:lang="tr">ELF ve DWARF dosyaları için çözümleme, inceleme ve hata ayıklama kitaplığı.</Summary>
+            <Summary xml:lang="tr">Python için pyelftools modülü</Summary>
             <Description xml:lang="en">pyelftools is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information.</Description>
             <Description xml:lang="tr">pyelftools ELF ve DWARF dosyaları için çözümleme, inceleme ve hata ayıklamak için python ile yazılmış bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="729b558605e5b033010ecd60705e0d5a61bc94ea">https://github.com/eliben/pyelftools/archive/v0.23.tar.gz</Archive>
+            <Archive type="targz" sha1sum="95c9dc38c4d4572bf320634884772f3cac9e1d84">https://github.com/eliben/pyelftools/archive/v0.25.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python3-devel</Dependency>
+                <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/python-pyelftools/pspec.xml</SourceURI>
@@ -14564,28 +14599,20 @@
         <Package>
             <Name>python-pyelftools</Name>
             <Summary xml:lang="en">Python library for analyzing ELF files and DWARF debugging information</Summary>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
-        <Package>
-            <Name>python3-pyelftools</Name>
-            <Summary xml:lang="en">pyelftools module for python3</Summary>
-            <Summary xml:lang="tr">Python3 için pyelftools modülü</Summary>
-            <Description xml:lang="tr">Python3 için pyelftools modülü</Description>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-            </Files>
-        </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>0.25</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-22</Date>
                 <Version>0.23</Version>
@@ -15180,6 +15207,162 @@
                 <Comment>First Pisi Release Built with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-ipaddress</Name>
+            <Homepage>https://github.com/phihag/ipaddress</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>PSFL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python 3.3+&apos;s ipaddress for older Python versions</Summary>
+            <Summary xml:lang="tr">Python3.2 ve daha düşük sürümler için ipaddress modülü</Summary>
+            <Description xml:lang="en">python-ipaddress ipaddress provides the capabilities to create, manipulate and operate on IPv4 and IPv6 addresses and networks. This module is a backport for python 2.7 and python versions up to 3.2.</Description>
+            <Description xml:lang="tr">python-ipaddress modülü Python3.3 ile gelen ipaddress modülünün python 2.7 ve python 3.2&apos;ye kadar olan sürümlerinde de çalışmasını sağlar.</Description>
+            <Archive type="targz" sha1sum="8446393aaedd42401926f4469486b939dcd3fca9">https://github.com/phihag/ipaddress/archive/v1.0.23.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-ipaddress/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-ipaddress</Name>
+            <Summary xml:lang="en">ipaddress module for python3.2-</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-25</Date>
+                <Version>1.0.23</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-pyelftools</Name>
+            <Homepage>https://github.com/eliben/pyelftools</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Public Domain</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 library for analyzing ELF files and DWARF debugging information</Summary>
+            <Summary xml:lang="tr">Python3 için pyelftools modülü</Summary>
+            <Description xml:lang="en">pyelftools is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information.</Description>
+            <Description xml:lang="tr">pyelftools ELF ve DWARF dosyaları için çözümleme, inceleme ve hata ayıklamak için python ile yazılmış bir kitaplıktır.</Description>
+            <Archive type="targz" sha1sum="95c9dc38c4d4572bf320634884772f3cac9e1d84">https://github.com/eliben/pyelftools/archive/v0.25.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-pyelftools/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-pyelftools</Name>
+            <Summary xml:lang="en">Python3 library for analyzing ELF files and DWARF debugging information</Summary>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>0.25</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-04-22</Date>
+                <Version>0.23</Version>
+                <Comment>First release, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-paramiko</Name>
+            <Homepage>http://www.lag.net/paramiko/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">SSH2 implementation for Python</Summary>
+            <Summary xml:lang="tr">Python3 için SSH2 Protokolü Uygulaması</Summary>
+            <Description xml:lang="en">python-paramiko is a module for python 2.2 (or higher) that implements the SSH2 protocol for secure (encrypted and authenticated) connections to remote machines.</Description>
+            <Description xml:lang="tr">Paramiko, python 2.2 ya da üzeri için, uzak makinelere güvenli (şifrelenmiş ve doğrulanmış) bağlantılar kurmak amacıyla SSH2 protokolünü uygulayan bir Python Modülüdür.</Description>
+            <Description xml:lang="es">paramiko es un módulo para python 2.2 (o posterior) que implementa el protocolo SSH2 para conexiones seguras (encriptado y autenticado) con equipos remotos.</Description>
+            <Archive type="targz" sha1sum="9e6cab36109afba7c5513cf4c371fda961ffd294">https://github.com/paramiko/paramiko/archive/2.6.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-paramiko/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-paramiko</Name>
+            <Summary xml:lang="en">Paramiko module for python3</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3-cryptography</Dependency>
+                <Dependency>python3-pynacl</Dependency>
+                <Dependency>python3-bcrypt</Dependency>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2019-11-22</Date>
+                <Version>2.6.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2016-03-31</Date>
+                <Version>1.16.0</Version>
+                <Comment>Version bump, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-11-19</Date>
+                <Version>1.12.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Burak Fazıl Ertürk</Name>
+                <Email>burakerturk@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-11-15</Date>
+                <Version>1.7.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -20756,7 +20939,7 @@
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>game.strategy</PartOf>
             <Summary xml:lang="en">Multiplayer strategy game</Summary>
             <Summary xml:lang="tr">Çok oyuncu destekli strateji oyunu</Summary>
             <Summary xml:lang="pl">Niekomercyjny klon Civilization</Summary>
@@ -20859,7 +21042,7 @@
             </Packager>
             <License>LGPL</License>
             <IsA>app</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>game.Emulator</PartOf>
             <Summary xml:lang="en">A portable Emulator for the Super Nintendo Entertainment System</Summary>
             <Summary xml:lang="tr">Süper Nintendo oyunları için emülatör</Summary>
             <Description xml:lang="en">A portable Emulator for the Super Nintendo Entertainment System</Description>
@@ -21063,7 +21246,7 @@
             </Packager>
             <License>GPLv2</License>
             <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>game.misc</PartOf>
             <Summary xml:lang="en">Simgear game library</Summary>
             <Summary xml:lang="tr">Oyun kütüphanesi</Summary>
             <Description xml:lang="fr">Librairie de développement pour jeux de simulation.</Description>
@@ -21134,7 +21317,7 @@
             </Packager>
             <License>LGPLv2.1</License>
             <IsA>library</IsA>
-            <PartOf>unknown</PartOf>
+            <PartOf>game.misc</PartOf>
             <Summary xml:lang="en">Plib game library</Summary>
             <Summary xml:lang="tr">Oyun kütüphanesi</Summary>
             <Description xml:lang="fr">Librairie multimédia et 3D principalement utilisée par les jeux.</Description>

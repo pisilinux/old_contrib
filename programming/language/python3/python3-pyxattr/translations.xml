@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-pyxattr</Name>
+        <Summary xml:lang="tr">Python3 pyxattr modülü</Summary>
+        <Summary xml:lang="fr">Extension Python pour les attributs étendus de fichiers.</Summary>
+        <Description xml:lang="tr">python3-pyxattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
+    </Source>
+</PISI>

@@ -11,12 +11,12 @@ from pisi.actionsapi import get
 def build():
     shelltools.export("CFLAGS", "%s -fno-strict-aliasing -Wno-unused-function -Wno-implicit-function-declaration" % get.CFLAGS())
     shelltools.export("LDSHARED", "x86_64-pc-linux-gnu-gcc -Wl,-O1,--as-needed -shared -lpthread")
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
     
-    #pythonmodules.run("setup.py build_sphinx")
+    #pythonmodules.run("setup.py build_sphinx", pyVer="3")
     
 def check():
-    pythonmodules.compile("test")
+    pythonmodules.compile("test", pyVer="3")
 
 def install():
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")

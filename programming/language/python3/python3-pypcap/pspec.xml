@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-pypcap</Name>
+        <Name>python3-pypcap</Name>
         <Homepage>https://github.com/pynetwork/pypcap</Homepage>
         <Packager>
             <Name>Blue DeviL</Name>
@@ -10,22 +10,24 @@
         </Packager>
         <License>BSD</License>
         <IsA>library</IsA>
-        <Summary>Python pcap module</Summary>
+        <Summary>Python3 pcap module</Summary>
         <Description>This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
         <Archive sha1sum="201d7b82d73ab55f9c45347e6739039dd59412f6" type="targz">https://github.com/pynetwork/pypcap/archive/v1.2.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
+            <Dependency>python3-setuptools</Dependency>
             <Dependency>libpcap-devel</Dependency>
-            <Dependency>python-devel</Dependency>
-            <!--<Dependency>python-sphinx</Dependency>-->
+            <Dependency>python3-devel</Dependency>
+            <!--<Dependency>python3-sphinx</Dependency>
+            <Dependency>python3-mock</Dependency>-->
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-pypcap</Name>
-        <Summary>Python pcap module</Summary>
+        <Name>python3-pypcap</Name>
+        <Summary>Python3 pcap module</Summary>
         <RuntimeDependencies>
             <Dependency>libpcap</Dependency>
+            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>

@@ -9,11 +9,12 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-exampledir = "/%s/%s/examples" % (get.docDIR(), get.srcNAME())
+#exampledir = "/%s/%s/examples" % (get.docDIR(), get.srcNAME())
 
 def setup():
     autotools.autoreconf("-vfi")
     autotools.configure("--disable-static")
+    #autotools.configure()
 
 def build():
     autotools.make()
@@ -21,15 +22,15 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.doman("doc/man/man3/*.3")
-    pisitools.dohtml("doc/html/*")
-    pisitools.dodoc("README")
+    pisitools.doman("doc/man/man1/*.1")
+    #pisitools.dohtml("doc/html/*")
+    #pisitools.dodoc("README")
 
-    for i in shelltools.ls("doc/*"):
-        if shelltools.isFile(i):
-            pisitools.dodoc(i)
+    #for i in shelltools.ls("doc/*"):
+    #    if shelltools.isFile(i):
+    #        pisitools.dodoc(i)
 
-    pisitools.dodir(exampledir)
-    for i in shelltools.ls("sample/*"):
-        if i.endswith(".h") or i.endswith(".c"):
-            pisitools.insinto(exampledir, i)
+    #pisitools.dodir(exampledir)
+    #for i in shelltools.ls("sample/*"):
+    #    if i.endswith(".h") or i.endswith(".c"):
+    #        pisitools.insinto(exampledir, i)

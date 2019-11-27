@@ -4,12 +4,14 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/copyleft/gpl.txt.
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 
 def setup():
+    shelltools.export("CFLAGS", "-Wno-unused-result -Wno-deprecated-declarations")
     # Fix soname
     pisitools.dosed("src/Makefile.in", "^LIBSHARED.*", "LIBSHARED = libnids.so.%s" % get.srcVERSION().split(".", 1)[0])
 
@@ -26,4 +28,4 @@ def build():
 def install():
     autotools.rawInstall("install_prefix=%s" % get.installDIR())
 
-    pisitools.dodoc("CHANGES", "COPYING", "CREDITS", "MISC", "README", "doc/*")
+    #pisitools.dodoc("CHANGES", "COPYING", "CREDITS", "MISC", "README", "doc/*")

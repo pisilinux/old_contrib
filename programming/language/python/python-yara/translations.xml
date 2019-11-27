@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-yara</Name>
+        <Summary xml:lang="tr">Python için yara modülü</Summary>
+        <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araç olan yara'nın python modülüdür.</Description>
+    </Source>
+</PISI>

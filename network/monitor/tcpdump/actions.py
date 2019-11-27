@@ -11,20 +11,26 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def setup():
-    shelltools.export("CFLAGS", "%s -O2 -DIP_MAX_MEMBERSHIPS=20" % get.CFLAGS())
+    autotools.configure()
+    #shelltools.export("CFLAGS", "%s -O2 -DIP_MAX_MEMBERSHIPS=20" % get.CFLAGS())
 
-    autotools.autoreconf("-vfi")
-    autotools.configure("--enable-ipv6 \
-                         --with-ssl \
-                         --with-smi \
-                         --enable-ipv6 \
-                         --disable-smb \
-                         --mandir=/usr/share/man")
+    #autotools.autoreconf("-vfi")
+    #autotools.configure("--enable-ipv6 \
+    #                     --with-ssl \
+    #                     --with-smi \
+    #                     --enable-ipv6 \
+    #                     --disable-smb \
+    #                     --mandir=/usr/share/man")
 
 def build():
     autotools.make()
+    
+def check():
+    autotools.make("check")
 
 def install():
-    pisitools.dosbin("tcpdump")
-    pisitools.doman("tcpdump.1")
-    pisitools.dodoc("CHANGES", "LICENSE", "README", "CREDITS", "PLATFORMS", "VERSION", "*.awk")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    pisitools.remove("/usr/sbin/tcpdump.%s" % get.srcVERSION())
+    #pisitools.dosbin("tcpdump")
+    #pisitools.doman("tcpdump.1")
+    #pisitools.dodoc("CHANGES", "LICENSE", "README", "CREDITS", "PLATFORMS", "VERSION", "*.awk")

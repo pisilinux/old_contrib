@@ -6,11 +6,13 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
+from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+def setup():
+    shelltools.system("rm %s/mock-3.0.5/mock/tests/testhelpers_py3.py" % get.workDIR())
+
 def build():
-    shelltools.export("CFLAGS", "%s -fno-strict-aliasing -Wno-unused-function -Wno-implicit-function-declaration" % get.CFLAGS())
-    shelltools.export("LDSHARED", "x86_64-pc-linux-gnu-gcc -Wl,-O1,--as-needed -shared -lpthread")
     pythonmodules.compile()
     
     #pythonmodules.run("setup.py build_sphinx")

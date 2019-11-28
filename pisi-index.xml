@@ -14006,69 +14006,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-xattr</Name>
-            <Homepage>http://pyxattr.k1024.org/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="fr">Extension Python pour les attributs étendus de fichiers.</Summary>
-            <Summary xml:lang="en">Python extension for extended file attributes</Summary>
-            <Summary xml:lang="tr">Python xattr modülü</Summary>
-            <Description xml:lang="en">Python extension module wrapper for libattr. It allows to query, list, add and remove extended attributes from files and directories.</Description>
-            <Description xml:lang="tr">python-xattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
-            <Archive type="targz" sha1sum="9f769f90fb462532bf4f53334b3e265586b1db7b">https://github.com/iustin/pyxattr/archive/pyxattr-v0.5.5.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>attr-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-xattr/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-xattr</Name>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-                <Dependency>attr</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python3-xattr</Name>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-                <Dependency>attr</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2016-04-03</Date>
-                <Version>0.5.5</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2010-11-10</Date>
-                <Version>0.5.0</Version>
-                <Comment>First release</Comment>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-sphinxcontrib-websupport</Name>
             <Homepage>https://www.sphinx-doc.org/</Homepage>
             <Packager>
@@ -14368,6 +14305,61 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-pyxattr</Name>
+            <Homepage>http://pyxattr.k1024.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="fr">Extension Python pour les attributs étendus de fichiers.</Summary>
+            <Summary xml:lang="en">Python extension for extended file attributes</Summary>
+            <Summary xml:lang="tr">Python pyxattr modülü</Summary>
+            <Description xml:lang="en">This is the pyxattr module, a Python extension module which gives access to the extended attributes for filesystem objects available in some operating systems.</Description>
+            <Description xml:lang="tr">python-pyxattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
+            <Archive type="targz" sha1sum="b23ea84b4175619266b253b17705ad09644cab8e">https://github.com/iustin/pyxattr/releases/download/pyxattr-v0.6.1/pyxattr-0.6.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-pyxattr/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pyxattr</Name>
+            <Summary xml:lang="en">Python extension for extended file attributes</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2019-11-26</Date>
+                <Version>0.6.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2016-04-03</Date>
+                <Version>0.5.5</Version>
+                <Comment>Version bump, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2010-11-10</Date>
+                <Version>0.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-ipaddress</Name>
             <Homepage>https://github.com/phihag/ipaddress</Homepage>
             <Packager>
@@ -14532,6 +14524,46 @@
                 <Comment>First release</Comment>
                 <Name>Fatih Turgel</Name>
                 <Email>hitaf@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-mock</Name>
+            <Homepage>https://github.com/testing-cabal/mock</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python mock module</Summary>
+            <Summary xml:lang="tr">Python mock modülü</Summary>
+            <Description xml:lang="en">mock is a library for testing in Python. It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used. This package contains a rolling backport of the standard library mock code compatible with Python 2.7 and 3.4 and up.</Description>
+            <Description xml:lang="tr">Python mock modülü python uygulamalarınızı test etmenize yarar.</Description>
+            <Archive type="targz" sha1sum="cda918734ea2fb0e673923f59b76b5ae8b54dad0">https://github.com/testing-cabal/mock/archive/3.0.5.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-mock/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-mock</Name>
+            <Summary xml:lang="en">Python mock module</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-26</Date>
+                <Version>3.0.5</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -15064,17 +15096,17 @@
             <Name>python-pypcap</Name>
             <Homepage>https://github.com/pynetwork/pypcap</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
-            <License>as-is</License>
+            <License>BSD</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">Python pcap module</Summary>
             <Summary xml:lang="tr">Python pcap modülü</Summary>
             <Description xml:lang="en">This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
-            <Description xml:lang="tr">python-pypcap, libpcap için basitleştirilmiş, nesne tabanlı bir Python dönüştürücüsüdür.</Description>
-            <Archive type="targz" sha1sum="8a8c0ffdac9eb844afbcedeb6ac758ff5aa60619">https://github.com/pynetwork/pypcap/archive/v1.1.4.tar.gz</Archive>
+            <Description xml:lang="tr">python-pypcap, python için basitleştirilmiş, nesne tabanlı bir sarmalayıcı modüldür.</Description>
+            <Archive type="targz" sha1sum="201d7b82d73ab55f9c45347e6739039dd59412f6">https://github.com/pynetwork/pypcap/archive/v1.2.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>libpcap-devel</Dependency>
@@ -15087,7 +15119,6 @@
             <Summary xml:lang="en">Python pcap module</Summary>
             <RuntimeDependencies>
                 <Dependency>libpcap</Dependency>
-                <Dependency>python</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -15095,6 +15126,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>1.2.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-28</Date>
                 <Version>1.1.4</Version>
@@ -15207,6 +15245,64 @@
                 <Comment>First Pisi Release Built with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-pyxattr</Name>
+            <Homepage>http://pyxattr.k1024.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="fr">Extension Python pour les attributs étendus de fichiers.</Summary>
+            <Summary xml:lang="en">Python3 extension for extended file attributes</Summary>
+            <Summary xml:lang="tr">Python3 pyxattr modülü</Summary>
+            <Description xml:lang="en">This is the pyxattr module, a Python extension module which gives access to the extended attributes for filesystem objects available in some operating systems.</Description>
+            <Description xml:lang="tr">python3-pyxattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
+            <Archive type="targz" sha1sum="99db3085425a73dd837028c9ec946d77036747a3">https://github.com/iustin/pyxattr/releases/download/v0.7.1/pyxattr-0.7.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-pyxattr/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-pyxattr</Name>
+            <Summary xml:lang="en">Python extension for extended file attributes</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2019-11-26</Date>
+                <Version>0.7.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2016-04-03</Date>
+                <Version>0.5.5</Version>
+                <Comment>Version bump, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2010-11-10</Date>
+                <Version>0.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -15363,6 +15459,99 @@
                 <Comment>First release</Comment>
                 <Name>Erdinç Gültekin</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-pypcap</Name>
+            <Homepage>https://github.com/pynetwork/pypcap</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 pcap module</Summary>
+            <Summary xml:lang="tr">Python3 pcap modülü</Summary>
+            <Description xml:lang="en">This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
+            <Description xml:lang="tr">python3-pypcap, python3 için basitleştirilmiş, nesne tabanlı bir sarmalayıcı modüldür.</Description>
+            <Archive type="targz" sha1sum="201d7b82d73ab55f9c45347e6739039dd59412f6">https://github.com/pynetwork/pypcap/archive/v1.2.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>libpcap-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-pypcap/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-pypcap</Name>
+            <Summary xml:lang="en">Python3 pcap module</Summary>
+            <RuntimeDependencies>
+                <Dependency>libpcap</Dependency>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>1.2.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-03-28</Date>
+                <Version>1.1.4</Version>
+                <Comment>First release, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-mock</Name>
+            <Homepage>https://github.com/testing-cabal/mock</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 mock module</Summary>
+            <Summary xml:lang="tr">Python3 mock modülü</Summary>
+            <Description xml:lang="en">mock is a library for testing in Python. It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used. This package contains a rolling backport of the standard library mock code compatible with Python 2.7 and 3.4 and up.</Description>
+            <Description xml:lang="tr">Python mock modülü python uygulamalarınızı test etmenize yarar.</Description>
+            <Archive type="targz" sha1sum="cda918734ea2fb0e673923f59b76b5ae8b54dad0">https://github.com/testing-cabal/mock/archive/3.0.5.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python3-six</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-mock/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-mock</Name>
+            <Summary xml:lang="en">Python3 mock module</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-26</Date>
+                <Version>3.0.5</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -31560,6 +31749,204 @@
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>python-pyxattr</Name>
+        <Summary xml:lang="en">Python extension for extended file attributes</Summary>
+        <Description xml:lang="en">This is the pyxattr module, a Python extension module which gives access to the extended attributes for filesystem objects available in some operating systems.</Description>
+        <Description xml:lang="tr">python-pyxattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python</PartOf>
+        <License>GPL</License>
+        <History>
+            <Update release="3">
+                <Date>2019-11-26</Date>
+                <Version>0.6.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2016-04-03</Date>
+                <Version>0.5.5</Version>
+                <Comment>Version bump, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2010-11-10</Date>
+                <Version>0.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>66901</InstalledSize>
+        <PackageSize>21914</PackageSize>
+        <PackageHash>d0571767d8e112d4a838e878d42319fade5ce777</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/python-pyxattr/python-pyxattr-0.6.1-3-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>python-pyxattr</Name>
+            <Homepage>http://pyxattr.k1024.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>python-pypcap</Name>
+        <Summary xml:lang="en">Python pcap module</Summary>
+        <Description xml:lang="en">This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
+        <Description xml:lang="tr">python-pypcap, python için basitleştirilmiş, nesne tabanlı bir sarmalayıcı modüldür.</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python</PartOf>
+        <License>BSD</License>
+        <RuntimeDependencies>
+            <Dependency>libpcap</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>1.2.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-03-28</Date>
+                <Version>1.1.4</Version>
+                <Comment>First release, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>222302</InstalledSize>
+        <PackageSize>77650</PackageSize>
+        <PackageHash>a42a285cfb612563a21ba6e2e99f9c57e7636627</PackageHash>
+        <InstallTarHash>7440192f2b0e9992612f238c1ea140fcd0ba882e</InstallTarHash>
+        <PackageURI>p/python-pypcap/python-pypcap-1.2.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>python-pypcap</Name>
+            <Homepage>https://github.com/pynetwork/pypcap</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>python3-pyxattr</Name>
+        <Summary xml:lang="fr">Extension Python pour les attributs étendus de fichiers.</Summary>
+        <Summary xml:lang="en">Python3 extension for extended file attributes</Summary>
+        <Summary xml:lang="tr">Python3 pyxattr modülü</Summary>
+        <Description xml:lang="en">This is the pyxattr module, a Python extension module which gives access to the extended attributes for filesystem objects available in some operating systems.</Description>
+        <Description xml:lang="tr">python3-pyxattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python3</PartOf>
+        <License>GPL</License>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="3">
+                <Date>2019-11-26</Date>
+                <Version>0.7.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2016-04-03</Date>
+                <Version>0.5.5</Version>
+                <Comment>Version bump, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2010-11-10</Date>
+                <Version>0.5.0</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>71014</InstalledSize>
+        <PackageSize>22732</PackageSize>
+        <PackageHash>22ea217de217ce7ee310e90f8d3159b1059f2e48</PackageHash>
+        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
+        <PackageURI>p/python3-pyxattr/python3-pyxattr-0.7.1-3-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>python3-pyxattr</Name>
+            <Homepage>http://pyxattr.k1024.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+        </Source>
+    </Package>
+    <Package>
+        <Name>python3-pypcap</Name>
+        <Summary xml:lang="en">Python3 pcap module</Summary>
+        <Description xml:lang="en">This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
+        <Description xml:lang="tr">python3-pypcap, python3 için basitleştirilmiş, nesne tabanlı bir sarmalayıcı modüldür.</Description>
+        <IsA>library</IsA>
+        <PartOf>programming.language.python3</PartOf>
+        <License>BSD</License>
+        <RuntimeDependencies>
+            <Dependency>libpcap</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>1.2.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-03-28</Date>
+                <Version>1.1.4</Version>
+                <Comment>First release, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+        <BuildHost>farm_yerel</BuildHost>
+        <Distribution>PisiLinux</Distribution>
+        <DistributionRelease>2.0</DistributionRelease>
+        <Architecture>x86_64</Architecture>
+        <InstalledSize>222334</InstalledSize>
+        <PackageSize>78074</PackageSize>
+        <PackageHash>e25d212d5b126df0dabf1676c5302254372161d3</PackageHash>
+        <InstallTarHash>55ecae9d663c2d41a99269265a5a2eefcd951733</InstallTarHash>
+        <PackageURI>p/python3-pypcap/python3-pypcap-1.2.1-2-p2-x86_64.pisi</PackageURI>
+        <PackageFormat>1.2</PackageFormat>
+        <Source>
+            <Name>python3-pypcap</Name>
+            <Homepage>https://github.com/pynetwork/pypcap</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
         </Source>
     </Package>

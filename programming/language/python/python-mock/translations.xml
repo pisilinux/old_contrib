@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-mock</Name>
+        <Summary xml:lang="tr">Python mock modülü</Summary>
+        <Description xml:lang="tr">Python mock modülü python uygulamalarınızı test etmenize yarar.</Description>
+    </Source>
+</PISI>

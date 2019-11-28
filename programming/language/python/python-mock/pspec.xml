@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-mock</Name>
+        <Homepage>https://github.com/testing-cabal/mock</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Python mock module</Summary>
+        <Description>mock is a library for testing in Python. It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used. This package contains a rolling backport of the standard library mock code compatible with Python 2.7 and 3.4 and up.</Description>
+        <Archive sha1sum="cda918734ea2fb0e673923f59b76b5ae8b54dad0" type="targz">https://github.com/testing-cabal/mock/archive/3.0.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+            <!--<Dependency>python-sphinx</Dependency>-->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-mock</Name>
+        <Summary>Python mock module</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-11-26</Date>
+            <Version>3.0.5</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

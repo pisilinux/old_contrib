@@ -8,7 +8,7 @@
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
-		<License>GPLv1</License>
+		<License>X11</License>
 		<PartOf>desktop.xfce.addon</PartOf>
 		<IsA>app:console</IsA>
 		<Summary>keybinder is a library for registering global keyboard shortcuts.</Summary>

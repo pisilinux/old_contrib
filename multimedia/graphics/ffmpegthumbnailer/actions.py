@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/licenses/gpl.txt
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
@@ -12,8 +12,11 @@ def setup():
 	cmaketools.configure("\
 	-DCMAKE_INSTALL_DIR=/usr \
 	-DCMAKE_INSTALL_LIBDIR=lib \
-	-DENABLE_THUMBNAILER=ON \
-	-DENABLE_GIO=ON")
+	-DCMAKE_BUILD_TYPE=Release \
+	\
+	-DENABLE_GIO=ON \
+	-DENABLE_TESTS=ON \
+	-DENABLE_THUMBNAILER=ON")
 
 def build():
 	cmaketools.make()
@@ -21,5 +24,4 @@ def build():
 def install():
 	cmaketools.install()
 
-	# Empty files: NEWS, TODO
 	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README.md")

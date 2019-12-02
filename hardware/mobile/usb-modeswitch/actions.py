@@ -16,11 +16,9 @@ def build():
 
 def install():
 	autotools.rawInstall("DESTDIR='%s'" % get.installDIR())
+	autotools.rawInstall("-C ../usb-modeswitch-data-%s DESTDIR='%s'" % (SNAPSHOT, get.installDIR()))
 
-	shelltools.cd("../usb-modeswitch-data-%s" % SNAPSHOT)
-	autotools.rawInstall("DESTDIR='%s'" % get.installDIR())
-
-#	pisitools.removeDir("/etc/usb_modeswitch.d")
+	pisitools.removeDir("/etc/usb_modeswitch.d")
 
 	pisitools.dodoc("ChangeLog", "COPYING", "README")
 

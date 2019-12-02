@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-time-out-plugin</Name>
@@ -13,8 +13,8 @@
 		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>A module allows to take periodical breaks from the computer</Summary>
 		<Description>This plugin makes it possible to take periodical breaks from the computer every X minutes. During breaks it locks your screen. It optionally allows you to postpone breaks for a certain time.</Description>
-		<Archive sha1sum="280ad845069e83aee986f0cc59b1060666afe992" type="tarbz2">
-			http://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.0/xfce4-time-out-plugin-1.0.3.tar.bz2
+		<Archive sha1sum="7e6fb6b52e1a2ac7fa4d236ea59c1a311227f4e9" type="tarbz2">
+			https://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.1/xfce4-time-out-plugin-1.1.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -26,15 +26,12 @@
 	<Package>
 		<Name>xfce4-time-out-plugin</Name>
 		<RuntimeDependencies>
-			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
 			<Dependency>glib2</Dependency>
-			<Dependency>pango</Dependency>
-			<Dependency>fontconfig</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>xfce4-panel</Dependency>
-			<Dependency>gtk2</Dependency>
-			<Dependency>cairo</Dependency>
-			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -46,6 +43,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2019-11-30</Date>
+			<Version>1.1.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2019-08-13</Date>
 			<Version>1.0.3</Version>

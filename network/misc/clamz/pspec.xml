@@ -36,7 +36,7 @@
     </Package>
 
     <History>
-<Update release="6">
+        <Update release="6">
             <Date>2019-12-02</Date>
             <Version>0.5</Version>
             <Comment>Rebuilt.</Comment>

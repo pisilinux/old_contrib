@@ -19,9 +19,10 @@
             <Dependency>glib2-devel</Dependency>
         </BuildDependencies>
         <Patches>
-            <Patch level="1">libnids-1.20-chksum.c-ebx.patch</Patch>
-            <Patch>libnids-1.18-libnet_config.diff</Patch>
-            <Patch level="1">asneeded.patch</Patch>
+            <!--<Patch level="1">libnids-1.20-chksum.c-ebx.patch</Patch>-->
+            <Patch level="1">libnids-1.24-inline.patch</Patch>
+            <!--<Patch>libnids-1.18-libnet_config.diff</Patch>-->
+            <!--<Patch level="1">asneeded.patch</Patch>-->
         </Patches>
     </Source>
 
@@ -30,7 +31,6 @@
         <RuntimeDependencies>
             <Dependency>libpcap</Dependency>
             <Dependency>libnet</Dependency>
-            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -51,6 +51,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2019-11-29</Date>
+            <Version>1.24</Version>
+            <Comment>Rebuilt.</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="3">
             <Date>2016-02-25</Date>
             <Version>1.24</Version>

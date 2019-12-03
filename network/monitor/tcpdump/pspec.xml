@@ -5,14 +5,14 @@
     <Name>tcpdump</Name>
         <Homepage>http://www.tcpdump.org/</Homepage>
         <Packager>
-            <Name>İbrahim KARAGÜZEL</Name>
-            <Email>karaguzelibrahim@gmail.com</Email>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
         </Packager>
         <License>BSD</License>
         <IsA>app:console</IsA>
         <Summary>A Tool for network monitoring and data acquisition</Summary>
         <Description>Tcpdump is a tool to print out (or save to file) the contents of packets on a network interface. It also allows limiting the number of packets collected using expressions.</Description>
-        <Archive sha1sum="4d5f42ac0571901a0bec5a2d572aeb24dd1c1c98" type="targz">https://github.com/the-tcpdump-group/tcpdump/archive/tcpdump-4.7.4.tar.gz</Archive>
+        <Archive sha1sum="75d727d7835a6eec06df0a9793befbb2464c4b65" type="targz">https://github.com/the-tcpdump-group/tcpdump/archive/tcpdump-4.9.3.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libpcap-devel</Dependency>
             <Dependency>openssl-devel</Dependency>
@@ -22,7 +22,7 @@
         <Name>tcpdump</Name>
         <RuntimeDependencies>
             <Dependency>libpcap</Dependency>
-            <Dependency>openssl</Dependency>
+            <!--<Dependency>openssl</Dependency>-->
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/sbin</Path>
@@ -31,6 +31,13 @@
         </Files>
     </Package>
     <History>
+        <Update release="13">
+            <Date>2019-11-29</Date>
+            <Version>4.9.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="12">
             <Date>2016-02-22</Date>
             <Version>4.7.4</Version>

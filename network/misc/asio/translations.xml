@@ -3,6 +3,6 @@
     <Source>
         <Name>asio</Name>
         <Summary xml:lang="tr">Asenkron ağ kitaplığı</Summary>
-        <Description xml:lang="tr">Asio geliştiricilere kararlı bir asenkron model sunarak düşük seviyeli işlemler ve ağ işlemleri için birden fazla platformda kullanılabilen bir altyapı sunar.</Description>
+        <Description xml:lang="tr">Asio, geliştiricilere kararlı bir asenkron model sunarak düşük seviyeli işlemler ve ağ işlemleri için birden fazla platformda kullanılabilen bir altyapı sunar.</Description>
     </Source>
 </PISI>

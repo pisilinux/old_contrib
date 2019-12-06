@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python-iniconfig</Name>
+        <Homepage>https://github.com/RonnyPfannschmidt/iniconfig</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>iniconfig module is brain-dead simple parsing of ini files</Summary>
+        <Description>iniconfig is a small and simple INI-file parser python module</Description>
+        <Archive sha1sum="86f7d6e053a50f11940969ac86ddc87182d7b43d" type="targz">https://github.com/RonnyPfannschmidt/iniconfig/archive/v1.0.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools-scm</Dependency>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-iniconfig</Name>
+        <Summary>iniconfig module is brain-dead simple parsing of ini files</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-08</Date>
+            <Version>1.0.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

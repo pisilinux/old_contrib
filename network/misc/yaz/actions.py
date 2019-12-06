@@ -4,14 +4,17 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+    shelltools.export("CFLAGS", "%s -Wno-implicit-function-declaration -Wno-int-conversion -Wno-unused-result" % get.CFLAGS())
     autotools.autoreconf("-vfi")
-    autotools.configure("--disable-static")
-    
+    autotools.configure("--enable-shared=yaz \
+                        --with-xslt \
+                        --disable-static")
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
     
 def build():

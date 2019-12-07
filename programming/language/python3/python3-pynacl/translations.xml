@@ -3,6 +3,6 @@
     <Source>
         <Name>python3-pynacl</Name>
         <Summary xml:lang="tr">Python3 için NaCl modülü</Summary>
-        <Description xml:lang="tr">PyNaCl, ağ ve kriptografi kitaplığınından geliştirilen libsodium kitaplığının python3 modülüdür.</Description>
+        <Description xml:lang="tr">PyNaCl, ağ ve kriptografi kitaplığından geliştirilen libsodium kitaplığının python3 modülüdür.</Description>
     </Source>
 </PISI>

@@ -9,25 +9,12 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="cffi-cffi-0c9be4c0d798"
-
-def setup():
-    shelltools.cd("..")
-    shelltools.makedirs("build_python3")
-    shelltools.copytree("./%s" % WorkDir,  "build_python3")
-    shelltools.cd(WorkDir)
-
 def build():
+    shelltools.export("CFLAGS", "-Wno-strict-aliasing %s" % get.CFLAGS())
     pythonmodules.compile()
-
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.compile(pyVer="3")
 
 def install():
     pythonmodules.install()
-    
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.install(pyVer="3")
 
-    for dirs in ["demo", "testing"]:
+    for dirs in ["demo"]:
         pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)

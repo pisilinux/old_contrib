@@ -23,6 +23,9 @@
     <Package>
         <Name>python3-setuptools-scm</Name>
         <Summary>Python3 setuptools-scm module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-setuptools</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>

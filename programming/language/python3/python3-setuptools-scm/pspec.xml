@@ -30,6 +30,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-11</Date>
+            <Version>3.3.3</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-28</Date>
             <Version>3.3.3</Version>

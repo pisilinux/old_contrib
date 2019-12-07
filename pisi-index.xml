@@ -15864,12 +15864,6 @@
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
-                <Dependency>xapian-core-devel</Dependency>
-                <Dependency>python3-sqlalchemy</Dependency>
-                <Dependency>python3-docutils</Dependency>
-                <Dependency>python3-sphinx</Dependency>
-                <Dependency>python3-Jinja2</Dependency>
-                <Dependency>python3-six</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python3/python3-sphinxcontrib-websupport/pspec.xml</SourceURI>
         </Source>

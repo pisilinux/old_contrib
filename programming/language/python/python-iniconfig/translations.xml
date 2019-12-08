@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-iniconfig</Name>
+        <Summary xml:lang="tr">iniconfig python modülü çok basit bir ini dosyası çözümleme aracıdır.</Summary>
+        <Description xml:lang="tr">iniconfig küçük ve basit, kullanışlı bir INI-dosyası çözümleyebilen python modülüdür.</Description>
+    </Source>
+</PISI>

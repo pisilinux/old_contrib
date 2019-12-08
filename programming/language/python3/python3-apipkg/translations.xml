@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-apipkg</Name>
+        <Summary xml:lang="tr">Alanuzayı denetimi ve tembel-içe aktarma mekanizması sunan bir python modülü</Summary>
+        <Description xml:lang="tr">apipkg ile dışa aktarılmış python paketlerinin alanuzayı denetimi yaparak kullanıcılar için ciddi oranda python modüllerinin içe aktarılma sayılarını azaltabilirsiniz.</Description>
+    </Source>
+</PISI>

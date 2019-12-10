@@ -5,10 +5,4 @@
         <Summary xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Summary>
         <Description xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Description>
     </Source>
-    
-    <Package>
-        <Name>python3-cffi</Name>
-        <Summary xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Summary>
-        <Description xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Description>
-    </Package>
 </PISI>

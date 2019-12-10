@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-cffi</Name>
+        <Name>python3-cffi</Name>
         <Homepage>https://cffi.readthedocs.io/</Homepage>
         <Packager>
             <Name>Blue Devil</Name>
@@ -14,22 +14,22 @@
         <Description>Foreign Function Interface for Python calling C code</Description>
         <Archive sha1sum="95d25f46a65ad4cea3764b758ee21ce8ded400e9" type="targz">https://bitbucket.org/cffi/cffi/get/v1.13.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
             <Dependency>libffi-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-cffi</Name>
+        <Name>python3-cffi</Name>
         <Summary>Foreign Function Interface for Python calling C code</Summary>
         <RuntimeDependencies>
-            <Dependency>python-enum34</Dependency>
-            <Dependency>python-six</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="doc">/usr/share/doc/python-cffi</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-cffi</Path>
         </Files>
     </Package>
 

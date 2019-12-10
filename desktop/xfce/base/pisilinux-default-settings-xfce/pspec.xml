@@ -22,17 +22,19 @@
 		<RuntimeDependencies>
 			<!--
 			<Dependency>pisilinux-theme-maia</Dependency>
+			-->
 			<Dependency>xfce4-settings</Dependency>
+			<Dependency>xfce4-session</Dependency>
 			<Dependency>xfce4-panel</Dependency>
 			<Dependency>xfdesktop</Dependency>
 			<Dependency>xfwm4</Dependency>
 			<Dependency>orage</Dependency>
+			<Dependency>mpv</Dependency>
 			<Dependency>nocsd</Dependency>
+			<Dependency>file-roller</Dependency>
 			<Dependency>xfce4-notifyd</Dependency>
-			<Dependency>xfce4-session</Dependency>
 			<Dependency>xfce4-xkb-plugin</Dependency>
 			<Dependency>xfce4-clipman-plugin</Dependency>
-			-->
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc/skel/.config</Path>
@@ -46,11 +48,6 @@
 			<COMAR script="package.py">System.Package</COMAR>
 			-->
 		</Provides>
-		<AdditionalFiles>
-			<!--
-			<AdditionalFile owner="root" permission="0644" target="/etc/env.d/02xfce_specific">02xfce_specific</AdditionalFile>
-			-->
-		</AdditionalFiles>
 	</Package>
 
 	<History>

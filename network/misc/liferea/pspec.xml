@@ -17,7 +17,7 @@
         <BuildDependencies>
             <Dependency>gconf-devel</Dependency>
             <Dependency>libglade-devel</Dependency>
-            <Dependency>webkit-gtk2-devel</Dependency>
+            <Dependency>webkit-gtk3-devel</Dependency>
             <Dependency>libsoup-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
             <Dependency>atk-devel</Dependency>

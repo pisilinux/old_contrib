@@ -102,7 +102,7 @@ def build():
 
 def install():
 	shelltools.system("DESTDIR=%s ninja -C build install" % get.installDIR())
+	pisitools.insinto("/etc", "doc/mpdconf.example", "mpd.conf")
 
 	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README.md")
-	pisitools.insinto("/etc", "doc/mpdconf.example", "mpd.conf")
 

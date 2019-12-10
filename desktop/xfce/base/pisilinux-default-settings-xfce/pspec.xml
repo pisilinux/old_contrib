@@ -12,8 +12,8 @@
 		<IsA>data</IsA>
 		<Summary>PisiLinux default settings for xfce</Summary>
 		<Description>This package contains the xfce default settings for Pisilinux.</Description>
-		<Archive sha1sum="cf4f9deffd37d24f80e575479fa166275d0523a3" type="targz">
-			https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.2.tar.gz
+		<Archive sha1sum="ca61367fe2bbc92a90900f502d6e9d824e5d19e0" type="targz">
+			https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.3.tar.gz
 		</Archive>
 	</Source>
 
@@ -21,6 +21,7 @@
 		<Name>pisilinux-default-settings-xfce</Name>
 		<RuntimeDependencies>
 			<!--
+			<Dependency>pisilinux-theme-maia</Dependency>
 			<Dependency>xfce4-settings</Dependency>
 			<Dependency>xfce4-panel</Dependency>
 			<Dependency>xfdesktop</Dependency>
@@ -35,7 +36,7 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc/skel/.config</Path>
-			<Path fileType="config">/etc/env.d/02xfce_specific</Path>
+			<Path fileType="config">/etc/env.d/80xfce_specific</Path>
 			<Path fileType="config">/etc/xdg/autostart/additional-logout.desktop</Path>
 			<Path fileType="config">/etc/xdg/xfce4/scripts/additional-logout</Path>
 			<Path fileType="data">/usr/share</Path>
@@ -46,14 +47,16 @@
 			-->
 		</Provides>
 		<AdditionalFiles>
+			<!--
 			<AdditionalFile owner="root" permission="0644" target="/etc/env.d/02xfce_specific">02xfce_specific</AdditionalFile>
+			-->
 		</AdditionalFiles>
 	</Package>
 
 	<History>
 		<Update release="2">
-			<Date>2019-11-06</Date>
-			<Version>2.0.2</Version>
+			<Date>2019-12-10</Date>
+			<Version>2.0.3</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

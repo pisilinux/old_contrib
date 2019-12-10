@@ -18,7 +18,6 @@ def build():
 	autotools.make()
 
 def install():
-#	pisitools.domo("po/tr.po", "tr", "mousepad.mo")
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", \

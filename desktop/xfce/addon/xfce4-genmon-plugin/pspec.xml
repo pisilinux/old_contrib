@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-genmon-plugin</Name>
-		<Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin</Homepage>
+		<Homepage>https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

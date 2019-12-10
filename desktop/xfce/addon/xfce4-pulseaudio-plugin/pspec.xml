@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-pulseaudio-plugin</Name>
-		<Homepage>https://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/about/</Homepage>
+		<Homepage>https://docs.xfce.org/panel-plugins/xfce4-pulseaudio-plugin</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

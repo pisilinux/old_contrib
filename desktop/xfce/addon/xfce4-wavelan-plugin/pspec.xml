@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-wavelan-plugin</Name>
-		<Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin</Homepage>
+		<Homepage>https://docs.xfce.org/panel-plugins/xfce4-wavelan-plugin</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

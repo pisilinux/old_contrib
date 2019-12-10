@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-notes-plugin</Name>
-		<Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin</Homepage>
+		<Homepage>https://docs.xfce.org/panel-plugins/xfce4-notes-plugin</Homepage>
 		<Packager>
 			<Name>Alper Tekinalp</Name>
 			<Email>admins@pisilinux.org</Email>

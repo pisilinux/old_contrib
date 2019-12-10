@@ -38,7 +38,6 @@
 			<Dependency>gettext-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>freetype-devel</Dependency>
-<!--			<Dependency>xfce4-dev-tools</Dependency>-->
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>fontconfig-devel</Dependency>

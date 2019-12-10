@@ -1,3 +1,0 @@
-LD_PRELOAD='/usr/lib/libgtk3-nocsd.so.0'
-GTK_OVERLAY_SCROLLING='0'
-GTK_CSD='0'

@@ -17,7 +17,9 @@ def setup():
 	--disable-static \
 	\
 	--enable-introspection \
+	--enable-gio-unix \
 	--enable-vala \
+	--enable-gtk2 \
 	--with-x")
 
 	#pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
@@ -29,8 +31,6 @@ def build():
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
-	#pisitools.remove("/usr/share/icons/hicolor/icon-theme.cache")
 
 	pisitools.dodoc("AUTHORS", \
 	"COPYING", \

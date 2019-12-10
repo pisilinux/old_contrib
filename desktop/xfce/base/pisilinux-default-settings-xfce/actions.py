@@ -8,12 +8,10 @@ from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 
-#WorkDir = "."
-
 def setup():
-	shelltools.chmod("additional-logout", mode = 0755)
+	shelltools.chmod("etc/xdg/additional-logout", mode = 0755)
 
 def install():
 	pythonmodules.install()
-	pisitools.insinto("/etc/skel/.config", "./xfce4", "xfce4")
+	pisitools.insinto("/etc/skel/.config", "./etc/skel/xfce4", "xfce4")
 

@@ -29,6 +29,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-11</Date>
+            <Version>2019.11.28</Version>
+            <Comment>Rebuilt.</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-07</Date>
             <Version>2019.9.11</Version>

@@ -2,13 +2,7 @@
 <PISI>
     <Source>
         <Name>python-sphinxcontrib-websupport</Name>
-        <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
-        <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
+        <Summary xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belgelendirme üretecisidir.</Summary>
+        <Description xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Description>
     </Source>
-    
-    <Package>
-        <Name>python3-sphinxcontrib-websupport</Name>
-        <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
-        <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
-    </Package>
 </PISI>

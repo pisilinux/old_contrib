@@ -10,10 +10,10 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def build():
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
     
-def check():
-    pythonmodules.compile("test")
-
+#def check():
+#    pythonmodules.compile("test", pyVer="3")
+    
 def install():
-    pythonmodules.install("-O1")
+    pythonmodules.install("-O1", pyVer="3")

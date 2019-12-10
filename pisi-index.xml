@@ -1816,7 +1816,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-smartbookmark-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-smartbookmark-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-smartbookmark-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -1900,7 +1900,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-systemload-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-systemload-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-systemload-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -2004,7 +2004,7 @@
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Packager>
-            <License>GPLv1</License>
+            <License>X11</License>
             <IsA>app:console</IsA>
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">keybinder is a library for registering global keyboard shortcuts.</Summary>
@@ -2454,7 +2454,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-genmon-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-genmon-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -2510,7 +2510,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-dict</Name>
-            <Homepage>https://goodies.xfce.org/projects/applications/xfce4-dict</Homepage>
+            <Homepage>https://docs.xfce.org/apps/xfce4-dict/start</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -2599,7 +2599,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-clipman-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-clipman-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-clipman-plugin</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -2725,7 +2725,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-diskperf-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-diskperf-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-diskperf-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -2810,7 +2810,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-weather-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-weather-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-weather-plugin</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -2871,7 +2871,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-timer-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-timer-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -2943,7 +2943,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-mount-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-mount-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-mount-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -3333,7 +3333,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-pulseaudio-plugin</Name>
-            <Homepage>https://git.xfce.org/panel-plugins/xfce4-pulseaudio-plugin/about/</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-pulseaudio-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -3419,7 +3419,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-datetime-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-datetime-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-datetime-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -3578,7 +3578,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-battery-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-battery-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-battery-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -3786,7 +3786,9 @@
             <IsA>app:gui</IsA>
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">A simple application to manage Xfce panel layouts</Summary>
+            <Summary xml:lang="tr">Xfce4 Paneli için bir kullanıcı değiştirme modülü</Summary>
             <Description xml:lang="en">With the modular Xfce Panel, a multitude of panel layouts can be created. This tool makes it possible to backup, restore, import, and export these panel layouts.</Description>
+            <Description xml:lang="tr">xfce4-panel-profiles, Xfce4 Paneli için bir kullanıcı değiştirme modülüdür. Mevcut oturumu açık bırakarak başka bir kullanıcıyla yeni bir oturum açılmasına izin verir.</Description>
             <Archive type="tarbz2" sha1sum="9be1ba0c12b9b826a766f30c20ae4acbd0df1957">http://archive.xfce.org/src/apps/xfce4-panel-profiles/1.0/xfce4-panel-profiles-1.0.9.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
@@ -3946,7 +3948,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-sensors-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-sensors-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-sensors-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -4039,7 +4041,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-notes-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-notes-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-notes-plugin</Homepage>
             <Packager>
                 <Name>Alper Tekinalp</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -4118,7 +4120,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-wavelan-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-wavelan-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -4213,7 +4215,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-time-out-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-time-out-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-time-out-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -4225,7 +4227,7 @@
             <Summary xml:lang="tr">Periyodik bir şekilde bilgisayardan kopmayı sağlayan bir eklenti</Summary>
             <Description xml:lang="en">This plugin makes it possible to take periodical breaks from the computer every X minutes. During breaks it locks your screen. It optionally allows you to postpone breaks for a certain time.</Description>
             <Description xml:lang="tr">Bu, X dakika aralıklarla bilgisayardan kopmalara izin veren bir modüldür. Kopmalar sırasında ekran kilitlenir. Seçimli olarak kırılmaları ertelemeye izin verir.</Description>
-            <Archive type="tarbz2" sha1sum="280ad845069e83aee986f0cc59b1060666afe992">http://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.0/xfce4-time-out-plugin-1.0.3.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="7e6fb6b52e1a2ac7fa4d236ea59c1a311227f4e9">https://archive.xfce.org/src/panel-plugins/xfce4-time-out-plugin/1.1/xfce4-time-out-plugin-1.1.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
@@ -4236,15 +4238,12 @@
         <Package>
             <Name>xfce4-time-out-plugin</Name>
             <RuntimeDependencies>
-                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
                 <Dependency>glib2</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>xfce4-panel</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -4255,6 +4254,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2019-11-30</Date>
+                <Version>1.1.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="5">
                 <Date>2019-08-13</Date>
                 <Version>1.0.3</Version>
@@ -4302,7 +4308,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-xkb-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-xkb-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-xkb-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -4386,7 +4392,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-mailwatch-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-mailwatch-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-mailwatch-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -4967,7 +4973,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-places-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-places-plugin</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -5374,26 +5380,23 @@
             <Summary xml:lang="tr">Pisilinux xfce öntanımlı ayarları</Summary>
             <Description xml:lang="en">This package contains the xfce default settings for Pisilinux.</Description>
             <Description xml:lang="tr">Bu paket, PisiLinux xfce için öntanımlı ayarları içerir.</Description>
-            <Archive type="targz" sha1sum="cf4f9deffd37d24f80e575479fa166275d0523a3">https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="ca61367fe2bbc92a90900f502d6e9d824e5d19e0">https://github.com/4fury/pisilinux-default-settings-xfce/archive/2.0.3.tar.gz</Archive>
             <SourceURI>desktop/xfce/base/pisilinux-default-settings-xfce/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>pisilinux-default-settings-xfce</Name>
             <Files>
                 <Path fileType="config">/etc/skel/.config</Path>
-                <Path fileType="config">/etc/env.d/02xfce_specific</Path>
+                <Path fileType="config">/etc/env.d/80xfce_specific</Path>
                 <Path fileType="config">/etc/xdg/autostart/additional-logout.desktop</Path>
                 <Path fileType="config">/etc/xdg/xfce4/scripts/additional-logout</Path>
                 <Path fileType="data">/usr/share</Path>
             </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/etc/env.d/02xfce_specific" permission="0644" owner="root">02xfce_specific</AdditionalFile>
-            </AdditionalFiles>
         </Package>
         <History>
             <Update release="2">
-                <Date>2019-11-06</Date>
-                <Version>2.0.2</Version>
+                <Date>2019-12-10</Date>
+                <Version>2.0.3</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -5419,7 +5422,11 @@
             <IsA>app:gui</IsA>
             <PartOf>desktop.xfce.base</PartOf>
             <Summary xml:lang="en">A power manager for the Xfce desktop</Summary>
+            <Summary xml:lang="tr">Xfce masaüstü için bir güç yöneticisi</Summary>
+            <Summary xml:lang="pl">Menedżer zasilania dla środowiska Xfce</Summary>
             <Description xml:lang="en">This software is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption(such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, xfce4-power-manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
+            <Description xml:lang="tr">Xfce güç yöneticisi, kendi güç tüketimini azaltmak için bilgisayar güç kaynakları ve kontrol edilebilir aygıtları yönetir.(LCD parlaklık seviyesi, monitör uyku, CPU frekansı ölçekleme gibi)</Description>
+            <Description xml:lang="pl">Ten menedżer zasilania dla środowiska Xfce4, pozwala użytkownikom laptopów tworzyć profile zasilania dla dwóch różnych trybów: &quot;zasilanie z baterii&quot; i &quot;zasilanie z sieci&quot;, jednocześnie wciąż pozwalając użytkownikom zmieniać ustawienia DPMS i częstotliwość CPU.</Description>
             <Archive type="tarbz2" sha1sum="d50e77401b81f5118d4db424546b7b712dd71beb">http://archive.xfce.org/xfce/4.14/src/xfce4-power-manager-1.6.5.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
@@ -6158,7 +6165,7 @@
             <Description xml:lang="tr">Xfce4 paneli, farklı pozisyon, görünüm ve davranış gibi ayarlara sahip birden fazla paneli destekleyebilmektedir. Uygulama başlatıcı tipinde ayrılabilir menüler, grafiksel sayfalayıcı, görev çubuğu, saat, sistem çekmecesi, masaüstünü gizleme / görüntüleme ve bir panelde olabilecek birçok şeyi içinde barındırır. Ayrıca, diyalog penceresi kullanarak kolayca panel öğesi eklemeye ve panelden panele öğe taşımaya izin verir.</Description>
             <Description xml:lang="pl">Jest to panel dostarczany przez projekt środowiska graficznego Xfce4. Jeśli użytkownik chce posiadać wielofunkcyjny panel, który może obsługiwać aplety i tym podobne programy, to Xfce4 Panel może być wart wypróbowania. </Description>
             <Icon>xfce4-panel</Icon>
-            <Archive type="tarbz2" sha1sum="400b499b2c4d02302e2e6df2885c1dc4e0c53509">http://archive.xfce.org/xfce/4.14/src/xfce4-panel-4.14.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="40078f0050bcabd79766eefd2cb2aa5efd93b521">https://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -6183,9 +6190,6 @@
                 <Dependency>startup-notification-devel</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch level="1">fixsystray.patch</Patch>
-            </Patches>
             <SourceURI>desktop/xfce/base/xfce4-panel/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -6232,7 +6236,7 @@
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
-                <Dependency release="11">xfce4-panel</Dependency>
+                <Dependency release="12">xfce4-panel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -6241,6 +6245,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2019-12-10</Date>
+                <Version>4.14.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="11">
                 <Date>2019-08-12</Date>
                 <Version>4.14.0</Version>
@@ -6814,7 +6825,7 @@
             <Description xml:lang="en">Xfce4-settings is a configuration manager for Xfce desktop environment.</Description>
             <Description xml:lang="tr">Xfce4-settings, Xfce masaüstü yöneticisi için yazılmış ayar yöneticisidir.</Description>
             <Description xml:lang="pl">Xfce4-settings jest interfejsem menedżera ustawień Xfce4. Wywodzi się z kilku różnych komponentów do konfiguracji niezależnych od aplikacji, ustawień wewnątrz xfconf.</Description>
-            <Archive type="tarbz2" sha1sum="8240e44f24fce635e02c3c80039c5d0ed67f3758">http://archive.xfce.org/xfce/4.14/src/xfce4-settings-4.14.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="4d3bb70993902c68ef5f0585e683274ce6e1895f">https://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -6883,6 +6894,13 @@
             </Provides>
         </Package>
         <History>
+            <Update release="16">
+                <Date>2019-12-10</Date>
+                <Version>4.14.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="15">
                 <Date>2019-08-12</Date>
                 <Version>4.14.0</Version>
@@ -9626,6 +9644,90 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>usb-modeswitch</Name>
+            <Homepage>http://www.draisberghof.de/usb_modeswitch/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2+</License>
+            <IsA>app:console</IsA>
+            <PartOf>hardware.mobile</PartOf>
+            <Summary xml:lang="en">Mode switching tool for broadband devices</Summary>
+            <Summary xml:lang="tr">Genişbant cihazlar için kip değiştirme aracı</Summary>
+            <Description xml:lang="en">usb-modeswitch brings up your data card into operational mode. When plugged in, they identify themselves as CD-ROM and present some non-Linux compatible installation files. This tool deactivates those CD-ROM devices and enables the real communication interface. It supports most devices manufactured by Huawei, T-Mobile, Vodafone, Option, ZTE, Novatel.</Description>
+            <Description xml:lang="tr">usb-modeswitch, genişbant cihazları CD-ROM kipinden, ağ kartı kipine geçirir. Bu cihazlar, Linux dışındaki işletim sistemlerine sürücülerini otomatik yükleyebilmek için ilk takıldıklarında kendilerini CD-ROM olarak tanıtırlar. Bu araçla, bu kip pasif hale getirilip, iletişim arayüzü etkinleştirilir. Huawei, T-Mobile, Vodafone, Option, ZTE ve Novatel tarafından üretilen cihazlar desteklenmektedir.</Description>
+            <Archive type="tarbz2" sha1sum="093079d5ca5aa33e8d0c9ad9cf0ff95a9ce76ab1">http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-2.6.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="64e923d366fbb8c5954d17dd0e9e8b334d1863ff">http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-data-20191128.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>tcl-devel</Dependency>
+                <Dependency>libusb-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/mobile/usb-modeswitch/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>usb-modeswitch</Name>
+            <RuntimeDependencies>
+                <Dependency>libusb</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="executable">/lib/udev</Path>
+                <Path fileType="data">/lib/udev/rules.d</Path>
+                <Path fileType="data">/usr/share/usb_modeswitch</Path>
+                <Path fileType="data">/var/lib/usb_modeswitch</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2019-11-31</Date>
+                <Version>2.6.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-08-18</Date>
+                <Version>2.2.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Vedat Demir</Name>
+                <Email>vedat@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-03-07</Date>
+                <Version>1.2.7</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Yusuf Aydemir</Name>
+                <Email>yusuf.aydemir@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-02-17</Date>
+                <Version>1.2.5</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-04-12</Date>
+                <Version>1.2.5</Version>
+                <Comment>V.Bump</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-08-03</Date>
+                <Version>1.1.8</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>telegramqml</Name>
             <Homepage>https://github.com/Aseman-Land/TelegramQML</Homepage>
             <Packager>
@@ -9892,57 +9994,6 @@
                 <Comment>First Pisi Built</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>qvkbd</Name>
-            <Homepage>https://github.com/KivApple/qvkbd</Homepage>
-            <Packager>
-                <Name>Kamil Atlı</Name>
-                <Email>suvari@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>hardware.misc</PartOf>
-            <Summary xml:lang="en">A virtual keyboard written in C++ and QML.</Summary>
-            <Summary xml:lang="tr">sanal klavye</Summary>
-            <Description xml:lang="en">qvkbd A virtual keyboard written in C++ and QML.</Description>
-            <Description xml:lang="tr">C ++ ve QML&apos;de yazılmış sanal bir klavye.</Description>
-            <Archive type="zip" sha1sum="6be850808668fcc5622e220a52c47327173459be">https://github.com/KivApple/qvkbd/archive/master.zip</Archive>
-            <BuildDependencies>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>libXtst-devel</Dependency>
-                <Dependency>qt5-base-devel</Dependency>
-                <Dependency>qt5-x11extras-devel</Dependency>
-                <Dependency>qt5-declarative-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>hardware/misc/qvkbd/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>qvkbd</Name>
-            <RuntimeDependencies>
-                <Dependency>libX11</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>libXtst</Dependency>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>qt5-x11extras</Dependency>
-                <Dependency>qt5-declarative</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="data">/usr/share</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2018-12-08</Date>
-                <Version>20181119</Version>
-                <Comment>First release.</Comment>
-                <Name>Kamil Atlı</Name>
-                <Email>suvari@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -13322,61 +13373,201 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-shiboken2</Name>
+            <Name>python-xapian</Name>
+            <Homepage>https://xapian.org/docs/bindings/python/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python bindings for xapian-core</Summary>
+            <Summary xml:lang="tr">Xapian-core için python mod</Summary>
+            <Description xml:lang="en">Xapian is an open source search engine library. python-xapian provides python bindings for xapian library.</Description>
+            <Description xml:lang="tr">python-xapian, bir açık kaynak kodlu istatistiksel bilgi çıkarma kitaplığı olan xapian için python bağımlılıklarını sunar.</Description>
+            <Archive type="tarxz" sha1sum="3589216601876c88362565e0e6a1475a6c09c8d7">https://oligarchy.co.uk/xapian/1.4.14/xapian-bindings-1.4.14.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>python-sphinx-alabaster-theme</Dependency>
+                <Dependency>xapian-core-devel</Dependency>
+                <Dependency>python-imagesize</Dependency>
+                <Dependency>python-requests</Dependency>
+                <Dependency>python-urllib3</Dependency>
+                <Dependency>python-chardet</Dependency>
+                <Dependency>python-typing</Dependency>
+                <Dependency>python-sphinx</Dependency>
+                <Dependency>python-Babel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>python-idna</Dependency>
+                <Dependency>python-six</Dependency>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-xapian/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-xapian</Name>
+            <Summary xml:lang="en">Python bindings for Xapian</Summary>
+            <RuntimeDependencies>
+                <Dependency>xapian-core</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>python-xapian-docs</Name>
+            <Summary xml:lang="en">Documentation files for python-xapian</Summary>
+            <Summary xml:lang="tr">python-xapian için belgelendirme dosyaları</Summary>
+            <Description xml:lang="en">python-xapian-docs provides documentation files for python-xapian.</Description>
+            <Description xml:lang="tr">python-xapian-docs, python-xapian için belgelendirme dosyalarını içerir.</Description>
+            <RuntimeDependencies>
+                <Dependency>xapian-core</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/python-xapian</Path>
+                <Path fileType="doc">/usr/share/doc/xapian-bindings/python</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.4.14</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>shiboken2</Name>
             <Homepage>https://www.pyside.org</Homepage>
             <Packager>
-                <Name>Ayhan Yalçınsoy</Name>
-                <Email>ayhanyalcinsoy@pisilinux.org</Email>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
             </Packager>
             <License>LGPLv2</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Support library for Python3 bindings</Summary>
-            <Description xml:lang="en">CPython bindings generator for C++ libraries</Description>
-            <Archive type="tarxz" sha1sum="d3ca02a28dd8107f5d3a9b40426ae4131195b07d">https://download.qt.io/official_releases/QtForPython/pyside2/PySide2-5.12.0-src/pyside-setup-everywhere-src-5.12.0.tar.xz</Archive>
+            <Summary xml:lang="en">Shiboken the Binding Generator</Summary>
+            <Summary xml:lang="tr">Python3 için destek kütüphanesi</Summary>
+            <Description xml:lang="en">Shiboken is the CPython-based binding code generator for C or C++ libraries. It uses an ApiExtractor library to parse the C or C++ headers and get the type information, using Clang.</Description>
+            <Description xml:lang="tr">Shiboken2 C ve C++ kitaplıkları için CPython-temelli bağlayıcı kod üretecidir.</Description>
+            <Archive type="tarxz" sha1sum="419fe2ae2c0a427a6dc9d83ac2f98c75586f6a27">https://download.qt.io/official_releases/QtForPython/pyside2/PySide2-5.13.2-src/pyside-setup-opensource-src-5.13.2.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>llvm</Dependency>
-                <Dependency>cmake</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>libxslt-devel</Dependency>
-                <Dependency>qt5-base-devel</Dependency>
-                <Dependency>llvm-clang-devel</Dependency>
                 <Dependency>qt5-xmlpatterns-devel</Dependency>
-                <Dependency>qt5-configuration-devel</Dependency>
+                <Dependency>qt5-multimedia-devel</Dependency>
+                <Dependency>qt5-designer-devel</Dependency>
+                <Dependency>qt5-sql-postgresql</Dependency>
+                <Dependency>llvm-clang-devel</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>python3-sphinx</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>qt5-sql-mysql</Dependency>
+                <Dependency>qt5-sql-odbc</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>cmake</Dependency>
+                <Dependency>llvm</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/python3-shiboken2/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>python3-shiboken2</Name>
+            <Name>shiboken2</Name>
+            <Summary xml:lang="en">Shiboken2 is the binding generator used to create the PySide2 bindings.</Summary>
             <RuntimeDependencies>
+                <Dependency>llvm-clang</Dependency>
                 <Dependency>qt5-base</Dependency>
                 <Dependency>libxslt</Dependency>
-                <Dependency>libxml2</Dependency>
-                <Dependency>python3</Dependency>
-                <Dependency>llvm-clang</Dependency>
-                <Dependency>qt5-xmlpatterns</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
-                <Path fileType="library">/usr/lib/python3.4/</Path>
                 <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <Package>
-            <Name>python3-shiboken2-devel</Name>
+            <Name>shiboken2-devel</Name>
+            <Summary xml:lang="en">Development headers for the shiboken2 library.</Summary>
+            <Summary xml:lang="tr">Shiboken2 için geliştime dosyaları</Summary>
+            <Description xml:lang="tr">shiboken2-devel, shiboken2 için geliştime dosyaları içerir.</Description>
+            <RuntimeDependencies>
+                <Dependency release="2">shiboken2</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="library">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
+        <Package>
+            <Name>python3-shiboken2</Name>
+            <Summary xml:lang="en">Python3 shared library files used by shiboken2.</Summary>
+            <Summary xml:lang="tr">Python3 için shiboken2 bağlayıcı modülü</Summary>
+            <Description xml:lang="tr">python3-shiboken2, Python3 için shiboken2 bağlayıcı modülü içerir.</Description>
+            <RuntimeDependencies>
+                <Dependency release="2">shiboken2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>5.13.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-01-28</Date>
                 <Version>5.12.0</Version>
                 <Comment>First release.</Comment>
                 <Name>Metehan Özbek</Name>
                 <Email>mthnzbk@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-iniconfig</Name>
+            <Homepage>https://github.com/RonnyPfannschmidt/iniconfig</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
+            <Summary xml:lang="tr">iniconfig python modülü çok basit bir ini dosyası çözümleme aracıdır.</Summary>
+            <Description xml:lang="en">iniconfig is a small and simple INI-file parser python module</Description>
+            <Description xml:lang="tr">iniconfig küçük ve basit, kullanışlı bir INI-dosyası çözümleyebilen python modülüdür.</Description>
+            <Archive type="targz" sha1sum="86f7d6e053a50f11940969ac86ddc87182d7b43d">https://github.com/RonnyPfannschmidt/iniconfig/archive/v1.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools-scm</Dependency>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-iniconfig/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-iniconfig</Name>
+            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.0.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -13518,67 +13709,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>cython3</Name>
-            <Homepage>https://cython.org/</Homepage>
-            <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Packager>
-            <License>Apache-2.0</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">C extensions for the Python</Summary>
-            <Summary xml:lang="tr">Python3 için C eklentileri</Summary>
-            <Description xml:lang="en">Cython is a language that makes writing C extensions for the Python language as easy as Python itself.</Description>
-            <Description xml:lang="tr">Cython3, Python3 için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
-            <Archive type="targz" sha1sum="db2286ea3b3a6060c4294f9c3df652c5b4f60fca">https://github.com/cython/cython/archive/0.29.14.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/cython3/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>cython</Name>
-            <Summary xml:lang="tr">Python için C eklentileri</Summary>
-            <Description xml:lang="tr">Cython, Python için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc/cython3</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>cython3</Name>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-11</Date>
-                <Version>0.29.14</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-22</Date>
-                <Version>0.24</Version>
-                <Comment>First release</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-pyside2-tools</Name>
             <Homepage>https://qt-project.org/wiki/PySide2</Homepage>
             <Packager>
@@ -13630,8 +13760,8 @@
             <Name>yara</Name>
             <Homepage>https://plusvic.github.io/yara/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>Apache</License>
             <IsA>app:console</IsA>
@@ -13641,59 +13771,41 @@
             <Summary xml:lang="tr">Kötücül Yazılım Çözümleme Aracı</Summary>
             <Description xml:lang="en">YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.</Description>
             <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araçtır.</Description>
-            <Archive type="targz" sha1sum="70756b291a08254de751726ee565cf454a1eb566">https://github.com/plusvic/yara/archive/v3.4.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="81a243423352d66f5ec0cb657098c27f035cd164">https://github.com/VirusTotal/yara/archive/v3.11.0.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python-setuptools</Dependency>
                 <Dependency>openssl-devel</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>file</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/yara/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>yara</Name>
             <Summary xml:lang="en">The pattern matching swiss knife for malware researchers.</Summary>
-            <RuntimeDependencies>
-                <Dependency>openssl</Dependency>
-                <Dependency>file</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/include</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc/yara</Path>
             </Files>
         </Package>
         <Package>
-            <Name>python-yara</Name>
-            <Summary xml:lang="en">Yara module for python</Summary>
-            <Summary xml:lang="tr">Python için yara modülü</Summary>
-            <Description xml:lang="tr">Python için yara modülü</Description>
+            <Name>yara-devel</Name>
+            <Summary xml:lang="en">Development files for yara</Summary>
             <RuntimeDependencies>
-                <Dependency>python</Dependency>
                 <Dependency>yara</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python3-yara</Name>
-            <Summary xml:lang="en">Yara module for python3</Summary>
-            <Summary xml:lang="tr">Python3 için yara modülü</Summary>
-            <Description xml:lang="tr">Python3 için yara modülü</Description>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-                <Dependency>yara</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>3.11.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-05-05</Date>
                 <Version>3.4.0</Version>
@@ -14006,6 +14118,47 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-apipkg</Name>
+            <Homepage>https://github.com/pytest-dev/apipkg</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Namespace control and lazy-import mechanism</Summary>
+            <Summary xml:lang="tr">Alanuzayı denetimi ve tembel-içe aktarma mekanizması sunan bir python modülü</Summary>
+            <Description xml:lang="en">With apipkg you can control the exported namespace of a Python package and greatly reduce the number of imports for your users.</Description>
+            <Description xml:lang="tr">apipkg ile dışa aktarılmış python paketlerinin alanuzayı denetimi yaparak kullanıcılar için ciddi oranda python modüllerinin içe aktarılma sayılarını azaltabilirsiniz.</Description>
+            <Archive type="targz" sha1sum="f6ee19e687443b628633f87caf010d8404b11006">https://github.com/pytest-dev/apipkg/archive/v1.5.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools-scm</Dependency>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-apipkg/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-apipkg</Name>
+            <Summary xml:lang="en">Namespace control and lazy-import mechanism</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.5</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-sphinxcontrib-websupport</Name>
             <Homepage>https://www.sphinx-doc.org/</Homepage>
             <Packager>
@@ -14016,14 +14169,12 @@
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
             <Summary xml:lang="en">Sphinx API for Web Apps</Summary>
-            <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
+            <Summary xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belgelendirme üretecisidir.</Summary>
             <Description xml:lang="en">python-sphinxcontrib-websupport is the Sphinx documentation generator.</Description>
-            <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
+            <Description xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Description>
             <Archive type="targz" sha1sum="5675e157af122cfab6abd4b14f80cb360b6c307a">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.1.2.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
                 <Dependency>python-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/python-sphinxcontrib-websupport/pspec.xml</SourceURI>
@@ -14032,23 +14183,54 @@
             <Name>python-sphinxcontrib-websupport</Name>
             <Summary xml:lang="en">sphinxcontrib-websupport module for python</Summary>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc/python-sphinxcontrib-websupport</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python3-sphinxcontrib-websupport</Name>
-            <Summary xml:lang="en">sphinxcontrib-websupport module for python3</Summary>
-            <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
-            <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belhelendirme üretecisidir.</Description>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
                 <Date>2019-11-13</Date>
                 <Version>1.1.2</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-snowballstemmer</Name>
+            <Homepage>https://snowballstem.org/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Snowball stemming library collection for Python</Summary>
+            <Summary xml:lang="tr">Snowball, python için sözcük kökeni bulma kitaplığıdır.</Summary>
+            <Description xml:lang="en">Snowball is a small string processing language designed for creating stemming algorithms for use in Information Retrieval.</Description>
+            <Description xml:lang="tr">Snowball, sıklıkla kullanılan bilgi çekme yapılırken kullanılan sözcük kökü bulma işlemi için yaratılmış küçük bir sözcük işleme kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="d303e11059ecbb8ad3a6d7b08af5d2f15b83ddec">https://pypi.python.org/packages/source/s/snowballstemmer/snowballstemmer-2.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-snowballstemmer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-snowballstemmer</Name>
+            <Summary xml:lang="en">snowballstemmer module for python</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-06</Date>
+                <Version>2.0.0</Version>
                 <Comment>First pisi release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -14360,6 +14542,45 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-whoosh</Name>
+            <Homepage>http://bitbucket.org/mchaput/whoosh</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Fast, pure-Python full text indexing, search, and spell checking library</Summary>
+            <Summary xml:lang="tr">Tamamen python ile gelistirilmis hizli metin indisleme, arama ve heceleme denetimi yapabilen python kitapligi</Summary>
+            <Description xml:lang="en">Whoosh is a fast, featureful full-text indexing and searching library implemented in pure Python. Programmers can use it to easily add search functionality to their applications and websites.</Description>
+            <Description xml:lang="tr">Whoosh hizli bol ozellikli tam metin isdisleme ve arama ozellikleri bulunan tamamen python ile yazilmis bir kitapliktir</Description>
+            <Archive type="targz" sha1sum="415c711099d09fbb6fa4f652575d96c6d7f79f67">https://files.pythonhosted.org/packages/25/2b/6beed2107b148edc1321da0d489afc4617b9ed317ef7b72d4993cad9b684/Whoosh-2.7.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-whoosh/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-whoosh</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/python-whoosh</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-10</Date>
+                <Version>2.7.4</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-ipaddress</Name>
             <Homepage>https://github.com/phihag/ipaddress</Homepage>
             <Packager>
@@ -14452,6 +14673,105 @@
                 <Date>2016-04-22</Date>
                 <Version>0.15.2</Version>
                 <Comment>First Pisi Release Built with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-sphinx-testing</Name>
+            <Homepage>https://github.com/sphinx-doc/sphinx-testing</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Testing utility classes and functions for Sphinx extensions</Summary>
+            <Summary xml:lang="tr">Sphinx eklentileri için test araç sınıfları ve yordamları</Summary>
+            <Description xml:lang="en">sphinx-testing provides testing utility classes and functions for Sphinx extensions.</Description>
+            <Description xml:lang="tr">sphinx-testing Sphinx eklentileri için test araç sınıfları ve yordamları sağlayan python kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="7e89b9541bef1871224c865a5a2bd45a86804def">https://github.com/sphinx-doc/sphinx-testing/archive/1.0.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-sphinx-testing/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-sphinx-testing</Name>
+            <Summary xml:lang="en">sphinx-testing module for python</Summary>
+            <RuntimeDependencies>
+                <Dependency>python-typing</Dependency>
+                <Dependency>python-sphinx</Dependency>
+                <Dependency>python-Babel</Dependency>
+                <Dependency>python-six</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.0.1</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-yara</Name>
+            <Homepage>https://plusvic.github.io/yara/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Apache</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Yara is a pattern matching swiss knife for malware researchers.</Summary>
+            <Summary xml:lang="tr">Python için yara modülü</Summary>
+            <Description xml:lang="en">YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.This package contains python3 bindings of yara tool.</Description>
+            <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araç olan yara&apos;nın python modülüdür.</Description>
+            <Archive type="targz" sha1sum="8e1c6c31875d1df685b4a97faf8d58287e8c38a4">https://github.com/VirusTotal/yara-python/archive/v3.11.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>yara-devel</Dependency>
+                <Dependency>yara</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-yara/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-yara</Name>
+            <Summary xml:lang="en">Yara module for python</Summary>
+            <RuntimeDependencies>
+                <Dependency>yara</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>3.11.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-05-05</Date>
+                <Version>3.4.0</Version>
+                <Comment>First Pisi Release</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
@@ -14739,6 +15059,61 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>cython</Name>
+            <Homepage>https://cython.org/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">C extensions for the Python</Summary>
+            <Summary xml:lang="tr">Python için C eklentileri</Summary>
+            <Description xml:lang="en">Cython is a language that makes writing C extensions for the Python language as easy as Python itself.</Description>
+            <Description xml:lang="tr">Cython, Python için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
+            <Archive type="targz" sha1sum="db2286ea3b3a6060c4294f9c3df652c5b4f60fca">https://github.com/cython/cython/archive/0.29.14.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/cython/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cython</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/cython</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2019-12-07</Date>
+                <Version>0.29.14</Version>
+                <Comment>Split packages</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2019-11-11</Date>
+                <Version>0.29.14</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-04-22</Date>
+                <Version>0.24</Version>
+                <Comment>First release</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>capstone</Name>
             <Homepage>http://www.capstone-engine.org/index.html</Homepage>
             <Packager>
@@ -14815,6 +15190,46 @@
                 <Comment>First Pisi Release</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-setuptools-scm</Name>
+            <Homepage>https://github.com/pypa/setuptools_scm</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python setuptools-scm module</Summary>
+            <Summary xml:lang="tr">Python setuptools-scm modülü</Summary>
+            <Description xml:lang="en">Tsetuptools_scm handles managing your Python package versions in SCM metadata instead of declaring them as the version argument or in a SCM managed file.</Description>
+            <Description xml:lang="tr">setuptools-scm python paket versiyonlarını SCM metadataları kullanarak yönetmenizi sağlayan python modülüdür.</Description>
+            <Archive type="targz" sha1sum="8c4d2077ddb84470099f6cad64c7c24fb5ec5f3b">https://pypi.io/packages/source/s/setuptools_scm/setuptools_scm-3.3.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-setuptools-scm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-setuptools-scm</Name>
+            <Summary xml:lang="en">Python setuptools-scm module</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-28</Date>
+                <Version>3.3.3</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -15093,6 +15508,86 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-certifi</Name>
+            <Homepage>https://certifi.io/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MPL-2.0</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Python3 package for providing Mozilla&apos;s CA Bundle</Summary>
+            <Summary xml:lang="tr">Certifi, Mozillanın sertifikalarını sağlayan python kitaplığıdır.</Summary>
+            <Description xml:lang="en">Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts.</Description>
+            <Description xml:lang="tr">Certifi, TLS sahiplerinin SSL sertifikalarını doğrulanmasını sağlayan, kök sertifikalarının toplandığı bir kitaplıktır.</Description>
+            <Archive type="targz" sha1sum="c164a4a5d1a812d0605d8be6206c8f08253c22d6">https://files.pythonhosted.org/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-certifi/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-certifi</Name>
+            <Summary xml:lang="en">certifi module for python</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-07</Date>
+                <Version>2019.9.11</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-sqlalchemy</Name>
+            <Homepage>https://www.sqlalchemy.org/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">The Python SQL Toolkit and Object Relational Mapper</Summary>
+            <Summary xml:lang="tr">Python SQL Araç Kiti ve İlişkisel Nesne Haritalandırıcısı</Summary>
+            <Description xml:lang="en">SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL. SQLAlchemy provides a full suite of well known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.</Description>
+            <Description xml:lang="tr">SQLAlchemy, geliştiricisine SQL&apos;in tüm güç ve esnekliğini verebilen, python sql araç kiti ve ilişkisel nesne haritalandırıcısı sunan bir python modülüdür.</Description>
+            <Archive type="targz" sha1sum="64b58f6ae41eb21940ac4c9583da2936c71c77bb">https://files.pythonhosted.org/packages/34/5c/0e1d7ad0ca52544bb12f9cb8d5cc454af45821c92160ffedd38db0a317f6/SQLAlchemy-1.3.11.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-sqlalchemy/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-sqlalchemy</Name>
+            <Summary xml:lang="en">The Python SQL Toolkit and Object Relational Mapper</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.3.11</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-pypcap</Name>
             <Homepage>https://github.com/pynetwork/pypcap</Homepage>
             <Packager>
@@ -15308,6 +15803,191 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-apipkg</Name>
+            <Homepage>https://github.com/pytest-dev/apipkg</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Namespace control and lazy-import mechanism</Summary>
+            <Summary xml:lang="tr">Alanuzayı denetimi ve tembel-içe aktarma mekanizması sunan bir python modülü</Summary>
+            <Description xml:lang="en">With apipkg you can control the exported namespace of a Python package and greatly reduce the number of imports for your users.</Description>
+            <Description xml:lang="tr">apipkg ile dışa aktarılmış python paketlerinin alanuzayı denetimi yaparak kullanıcılar için ciddi oranda python modüllerinin içe aktarılma sayılarını azaltabilirsiniz.</Description>
+            <Archive type="targz" sha1sum="f6ee19e687443b628633f87caf010d8404b11006">https://github.com/pytest-dev/apipkg/archive/v1.5.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools-scm</Dependency>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-apipkg/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-apipkg</Name>
+            <Summary xml:lang="en">Namespace control and lazy-import mechanism</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.5</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-sphinxcontrib-websupport</Name>
+            <Homepage>https://www.sphinx-doc.org/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Sphinx API for Web Apps</Summary>
+            <Summary xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belgelendirme üretecisidir.</Summary>
+            <Description xml:lang="en">python3-sphinxcontrib-websupport is the Sphinx documentation generator.</Description>
+            <Description xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python3 modülüdür.</Description>
+            <Archive type="targz" sha1sum="5675e157af122cfab6abd4b14f80cb360b6c307a">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.1.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-sphinxcontrib-websupport/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-sphinxcontrib-websupport</Name>
+            <Summary xml:lang="en">sphinxcontrib-websupport module for python</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/python3-sphinxcontrib-websupport</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-13</Date>
+                <Version>1.1.2</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-sqlalchemy</Name>
+            <Homepage>https://www.sqlalchemy.org/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">The Python SQL Toolkit and Object Relational Mapper</Summary>
+            <Summary xml:lang="tr">Python SQL Araç Kiti ve İlişkisel Nesne Haritalandırıcısı</Summary>
+            <Description xml:lang="en">SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL. SQLAlchemy provides a full suite of well known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.</Description>
+            <Description xml:lang="tr">SQLAlchemy, geliştiricisine SQL&apos;in tüm güç ve esnekliğini verebilen, python sql araç kiti ve ilişkisel nesne haritalandırıcısı sunan bir python modülüdür.</Description>
+            <Archive type="targz" sha1sum="64b58f6ae41eb21940ac4c9583da2936c71c77bb">https://files.pythonhosted.org/packages/34/5c/0e1d7ad0ca52544bb12f9cb8d5cc454af45821c92160ffedd38db0a317f6/SQLAlchemy-1.3.11.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-sqlalchemy/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-sqlalchemy</Name>
+            <Summary xml:lang="en">The Python SQL Toolkit and Object Relational Mapper</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.3.11</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>cython3</Name>
+            <Homepage>https://cython.org/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Apache-2.0</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">C extensions for the Python3</Summary>
+            <Summary xml:lang="tr">Python3 için C eklentileri</Summary>
+            <Description xml:lang="en">Cython is a language that makes writing C extensions for the Python language as easy as Python itself.</Description>
+            <Description xml:lang="tr">Cython3, Python3 için C eklentileri yazmayı kolaylaştıran bir dildir.</Description>
+            <Archive type="targz" sha1sum="db2286ea3b3a6060c4294f9c3df652c5b4f60fca">https://github.com/cython/cython/archive/0.29.14.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/cython3/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cython3</Name>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/cython3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2019-11-11</Date>
+                <Version>0.29.14</Version>
+                <Comment>rebuilt and split packages</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2019-11-11</Date>
+                <Version>0.29.14</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-04-22</Date>
+                <Version>0.24</Version>
+                <Comment>First release</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python3-ipaddress</Name>
             <Homepage>https://github.com/phihag/ipaddress</Homepage>
             <Packager>
@@ -15341,6 +16021,72 @@
                 <Date>2019-11-25</Date>
                 <Version>1.0.23</Version>
                 <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-xapian</Name>
+            <Homepage>https://xapian.org/docs/bindings/python/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 bindings for xapian-core</Summary>
+            <Summary xml:lang="tr">Xapian-core için python modülü</Summary>
+            <Description xml:lang="en">Xapian is an open source search engine library. python-xapian provides python bindings for xapian library.</Description>
+            <Description xml:lang="tr">python3-xapian, bir açık kaynak kodlu istatistiksel bilgi çıkarma kitaplığı olan xapian için python bağımlılıklarını sunar.</Description>
+            <Archive type="tarxz" sha1sum="3589216601876c88362565e0e6a1475a6c09c8d7">https://oligarchy.co.uk/xapian/1.4.14/xapian-bindings-1.4.14.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-sphinx-alabaster-theme</Dependency>
+                <Dependency>xapian-core-devel</Dependency>
+                <Dependency>python3-imagesize</Dependency>
+                <Dependency>python3-requests</Dependency>
+                <Dependency>python3-urllib3</Dependency>
+                <Dependency>python3-chardet</Dependency>
+                <Dependency>python3-sphinx</Dependency>
+                <Dependency>python3-Babel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python3-idna</Dependency>
+                <Dependency>python3-six</Dependency>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-xapian/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-xapian</Name>
+            <Summary xml:lang="en">Python3 bindings for Xapian</Summary>
+            <RuntimeDependencies>
+                <Dependency>xapian-core</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>python3-xapian-docs</Name>
+            <Summary xml:lang="en">Documentation files for python3-xapian</Summary>
+            <Summary xml:lang="tr">python3-xapian için belgelendirme dosyaları</Summary>
+            <Description xml:lang="en">python3-xapian-docs provides documentation files for python3-xapian.</Description>
+            <Description xml:lang="tr">python3-xapian-docs, python3-xapian için belgelendirme dosyalarını içerir.</Description>
+            <RuntimeDependencies>
+                <Dependency>xapian-core</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/python3-xapian</Path>
+                <Path fileType="doc">/usr/share/doc/xapian3-bindings/python3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.4.14</Version>
+                <Comment>First pisi release</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
@@ -15391,6 +16137,49 @@
                 <Comment>First release, rebuilt with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-docutils</Name>
+            <Homepage>http://docutils.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>public-domain</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">A library for processing plaintext documentation</Summary>
+            <Summary xml:lang="tr">Düz yazı belgelendirme işleme için gerekli python3 kitaplığı</Summary>
+            <Description xml:lang="en">A library for processing plaintext documentation into useful formats, such as HTML, XML, and LaTeX.</Description>
+            <Description xml:lang="tr">Docutils, düzyazı belgelendirmelerini HTML, LaTeX, man-betleri, açık belge veya XML biçimlerine dönüştürebilen açık kaynak kodlu python3 kitaplığıdır.</Description>
+            <Description xml:lang="es">Librería para procesamiento de texto plano para conversión a formatos útiles como HTML, XML, y LaTeX.</Description>
+            <Archive type="targz" sha1sum="32cefb69ac3dab5b04c4d150776f35419cc4c863">mirrors://sourceforge/docutils/docutils-0.14.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-docutils/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-docutils</Name>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-06</Date>
+                <Version>0.14</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -15464,6 +16253,100 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-yara</Name>
+            <Homepage>https://plusvic.github.io/yara/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Apache</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Yara is a pattern matching swiss knife for malware researchers.</Summary>
+            <Summary xml:lang="tr">Python3 için yara modülü</Summary>
+            <Description xml:lang="en">YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.This package contains python3 bindings of yara tool.</Description>
+            <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araç olan yara&apos;nın python3 modülüdür.</Description>
+            <Archive type="targz" sha1sum="8e1c6c31875d1df685b4a97faf8d58287e8c38a4">https://github.com/VirusTotal/yara-python/archive/v3.11.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>yara-devel</Dependency>
+                <Dependency>yara</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-yara/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-yara</Name>
+            <Summary xml:lang="en">Yara module for python3</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+                <Dependency>yara</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>3.11.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-05-05</Date>
+                <Version>3.4.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-setuptools-scm</Name>
+            <Homepage>https://github.com/pypa/setuptools_scm</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 setuptools-scm module</Summary>
+            <Summary xml:lang="tr">Python3 setuptools-scm modülü</Summary>
+            <Description xml:lang="en">Tsetuptools_scm handles managing your Python package versions in SCM metadata instead of declaring them as the version argument or in a SCM managed file.</Description>
+            <Description xml:lang="tr">setuptools-scm python paket versiyonlarını SCM metadataları kullanarak yönetmenizi sağlayan python3 modülüdür.</Description>
+            <Archive type="targz" sha1sum="8c4d2077ddb84470099f6cad64c7c24fb5ec5f3b">https://pypi.io/packages/source/s/setuptools_scm/setuptools_scm-3.3.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-setuptools-scm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-setuptools-scm</Name>
+            <Summary xml:lang="en">Python3 setuptools-scm module</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-11-28</Date>
+                <Version>3.3.3</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python3-pypcap</Name>
             <Homepage>https://github.com/pynetwork/pypcap</Homepage>
             <Packager>
@@ -15516,6 +16399,135 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-snowballstemmer</Name>
+            <Homepage>https://snowballstem.org/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Snowball stemming library collection for Python3</Summary>
+            <Summary xml:lang="tr">Snowball, python3 için sözcük kökeni bulma kitaplığıdır.</Summary>
+            <Description xml:lang="en">Snowball is a small string processing language designed for creating stemming algorithms for use in Information Retrieval.</Description>
+            <Description xml:lang="tr">Snowball, sıklıkla kullanılan bilgi çekme yapılırken kullanılan sözcük kökü bulma işlemi için yaratılmış küçük bir sözcük işleme kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="d303e11059ecbb8ad3a6d7b08af5d2f15b83ddec">https://pypi.python.org/packages/source/s/snowballstemmer/snowballstemmer-2.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-snowballstemmer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-snowballstemmer</Name>
+            <Summary xml:lang="en">snowballstemmer module for python3</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-06</Date>
+                <Version>2.0.0</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-whoosh</Name>
+            <Homepage>http://bitbucket.org/mchaput/whoosh</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Fast, pure-Python full text indexing, search, and spell checking library</Summary>
+            <Summary xml:lang="tr">Tamamen python ile gelistirilmis hizli metin indisleme, arama ve heceleme denetimi yapabilen python kitapligi</Summary>
+            <Description xml:lang="en">Whoosh is a fast, featureful full-text indexing and searching library implemented in pure Python. Programmers can use it to easily add search functionality to their applications and websites.</Description>
+            <Description xml:lang="tr">Whoosh hizli bol ozellikli tam metin isdisleme ve arama ozellikleri bulunan tamamen python ile yazilmis bir kitapliktir</Description>
+            <Archive type="targz" sha1sum="415c711099d09fbb6fa4f652575d96c6d7f79f67">https://files.pythonhosted.org/packages/25/2b/6beed2107b148edc1321da0d489afc4617b9ed317ef7b72d4993cad9b684/Whoosh-2.7.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-whoosh/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-whoosh</Name>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/python3-whoosh</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-10</Date>
+                <Version>2.7.4</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-iniconfig</Name>
+            <Homepage>https://github.com/RonnyPfannschmidt/iniconfig</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
+            <Summary xml:lang="tr">iniconfig python3 modülü çok basit bir ini dosyası çözümleme aracıdır.</Summary>
+            <Description xml:lang="en">iniconfig is a small and simple INI-file parser python module</Description>
+            <Description xml:lang="tr">iniconfig küçük ve basit, kullanışlı bir INI-dosyası çözümleyebilen python3 modülüdür.</Description>
+            <Archive type="targz" sha1sum="86f7d6e053a50f11940969ac86ddc87182d7b43d">https://github.com/RonnyPfannschmidt/iniconfig/archive/v1.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools-scm</Dependency>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-iniconfig/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-iniconfig</Name>
+            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.0.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python3-mock</Name>
             <Homepage>https://github.com/testing-cabal/mock</Homepage>
             <Packager>
@@ -15551,6 +16563,91 @@
                 <Version>3.0.5</Version>
                 <Comment>First pisi release</Comment>
                 <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-certifi</Name>
+            <Homepage>https://certifi.io/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MPL-2.0</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 package for providing Mozilla&apos;s CA Bundle</Summary>
+            <Summary xml:lang="tr">Certifi, Mozillanın sertifikalarını sağlayan python3 kitaplığıdır.</Summary>
+            <Description xml:lang="en">Certifi is a carefully curated collection of Root Certificates for validating the trustworthiness of SSL certificates while verifying the identity of TLS hosts.</Description>
+            <Description xml:lang="tr">Certifi, TLS sahiplerinin SSL sertifikalarını doğrulanmasını sağlayan, kök sertifikalarının toplandığı bir kitaplıktır.</Description>
+            <Archive type="targz" sha1sum="c164a4a5d1a812d0605d8be6206c8f08253c22d6">https://files.pythonhosted.org/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-certifi/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-certifi</Name>
+            <Summary xml:lang="en">certifi module for python3</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-07</Date>
+                <Version>2019.9.11</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-sphinx-testing</Name>
+            <Homepage>https://github.com/sphinx-doc/sphinx-testing</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Testing utility classes and functions for Sphinx extensions</Summary>
+            <Summary xml:lang="tr">Sphinx eklentileri için test araç sınıfları ve yordamları</Summary>
+            <Description xml:lang="en">sphinx-testing provides testing utility classes and functions for Sphinx extensions.</Description>
+            <Description xml:lang="tr">sphinx-testing Sphinx eklentileri için test araç sınıfları ve yordamları sağlayan python kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="7e89b9541bef1871224c865a5a2bd45a86804def">https://github.com/sphinx-doc/sphinx-testing/archive/1.0.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-sphinx-testing/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-sphinx-testing</Name>
+            <Summary xml:lang="en">sphinx-testing module for python3</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3-sphinx</Dependency>
+                <Dependency>python3-Babel</Dependency>
+                <Dependency>python3-six</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-08</Date>
+                <Version>1.0.1</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
@@ -17969,7 +19066,7 @@
             <Summary xml:lang="tr">Dosya yöneticileri için hafif görüntü önizleyicisi</Summary>
             <Description xml:lang="en">FFmpegthumbnailer is a lightweight video thumbnailer that can be used by file managers to create thumbnails for your video files. The thumbnailer uses ffmpeg to decode frames from the video files, so supported videoformats depend on the configuration flags of ffmpeg.</Description>
             <Description xml:lang="tr">Ffmpeg Thumbnailer, görüntü dosyalarınız için dosya yöneticilerinizde önizlemeler oluşturmaya yarar.</Description>
-            <Archive type="tarbz2" sha1sum="4c7cdb3f2f7acd73c2f5138429ed2d2397f0f146">https://github.com/dirkvdb/ffmpegthumbnailer/releases/download/2.2.0/ffmpegthumbnailer-2.2.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="b17350070794f5a1e40d18a9f403d9c5d77da14b">https://github.com/dirkvdb/ffmpegthumbnailer/releases/download/2.2.2/ffmpegthumbnailer-2.2.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>ffmpeg-devel</Dependency>
@@ -18004,7 +19101,7 @@
             <Summary xml:lang="tr">Ffmpegthumbnailer için geliştirme dosyaları</Summary>
             <IsA>library</IsA>
             <RuntimeDependencies>
-                <Dependency release="6">ffmpegthumbnailer</Dependency>
+                <Dependency release="7">ffmpegthumbnailer</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -18012,6 +19109,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2019-11-30</Date>
+                <Version>2.2.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="6">
                 <Date>2019-07-18</Date>
                 <Version>2.2.0</Version>
@@ -19364,7 +20468,9 @@
             <IsA>app:gui</IsA>
             <PartOf>multimedia.sound</PartOf>
             <Summary xml:lang="en">PulseAudio Volume Control</Summary>
+            <Summary xml:lang="tr">PulseAudio Ses Denetimi</Summary>
             <Description xml:lang="en">PulseAudio Volume Control (pavucontrol) is a simple GTK based volume control tool (&quot;mixer&quot;) for the PulseAudio sound server. In contrast to classic mixer tools this one allows you to control both the volume of hardware devices and of each playback stream separately.</Description>
+            <Description xml:lang="tr">pavucontrol, PulseAudio ses sunucusu için basit bir ses denetimi uygulamasıdır. Diğer karıştırıcı araçlara ek olarak, bu uygulama hem donanımsal aygıtların hem de ses akışlarının ses seviyelerini ayarlamanıza izin verir.</Description>
             <Archive type="tarxz" sha1sum="9db2fb0f10f481730a0da3d7b85d2982966d67e4">http://freedesktop.org/software/pulseaudio/pavucontrol/pavucontrol-4.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
@@ -19436,7 +20542,7 @@
             <Summary xml:lang="tr">Libpulse için Qt bağları</Summary>
             <Description xml:lang="en">Libpulse için Qt bağları</Description>
             <Description xml:lang="tr">Libpulse için Qt bağları</Description>
-            <Archive type="tarxz" sha1sum="6e562137fae21e261a9fdbf7c4ee5e4a2dbaa9d6">https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.0.1.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="4e916d4ea2fd728b6d4a71e40c95f532be9e4af7">https://download.kde.org/stable/pulseaudio-qt/pulseaudio-qt-1.1.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency versionFrom="5.12.0">qt5-base-devel</Dependency>
                 <Dependency versionFrom="5.12.0">qt5-declarative-devel</Dependency>
@@ -19471,8 +20577,8 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2019-03-29</Date>
-                <Version>1.0.1</Version>
+                <Date>2019-12-01</Date>
+                <Version>1.1.0</Version>
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -25249,8 +26355,8 @@
             <Name>against</Name>
             <Homepage>http://nullsecurity.net/tools/cracker.html</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>as-is</License>
             <IsA>app:console</IsA>
@@ -25273,6 +26379,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-11</Date>
+                <Version>0.2</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-31</Date>
                 <Version>0.2</Version>
@@ -26711,8 +27824,8 @@
             <Name>aircrack-ng</Name>
             <Homepage>http://aircrack-ng.org/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app:console</IsA>
@@ -26721,16 +27834,17 @@
             <Summary xml:lang="tr">Kablosuz ağ zaafiyetlerinden yararlanan bir araç.</Summary>
             <Description xml:lang="en">Aircrack-ng is an 802.11 WEP and WPA-PSK keys cracking program that can recover keys once enough data packets have been captured. It implements the standard FMS attack along with some optimizations like KoreK attacks, as well as the all-new PTW attack, thus making the attack much faster compared to other WEP cracking tools.</Description>
             <Description xml:lang="tr">802.11 paket toplama aracı airodump, 802.11 injection aracı aireplay, wep ve wpa psk kırma aracı aircrack ve toplanan paketleri deşifre etme aracı airdecapi barındıran, kısaca kablosuz ağ kartınız destekliyorsa şifreli olan kablosuz ağları kırabilen yazılım paketidir.</Description>
-            <Archive type="targz" sha1sum="2b2fbe50fedb606b3bd96a34d49f07760e8e618a">http://download.aircrack-ng.org/aircrack-ng-1.2-rc4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="7b63c7ce01cb65a4775833c6cadf7ddd82bf46d5">https://download.aircrack-ng.org/aircrack-ng-1.5.2.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>ethtool</Dependency>
+                <Dependency>ethtool</Dependency>
+                <Dependency>libnl-devel</Dependency>
                 <Dependency>libpcre-devel</Dependency>
                 <Dependency>sqlite-devel</Dependency>
+                <Dependency>gperftools</Dependency>
                 <Dependency>libpcap-devel</Dependency>
                 <Dependency>zlib-devel</Dependency>
-                <Dependency>pkgconfig</Dependency>
-                <Dependency>libnl-devel</Dependency>
-                <Dependency>libpcap-devel</Dependency>
-                <Dependency>openssl-devel</Dependency>
             </BuildDependencies>
             <SourceURI>network/analyzer/aircrack-ng/pspec.xml</SourceURI>
         </Source>
@@ -26738,25 +27852,26 @@
             <Name>aircrack-ng</Name>
             <Summary xml:lang="en">Aircrack-ng is a complete suite of tools to assess WiFi network security.</Summary>
             <RuntimeDependencies>
-                <Dependency>libpcre</Dependency>
-                <Dependency>sqlite</Dependency>
-                <Dependency>libpcap</Dependency>
-                <Dependency>zlib</Dependency>
                 <Dependency>libnl</Dependency>
                 <Dependency>libpcap</Dependency>
-                <Dependency>openssl</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>iw</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="executable">/usr/sbin</Path>
+                <Path fileType="library">/usr/lib</Path>
                 <Path fileType="data">/usr/share</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2019-12-04</Date>
+                <Version>1.5.2</Version>
+                <Comment>Verison bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2016-02-22</Date>
                 <Version>1.2</Version>
@@ -27585,8 +28700,8 @@
             <Name>tcpdump</Name>
             <Homepage>http://www.tcpdump.org/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>BSD</License>
             <IsA>app:console</IsA>
@@ -27595,7 +28710,7 @@
             <Summary xml:lang="tr">Ağı izlemek için kullanılan bir araç</Summary>
             <Description xml:lang="en">Tcpdump is a tool to print out (or save to file) the contents of packets on a network interface. It also allows limiting the number of packets collected using expressions.</Description>
             <Description xml:lang="tr">tcpdump bir ağ aygıtı üzerindeki paketlerin içeriğini ekrana basmaya ya da dosyaya yazmaya yarayan bir araçtır. İncelenecek paketleri çeşitli ifadelerle sınırlama desteği de mevcuttur.</Description>
-            <Archive type="targz" sha1sum="4d5f42ac0571901a0bec5a2d572aeb24dd1c1c98">https://github.com/the-tcpdump-group/tcpdump/archive/tcpdump-4.7.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="75d727d7835a6eec06df0a9793befbb2464c4b65">https://github.com/the-tcpdump-group/tcpdump/archive/tcpdump-4.9.3.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libpcap-devel</Dependency>
                 <Dependency>openssl-devel</Dependency>
@@ -27606,7 +28721,6 @@
             <Name>tcpdump</Name>
             <RuntimeDependencies>
                 <Dependency>libpcap</Dependency>
-                <Dependency>openssl</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/sbin</Path>
@@ -27615,6 +28729,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2019-11-29</Date>
+                <Version>4.9.3</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="12">
                 <Date>2016-02-22</Date>
                 <Version>4.7.4</Version>
@@ -27749,9 +28870,7 @@
                 <Dependency>glib2-devel</Dependency>
             </BuildDependencies>
             <Patches>
-                <Patch level="1">libnids-1.20-chksum.c-ebx.patch</Patch>
-                <Patch>libnids-1.18-libnet_config.diff</Patch>
-                <Patch level="1">asneeded.patch</Patch>
+                <Patch level="1">libnids-1.24-inline.patch</Patch>
             </Patches>
             <SourceURI>network/monitor/libnids/pspec.xml</SourceURI>
         </Source>
@@ -27760,7 +28879,6 @@
             <RuntimeDependencies>
                 <Dependency>libpcap</Dependency>
                 <Dependency>libnet</Dependency>
-                <Dependency>glib2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib</Path>
@@ -27772,7 +28890,7 @@
             <Summary xml:lang="en">Development files for libnids</Summary>
             <Summary xml:lang="tr">libnids için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="3">libnids</Dependency>
+                <Dependency release="4">libnids</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -27780,6 +28898,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-29</Date>
+                <Version>1.24</Version>
+                <Comment>Rebuilt.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-02-25</Date>
                 <Version>1.24</Version>
@@ -28439,8 +29564,8 @@
             <Name>0d1n</Name>
             <Homepage>https://github.com/CoolerVoid/0d1n</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:console</IsA>
@@ -28449,7 +29574,7 @@
             <Summary xml:lang="tr">01dn, libCurl kütüphanesi kullanılarak C ile yazılan, HTTP içeriklerini bulanıklaştıran bir ağ güvenlik aracıdır.</Summary>
             <Description xml:lang="en">0d1n is a Open Source web application bruteforcer and Fuzzer, its objective is to automate exhaustive tests to search anomalies. At other point view this anomalies can be a vulnerability, These tests can follow web parameters, files, directories, forms and others.</Description>
             <Description xml:lang="tr">0d1n, açık kaynak kodlu bir bruteforce ve bulanıklaştırma yapabilen bir ağ uygulamadır. Amacı, anomalileri aramak ve bu aramayı otomatasyona bağlamaktır. Başka bir bakış açısıyla bu aramalar ağ parametreleri, dosyalar, dizinler ve formları oluşturabilir, böylece bu anomalilerdeki zaafiyetler izlenebilir.</Description>
-            <Archive type="targz" sha1sum="70372273564d1105201114f60414fac027d5564c">https://github.com/CoolerVoid/0d1n/archive/2.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="a5b7067c5338a36f1f63aadf41fc6f5aacb858c5">https://github.com/CoolerVoid/0d1n/archive/OdinV2.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>curl-devel</Dependency>
             </BuildDependencies>
@@ -28458,9 +29583,6 @@
         <Package>
             <Name>0d1n</Name>
             <Summary xml:lang="en">Web security tool to make fuzzing at HTTP inputs, made in C with libCurl.</Summary>
-            <RuntimeDependencies>
-                <Dependency>curl</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
@@ -28468,6 +29590,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-11-29</Date>
+                <Version>2.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-03-28</Date>
                 <Version>2.1</Version>
@@ -29377,7 +30506,7 @@
     <SpecFile>
         <Source>
             <Name>putty</Name>
-            <Homepage>http://www.chiark.greenend.org.uk/~sgtatham/putty/</Homepage>
+            <Homepage>https://www.chiark.greenend.org.uk/~sgtatham/putty/</Homepage>
             <Packager>
                 <Name>Fatih Turgel</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -29389,21 +30518,17 @@
             <Summary xml:lang="tr">Bir Telnet/SSH İstemcisi</Summary>
             <Description xml:lang="en">PuTTY is a free implementation of Telnet and SSH for Windows and Unix platforms, along with an xterm terminal emulator.</Description>
             <Description xml:lang="tr">Putty, açık kaynak kodlu bir Telnet ve SSH istemcisidir. Beraberinde bir terminal emülatörü de bulunur.</Description>
-            <Archive type="targz" sha1sum="132ff74266e590a007f86cbb4bea5642db7bdd76">https://the.earth.li/~sgtatham/putty/latest/putty-0.67.tar.gz</Archive>
+            <Archive type="targz" sha1sum="17daebb82e476adfd578f6934c28f4d2c209b7d8">https://the.earth.li/~sgtatham/putty/latest/putty-0.73.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
             </BuildDependencies>
             <SourceURI>network/misc/putty/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>putty</Name>
             <RuntimeDependencies>
-                <Dependency>gtk2</Dependency>
-                <Dependency>glib2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>libX11</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
@@ -29417,9 +30542,17 @@
             <AdditionalFiles>
                 <AdditionalFile target="/usr/share/applications/putty.desktop" permission="0644" owner="root">putty.desktop</AdditionalFile>
                 <AdditionalFile target="/usr/share/pixmaps/putty.png" permission="0644" owner="root">putty.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/putty.xpm" permission="0644" owner="root">putty.xpm</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2019-12-02</Date>
+                <Version>0.73</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2016-03-23</Date>
                 <Version>0.67</Version>
@@ -29466,7 +30599,7 @@
             <Description xml:lang="en">enet is a relatively thin, simple and robust network communication layer on top of UDP.</Description>
             <Description xml:lang="tr">enet UDP protokolü üzerinden iletişim için kullanılabilecek küçük, kolay kullanımlı ve sağlam bir kitaplıktır.</Description>
             <Icon>enet</Icon>
-            <Archive type="targz" sha1sum="5bcf9aa1a8f2e54cc85c1435d7dac0970d382b7e">http://enet.bespin.org/download/enet-1.3.13.tar.gz</Archive>
+            <Archive type="targz" sha1sum="d1c64b64a6e8a46166a5690cfaab9ae6e438ef04">http://enet.bespin.org/download/enet-1.3.14.tar.gz</Archive>
             <SourceURI>network/misc/enet/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -29481,7 +30614,7 @@
             <Summary xml:lang="en">Development files for enet</Summary>
             <Summary xml:lang="tr">enet için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="4">enet</Dependency>
+                <Dependency release="5">enet</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -29489,6 +30622,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2019-12-02</Date>
+                <Version>1.3.14</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2016-03-19</Date>
                 <Version>1.3.13</Version>
@@ -29607,7 +30747,7 @@
     <SpecFile>
         <Source>
             <Name>libnet</Name>
-            <Homepage>http://www.sourceforge.net/projects/libnet-dev/</Homepage>
+            <Homepage>https://github.com/libnet/libnet</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -29619,14 +30759,16 @@
             <Summary xml:lang="tr">Alt seviye ağ kitaplığı</Summary>
             <Description xml:lang="en">libnet is a library to provide an API for commonly used low-level network functions.</Description>
             <Description xml:lang="tr">libnet sık kullanılan alt seviye ağ işlevleri için arabirim sunan bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="dffff71c325584fdcf99b80567b60f8ad985e34c">mirrors://sourceforge/libnet-dev/libnet-1.1.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="83b98359b99f35f4bd1a7e66f42a6ffe1d099eca">https://github.com/libnet/libnet/archive/v1.2.tar.gz</Archive>
             <SourceURI>network/misc/libnet/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>libnet</Name>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
         <Package>
@@ -29634,17 +30776,21 @@
             <Summary xml:lang="en">Development files for libnet</Summary>
             <Summary xml:lang="tr">libnet için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="3">libnet</Dependency>
+                <Dependency release="4">libnet</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc/libnet/html</Path>
-                <Path fileType="doc">/usr/share/doc/libnet/examples</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2019-11-29</Date>
+                <Version>1.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-02-24</Date>
                 <Version>1.1.6</Version>
@@ -30015,33 +31161,25 @@
             <Summary xml:lang="en">Asynchronous network library</Summary>
             <Summary xml:lang="tr">Asenkron ağ kitaplığı</Summary>
             <Description xml:lang="en">Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.</Description>
-            <Description xml:lang="tr">Asio geliştiricilere kararlı bir asenkron model sunarak düşük seviyeli işlemler ve ağ işlemleri için birden fazla platformda kullanılabilen bir altyapı sunar.</Description>
-            <Archive type="targz" sha1sum="0ff5e8ec908672052f48643af3ab664f6b3955d6">https://sourceforge.net/projects/asio/files/asio/1.10.6%20%28Stable%29/asio-1.10.6.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>boost-devel</Dependency>
-            </BuildDependencies>
+            <Description xml:lang="tr">Asio, geliştiricilere kararlı bir asenkron model sunarak düşük seviyeli işlemler ve ağ işlemleri için birden fazla platformda kullanılabilen bir altyapı sunar.</Description>
+            <Archive type="targz" sha1sum="04a68987b01b0bfcd47e3b73ebfb2de20d33fe0e">https://github.com/chriskohlhoff/asio/archive/asio-1-14-0.tar.gz</Archive>
             <SourceURI>network/misc/asio/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>asio</Name>
-            <RuntimeDependencies>
-                <Dependency>boost</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="doc">/usr/share/doc/asio</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>asio-docs</Name>
-            <RuntimeDependencies>
-                <Dependency>asio</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="doc">/usr/share/doc/asio/html</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2019-12-02</Date>
+                <Version>1.14.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="5">
                 <Date>2016-03-19</Date>
                 <Version>1.10.6</Version>
@@ -30394,7 +31532,7 @@
     <SpecFile>
         <Source>
             <Name>yaz</Name>
-            <Homepage>http://www.indexdata.dk/yaz/</Homepage>
+            <Homepage>https://www.indexdata.com/resources/software/yaz/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -30407,30 +31545,21 @@
             <Description xml:lang="en">YAZ is a programmers&apos; toolkit supporting the development of Z39.50/SRW/SRU clients and servers.</Description>
             <Description xml:lang="tr">YAZ Z39.50/SRW/SRU istemci ve sunucular geliştirmek için bir programlama kitaplığıdır.</Description>
             <Description xml:lang="es">YAZ es un conjunto de herramientas para programadores que soporta del desarrollo de clientes y servidores de Z39.50/SRW/SRU.</Description>
-            <Archive type="targz" sha1sum="480775281259535a72e16240d6c0f766298f961e">http://ftp.indexdata.dk/pub/yaz/yaz-5.15.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="50d77c4ba750b20c9f5b0f17a3bf4b5433183a51">http://ftp.indexdata.dk/pub/yaz/yaz-5.28.0.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>icu4c-devel</Dependency>
-                <Dependency>gnutls-devel</Dependency>
                 <Dependency>libxslt-devel</Dependency>
                 <Dependency>libxml2-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch level="1">lpthread.patch</Patch>
-            </Patches>
             <SourceURI>network/misc/yaz/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>yaz</Name>
             <RuntimeDependencies>
-                <Dependency>icu4c</Dependency>
-                <Dependency>gnutls</Dependency>
                 <Dependency>libxslt</Dependency>
-                <Dependency>libxml2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc/yaz</Path>
                 <Path fileType="data">/usr/share</Path>
                 <Path fileType="library">/usr/lib</Path>
             </Files>
@@ -30440,15 +31569,34 @@
             <Summary xml:lang="en">Development files for yaz</Summary>
             <Summary xml:lang="tr">yaz için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="6">yaz</Dependency>
+                <Dependency release="7">yaz</Dependency>
                 <Dependency>libxslt-devel</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="header">/usr/include/yaz</Path>
+                <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
+        <Package>
+            <Name>yaz-docs</Name>
+            <Summary xml:lang="en">Documentation files for yaz</Summary>
+            <Summary xml:lang="tr">yaz-docs için belgelendirme dosyaları</Summary>
+            <Description xml:lang="tr">yaz-docs, yaz için belgelendirme dosyalarını içerir.</Description>
+            <RuntimeDependencies>
+                <Dependency release="7">yaz</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/yaz</Path>
+            </Files>
+        </Package>
         <History>
+            <Update release="7">
+                <Date>2019-12-03</Date>
+                <Version>5.28.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="6">
                 <Date>2016-03-23</Date>
                 <Version>5.15.2</Version>
@@ -30920,7 +32068,7 @@
             <Summary xml:lang="tr">Amazon&apos;dan MP3 indirme aracı</Summary>
             <Description xml:lang="en">Clamz is a little command-line program to download MP3 files from Amazon.com&apos;s music store.  It is intended to serve as a substitute for Amazon&apos;s official MP3 Downloader, which is not free software (and therefore is only available in binary form for a limited set of platforms.)  Clamz can be used to download either individual songs or complete albums that you have purchased from Amazon.</Description>
             <Description xml:lang="tr">Clamz, Amazon.com&apos;un müzik sayfasından MP3 indirmeye yarayan bir komut satırı aracıdır. Programın amacı Amazon.com&apos;un resmi indirme aracı yerine kullanılmaktır(Amazon.com&apos;un özgün aracı ücretsiz değil ve sadece çalıştırılabilir dosya şeklindedir, kaynak dosyası bulunmamaktadır.). Clamz ile Amazon.com&apos;dan satın aldığınız müzikleri ister tek tek, ister albüm şeklinde indirebilirsiniz.</Description>
-            <Archive type="targz" sha1sum="54664614e5098f9e4e9240086745b94fe638b176">https://clamz.googlecode.com/files/clamz-0.5.tar.gz</Archive>
+            <Archive type="targz" sha1sum="54664614e5098f9e4e9240086745b94fe638b176">https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/clamz/clamz-0.5.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>curl-devel</Dependency>
                 <Dependency>expat-devel</Dependency>
@@ -30931,8 +32079,6 @@
         <Package>
             <Name>clamz</Name>
             <RuntimeDependencies>
-                <Dependency>curl</Dependency>
-                <Dependency>expat</Dependency>
                 <Dependency>libgcrypt</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -30943,6 +32089,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2019-12-02</Date>
+                <Version>0.5</Version>
+                <Comment>Rebuilt.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="5">
                 <Date>2016-03-19</Date>
                 <Version>0.5</Version>
@@ -31070,14 +32223,14 @@
             <Name>crypthook</Name>
             <Homepage>https://github.com/chokepoint/CryptHook</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>MIT</License>
             <IsA>library</IsA>
             <PartOf>network.misc</PartOf>
             <Summary xml:lang="en">TCP/UDP symmetric encryption tunnel wrapper.</Summary>
-            <Summary xml:lang="tr">TCP/UDP simetrik şifreleme tünel aracısı.</Summary>
+            <Summary xml:lang="tr">TCP/UDP simetrik şifreleme tünel aracı.</Summary>
             <Description xml:lang="en">CryptHook is a modular implementation for securing existing applications with symmetrical block cipher encryption. It works by hooking the base system calls for network communication send/sendto and recv/recvfrom. CryptHook will work with existing applications that rely on these system calls.</Description>
             <Description xml:lang="tr">CryptHook simetrik blok şifreleme kullanarak varolan uygulamaları güvenli hale getirebilen bir ara yazılımdır.</Description>
             <Archive type="targz" sha1sum="9943f50e9273b2faca9b58a28910d0f7e2efd71c">https://github.com/ibrahimkaraguzel/Sources/raw/master/crypthook-0.0.tar.gz</Archive>
@@ -31088,15 +32241,19 @@
         </Source>
         <Package>
             <Name>crypthook</Name>
-            <RuntimeDependencies>
-                <Dependency>openssl</Dependency>
-            </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/usr/share/crypthook</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2019-12-02</Date>
+                <Version>0.0</Version>
+                <Comment>Rebuilt.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-22</Date>
                 <Version>0.0</Version>
@@ -31749,204 +32906,6 @@
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>python-pyxattr</Name>
-        <Summary xml:lang="en">Python extension for extended file attributes</Summary>
-        <Description xml:lang="en">This is the pyxattr module, a Python extension module which gives access to the extended attributes for filesystem objects available in some operating systems.</Description>
-        <Description xml:lang="tr">python-pyxattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
-        <IsA>library</IsA>
-        <PartOf>programming.language.python</PartOf>
-        <License>GPL</License>
-        <History>
-            <Update release="3">
-                <Date>2019-11-26</Date>
-                <Version>0.6.1</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2016-04-03</Date>
-                <Version>0.5.5</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2010-11-10</Date>
-                <Version>0.5.0</Version>
-                <Comment>First release</Comment>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-        <BuildHost>farm_yerel</BuildHost>
-        <Distribution>PisiLinux</Distribution>
-        <DistributionRelease>2.0</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>66901</InstalledSize>
-        <PackageSize>21914</PackageSize>
-        <PackageHash>d0571767d8e112d4a838e878d42319fade5ce777</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>p/python-pyxattr/python-pyxattr-0.6.1-3-p2-x86_64.pisi</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>python-pyxattr</Name>
-            <Homepage>http://pyxattr.k1024.org/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>python-pypcap</Name>
-        <Summary xml:lang="en">Python pcap module</Summary>
-        <Description xml:lang="en">This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
-        <Description xml:lang="tr">python-pypcap, python için basitleştirilmiş, nesne tabanlı bir sarmalayıcı modüldür.</Description>
-        <IsA>library</IsA>
-        <PartOf>programming.language.python</PartOf>
-        <License>BSD</License>
-        <RuntimeDependencies>
-            <Dependency>libpcap</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2019-11-26</Date>
-                <Version>1.2.1</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-03-28</Date>
-                <Version>1.1.4</Version>
-                <Comment>First release, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>farm_yerel</BuildHost>
-        <Distribution>PisiLinux</Distribution>
-        <DistributionRelease>2.0</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>222302</InstalledSize>
-        <PackageSize>77650</PackageSize>
-        <PackageHash>a42a285cfb612563a21ba6e2e99f9c57e7636627</PackageHash>
-        <InstallTarHash>7440192f2b0e9992612f238c1ea140fcd0ba882e</InstallTarHash>
-        <PackageURI>p/python-pypcap/python-pypcap-1.2.1-2-p2-x86_64.pisi</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>python-pypcap</Name>
-            <Homepage>https://github.com/pynetwork/pypcap</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>python3-pyxattr</Name>
-        <Summary xml:lang="fr">Extension Python pour les attributs étendus de fichiers.</Summary>
-        <Summary xml:lang="en">Python3 extension for extended file attributes</Summary>
-        <Summary xml:lang="tr">Python3 pyxattr modülü</Summary>
-        <Description xml:lang="en">This is the pyxattr module, a Python extension module which gives access to the extended attributes for filesystem objects available in some operating systems.</Description>
-        <Description xml:lang="tr">python3-pyxattr, genişletilmiş dosya hakları için Python3 eklentisi</Description>
-        <IsA>library</IsA>
-        <PartOf>programming.language.python3</PartOf>
-        <License>GPL</License>
-        <RuntimeDependencies>
-            <Dependency>python3</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="3">
-                <Date>2019-11-26</Date>
-                <Version>0.7.1</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2016-04-03</Date>
-                <Version>0.5.5</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2010-11-10</Date>
-                <Version>0.5.0</Version>
-                <Comment>First release</Comment>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-        <BuildHost>farm_yerel</BuildHost>
-        <Distribution>PisiLinux</Distribution>
-        <DistributionRelease>2.0</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>71014</InstalledSize>
-        <PackageSize>22732</PackageSize>
-        <PackageHash>22ea217de217ce7ee310e90f8d3159b1059f2e48</PackageHash>
-        <InstallTarHash>da39a3ee5e6b4b0d3255bfef95601890afd80709</InstallTarHash>
-        <PackageURI>p/python3-pyxattr/python3-pyxattr-0.7.1-3-p2-x86_64.pisi</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>python3-pyxattr</Name>
-            <Homepage>http://pyxattr.k1024.org/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-        </Source>
-    </Package>
-    <Package>
-        <Name>python3-pypcap</Name>
-        <Summary xml:lang="en">Python3 pcap module</Summary>
-        <Description xml:lang="en">This is a simplified object-oriented Python wrapper for libpcap - the current tcpdump.org version, and the WinPcap port for Windows.</Description>
-        <Description xml:lang="tr">python3-pypcap, python3 için basitleştirilmiş, nesne tabanlı bir sarmalayıcı modüldür.</Description>
-        <IsA>library</IsA>
-        <PartOf>programming.language.python3</PartOf>
-        <License>BSD</License>
-        <RuntimeDependencies>
-            <Dependency>libpcap</Dependency>
-            <Dependency>python3</Dependency>
-        </RuntimeDependencies>
-        <History>
-            <Update release="2">
-                <Date>2019-11-26</Date>
-                <Version>1.2.1</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-03-28</Date>
-                <Version>1.1.4</Version>
-                <Comment>First release, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-        <BuildHost>farm_yerel</BuildHost>
-        <Distribution>PisiLinux</Distribution>
-        <DistributionRelease>2.0</DistributionRelease>
-        <Architecture>x86_64</Architecture>
-        <InstalledSize>222334</InstalledSize>
-        <PackageSize>78074</PackageSize>
-        <PackageHash>e25d212d5b126df0dabf1676c5302254372161d3</PackageHash>
-        <InstallTarHash>55ecae9d663c2d41a99269265a5a2eefcd951733</InstallTarHash>
-        <PackageURI>p/python3-pypcap/python3-pypcap-1.2.1-2-p2-x86_64.pisi</PackageURI>
-        <PackageFormat>1.2</PackageFormat>
-        <Source>
-            <Name>python3-pypcap</Name>
-            <Homepage>https://github.com/pynetwork/pypcap</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Packager>
         </Source>
     </Package>

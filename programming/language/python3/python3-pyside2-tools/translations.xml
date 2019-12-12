@@ -3,6 +3,6 @@
     <Source>
         <Name>python3-pyside2-tools</Name>
         <Summary xml:lang="tr">PySide2 için araçlar</Summary>
-        <Description xml:lang="tr">PySide2 için araçları</Description>
+        <Description xml:lang="tr">PySide2 için lupdate, rcc ve uic araçları ile python3 baglayicilarini saglar.</Description>
     </Source>
 </PISI>

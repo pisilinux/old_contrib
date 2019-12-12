@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-ecdsa</Name>
+        <Name>python3-ecdsa</Name>
         <Homepage>https://github.com/warner/python-ecdsa</Homepage>
         <Packager>
             <Name>Blue DeviL</Name>
@@ -15,17 +15,20 @@
         <Description>This is an easy-to-use implementation of ECDSA cryptography (Elliptic Curve Digital Signature Algorithm), implemented purely in Python, released under the MIT license. With this library, you can quickly create keypairs (signing key and verifying key), sign messages, and verify the signatures. The keys and signatures are very short, making them easy to handle and incorporate into other protocols.</Description>
         <Archive sha1sum="c9b68248324938789ebce5035d089a10358243d5" type="targz">https://github.com/warner/python-ecdsa/archive/python-ecdsa-0.14.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-ecdsa</Name>
+        <Name>python3-ecdsa</Name>
         <Summary>ECDSA module for python</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc/python-ecdsa</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-ecdsa</Path>
         </Files>
     </Package>
 

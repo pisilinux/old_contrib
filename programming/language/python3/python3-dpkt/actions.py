@@ -4,10 +4,12 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
+from pisi.actionsapi import pisitools
 from pisi.actionsapi import pythonmodules
 
-def build():
-    pythonmodules.compile()
 
 def install():
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")
+
+    pisitools.dodoc("AUTHORS", "CHANGES","LICENSE", "README*")
+    pisitools.insinto("/usr/share/doc/python3-dpkt/","docs/")

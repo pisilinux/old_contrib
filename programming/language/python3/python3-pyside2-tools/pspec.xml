@@ -17,7 +17,7 @@
             <Dependency>cmake</Dependency>
             <Dependency>qt5-base-devel</Dependency>
             <Dependency>python3-devel</Dependency>
-            <Dependency>python3-pyside2</Dependency>
+            <Dependency>python3-pyside2-devel</Dependency>
             <Dependency>python3-shiboken2-devel</Dependency>
         </BuildDependencies>
     </Source>

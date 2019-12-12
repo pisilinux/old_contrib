@@ -18,7 +18,6 @@ def setup():
     shelltools.cd("build3")
     cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
                           -DBUILD_TESTS=OFF \
-                          -DCMAKE_CXX_FLAGS=-Wno-deprecated-declarations \
                           -DUSE_PYTHON_VERSION=3", sourceDir="..")
 
 def build():

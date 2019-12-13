@@ -9,9 +9,6 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-#	shelltools.export("LDFLAGS", "%s -lX11" % get.LDFLAGS())
-#	shelltools.makedirs("m4")
-#	shelltools.system("/usr/bin/xdt-autogen")
 	autotools.configure("--disable-dependency-tracking \
 	--disable-clutter \
 	\

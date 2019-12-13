@@ -11,7 +11,6 @@ from pisi.actionsapi import get
 def setup():
 	shelltools.system("sed -i '91a\ \ GtkMenuBar::window-dragging\ =\ 1' src/gtk2/main.rc.in")
 	shelltools.system("sed -i '92a\ \ GtkToolbar::window-dragging\ =\ 1' src/gtk2/main.rc.in")
-#	shelltools.system("sed -i '41s/\#\#/#/' src/gtk2/gtkrc.in")
 
 	shelltools.system("\
 	meson \

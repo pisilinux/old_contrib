@@ -26,11 +26,6 @@
 			<Dependency>libxml2-devel</Dependency>
 			<Dependency>gtksourceview3-devel</Dependency>
 		</BuildDependencies>
-		<AdditionalFiles>
-			<!--
-			<AdditionalFile target="po/tr.po">tr.po</AdditionalFile>
-			-->
-		</AdditionalFiles>
 	</Source>
 
 	<Package>

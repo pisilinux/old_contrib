@@ -45,11 +45,6 @@
 			<Dependency>startup-notification-devel</Dependency>
 			<Dependency>gobject-introspection-devel</Dependency>
 		</BuildDependencies>
-		<Patches>
-			<!--
-			<Patch level="1">fixsystray.patch</Patch>
-			-->
-		</Patches>
 	</Source>
 
 	<Package>

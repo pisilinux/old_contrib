@@ -9,19 +9,21 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("\
-	--sysconfdir=/etc \
-	--prefix=/usr \
-	--disable-static \
+	autotools.configure("--prefix=/usr --sysconfdir=/etc \
+	\
 	--enable-authentication-scheme=pam \
 	--enable-locking \
 	--enable-pam \
-	--without-systemd \
+	\
+	--disable-static \
+	\
 	--with-pam-auth-type=system \
 	--with-console-kit \
 	--with-mit-ext \
 	--with-shadow \
-	--with-libgl")
+	--with-libgl \
+	\
+	--without-systemd")
 
 def build():
 	autotools.make()
@@ -33,3 +35,4 @@ def install():
 	"INSTALL", \
 	"NEWS", \
 	"README.md")
+

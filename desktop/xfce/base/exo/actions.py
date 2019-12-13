@@ -10,8 +10,10 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("--prefix=/usr \
+	\
 	--disable-gtk-doc \
 	--disable-static \
+	\
 	--enable-gio-unix \
 	--enable-gtk2 \
 	--with-x")
@@ -31,3 +33,4 @@ def install():
 	"README", \
 	"THANKS", \
 	"TODO")
+

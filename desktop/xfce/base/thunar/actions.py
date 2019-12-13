@@ -10,12 +10,14 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("--prefix=/usr \
+	\
 	--enable-notifications \
 	--enable-introspection \
 	--enable-gio-unix \
 	--enable-gudev \
 	--enable-exif \
 	--enable-pcre \
+	\
 	--disable-gtk-doc \
 	--disable-static")
 
@@ -30,7 +32,6 @@ def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.removeDir("usr/lib/systemd")
-#	pisitools.removeDir("usr/share/polkit-1")
 
 #	pisitools.dodoc("AUTHORS", \
 #	"ChangeLog", \
@@ -40,3 +41,4 @@ def install():
 #	"NEWS", \
 #	"README", \
 #	"THANKS")
+

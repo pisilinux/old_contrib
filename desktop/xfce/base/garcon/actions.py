@@ -13,8 +13,10 @@ def setup():
 	--libexecdir=/usr/lib \
 	--localstatedir=/var \
 	--sysconfdir=/etc \
+	\
 	--disable-gtk-doc \
 	--disable-static \
+	\
 	--enable-libxfce4ui \
 	--enable-gtk2")
 
@@ -37,3 +39,4 @@ def install():
 	"STATUS", \
 	"THANKS", \
 	"TODO")
+

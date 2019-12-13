@@ -9,8 +9,6 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-#	pisitools.dosed("configure", "thunarx-1", "thunarx-2")
-
 	autotools.configure("--disable-static --disable-dependency-tracking")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")

@@ -5,10 +5,4 @@
         <Summary xml:lang="tr">Python pefile modülü</Summary>
         <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
     </Source>
-    
-    <Package>
-        <Name>python3-pefile</Name>
-        <Summary xml:lang="tr">Python3 pefile modülü</Summary>
-        <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
-    </Package>
 </PISI>

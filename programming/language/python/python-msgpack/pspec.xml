@@ -15,9 +15,7 @@
         <Description>MessagePack serializer implementation for Python.</Description>
         <Archive sha1sum="883ae054b3fd3e4c4c1d97f13fd0c2d7fa7e3499" type="targz">https://github.com/msgpack/msgpack-python/archive/v0.6.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python3-setuptools</Dependency>
             <Dependency>python-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
     </Source>
@@ -30,16 +28,15 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
-    <Package>
-        <Name>python3-msgpack</Name>
-        <Summary>Python3 msgpack module</Summary>
-        <Files>
-            <Path fileType="library">/usr/lib/python3*</Path>
-        </Files>
-    </Package>
 
     <History>
+        <Update release="3">
+            <Date>2019-12-13</Date>
+            <Version>0.6.2</Version>
+            <Comment>Rebuilt and split packages</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="2">
             <Date>2019-11-22</Date>
             <Version>0.6.2</Version>

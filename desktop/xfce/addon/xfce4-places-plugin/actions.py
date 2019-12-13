@@ -10,8 +10,10 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("--prefix=/usr \
+	\
 	--enable-notifications \
 	--enable-gio-unix \
+	\
 	--disable-static")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")

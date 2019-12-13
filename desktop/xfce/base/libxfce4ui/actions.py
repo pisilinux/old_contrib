@@ -10,8 +10,10 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("--prefix=/usr \
+	\
 	--disable-gtk-doc \
 	--disable-static \
+	\
 	--enable-gtk2 \
 	--enable-vala \
 	--enable-introspection \
@@ -32,3 +34,4 @@ def install():
 	"ChangeLog", \
 	"AUTHORS", \
 	"THANKS")
+

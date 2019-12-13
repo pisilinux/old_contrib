@@ -10,11 +10,11 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 
 def setup():
-	#shelltools.export("LDFLAGS", "%s -lgtk-x11-2.0 -lthunarx-2" % get.LDFLAGS())
 	autotools.configure("--prefix=/usr \
-	--sysconfdir=/etc \
 	--libexecdir=/usr/lib/xfce4 \
 	--localstatedir=/var \
+	--sysconfdir=/etc \
+	\
 	--disable-static")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")

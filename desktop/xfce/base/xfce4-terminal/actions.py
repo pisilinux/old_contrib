@@ -9,10 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("\
-	--prefix=/usr \
-	--disable-static \
-	--with-x")
+	autotools.configure("--prefix=/usr --disable-static --with-x")
 
 def build():
 	autotools.make()

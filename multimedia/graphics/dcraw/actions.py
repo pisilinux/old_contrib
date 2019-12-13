@@ -12,12 +12,12 @@ from pisi.actionsapi import get
 WorkDir = "dcraw"
 
 def build():
-    autotools.compile('-DLOCALEDIR="\\"/usr/share/locale\\"" -lm -ljasper -llcms2 -ljpeg -o dcraw dcraw.c')
+	autotools.compile('-DLOCALEDIR="\\"/usr/share/locale\\"" -lm -ljasper -llcms2 -ljpeg -o dcraw dcraw.c')
 
 def install():
-    pisitools.dobin("dcraw")
-    pisitools.doman("dcraw.1")
+	pisitools.dobin("dcraw")
+	pisitools.doman("dcraw.1")
 
-    # Build catalogs
-    for f in shelltools.ls("*.po"):
-        pisitools.domo(f, f.split("dcraw_")[1].split(".po")[0], "dcraw.mo")
+	# Build catalogs
+	for f in shelltools.ls("*.po"):
+		pisitools.domo(f, f.split("dcraw_")[1].split(".po")[0], "dcraw.mo")

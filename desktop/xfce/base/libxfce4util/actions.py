@@ -10,19 +10,20 @@ from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("--prefix=/usr \
+	\
 	--disable-gtk-doc \
 	--disable-static \
+	\
 	--enable-vala \
 	--enable-introspection")
 
-	#pisitools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
+	pisitools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")
 
 def build():
 	autotools.make()
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	#pisitools.dosym("/usr/lib/libxfce4util.so.7.0.0", "/usr/lib/libxfce4util.so.6")
 
 	pisitools.dodoc("AUTHORS", \
 	"ChangeLog*", \
@@ -31,3 +32,4 @@ def install():
 	"README*", \
 	"THANKS", \
 	"TODO")
+

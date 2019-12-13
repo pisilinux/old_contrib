@@ -6,28 +6,10 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
-from pisi.actionsapi import get
-
-WorkDir="bcrypt-%s" % get.srcVERSION()
-
-def setup():
-    shelltools.cd("..")
-    shelltools.makedirs("build_python3")
-    shelltools.copytree("./%s" % WorkDir,  "build_python3")
-    shelltools.cd(WorkDir)
 
 def build():
+    pisitools.cflags.add("-Wno-pointer-sign -Wno-attributes")
     pythonmodules.compile()
-
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.compile(pyVer="3")
 
 def install():
     pythonmodules.install()
-    
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.install(pyVer="3")
-
-    for dirs in ["tests"]:
-        pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)

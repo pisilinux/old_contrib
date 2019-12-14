@@ -9,6 +9,7 @@
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
         <License>BSD</License>
+        <PartOf>programming.language.python</PartOf>
         <IsA>library</IsA>
         <Summary>Testing utility classes and functions for Sphinx extensions</Summary>
         <Description>sphinx-testing provides testing utility classes and functions for Sphinx extensions.</Description>
@@ -30,7 +31,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc/</Path>
+            <Path fileType="doc">/usr/share/doc/python-sphinx-testing</Path>
         </Files>
     </Package>
 

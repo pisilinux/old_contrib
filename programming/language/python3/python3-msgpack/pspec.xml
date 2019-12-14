@@ -2,30 +2,33 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-msgpack</Name>
+        <Name>python3-msgpack</Name>
         <Homepage>http://msgpack.org/</Homepage>
         <Packager>
             <Name>Blue DeviL</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
         <License>Apache</License>
-        <PartOf>programming.language.python</PartOf>
+        <PartOf>programming.language.python3</PartOf>
         <IsA>library</IsA>
-        <Summary>Python msgpack module</Summary>
-        <Description>MessagePack serializer implementation for Python.</Description>
+        <Summary>Python3 msgpack module</Summary>
+        <Description>MessagePack serializer implementation for Python3.</Description>
         <Archive sha1sum="883ae054b3fd3e4c4c1d97f13fd0c2d7fa7e3499" type="targz">https://github.com/msgpack/msgpack-python/archive/v0.6.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-msgpack</Name>
-        <Summary>Python msgpack module</Summary>
+        <Name>python3-msgpack</Name>
+        <Summary>Python3 msgpack module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-msgpack</Path>
         </Files>
     </Package>
 

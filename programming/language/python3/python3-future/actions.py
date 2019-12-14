@@ -8,8 +8,11 @@ from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
 
 def build():
-    pisitools.cflags.add("-Wno-pointer-sign -Wno-attributes")
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
 
 def install():
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")
+    pisitools.rename("/usr/bin/futurize","futurize3")
+    pisitools.rename("/usr/bin/pasteurize","pasteurize3")
+
+    pisitools.dodoc("LICENSE*")

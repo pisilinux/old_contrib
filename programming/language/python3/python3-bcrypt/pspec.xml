@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-bcrypt</Name>
+        <Name>python3-bcrypt</Name>
         <Homepage>https://github.com/pyca/bcrypt</Homepage>
         <Packager>
             <Name>Blue Devil</Name>
@@ -14,20 +14,21 @@
         <Description>python-bcrypt is a good password hashing for your software and your servers</Description>
         <Archive sha1sum="bc34050664c1b7512ea8791fd543673144521931" type="targz">https://github.com/pyca/bcrypt/archive/3.1.7.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-bcrypt</Name>
-        <Summary>bcrypt module for python</Summary>
+        <Name>python3-bcrypt</Name>
+        <Summary>bcrypt module for python3</Summary>
         <RuntimeDependencies>
-            <Dependency>python-cffi</Dependency>
+            <Dependency>python3-cffi</Dependency>
+            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc/python-bcrypt</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-bcrypt</Path>
         </Files>
     </Package>
 

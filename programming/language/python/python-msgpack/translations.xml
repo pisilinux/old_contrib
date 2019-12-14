@@ -5,10 +5,4 @@
         <Summary xml:lang="tr">Python msgpack modülü</Summary>
         <Description xml:lang="tr">python-msgpack, Python için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
     </Source>
-    
-    <Package>
-        <Name>python3-msgpack</Name>
-        <Summary xml:lang="tr">Python3 msgpack modülü</Summary>
-        <Description xml:lang="tr">python3-msgpack, Python3 için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
-    </Package>
 </PISI>

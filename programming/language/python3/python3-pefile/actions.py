@@ -5,11 +5,12 @@
 # See the file http://www.gnu.org/licenses/gpl.txt
 
 from pisi.actionsapi import pythonmodules
-from pisi.actionsapi import pisitools
 
 def build():
-    pisitools.cflags.add("-Wno-pointer-sign -Wno-attributes")
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
+
+def check():
+    pythonmodules.compile("check", pyVer="3")
 
 def install():
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")

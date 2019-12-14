@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 
 def build():
     pisitools.cflags.add("-Wno-pointer-sign -Wno-attributes")
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
 
 def install():
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")

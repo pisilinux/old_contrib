@@ -2,31 +2,35 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-future</Name>
+        <Name>python3-future</Name>
         <Homepage>http://python-future.org/</Homepage>
         <Packager>
             <Name>Blue DeviL</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
         <License>MIT</License>
-        <PartOf>programming.language.python</PartOf>
+        <PartOf>programming.language.python3</PartOf>
         <IsA>library</IsA>
         <Summary>Clean single-source support for Python 3 and 2</Summary>
         <Description>python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</Description>
         <Archive sha1sum="d8c8b2d3889fc22bb38f049ed8e3dbdc35a83d6e" type="targz">https://pypi.io/packages/source/f/future/future-0.18.2.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-future</Name>
-        <Summary>Python future module</Summary>
+        <Name>python3-future</Name>
+        <Summary>Python3 future module</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin/futurize3</Path>
+            <Path fileType="executable">/usr/bin/pasteurize3</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-future</Path>
         </Files>
     </Package>
 

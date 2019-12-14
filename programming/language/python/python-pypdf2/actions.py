@@ -6,28 +6,16 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
-
-WorkDir="PyPDF2-%s" % get.srcVERSION()
-
-def setup():
-    shelltools.cd("..")
-    shelltools.makedirs("build_python3")
-    shelltools.copytree("./%s" % WorkDir,  "build_python3")
-    shelltools.cd(WorkDir)
 
 def build():
     pythonmodules.compile()
-
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.compile(pyVer="3")
+    
+def check():
+    pythonmodules.run("-m unittest Tests.tests")
 
 def install():
     pythonmodules.install()
-    
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.install(pyVer="3")
 
-    for dirs in ["PDF_Samples", "Sample_Code", "Tests"]:
+    for dirs in ["PDF_Samples", "Sample_Code"]:
         pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)

@@ -2,30 +2,34 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-pylibacl</Name>
+        <Name>python3-pylibacl</Name>
         <Homepage>http://pylibacl.k1024.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
         <License>GPLv2</License>
-        <PartOf>programming.language.python</PartOf>
+        <PartOf>programming.language.python3</PartOf>
         <IsA>library</IsA>
         <Summary>This python 2.2+ extension module allows you to manipulate the POSIX.1e Access Control Lists present in some os/filesystem combinations</Summary>
         <Description>python-libacl is a C extension module for Python which implements POSIX ACLs manipulation. It is a wrapper on top of the systems's acl C library.</Description>
         <Archive sha1sum="a59eac60d52fca738603805749321471c175b918" type="targz">https://pylibacl.k1024.org/downloads/pylibacl-0.5.4.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
             <Dependency>acl-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-pylibacl</Name>
+        <Name>python3-pylibacl</Name>
+        <Summary>This python 2.2+ extension module allows you to manipulate the POSIX.1e Access Control Lists present in some os/filesystem combinations</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc/python-pylibacl</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-pylibacl</Path>
         </Files>
     </Package>
 

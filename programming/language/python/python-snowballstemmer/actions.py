@@ -5,17 +5,9 @@
 # See the file http://www.gnu.org/licenses/gpl.txt
 
 from pisi.actionsapi import pythonmodules
-from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
-from pisi.actionsapi import get
-
-#WorkDir="snowballstemmer-%s" % get.srcVERSION()
 
 def build():
     pythonmodules.compile()
 
 def install():
     pythonmodules.install("-O1")
-
-    #for dirs in ["tests"]:
-    #    pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)

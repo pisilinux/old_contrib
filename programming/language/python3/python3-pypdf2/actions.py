@@ -6,16 +6,17 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def build():
-    pythonmodules.compile()
+    pythonmodules.compile(pyVer="3")
     
-def check():
-    pythonmodules.run("-m unittest Tests.tests")
+#def check():
+#    pythonmodules.run("-m unittest Tests.tests", pyVer="3")
 
 def install():
-    pythonmodules.install()
+    pythonmodules.install(pyVer="3")
 
     for dirs in ["PDF_Samples", "Sample_Code"]:
         pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)

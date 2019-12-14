@@ -9,7 +9,7 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def build():
-    shelltools.export("CFLAGS", "%s -fno-strict-aliasing -Wno-unused-function -Wno-implicit-function-declaration" % get.CFLAGS())
+    shelltools.export("CFLAGS", "%s -fno-strict-aliasing -Wno-unused-function -Wno-implicit-function-declaration -Wno-deprecated-declarations" % get.CFLAGS())
     shelltools.export("LDSHARED", "x86_64-pc-linux-gnu-gcc -Wl,-O1,--as-needed -shared -lpthread")
     pythonmodules.compile()
     

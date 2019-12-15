@@ -21,7 +21,7 @@ def setup():
 		"\
 		--libdir=/usr/lib32 \
 		"
-	shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+		shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
 
 	autotools.configure(options)
 

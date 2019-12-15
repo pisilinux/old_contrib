@@ -24,7 +24,7 @@ def setup():
 	--enable-libav-aac \
 	\
 	--disable-rpath \
-	--disable-statis \
+	--disable-static \
 	--disable-silent-rules")
 
 def build():

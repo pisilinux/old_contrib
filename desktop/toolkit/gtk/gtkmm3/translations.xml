@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>gtkmm3</Name>
-        <Summary xml:lang="tr">C++ bindings for GTK+ 3</Summary>
-        <Description xml:lang="tr">C++ bindings for GTK+ 3</Description>
-    </Source>
-</PISI>

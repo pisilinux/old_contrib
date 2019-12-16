@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-ply</Name>
+        <Summary xml:lang="tr">Lex ve YACC Cözümleme araçları uygulaması</Summary>
+        <Description xml:lang="tr">PLY(Python Lex-Yacc), python için lex ve yacc cözümleyen araçları barındıran uygulamadır.</Description>
+    </Source>
+</PISI>

@@ -53,6 +53,7 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/xfce4/thunar-archive-plugin/xarchiver.tap</Path>
 			<Path fileType="data">/usr/share/applications</Path>
 			<Path fileType="data">/usr/share/icons</Path>
 			<Path fileType="data">/usr/share/pixmaps/xarchiver</Path>

@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>C++ binding for GTK+</Summary>
         <Description>gtkmm is the official C++ interface for the popular GUI library GTK+. Highlights include typesafe callbacks, and a comprehensive set of widgets that are easily extensible via inheritance.</Description>
-        <Archive sha1sum="06959577fd090dab025744df47672a1b325fae6f" type="tarxz">http://ftp.gnome.org/pub/GNOME/sources/gtkmm/3.22/gtkmm-3.22.3.tar.xz</Archive>
+        <Archive sha1sum="2b65ff352fde95b6054e1accc4fb6571bb988b52" type="tarxz">https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.2.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
@@ -52,7 +52,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>gtkmm3-devel</Name>
         <Summary>Development files for gtkmm3</Summary>
@@ -70,8 +70,15 @@
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <History>
+        <Update release="2">
+            <Date>2019-12-16</Date>
+            <Version>3.24.2</Version>
+            <Comment>Release up.</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-26</Date>
             <Version>3.22.3</Version>

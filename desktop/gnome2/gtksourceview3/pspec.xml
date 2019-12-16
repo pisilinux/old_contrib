@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>A text widget adding syntax highlighting and more to GNOME</Summary>
         <Description>A text widget adding syntax highlighting and more to GNOME</Description>
-        <Archive sha1sum="0e83221694aac1407c75250331c5b2967dacbe2f" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/gtksourceview/3.22/gtksourceview-3.22.2.tar.xz</Archive>
+        <Archive sha1sum="1883e5c244791e3b66fd70c71f3f82221c221c29" type="tarxz">https://download.gnome.org/sources/gtksourceview/3.24/gtksourceview-3.24.11.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>itstool</Dependency>
             <Dependency>valgrind</Dependency>
@@ -50,7 +50,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>gtksourceview3-devel</Name>
         <Summary>Development files for gtksourceview3</Summary>
@@ -65,7 +65,7 @@
             <Path fileType="library">/usr/lib/pkgconfig</Path>
         </Files>
     </Package>
-    
+
     <Package>
         <Name>gtksourceview3-docs</Name>
         <Summary>Development files for gtksourceview3</Summary>
@@ -76,8 +76,15 @@
             <Path fileType="data">/usr/share/gtk-doc</Path>
         </Files>
     </Package>
-    
+
     <History>
+        <Update release="2">
+            <Date>2019-12-16</Date>
+            <Version>3.24.11</Version>
+            <Comment>Release up.</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2019-01-26</Date>
             <Version>3.22.2</Version>

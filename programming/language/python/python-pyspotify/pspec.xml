@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-pyspotify</Name>
+        <Homepage>https://pyspotify.mopidy.com/</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>A Python wrapper for libspotify.</Summary>
+        <Description>pyspotify provides a Python interface to Spotify’s online music streaming service.With pyspotify you can access music metadata, search in Spotify’s library of 20+ million tracks, manage your Spotify playlists, and play music from Spotify. All from your own Python applications.</Description>
+        <Archive sha1sum="00f7f1724b3cf7ce36ccd11338c421de73b3ae17" type="targz">https://files.pythonhosted.org/packages/5c/6d/69c7c9876f322697e41d7439b1a7b494ccf073d3d78c20de068f563920dd/pyspotify-2.1.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>libspotify</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-pyspotify</Name>
+        <Summary>A Python wrapper for libspotify.</Summary>
+        <RuntimeDependencies>
+            <Dependency>libspotify</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-pyspotify</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-18</Date>
+            <Version>2.1.2</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

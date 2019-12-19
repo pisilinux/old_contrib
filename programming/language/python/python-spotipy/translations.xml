@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-spotipy</Name>
+        <Summary xml:lang="tr">Spotify ağ apisi için basit bir istemci</Summary>
+        <Description xml:lang="tr">python-spotipy Spotify ağ apisini kullanabilmek için python3 sarmalayıcı modülü ile basit bir istemci sunar.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-spotipy</Name>
+        <Homepage>https://github.com/plamere/spotipy</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>Simple client for the Spotify Web API.</Summary>
+        <Description>Spotipy is a thin client library for the Spotify Web API.</Description>
+        <Archive sha1sum="0b67538257ba55eed80652fb6f3a62029ac7b47c" type="targz">https://files.pythonhosted.org/packages/59/46/3c957255c96910a8a0e2d9c25db1de51a8676ebba01d7966bedc6e748822/spotipy-2.4.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-spotipy</Name>
+        <Summary>Simple client for the Spotify Web API.</Summary>
+        <RuntimeDependencies>
+            <!--<Dependency>python3-requests</Dependency>-->
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-spotipy</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-18</Date>
+            <Version>2.4.4</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

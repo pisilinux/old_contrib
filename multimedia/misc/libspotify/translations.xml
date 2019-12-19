@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libspotify</Name>
+        <Summary xml:lang="tr">
+            Spotify için araç geliştirmek isteyen 3. parti yazılımcılar için C APIsi
+        </Summary>
+        <Description xml:lang="tr">
+            libspotify, Spotify için araç geliştirmek isteyen 3. parti yazılımcılar için C APIsi sunar.
+        </Description>
+    </Source>
+
+    <Package>
+        <Name>libspotify-docs</Name>
+        <Summary xml:lang="tr">
+            libspotify için belgelendirme dosyaları
+        </Summary>
+        <Description xml:lang="tr">
+            libspotify-docs libspotify için belgelendirme dosyalarını içerir.
+        </Description>
+    </Package>
+</PISI>

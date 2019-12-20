@@ -14,7 +14,6 @@ def setup():
 	--enable-debugger \
 	--enable-gitchangebar \
 	--enable-geanylua \
-	--enable-geanypy \
 	--enable-geanypg \
 	--enable-utilslib \
 	--enable-spellcheck \

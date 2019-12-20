@@ -18,44 +18,51 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
+			<Dependency>cppcheck</Dependency>
+			<Dependency>vte-devel</Dependency>
 			<Dependency>vala-devel</Dependency>
 			<Dependency>ctpl-devel</Dependency>
-		<!--	<Dependency>vte28-devel</Dependency> -->
-			<Dependency>vte-devel</Dependency>
+			<Dependency>check-devel</Dependency>
 			<Dependency>geany-devel</Dependency>
 			<Dependency>lua51-devel</Dependency>
-			<Dependency>gconf-devel</Dependency>
 			<Dependency>gpgme-devel</Dependency>
 			<Dependency>python-devel</Dependency>
+			<Dependency>gnutls-devel</Dependency>
+			<Dependency>libsoup-devel</Dependency>
 			<Dependency>libgit2-devel</Dependency>
-			<Dependency>enchant-devel</Dependency>
+			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>enchant2-devel</Dependency>
-			<Dependency>gtkspell-devel</Dependency>
-			<Dependency>libwnck2-devel</Dependency>
-			<Dependency>python-gtk-devel</Dependency>
-			<Dependency>webkit-gtk2-devel</Dependency>
+			<Dependency>gtkspell3-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">overview_plugin_test.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>
 		<Name>geany-plugins</Name>
 		<RuntimeDependencies>
-			<Dependency>vala</Dependency>
+			<Dependency>atk</Dependency>
+			<Dependency>vte</Dependency>
+			<Dependency>zlib</Dependency>
 			<Dependency>ctpl</Dependency>
-		<!--	<Dependency>vte28-devel</Dependency> -->
-			<Dependency>vte-devel</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>geany</Dependency>
 			<Dependency>lua51</Dependency>
-			<Dependency>gconf</Dependency>
 			<Dependency>gpgme</Dependency>
-			<Dependency>python</Dependency>
+			<Dependency>gnutls</Dependency>
+			<Dependency>libsoup</Dependency>
+			<Dependency>libxml2</Dependency>
 			<Dependency>libgit2</Dependency>
-			<Dependency>enchant</Dependency>
+			<Dependency>libpcre2</Dependency>
 			<Dependency>enchant2</Dependency>
-			<Dependency>gtkspell</Dependency>
-			<Dependency>libwnck2</Dependency>
-			<Dependency>python-gtk</Dependency>
-			<Dependency>webkit-gtk2</Dependency>
+			<Dependency>gtkspell3</Dependency>
+			<Dependency>libassuan</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libgpg-error</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib</Path>
@@ -66,6 +73,13 @@
 	</Package>
 
 	<History>
+		<Update release="4">
+			<Date>2019-12-18</Date>
+			<Version>1.36</Version>
+			<Comment>Rebuild with gtk3.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="3">
 			<Date>2019-10-15</Date>
 			<Version>1.36</Version>

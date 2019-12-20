@@ -9,21 +9,32 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--enable-debugger \
+	autotools.configure("\
+	\
+	--enable-debugger \
 	--enable-gitchangebar \
 	--enable-geanylua \
-	--enable-devhelp \
 	--enable-geanypy \
 	--enable-geanypg \
+	--enable-utilslib \
 	--enable-spellcheck \
-	--enable-multiterm \
 	--enable-geanygendoc \
-	--enable-gtkspell=yes")
+	--enable-gtkspell=yes \
+	\
+	--disable-devhelp \
+	--disable-markdown \
+	--disable-webhelper \
+	--disable-geanypy \
+	--disable-multiterm")
 
 def build():
 	autotools.make()
+
+def check():
+	autotools.make("check")
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("NEWS", "README")
+

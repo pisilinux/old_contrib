@@ -9,18 +9,20 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--prefix=/usr \
+	autotools.configure("\
 	\
-	--enable-vte \
-	--enable-gtk3 \
-	--enable-binreloc \
+	--enable-man \
+	--enable-mp3 \
+	--enable-ogg \
+	--enable-mp4 \
+	--enable-opus \
+	--enable-flac \
+	--enable-speex \
+	--enable-id3v23 \
+	--enable-wavpack \
 	\
-	--disable-api-docs \
-	--disable-pdf-docs \
-	--disable-html-docs \
-	--disable-gtkdoc-header")
-
-	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+	--disable-schemas-compile \
+	--disable-nautilus-actions")
 
 def build():
 	autotools.make()
@@ -31,11 +33,5 @@ def check():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", \
-	"ChangeLog", \
-	"COPYING", \
-	"HACKING", \
-	"INSTALL", \
-	"NEWS", \
-	"README*", "THANKS", "TODO")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "NEWS", "README", "THANKS", "TODO")
 

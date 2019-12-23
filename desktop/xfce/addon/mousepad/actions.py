@@ -9,10 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("\
-	--prefix=/usr \
-	--enable-gtk3 \
-	--disable-static")
+	autotools.configure("--prefix=/usr --enable-gtk3 --disable-static")
 
 def build():
 	autotools.make()
@@ -20,7 +17,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", \
-	"COPYING", \
-	"NEWS", \
-	"README")
+	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README")
+

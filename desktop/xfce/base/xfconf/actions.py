@@ -9,15 +9,16 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("\
-	--prefix=/usr \
+	autotools.configure("--prefix=/usr \
+	\
 	--disable-static \
 	--disable-gtk-doc \
 	--disable-perl-bindings \
-	--enable-introspection \
-	--enable-gsettings-backend \
+	\
+	--enable-vala \
 	--enable-profiling \
-	--enable-vala")
+	--enable-introspection \
+	--enable-gsettings-backend")
 
 	#pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
 	#pisitools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
@@ -36,5 +37,3 @@ def install():
 	"TODO", \
 	"COPYING")
 
-	# remove unneeded files
-	#perlmodules.removePodfiles()

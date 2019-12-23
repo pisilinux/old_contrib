@@ -22,9 +22,6 @@
 			<Dependency>polkit-devel</Dependency>
 			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
-			<!--
-			<Dependency>xfce4-session-devel</Dependency>
-			-->
 		</BuildDependencies>
 	</Source>
 	<Package>
@@ -33,9 +30,6 @@
 			<Dependency>glib2</Dependency>
 			<Dependency>polkit</Dependency>
 			<Dependency>libpcre2</Dependency>
-			<!--
-			<Dependency>xfce4-session</Dependency>
-			-->
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>

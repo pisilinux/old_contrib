@@ -10,26 +10,29 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 
 def setup():
-    options = "\
-                --disable-static \
-                --enable-assertions \
-              "
+	options = \
+	"\
+	--disable-static \
+	--enable-assertions \
+	"
 
-    if get.buildTYPE() == "_emul32":
-        options += "  --libdir=/usr/lib32 \
-                   "
-    shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+	if get.buildTYPE() == "_emul32":
+		options += \
+		"\
+		--libdir=/usr/lib32 \
+		"
+		shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
 
-    autotools.configure(options)
+	autotools.configure(options)
 
-    pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
+	if get.buildTYPE() != "_emul32":
+		pisitools.dodoc("AUTHORS", "COPYING", "README.md")
 
-    if get.buildTYPE() == "_emul32":
-        pisitools.dodoc("AUTHORS", "COPYING", "README.md")

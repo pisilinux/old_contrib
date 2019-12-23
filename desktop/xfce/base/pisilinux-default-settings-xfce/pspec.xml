@@ -31,6 +31,7 @@
 			<Dependency>orage</Dependency>
 			<Dependency>mpv</Dependency>
 			<Dependency>nocsd</Dependency>
+			<Dependency>evince</Dependency>
 			<Dependency>file-roller</Dependency>
 			<Dependency>xfce4-notifyd</Dependency>
 			<Dependency>xfce4-xkb-plugin</Dependency>

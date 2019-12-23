@@ -9,15 +9,16 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.rawConfigure("\
-    --prefix=/usr \
-    --mandir=/usr/share/man \
-    --infodir=/usr/share/info CXXFLAGS='%s'" % get.CXXFLAGS())
+	autotools.rawConfigure("\
+	--prefix=/usr \
+	--mandir=/usr/share/man \
+	--infodir=/usr/share/info CXXFLAGS='%s'" % get.CXXFLAGS())
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "INSTALL", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "INSTALL", "NEWS", "README")
+

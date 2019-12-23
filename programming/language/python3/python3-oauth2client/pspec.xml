@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python3-oauth2client</Name>
+        <Homepage>https://github.com/googleapis/oauth2client</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>A client library for OAuth 2.0.</Summary>
+        <Description>This is a Python library for accessing resources protected by OAuth 2.0.</Description>
+        <Archive sha1sum="deb413dc837cdc1dd6729fa1c34155f14adb6135" type="targz">https://github.com/googleapis/oauth2client/archive/v4.1.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-oauth2client</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-pyasn1-modules</Dependency>
+            <Dependency>python3-pyasn1</Dependency>
+            <Dependency>python3-rsa</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-oauth2client</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-24</Date>
+            <Version>4.1.3</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

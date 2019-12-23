@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>A comprehensive HTTP client library in Python</Summary>
         <Description>httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
-        <Archive sha1sum="667ab86056d46a6329c9651791427be73c0ae764" type="targz">https://github.com/httplib2/httplib2/archive/v0.14.0.tar.gz</Archive>
+        <Archive sha1sum="5bd692987ab4be6cae5cb4ec98d0704e79d43f83" type="targz">https://github.com/httplib2/httplib2/archive/v0.15.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python-devel</Dependency>
@@ -25,11 +25,18 @@
         <Summary>A comprehensive HTTP client library in Python</Summary>
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/doc/python-httplib2</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>2019-12-24</Date>
+            <Version>0.15.0</Version>
+            <Comment>Rebuilt w/ py3.8 and version bump</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="5">
             <Date>2019-12-13</Date>
             <Version>0.14.0</Version>

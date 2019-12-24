@@ -2,7 +2,7 @@
 <PISI>
     <Source>
         <Name>python-appdirs</Name>
-        <Summary xml:lang="tr">Platforma ozel dizin belirleyebilen kucuk bir python kitapligi</Summary>
-        <Description xml:lang="tr">python-appdirs, yazdiginiz uygulama kullanici verisini nerede saklamali sorusuna yanit vermeye calisan kucuk bir python kitapligidir.</Description>
+        <Summary xml:lang="tr">Platforma özel dizin belirleyebilen küçük bir python kitaplığı.</Summary>
+        <Description xml:lang="tr">python-appdirs, yazdığınız uygulama kullanıcı verisini nerede saklamalı sorusuna yanıt vermeye çalışan küçük bir python kitaplığıdır.</Description>
     </Source>
 </PISI>

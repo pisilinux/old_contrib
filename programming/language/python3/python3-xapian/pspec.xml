@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-xapian</Name>
+        <Homepage>https://xapian.org/docs/bindings/python/</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>GPL-2</License>
+        <IsA>library</IsA>
+        <Summary>Python3 bindings for xapian-core</Summary>
+        <Description>Xapian is an open source search engine library. python-xapian provides python bindings for xapian library.</Description>
+        <Archive sha1sum="3589216601876c88362565e0e6a1475a6c09c8d7" type="tarxz">https://oligarchy.co.uk/xapian/1.4.14/xapian-bindings-1.4.14.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-sphinx-alabaster-theme</Dependency>
+            <Dependency>xapian-core-devel</Dependency>
+            <Dependency>python3-imagesize</Dependency>
+            <Dependency>python3-requests</Dependency>
+            <Dependency>python3-urllib3</Dependency>
+            <Dependency>python3-chardet</Dependency>
+            <Dependency>python3-sphinx</Dependency>
+            <Dependency>python3-Babel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-idna</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>zlib-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-xapian</Name>
+        <Summary>Python3 bindings for Xapian</Summary>
+        <RuntimeDependencies>
+            <Dependency>xapian-core</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python3-xapian-docs</Name>
+        <Summary>Documentation files for python3-xapian</Summary>
+        <Description>python3-xapian-docs provides documentation files for python3-xapian.</Description>
+        <RuntimeDependencies>
+            <Dependency>python3-xapian</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/python3-xapian</Path>
+            <Path fileType="doc">/usr/share/doc/xapian3-bindings/python3</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-08</Date>
+            <Version>1.4.14</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

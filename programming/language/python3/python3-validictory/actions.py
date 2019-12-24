@@ -8,9 +8,6 @@ from pisi.actionsapi import pythonmodules
 
 def build():
     pythonmodules.compile(pyVer="3")
-    
-#def check():
-#    pythonmodules.compile("test", pyVer="3")
-    
+
 def install():
-    pythonmodules.install("-O1", pyVer="3")
+    pythonmodules.install(pyVer="3")

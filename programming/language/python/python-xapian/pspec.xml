@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-xapian</Name>
+        <Homepage>https://xapian.org/docs/bindings/python/</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>GPL-2</License>
+        <IsA>library</IsA>
+        <Summary>Python bindings for xapian-core</Summary>
+        <Description>Xapian is an open source search engine library. python-xapian provides python bindings for xapian library.</Description>
+        <Archive sha1sum="3589216601876c88362565e0e6a1475a6c09c8d7" type="tarxz">https://oligarchy.co.uk/xapian/1.4.14/xapian-bindings-1.4.14.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>xapian-core-devel</Dependency>
+            <Dependency>python-sphinx-alabaster-theme</Dependency>
+            <Dependency>python-imagesize</Dependency>
+            <Dependency>python-requests</Dependency>
+            <Dependency>python-urllib3</Dependency>
+            <Dependency>python-chardet</Dependency>
+            <Dependency>python-typing</Dependency>
+            <Dependency>python-Babel</Dependency>
+            <Dependency>python-idna</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>python-devel</Dependency>
+            <Dependency>python-sphinx</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-xapian</Name>
+        <Summary>Python bindings for Xapian</Summary>
+        <RuntimeDependencies>
+            <Dependency>xapian-core</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/xapian/_xapian.so</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/xapian/__init__.py</Path>
+            <Path fileType="library">/usr/lib/python2.7/site-packages/xapian/__init__.pyc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python-xapian-docs</Name>
+        <Summary>Documentation files for python-xapian</Summary>
+        <Description>python-xapian-docs provides documentation files for python-xapian.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">python-xapian</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/python-xapian</Path>
+            <Path fileType="doc">/usr/share/doc/xapian-bindings/python</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-08</Date>
+            <Version>1.4.14</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

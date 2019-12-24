@@ -9,6 +9,7 @@
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
         <License>BSD</License>
+        <PartOf>programming.language.python3</PartOf>
         <IsA>library</IsA>
         <Summary>Sphinx API for Web Apps</Summary>
         <Description>python3-sphinxcontrib-websupport is the Sphinx documentation generator.</Description>
@@ -37,6 +38,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2019-12-13</Date>
+            <Version>1.1.2</Version>
+            <Comment>Rebuilt w/ py3.8</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-11-13</Date>
             <Version>1.1.2</Version>

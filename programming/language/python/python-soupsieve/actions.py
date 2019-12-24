@@ -6,8 +6,6 @@
 
 from pisi.actionsapi import pythonmodules
 
-#WorkDir="beautifulsoup4-%s" % get.srcVERSION()
-
 def build():
     pythonmodules.compile()
 

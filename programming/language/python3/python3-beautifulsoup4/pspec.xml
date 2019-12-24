@@ -2,32 +2,33 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python-beautifulsoup4</Name>
+        <Name>python3-beautifulsoup4</Name>
         <Homepage>http://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
         <License>MIT</License>
-        <PartOf>programming.language.python</PartOf>
+        <PartOf>programming.language.python3</PartOf>
         <IsA>library</IsA>
         <Summary>HTML/XML parser for quick-turnaround applications like screen-scraping</Summary>
         <Description>Beautiful Soup parses arbitrarily invalid SGML and provides a variety of methods and Pythonic idioms for iterating and searching the parse tree.</Description>
         <Archive sha1sum="afec76610be96ce8141bf56885bea55ff458d457" type="targz">https://pypi.io/packages/source/b/beautifulsoup4/beautifulsoup4-4.8.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python-setuptools</Dependency>
-            <Dependency>python-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>python-beautifulsoup4</Name>
+        <Name>python3-beautifulsoup4</Name>
         <RuntimeDependencies>
-            <Dependency>python-soupsieve</Dependency>
+            <Dependency>python3-soupsieve</Dependency>
+            <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python2*</Path>
-            <Path fileType="doc">/usr/share/doc/python-beautifulsoup4</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-beautifulsoup4</Path>
         </Files>
     </Package>
     

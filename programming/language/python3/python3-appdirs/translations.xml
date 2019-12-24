@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-appdirs</Name>
+        <Summary xml:lang="tr">Platforma ozel dizin belirleyebilen kucuk bir python3 kitapligi</Summary>
+        <Description xml:lang="tr">python3-appdirs, yazdiginiz uygulama kullanici verisini nerede saklamali sorusuna yanit vermeye calisan kucuk bir python kitapligidir.</Description>
+    </Source>
+</PISI>

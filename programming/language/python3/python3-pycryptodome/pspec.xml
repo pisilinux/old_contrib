@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-pycryptodome</Name>
+        <Homepage>https://www.pycryptodome.org/</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>A self-contained Python package of low-level cryptographic primitives</Summary>
+        <Description>PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
+        <Archive sha1sum="1fea90dbec5e5746e880dd547661949c1ba94cf5" type="targz">https://github.com/Legrandin/pycryptodome/archive/v3.9.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-pycryptodome</Name>
+        <Summary>A self-contained Python package of low-level cryptographic primitives</Summary>
+        <RuntimeDependencies>
+            <!-- For faster public key operations we need GMP in our system. -->
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-pycryptodome</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-12-24</Date>
+            <Version>3.9.4</Version>
+            <Comment>First release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -2,7 +2,7 @@
 <PISI>
     <Source>
         <Name>python3-gpsoauth</Name>
-        <Summary xml:lang="tr">Google Play Hizmetleri OAuth icin bir python istemci kitapligi</Summary>
-        <Description xml:lang="tr">python-gpsoauth, Google Play Hizmetleri OAuth icin bir python istemci kitapligidir.</Description>
+        <Summary xml:lang="tr">Google Play Hizmetleri OAuth için bir python istemci kitaplığı</Summary>
+        <Description xml:lang="tr">python3-gpsoauth, Google Play Hizmetleri OAuth için bir python istemci kitaplığıdır.</Description>
     </Source>
 </PISI>

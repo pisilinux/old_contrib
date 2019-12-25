@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-pycryptodomex</Name>
+        <Homepage>https://pypi.org/project/pycryptodomex/</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>A self-contained Python package of low-level cryptographic primitives and doesn't conflict with pycrypto.</Summary>
+        <Description>PyCryptodomex is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
+        <Archive sha1sum="8616f7b6e4e8d84b36b8a00f57e55d691f0a32cb" type="targz">https://files.pythonhosted.org/packages/31/19/af19522f294004818c8bf24809d07a76fae7119b2dd8a473e44318912973/pycryptodomex-3.9.4.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-pycryptodomex</Name>
+        <Summary>A self-contained Python package of low-level cryptographic primitives</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+            <!-- For faster public key operations we need GMP in our system. -->
+            <Dependency>gmp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-pycryptodomex</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-12-24</Date>
+            <Version>3.9.4</Version>
+            <Comment>First release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

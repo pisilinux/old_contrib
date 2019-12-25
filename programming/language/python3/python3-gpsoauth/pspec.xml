@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python3-gpsoauth</Name>
+        <Homepage>https://github.com/simon-weber/gpsoauth</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>A python client library for Google Play Services OAuth.</Summary>
+        <Description>python-gpsoauth allows python code to use the “master token” flow.</Description>
+        <Archive sha1sum="1c31aa2f688cb034f3401871a76f2964addf1e39" type="targz">https://github.com/simon-weber/gpsoauth/archive/0.4.2-rc.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-gpsoauth</Name>
+        <Summary>A python3 client library for Google Play Services OAuth.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-pycryptodomex</Dependency>
+            <Dependency>python3-requests</Dependency>
+            <Dependency>python3-urllib3</Dependency>
+            <Dependency>python3-chardet</Dependency>
+            <Dependency>python3-idna</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-gpsoauth</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-24</Date>
+            <Version>0.4.2.2</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

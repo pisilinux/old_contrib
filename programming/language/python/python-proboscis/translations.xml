@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-proboscis</Name>
+        <Summary xml:lang="tr">Python için TestNG özelliklerini getirebilen python kitaplığıdır</Summary>
+        <Description xml:lang="tr">python-proboscis, Python'un gömülü unittest modülünü ve Nose bağlayıcılarını TestNG'den genişleten bir test çatısıdır.</Description>
+    </Source>
+</PISI>

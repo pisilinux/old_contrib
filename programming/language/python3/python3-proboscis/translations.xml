@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-proboscis</Name>
+        <Summary xml:lang="tr">Python3 için TestNG özelliklerini getirebilen python kitaplığıdır</Summary>
+        <Description xml:lang="tr">python3-proboscis, Python3'un gömülü unittest modülünü ve Nose bağlayıcılarını TestNG'den genişleten bir test çatısıdır.</Description>
+    </Source>
+</PISI>

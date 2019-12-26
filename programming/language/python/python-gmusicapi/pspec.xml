@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python-gmusicapi</Name>
+        <Homepage>https://github.com/simon-weber/gmusicapi</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>An unofficial client library for Google Music</Summary>
+        <Description>An unofficial api for Google Play Music. gmusicapi allows control of Google Music with Python.</Description>
+        <Archive sha1sum="9841de41a0d10bb4536315f2a496d51a23d38a35" type="targz">https://github.com/simon-weber/gmusicapi/archive/12.1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-gmusicapi</Name>
+        <RuntimeDependencies>
+            <Dependency>python-mechanicalsoup</Dependency>
+            <Dependency>python-oauth2client</Dependency>
+            <Dependency>python-validictory</Dependency>
+            <Dependency>python-decorator</Dependency>
+            <Dependency>python-dateutil</Dependency>
+            <Dependency>python-gpsoauth</Dependency>
+            <Dependency>python-httplib2</Dependency>
+            <Dependency>python-requests</Dependency>
+            <Dependency>python-appdirs</Dependency>
+            <Dependency>python-chardet</Dependency>
+            <Dependency>python-mutagen</Dependency>
+            <Dependency>python-urllib3</Dependency>
+            <Dependency>python-future</Dependency>
+            <Dependency>python-idna</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>protobuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-gmusicapi</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-23</Date>
+            <Version>12.1.1</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

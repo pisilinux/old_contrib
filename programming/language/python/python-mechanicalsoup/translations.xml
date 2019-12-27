@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-mechanicalsoup</Name>
+        <Summary xml:lang="tr">Ağ sayfalarıyla etkileşmeyi otomatize edebilen bir python kitaplığıdır</Summary>
+        <Description xml:lang="tr">MechanicalSoup otomatik olarak çerezleri saklayabilen ve gönderebilen, yönlendirmeler ile bağlantıları izleyebilen, form gönderebilen bir python kitaplığıdır.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-dnspython</Name>
+        <Summary xml:lang="tr">Python3 için DNS araç takımıdır.</Summary>
+        <Description xml:lang="tr">python3-dnspython DNS araç takımıdır. Neredeyse tüm kayıt türlerini destekler; bunları sorgular, alan nakilleri ve dinamik güncelemeler yapabilir.</Description>
+    </Source>
+</PISI>

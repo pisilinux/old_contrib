@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-funcsigs</Name>
+        <Homepage>https://github.com/pkkid/python-plexapi</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>Python function signatures from PEP362.</Summary>
+        <Description>python-funcsigs is a backport of the PEP 362 function signature features from Python 3.3's inspect module. The backport is compatible with Python 2.6, 2.7 as well as 3.3 and up. 3.2 was supported by version 0.4, but with setuptools and pip no longer supporting 3.2, we cannot make any statement about 3.2</Description>
+        <Archive sha1sum="d09f1a17d4b7323f815e27c1baabfa1f4dd2d9fe" type="targz">https://files.pythonhosted.org/packages/94/4a/db842e7a0545de1cdb0439bb80e6e42dfe82aaeaadd4072f2263a4fbed23/funcsigs-1.0.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-funcsigs</Name>
+        <Summary>Python function signatures from PEP362.</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-funcsigs</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-12-26</Date>
+            <Version>1.0.2</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

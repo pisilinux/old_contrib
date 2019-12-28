@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python-tqdm</Name>
+        <Homepage>https://github.com/tqdm/tqdm</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>A Fast, Extensible Progress Bar for Python and CLI.</Summary>
+        <Description>python-tqdm provides a fast, extensible progress bar for python and commandline. Instantly make your loops show a smart progress meter - just wrap any iterable with tqdm(iterable), and you're done!</Description>
+        <Archive sha1sum="ada87817b81c2416930cc9ab108e143bb196dcd5" type="targz">https://github.com/tqdm/tqdm/archive/v4.41.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-tqdm</Name>
+        <Summary>A Fast, Extensible Progress Bar for Python and CLI.</Summary>
+        <Files>
+            <Path fileType="executable">/usr/bin/tqdm-py2</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-tqdm</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-25</Date>
+            <Version>4.41.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

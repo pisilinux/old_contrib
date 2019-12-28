@@ -23,12 +23,12 @@
     <Package>
         <Name>python-rsa</Name>
         <Files>
-            <Path fileType="executable">/usr/bin/pyrsa-verify</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-keygen</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-priv2pub</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-sign</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-encrypt</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-decrypt</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-verify-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-keygen-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-priv2pub-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-sign-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-encrypt-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-decrypt-py2</Path>
             <Path fileType="library">/usr/lib/python2*</Path>
             <Path fileType="doc">/usr/share/doc/python-rsa</Path>
         </Files>

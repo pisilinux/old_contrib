@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>adwaita-qt</Name>
+		<Homepage>https://github.com/FedoraQt/adwaita-qt</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<License>LGPLv2.1</License>
+		<IsA>data</IsA>
+		<Summary>A style to bend Qt applications to look like they belong into GNOME Shell.</Summary>
+		<Description>A native style to bend Qt4 and Qt5 applications to look like they belong into GNOME Shell.</Description>
+		<Archive sha1sum="baf1d29c536bff8d39443bc052c0b57b7a8eb49e" type="targz">
+			https://github.com/FedoraQt/adwaita-qt/archive/1.1.1.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>adwaita-qt</Name>
+		<Files>
+			<Path fileType="library">/usr/lib/qt5/plugins/styles/adwaita.so</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-12-27</Date>
+			<Version>1.1.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

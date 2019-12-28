@@ -22,13 +22,16 @@
 
     <Package>
         <Name>python3-rsa</Name>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin/pyrsa-verify3</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-keygen3</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-priv2pub3</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-sign3</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-encrypt3</Path>
-            <Path fileType="executable">/usr/bin/pyrsa-decrypt3</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-verify</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-keygen</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-priv2pub</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-sign</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-encrypt</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-decrypt</Path>
             <Path fileType="library">/usr/lib/python3*</Path>
             <Path fileType="doc">/usr/share/doc/python3-rsa</Path>
         </Files>

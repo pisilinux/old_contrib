@@ -24,11 +24,6 @@
 
 	<Package>
 		<Name>adwaita-qt</Name>
-		<RuntimeDependencies>
-			<!--
-			<Dependency></Dependency>
-			-->
-		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib/qt5/plugins/styles/adwaita.so</Path>
 			<Path fileType="doc">/usr/share/doc</Path>

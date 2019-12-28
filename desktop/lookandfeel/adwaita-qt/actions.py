@@ -6,7 +6,6 @@
 
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
 
 def setup():
 	cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr -DUSE_QT4=OFF")

@@ -2,7 +2,12 @@
 <PISI>
     <Source>
         <Name>molequeue</Name>
-        <Summary xml:lang="tr">Desktop integration of high performance computing resources</Summary>
-        <Description xml:lang="tr">Yüksek performanslı bilgi işlem kaynaklarının masaüstü entegrasyonu</Description>
+        <Summary xml:lang="tr">Yüksek performanslı bilgi işlem kaynaklarının masaüstü entegrasyonu</Summary>
+        <Description xml:lang="tr">MoleQueue hem yerel hem uzak bilişsel kaynakların çalıştırılması, soyutlama yapılması, düzenlenmesi ve eşgüdümleme yapılabilmesi için açik kaynaklı çok-platformlu bir masaüstü uygulamasıdır.</Description>
     </Source>
+    <Package>
+        <Name>molequeue-devel</Name>
+        <Summary xml:lang="tr">molequeue için geliştime dosyaları</Summary>
+        <Description xml:lang="tr">molequeue-devel, molequeue için geliştime dosyaları içerir.</Description>
+    </Package>
 </PISI>

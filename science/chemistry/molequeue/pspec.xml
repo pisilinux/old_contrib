@@ -11,7 +11,7 @@
         <License>custom</License>
         <IsA>library</IsA>
         <Summary>Desktop integration of high performance computing resources</Summary>
-        <Description>Yüksek performanslı bilgi işlem kaynaklarının masaüstü entegrasyonu</Description>
+        <Description>MoleQueue is an open-source, cross-platform, system-tray resident desktop application for abstracting, managing, and coordinating the execution of tasks both locally and on remote computational resources.</Description>
         <Archive sha1sum="45ad4450aa9732a97ec309681a2b03b9b15568f8" type="targz">https://github.com/OpenChemistry/molequeue/releases/download/0.9.0/molequeue-0.9.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python3-zeroconf</Name>
+        <Homepage>https://github.com/jstasiak/python-zeroconf</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>LGPLv2</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>A pure python3 implementation of multicast DNS service discovery.</Summary>
+        <Description>python3-zeroconf is a pure Python3 Multicast DNS Service Discovery Library (Bonjour/Avahi compatible).</Description>
+        <Archive sha1sum="5643417d89cdca2e0792772068c491fd3351aef4" type="targz">https://github.com/jstasiak/python-zeroconf/archive/0.24.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-zeroconf</Name>
+        <Summary>A pure python3 implementation of multicast DNS service discovery.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-ifaddr</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-zeroconf</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-25</Date>
+            <Version>0.24.3</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python3-gmusicapi</Name>
+        <Homepage>https://github.com/simon-weber/gmusicapi</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>An unofficial client library for Google Music</Summary>
+        <Description>An unofficial api for Google Play Music. gmusicapi allows control of Google Music with Python3.</Description>
+        <Archive sha1sum="9841de41a0d10bb4536315f2a496d51a23d38a35" type="targz">https://github.com/simon-weber/gmusicapi/archive/12.1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-gmusicapi</Name>
+        <RuntimeDependencies>
+            <Dependency>python3-mechanicalsoup</Dependency>
+            <Dependency>python3-oauth2client</Dependency>
+            <Dependency>python3-validictory</Dependency>
+            <Dependency>python3-decorator</Dependency>
+            <Dependency>python3-protobuf</Dependency>
+            <Dependency>python3-dateutil</Dependency>
+            <Dependency>python3-gpsoauth</Dependency>
+            <Dependency>python3-httplib2</Dependency>
+            <Dependency>python3-requests</Dependency>
+            <Dependency>python3-appdirs</Dependency>
+            <Dependency>python3-mutagen</Dependency>
+            <Dependency>python3-future</Dependency>
+            <Dependency>python3-six</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-gmusicapi</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-23</Date>
+            <Version>12.1.1</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

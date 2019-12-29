@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-plexapi</Name>
+        <Homepage>https://github.com/pkkid/python-plexapi</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>BSD-3</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>Unofficial Python bindings for the Plex API.</Summary>
+        <Description>Unofficial Python bindings for the Plex API. Our goal is to match all capabilities of the official Plex Web Client.</Description>
+        <Archive sha1sum="d6e01a43c52851d2734053c50a57a46dd4e3354d" type="targz">https://files.pythonhosted.org/packages/16/85/54fa59b0b6dc42a3d0b7280adbfe4b452df57e4755a50b092be2c9885c3c/PlexAPI-3.3.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-plexapi</Name>
+        <Summary>Unofficial Python bindings for the Plex API.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-websocket-client</Dependency>
+            <Dependency>python-funcsigs</Dependency>
+            <Dependency>python-requests</Dependency>
+            <Dependency>python-urllib3</Dependency>
+            <Dependency>python-chardet</Dependency>
+            <Dependency>python-idna</Dependency>
+            <Dependency>python-mock</Dependency>
+            <Dependency>python-tqdm</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-plexapi</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-12-26</Date>
+            <Version>3.3.0</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

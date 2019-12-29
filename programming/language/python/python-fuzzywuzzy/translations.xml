@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-fuzzywuzzy</Name>
+        <Summary xml:lang="tr">Python ile sözcük karşılaştırma/bulma modülü</Summary>
+        <Description xml:lang="tr">python-fuzzywuzzy Levenshtein uzaklığını kullanarak bölümler arası ayrımları hesaplayan kullanımı basit bir python modülüdür.</Description>
+    </Source>
+</PISI>

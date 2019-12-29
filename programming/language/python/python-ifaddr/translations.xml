@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-ifaddr</Name>
+        <Summary xml:lang="tr">Sistemdeki tüm ağ kartlarının IP addreslerini numaralandırıp sıralayabilen bir python kitaplığıdır.</Summary>
+        <Description xml:lang="tr">python-ifaddr bilgisayarınızda bulunan tüm ağ kartlarının ip adreslerini döndürebilen bir python kitaplığıdır.</Description>
+    </Source>
+</PISI>

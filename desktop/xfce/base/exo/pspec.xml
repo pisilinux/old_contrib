@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>exo</Name>
@@ -17,8 +17,8 @@
 		<Description>
 			exo is an extension library to Xfce, developed by os-cillation. While Xfce comes with quite a few libraries that are targeted at desktop development, exo is targeted at application development.
 		</Description>
-		<Archive sha1sum="46c8c05cc87546750ab81c690bae58a37e7a1953" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14/src/exo-0.12.8.tar.bz2
+		<Archive sha1sum="f44111614d5906630d40d0dab442719c7c6f3566" type="tarbz2">
+			https://archive.xfce.org/src/xfce/exo/0.12/exo-0.12.11.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -47,9 +47,10 @@
 			<Dependency>atk</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="config">/etc</Path>
+			<Path fileType="config">/etc/xdg/xfce4</Path>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="library">/usr/lib/xfce4</Path>
 			<Path fileType="data">/usr/share</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="man">/usr/share/man</Path>
@@ -85,6 +86,13 @@
 	</Package>
 
 	<History>
+		<Update release="14">
+			<Date>2019-12-29</Date>
+			<Version>0.12.11</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="13">
 			<Date>2019-08-11</Date>
 			<Version>0.12.8</Version>

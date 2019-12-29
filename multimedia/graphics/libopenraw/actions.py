@@ -9,15 +9,16 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--disable-static")
+	autotools.configure("--disable-dependency-tracking --disable-static --enable-gnome")
 
 def build():
 	autotools.make()
 
+def check():
+	autotools.make("check")
+
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.removeDir("usr/share/gnome-control-center")
-
-	pisitools.dodoc("AUTHORS", "ChangeLog",	"COPYING", "NEWS", "README", "THANKS")
+	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README", "TODO")
 

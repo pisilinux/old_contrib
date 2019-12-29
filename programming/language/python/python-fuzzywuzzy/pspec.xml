@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python-fuzzywuzzy</Name>
+        <Homepage>https://github.com/seatgeek/fuzzywuzzy</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>python-fuzzywuzzy is a pure-Python RSA implementation</Summary>
+        <Description>Fuzzy string matching like a boss. It uses Levenshtein Distance to calculate the differences between sequences in a simple-to-use package.</Description>
+        <Archive sha1sum="619dd5f4c8d9596ed3e90f429b90ca95afaed1cf" type="targz">https://github.com/seatgeek/fuzzywuzzy/archive/0.17.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-fuzzywuzzy</Name>
+        <RuntimeDependencies>
+            <Dependency>python-Levenshtein</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-fuzzywuzzy</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-26</Date>
+            <Version>0.17.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

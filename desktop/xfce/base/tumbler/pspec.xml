@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>tumbler</Name>
@@ -13,12 +13,13 @@
 		<PartOf>desktop.xfce.base</PartOf>
 		<Summary>A thumbnail service</Summary>
 		<Description>Tumbler is a thumbnail service for the filemanager of Xfce desktop environment.</Description>
-		<Archive sha1sum="f45f6e7fe1a7c38072bead3b5f18514671a18908" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14/src/tumbler-0.2.7.tar.bz2
+		<Archive sha1sum="0b992cf5179461784b85982b2be5bbbe372c63c3" type="tarbz2">
+			https://archive.xfce.org/src/xfce/tumbler/0.2/tumbler-0.2.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>freetype-devel</Dependency>
+			<Dependency>libopenraw-devel</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>poppler-glib-devel</Dependency>
 			<Dependency>libgsf-devel</Dependency>
@@ -47,6 +48,7 @@
 			<Dependency>libpng</Dependency>
 			<Dependency>freetype</Dependency>
 			<Dependency>gstreamer</Dependency>
+			<Dependency>libopenraw</Dependency>
 			<Dependency>gtk3</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -73,6 +75,13 @@
 	</Package>
 
 	<History>
+		<Update release="13">
+			<Date>2019-12-29</Date>
+			<Version>0.2.8</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
 		<Update release="12">
 			<Date>2019-08-12</Date>
 			<Version>0.2.7</Version>

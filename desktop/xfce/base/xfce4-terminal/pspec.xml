@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-terminal</Name>
@@ -16,8 +16,8 @@
 		<Description>
 			Terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.
 		</Description>
-		<Archive sha1sum="11117241f5891ea1fd831e86b0db57ed37a60ee2" type="tarbz2">
-			http://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.8.tar.bz2
+		<Archive sha1sum="2d792aa4c46caf29559379e11e511f5fe56a529d" type="tarbz2">
+			https://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.9.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -54,6 +54,13 @@
 	</Package>
 
 	<History>
+		<Update release="10">
+			<Date>2019-12-29</Date>
+			<Version>0.8.9.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="9">
 			<Date>2019-07-28</Date>
 			<Version>0.8.8</Version>

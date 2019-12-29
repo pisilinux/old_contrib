@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-plexapi</Name>
+        <Summary xml:lang="tr">Plex API için resmi olmayan python3 bağlayıcıları</Summary>
+        <Description xml:lang="tr">python3-plexapi, Plex Ağ İstemcisinin tüm yeteneklerini python üzerinden denetlenmesini sağlama amacıyla yapılmış bir python3 kitaplığıdır.</Description>
+    </Source>
+</PISI>

@@ -6,7 +6,6 @@
 
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
 
 def setup():
     cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
@@ -18,4 +17,4 @@ def build():
 def install():
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    #pisitools.dodoc("LICENSE", "CONTRIB*", "README*")
+    pisitools.dodoc("LICENSE", "README*")

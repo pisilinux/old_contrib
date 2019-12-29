@@ -7,7 +7,7 @@
 from pisi.actionsapi import pythonmodules
 
 def build():
-    pythonmodules.compile(pyVer="3")
+    pythonmodules.compile()
 
 def install():
-    pythonmodules.install(pyVer="3")
+    pythonmodules.install()

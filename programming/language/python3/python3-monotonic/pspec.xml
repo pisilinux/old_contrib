@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python3-monotonic</Name>
+        <Homepage>https://github.com/atdt/monotonic</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>An implementation of time.monotonic() for Python 2 and  &lt;3.3</Summary>
+        <Description>This module provides a monotonic() function which returns the value (in fractional seconds) of a clock which never goes backwards. On Python 3.3 or newer, monotonic will be an alias of time.monotonic from the standard library. On older versions, it will fall back to an equivalent implementation:</Description>
+        <Archive sha1sum="f9d76beb02d72041b247f90bf745bce10a320db5" type="targz">https://github.com/atdt/monotonic/archive/1.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-monotonic</Name>
+        <Summary>An implementation of time.monotonic() for Python 2 and  &lt;3.3</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-monotonic</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-26</Date>
+            <Version>1.5</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

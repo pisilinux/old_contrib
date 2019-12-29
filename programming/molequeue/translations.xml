@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>molequeue</Name>
-        <Summary xml:lang="tr">Desktop integration of high performance computing resources</Summary>
-        <Description xml:lang="tr">Yüksek performanslı bilgi işlem kaynaklarının masaüstü entegrasyonu</Description>
-    </Source>
-</PISI>

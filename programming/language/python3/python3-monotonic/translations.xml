@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-monotonic</Name>
+        <Summary xml:lang="tr">Python2 ve 3.3'den oncesi icin time.monotonic() yordamini saglayan kitaplik</Summary>
+        <Description xml:lang="tr">Bu kitaplik geriye donuklugu saglamak icin hazirlanmistir ve python 3.3 ve ust surumlerde bulunan monotonic kitapligini saglar.</Description>
+    </Source>
+</PISI>

@@ -8,14 +8,17 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-def setup():
-	pisitools.cxxflags.add("-O2 -DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function")
+t = 'FILESDIR=/usr/share/cppcheck CFGDIR=/usr/share/cppcheck/cfg'
 
 def build():
-	autotools.make("MATCHCOMPILER=yes FILESDIR=/usr/share/cppcheck HAVE_RULES=yes")
+	pisitools.cxxflags.add("-DNDEBUG -Wall -Wno-sign-compare -Wno-unused-function")
+	autotools.make("MATCHCOMPILER=yes %s HAVE_RULES=yes" % t)
+
+def check():
+	autotools.make("check %s" % t)
 
 def install():
-	autotools.rawInstall("DESTDIR=%s FILESDIR=/usr/share/cppcheck" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s %s" % (get.installDIR(), t))
 
 	pisitools.dodoc("AUTHORS", "COPYING", "readme*")
 

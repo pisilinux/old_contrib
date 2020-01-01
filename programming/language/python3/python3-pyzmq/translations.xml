@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-pyzmq</Name>
+        <Summary xml:lang="tr">PyZMQ: ZeroMQ icin Python3 baglayicilari</Summary>
+        <Description xml:lang="tr">python3-pyzmq, ZeroMQ icin Python3 baglayicilari icerir.</Description>
+    </Source>
+</PISI>

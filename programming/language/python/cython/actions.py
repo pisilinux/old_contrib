@@ -25,3 +25,6 @@ def install():
         pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)
        
     pisitools.dodoc("COPYING*", "README*", "USAGE*", "LICENSE*")
+    pisitools.rename("usr/bin/cygdb", "cygdb-py2")
+    pisitools.rename("usr/bin/cython", "cython-py2")
+    pisitools.rename("usr/bin/cythonize", "cythonize-py2")

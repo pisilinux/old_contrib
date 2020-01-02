@@ -2,7 +2,7 @@
 <PISI>
     <Source>
         <Name>python-monotonic</Name>
-        <Summary xml:lang="tr">Python2 ve 3.3'den oncesi icin time.monotonic() yordamini saglayan kitaplik</Summary>
-        <Description xml:lang="tr">Bu kitaplik geriye donuklugu saglamak icin hazirlanmistir ve python 3.3 ve ust surumlerde bulunan monotonic kitapligini saglar.</Description>
+        <Summary xml:lang="tr">Python2 ve 3.3'den öncesi için time.monotonic() yordamını sağlayan kitaplık</Summary>
+        <Description xml:lang="tr">Bu kitaplık geriye dönüklüğü sağlamak için hazırlanmıştır ve python 3.3 ve üst sürümlerde bulunan monotonic kitaplığını sağlar.</Description>
     </Source>
 </PISI>

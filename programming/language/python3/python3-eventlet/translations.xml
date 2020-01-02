@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-eventlet</Name>
+        <Summary xml:lang="tr">Yüksek seviyeli bir eşzamanlı programlama modülü</Summary>
+        <Description xml:lang="tr">python3-eventlet, nasıl kod yazdığınıza bakmayan ama kodu nasıl çalıştırdığınızı düzenleyebilen/değiştirebilen yüksek seviyeli bir ağ kitaplığıdır.</Description>
+    </Source>
+</PISI>

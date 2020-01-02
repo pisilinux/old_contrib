@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python3-eventlet</Name>
+        <Homepage>https://github.com/eventlet/eventlet</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>Highly concurrent networking library.</Summary>
+        <Description>Eventlet is a concurrent networking library for Python that allows you to change how you run your code, not how you write it.</Description>
+        <Archive sha1sum="dc4b3d1a45ae0e66519b70c0d6189610b6d35b24" type="targz">https://files.pythonhosted.org/packages/5a/e3/466d72d12a09cef2b80dea685141afd65914fd1cdea0be0609779be05e92/eventlet-0.25.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-eventlet</Name>
+        <Summary>Highly concurrent networking library.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-dnspython</Dependency>
+            <Dependency>python3-monotonic</Dependency>
+            <Dependency>python3-greenlet</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-eventlet</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-26</Date>
+            <Version>0.25.1</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

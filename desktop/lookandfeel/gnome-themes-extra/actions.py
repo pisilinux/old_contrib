@@ -9,22 +9,19 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+w = "%s/%s" % (get.workDIR(), get.srcDIR())
+t = "./themes/*/gtk-2.0"
+
 def setup():
 	pisitools.dosed("themes/Adwaita-dark/gtk-2.0/hacks-dark.rc", "000000", "777777")
-	shelltools.system("sed -i '82a\ \ GtkMenuBar::window-dragging\ =\ 1' themes/Adwaita*/gtk-2.0/main.rc")
-	shelltools.system("sed -i '83a\ \ GtkToolbar::window-dragging\ =\ 1' themes/Adwaita*/gtk-2.0/main.rc")
+	shelltools.system("sed -i '82a\ \ GtkMenuBar::window-dragging\ =\ 1' %s/main.rc" % t)
+	shelltools.system("sed -i '83a\ \ GtkToolbar::window-dragging\ =\ 1' %s/main.rc" % t)
 
-	shelltools.cd("./themes/Adwaita/gtk-2.0/")
-	pisitools.unlink("./assets/*")
-	for f in shelltools.ls("*.sh"):
-		shelltools.system("./%s" % f)
+	shelltools.unlink("%s/assets/*" % t)
+	shelltools.copy("themes/Adwaita/gtk-2.0/assets-external.svg", "themes/Adwaita-dark/gtk-2.0/")
+	for i in ["themes/Adwaita/gtk-2.0", "themes/Adwaita-dark/gtk-2.0"]:
+		shelltools.system("cd %s; ./render-assets.sh; ./render-assets-external.sh; cd %s" % (i, w))
 
-	shelltools.cd("../../Adwaita-dark/gtk-2.0/")
-	pisitools.unlink("./assets/*")
-	for f in shelltools.ls("*.sh"):
-		shelltools.system("./%s" % f)
-
-	shelltools.cd("%s/%s" % (get.workDIR(), get.srcDIR()))
 	shelltools.system("./autogen.sh --prefix=/usr")
 
 def build():

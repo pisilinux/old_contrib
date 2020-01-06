@@ -13,8 +13,8 @@
 		<IsA>app</IsA>
 		<Summary>The open source video transcoder.</Summary>
 		<Description>HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs. The program is also used to convert DVDs so they can be viewed on iPods, iPhones and most media players.</Description>
-		<Archive sha1sum="1af6cee51d09d3e5207446d811765d7ddf6df0dd" type="tarbz2">
-			https://download2.handbrake.fr/1.3.0/HandBrake-1.3.0-source.tar.bz2
+		<Archive sha1sum="213da9cebb19215d6e7ea49ac390ecc9cb6c749f" type="tarbz2">
+			https://download.handbrake.fr/releases/1.3.1/HandBrake-1.3.1-source.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>nasm</Dependency>
@@ -105,8 +105,8 @@
 
 	<History>
 		<Update release="7">
-			<Date>2019-12-15</Date>
-			<Version>1.3.0</Version>
+			<Date>2020-01-05</Date>
+			<Version>1.3.1</Version>
 			<Comment>Ver. up</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

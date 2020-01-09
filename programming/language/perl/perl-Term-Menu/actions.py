@@ -5,10 +5,8 @@
 # See the file http://www.gnu.org/copyleft/gpl.txt.
 
 from pisi.actionsapi import perlmodules
-from pisi.actionsapi import get
 from pisi.actionsapi import pisitools
-
-#WorkDir = "%s-%s" % (get.srcNAME()[5:], get.srcVERSION())
+from pisi.actionsapi import get
 
 def setup():
     perlmodules.configure()
@@ -22,5 +20,4 @@ def check():
 def install():
     perlmodules.install()
 
-    pisitools.dodoc("Changes", "MANIFEST", "README")
-
+    pisitools.dodoc("MANIFEST", "README")

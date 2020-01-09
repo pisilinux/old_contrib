@@ -11,17 +11,17 @@ from pisi.actionsapi import pisitools
 #WorkDir = "%s-%s" % (get.srcNAME()[5:], get.srcVERSION())
 
 def setup():
-    pisitools.dosed("Makefile.PL", "-Wall", "-Wall -Wno-cpp -Wno-pointer-sign -Wno-pointer-to-int-cast -Wno-discarded-qualifiers")
+    pisitools.dosed("Makefile.PL", "-Wall", "-Wall -Wno-cpp -Wno-pointer-sign -Wno-pointer-to-int-cast -Wno-discarded-qualifiers -Wno-deprecated-declarations")
     perlmodules.configure()
 
 def build():
     perlmodules.make()
 
-#def check():
-#    perlmodules.make("test")
+# takes too much time
+def check():
+    perlmodules.make("test")
 
 def install():
     perlmodules.install()
 
     pisitools.dodoc("Changes", "MANIFEST", "README*")
-

@@ -9,5 +9,6 @@
     <Package>
         <Name>exempi-devel</Name>
         <Summary xml:lang="tr">exempi için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">exempi-devel, exempi için geliştirme dosyaları sunar.</Description>
     </Package>
 </PISI>

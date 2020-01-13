@@ -4,12 +4,14 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 
 def setup():
-    autotools.autoreconf("-vfi")
-    autotools.configure("--disable-static --enable-unittest=no")
+    shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+    autotools.configure("--disable-static CPPFLAGS='-fno-strict-aliasing -DBanAllEntityUsage=1'")
+    pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
     autotools.make()
@@ -17,4 +19,4 @@ def build():
 def install():
     autotools.install()
 
-    pisitools.dodoc("ChangeLog", "AUTHORS", "NEWS", "README", "COPYING")
+    pisitools.dodoc("README", "COPYING")

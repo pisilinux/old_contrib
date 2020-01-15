@@ -1,0 +1,22 @@
+--- a/pybookreader/properties.py	2019-08-07 10:28:40.078706323 +0300
++++ b/pybookreader/properties.py	2019-08-07 10:29:18.097706838 +0300
+@@ -28,7 +28,7 @@
+         'hide_toolbar'                    : ['int',   0        ],
+         'hide_statusbar'                  : ['int',   0        ],
+         'hide_scrollbar'                  : ['int',   1        ],
+-        'font'                            : ['str',   'Normal' ],
++        'font'                            : ['str',   'Noto Serif' ],
+         'fg_color'                        : ['str',   '#000000'],
+         'bg_color'                        : ['str',   '#ffffff'],
+         'bookmark_tag_color'              : ['str',   '#ff0000'],
+@@ -86,8 +86,8 @@
+ class TextProperties:
+ 
+     text_properties_list = {
+-        'text_left_margin'        : [8, '_Left margin:',        0,    0,  40],
+-        'text_right_margin'       : [8, '_Right margin:',       1,    0,  40],
++        'text_left_margin'        : [8, '_Left margin:',        0,    0,  100],
++        'text_right_margin'       : [8, '_Right margin:',       1,    0,  100],
+         'text_pixels_above_lines' : [0, 'Pixels _above lines:', 2,  -20,  40],
+         'text_pixels_below_lines' : [0, 'Pixels _below lines:', 3,  -20,  40],
+         'text_pixels_inside_wrap' : [0, 'Pixels _inside wrap:', 4,  -20,  40],

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-settings</Name>
@@ -15,8 +15,8 @@
 		<Description>
 			Xfce4-settings is a configuration manager for Xfce desktop environment.
 		</Description>
-		<Archive sha1sum="4d3bb70993902c68ef5f0585e683274ce6e1895f" type="tarbz2">
-			https://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.1.tar.bz2
+		<Archive sha1sum="c273a19445bc5ee1cd57e6332bcd82b689093b21" type="tarbz2">
+			https://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.2.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -97,6 +97,13 @@
 	</Package>
 
 	<History>
+		<Update release="17">
+			<Date>2020-01-15</Date>
+			<Version>4.14.2</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="16">
 			<Date>2019-12-10</Date>
 			<Version>4.14.1</Version>

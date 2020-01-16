@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>milton</Name>
+		<Homepage>https://www.miltonpaint.com/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>multimedia.graphics</IsA>
+		<Summary>An infinite-canvas paint program.</Summary>
+		<Description>
+			Milton is an open source application that lets you Just Paint. There are no pixels, you can paint with (almost) infinite detail. It feels raster-based but it works with vectors. It is not an image editor. It is not a vector graphics editor. It is a program that lets you draw, sketch and paint. There is no save button, your work is persistent with unlimited undo.
+		</Description>
+		<Archive sha1sum="a0f3e9d5b57068c5be661bd372d3d82a51e6dc67" type="targz">
+			https://github.com/serge-rgb/milton/archive/v1.9.1.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>icoutils</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>mesa-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>libsdl2-devel</Dependency>
+			<Dependency>sdl2-image-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>milton</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2</Dependency>
+			<Dependency>mesa</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>libgcc</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin/milton</Path>
+			<Path fileType="data">/usr/share/font/truetype/Carlito</Path>
+			<Path fileType="data">/usr/share/font/truetype/Carlito/fonts.dir</Path>
+			<Path fileType="data">/usr/share/font/truetype/Carlito/fonts/scale</Path>
+			<Path fileType="data">/usr/share/fonts/truetype/Carlito/Carlito.ttf</Path>
+			<Path fileType="data">/usr/share/fonts/truetype/Carlito/Carlito.LICENSE</Path>
+			<Path fileType="data">/usr/share/applications/milton.desktop</Path>
+			<Path fileType="data">/usr/share/icons/hicolor/16x16/apps/milton.png</Path>
+			<Path fileType="data">/usr/share/icons/hicolor/32x32/apps/milton.png</Path>
+			<Path fileType="data">/usr/share/icons/hicolor/48x48/apps/milton.png</Path>
+			<Path fileType="data">/usr/share/icons/hicolor/64x64/apps/milton.png</Path>
+			<Path fileType="data">/usr/share/icons/hicolor/128x128/apps/milton.png</Path>
+			<Path fileType="data">/usr/share/icons/hicolor/256x256/apps/milton.png</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+		<AdditionalFiles>
+			<AdditionalFile owner="root" permission="0644" target="/usr/share/applications/milton.desktop">milton.desktop</AdditionalFile>
+		</AdditionalFiles>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-01-16</Date>
+			<Version>1.9.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

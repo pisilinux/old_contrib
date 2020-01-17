@@ -4,14 +4,13 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	shelltools.export("CFLAGS", "%s -Wno-deprecated-declarations" % get.CFLAGS())
-	autotools.configure("--enable-gtk3")
+	autotools.rawConfigure("\
+	-prefix=/usr -mandir=/usr/share/man -with-system-zlib -with-system-libpng")
 
 def build():
 	autotools.make()
@@ -19,5 +18,7 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "NEWS")
+	pisitools.dohtml("doc/*.html")
+	pisitools.dodoc(\
+	"AUTHORS.txt", "LICENSE.txt", "README.txt", "doc/history.txt", "doc/todo.txt")
 

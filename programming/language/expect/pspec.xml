@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>expect</Name>
-        <Homepage>http://expect.nist.gov/</Homepage>
+        <Homepage>https://core.tcl-lang.org/expect/index</Homepage>
         <Packager>
             <Name>Kamil Atlı</Name>
             <Email>suvari@pisilinux.org</Email>

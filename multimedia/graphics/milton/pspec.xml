@@ -41,7 +41,7 @@
 			<Path fileType="executable">/usr/bin/milton</Path>
 			<Path fileType="data">/usr/share/font/truetype/Carlito</Path>
 			<Path fileType="data">/usr/share/font/truetype/Carlito/fonts.dir</Path>
-			<Path fileType="data">/usr/share/font/truetype/Carlito/fonts/scale</Path>
+			<Path fileType="data">/usr/share/font/truetype/Carlito/fonts.scale</Path>
 			<Path fileType="data">/usr/share/fonts/truetype/Carlito/Carlito.ttf</Path>
 			<Path fileType="data">/usr/share/fonts/truetype/Carlito/Carlito.LICENSE</Path>
 			<Path fileType="data">/usr/share/applications/milton.desktop</Path>

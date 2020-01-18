@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Milton
+TryExec=milton
+Exec=milton %f
+Comment=An infinite-canvas paint program
+GenericName=Canvas Painting Program
+Type=Application
+Icon=milton
+Categories=Graphics;
+Terminal=false

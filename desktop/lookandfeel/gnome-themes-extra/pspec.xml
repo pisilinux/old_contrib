@@ -35,6 +35,9 @@
 
 	<Package>
 		<Name>gnome-themes-extra</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2-engines-murrine</Dependency>
+		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib/gtk-2.0/2.10.0/engines/libadwaita.so</Path>
 			<Path fileType="data">/usr/share/icons</Path>

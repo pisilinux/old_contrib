@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>exempi</Name>
-        <Homepage>http://libopenraw.freedesktop.org/wiki/Exempi</Homepage>
+        <Homepage>https://libopenraw.freedesktop.org/exempi/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

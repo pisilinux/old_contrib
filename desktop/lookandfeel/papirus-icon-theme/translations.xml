@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PISI>
-    <Source>
-        <Name>papirus-icon-theme</Name>
-        <Summary xml:lang="tr">Papirus simge teması</Summary>
-        <Description xml:lang="tr">Papirus simge teması</Description>
-    </Source>
+	<Source>
+		<Name>papirus-icon-theme</Name>
+		<Summary xml:lang="tr">Papirus simge teması</Summary>
+		<Description xml:lang="tr">Papirus simge teması</Description>
+	</Source>
 </PISI>

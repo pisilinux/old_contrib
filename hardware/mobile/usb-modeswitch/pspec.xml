@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>usb-modeswitch</Name>
-		<Homepage>http://www.draisberghof.de/usb_modeswitch/</Homepage>
+		<Homepage>https://www.draisberghof.de/usb_modeswitch/</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>

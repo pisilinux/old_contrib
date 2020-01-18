@@ -1,0 +1,24 @@
+--- a/ornamentbook/properties.py	2019-08-07 10:31:38.861708743 +0300
++++ b/ornamentbook/properties.py	2019-08-07 10:36:58.310713066 +0300
+@@ -78,8 +78,8 @@
+ 
+         if is_default:
+ 
+-            self.font_family        = 'Sans'
+-            self.font_size          = 16
++            self.font_family        = 'Noto Serif'
++            self.font_size          = 13
+             self.italic             = False
+             self.bold               = False
+             self.ascent             = None
+@@ -88,8 +88,8 @@
+             self.color              = '#000000'
+             self.justify            = 'fill'     # left | right | center | fill
+             self.hyphenate          = True
+-            self.left_indent        = 0
+-            self.right_indent       = 0
++            self.left_indent        = 40
++            self.right_indent       = 40
+             self.first_line_indent  = 0
+             self.pixels_inside_wrap = 0
+             self.pixels_above_line  = 0

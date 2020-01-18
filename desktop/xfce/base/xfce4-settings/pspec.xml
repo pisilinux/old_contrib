@@ -71,6 +71,7 @@
 			<Dependency>libXcursor</Dependency>
 			<Dependency>libxklavier</Dependency>
 			<Dependency>libxfce4util</Dependency>
+			<Dependency>network-manager-applet</Dependency>
 			<Dependency>xorg-input-libinput</Dependency>
 		</RuntimeDependencies>
 		<Files>

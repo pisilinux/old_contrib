@@ -29,7 +29,7 @@
 			<Dependency>xfdesktop</Dependency>
 			<Dependency>xfwm4</Dependency>
 			<Dependency>orage</Dependency>
-			<Dependency>mpv</Dependency>
+			<Dependency>mpv-player</Dependency>
 			<Dependency>nocsd</Dependency>
 			<Dependency>evince</Dependency>
 			<Dependency>file-roller</Dependency>

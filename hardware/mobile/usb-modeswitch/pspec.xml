@@ -13,10 +13,10 @@
 		<Summary>Mode switching tool for broadband devices</Summary>
 		<Description>usb-modeswitch brings up your data card into operational mode. When plugged in, they identify themselves as CD-ROM and present some non-Linux compatible installation files. This tool deactivates those CD-ROM devices and enables the real communication interface. It supports most devices manufactured by Huawei, T-Mobile, Vodafone, Option, ZTE, Novatel.</Description>
 		<Archive sha1sum="093079d5ca5aa33e8d0c9ad9cf0ff95a9ce76ab1" type="tarbz2">
-			http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-2.6.0.tar.bz2
+			https://www.draisberghof.de/usb_modeswitch/usb-modeswitch-2.6.0.tar.bz2
 		</Archive>
 		<Archive sha1sum="64e923d366fbb8c5954d17dd0e9e8b334d1863ff" type="tarbz2">
-			http://www.draisberghof.de/usb_modeswitch/usb-modeswitch-data-20191128.tar.bz2
+			https://www.draisberghof.de/usb_modeswitch/usb-modeswitch-data-20191128.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>tcl-devel</Dependency>

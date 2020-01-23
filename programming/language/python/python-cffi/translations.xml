@@ -3,6 +3,6 @@
     <Source>
         <Name>python-cffi</Name>
         <Summary xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Summary>
-        <Description xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Description>
+        <Description xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü kitaplığıdır.</Description>
     </Source>
 </PISI>

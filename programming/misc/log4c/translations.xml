@@ -9,5 +9,6 @@
     <Package>
         <Name>log4c-devel</Name>
         <Summary xml:lang="tr">log4c için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">log4c-devel, log4c için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

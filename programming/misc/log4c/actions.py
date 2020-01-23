@@ -9,6 +9,9 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+    # suppress compiler warnings
+    pisitools.cflags.add("-Wno-format -Wno-misleading-indentation -Wno-unused-const-variable \
+                          -Wno-pointer-to-int-cast -Wno-unused-function -Wno-int-to-pointer-cast")
     autotools.configure("--disable-static \
                          --disable-doc \
                          --disable-dependency-tracking")

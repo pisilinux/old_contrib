@@ -2,7 +2,7 @@
 <PISI>
     <Source>
         <Name>python-fudge</Name>
-        <Summary xml:lang="tr">Python kodlarken gercek nesneleri sahte, gercek olmayan nesneler ile degistiren python modulu.</Summary>
-        <Description xml:lang="tr">Python kodlarken gercek nesneleri sahte, gercek olmayan nesneler ile degistirip test yapmaniza olanak saglayan python modulu.</Description>
+        <Summary xml:lang="tr">Python kodlarken gerçek nesneleri sahte, gerçek olmayan nesneler ile değiştiren python modülü.</Summary>
+        <Description xml:lang="tr">Python kodlarken gerçek nesneleri sahte, gerçek olmayan nesneler ile değiştirip test yapmanıza olanak sağlayan python modülü.</Description>
     </Source>
 </PISI>

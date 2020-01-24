@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-fudge</Name>
+        <Homepage>http://farmdev.com/projects/fudge/</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python</PartOf>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Replace real objects with fakes (mocks, stubs, etc) while testing for Python.</Summary>
+        <Description>sFudge is a Python module for using fake objects (mocks and stubs) to test real ones.</Description>
+        <Archive sha1sum="8604713d242b8a147b30196677f92846057427ee" type="targz">https://files.pythonhosted.org/packages/65/71/f44731d536a9b146c5d9a4eb9d3bacd8aae7dbb3597382f3f9bd3d015577/fudge-1.1.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-fudge</Name>
+        <Summary>Replace real objects with fakes (mocks, stubs, etc) while testing for Python.</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-fudge</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-01-24</Date>
+            <Version>1.1.1</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

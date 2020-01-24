@@ -4029,8 +4029,11 @@
             <License>BSD</License>
             <IsA>library</IsA>
             <PartOf>multimedia.misc</PartOf>
+            <Summary xml:lang="fr">La librairie pour fichiers au format média Opus.</Summary>
             <Summary xml:lang="en">Stand-alone decoder library for .opus streams</Summary>
+            <Summary xml:lang="tr">Opus dosya biçimi kütüphanesi</Summary>
             <Description xml:lang="en">The opusfile and opusurl libraries provide a high-level API for decoding and seeking within .opus files on disk or over http(s).</Description>
+            <Description xml:lang="tr">OpusFile hem yerelde hem de uzakta bulunan opus medyalarini oynatabilen ve cozebilen ses kitapligidir.</Description>
             <Archive type="targz" sha1sum="fc3bf2a73be16836a16d9e55ff1097de3835dce3" name="opusfile-0.11.tar.gz">https://archive.mozilla.org/pub/opus/opusfile-0.11.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>openssl-devel</Dependency>
@@ -4058,20 +4061,24 @@
         <Package>
             <Name>opusfile-devel</Name>
             <Summary xml:lang="en">Development files for opusfile</Summary>
+            <Summary xml:lang="tr">opusfile için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">opusfile-devel, opusfile için geliştirme dosyaları içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="1">opusfile</Dependency>
+                <Dependency release="2">opusfile</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
                 <Path fileType="library">/usr/lib32/pkgconfig</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <Package>
             <Name>opusfile-docs</Name>
-            <Summary xml:lang="en">document files for opusfile</Summary>
+            <Summary xml:lang="en">Documentation files for opusfile</Summary>
+            <Summary xml:lang="tr">opusfile için belgelendirme dosyaları</Summary>
+            <Description xml:lang="tr">opusfile-docs, opusfile için belgelendirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="1">opusfile</Dependency>
+                <Dependency release="2">opusfile</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc/</Path>
@@ -4080,16 +4087,25 @@
         <Package>
             <Name>opusfile-32bit</Name>
             <Summary xml:lang="en">32-bit shared libraries for opusfile</Summary>
+            <Summary xml:lang="tr">opusfile için 32-bit paylaşımlı kitaplıklar</Summary>
+            <Description xml:lang="tr">opusfile-32bit, opusfile için 32-bit paylaşımlı kitaplıklar içerir.</Description>
             <PartOf>emul32</PartOf>
             <BuildType>emul32</BuildType>
             <RuntimeDependencies>
-                <Dependency release="1">opusfile</Dependency>
+                <Dependency release="2">opusfile</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib32</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-24</Date>
+                <Version>0.11</Version>
+                <Comment>Rebuild for new toolchain</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-06-24</Date>
                 <Version>0.11</Version>
@@ -12230,6 +12246,46 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-fudge</Name>
+            <Homepage>https://github.com/fudge-py/fudge</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Replace real objects with fakes (mocks, stubs, etc) while testing for Python.</Summary>
+            <Summary xml:lang="tr">Python kodlarken gerçek nesneleri sahte, gerçek olmayan nesneler ile değiştiren python modülü.</Summary>
+            <Description xml:lang="en">sFudge is a Python module for using fake objects (mocks and stubs) to test real ones.</Description>
+            <Description xml:lang="tr">Python kodlarken gerçek nesneleri sahte, gerçek olmayan nesneler ile değiştirip test yapmanıza olanak sağlayan python modülü.</Description>
+            <Archive type="targz" sha1sum="8604713d242b8a147b30196677f92846057427ee" name="fudge-1.1.1.tar.gz">https://files.pythonhosted.org/packages/65/71/f44731d536a9b146c5d9a4eb9d3bacd8aae7dbb3597382f3f9bd3d015577/fudge-1.1.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-fudge/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-fudge</Name>
+            <Summary xml:lang="en">Replace real objects with fakes (mocks, stubs, etc) while testing for Python.</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/python-fudge</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-24</Date>
+                <Version>1.1.1</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-mock</Name>
             <Homepage>https://github.com/testing-cabal/mock</Homepage>
             <Packager>
@@ -15292,7 +15348,7 @@
             <Summary xml:lang="tr">YouTube Chromecast APIsi sağlayan python3 bağlayıcısı.</Summary>
             <Description xml:lang="en">python3-pychromecast provides a way to talk with the Google Chromecast.</Description>
             <Description xml:lang="tr">python3-pychromecast, Google Chromecast ile konuşmayı sağayan bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="211f085d5bc9385d67ab16b437739e76abaa507e" name="4.1.0.tar.gz">https://github.com/balloob/pychromecast/archive/4.1.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="3604f51c2c479b092c107a6ec8598ec72a605c61" name="4.1.1.tar.gz">https://github.com/balloob/pychromecast/archive/4.1.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -15305,6 +15361,8 @@
             <RuntimeDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-protobuf</Dependency>
+                <Dependency>python3-requests</Dependency>
+                <Dependency>python3-zeroconf</Dependency>
                 <Dependency>python3-six</Dependency>
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
@@ -15314,9 +15372,61 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-24</Date>
+                <Version>4.1.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-25</Date>
                 <Version>4.1.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-soundcloud</Name>
+            <Homepage>https://github.com/soundcloud/soundcloud-python/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSDv2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">A Python wrapper around the Soundcloud API.</Summary>
+            <Summary xml:lang="tr">Soundcloud APIsini kullanabilen python sarmalayıcı modülü</Summary>
+            <Description xml:lang="en">python3-soundcloud is a Python wrapper around the Soundcloud API.</Description>
+            <Description xml:lang="tr">python3-spotipy Soundcloud APIsini kullanabilen python sarmalayıcı modülü sunar.</Description>
+            <Archive type="targz" sha1sum="a15798cb5b4d650fb81b34f644088aa521152baa" name="v0.5.0.tar.gz">https://github.com/soundcloud/soundcloud-python/archive/v0.5.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-soundcloud/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-soundcloud</Name>
+            <Summary xml:lang="en">A Python wrapper around the Soundcloud API.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3-requests</Dependency>
+                <Dependency>python3-six</Dependency>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/python3-soundcloud</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-24</Date>
+                <Version>0.5.0</Version>
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -16488,6 +16598,50 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-simplejson</Name>
+            <Homepage>https://github.com/simplejson/simplejson</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>AFL</License>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Simple, fast, extensible JSON encoder/decoder for Python.</Summary>
+            <Summary xml:lang="tr">Python için hızlı, genisletilebilir, basit bir JSON kodlayıcı/çozücü kitaplık.</Summary>
+            <Description xml:lang="en">simplejson is a simple, fast, complete, correct and extensible JSON (http://json.org) encoder and decoder for Python 3.3+ with legacy support for Python 2.5+. It is pure Python code with no dependencies, but includes an optional C extension for a serious speed boost.</Description>
+            <Description xml:lang="tr">Python için hızlı, genisletilebilir, basit bir JSON kodlayıcı/çozücü kitaplık modülü sunar.</Description>
+            <Archive type="targz" sha1sum="a66affe9eafa920ab8fca973e307ad07757ae093" name="v3.17.0.tar.gz">https://github.com/simplejson/simplejson/archive/v3.17.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-simplejson/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-simplejson</Name>
+            <Summary xml:lang="en">Simple, fast, extensible JSON encoder/decoder for Python.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/python3-simplejson</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-24</Date>
+                <Version>3.17.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python3-dateutil</Name>
             <Homepage>https://github.com/dateutil/dateutil</Homepage>
             <Packager>
@@ -16615,6 +16769,49 @@
             <Update release="1">
                 <Date>2019-12-24</Date>
                 <Version>1.2.6.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-fudge</Name>
+            <Homepage>https://github.com/fudge-py/fudge</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Replace real objects with fakes (mocks, stubs, etc) while testing for Python.</Summary>
+            <Summary xml:lang="tr">Python kodlarken gerçek nesneleri sahte, gerçek olmayan nesneler ile değiştiren python modülü.</Summary>
+            <Description xml:lang="en">sFudge is a Python module for using fake objects (mocks and stubs) to test real ones.</Description>
+            <Description xml:lang="tr">Python kodlarken gerçek nesneleri sahte, gerçek olmayan nesneler ile değiştirip test yapmanıza olanak sağlayan python modülü.</Description>
+            <Archive type="targz" sha1sum="8604713d242b8a147b30196677f92846057427ee" name="fudge-1.1.1.tar.gz">https://files.pythonhosted.org/packages/65/71/f44731d536a9b146c5d9a4eb9d3bacd8aae7dbb3597382f3f9bd3d015577/fudge-1.1.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-fudge/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-fudge</Name>
+            <Summary xml:lang="en">Replace real objects with fakes (mocks, stubs, etc) while testing for Python.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/python3-fudge</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-24</Date>
+                <Version>1.1.1</Version>
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -34049,123 +34246,6 @@
                 <Comment>First release</Comment>
                 <Name>Erdinç Gültekin</Name>
                 <Email>erdincgultekin@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>protobuf</Name>
-            <Homepage>https://developers.google.com/protocol-buffers/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>network.misc</PartOf>
-            <Summary xml:lang="en">Google&apos;s data interchange format</Summary>
-            <Summary xml:lang="tr">Google&apos;ın veri alış veriş biçimi</Summary>
-            <Description xml:lang="en">Protocol Buffers are a way of encoding structured data in an efficient yet extensible format. Google uses Protocol Buffers for almost all of its internal RPC protocols and file formats.</Description>
-            <Description xml:lang="tr">Protokol Arabellekleri(protobuf) yapılandırılmış veriyi kodlamak için verimli bir biçimdir. Google kendi içindeki bütün RPC protokolleri ve dosya biçimleri için Protokol Arabelleklerini kullanmaktadır.</Description>
-            <Archive type="targz" sha1sum="65deb27c67346345f9b3b9606400e793b8ae120d" name="protobuf-all-3.11.2.tar.gz">https://github.com/protocolbuffers/protobuf/releases/download/v3.11.2/protobuf-all-3.11.2.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python-setuptools</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/misc/protobuf/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>protobuf</Name>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib/libproto*</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="data">/usr/share/vim</Path>
-                <Path fileType="data">/usr/share/emacs</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>protobuf-devel</Name>
-            <Summary xml:lang="en">Development files for protobuf</Summary>
-            <Summary xml:lang="tr">protobuf için geliştirme dosyaları</Summary>
-            <Description xml:lang="tr">protobuf-devel, protobuf için geliştime dosyaları içerir.</Description>
-            <RuntimeDependencies>
-                <Dependency release="6">protobuf</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include/google/protobuf</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python-protobuf</Name>
-            <Summary xml:lang="en">Python 2 bindings for Google Protocol Buffers</Summary>
-            <Summary xml:lang="tr">protobuf için geliştirme dosyaları</Summary>
-            <Description xml:lang="tr">protobuf-devel, protobuf için geliştime dosyaları içerir.</Description>
-            <RuntimeDependencies>
-                <Dependency release="6">protobuf-devel</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>python3-protobuf</Name>
-            <Summary xml:lang="en">Python 3 bindings for Google Protocol Buffers</Summary>
-            <Summary xml:lang="tr">protobuf için geliştirme dosyaları</Summary>
-            <Description xml:lang="tr">protobuf-devel, protobuf için geliştime dosyaları içerir.</Description>
-            <RuntimeDependencies>
-                <Dependency release="6">protobuf-devel</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="6">
-                <Date>2019-12-25</Date>
-                <Version>3.11.2</Version>
-                <Comment>Version bump</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="5">
-                <Date>2016-03-23</Date>
-                <Version>3.0.0_beta2</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2015-02-16</Date>
-                <Version>3.0.0_pre1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Vedat Demir</Name>
-                <Email>vedat@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2015-02-03</Date>
-                <Version>2.6.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-02-05</Date>
-                <Version>2.5.0</Version>
-                <Comment>Version Bump.</Comment>
-                <Name>Alihan Öztürk</Name>
-                <Email>alihan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-03</Date>
-                <Version>2.4.1</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

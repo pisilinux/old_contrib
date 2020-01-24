@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<!DOCTYPE PISI SYSTEM 'https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
 <PISI>
     <Source>
         <Name>python3-pychromecast</Name>
@@ -8,12 +8,12 @@
             <Name>Blue Devil</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>MIT</License>
         <PartOf>programming.language.python3</PartOf>
+        <License>MIT</License>
         <IsA>library</IsA>
         <Summary>Python3 module to talk to Google Chromecast.</Summary>
         <Description>python3-pychromecast provides a way to talk with the Google Chromecast.</Description>
-        <Archive sha1sum="211f085d5bc9385d67ab16b437739e76abaa507e" type="targz">https://github.com/balloob/pychromecast/archive/4.1.0.tar.gz</Archive>
+        <Archive sha1sum="3604f51c2c479b092c107a6ec8598ec72a605c61" type="targz">https://github.com/balloob/pychromecast/archive/4.1.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
@@ -26,6 +26,8 @@
         <RuntimeDependencies>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python3-protobuf</Dependency>
+            <Dependency>python3-requests</Dependency>
+            <Dependency>python3-zeroconf</Dependency>
             <Dependency>python3-six</Dependency>
             <Dependency>python3</Dependency>
         </RuntimeDependencies>
@@ -36,6 +38,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-01-24</Date>
+            <Version>4.1.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-25</Date>
             <Version>4.1.0</Version>

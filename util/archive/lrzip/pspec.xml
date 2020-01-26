@@ -42,7 +42,7 @@
             <Dependency version="current">lrzip</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="headers">/usr/include/Lrzip.h</Path>
+            <Path fileType="header">/usr/include/Lrzip.h</Path>
             <Path fileType="data">/usr/lib/pkgconfig/lrzip.pc</Path>
         </Files>
     </Package>

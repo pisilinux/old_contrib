@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>qtstyleplugins</Name>
+		<Homepage>https://github.com/qt/qtstyleplugins</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>unknown</License>
+		<IsA>library</IsA>
+		<Summary>Additional style plugins for Qt.</Summary>
+		<Description>Additional style plugins for Qt.</Description>
+		<Archive sha1sum="7993bbe5c9de82c337eeadfd554cd009a79e1c08" type="zip">
+			https://codeload.github.com/qt/qtstyleplugins/zip/335dbece103e2cbf6c7cf819ab6672c2956b17b3
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>qtstyleplugins</Name>
+		<RuntimeDependencies>
+			<Dependency>qt5-base</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/qt5</Path>
+			<Path fileType="library">/usr/lib/cmake/Qt5Gui</Path>
+			<Path fileType="library">/usr/lib/cmake/Qt5Widgets</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-01-21</Date>
+			<Version>2017.01.11</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

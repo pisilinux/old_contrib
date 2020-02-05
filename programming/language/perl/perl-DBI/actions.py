@@ -11,6 +11,7 @@ from pisi.actionsapi import get
 #WorkDir = "%s-%s" % (get.srcNAME()[5:], get.srcVERSION())
 
 def setup():
+    # suppress compiler warnings
     pisitools.dosed("Makefile.PL", "-Wno-comment", "-Wno-comment -Wno-cast-function-type")
     perlmodules.configure()
 

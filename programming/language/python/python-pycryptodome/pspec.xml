@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>python-pycryptodome</Name>
@@ -8,12 +8,12 @@
             <Name>Blue DeviL</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>BSD</License>
         <PartOf>programming.language.python</PartOf>
+        <License>BSD</License>
         <IsA>library</IsA>
         <Summary>A self-contained Python package of low-level cryptographic primitives</Summary>
         <Description>PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
-        <Archive sha1sum="1fea90dbec5e5746e880dd547661949c1ba94cf5" type="targz">https://github.com/Legrandin/pycryptodome/archive/v3.9.4.tar.gz</Archive>
+        <Archive sha1sum="f948a5b767f5adf95bde536d074b3621fb05c34f" type="targz">https://github.com/Legrandin/pycryptodome/archive/v3.9.6.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python-devel</Dependency>
@@ -34,6 +34,13 @@
     </Package>
     
     <History>
+        <Update release="2">
+            <Date>2020-02-05</Date>
+            <Version>3.9.6</Version>
+            <Comment>First release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-24</Date>
             <Version>3.9.4</Version>

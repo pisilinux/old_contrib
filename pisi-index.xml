@@ -2110,7 +2110,7 @@
                 <Email>wascheme@tuta.io</Email>
             </Packager>
             <License>GPLv3</License>
-            <IsA>multimedia.graphics</IsA>
+            <IsA>app:gui</IsA>
             <PartOf>multimedia.graphics</PartOf>
             <Summary xml:lang="en">An infinite-canvas paint program.</Summary>
             <Description xml:lang="en">Milton is an open source application that lets you Just Paint. There are no pixels, you can paint with (almost) infinite detail. It feels raster-based but it works with vectors. It is not an image editor. It is not a vector graphics editor. It is a program that lets you draw, sketch and paint. There is no save button, your work is persistent with unlimited undo.</Description>
@@ -2426,6 +2426,65 @@
                 <Comment>First release</Comment>
                 <Name>Serdar Soytetir</Name>
                 <Email>kaptan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>vokoscreenNG</Name>
+            <Homepage>https://github.com/vkohaupt/vokoscreenNG</Homepage>
+            <Packager>
+                <Name>Pisilinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.video</PartOf>
+            <Summary xml:lang="en">New desktop recording program.</Summary>
+            <Description xml:lang="en">VokscreenNG is a user friendly Open Source screencaster for Linux and Windows. The new name is now vokoscreenNG and has been rewritten from scratch.</Description>
+            <Archive type="targz" sha1sum="24d37692c232b320801fa3c40e71f6f13358ed4a" name="3.0.1.tar.gz">https://github.com/vkohaupt/vokoscreenNG/archive/3.0.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>qt5-x11extras-devel</Dependency>
+                <Dependency>qt5-multimedia-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/video/vokoscreenNG/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>vokoscreenNG</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>gst-libav</Dependency>
+                <Dependency>pulseaudio</Dependency>
+                <Dependency>qt5-x11extras</Dependency>
+                <Dependency>qt5-multimedia</Dependency>
+                <Dependency>gstreamer-vaapi</Dependency>
+                <Dependency>gst-plugins-bad</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
+                <Dependency>libva-intel-driver</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/vokoscreenNG</Path>
+                <Path fileType="data">/usr/share/applications/vokoscreenNG.desktop</Path>
+                <Path fileType="data">/usr/share/pixmaps/vokoscreenNG.png</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>3.0.1</Version>
+                <Comment>Rewrited.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>
@@ -5471,7 +5530,7 @@
                 <Dependency version="0.621">lrzip</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="headers">/usr/include/Lrzip.h</Path>
+                <Path fileType="header">/usr/include/Lrzip.h</Path>
                 <Path fileType="data">/usr/lib/pkgconfig/lrzip.pc</Path>
             </Files>
         </Package>
@@ -8063,7 +8122,7 @@
             <PartOf>programming.library</PartOf>
             <Summary xml:lang="en">Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
             <Description xml:lang="en">Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
-            <Archive type="targz" sha1sum="2becf47a4fb8fe2189a3daafbd06bc9fe76d6086" name="V0.12.1.tar.gz">https://github.com/tsujan/Kvantum/archive/V0.12.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="15088ec6f2d1934585e811ee7453c8896f303c38" name="V0.14.1.tar.gz">https://github.com/tsujan/Kvantum/archive/V0.14.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>qt5-svg-devel</Dependency>
@@ -8095,6 +8154,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-02-01</Date>
+                <Version>0.14.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-10-14</Date>
                 <Version>0.12.1</Version>
@@ -9445,7 +9511,7 @@
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python paketidir.</Summary>
             <Description xml:lang="en">PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodomex düşük seviye kriptografik ilkeler içeren bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="8616f7b6e4e8d84b36b8a00f57e55d691f0a32cb" name="pycryptodomex-3.9.4.tar.gz">https://files.pythonhosted.org/packages/31/19/af19522f294004818c8bf24809d07a76fae7119b2dd8a473e44318912973/pycryptodomex-3.9.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="7f7b8a2dcd70b4d3447bd8aece3e0da7cd1e9f23" name="pycryptodomex-3.9.6.tar.gz">https://files.pythonhosted.org/packages/d7/4f/20258a48e6760cff6523a176ecec671c85cad3f199754a8b89728d130aa8/pycryptodomex-3.9.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -9465,6 +9531,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-05</Date>
+                <Version>3.9.6</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-24</Date>
                 <Version>3.9.4</Version>
@@ -9918,7 +9991,7 @@
             <Summary xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Summary>
             <Description xml:lang="en">Foreign Function Interface for Python calling C code</Description>
             <Description xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="95d25f46a65ad4cea3764b758ee21ce8ded400e9" name="v1.13.2.tar.gz">https://bitbucket.org/cffi/cffi/get/v1.13.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="e4f62a0dac09e94bb98c3a78b061a8c7da8c1721" name="v1.14.0.tar.gz">https://bitbucket.org/cffi/cffi/get/v1.14.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -9939,6 +10012,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-08</Date>
+                <Version>1.14.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2020-01-23</Date>
                 <Version>1.13.2</Version>
@@ -10545,7 +10625,7 @@
             <Summary xml:lang="tr">HTTP istemci kitaplığı</Summary>
             <Description xml:lang="en">httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
             <Description xml:lang="tr">python-httplib2, diğer HTTP kütüphanelerinin desteklemediği bir çok özellik içeren bir HTTP istemci kitaplığıdır</Description>
-            <Archive type="targz" sha1sum="5c74cb85db6faf340b968c88cf857e09ce2f3505" name="v0.16.0.tar.gz">https://github.com/httplib2/httplib2/archive/v0.16.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="45534475da97180cb1666f06995c0260df042eed" name="v0.17.0.tar.gz">https://github.com/httplib2/httplib2/archive/v0.17.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -10561,6 +10641,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>2020-01-27</Date>
+                <Version>0.17.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="7">
                 <Date>2020-01-23</Date>
                 <Version>0.16.0</Version>
@@ -10687,6 +10774,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-01-28</Date>
+                <Version>2019.11.28</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-07</Date>
                 <Version>2019.9.11</Version>
@@ -10711,7 +10805,7 @@
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python paketidir.</Summary>
             <Description xml:lang="en">PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodome düşük seviye kriptografik ilkeler içeren bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="1fea90dbec5e5746e880dd547661949c1ba94cf5" name="v3.9.4.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="f948a5b767f5adf95bde536d074b3621fb05c34f" name="v3.9.6.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -10730,6 +10824,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-05</Date>
+                <Version>3.9.6</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-24</Date>
                 <Version>3.9.4</Version>
@@ -11549,7 +11650,7 @@
             <Summary xml:lang="tr">Python ile komut satırı için hızlı ve genişletilebilir ilerleme çubugu kitaplığı</Summary>
             <Description xml:lang="en">python-tqdm provides a fast, extensible progress bar for python and commandline. Instantly make your loops show a smart progress meter - just wrap any iterable with tqdm(iterable), and you&apos;re done!</Description>
             <Description xml:lang="tr">python-tqdm, python3 ile komut satırı için hızlı ve genişletilebilir ilerleme çubuğu kitaplığı sunar. Bu modül ile döngülerinize akıllı ilerleme çubuğu ekleyebilirsiniz.</Description>
-            <Archive type="targz" sha1sum="ef1041ebc99201190ece88535fc58ef93b575384" name="v4.41.1.tar.gz">https://github.com/tqdm/tqdm/archive/v4.41.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4f1e658219e4a81859bb92074788a96b9813ca63" name="v4.42.1.tar.gz">https://github.com/tqdm/tqdm/archive/v4.42.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -11566,6 +11667,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-02-05</Date>
+                <Version>4.42.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2020-01-27</Date>
+                <Version>4.42.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-23</Date>
                 <Version>4.41.1</Version>
@@ -11958,8 +12073,8 @@
             <Name>python-pyxattr</Name>
             <Summary xml:lang="en">Python extension for extended file attributes</Summary>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/python-pyxattr</Path>
             </Files>
         </Package>
         <History>
@@ -12883,58 +12998,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-ExtUtils-MakeMaker</Name>
-            <Homepage>https://metacpan.org/pod/ExtUtils::MakeMaker</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Perl 5</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl extension for creating a module Makefile</Summary>
-            <Summary xml:lang="tr">Makefile modülü yaratabilen bir perl eklentisi</Summary>
-            <Description xml:lang="en">This utility is designed to write a Makefile for an extension module from a Makefile.PL. It is based on the Makefile.SH model provided by Andy Dougherty and the perl5-porters.</Description>
-            <Description xml:lang="tr">Bu araç bir Makefile.PL dosyasından bir eklenti modülüne Makefile yaratmak için tasarlanmıstır.</Description>
-            <Archive type="targz" sha1sum="0441553dc10430917382f132be3dfa167d77a030" name="ExtUtils-MakeMaker-7.42.tar.gz">https://cpan.metacpan.org/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-7.42.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-ExtUtils-MakeMaker/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-ExtUtils-MakeMaker</Name>
-            <Summary xml:lang="en">Perl extension for creating a module Makefile</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/perl</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-01-07</Date>
-                <Version>7.42</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-12</Date>
-                <Version>7.38</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Term-Menu</Name>
             <Homepage>http://search.cpan.org/~dazjorz/Term-Menu-0.10/lib/Term/Menu.pm</Homepage>
             <Packager>
@@ -13198,7 +13261,7 @@
             <Summary xml:lang="tr">Perl için veritabanından bağımsız arayüz.</Summary>
             <Description xml:lang="en">The DBI is the standard database interface module for Perl. It defines a set of methods, variables and conventions that provide a consistent database interface independent of the actual database being used.</Description>
             <Description xml:lang="tr">DBI Perl için standart veritabanı arayüzüdür. Birçok yordam, değişken ve kural tanımlar.</Description>
-            <Archive type="targz" sha1sum="4838da411896707eb89acf63ae2d35c88ff841c7" name="DBI-1.642.tar.gz">https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.642.tar.gz</Archive>
+            <Archive type="targz" sha1sum="fdbe7a86873eed196be5f9753aabed5c1e22f2cb" name="DBI-1.643.tar.gz">https://cpan.metacpan.org/authors/id/T/TI/TIMB/DBI-1.643.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>perl</Dependency>
             </BuildDependencies>
@@ -13218,6 +13281,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-05</Date>
+                <Version>1.643</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-08</Date>
                 <Version>1.642</Version>
@@ -13356,84 +13426,6 @@
                 <Comment>First release.</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Data-Dump</Name>
-            <Homepage>http://search.cpan.org/dist/Data-Dump</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl Module for pretty printing of data structures</Summary>
-            <Summary xml:lang="tr">Perl veri yapılarının hoş bir şekilde bastırılması</Summary>
-            <Description xml:lang="en">perl-Data-Dump is a perl module which provides a few functions that traverse their argument and produces a string as its result.</Description>
-            <Description xml:lang="tr">perl-Data-Dump argümanları takip edip sonucunu bir karakter dizisi olarak bastıran fonksiyonlar sağlayan bir Perl modülüdür.</Description>
-            <Archive type="targz" sha1sum="3f5c0d4a15c8dd6befbcdceb41fe15b9aef1b741" name="Data-Dump-1.23.tar.gz">https://cpan.metacpan.org/authors/id/G/GA/GAAS/Data-Dump-1.23.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Data-Dump/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Data-Dump</Name>
-            <Summary xml:lang="en">Perl Module for pretty printing of data structures</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="6">
-                <Date>2020-01-07</Date>
-                <Version>1.23</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="5">
-                <Date>2014-09-10</Date>
-                <Version>1.22</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-05-28</Date>
-                <Version>1.22</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-01-01</Date>
-                <Version>1.22</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Burak Fazıl Ertürk</Name>
-                <Email>burakerturk@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-11-08</Date>
-                <Version>1.22</Version>
-                <Comment>Version bump</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-06</Date>
-                <Version>1.21</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -13696,7 +13688,7 @@
             <Summary xml:lang="tr">Python3 mock modülü</Summary>
             <Description xml:lang="en">mock is a library for testing in Python. It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used. This package contains a rolling backport of the standard library mock code compatible with Python 2.7 and 3.4 and up.</Description>
             <Description xml:lang="tr">Python mock modülü python uygulamalarınızı test etmenize yarar.</Description>
-            <Archive type="targz" sha1sum="cda918734ea2fb0e673923f59b76b5ae8b54dad0" name="3.0.5.tar.gz">https://github.com/testing-cabal/mock/archive/3.0.5.tar.gz</Archive>
+            <Archive type="targz" sha1sum="5628e1ffa7b7159c84a0f73d31731d3285254b93" name="4.0.1.tar.gz">https://github.com/testing-cabal/mock/archive/4.0.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -13716,6 +13708,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-08</Date>
+                <Version>4.0.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-11</Date>
                 <Version>3.0.5</Version>
@@ -14165,7 +14164,7 @@
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python3 paketidir.</Summary>
             <Description xml:lang="en">PyCryptodomex is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodomex düşük seviye kriptografik ilkeler içeren bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="8616f7b6e4e8d84b36b8a00f57e55d691f0a32cb" name="pycryptodomex-3.9.4.tar.gz">https://files.pythonhosted.org/packages/31/19/af19522f294004818c8bf24809d07a76fae7119b2dd8a473e44318912973/pycryptodomex-3.9.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="7f7b8a2dcd70b4d3447bd8aece3e0da7cd1e9f23" name="pycryptodomex-3.9.6.tar.gz">https://files.pythonhosted.org/packages/d7/4f/20258a48e6760cff6523a176ecec671c85cad3f199754a8b89728d130aa8/pycryptodomex-3.9.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -14185,6 +14184,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-05</Date>
+                <Version>3.9.6</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-24</Date>
                 <Version>3.9.4</Version>
@@ -14209,7 +14215,7 @@
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python3 paketidir.</Summary>
             <Description xml:lang="en">PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodome düşük seviye kriptografik ilkeler içeren bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="1fea90dbec5e5746e880dd547661949c1ba94cf5" name="v3.9.4.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="f948a5b767f5adf95bde536d074b3621fb05c34f" name="v3.9.6.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -14220,6 +14226,7 @@
             <Name>python3-pycryptodome</Name>
             <Summary xml:lang="en">A self-contained Python package of low-level cryptographic primitives</Summary>
             <RuntimeDependencies>
+                <Dependency>python3</Dependency>
                 <Dependency>gmp</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -14228,6 +14235,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-05</Date>
+                <Version>3.9.6</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-24</Date>
                 <Version>3.9.4</Version>
@@ -14698,7 +14712,7 @@
             <Summary xml:lang="tr">Python3 için C kodu cağıran dış fonksiyon arayüzü</Summary>
             <Description xml:lang="en">Foreign Function Interface for Python calling C code</Description>
             <Description xml:lang="tr">Python3 için C kodu cağıran dış fonksiyon arayüzü</Description>
-            <Archive type="targz" sha1sum="95d25f46a65ad4cea3764b758ee21ce8ded400e9" name="v1.13.2.tar.gz">https://bitbucket.org/cffi/cffi/get/v1.13.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="e4f62a0dac09e94bb98c3a78b061a8c7da8c1721" name="v1.14.0.tar.gz">https://bitbucket.org/cffi/cffi/get/v1.14.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -14719,6 +14733,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-08</Date>
+                <Version>1.14.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-11</Date>
                 <Version>1.13.2</Version>
@@ -16284,7 +16305,7 @@
             <Summary xml:lang="tr">HTTP istemci kitaplığı</Summary>
             <Description xml:lang="en">httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
             <Description xml:lang="tr">python3-httplib2, diğer HTTP kütüphanelerinin desteklemediği bir çok özellik içeren bir HTTP istemci kitaplığıdır</Description>
-            <Archive type="targz" sha1sum="5c74cb85db6faf340b968c88cf857e09ce2f3505" name="v0.16.0.tar.gz">https://github.com/httplib2/httplib2/archive/v0.16.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="45534475da97180cb1666f06995c0260df042eed" name="v0.17.0.tar.gz">https://github.com/httplib2/httplib2/archive/v0.17.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -16303,6 +16324,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>2020-01-27</Date>
+                <Version>0.17.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="7">
                 <Date>2020-01-23</Date>
                 <Version>0.16.0</Version>
@@ -16517,7 +16545,7 @@
             <Summary xml:lang="tr">Python3 ile komut satırı için hızlı ve genişletilebilir ilerleme çubugu kitaplığı</Summary>
             <Description xml:lang="en">python3-tqdm provides a fast, extensible progress bar for python and commandline. Instantly make your loops show a smart progress meter - just wrap any iterable with tqdm(iterable), and you&apos;re done!</Description>
             <Description xml:lang="tr">python3-tqdm, python3 ile komut satırı için hızlı ve genişletilebilir ilerleme çubuğu kitaplığı sunar. Bu modül ile döngülerinize akıllı ilerleme çubuğu ekleyebilirsiniz.</Description>
-            <Archive type="targz" sha1sum="ef1041ebc99201190ece88535fc58ef93b575384" name="v4.41.1.tar.gz">https://github.com/tqdm/tqdm/archive/v4.41.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4f1e658219e4a81859bb92074788a96b9813ca63" name="v4.42.1.tar.gz">https://github.com/tqdm/tqdm/archive/v4.42.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -16537,6 +16565,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-02-05</Date>
+                <Version>4.42.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2020-01-27</Date>
+                <Version>4.42.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-23</Date>
                 <Version>4.41.1</Version>
@@ -25835,6 +25877,47 @@
             <Update release="1">
                 <Date>2020-01-01</Date>
                 <Version>3.28</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>qtstyleplugins</Name>
+            <Homepage>https://github.com/qt/qtstyleplugins</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>unknown</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.lookandfeel</PartOf>
+            <Summary xml:lang="en">Additional style plugins for Qt.</Summary>
+            <Description xml:lang="en">Additional style plugins for Qt.</Description>
+            <Archive type="zip" sha1sum="7993bbe5c9de82c337eeadfd554cd009a79e1c08" name="335dbece103e2cbf6c7cf819ab6672c2956b17b3">https://codeload.github.com/qt/qtstyleplugins/zip/335dbece103e2cbf6c7cf819ab6672c2956b17b3</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/lookandfeel/qtstyleplugins/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>qtstyleplugins</Name>
+            <RuntimeDependencies>
+                <Dependency>qt5-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/qt5</Path>
+                <Path fileType="library">/usr/lib/cmake/Qt5Gui</Path>
+                <Path fileType="library">/usr/lib/cmake/Qt5Widgets</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-21</Date>
+                <Version>2017.01.11</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -35998,38 +36081,92 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>texstudio</Name>
+            <Homepage>https://www.texstudio.org/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">TeXstudio is a fully featured LaTeX editor.</Summary>
+            <Description xml:lang="en">TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.</Description>
+            <Archive type="targz" sha1sum="a3ebcb87913999b3d674464eba5502cd7453d7be" name="2.12.22.tar.gz">https://github.com/texstudio-org/texstudio/archive/2.12.22.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>qt5-svg-devel</Dependency>
+                <Dependency>quazip-devel</Dependency>
+                <Dependency>hunspell-devel</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>qt5-script-devel</Dependency>
+                <Dependency>poppler-qt5-devel</Dependency>
+                <Dependency>qt5-phonon-devel</Dependency>
+                <Dependency>ghostscript-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>office/misc/texstudio/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>texstudio</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>quazip</Dependency>
+                <Dependency>hunspell</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-script</Dependency>
+                <Dependency>poppler-qt5</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="icons">/usr/share/icons/hicolor</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-03</Date>
+                <Version>2.12.22</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>texmaker</Name>
-            <Homepage>http://www.xm1math.net/texmaker/index.html</Homepage>
+            <Homepage>https://www.xm1math.net/texmaker/index.html</Homepage>
             <Packager>
                 <Name>Stefan Gronewold (groni)</Name>
                 <Email>groni@pisilinux.org</Email>
             </Packager>
-            <License>GPLv1</License>
-            <PartOf>office</PartOf>
-            <Summary xml:lang="en">Free cross-platform LaTeX editor</Summary>
+            <License>GPLv2</License>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">Free cross-platform LaTeX editor.</Summary>
             <Description xml:lang="en">Texmaker is a free, modern and cross-platform LaTeX editor for linux, macosx and windows systems that integrates many tools needed to develop documents with LaTeX, in just one application.</Description>
-            <Archive type="tarbz2" sha1sum="ffa4c08a9fe2dde61eb18c6105f231e3c0ebd2ea" name="texmaker-4.5.tar.bz2">http://www.xm1math.net/texmaker/texmaker-4.5.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="2bdf4d801ec2adb7b691e601974048ea8c8c5df8" name="texmaker-5.0.4.tar.bz2">https://www.xm1math.net/texmaker/texmaker-5.0.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>qt5-base</Dependency>
-                <Dependency>qt5-x11extras-devel</Dependency>
                 <Dependency>qt5-webkit-devel</Dependency>
                 <Dependency>qt5-script-devel</Dependency>
-                <Dependency>qt5-quick1-devel</Dependency>
                 <Dependency>ghostscript-devel</Dependency>
+                <Dependency>qt5-x11extras-devel</Dependency>
             </BuildDependencies>
             <SourceURI>office/misc/texmaker/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>texmaker</Name>
-            <Summary xml:lang="en">Free cross-platform LaTeX editor</Summary>
             <RuntimeDependencies>
-                <Dependency>ghostscript</Dependency>
-                <Dependency>poppler-qt5</Dependency>
-                <Dependency>qt5-script</Dependency>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>qt5-webkit</Dependency>
                 <Dependency>zlib</Dependency>
                 <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>qt5-script</Dependency>
+                <Dependency>qt5-webkit</Dependency>
+                <Dependency>ghostscript</Dependency>
+                <Dependency>poppler-qt5</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -36037,6 +36174,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-02</Date>
+                <Version>5.0.4</Version>
+                <Comment>Release bump.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2015-11-05</Date>
                 <Version>4.5</Version>
@@ -36130,6 +36274,51 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>epydoc</Name>
+            <Homepage>https://epydoc.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">Automatic API Documentation Generation for Python.</Summary>
+            <Summary xml:lang="tr">Python için otomatik API belgelendirme üretecidir.</Summary>
+            <Description xml:lang="en">epydoc is a tool for generating API documentation for Python modules, based on their docstrings.</Description>
+            <Description xml:lang="tr">epydoc, Python modülleri için otomatik API belgelendirmesi üretebilen bir araçtır.</Description>
+            <Archive type="zip" sha1sum="ec98136e11892f1b0136fb62bd29dbb3c34507c9" name="epydoc-3.0.1.zip">https://downloads.sourceforge.net/sourceforge/epydoc/epydoc-3.0.1.zip</Archive>
+            <BuildDependencies>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>office/misc/epydoc/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>epydoc</Name>
+            <Summary xml:lang="en">Automatic API Documentation Generation for Python.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/apirst2html.py</Path>
+                <Path fileType="executable">/usr/bin/epydocgui</Path>
+                <Path fileType="executable">/usr/bin/epydoc</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/epydoc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-06</Date>
+                <Version>3.0.1</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>

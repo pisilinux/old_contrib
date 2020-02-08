@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>epydoc</Name>
+        <Homepage>https://epydoc.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>office.misc</PartOf>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Automatic API Documentation Generation for Python.</Summary>
+        <Description>epydoc is a tool for generating API documentation for Python modules, based on their docstrings.</Description>
+        <Archive sha1sum="ec98136e11892f1b0136fb62bd29dbb3c34507c9" type="zip">https://downloads.sourceforge.net/sourceforge/epydoc/epydoc-3.0.1.zip</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+    
+    <Package>
+        <Name>epydoc</Name>
+        <Summary>Automatic API Documentation Generation for Python.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/apirst2html.py</Path>
+            <Path fileType="executable">/usr/bin/epydocgui</Path>
+            <Path fileType="executable">/usr/bin/epydoc</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/epydoc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-06</Date>
+            <Version>3.0.1</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

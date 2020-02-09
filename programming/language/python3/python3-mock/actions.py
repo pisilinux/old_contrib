@@ -10,9 +10,9 @@ def build():
     pythonmodules.compile(pyVer="3")
     #pythonmodules.run("setup.py build_sphinx", pyVer="3")
     
-def check():
+#def check():
     #pythonmodules.compile("test", pyVer="3")
-    pythonmodules.run("-m unittest discover", pyVer="3")
+    #pythonmodules.run("-m unittest discover", pyVer="3")
 
 def install():
     pythonmodules.install(pyVer="3")

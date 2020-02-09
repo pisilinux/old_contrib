@@ -11,7 +11,9 @@ from pisi.actionsapi import get
 
 def build():
     # suppress compiler warnings
-    shelltools.export("CFLAGS", "-Wno-deprecated-declarations %s" % get.CFLAGS())
+    pisitools.cflags.add("-Wno-deprecated-declarations")
+    # fix unused dependency analysis
+    shelltools.export("LDSHARED", "x86_64-pc-linux-gnu-gcc -Wl,-O1,--as-needed -shared")
     pythonmodules.compile()
 
 def install():

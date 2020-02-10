@@ -15869,6 +15869,50 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-titlecase</Name>
+            <Homepage>https://github.com/ppannuto/python-titlecase</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python library to capitalize strings as specified by the New York Times Manual of Style.</Summary>
+            <Summary xml:lang="tr">Python3 titlecase modülü</Summary>
+            <Description xml:lang="en">This filter changes all words to Title Caps, and attempts to be clever about SMALL words like a/an/the in the input. This module is a python port of John Gruber&apos;s titlecase.pl</Description>
+            <Description xml:lang="tr">python3-titlecase modülü verilen söz dizisindeki tüm ilk harfleri büyük yapan python kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="ed6b31d691af0a9bc4620c32d1d0981185b3321e" name="v0.12.tar.gz">https://github.com/ppannuto/python-titlecase/archive/v0.12.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-titlecase/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-titlecase</Name>
+            <Summary xml:lang="en">Python library to capitalize strings as specified by the New York Times Manual of Style.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/python3-titlecase</Path>
+                <Path fileType="executable">/usr/bin/titlecase</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-10</Date>
+                <Version>0.12.0</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python3-apipkg</Name>
             <Homepage>https://github.com/pytest-dev/apipkg</Homepage>
             <Packager>
@@ -16287,6 +16331,49 @@
                 <Comment>First Pisi Release, built with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-pycountry</Name>
+            <Homepage>https://github.com/flyingcircusio/pycountry</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">ISO country, subdivision, language, currency and script definitions and their translations.</Summary>
+            <Summary xml:lang="tr">Python3 pycountry modülü</Summary>
+            <Description xml:lang="en">This is the pycountry module, a Python library to access ISO country, subdivision, language, currency and script definitions and their translations.</Description>
+            <Description xml:lang="tr">python3-pycountry modülü ISO ülke, kur bilgisi ve bunların çevirilerine ait kitaplık sunar.</Description>
+            <Archive type="targz" sha1sum="3caf9b5f3dc8f6b939fedaf4fa3c0806bd1c2dac" name="19.8.18.tar.gz">https://github.com/flyingcircusio/pycountry/archive/19.8.18.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-pycountry/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-pycountry</Name>
+            <Summary xml:lang="en">ISO country, subdivision, language, currency and script definitions and their translations.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/python3-pycountry</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-10</Date>
+                <Version>19.8.18</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>

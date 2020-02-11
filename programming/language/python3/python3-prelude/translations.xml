@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-prelude</Name>
+        <Summary xml:lang="tr">İşlevsel programlama yapıları için python3 kitaplığı</Summary>
+        <Description xml:lang="tr">python3-prelude python3 modülü Haskell ve Scala gibi dillerden işlevsel programlama yapıları sunar.</Description>
+    </Source>
+</PISI>

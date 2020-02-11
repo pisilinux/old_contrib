@@ -10745,6 +10745,45 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-prelude</Name>
+            <Homepage>https://github.com/michel-slm/python-prelude</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">Prelude library of functional programming constructs.</Summary>
+            <Summary xml:lang="tr">İşlevsel programlama yapıları için python kitaplığı</Summary>
+            <Description xml:lang="en">This library provides functional programming constructs from languages such as Haskell and Scala, implemented using existing Python libraries such as abc (abstract base class) as appropriate.</Description>
+            <Description xml:lang="tr">python-prelude python modülü Haskell ve Scala gibi dillerden işlevsel programlama yapıları sunar.</Description>
+            <Archive type="targz" sha1sum="403dc991ce20be1a68bd39865c9e4a1bd50b1734" name="0.1.0.tar.gz">https://github.com/michel-slm/python-prelude/archive/0.1.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-prelude/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-prelude</Name>
+            <Summary xml:lang="en">Prelude library of functional programming constructs.</Summary>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/python-prelude</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-11</Date>
+                <Version>0.1.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-certifi</Name>
             <Homepage>https://certifi.io/</Homepage>
             <Packager>
@@ -16855,6 +16894,48 @@
             <Update release="1">
                 <Date>2019-12-26</Date>
                 <Version>0.25.1</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-prelude</Name>
+            <Homepage>https://github.com/michel-slm/python-prelude</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Prelude library of functional programming constructs.</Summary>
+            <Summary xml:lang="tr">İşlevsel programlama yapıları için python3 kitaplığı</Summary>
+            <Description xml:lang="en">This library provides functional programming constructs from languages such as Haskell and Scala, implemented using existing Python libraries such as abc (abstract base class) as appropriate.</Description>
+            <Description xml:lang="tr">python3-prelude python3 modülü Haskell ve Scala gibi dillerden işlevsel programlama yapıları sunar.</Description>
+            <Archive type="targz" sha1sum="403dc991ce20be1a68bd39865c9e4a1bd50b1734" name="0.1.0.tar.gz">https://github.com/michel-slm/python-prelude/archive/0.1.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-prelude/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-prelude</Name>
+            <Summary xml:lang="en">Prelude library of functional programming constructs.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/python3-prelude</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-11</Date>
+                <Version>0.1.0</Version>
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>

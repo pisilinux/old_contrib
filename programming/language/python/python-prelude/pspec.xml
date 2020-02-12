@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-prelude</Name>
+        <Homepage>https://github.com/michel-slm/python-prelude</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python</PartOf>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Prelude library of functional programming constructs.</Summary>
+        <Description>This library provides functional programming constructs from languages such as Haskell and Scala, implemented using existing Python libraries such as abc (abstract base class) as appropriate.</Description>
+        <Archive sha1sum="403dc991ce20be1a68bd39865c9e4a1bd50b1734" type="targz">https://github.com/michel-slm/python-prelude/archive/0.1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-prelude</Name>
+        <Summary>Prelude library of functional programming constructs.</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-prelude</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-11</Date>
+            <Version>0.1.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

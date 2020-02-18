@@ -2963,6 +2963,130 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>tizonia-all</Name>
+            <Homepage>https://tizonia.org/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>LGPL</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">Command-line cloud music player for Linux.</Summary>
+            <Summary xml:lang="tr">ucbirimden youtube, spotify dinleme ortamı</Summary>
+            <Description xml:lang="en">Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, Plex servers and Chromecast devices..</Description>
+            <Description xml:lang="tr">tizonia-all, Spotify, Google Play Music, YouTube, SoundCloud, Plex sunuculari and Chromecast aygitlarindan komut satiri uzerinden muzik dinlemenizi saglayan uygulama.</Description>
+            <Archive type="targz" sha1sum="f3ac2e4d9cd089719262f2b9cb4b153dff57081a" name="v0.19.0.tar.gz">https://github.com/tizonia/tizonia-openmax-il/archive/v0.19.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>libmediainfo-devel</Dependency>
+                <Dependency>python3-soundcloud</Dependency>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>opusfile-devel</Dependency>
+                <Dependency>boost-python3</Dependency>
+                <Dependency>liboggz-devel</Dependency>
+                <Dependency>libopus-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>libmad-devel</Dependency>
+                <Dependency>libsdl-devel</Dependency>
+                <Dependency>mpg123-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>taglib-devel</Dependency>
+                <Dependency>expat-devel</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>check-devel</Dependency>
+                <Dependency>log4c-devel</Dependency>
+                <Dependency>curl-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>flac-devel</Dependency>
+                <Dependency>libspotify</Dependency>
+                <Dependency>libfishsound-devel</Dependency>
+                <Dependency>libvpx-devel</Dependency>
+                <Dependency>faad2-devel</Dependency>
+                <Dependency>lame-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/tizonia-all/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tizonia-all</Name>
+            <Summary xml:lang="en">Command-line cloud music player for Linux.</Summary>
+            <RuntimeDependencies>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>boost-python3</Dependency>
+                <Dependency>libfishsound</Dependency>
+                <Dependency>libmediainfo</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>libspotify</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>opusfile</Dependency>
+                <Dependency>liboggz</Dependency>
+                <Dependency>libopus</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>libmad</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>libvpx</Dependency>
+                <Dependency>libzen</Dependency>
+                <Dependency>mpg123</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>boost</Dependency>
+                <Dependency>expat</Dependency>
+                <Dependency>faad2</Dependency>
+                <Dependency>log4c</Dependency>
+                <Dependency>speex</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>lame</Dependency>
+                <Dependency>python3-pychromecast</Dependency>
+                <Dependency>python3-fuzzywuzzy</Dependency>
+                <Dependency>python3-soundcloud</Dependency>
+                <Dependency>python3-youtube_dl</Dependency>
+                <Dependency>python3-gmusicapi</Dependency>
+                <Dependency>python3-eventlet</Dependency>
+                <Dependency>python3-plexapi</Dependency>
+                <Dependency>python3-spotipy</Dependency>
+                <Dependency>python3-pafy</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/tizonia-dbusxx-introspect</Path>
+                <Path fileType="executable">/usr/bin/tizonia-rm-db-generate.sh</Path>
+                <Path fileType="executable">/usr/bin/tizonia-dbusxx-xml2cpp</Path>
+                <Path fileType="executable">/usr/bin/tizonia-rm-db-dump.sh</Path>
+                <Path fileType="executable">/usr/bin/tizonia-remote</Path>
+                <Path fileType="executable">/usr/bin/tizcastd</Path>
+                <Path fileType="executable">/usr/bin/tizonia</Path>
+                <Path fileType="executable">/usr/bin/tizrmd</Path>
+                <Path fileType="data">/usr/share/dbus-1/services/com.aratelia.tiz.cast.service</Path>
+                <Path fileType="data">/usr/share/dbus-1/services/com.aratelia.tiz.rm.service</Path>
+                <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/tizonia.png</Path>
+                <Path fileType="data">/usr/share/bash-completion/completions/tizonia</Path>
+                <Path fileType="data">/usr/share/tizrmd/tizonia-rm-db-initial.sql3</Path>
+                <Path fileType="data">/usr/share/zsh/vendor-completions/_tizonia</Path>
+                <Path fileType="data">/usr/share/applications/tizonia.desktop</Path>
+                <Path fileType="data">/usr/share/tizrmd/tizrm.db</Path>
+                <Path fileType="config">/etc/xdg/tizonia/tizonia.conf</Path>
+                <Path fileType="config">/etc/xdg/tizonia/log4crc</Path>
+                <Path fileType="doc">/usr/share/doc/tizonia-all</Path>
+                <Path fileType="data">/usr/include/tizonia</Path>
+                <Path fileType="library">/usr/lib</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-01-23</Date>
+                <Version>0.19.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libfishsound</Name>
             <Homepage>https://www.xiph.org/fishsound/</Homepage>
             <Packager>
@@ -15657,7 +15781,7 @@
             <Summary xml:lang="tr">Python3 ile sözcük karşılaştırma/bulma modülü</Summary>
             <Description xml:lang="en">Fuzzy string matching like a boss. It uses Levenshtein Distance to calculate the differences between sequences in a simple-to-use package.</Description>
             <Description xml:lang="tr">python3-fuzzywuzzy Levenshtein uzaklığını kullanarak bölümler arası ayrımları hesaplayan kullanımı basit bir python3 modülüdür.</Description>
-            <Archive type="targz" sha1sum="619dd5f4c8d9596ed3e90f429b90ca95afaed1cf" name="0.17.0.tar.gz">https://github.com/seatgeek/fuzzywuzzy/archive/0.17.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="faf1975fbba55bdb94ca07d544ca8b42af45310c" name="0.18.0.tar.gz">https://github.com/seatgeek/fuzzywuzzy/archive/0.18.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -15676,6 +15800,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-18</Date>
+                <Version>0.18.0</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-26</Date>
                 <Version>0.17.0</Version>
@@ -16278,7 +16409,7 @@
             <Summary xml:lang="tr">Spotify ağ apisi için basit bir istemci</Summary>
             <Description xml:lang="en">Spotipy is a thin client library for the Spotify Web API.</Description>
             <Description xml:lang="tr">python3-spotipy Spotify ağ apisini kullanabilmek için python3 sarmalayıcı modülü ile basit bir istemci sunar.</Description>
-            <Archive type="targz" sha1sum="9e374f8f0fd1d355e772f2dc2a0b2272750c64d4" name="spotipy-2.7.1.tar.gz">https://files.pythonhosted.org/packages/20/5f/9f45094b3fd74795217400f51ad8d5ef6305d51237cfcb50a0cfc89dd972/spotipy-2.7.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="7f5075875f521756ba87b2af973241a9f58a28fc" name="2.9.0.tar.gz">https://github.com/plamere/spotipy/archive/2.9.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -16299,6 +16430,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-18</Date>
+                <Version>2.9.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-22</Date>
                 <Version>2.7.1</Version>
@@ -16802,51 +16940,6 @@
             <Update release="1">
                 <Date>2020-01-24</Date>
                 <Version>3.17.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-dateutil</Name>
-            <Homepage>https://github.com/dateutil/dateutil</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">python3-dateutil provides powerful extensions to datetime</Summary>
-            <Summary xml:lang="tr">Python3 datetime için güçlü genişletmeler içeren python3 modülü</Summary>
-            <Description xml:lang="en">The dateutil module provides powerful extensions to the standard datetime module, available in Python.</Description>
-            <Description xml:lang="tr">python3-dateutil, Python3 standart datetime modülüne gelişmiş, güçlü ek özellikler katan genişleme kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="118108d2a3e67dfe4a0cced7ab904b6c70539f53" name="2.8.1.tar.gz">https://github.com/dateutil/dateutil/archive/2.8.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools-scm</Dependency>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-dateutil/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-dateutil</Name>
-            <Summary xml:lang="en">python3-dateutil provides powerful extensions to datetime</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-six</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-dateutil</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-24</Date>
-                <Version>2.8.1</Version>
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>

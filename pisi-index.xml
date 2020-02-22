@@ -10062,112 +10062,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-click</Name>
-            <Homepage>https://palletsprojects.com/p/click/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD-3</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Python composable command line interface toolkit</Summary>
-            <Summary xml:lang="tr">Python için komut satırı yaratma arayüzü</Summary>
-            <Description xml:lang="en">Click is a Python package for creating beautiful command line interfaces in a composable way with as little code as necessary. It&apos;s the &quot;Command Line Interface Creation Kit&quot;. It&apos;s highly configurable but comes with sensible defaults out of the box.</Description>
-            <Description xml:lang="tr">Click, python için en az komut gerektirecek sekilde tasarlanmış komut satırı arayüzü yaratma paketidir. Açılımı &quot;Command Line Interface Creation Kit - Komut Satırı Arayüzü Yaratma Araç Takımı&quot; olan Click bazı varsayılanlarla beraber gelsede yüksek seviyede ayarlanabilir bir yapıya sahiptir.</Description>
-            <Archive type="targz" sha1sum="eb9ce201c761b44c86a22b6dccad0aabb513fb4a" name="7.0.tar.gz">https://github.com/pallets/click/archive/7.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-click/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-click</Name>
-            <Summary xml:lang="en">Cryptography module for python</Summary>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-click</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-06</Date>
-                <Version>7.0</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-cffi</Name>
-            <Homepage>https://cffi.readthedocs.io/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Foreign Function Interface for Python calling C code</Summary>
-            <Summary xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü</Summary>
-            <Description xml:lang="en">Foreign Function Interface for Python calling C code</Description>
-            <Description xml:lang="tr">Python için C kodu cağıran dış fonksiyon arayüzü kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="e4f62a0dac09e94bb98c3a78b061a8c7da8c1721" name="v1.14.0.tar.gz">https://bitbucket.org/cffi/cffi/get/v1.14.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>libffi-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-cffi/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-cffi</Name>
-            <Summary xml:lang="en">Foreign Function Interface for Python calling C code</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-enum34</Dependency>
-                <Dependency>python-six</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc/python-cffi</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2020-02-08</Date>
-                <Version>1.14.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2020-01-23</Date>
-                <Version>1.13.2</Version>
-                <Comment>Rebuilt, clean and fix flags</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-12-11</Date>
-                <Version>1.13.2</Version>
-                <Comment>Rebuilt and split packages</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-07</Date>
-                <Version>1.13.2</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-dnspython</Name>
             <Homepage>http://www.dnspython.org/</Homepage>
             <Packager>
@@ -10825,50 +10719,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-dateutil</Name>
-            <Homepage>https://github.com/dateutil/dateutil</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">python-dateutil provides powerful extensions to datetime</Summary>
-            <Summary xml:lang="tr">Python datetime için güçlü genişletmeler içeren python modülü</Summary>
-            <Description xml:lang="en">The dateutil module provides powerful extensions to the standard datetime module, available in Python.</Description>
-            <Description xml:lang="tr">python-dateutil, Python standart datetime modülüne gelişmiş, güçlü ek özellikler katan genişleme kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="118108d2a3e67dfe4a0cced7ab904b6c70539f53" name="2.8.1.tar.gz">https://github.com/dateutil/dateutil/archive/2.8.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools-scm</Dependency>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-dateutil/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-dateutil</Name>
-            <Summary xml:lang="en">python-dateutil provides powerful extensions to datetime</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-six</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-dateutil</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-24</Date>
-                <Version>2.8.1</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-prelude</Name>
             <Homepage>https://github.com/michel-slm/python-prelude</Homepage>
             <Packager>
@@ -10968,7 +10818,7 @@
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python paketidir.</Summary>
             <Description xml:lang="en">PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodome düşük seviye kriptografik ilkeler içeren bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="f948a5b767f5adf95bde536d074b3621fb05c34f" name="v3.9.6.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="65c17bda5729dd849a5673e5d1c6e96448a7f970" name="v3.9.7.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -10987,6 +10837,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-21</Date>
+                <Version>3.9.7</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-02-05</Date>
                 <Version>3.9.6</Version>
@@ -11800,68 +11657,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-tqdm</Name>
-            <Homepage>https://github.com/tqdm/tqdm</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">A Fast, Extensible Progress Bar for Python and CLI.</Summary>
-            <Summary xml:lang="tr">Python ile komut satırı için hızlı ve genişletilebilir ilerleme çubugu kitaplığı</Summary>
-            <Description xml:lang="en">python-tqdm provides a fast, extensible progress bar for python and commandline. Instantly make your loops show a smart progress meter - just wrap any iterable with tqdm(iterable), and you&apos;re done!</Description>
-            <Description xml:lang="tr">python-tqdm, python3 ile komut satırı için hızlı ve genişletilebilir ilerleme çubuğu kitaplığı sunar. Bu modül ile döngülerinize akıllı ilerleme çubuğu ekleyebilirsiniz.</Description>
-            <Archive type="targz" sha1sum="4f1e658219e4a81859bb92074788a96b9813ca63" name="v4.42.1.tar.gz">https://github.com/tqdm/tqdm/archive/v4.42.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-tqdm/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-tqdm</Name>
-            <Summary xml:lang="en">A Fast, Extensible Progress Bar for Python and CLI.</Summary>
-            <Files>
-                <Path fileType="executable">/usr/bin/tqdm-py2</Path>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-tqdm</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2020-02-05</Date>
-                <Version>4.42.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2020-01-27</Date>
-                <Version>4.42.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2020-01-23</Date>
-                <Version>4.41.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-25</Date>
-                <Version>4.41.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>sip2</Name>
             <Homepage>http://www.riverbankcomputing.co.uk/sip</Homepage>
             <Packager>
@@ -12083,56 +11878,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-bcrypt</Name>
-            <Homepage>https://github.com/pyca/bcrypt</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Modern(-ish) password hashing for your software and your servers</Summary>
-            <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python modülüdür.</Summary>
-            <Description xml:lang="en">python-bcrypt is a good password hashing for your software and your servers</Description>
-            <Description xml:lang="tr">python-bcrypt, yazılımlarınız ve sunucularınız için iyi bir parola hashi üretecisidir.</Description>
-            <Archive type="targz" sha1sum="bc34050664c1b7512ea8791fd543673144521931" name="3.1.7.tar.gz">https://github.com/pyca/bcrypt/archive/3.1.7.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-bcrypt/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-bcrypt</Name>
-            <Summary xml:lang="en">bcrypt module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-cffi</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-bcrypt</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-12-13</Date>
-                <Version>3.1.7</Version>
-                <Comment>Rebuilt and split packages</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-07</Date>
-                <Version>3.1.7</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-validictory</Name>
             <Homepage>https://github.com/jamesturk/validictory</Homepage>
             <Packager>
@@ -12261,50 +12006,6 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-cryptography</Name>
-            <Homepage>https://cryptography.io/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Cryptographic recipes for Python</Summary>
-            <Summary xml:lang="tr">Python için kriptografik tarifler</Summary>
-            <Description xml:lang="en">A package designed to expose cryptographic recipes and primitives to Python developers</Description>
-            <Description xml:lang="tr">python-cryptography, Python geliştiricileri icin kriptografik tarifler ve ilkeler sunan bir pakettir.</Description>
-            <Archive type="targz" sha1sum="93d4e9d58f911d342c68973a75542375ef8021ab" name="2.8.tar.gz">https://github.com/pyca/cryptography/archive/2.8.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>openssl-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-cryptography/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-cryptography</Name>
-            <Summary xml:lang="en">Cryptography module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-cffi</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-cryptography</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-06</Date>
-                <Version>2.8</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -13549,6 +13250,53 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-Net-LibIDN2</Name>
+            <Homepage>https://metacpan.org/release/Net-LibIDN2</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Net::LibIDN2 - Perl bindings for GNU Libidn2</Summary>
+            <Summary xml:lang="tr">GNU Libidn2 için perl bağlayıcıları.</Summary>
+            <Description xml:lang="en">Provides bindings for GNU Libidn2, a C library for handling internationalized domain names based on IDNA 2008, Punycode and TR46.</Description>
+            <Description xml:lang="tr">perl-Net-LibIDN2, GNU Libidn2 için perl bağlayıcıları sunar.</Description>
+            <Archive type="targz" sha1sum="257a4c08c56609439869a366f6d037252ea45fb2" name="Net-LibIDN2-1.01.tar.gz">https://cpan.metacpan.org/authors/id/T/TH/THOR/Net-LibIDN2-1.01.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl-Module-Build</Dependency>
+                <Dependency>libidn2-devel</Dependency>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Net-LibIDN2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Net-LibIDN2</Name>
+            <Summary xml:lang="en">Net::LibIDN2 - Perl bindings for GNU Libidn2</Summary>
+            <RuntimeDependencies>
+                <Dependency>libidn2</Dependency>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/perl</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-22</Date>
+                <Version>1.01</Version>
+                <Comment>First release.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>perl-IO-Socket-IP</Name>
             <Homepage>https://metacpan.org/release/IO-Socket-IP</Homepage>
             <Packager>
@@ -13595,7 +13343,7 @@
     <SpecFile>
         <Source>
             <Name>perl-Net-DNS</Name>
-            <Homepage>http://search.cpan.org/dist/Net-DNS</Homepage>
+            <Homepage>https://metacpan.org/release/Net-DNS</Homepage>
             <Packager>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -13607,16 +13355,18 @@
             <Description xml:lang="en">Net::DNS is a collection of Perl modules that act as a Domain Name System (DNS) resolver. It allows the programmer to perform DNS queries that are beyond the capabilities of gethostbyname and gethostbyaddr.</Description>
             <Description xml:lang="tr">Net::DNS, bir DNS (Domain Name System -Alan Adı Sistemi) çözücüsü olarak işleyen bir Perl modülleri kolleksiyonudur. Programcıya isim ile bağlantı sağlama (gethostbyname) ve adres ile bağlantı sağlamanın (gethostbyaddr) ötesinde olan DNS sorgularının çalışması için izin verir.</Description>
             <Description xml:lang="es">Net::DNS es una collección de módulos Perl con funciones de un servidor de nombres de dominio (DNS). Permite al programador realizar consultas DNS más allá de las facilidades de gethostbyname y gethostbyaddr.</Description>
-            <Archive type="targz" sha1sum="fc77d9ac9243ab4656ac2b7d10d15b3916dc7e1b" name="Net-DNS-1.21.tar.gz">https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.21.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c8c25b10040847b184fdb4467d388ef05b66b8b1" name="Net-DNS-1.22.tar.gz">https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.22.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>perl</Dependency>
                 <Dependency>perl-Test-Pod</Dependency>
                 <Dependency>perl-Digest-HMAC</Dependency>
+                <Dependency>perl-Net-LibIDN2</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/perl/perl-Net-DNS/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>perl-Net-DNS</Name>
+            <Summary xml:lang="en">Perl interface to the DNS resolver</Summary>
             <RuntimeDependencies>
                 <Dependency>perl</Dependency>
             </RuntimeDependencies>
@@ -13628,6 +13378,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2020-02-22</Date>
+                <Version>1.22</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="6">
                 <Date>2020-01-08</Date>
                 <Version>1.21</Version>
@@ -13951,56 +13708,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-sqlalchemy</Name>
-            <Homepage>https://www.sqlalchemy.org/</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">The Python SQL Toolkit and Object Relational Mapper</Summary>
-            <Summary xml:lang="tr">Python SQL Araç Kiti ve İlişkisel Nesne Haritalandırıcısı</Summary>
-            <Description xml:lang="en">SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL. SQLAlchemy provides a full suite of well known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.</Description>
-            <Description xml:lang="tr">SQLAlchemy, geliştiricisine SQL&apos;in tüm güç ve esnekliğini verebilen, python sql araç kiti ve ilişkisel nesne haritalandırıcısı sunan bir python modülüdür.</Description>
-            <Archive type="targz" sha1sum="320ef8780bc92443bcf5dedf7609174865bbe66d" name="SQLAlchemy-1.3.13.tar.gz">https://files.pythonhosted.org/packages/af/47/35edeb0f86c0b44934c05d961c893e223ef27e79e1f53b5e6f14820ff553/SQLAlchemy-1.3.13.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-sqlalchemy/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-sqlalchemy</Name>
-            <Summary xml:lang="en">The Python SQL Toolkit and Object Relational Mapper</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-01-23</Date>
-                <Version>1.3.13</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-08</Date>
-                <Version>1.3.11</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-backports.functools_lru_cache</Name>
             <Homepage>https://github.com/jaraco/backports.functools_lru_cache</Homepage>
             <Packager>
@@ -14039,177 +13746,6 @@
                 <Version>1.6.1</Version>
                 <Comment>First release</Comment>
                 <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-bcrypt</Name>
-            <Homepage>https://github.com/pyca/bcrypt</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Modern(-ish) password hashing for your software and your servers</Summary>
-            <Summary xml:lang="tr">Yazılımlarınız ve sunucularınız için bir parola hashi üreten python3 modülüdür.</Summary>
-            <Description xml:lang="en">python-bcrypt is a good password hashing for your software and your servers</Description>
-            <Description xml:lang="tr">python3-bcrypt, yazılımlarınız ve sunucularınız için iyi bir parola hashi üretecisidir.</Description>
-            <Archive type="targz" sha1sum="bc34050664c1b7512ea8791fd543673144521931" name="3.1.7.tar.gz">https://github.com/pyca/bcrypt/archive/3.1.7.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-bcrypt/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-bcrypt</Name>
-            <Summary xml:lang="en">bcrypt module for python3</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-cffi</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-bcrypt</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-12-13</Date>
-                <Version>3.1.7</Version>
-                <Comment>Rebuilt and split packages</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-07</Date>
-                <Version>3.1.7</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-paramiko</Name>
-            <Homepage>http://www.lag.net/paramiko/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>LGPL</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">SSH2 implementation for Python</Summary>
-            <Summary xml:lang="tr">Python3 için SSH2 Protokolü Uygulaması</Summary>
-            <Description xml:lang="en">python-paramiko is a module for python 2.2 (or higher) that implements the SSH2 protocol for secure (encrypted and authenticated) connections to remote machines.</Description>
-            <Description xml:lang="tr">Paramiko, python 2.2 ya da üzeri için, uzak makinelere güvenli (şifrelenmiş ve doğrulanmış) bağlantılar kurmak amacıyla SSH2 protokolünü uygulayan bir Python Modülüdür.</Description>
-            <Description xml:lang="es">paramiko es un módulo para python 2.2 (o posterior) que implementa el protocolo SSH2 para conexiones seguras (encriptado y autenticado) con equipos remotos.</Description>
-            <Archive type="targz" sha1sum="bcbd77a81f7a5b6ae93f59f3586a248513aa31e2" name="2.7.1.tar.gz">https://github.com/paramiko/paramiko/archive/2.7.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-paramiko/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-paramiko</Name>
-            <Summary xml:lang="en">Paramiko module for python3</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-cryptography</Dependency>
-                <Dependency>python3-pynacl</Dependency>
-                <Dependency>python3-bcrypt</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-paramiko</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2019-12-13</Date>
-                <Version>2.7.1</Version>
-                <Comment>Version bump and Rebuilt</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2019-11-22</Date>
-                <Version>2.6.0</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2016-03-31</Date>
-                <Version>1.16.0</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-11-19</Date>
-                <Version>1.12.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Burak Fazıl Ertürk</Name>
-                <Email>burakerturk@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-11-15</Date>
-                <Version>1.7.7.1</Version>
-                <Comment>First release</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-cryptography</Name>
-            <Homepage>https://cryptography.io/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Cryptographic recipes for Python3</Summary>
-            <Summary xml:lang="tr">Python için kriptografik tarifler</Summary>
-            <Description xml:lang="en">A package designed to expose cryptographic recipes and primitives to Python developers</Description>
-            <Description xml:lang="tr">python-cryptography, Python geliştiricileri icin kriptografik tarifler ve ilkeler sunan bir pakettir.</Description>
-            <Archive type="targz" sha1sum="93d4e9d58f911d342c68973a75542375ef8021ab" name="2.8.tar.gz">https://github.com/pyca/cryptography/archive/2.8.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>openssl-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-cryptography/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-cryptography</Name>
-            <Summary xml:lang="en">Cryptography module for python3</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-cffi</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-cryptography</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-06</Date>
-                <Version>2.8</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
@@ -14373,12 +13909,12 @@
             </Packager>
             <License>BSD</License>
             <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
+            <PartOf>programming.language.python3</PartOf>
             <Summary xml:lang="en">A self-contained Python package of low-level cryptographic primitives</Summary>
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python3 paketidir.</Summary>
             <Description xml:lang="en">PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodome düşük seviye kriptografik ilkeler içeren bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="f948a5b767f5adf95bde536d074b3621fb05c34f" name="v3.9.6.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="65c17bda5729dd849a5673e5d1c6e96448a7f970" name="v3.9.7.tar.gz">https://github.com/Legrandin/pycryptodome/archive/v3.9.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -14398,6 +13934,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-21</Date>
+                <Version>3.9.7</Version>
+                <Comment>First release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-02-05</Date>
                 <Version>3.9.6</Version>
@@ -14604,44 +14147,6 @@
                 <Date>2019-12-24</Date>
                 <Version>1.4.3</Version>
                 <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-click</Name>
-            <Homepage>https://palletsprojects.com/p/click/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD-3</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Python3 composable command line interface toolkit</Summary>
-            <Description xml:lang="en">Click is a Python package for creating beautiful command line interfaces in a composable way with as little code as necessary. It&apos;s the &quot;Command Line Interface Creation Kit&quot;. It&apos;s highly configurable but comes with sensible defaults out of the box.</Description>
-            <Archive type="targz" sha1sum="eb9ce201c761b44c86a22b6dccad0aabb513fb4a" name="7.0.tar.gz">https://github.com/pallets/click/archive/7.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-click/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-click</Name>
-            <Summary xml:lang="en">Cryptography module for python3</Summary>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-click</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-06</Date>
-                <Version>7.0</Version>
-                <Comment>First pisi release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
@@ -14857,116 +14362,6 @@
                 <Comment>First release, rebuilt with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-cffi</Name>
-            <Homepage>https://cffi.readthedocs.io/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Foreign Function Interface for Python calling C code</Summary>
-            <Summary xml:lang="tr">Python3 için C kodu cağıran dış fonksiyon arayüzü</Summary>
-            <Description xml:lang="en">Foreign Function Interface for Python calling C code</Description>
-            <Description xml:lang="tr">Python3 için C kodu cağıran dış fonksiyon arayüzü</Description>
-            <Archive type="targz" sha1sum="e4f62a0dac09e94bb98c3a78b061a8c7da8c1721" name="v1.14.0.tar.gz">https://bitbucket.org/cffi/cffi/get/v1.14.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>libffi-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-cffi/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-cffi</Name>
-            <Summary xml:lang="en">Foreign Function Interface for Python calling C code</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-six</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-cffi</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2020-02-08</Date>
-                <Version>1.14.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-12-11</Date>
-                <Version>1.13.2</Version>
-                <Comment>Rebuilt and split packages</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-07</Date>
-                <Version>1.13.2</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-pynacl</Name>
-            <Homepage>https://github.com/pyca/pynacl/</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Python3 binding to the Networking and Cryptography (NaCl) library</Summary>
-            <Summary xml:lang="tr">Python3 için NaCl modülü</Summary>
-            <Description xml:lang="en">python3-pynacl PyNaCl is a Python3 binding to libsodium, which is a fork of the Networking and Cryptography library. These libraries have a stated goal of improving usability, security and speed.</Description>
-            <Description xml:lang="tr">PyNaCl, ağ ve kriptografi kitaplığından geliştirilen libsodium kitaplığının python3 modülüdür.</Description>
-            <Archive type="targz" sha1sum="c078953e5643ad4ff7881a4627f5147eb5c76cf4" name="PyNaCl-1.3.0.tar.gz">https://pypi.org/packages/source/P/PyNaCl/PyNaCl-1.3.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-pynacl/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-pynacl</Name>
-            <Summary xml:lang="en">PyNaCl module for python3</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-                <Dependency>python3-cffi</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-12-11</Date>
-                <Version>1.3.0</Version>
-                <Comment>Rebuilt</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-25</Date>
-                <Version>1.3.0</Version>
-                <Comment>First release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -15761,98 +15156,6 @@
                 <Date>2019-11-06</Date>
                 <Version>3.11</Version>
                 <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-fuzzywuzzy</Name>
-            <Homepage>https://github.com/seatgeek/fuzzywuzzy</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">python3-fuzzywuzzy is a pure-Python RSA implementation</Summary>
-            <Summary xml:lang="tr">Python3 ile sözcük karşılaştırma/bulma modülü</Summary>
-            <Description xml:lang="en">Fuzzy string matching like a boss. It uses Levenshtein Distance to calculate the differences between sequences in a simple-to-use package.</Description>
-            <Description xml:lang="tr">python3-fuzzywuzzy Levenshtein uzaklığını kullanarak bölümler arası ayrımları hesaplayan kullanımı basit bir python3 modülüdür.</Description>
-            <Archive type="targz" sha1sum="faf1975fbba55bdb94ca07d544ca8b42af45310c" name="0.18.0.tar.gz">https://github.com/seatgeek/fuzzywuzzy/archive/0.18.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-fuzzywuzzy/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-fuzzywuzzy</Name>
-            <RuntimeDependencies>
-                <Dependency>python3-Levenshtein</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-fuzzywuzzy</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-02-18</Date>
-                <Version>0.18.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-26</Date>
-                <Version>0.17.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-Levenshtein</Name>
-            <Homepage>https://pypi.org/project/python-Levenshtein/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Python extension for computing string edit distances and similarities</Summary>
-            <Summary xml:lang="tr">Sözcük katarı düzenleme uzaklıkları ve benzerliklerini çok hızlı işleyebilen bir pyton kitaplığıdır</Summary>
-            <Description xml:lang="en">The Levenshtein Python C extension module contains functions for fast computation of: Levenshtein (edit) distance, and edit operations, string similarity, approximate median strings, and generally string averaging, string sequence and set similarity.It supports both normal and Unicode strings.</Description>
-            <Description xml:lang="tr">Levenshtein Python kitaplığı, Levenshtein (düzenleme) uzaklığı ve düzenleme işlemleri, sözcük katarı benzerlikleri, genel olarak söz dizisi ortalaması ve sözcük sırası gibi konuları hızlıca işleyebilen bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="e24d85c9d632038f98202af687eb3d428eca0ac1" name="python-Levenshtein-0.12.0.tar.gz">https://files.pythonhosted.org/packages/42/a9/d1785c85ebf9b7dfacd08938dd028209c34a0ea3b1bcdb895208bd40a67d/python-Levenshtein-0.12.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-Levenshtein/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-Levenshtein</Name>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-Levenshtein</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-23</Date>
-                <Version>0.12.0</Version>
-                <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
@@ -16796,71 +16099,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-tqdm</Name>
-            <Homepage>https://github.com/tqdm/tqdm</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">A Fast, Extensible Progress Bar for Python and CLI.</Summary>
-            <Summary xml:lang="tr">Python3 ile komut satırı için hızlı ve genişletilebilir ilerleme çubugu kitaplığı</Summary>
-            <Description xml:lang="en">python3-tqdm provides a fast, extensible progress bar for python and commandline. Instantly make your loops show a smart progress meter - just wrap any iterable with tqdm(iterable), and you&apos;re done!</Description>
-            <Description xml:lang="tr">python3-tqdm, python3 ile komut satırı için hızlı ve genişletilebilir ilerleme çubuğu kitaplığı sunar. Bu modül ile döngülerinize akıllı ilerleme çubuğu ekleyebilirsiniz.</Description>
-            <Archive type="targz" sha1sum="4f1e658219e4a81859bb92074788a96b9813ca63" name="v4.42.1.tar.gz">https://github.com/tqdm/tqdm/archive/v4.42.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-tqdm/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-tqdm</Name>
-            <Summary xml:lang="en">A Fast, Extensible Progress Bar for Python and CLI.</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/tqdm</Path>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-tqdm</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2020-02-05</Date>
-                <Version>4.42.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2020-01-27</Date>
-                <Version>4.42.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2020-01-23</Date>
-                <Version>4.41.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-25</Date>
-                <Version>4.41.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-dnspython</Name>
             <Homepage>http://www.dnspython.org/</Homepage>
             <Packager>
@@ -17234,49 +16472,6 @@
                 <Comment>First release.</Comment>
                 <Name>Metehan Özbek</Name>
                 <Email>mthnzbk@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-pycparser</Name>
-            <Homepage>https://github.com/eliben/pycparser</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Complete C99 parser in pure Python</Summary>
-            <Summary xml:lang="tr">Python ile yazilmis C99 cozumleyicisi</Summary>
-            <Description xml:lang="en">pycparser is a parser for the C language, written in pure Python. It is a module designed to be easily integrated into applications that need to parse C source code.</Description>
-            <Description xml:lang="tr">pycparser, C kaynak kodunu çözümlemesi gereken uygulamalara kolaylıkla bütünleşebilen bir python modülüdür.</Description>
-            <Archive type="targz" sha1sum="141582eb2a5ad9fee9bb7646cecb024f0406be8a" name="release_v2.19.tar.gz">https://github.com/eliben/pycparser/archive/release_v2.19.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-pycparser/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-pycparser</Name>
-            <Summary xml:lang="en">Complete C99 parser in pure Python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-pycparser</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-07</Date>
-                <Version>2.19</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>

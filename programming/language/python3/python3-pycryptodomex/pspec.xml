@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>A self-contained Python package of low-level cryptographic primitives and doesn't conflict with pycrypto.</Summary>
         <Description>PyCryptodomex is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
-        <Archive sha1sum="7f7b8a2dcd70b4d3447bd8aece3e0da7cd1e9f23" type="targz">https://files.pythonhosted.org/packages/d7/4f/20258a48e6760cff6523a176ecec671c85cad3f199754a8b89728d130aa8/pycryptodomex-3.9.6.tar.gz</Archive>
+        <Archive sha1sum="274efa5d01753dda32530f037fc529fbe62ca431" type="targz">https://files.pythonhosted.org/packages/7f/3c/80cfaec41c3a9d0f524fe29bca9ab22d02ac84b5bfd6e22ade97d405bdba/pycryptodomex-3.9.7.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
@@ -35,6 +35,13 @@
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>2020-02-24</Date>
+            <Version>3.9.7</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="2">
             <Date>2020-02-05</Date>
             <Version>3.9.6</Version>

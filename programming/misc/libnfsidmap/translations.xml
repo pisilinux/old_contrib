@@ -10,5 +10,6 @@
     <Package>
         <Name>libnfsidmap-devel</Name>
         <Summary xml:lang="tr">libnfsidmap için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">libnfsidmap-devel, libnfsidmap için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

@@ -9,10 +9,12 @@
     <Package>
         <Name>libgtop-docs</Name>
         <Summary xml:lang="tr">libgtop başvuru belgeleri</Summary>
+        <Description xml:lang="tr">libgtop-docs, libgtop için belgelendirme dosyalarını içerir.</Description>
     </Package>
 
     <Package>
         <Name>libgtop-devel</Name>
         <Summary xml:lang="tr">libgtop için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">libgtop-devel, libgtop için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

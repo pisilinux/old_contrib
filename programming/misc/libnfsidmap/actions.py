@@ -13,7 +13,7 @@ def setup():
     autotools.configure("--enable-ldap \
                          --disable-static")
     
-    # for fix unused dependency
+    # fix unused direct dependency analysis
     pisitools.dosed("libtool"," -shared ", " -Wl,--as-needed -shared ")     
 
 def build():
@@ -22,4 +22,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "ChangeLog", "README")
+    pisitools.dodoc("COPYING", "README")

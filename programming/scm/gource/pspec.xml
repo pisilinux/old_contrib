@@ -1,51 +1,57 @@
-
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>gource</Name>
-        <Homepage>http://gource.googlecode.com/</Homepage>
+        <Homepage>https://gource.io/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
+        <PartOf>programming.scm</PartOf>
         <License>GPLv3</License>
         <IsA>app:console</IsA>
         <Summary>A software version control visualization tool</Summary>
         <Description>Gource is a software version control visualization tool. Software projects are displayed by Gource as an animated tree with the root directory of the project at its centre. Directories appear as branches with files as leaves. Developers can be seen working on the tree at the times they contributed to the project.</Description>
-        <Archive sha1sum="97ebaa5c9dd73698f578c0afd1c6e8d514d7452c" type="targz">https://github.com/acaudwell/Gource/releases/download/gource-0.42/gource-0.42.tar.gz</Archive>
+        <Archive sha1sum="ab51953026510f7fd139787800cc06392469f7d6" type="targz">https://github.com/acaudwell/Gource/releases/download/gource-0.51/gource-0.51.tar.gz</Archive>
         <BuildDependencies>
+            <Dependency>sdl2-image-devel</Dependency>
+            <Dependency>freetype-devel</Dependency>
+            <Dependency>libsdl2-devel</Dependency>
+            <Dependency>libpcre-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
             <Dependency>glew-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
-            <Dependency>boost-devel</Dependency>
-            <Dependency>libsdl2-devel</Dependency>
-            <Dependency>freetype-devel</Dependency>
-            <Dependency>libpcre-devel</Dependency>
-            <!--Dependency>tinyxml-devel</Dependency-->
-            <!--Dependency>sdl2-image-devel</Dependency-->
-            <Dependency>libjpeg-turbo-devel</Dependency>
-            <!--Dependency>freefont</Dependency-->
-            <Dependency>sdl-image-devel</Dependency>
             <Dependency>glm</Dependency>
+            <!--
+            <Dependency>libjpeg-turbo-devel</Dependency>
+        -->
+            <!--Dependency>sdl2-image-devel</Dependency-->
+            <!--Dependency>tinyxml-devel</Dependency-->
+            <!--Dependency>freefont</Dependency-->
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>gource</Name>
+        <Summary>A software version control visualization tool</Summary>
         <RuntimeDependencies>
-            <Dependency>glew</Dependency>
-            <Dependency>libgcc</Dependency>
-            <Dependency>sdl-image</Dependency>
-            <Dependency>libpcre</Dependency>
+            <Dependency>sdl2-image</Dependency>
             <Dependency>freetype</Dependency>
+            <Dependency>libglvnd</Dependency>
+            <Dependency>mesa-glu</Dependency>
+            <Dependency>libpcre</Dependency>
+            <Dependency>libsdl2</Dependency>
             <Dependency>libpng</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>glew</Dependency>
+            <!--
+            <Dependency>sdl2-image</Dependency>
+            <Dependency>tinyxml</Dependency>
+            <Dependency>libgcc</Dependency>
             <Dependency>libsdl</Dependency>
             <Dependency>mesa</Dependency>
-            <Dependency>boost</Dependency>
-            <Dependency>libsdl2</Dependency>
-            <!--Dependency>tinyxml</Dependency-->
-            <Dependency>mesa-glu</Dependency>
-            <!--Dependency>sdl2-image</Dependency-->
+            -->
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -56,6 +62,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-02-25</Date>
+            <Version>0.51</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2016-04-23</Date>
             <Version>0.42</Version>

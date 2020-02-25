@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>libgtop</Name>
@@ -8,27 +8,32 @@
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
+        <PartOf>programming.misc</PartOf>
         <License>GPLv2</License>
         <IsA>library</IsA>
         <Summary>System monitoring library</Summary>
         <Description>libgtop is a library to get system specific data such as CPU and Memory Usage and information about running processes.</Description>
-        <Archive sha1sum="090fb62101ee85ba6bcbce5a438a2e8fe4e1615c" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgtop/2.34/libgtop-2.34.2.tar.xz</Archive>
+        <Archive sha1sum="5e0cdf1d986ec5d4ce0b244bdcded7de1a93149a" type="tarxz">http://ftp.gnome.org/pub/gnome/sources/libgtop/2.40/libgtop-2.40.0.tar.xz</Archive>
          <BuildDependencies>
-           <Dependency>glib2-devel</Dependency>
            <Dependency>gobject-introspection-devel</Dependency>
+           <Dependency>docbook-xsl</Dependency>
+           <Dependency>glib2-devel</Dependency>
+           <Dependency>gtk-doc</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgtop</Name>
+        <Summary>System monitoring library</Summary>
         <RuntimeDependencies>
            <Dependency>glib2</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
         </Files>
     </Package>
 
@@ -45,17 +50,24 @@
         <Name>libgtop-devel</Name>
         <Summary>Development files for libgtop</Summary>
         <RuntimeDependencies>
-            <Dependency>glib2-devel</Dependency>
             <Dependency release="current">libgtop</Dependency>
+            <Dependency>glib2-devel</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>
             <Path fileType="library">/usr/lib/pkgconfig</Path>
             <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-02-24</Date>
+            <Version>2.40.0</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
        <Update release="1">
             <Date>2017-03-20</Date>
             <Version>2.34.2</Version>

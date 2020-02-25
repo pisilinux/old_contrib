@@ -7635,7 +7635,7 @@
     <SpecFile>
         <Source>
             <Name>gource</Name>
-            <Homepage>http://gource.googlecode.com/</Homepage>
+            <Homepage>https://gource.io/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -7647,34 +7647,32 @@
             <Summary xml:lang="tr">Yazılım sürüm takip sistemi görselleştirme aracı</Summary>
             <Description xml:lang="en">Gource is a software version control visualization tool. Software projects are displayed by Gource as an animated tree with the root directory of the project at its centre. Directories appear as branches with files as leaves. Developers can be seen working on the tree at the times they contributed to the project.</Description>
             <Description xml:lang="tr">Gource yazılım sürüm takip sistemleri görselleştirme aracıdır. Yazılım projeleri Gource tarafından temeli yazılımın en üst dizini olacak şekilde hareketli görüntü olarak görüntülenir. Alt dizinler dal, dosyalar da yaprak olarak görüntülenir. Geliştiriciler yaptıkları değişikliklere göre ağaç üzerinde hareketli görüntü olarak gösterilir.</Description>
-            <Archive type="targz" sha1sum="97ebaa5c9dd73698f578c0afd1c6e8d514d7452c" name="gource-0.42.tar.gz">https://github.com/acaudwell/Gource/releases/download/gource-0.42/gource-0.42.tar.gz</Archive>
+            <Archive type="targz" sha1sum="ab51953026510f7fd139787800cc06392469f7d6" name="gource-0.51.tar.gz">https://github.com/acaudwell/Gource/releases/download/gource-0.51/gource-0.51.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>sdl2-image-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>libsdl2-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>boost-devel</Dependency>
                 <Dependency>glew-devel</Dependency>
                 <Dependency>mesa-devel</Dependency>
-                <Dependency>boost-devel</Dependency>
-                <Dependency>libsdl2-devel</Dependency>
-                <Dependency>freetype-devel</Dependency>
-                <Dependency>libpcre-devel</Dependency>
-                <Dependency>libjpeg-turbo-devel</Dependency>
-                <Dependency>sdl-image-devel</Dependency>
                 <Dependency>glm</Dependency>
             </BuildDependencies>
             <SourceURI>programming/scm/gource/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>gource</Name>
+            <Summary xml:lang="en">A software version control visualization tool</Summary>
             <RuntimeDependencies>
-                <Dependency>glew</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>sdl-image</Dependency>
-                <Dependency>libpcre</Dependency>
+                <Dependency>sdl2-image</Dependency>
                 <Dependency>freetype</Dependency>
-                <Dependency>libpng</Dependency>
-                <Dependency>libsdl</Dependency>
-                <Dependency>mesa</Dependency>
-                <Dependency>boost</Dependency>
-                <Dependency>libsdl2</Dependency>
+                <Dependency>libglvnd</Dependency>
                 <Dependency>mesa-glu</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>libsdl2</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>boost</Dependency>
+                <Dependency>glew</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -7684,6 +7682,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-25</Date>
+                <Version>0.51</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-23</Date>
                 <Version>0.42</Version>
@@ -9635,7 +9640,7 @@
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python paketidir.</Summary>
             <Description xml:lang="en">PyCryptodome is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodomex düşük seviye kriptografik ilkeler içeren bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="7f7b8a2dcd70b4d3447bd8aece3e0da7cd1e9f23" name="pycryptodomex-3.9.6.tar.gz">https://files.pythonhosted.org/packages/d7/4f/20258a48e6760cff6523a176ecec671c85cad3f199754a8b89728d130aa8/pycryptodomex-3.9.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="274efa5d01753dda32530f037fc529fbe62ca431" name="pycryptodomex-3.9.7.tar.gz">https://files.pythonhosted.org/packages/7f/3c/80cfaec41c3a9d0f524fe29bca9ab22d02ac84b5bfd6e22ade97d405bdba/pycryptodomex-3.9.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -9650,11 +9655,18 @@
                 <Dependency>gmp</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc/python-pycryptodomex</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-24</Date>
+                <Version>3.9.7</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-02-05</Date>
                 <Version>3.9.6</Version>
@@ -11071,8 +11083,8 @@
             <Summary xml:lang="en">Simple client for the Spotify Web API.</Summary>
             <Summary xml:lang="tr">Spotify ağ apisi için basit bir istemci</Summary>
             <Description xml:lang="en">Spotipy is a thin client library for the Spotify Web API.</Description>
-            <Description xml:lang="tr">python-spotipy Spotify ağ apisini kullanabilmek için python3 sarmalayıcı modülü ile basit bir istemci sunar.</Description>
-            <Archive type="targz" sha1sum="9e374f8f0fd1d355e772f2dc2a0b2272750c64d4" name="spotipy-2.7.1.tar.gz">https://files.pythonhosted.org/packages/20/5f/9f45094b3fd74795217400f51ad8d5ef6305d51237cfcb50a0cfc89dd972/spotipy-2.7.1.tar.gz</Archive>
+            <Description xml:lang="tr">python-spotipy Spotify ağ apisini kullanabilmek için python sarmalayıcı modülü ile basit bir istemci sunar.</Description>
+            <Archive type="targz" sha1sum="7f5075875f521756ba87b2af973241a9f58a28fc" name="2.9.0.tar.gz">https://github.com/plamere/spotipy/archive/2.9.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -11091,6 +11103,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-24</Date>
+                <Version>2.9.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-22</Date>
                 <Version>2.7.1</Version>
@@ -11428,7 +11447,7 @@
             <Summary xml:lang="tr">Python msgpack modülü</Summary>
             <Description xml:lang="en">MessagePack serializer implementation for Python.</Description>
             <Description xml:lang="tr">python-msgpack, Python için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="883ae054b3fd3e4c4c1d97f13fd0c2d7fa7e3499" name="v0.6.2.tar.gz">https://github.com/msgpack/msgpack-python/archive/v0.6.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="fc44bc073193018f0973e9fb21f17ce4a9567684" name="v1.0.0.tar.gz">https://github.com/msgpack/msgpack-python/archive/v1.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -11444,6 +11463,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-02-24</Date>
+                <Version>1.0.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-12-13</Date>
                 <Version>0.6.2</Version>
@@ -12024,7 +12050,7 @@
             <Summary xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belgelendirme üretecisidir.</Summary>
             <Description xml:lang="en">python-sphinxcontrib-websupport is the Sphinx documentation generator.</Description>
             <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belgelendirme üretecisidir. python3-sphinxcontrib-websupport, ağ uygulamalarınız için Sphinx ile bütünleşebilen python apisi sunar.</Description>
-            <Archive type="targz" sha1sum="5675e157af122cfab6abd4b14f80cb360b6c307a" name="sphinxcontrib-websupport-1.1.2.tar.gz">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.1.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="5d3293b118d31b0312c50500323d9caffad48023" name="sphinxcontrib-websupport-1.2.0.tar.gz">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.2.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -12040,6 +12066,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-24</Date>
+                <Version>1.2.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-12-13</Date>
                 <Version>1.1.2</Version>
@@ -12278,7 +12311,7 @@
             <Summary xml:lang="tr">Python mock modülü</Summary>
             <Description xml:lang="en">mock is a library for testing in Python. It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used. This package contains a rolling backport of the standard library mock code compatible with Python 2.7 and 3.4 and up.</Description>
             <Description xml:lang="tr">Python mock modülü python uygulamalarınızı test etmenize yarar.</Description>
-            <Archive type="targz" sha1sum="cda918734ea2fb0e673923f59b76b5ae8b54dad0" name="3.0.5.tar.gz">https://github.com/testing-cabal/mock/archive/3.0.5.tar.gz</Archive>
+            <Archive type="targz" sha1sum="5628e1ffa7b7159c84a0f73d31731d3285254b93" name="4.0.1.tar.gz">https://github.com/testing-cabal/mock/archive/4.0.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -12294,6 +12327,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-24</Date>
+                <Version>4.0.1</Version>
+                <Comment>Major version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-11-26</Date>
                 <Version>3.0.5</Version>
@@ -12318,7 +12358,7 @@
             <Summary xml:lang="tr">Python ile sözcük karşılaştırma/bulma modülü</Summary>
             <Description xml:lang="en">Fuzzy string matching like a boss. It uses Levenshtein Distance to calculate the differences between sequences in a simple-to-use package.</Description>
             <Description xml:lang="tr">python-fuzzywuzzy Levenshtein uzaklığını kullanarak bölümler arası ayrımları hesaplayan kullanımı basit bir python modülüdür.</Description>
-            <Archive type="targz" sha1sum="619dd5f4c8d9596ed3e90f429b90ca95afaed1cf" name="0.17.0.tar.gz">https://github.com/seatgeek/fuzzywuzzy/archive/0.17.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="faf1975fbba55bdb94ca07d544ca8b42af45310c" name="0.18.0.tar.gz">https://github.com/seatgeek/fuzzywuzzy/archive/0.18.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -12327,6 +12367,7 @@
         </Source>
         <Package>
             <Name>python-fuzzywuzzy</Name>
+            <Summary xml:lang="en">python-fuzzywuzzy is a pure-Python RSA implementation</Summary>
             <RuntimeDependencies>
                 <Dependency>python-Levenshtein</Dependency>
             </RuntimeDependencies>
@@ -12336,6 +12377,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-24</Date>
+                <Version>0.18.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-26</Date>
                 <Version>0.17.0</Version>
@@ -13863,7 +13911,7 @@
             <Summary xml:lang="tr">Düşük seviye kriptografik ilkeler içeren python3 paketidir.</Summary>
             <Description xml:lang="en">PyCryptodomex is a self-contained Python package of low-level cryptographic primitives.PyCryptodome is a fork of PyCrypto. It brings several enhancements with respect to the last official version of PyCrypto (2.6.1)</Description>
             <Description xml:lang="tr">PyCrypto&apos;dan çatallanan PyCryptodomex düşük seviye kriptografik ilkeler içeren bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="7f7b8a2dcd70b4d3447bd8aece3e0da7cd1e9f23" name="pycryptodomex-3.9.6.tar.gz">https://files.pythonhosted.org/packages/d7/4f/20258a48e6760cff6523a176ecec671c85cad3f199754a8b89728d130aa8/pycryptodomex-3.9.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="274efa5d01753dda32530f037fc529fbe62ca431" name="pycryptodomex-3.9.7.tar.gz">https://files.pythonhosted.org/packages/7f/3c/80cfaec41c3a9d0f524fe29bca9ab22d02ac84b5bfd6e22ade97d405bdba/pycryptodomex-3.9.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -13883,6 +13931,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-24</Date>
+                <Version>3.9.7</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-02-05</Date>
                 <Version>3.9.6</Version>
@@ -14264,7 +14319,7 @@
             <Summary xml:lang="tr">Python3 msgpack modülü</Summary>
             <Description xml:lang="en">MessagePack serializer implementation for Python3.</Description>
             <Description xml:lang="tr">python3-msgpack, Python3 için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="883ae054b3fd3e4c4c1d97f13fd0c2d7fa7e3499" name="v0.6.2.tar.gz">https://github.com/msgpack/msgpack-python/archive/v0.6.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="fc44bc073193018f0973e9fb21f17ce4a9567684" name="v1.0.0.tar.gz">https://github.com/msgpack/msgpack-python/archive/v1.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -14283,6 +14338,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-02-24</Date>
+                <Version>1.0.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-12-13</Date>
                 <Version>0.6.2</Version>
@@ -15549,7 +15611,7 @@
             <Summary xml:lang="tr">Beautiful Soup için çağdaş bir CSS seçici uygulaması</Summary>
             <Description xml:lang="en">Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4. It aims to provide selecting, matching, and filtering using modern CSS selectors. Soup Sieve currently provides selectors from the CSS level 1 specifications up through the latest CSS level 4 drafts and beyond (though some are not yet implemented).</Description>
             <Description xml:lang="tr">Soup Sieve, Beautiful Soup 4 ile kullanılmak üzere geliştirilmiş bir CSS seçici python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="f31f2ef7dd6ba7cdb5599359dfd32102d8d61903" name="1.9.5.tar.gz">https://github.com/facelessuser/soupsieve/archive/1.9.5.tar.gz</Archive>
+            <Archive type="targz" sha1sum="dbf78efb6c1596270ce683679835b2520a1d1e04" name="2.0.0.tar.gz">https://github.com/facelessuser/soupsieve/archive/2.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -15558,6 +15620,7 @@
         </Source>
         <Package>
             <Name>python3-soupsieve</Name>
+            <Summary xml:lang="en">A modern CSS selector implementation for Beautiful Soup.</Summary>
             <RuntimeDependencies>
                 <Dependency>python3-backports.functools_lru_cache</Dependency>
             </RuntimeDependencies>
@@ -15567,6 +15630,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-24</Date>
+                <Version>2.0.0</Version>
+                <Comment>Major Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-24</Date>
                 <Version>1.9.5</Version>
@@ -17281,29 +17351,34 @@
             <Summary xml:lang="tr">Sistem izleme kitaplığı</Summary>
             <Description xml:lang="en">libgtop is a library to get system specific data such as CPU and Memory Usage and information about running processes.</Description>
             <Description xml:lang="tr">libgtop, çalışan süreçler hakkında CPU ve bellek kullanımı gibi sistem bilgisini almak için bir kitaplığıdır.</Description>
-            <Archive type="tarxz" sha1sum="090fb62101ee85ba6bcbce5a438a2e8fe4e1615c" name="libgtop-2.34.2.tar.xz">http://ftp.gnome.org/pub/gnome/sources/libgtop/2.34/libgtop-2.34.2.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="5e0cdf1d986ec5d4ce0b244bdcded7de1a93149a" name="libgtop-2.40.0.tar.xz">http://ftp.gnome.org/pub/gnome/sources/libgtop/2.40/libgtop-2.40.0.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>glib2-devel</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>docbook-xsl</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gtk-doc</Dependency>
             </BuildDependencies>
             <SourceURI>programming/misc/libgtop/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>libgtop</Name>
+            <Summary xml:lang="en">System monitoring library</Summary>
             <RuntimeDependencies>
                 <Dependency>glib2</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="data">/usr/share/gir-1.0</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
         <Package>
             <Name>libgtop-docs</Name>
             <Summary xml:lang="en">libgtop reference documents</Summary>
             <Summary xml:lang="tr">libgtop başvuru belgeleri</Summary>
+            <Description xml:lang="tr">libgtop-docs, libgtop için belgelendirme dosyalarını içerir.</Description>
             <IsA>data:doc</IsA>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
@@ -17313,17 +17388,25 @@
             <Name>libgtop-devel</Name>
             <Summary xml:lang="en">Development files for libgtop</Summary>
             <Summary xml:lang="tr">libgtop için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">libgtop-devel, libgtop için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
+                <Dependency release="2">libgtop</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency release="1">libgtop</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="header">/usr/include</Path>
                 <Path fileType="library">/usr/lib/pkgconfig</Path>
                 <Path fileType="info">/usr/share/info</Path>
+                <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-24</Date>
+                <Version>2.40.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2017-03-20</Date>
                 <Version>2.34.2</Version>
@@ -17349,7 +17432,7 @@
             <Summary xml:lang="tr">NFSv4 ID isim haritalandırma (mapping) kitaplığı</Summary>
             <Description xml:lang="en">libnfsidmap is a library holding multiple methods of mapping names to id&apos;s and visa versa, mainly for NFSv4.</Description>
             <Description xml:lang="tr">libnfsidmap, çeşitli isim ve kimlik eşleştirme metodları içeren bir kitaplıktır. Genellikle NFSv4 için kullanılır.</Description>
-            <Archive type="tarbz2" sha1sum="2b57d7299a59a51d2434a2a7231725b2d61916a4" name="libnfsidmap-0.26.tar.bz2">https://fedorapeople.org/~steved/libnfsidmap/0.26/libnfsidmap-0.26.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="52046d3e416ed668b021a4d08d6b94f25fc4588e" name="libnfsidmap-0.27.tar.bz2">https://fedorapeople.org/~steved/libnfsidmap/0.27/libnfsidmap-0.27.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>openldap-client</Dependency>
             </BuildDependencies>
@@ -17357,12 +17440,13 @@
         </Source>
         <Package>
             <Name>libnfsidmap</Name>
+            <Summary xml:lang="en">NFSv4 ID name mapping library</Summary>
             <RuntimeDependencies>
                 <Dependency>openldap-client</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/*.so.*</Path>
                 <Path fileType="library">/usr/lib/libnfsidmap/*.so</Path>
+                <Path fileType="library">/usr/lib/*.so.*</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
@@ -17371,16 +17455,24 @@
             <Name>libnfsidmap-devel</Name>
             <Summary xml:lang="en">Development files for libnfsidmap</Summary>
             <Summary xml:lang="tr">libnfsidmap için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">libnfsidmap-devel, libnfsidmap için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libnfsidmap</Dependency>
+                <Dependency release="4">libnfsidmap</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/*.so</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-02-25</Date>
+                <Version>0.27</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2015-12-25</Date>
                 <Version>0.26</Version>

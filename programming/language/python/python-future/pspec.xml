@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>python-future</Name>
@@ -8,8 +8,8 @@
             <Name>Blue DeviL</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>MIT</License>
         <PartOf>programming.language.python</PartOf>
+        <License>MIT</License>
         <IsA>library</IsA>
         <Summary>Clean single-source support for Python 3 and 2</Summary>
         <Description>python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</Description>
@@ -22,9 +22,13 @@
 
     <Package>
         <Name>python-future</Name>
-        <Summary>Python future module</Summary>
+        <Summary>Clean single-source support for Python 3 and 2</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-setuptools</Dependency>
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/bin/pasteurize-py2</Path>
+            <Path fileType="executable">/usr/bin/futurize-py2</Path>
             <Path fileType="library">/usr/lib/python2*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>

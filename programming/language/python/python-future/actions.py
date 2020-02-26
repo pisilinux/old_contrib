@@ -12,5 +12,6 @@ def build():
 
 def install():
     pythonmodules.install()
-
+    pisitools.rename("/usr/bin/futurize","futurize-py2")
+    pisitools.rename("/usr/bin/pasteurize","pasteurize-py2")
     pisitools.dodoc("LICENSE*")

@@ -12,6 +12,10 @@ import os
 
 def setup():
     autotools.autoreconf("-fi")
+    # suppress compiler warnings
+    pisitools.cflags.add("-Wno-unused-result -Wno-return-type -Wno-deprecated-declarations -Wno-format-truncation\
+                          -Wno-nested-externs -Wno-implicit-function-declaration -Wno-missing-prototypes -Wno-address\
+                          -Wno-unused-but-set-variable -Wno-misleading-indentation -Wno-unused-variable")
     autotools.configure("--disable-static \
                          --enable-inotify")
 
@@ -29,5 +33,4 @@ def install():
     # remove static lib.
     pisitools.remove("/usr/lib/libgamin_shared.a")
 
-    pisitools.dodoc("AUTHORS", "README", "COPYING", "NEWS", "TODO")
-
+    pisitools.dodoc("COPYING", "README")

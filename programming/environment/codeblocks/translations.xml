@@ -9,5 +9,6 @@
     <Package>
         <Name>codeblocks-devel</Name>
         <Summary xml:lang="tr">codeblocks paketlerine ait geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">codeblocks-devel, codeblocks için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

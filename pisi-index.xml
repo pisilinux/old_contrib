@@ -8535,44 +8535,46 @@
             <Description xml:lang="en">Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.</Description>
             <Description xml:lang="tr">Code::Blocks, yazılımcıların en çok ihtiyaç duydukları özellikleri sağlayan, tamamen kişiselleştirilebilen ve geliştirilebilen C++ editörüdür.</Description>
             <Icon>codeblocks</Icon>
-            <Archive type="targz" sha1sum="70aabe8a948dbaa919eb4b87bc74a600e0d93516" name="codeblocks_16.01.tar.gz">https://netix.dl.sourceforge.net/project/codeblocks/Sources/16.01/codeblocks_16.01.tar.gz</Archive>
+            <Archive type="tarxz" sha1sum="ccd9e13d271a4d1ce7ebed8c0e6d4b45fb6e927d" name="codeblocks_17.12.tar.xz">https://downloads.sourceforge.net/codeblocks/codeblocks_17.12.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>wxGTK-devel</Dependency>
-                <Dependency>wxBase-devel</Dependency>
-                <Dependency>xterm</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>tinyxml-devel</Dependency>
-                <Dependency>imagemagick-devel</Dependency>
                 <Dependency>fontconfig-devel</Dependency>
-                <Dependency>wxGTK2.8-devel</Dependency>
+                <Dependency>hunspell-devel</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>gamin-devel</Dependency>
+                <Dependency>wxGTK-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>wxGTK3</Dependency>
             </BuildDependencies>
             <Patches>
-                <Patch>desktop.patch</Patch>
-                <Patch level="0">pisilinux-wx.patch</Patch>
+                <Patch level="1">codeblocks-17.12-scripting.patch</Patch>
             </Patches>
             <SourceURI>programming/environment/codeblocks/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>codeblocks</Name>
+            <Summary xml:lang="en">A free C++ IDE built to meet the most demanding needs of its users</Summary>
             <RuntimeDependencies>
-                <Dependency>wxBase</Dependency>
-                <Dependency>gtk2</Dependency>
+                <Dependency>wxGTK-common</Dependency>
                 <Dependency>fontconfig</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>bzip2</Dependency>
+                <Dependency>hunspell</Dependency>
+                <Dependency>wxBase</Dependency>
+                <Dependency>wxGTK3</Dependency>
+                <Dependency>wxGTK</Dependency>
+                <Dependency>gamin</Dependency>
                 <Dependency>glib2</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>wxGTK2.8</Dependency>
+                <Dependency>gtk3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="data">/usr/share/applications</Path>
                 <Path fileType="data">/usr/share/codeblocks</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/mime</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
                 <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/mime</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
@@ -8580,6 +8582,7 @@
             <Name>codeblocks-devel</Name>
             <Summary xml:lang="en">Development files of codeblocks</Summary>
             <Summary xml:lang="tr">codeblocks paketlerine ait geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">codeblocks-devel, codeblocks için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
                 <Dependency>codeblocks</Dependency>
             </RuntimeDependencies>
@@ -8589,6 +8592,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-02-24</Date>
+                <Version>17.12</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2017-05-10</Date>
                 <Version>16.01</Version>
@@ -9747,9 +9757,13 @@
         </Source>
         <Package>
             <Name>python-future</Name>
-            <Summary xml:lang="en">Python future module</Summary>
+            <Summary xml:lang="en">Clean single-source support for Python 3 and 2</Summary>
+            <RuntimeDependencies>
+                <Dependency>python-setuptools</Dependency>
+            </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/bin/pasteurize-py2</Path>
+                <Path fileType="executable">/usr/bin/futurize-py2</Path>
                 <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
@@ -14742,65 +14756,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-future</Name>
-            <Homepage>http://python-future.org/</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Clean single-source support for Python 3 and 2</Summary>
-            <Summary xml:lang="tr">Python3 future modülü</Summary>
-            <Description xml:lang="en">python-future is the missing compatibility layer between Python 2 and Python 3. It allows you to use a single, clean Python 3.x-compatible codebase to support both Python 2 and Python 3 with minimal overhead.</Description>
-            <Description xml:lang="tr">python3-future python2 ile python3 arasındaki kayıp uyumluluk katmanıdır. Python2 ile Python3 arasında python3 uyumlu bir kod katmanı kullanabilmenizi sağlar.</Description>
-            <Archive type="targz" sha1sum="d8c8b2d3889fc22bb38f049ed8e3dbdc35a83d6e" name="future-0.18.2.tar.gz">https://pypi.io/packages/source/f/future/future-0.18.2.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-future/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-future</Name>
-            <Summary xml:lang="en">Python3 future module</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/futurize3</Path>
-                <Path fileType="executable">/usr/bin/pasteurize3</Path>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-future</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2019-12-13</Date>
-                <Version>0.18.2</Version>
-                <Comment>Rebuilt and split packages</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-11-20</Date>
-                <Version>0.18.2</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-22</Date>
-                <Version>0.15.2</Version>
-                <Comment>First Pisi Release Built with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-ipaddress</Name>
             <Homepage>https://github.com/phihag/ipaddress</Homepage>
             <Packager>
@@ -16212,50 +16167,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-simplejson</Name>
-            <Homepage>https://github.com/simplejson/simplejson</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>AFL</License>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Simple, fast, extensible JSON encoder/decoder for Python.</Summary>
-            <Summary xml:lang="tr">Python için hızlı, genisletilebilir, basit bir JSON kodlayıcı/çozücü kitaplık.</Summary>
-            <Description xml:lang="en">simplejson is a simple, fast, complete, correct and extensible JSON (http://json.org) encoder and decoder for Python 3.3+ with legacy support for Python 2.5+. It is pure Python code with no dependencies, but includes an optional C extension for a serious speed boost.</Description>
-            <Description xml:lang="tr">Python için hızlı, genisletilebilir, basit bir JSON kodlayıcı/çozücü kitaplık modülü sunar.</Description>
-            <Archive type="targz" sha1sum="a66affe9eafa920ab8fca973e307ad07757ae093" name="v3.17.0.tar.gz">https://github.com/simplejson/simplejson/archive/v3.17.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-simplejson/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-simplejson</Name>
-            <Summary xml:lang="en">Simple, fast, extensible JSON encoder/decoder for Python.</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-simplejson</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-01-24</Date>
-                <Version>3.17.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-eventlet</Name>
             <Homepage>https://github.com/eventlet/eventlet</Homepage>
             <Packager>
@@ -16542,51 +16453,6 @@
                 <Comment>First release.</Comment>
                 <Name>Metehan Özbek</Name>
                 <Email>mthnzbk@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-pafy</Name>
-            <Homepage>https://github.com/mps-youtube/pafy</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>LGPLv3</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Python library to download YouTube content and retrieve metadata.</Summary>
-            <Summary xml:lang="tr">Youtube için Python APIsi</Summary>
-            <Description xml:lang="en">python3-pafy can retrieve YouTube content and metadata.</Description>
-            <Description xml:lang="tr">python3-pafy, Python ile YouTube içerik ve metadatanın çekilmesine olanak tanıyan python apisi sunar.</Description>
-            <Archive type="targz" sha1sum="e190a90949605353a9c4c415f41fd4599f4ce1db" name="v0.5.5.tar.gz">https://github.com/mps-youtube/pafy/archive/v0.5.5.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-pafy/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-pafy</Name>
-            <Summary xml:lang="en">A small Python module for determining appropriate platform-specific dirs, e.g. a &quot;user data dir&quot;.</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-youtube_dl</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/ytdl</Path>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-pafy</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-26</Date>
-                <Version>0.5.5</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17597,6 +17463,7 @@
         </Source>
         <Package>
             <Name>gamin</Name>
+            <Summary xml:lang="en">File alteration monitor library</Summary>
             <RuntimeDependencies>
                 <Dependency>glib2</Dependency>
             </RuntimeDependencies>
@@ -17610,8 +17477,9 @@
             <Name>gamin-devel</Name>
             <Summary xml:lang="en">Development files for gamin</Summary>
             <Summary xml:lang="tr">gamin için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">gamin-devel, gamin için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="4">gamin</Dependency>
+                <Dependency release="5">gamin</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
@@ -17619,6 +17487,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-02-26</Date>
+                <Version>0.1.10</Version>
+                <Comment>Rebuild for new toolchain</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2016-02-25</Date>
                 <Version>0.1.10</Version>

@@ -9,5 +9,6 @@
     <Package>
         <Name>gamin-devel</Name>
         <Summary xml:lang="tr">gamin için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">gamin-devel, gamin için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

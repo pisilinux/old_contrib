@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>plib</Name>
@@ -52,9 +52,9 @@
     </Package>
 
     <History>
-       <Update release="1">
+        <Update release="1">
             <Date>2017-01-20</Date>
-            <Version>2016.4.4</Version>
+            <Version>1.8.5</Version>
             <Comment>Version bump.</Comment>
             <Name>Ali Algul</Name>
             <Email>aligulle3801@gmail.com</Email>

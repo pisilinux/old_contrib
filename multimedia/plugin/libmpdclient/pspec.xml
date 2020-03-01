@@ -15,8 +15,8 @@
 		<Description>
 			A stable, documented, asynchronous API library for interfacing MPD in the C, C++ and Objective C languages.
 		</Description>
-		<Archive sha1sum="5f9f17139e2d845284e396f4eafab2976389e5bc" type="tarxz">
-			https://musicpd.org/download/libmpdclient/2/libmpdclient-2.17.tar.xz
+		<Archive sha1sum="c25d1cf802d27d41cf24a2fee477e57ec5a215ee" type="tarxz">
+			https://musicpd.org/download/libmpdclient/2/libmpdclient-2.18.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
@@ -48,6 +48,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2020-02-27</Date>
+			<Version>2.18</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2019-12-10</Date>
 			<Version>2.17</Version>

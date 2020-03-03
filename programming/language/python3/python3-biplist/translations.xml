@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-biplist</Name>
+        <Summary xml:lang="tr">İkilik plist çözümleyicisi/üreteci.</Summary>
+        <Description xml:lang="tr">python3-biplist, python için ikilik plist çözümleyicisi/üreteci sunar.</Description>
+    </Source>
+</PISI>

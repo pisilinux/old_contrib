@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-retdec</Name>
+        <Summary xml:lang="tr">retdec.com'un "decompilation servisine" erişmek için onların REST API'sini kullanan python kitaplığı ve araç takımı</Summary>
+        <Description xml:lang="tr">python3-retdec, retdec.com'un "decompilation servisine" erişmek için onların REST API'sini kullanan python kitaplığı ve araç takımıdır.</Description>
+    </Source>
+</PISI>

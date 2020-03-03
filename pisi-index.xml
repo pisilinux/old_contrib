@@ -947,6 +947,60 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>libXpresent</Name>
+            <Homepage>https://gitlab.freedesktop.org/xorg/lib/libxpresent</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>asis</License>
+            <IsA>library</IsA>
+            <PartOf>x11.library</PartOf>
+            <Summary xml:lang="en">X Present Extension library.</Summary>
+            <Description xml:lang="en">Xlib-based library for the X Present Extension.</Description>
+            <Archive type="tarbz2" sha1sum="8893cca785dc94f4a001b53f4308588ff6c3900a" name="libXpresent-1.0.0.tar.bz2">https://www.x.org/archive/individual/lib/libXpresent-1.0.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>util-macros</Dependency>
+            </BuildDependencies>
+            <SourceURI>x11/library/libXpresent/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libXpresent</Name>
+            <RuntimeDependencies>
+                <Dependency>libX11</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libXpresent-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">libXpresent</Dependency>
+                <Dependency>xorg-proto</Dependency>
+                <Dependency>libX11</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-03</Date>
+                <Version>1.0.0</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libclc</Name>
             <Homepage>https://github.com/llvm-mirror/libclc</Homepage>
             <Packager>
@@ -3087,6 +3141,90 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>mocp</Name>
+            <Homepage>http://moc.daper.net/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">Music On Console Player.</Summary>
+            <Description xml:lang="en">MOC (music on console) is a console audio player for Linux/Unix designed to be powerful and easy to use.</Description>
+            <Archive type="zip" sha1sum="e5297f77d6d946d345b317fe7635ff74618e46f9" name="638e6b8bd14497c65c2af2ca9bf90d55d5d5f817">https://codeload.github.com/jonsafari/mocp/zip/638e6b8bd14497c65c2af2ca9bf90d55d5d5f817</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>db-devel</Dependency>
+                <Dependency>popt-devel</Dependency>
+                <Dependency>curl-devel</Dependency>
+                <Dependency>flac-devel</Dependency>
+                <Dependency>faad2-devel</Dependency>
+                <Dependency>speex-devel</Dependency>
+                <Dependency>ffmpeg-devel</Dependency>
+                <Dependency>libmad-devel</Dependency>
+                <Dependency>taglib-devel</Dependency>
+                <Dependency>gettext-devel</Dependency>
+                <Dependency>wavpack-devel</Dependency>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>libvorbis-devel</Dependency>
+                <Dependency>libid3tag-devel</Dependency>
+                <Dependency>libmpcdec-devel</Dependency>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>libmodplug-devel</Dependency>
+                <Dependency>libsamplerate-devel</Dependency>
+                <Dependency>jack-audio-connection-kit-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/mocp/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mocp</Name>
+            <RuntimeDependencies>
+                <Dependency>db</Dependency>
+                <Dependency>curl</Dependency>
+                <Dependency>file</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>popt</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>faad2</Dependency>
+                <Dependency>speex</Dependency>
+                <Dependency>ffmpeg</Dependency>
+                <Dependency>libmad</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>wavpack</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>libid3tag</Dependency>
+                <Dependency>libmpcdec</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>libmodplug</Dependency>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>libtool-ltdl</Dependency>
+                <Dependency>libsamplerate</Dependency>
+                <Dependency>jack-audio-connection-kit</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="doc">/usr/sahre/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-01</Date>
+                <Version>2.6.0</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>libfishsound</Name>
             <Homepage>https://www.xiph.org/fishsound/</Homepage>
             <Packager>
@@ -3425,7 +3563,7 @@
             <Summary xml:lang="tr">Müzik Çalıcı Sunucusu (MPD)</Summary>
             <Description xml:lang="en">Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music. Through plugins and libraries it can play a variety of sound files while being controlled by its network protocol.</Description>
             <Description xml:lang="tr">MPD çoğu müzik dosyasını (MP3, Ogg Vorbis, FLAC, AAC, Mod vs.) çalar ve ağda yayınlar.</Description>
-            <Archive type="tarxz" sha1sum="954c1cb1d864b779ff74a9b881121be7f25008cc" name="mpd-0.21.18.tar.xz">https://musicpd.org/download/mpd/0.21/mpd-0.21.18.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="eefac56f77a8ef77b1ae5de9083f36716de85c71" name="mpd-0.21.20.tar.xz">https://musicpd.org/download/mpd/0.21/mpd-0.21.20.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>meson</Dependency>
                 <Dependency>cmake</Dependency>
@@ -3531,6 +3669,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="14">
+                <Date>2020-02-27</Date>
+                <Version>0.21.20</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="13">
                 <Date>2019-12-29</Date>
                 <Version>0.21.18</Version>
@@ -4030,7 +4175,7 @@
             <Description xml:lang="en">A stable, documented, asynchronous API library for interfacing MPD in the C, C++ and Objective C languages.</Description>
             <Description xml:lang="tr">libmpdclient, MPD etkileşimi için C, C++ ve Object C dillerinde kullanılabilen istikrarlı, belgelendirilmiş, asenkron bir kitaplıktır.</Description>
             <Description xml:lang="pl">Biblioteka do tworzenia klientów demona MPD (Music Player Daemon).</Description>
-            <Archive type="tarxz" sha1sum="5f9f17139e2d845284e396f4eafab2976389e5bc" name="libmpdclient-2.17.tar.xz">https://musicpd.org/download/libmpdclient/2/libmpdclient-2.17.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="c25d1cf802d27d41cf24a2fee477e57ec5a215ee" name="libmpdclient-2.18.tar.xz">https://musicpd.org/download/libmpdclient/2/libmpdclient-2.18.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>meson</Dependency>
             </BuildDependencies>
@@ -4053,7 +4198,7 @@
             <Summary xml:lang="tr">libmpdclient için geliştirme dosyaları</Summary>
             <Summary xml:lang="pl">Pliki naglowkowe do libmpdclient</Summary>
             <RuntimeDependencies>
-                <Dependency release="5">libmpdclient</Dependency>
+                <Dependency release="6">libmpdclient</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/pkgconfig</Path>
@@ -4061,6 +4206,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2020-02-27</Date>
+                <Version>2.18</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="5">
                 <Date>2019-12-10</Date>
                 <Version>2.17</Version>
@@ -7465,6 +7617,84 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>retdec</Name>
+            <Homepage>https://retdec.com/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.debug</PartOf>
+            <Summary xml:lang="en">RetDec is a retargetable machine-code decompiler based on LLVM.</Summary>
+            <Summary xml:lang="tr">LLVM temelli, yeniden hedeflenebilir makine kodu çözümleyicisi.</Summary>
+            <Description xml:lang="en">RetDec is an open-source retargetable machine-code decompiler based on LLVM. The supported file formats are ELF, PE, Mach-O, COFF, AR (archive), Intel HEX and raw machine code. Supported architectures are 32-bit: Intel x86, ARM, MIPS, PIC32, and PowerPC 64-bit: x86-64.</Description>
+            <Description xml:lang="tr">Retdec (Retargetable Decompiler),  llvm temelli, yeniden hedeflenebilir makine kodu çözümleyicisidir. Retdec ELF, PE, Mach-O, COFF, AR (archive), Intel HEX ve ham makine kodlarının çözümlenmesini destekler. Ayrıca retdec 32-bit: Intel x86, ARM, MIPS, PIC32, ve PowerPC ile 64-bit: x86-64 işlemci mimarilerini destekler.</Description>
+            <Archive type="targz" sha1sum="8b61d0b64558f419b5510d03daa8dc78fb66a76e" name="v3.3.tar.gz">https://github.com/avast/retdec/archive/v3.3.tar.gz</Archive>
+            <Archive type="tarxz" sha1sum="f1a527961533a0afb4a20cd048e53a2eb86eace1" target="retdec-3.3/retdec-support" name="retdec-support_2019-03-08.tar.xz">https://github.com/avast/retdec-support/releases/download/2019-03-08/retdec-support_2019-03-08.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>valgrind</Dependency>
+                <Dependency>cmake</Dependency>
+                <Dependency>llvm</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>SCT-retdec-CMakeLists.patch</Patch>
+                <Patch>SCT-libdwarf-CMakeLists.patch</Patch>
+            </Patches>
+            <SourceURI>programming/debug/retdec/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>retdec</Name>
+            <Summary xml:lang="en">RetDec is a retargetable machine-code decompiler based on LLVM.</Summary>
+            <RuntimeDependencies>
+                <Dependency>openssl</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>zlib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/retdec-signature-from-library-creator.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-archive-decompiler.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-macho-extractor</Path>
+                <Path fileType="executable">/usr/bin/retdec-decompiler.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-ar-extractor</Path>
+                <Path fileType="executable">/usr/bin/retdec-unpacker.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-fileinfo.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-bin2llvmir</Path>
+                <Path fileType="executable">/usr/bin/retdec-llvmir2hll</Path>
+                <Path fileType="executable">/usr/bin/retdec-color-c.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-config.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-pat2yara</Path>
+                <Path fileType="executable">/usr/bin/retdec-fileinfo</Path>
+                <Path fileType="executable">/usr/bin/retdec-unpacker</Path>
+                <Path fileType="executable">/usr/bin/retdec-utils.py</Path>
+                <Path fileType="executable">/usr/bin/retdec-stacofin</Path>
+                <Path fileType="executable">/usr/bin/retdec-idr2pat</Path>
+                <Path fileType="executable">/usr/bin/retdec-bin2pat</Path>
+                <Path fileType="executable">/usr/bin/retdec-config</Path>
+                <Path fileType="executable">/usr/bin/retdec-getsig</Path>
+                <Path fileType="executable">/usr/bin/retdec-yarac</Path>
+                <Path fileType="library">/usr/lib/libretdec-libdwarf.so</Path>
+                <Path fileType="library">/usr/lib/libretdec-libelf.so</Path>
+                <Path fileType="doc">/usr/share/doc/retdec</Path>
+                <Path fileType="data">/usr/share/retdec</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-27</Date>
+                <Version>3.3</Version>
+                <Comment>First pisi release.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>dejagnu</Name>
             <Homepage>https://www.gnu.org/software/dejagnu</Homepage>
             <Packager>
@@ -8605,6 +8835,84 @@
                 <Comment>First release.</Comment>
                 <Name>Erdinç Gültekin</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>codelite</Name>
+            <Homepage>https://codelite.org/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>app:gui</IsA>
+            <PartOf>programming.environment</PartOf>
+            <Summary xml:lang="en">CodeLite, a cross platform C/C++/PHP and Node.js IDE written in C++</Summary>
+            <Summary xml:lang="tr">Codelite, C/C++/PHP ve Node.js için bütünleşik geliştirme araçlarını içerisinde bulunduran özgür yazılım</Summary>
+            <Description xml:lang="en">CodeLite is a free, open source, cross platform IDE specialized in C, C++, PHP and JavaScript (mainly for backend developers using Node.js) programming languages, which runs best on all major platforms (Windows, macOS and Linux).</Description>
+            <Description xml:lang="tr">Codelite, C/C++/PHP ve Node.js için bütünleşik geliştirme araçlarını içerisinde bulunduran, tamamen kişiselleştirilebilen ve geliştirilebilen bütünleşik geliştirme ortamıdır.</Description>
+            <Icon>codelite</Icon>
+            <Archive type="targz" sha1sum="790b903016c628ad18e368aa3ec03a2240aa34ab" name="14.0.tar.gz">https://github.com/eranif/codelite/archive/14.0.tar.gz</Archive>
+            <Archive type="zip" sha1sum="f15666992129f34a028be0e8c188697ace9841e8" target="codelite-14.0/wxgui" name="wxgui.zip">http://repos.codelite.org/wxCrafterLibs/wxgui.zip</Archive>
+            <BuildDependencies>
+                <Dependency>hunspell-devel</Dependency>
+                <Dependency>libssh-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
+                <Dependency>mariadb-lib</Dependency>
+                <Dependency>wxGTK-devel</Dependency>
+                <Dependency>lldb-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>cmake</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/environment/codelite/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>codelite</Name>
+            <Summary xml:lang="en">CodeLite, a cross platform C/C++/PHP and Node.js IDE written in C++</Summary>
+            <RuntimeDependencies>
+                <Dependency>wxGTK-common</Dependency>
+                <Dependency>hunspell</Dependency>
+                <Dependency>libssh</Dependency>
+                <Dependency>sqlite</Dependency>
+                <Dependency>wxGTK</Dependency>
+                <Dependency>lldb</Dependency>
+                <Dependency>gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/codelite_open_helper.py</Path>
+                <Path fileType="executable">/usr/bin/codelite_kill_children</Path>
+                <Path fileType="executable">/usr/bin/codelite-lsp-helper</Path>
+                <Path fileType="executable">/usr/bin/codelite_fix_files</Path>
+                <Path fileType="executable">/usr/bin/codelite_cppcheck</Path>
+                <Path fileType="executable">/usr/bin/codelite-terminal</Path>
+                <Path fileType="executable">/usr/bin/codelite_indexer</Path>
+                <Path fileType="executable">/usr/bin/codelite_xterm</Path>
+                <Path fileType="executable">/usr/bin/codelite-echo</Path>
+                <Path fileType="executable">/usr/bin/codelite-lldb</Path>
+                <Path fileType="executable">/usr/bin/codelite-make</Path>
+                <Path fileType="executable">/usr/bin/codelite_exec</Path>
+                <Path fileType="executable">/usr/bin/codelite-cc</Path>
+                <Path fileType="executable">/usr/bin/codelite</Path>
+                <Path fileType="data">/usr/share/applications/codelite.desktop</Path>
+                <Path fileType="data">/usr/share/codelite</Path>
+                <Path fileType="man">/usr/share/man/man1/codelite_fix_files.1</Path>
+                <Path fileType="man">/usr/share/man/man1/codelite-make.1</Path>
+                <Path fileType="man">/usr/share/man/man1/codelite.1</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/locale</Path>
+                <Path fileType="library">/usr/lib/codelite</Path>
+                <Path fileType="doc">/usr/share/doc/codelite</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-25</Date>
+                <Version>17.12</Version>
+                <Comment>First pisi release.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -13770,6 +14078,92 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-biplist</Name>
+            <Homepage>https://bitbucket.org/wooster/biplist/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">biplist is a binary plist parser/generator for Python.</Summary>
+            <Summary xml:lang="tr">İkilik plist çözümleyicisi/üreteci.</Summary>
+            <Description xml:lang="en">python3-biplist is a binary plist parser/generator for Python. Binary Property List (plist) files provide a faster and smaller serialization format for property lists on OS X. This is a library for generating binary plists which can be read by OS X, iOS, or other clients..</Description>
+            <Description xml:lang="tr">python3-biplist, python için ikilik plist çözümleyicisi/üreteci sunar.</Description>
+            <Archive type="targz" sha1sum="d58b73f07281de4e1d7be2accf2d112539188ee4" name="v1.0.3.tar.gz">https://bitbucket.org/wooster/biplist/get/v1.0.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-biplist/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-biplist</Name>
+            <Summary xml:lang="en">biplist is a binary plist parser/generator for Python.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/python3-biplist</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-03</Date>
+                <Version>1.0.3</Version>
+                <Comment>First pisi release.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-pdfkit</Name>
+            <Homepage>https://pypi.python.org/pypi/pdfkit/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Wkhtmltopdf python wrapper to convert html to pdf using the webkit rendering engine and qt.</Summary>
+            <Summary xml:lang="tr">Webkit rendering motorunu kullanarak HTML&apos;i PDF&apos;e dönüştüren, Wkhtmltopdf python sarmalayıcı kitaplık.</Summary>
+            <Description xml:lang="en">python3-pdfkit Python 2 and 3 wrapper for wkhtmltopdf utility to convert HTML to PDF using Webkit. This is adapted version of ruby PDFKit library.</Description>
+            <Description xml:lang="tr">python3-pdfkit, webkit rendering motorunu kullanarak HTML&apos;i PDF&apos;e dönüştüren, Wkhtmltopdf python sarmalayıcı kitaplığını sunar.</Description>
+            <Archive type="targz" sha1sum="b2073af616c4d125d11ecd3b83d4684a3c04bd06" name="pdfkit-0.6.1.tar.gz">https://files.pythonhosted.org/packages/a1/98/6988328f72fe3be4cbfcb6cbfc3066a00bf111ca7821a83dd0ce56e2cf57/pdfkit-0.6.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-pdfkit/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-pdfkit</Name>
+            <Summary xml:lang="en">Wkhtmltopdf python wrapper to convert html to pdf using the webkit rendering engine and qt.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/python3-pdfkit</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-03</Date>
+                <Version>0.6.1</Version>
+                <Comment>First pisi release.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python3-backports.functools_lru_cache</Name>
             <Homepage>https://github.com/jaraco/backports.functools_lru_cache</Homepage>
             <Packager>
@@ -14130,6 +14524,49 @@
                 <Date>2019-12-08</Date>
                 <Version>1.0.1</Version>
                 <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-kiwisolver</Name>
+            <Homepage>https://github.com/nucleic/kiwi</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Efficient C++ implementation of the Cassowary constraint solving algorithm.</Summary>
+            <Summary xml:lang="tr">Python3 için Cassowary kısıtı hesaplama uygulaması kitaplığı.</Summary>
+            <Description xml:lang="en">Kiwi is an efficient C++ implementation of the Cassowary constraint solving algorithm. Kiwi is an implementation of the algorithm based on the seminal Cassowary paper.</Description>
+            <Description xml:lang="tr">python3-kiwisolver, python3 için Cassowary kısıtı hesaplama uygulaması kitaplığı sunar.</Description>
+            <Archive type="targz" sha1sum="060cda7d28f43f7214886bea1103edf60d63e229" name="1.1.0.tar.gz">https://github.com/nucleic/kiwi/archive/1.1.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-kiwisolver/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-kiwisolver</Name>
+            <Summary xml:lang="en">Efficient C++ implementation of the Cassowary constraint solving algorithm.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/python3-kiwisolver</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-03</Date>
+                <Version>1.1.0</Version>
+                <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
@@ -15878,6 +16315,53 @@
                 <Version>19.8.18</Version>
                 <Comment>First release</Comment>
                 <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python3-retdec</Name>
+            <Homepage>https://github.com/s3rvac/retdec-python</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">A Python library and tools providing easy access to the retdec.com decompilation service through their REST API.</Summary>
+            <Summary xml:lang="tr">retdec.com&apos;un &quot;decompilation servisine&quot; erişmek için onların REST API&apos;sini kullanan python kitaplığı ve araç takımı</Summary>
+            <Description xml:lang="en">python3-retdec is a python library and tools providing easy access to the retdec.com decompilation service through their public REST API.</Description>
+            <Description xml:lang="tr">python3-retdec, retdec.com&apos;un &quot;decompilation servisine&quot; erişmek için onların REST API&apos;sini kullanan python kitaplığı ve araç takımıdır.</Description>
+            <Archive type="targz" sha1sum="5a1f95a15674c60f100ba32476154cb4bccef9fd" name="0.5.2.tar.gz">https://github.com/s3rvac/retdec-python/archive/0.5.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-retdec/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-retdec</Name>
+            <Summary xml:lang="en">A Python library and tools providing easy access to the retdec.com decompilation service through their REST API.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3-requests</Dependency>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/decompiler-retdec</Path>
+                <Path fileType="executable">/usr/bin/fileinfo-retdec</Path>
+                <Path fileType="doc">/usr/share/doc/python3-retdec</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-03</Date>
+                <Version>0.5.2</Version>
+                <Comment>First pisi release.</Comment>
+                <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
@@ -22245,10 +22729,11 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">A weather plugin for the Xfce desktop environment</Summary>
             <Description xml:lang="en">Originally written by Bob Schlärmann, this panel plugin shows information about your local weather in the panel, using forecast data provided by met.no.</Description>
-            <Archive type="tarbz2" sha1sum="a5b9432ac4439cc685cba152af3a3aa80b81c931" name="xfce4-weather-plugin-0.10.0.tar.bz2">http://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.10/xfce4-weather-plugin-0.10.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="321cb34ceb171644fde0bb02ab27e40228f5e6d5" name="xfce4-weather-plugin-0.10.1.tar.bz2">https://archive.xfce.org/src/panel-plugins/xfce4-weather-plugin/0.10/xfce4-weather-plugin-0.10.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
+                <Dependency>upower-devel</Dependency>
                 <Dependency>libxml2-devel</Dependency>
                 <Dependency>libsoup-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
@@ -22262,6 +22747,7 @@
                 <Dependency>gtk3</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>pango</Dependency>
+                <Dependency>upower</Dependency>
                 <Dependency>libxml2</Dependency>
                 <Dependency>libsoup</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
@@ -22277,6 +22763,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-02-27</Date>
+                <Version>0.10.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-08-11</Date>
                 <Version>0.10.0</Version>
@@ -23377,9 +23870,9 @@
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
             <PartOf>desktop.xfce.addon</PartOf>
-            <Summary xml:lang="en">Clipboard manager for the Xfce Panel</Summary>
+            <Summary xml:lang="en">Clipboard manager for the Xfce Panel.</Summary>
             <Description xml:lang="en">Clipboard Manager for the Xfce Panel and as a standalone application (it is a bundle). It keeps the clipboard contents around (even after an application quits), it is able to handle text and images, and has a feature to execute actions on specific text selection by matching them against regexes.</Description>
-            <Archive type="tarbz2" sha1sum="4ac0cb95cd6082ec598f5ba42c757eb5f48502a3" name="xfce4-clipman-plugin-1.4.3.tar.bz2">http://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.4/xfce4-clipman-plugin-1.4.3.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="4069d38100fb27b88da51aea5e32b00c95705258" name="xfce4-clipman-plugin-1.4.4.tar.bz2">https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.4/xfce4-clipman-plugin-1.4.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -23398,10 +23891,13 @@
                 <Dependency>gtk3</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>xfconf</Dependency>
+                <Dependency>libX11</Dependency>
                 <Dependency>libXtst</Dependency>
                 <Dependency>qrencode</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc</Path>
@@ -23413,6 +23909,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-03-01</Date>
+                <Version>1.4.4</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-07-28</Date>
                 <Version>1.4.3</Version>
@@ -28341,7 +28844,7 @@
         <History>
             <Update release="5">
                 <Date>2016-03-02</Date>
-                <Version>0.20.16</Version>
+                <Version>0.2.4</Version>
                 <Comment>Rebuilt with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
@@ -37586,7 +38089,7 @@
         <History>
             <Update release="1">
                 <Date>2017-01-20</Date>
-                <Version>2016.4.4</Version>
+                <Version>1.8.5</Version>
                 <Comment>Version bump.</Comment>
                 <Name>Ali Algul</Name>
                 <Email>aligulle3801@gmail.com</Email>

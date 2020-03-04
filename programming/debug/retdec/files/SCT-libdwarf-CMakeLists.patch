@@ -1,0 +1,11 @@
+--- retdec-3.3.orig/deps/libdwarf/CMakeLists.txt	2019-03-18 16:44:07.000000000 +0100
++++ retdec-3.3/deps/libdwarf/CMakeLists.txt	2020-03-02 21:24:20.605968512 +0100
+@@ -17,6 +17,8 @@
+ 		# This does not work on MSVC, but may be useful on Linux.
+ 		-DCMAKE_BUILD_TYPE=Release
+ 		-DCMAKE_INSTALL_PREFIX=${LIBDWARF_INSTALL_DIR}
++		# BlueDeviL Note: We need this argument to disable rpath
++		-DCMAKE_SKIP_RPATH=True
+ 		# Force the use of the same compiler as used to build the top-level
+ 		# project. Otherwise, the external project may pick up a different
+ 		# compiler, which may result in link errors.

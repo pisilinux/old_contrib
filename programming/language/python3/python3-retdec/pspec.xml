@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-retdec</Name>
+        <Homepage>https://github.com/s3rvac/retdec-python</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python3</PartOf>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>A Python library and tools providing easy access to the retdec.com decompilation service through their REST API.</Summary>
+        <Description>python3-retdec is a python library and tools providing easy access to the retdec.com decompilation service through their public REST API.</Description>
+        <Archive sha1sum="5a1f95a15674c60f100ba32476154cb4bccef9fd" type="targz">https://github.com/s3rvac/retdec-python/archive/0.5.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-retdec</Name>
+        <Summary>A Python library and tools providing easy access to the retdec.com decompilation service through their REST API.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-requests</Dependency>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/decompiler-retdec</Path>
+            <Path fileType="executable">/usr/bin/fileinfo-retdec</Path>
+            <Path fileType="doc">/usr/share/doc/python3-retdec</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-03-03</Date>
+            <Version>0.5.2</Version>
+            <Comment>First pisi release.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

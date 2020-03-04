@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>retdec</Name>
+        <Summary xml:lang="tr">LLVM temelli, yeniden hedeflenebilir makine kodu çözümleyicisi.</Summary>
+        <Description xml:lang="tr">Retdec (Retargetable Decompiler),  llvm temelli, yeniden hedeflenebilir makine kodu çözümleyicisidir. Retdec ELF, PE, Mach-O, COFF, AR (archive), Intel HEX ve ham makine kodlarının çözümlenmesini destekler. Ayrıca retdec 32-bit: Intel x86, ARM, MIPS, PIC32, ve PowerPC ile 64-bit: x86-64 işlemci mimarilerini destekler.</Description>
+    </Source>
+</PISI>

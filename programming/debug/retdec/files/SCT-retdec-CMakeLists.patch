@@ -1,0 +1,53 @@
+--- retdec-3.3.orig/support/CMakeLists.txt	2019-03-18 16:44:07.000000000 +0100
++++ retdec-3.3/support/CMakeLists.txt	2020-02-29 23:56:32.758776197 +0100
+@@ -15,20 +15,23 @@
+ 	FILE(REMOVE_RECURSE "${SUPPORT_TARGET_DIR}")
+ endif()
+ 
++
++# 2020-02-29 - BlueDeviL note: We manually download the binary
++
+ # Get and install external support package from the retdec-support repository.
+ # This step may erase the entire target support directory, so it needs to go
+ # first. 
+ #
+-install(CODE "
+-	execute_process(
+-		# -u = unbuffered -> print debug messages right away.
+-		COMMAND \"${PYTHON_EXECUTABLE}\" -u \"${CMAKE_SOURCE_DIR}/support/install-share.py\" \"${CMAKE_INSTALL_PREFIX}\"
+-		RESULT_VARIABLE INSTALL_SHARE_RES
+-	)
+-	if(INSTALL_SHARE_RES)
+-		message(FATAL_ERROR \"RetDec share directory installation FAILED\")
+-	endif()
+-")
++#install(CODE "
++#	execute_process(
++#		# -u = unbuffered -> print debug messages right away.
++#		COMMAND \"${PYTHON_EXECUTABLE}\" -u \"${CMAKE_SOURCE_DIR}/support/install-share.py\" \"${CMAKE_INSTALL_PREFIX}\"
++#		RESULT_VARIABLE INSTALL_SHARE_RES
++#	)
++#	if(INSTALL_SHARE_RES)
++#		message(FATAL_ERROR \"RetDec share directory installation FAILED\")
++#	endif()
++#")
+ 
+ # Install ordinal number databases.
+ #
+@@ -41,14 +44,14 @@
+ 
+ # Install YARA rules for tools detection.
+ #
+-set(YARAC_PATH "${CMAKE_INSTALL_PREFIX}/bin/retdec-yarac${CMAKE_EXECUTABLE_SUFFIX}")
++set(YARAC_PATH "/var/pisi/retdec-3.3-1/install/usr/bin/retdec-yarac${CMAKE_EXECUTABLE_SUFFIX}")
+ set(YARA_INSTALL_PY "${CMAKE_SOURCE_DIR}/support/install-yara.py")
+ 
+ install(CODE "
+ 	execute_process(
+ 		COMMAND \"${PYTHON_EXECUTABLE}\" -u \"${YARA_INSTALL_PY}\"
+ 			\"${YARAC_PATH}\"
+-			\"${SUPPORT_TARGET_DIR}\"
++			\"/var/pisi/retdec-3.3-1/install/usr/share/retdec/support\"
+ 			\"${CMAKE_SOURCE_DIR}/support/yara_patterns\"
+ 			${RETDEC_COMPILE_YARA}
+ 		RESULT_VARIABLE INSTALL_YARA_RES

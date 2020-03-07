@@ -3210,7 +3210,7 @@
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="data">/usr/share</Path>
                 <Path fileType="man">/usr/share/man/man1</Path>
-                <Path fileType="doc">/usr/sahre/doc</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
@@ -4155,6 +4155,160 @@
                 <Comment>First Release.</Comment>
                 <Name>Stefan Gronewold(groni)</Name>
                 <Email>groni@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>alsa-plugins</Name>
+            <Homepage>https://www.alsa-project.org/wiki/Main_Page</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.plugin</PartOf>
+            <Summary xml:lang="en">The Advanced Linux Sound Architecture (ALSA) plugins.</Summary>
+            <Summary xml:lang="tr">Gelişmiş Linux Ses Mimarisi (ALSA) eklentileri</Summary>
+            <Description xml:lang="en">alsa-plugins provides plugins like JACK, PulseAudio, etc. for ALSA.</Description>
+            <Description xml:lang="tr">alsa-plugins ALSA mimarisinin JACK, PulseAudio, vb. gibi altyapılar ile çalışmasını sağlayan eklentiler içerir.</Description>
+            <Archive type="tarbz2" sha1sum="e32e586e52f82dd56218277033780451a2d69271" name="alsa-plugins-1.1.5.tar.bz2">ftp://ftp.alsa-project.org/pub/plugins/alsa-plugins-1.1.5.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>jack-audio-connection-kit-devel</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>libsamplerate-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>ffmpeg-devel</Dependency>
+                <Dependency>speex-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">Fedora/plugin-config.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/plugin/alsa-plugins/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>alsa-plugins</Name>
+            <RuntimeDependencies>
+                <Dependency>jack-audio-connection-kit</Dependency>
+                <Dependency>libsamplerate</Dependency>
+                <Dependency>alsa-utils</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>ffmpeg</Dependency>
+                <Dependency>speex</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/alsa/pcm/jack.conf" permission="0644" owner="root">jack.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pcm/speex.conf" permission="0644" owner="root">speex.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pcm/arcamav.conf" permission="0644" owner="root">arcamav.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pcm/pcm-oss.conf" permission="0644" owner="root">pcm-oss.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pcm/samplerate.conf" permission="0644" owner="root">samplerate.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pcm/upmix.conf" permission="0644" owner="root">upmix.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pcm/vdownmix.conf" permission="0644" owner="root">vdownmix.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pcm/50-alsa.conf" permission="0644" owner="root">50-alsa.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <Package>
+            <Name>alsa-plugins-pulseaudio</Name>
+            <Summary xml:lang="en">alsa-plugins-pulseaudio allows any program that uses the ALSA API to access a PulseAudio daemon</Summary>
+            <RuntimeDependencies>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>alsa-utils</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc/asound.conf</Path>
+                <Path fileType="config">/etc/alsa/pulse-default.conf</Path>
+                <Path fileType="config">/usr/share/alsa/alsa.conf.d</Path>
+                <Path fileType="library">/usr/lib/alsa-lib/libasound_module_*_pulse.so</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/etc/asound.conf" permission="0644" owner="root">pulse-default.conf</AdditionalFile>
+                <AdditionalFile target="/etc/alsa/pulse-default.conf" permission="0644" owner="root">pulse-default.conf</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="11">
+                <Date>2020-03-03</Date>
+                <Version>1.1.5</Version>
+                <Comment>Ver. up</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="10">
+                <Date>2015-03-04</Date>
+                <Version>1.0.29</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Hakan Yıldız</Name>
+                <Email>hknyldz93@gmail.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2014-12-18</Date>
+                <Version>1.0.28</Version>
+                <Comment>Rebuild version 28.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="8">
+                <Date>2014-08-19</Date>
+                <Version>1.0.28</Version>
+                <Comment>Rebuild version 28.</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="7">
+                <Date>2014-08-19</Date>
+                <Version>1.0.28</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2014-05-26</Date>
+                <Version>1.0.27</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-04-05</Date>
+                <Version>1.0.27</Version>
+                <Comment>Rebuild for x264.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-11-30</Date>
+                <Version>1.0.27</Version>
+                <Comment>Rebuild for ffmpeg.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-08-22</Date>
+                <Version>1.0.27</Version>
+                <Comment>Release bump.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-07-27</Date>
+                <Version>1.0.27</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-01-29</Date>
+                <Version>1.0.26.20121013</Version>
+                <Comment>First release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -10016,7 +10170,7 @@
             <Summary xml:lang="tr">Python ile yazilmis C99 cozumleyicisi</Summary>
             <Description xml:lang="en">pycparser is a parser for the C language, written in pure Python. It is a module designed to be easily integrated into applications that need to parse C source code.</Description>
             <Description xml:lang="tr">pycparser, C kaynak kodunu çözümlemesi gereken uygulamalara kolaylıkla bütünleşebilen bir python modülüdür.</Description>
-            <Archive type="targz" sha1sum="141582eb2a5ad9fee9bb7646cecb024f0406be8a" name="release_v2.19.tar.gz">https://github.com/eliben/pycparser/archive/release_v2.19.tar.gz</Archive>
+            <Archive type="targz" sha1sum="3a7e92b87f9fe0b863ec99b0c4ee9f90a32a3c3f" name="release_v2.20.tar.gz">https://github.com/eliben/pycparser/archive/release_v2.20.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python</Dependency>
@@ -10027,11 +10181,18 @@
             <Name>python-pycparser</Name>
             <Summary xml:lang="en">Complete C99 parser in pure Python</Summary>
             <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc/python-pycparser</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-03-04</Date>
+                <Version>2.20</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-11-07</Date>
                 <Version>2.19</Version>
@@ -14524,49 +14685,6 @@
                 <Date>2019-12-08</Date>
                 <Version>1.0.1</Version>
                 <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-kiwisolver</Name>
-            <Homepage>https://github.com/nucleic/kiwi</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Efficient C++ implementation of the Cassowary constraint solving algorithm.</Summary>
-            <Summary xml:lang="tr">Python3 için Cassowary kısıtı hesaplama uygulaması kitaplığı.</Summary>
-            <Description xml:lang="en">Kiwi is an efficient C++ implementation of the Cassowary constraint solving algorithm. Kiwi is an implementation of the algorithm based on the seminal Cassowary paper.</Description>
-            <Description xml:lang="tr">python3-kiwisolver, python3 için Cassowary kısıtı hesaplama uygulaması kitaplığı sunar.</Description>
-            <Archive type="targz" sha1sum="060cda7d28f43f7214886bea1103edf60d63e229" name="1.1.0.tar.gz">https://github.com/nucleic/kiwi/archive/1.1.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-kiwisolver/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-kiwisolver</Name>
-            <Summary xml:lang="en">Efficient C++ implementation of the Cassowary constraint solving algorithm.</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="doc">/usr/share/doc/python3-kiwisolver</Path>
-                <Path fileType="library">/usr/lib/python3*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-03-03</Date>
-                <Version>1.1.0</Version>
-                <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
@@ -29590,29 +29708,34 @@
             <Summary xml:lang="tr">Geliştirilmiş Whois istemcisi</Summary>
             <Description xml:lang="en">This is a new whois (RFC 3912) client rewritten from scratch. It is inspired from and compatible with the usual BSD and RIPE whois programs. It is intelligent and can automatically select the appropriate whois server for most queries.</Description>
             <Description xml:lang="tr">Otomatik olarak uygun whois sunucularını seçebilen akıllı bir whois istemcisidir.</Description>
-            <Archive type="targz" sha1sum="44be398cac4f936f0892fb9c0be055758a78eef8" name="v5.2.11.tar.gz">https://github.com/rfc1036/whois/archive/v5.2.11.tar.gz</Archive>
+            <Archive type="targz" sha1sum="58cdec70f9f85db967a5b602567de4d6140ace3e" name="v5.5.6.tar.gz">https://github.com/rfc1036/whois/archive/v5.5.6.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>libidn-devel</Dependency>
+                <Dependency>libidn2-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch>whois-4.7.2-config-file.patch</Patch>
-            </Patches>
             <SourceURI>network/analyzer/whois/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>whois</Name>
+            <Summary xml:lang="en">Improved whois client</Summary>
             <RuntimeDependencies>
-                <Dependency>libidn</Dependency>
+                <Dependency>libidn2</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="doc">/usr/share/doc/whois</Path>
+                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="config">/etc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>2020-03-05</Date>
+                <Version>5.5.6</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="7">
                 <Date>2016-03-13</Date>
                 <Version>5.2.11</Version>
@@ -29939,17 +30062,17 @@
             <Name>pixiewps</Name>
             <Homepage>https://github.com/wiire/pixiewps/</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:console</IsA>
-            <PartOf>network</PartOf>
+            <PartOf>network.analyzer</PartOf>
             <Summary xml:lang="en">Offline attack for WPS pin</Summary>
             <Summary xml:lang="tr">WPS için çevrimdışı saldırı aracı.</Summary>
             <Description xml:lang="en">Pixiewps is a tool written in C used to bruteforce offline the WPS pin exploiting the low or non-existing entropy of some APs (pixie dust attack). It is meant for educational purposes only.</Description>
             <Description xml:lang="tr">Pixiewps, WPS pinlerine çevrimdışı kabadayı(brute force) saldırısı yaparak düşük ya da entropisi bulunmayan bağlantı noktalarını sömürmeye yarayan(pixie dust attack) C ile yazılmış bir kablosuz ağ zaafiyet aracıdır. Sadece eğitim amaçlı kullanılmak üzere tasarlanmıştır.</Description>
-            <Archive type="targz" sha1sum="6c4e8816680e8cd7f15d5b2277745b853ec6e21d" name="v1.2.2.tar.gz">https://github.com/wiire/pixiewps/archive/v1.2.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="b094e127addef2b5c36a10b03cdc0d9c70e7e2e2" name="v1.4.2.tar.gz">https://github.com/wiire-a/pixiewps/archive/v1.4.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>openssl-devel</Dependency>
             </BuildDependencies>
@@ -29964,9 +30087,17 @@
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-03-05</Date>
+                <Version>1.4.2</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-02-23</Date>
                 <Version>1.2.2</Version>
@@ -30547,69 +30678,6 @@
                 <Comment>First release, built with docker.</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>traceroute</Name>
-            <Homepage>http://traceroute.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <PartOf>network.analyzer</PartOf>
-            <Summary xml:lang="en">Utility to trace the route of IP packets</Summary>
-            <Summary xml:lang="tr">IP paketlerinin izlediği yolları takip etme aracı</Summary>
-            <Description xml:lang="en">The traceroute utility displays the route used by IP packets on their way to a specified network (or Internet) host. Traceroute is used as a network debugging tool. If you&apos;re having network connectivity problems, traceroute will show you where along the route the trouble is.</Description>
-            <Description xml:lang="tr">traceroute IP paketlerinin ağda veya internette izlediği yolu görüntüler. Ağda bağlantı probleminiz varsa, traceroute problemin yol üzerinde tam olarak nereden kaynaklandığını gösterir.</Description>
-            <Archive type="targz" sha1sum="bc5c6c8022187511be5665b3818d919be5987dcc" name="traceroute-2.1.0.tar.gz">mirrors://sourceforge/traceroute/traceroute-2.1.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>glibc-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/analyzer/traceroute/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>traceroute</Name>
-            <RuntimeDependencies>
-                <Dependency>glibc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2016-03-10</Date>
-                <Version>2.1.0</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2015-02-20</Date>
-                <Version>2.0.21</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-03-09</Date>
-                <Version>2.0.18</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Varol Maksutoğlu</Name>
-                <Email>waroi@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-01</Date>
-                <Version>2.0.18</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

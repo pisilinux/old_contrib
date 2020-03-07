@@ -9,10 +9,11 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def build():
-    autotools.make('OPT="%s" HAVE_LIBIDN=1 HAVE_ICONV=1' % get.CFLAGS())
-
+    autotools.make("CONFIG_FILE=/etc/whois.conf \
+                    CFLAGS='%s %s' \
+                    HAVE_ICONV=1" % (get.CFLAGS(), get.CXXFLAGS()))
 def install():
     autotools.rawInstall('BASEDIR="%s" prefix=/usr' % get.installDIR())
     pisitools.insinto("/etc/", "whois.conf")
 
-    pisitools.dodoc("README", "COPYING", "debian/changelog")
+    pisitools.dodoc("README", "COPYING")

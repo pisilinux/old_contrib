@@ -14692,49 +14692,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-kiwisolver</Name>
-            <Homepage>https://github.com/nucleic/kiwi</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Efficient C++ implementation of the Cassowary constraint solving algorithm.</Summary>
-            <Summary xml:lang="tr">Python3 için Cassowary kısıtı hesaplama uygulaması kitaplığı.</Summary>
-            <Description xml:lang="en">Kiwi is an efficient C++ implementation of the Cassowary constraint solving algorithm. Kiwi is an implementation of the algorithm based on the seminal Cassowary paper.</Description>
-            <Description xml:lang="tr">python3-kiwisolver, python3 için Cassowary kısıtı hesaplama uygulaması kitaplığı sunar.</Description>
-            <Archive type="targz" sha1sum="060cda7d28f43f7214886bea1103edf60d63e229" name="1.1.0.tar.gz">https://github.com/nucleic/kiwi/archive/1.1.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-kiwisolver/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-kiwisolver</Name>
-            <Summary xml:lang="en">Efficient C++ implementation of the Cassowary constraint solving algorithm.</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="doc">/usr/share/doc/python3-kiwisolver</Path>
-                <Path fileType="library">/usr/lib/python3*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-03-03</Date>
-                <Version>1.1.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-ifaddr</Name>
             <Homepage>https://github.com/pydron/ifaddr</Homepage>
             <Packager>

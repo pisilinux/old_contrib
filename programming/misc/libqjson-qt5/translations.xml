@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libqjson-qt5</Name>
+        <Summary xml:lang="tr">Qt tabanlı bu kitaplığı JSON data haritalarını QVariant nesnelere dönüştürür</Summary>
+        <Summary xml:lang="pl">Implementacja Qt formatu JSON</Summary>
+        <Description xml:lang="tr">libqjson-qt5, (JavaScript Object Notation) bir veri değişim biçimidir. JSON haritalarını QVariant nesnelere dönüştürür..</Description>
+    </Source>
+
+    <Package>
+        <Name>libqjson-qt5-devel</Name>
+        <Summary xml:lang="tr">libqjson-qt5 için geliştirme dosyaları</Summary>
+        <Summary xml:lang="pl">Pliki nagłówkowe do libqjson-qt5</Summary>
+    </Package>
+</PISI>

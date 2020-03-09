@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfburn</Name>
-		<Homepage>https://goodies.xfce.org/projects/applications/xfburn</Homepage>
+		<Homepage>https://docs.xfce.org/apps/xfburn</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -22,6 +22,7 @@
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
 			<Dependency>libisofs-devel</Dependency>
+			<Dependency>libgudev-devel</Dependency>
 			<Dependency>librsvg-devel</Dependency>
 			<Dependency>libburn-devel</Dependency>
 			<Dependency>exo-devel</Dependency>
@@ -39,6 +40,7 @@
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>gstreamer</Dependency>
 			<Dependency>libisofs</Dependency>
+			<Dependency>libgudev</Dependency>
 			<Dependency>libburn</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>gtk3</Dependency>

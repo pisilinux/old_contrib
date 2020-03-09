@@ -9,13 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("\
-	--prefix=/usr \
-	\
-	--enable-gudev \
-	--enable-gstreamer \
-	\
-	--disable-static")
+	autotools.configure("--enable-gudev --enable-gstreamer --disable-static")
 
 def build():
 	autotools.make()

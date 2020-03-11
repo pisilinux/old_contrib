@@ -19,6 +19,7 @@ def setup():
 def build():
     PYTHON3="/usr/bin/python3"
     autotools.configure("--prefix=/usr --with-python3")
+    # fix unused direct dependency analysis
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
     autotools.make()
 

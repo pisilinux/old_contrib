@@ -21,6 +21,7 @@ def setup():
 def build():
     PYTHON2="/usr/bin/python"
     autotools.configure("--prefix=/usr --with-python")
+    # fix unused direct dependency analysis
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
     autotools.make()
 

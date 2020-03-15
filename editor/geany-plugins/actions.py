@@ -9,21 +9,22 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+	pisitools.cflags.add("-Wno-deprecated-declarations")
 	autotools.configure("\
 	\
-	--enable-debugger \
-	--enable-gitchangebar \
-	--enable-geanylua \
 	--enable-geanypg \
+	--enable-markdown \
+	--enable-debugger \
+	--enable-geanylua \
 	--enable-utilslib \
 	--enable-spellcheck \
 	--enable-geanygendoc \
+	--enable-gitchangebar \
 	--enable-gtkspell=yes \
 	\
-	--disable-devhelp \
-	--disable-markdown \
-	--disable-webhelper \
 	--disable-geanypy \
+	--disable-devhelp \
+	--disable-webhelper \
 	--disable-multiterm")
 
 def build():

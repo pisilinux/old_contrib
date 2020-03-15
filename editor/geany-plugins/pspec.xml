@@ -23,6 +23,7 @@
 			<Dependency>vala-devel</Dependency>
 			<Dependency>ctpl-devel</Dependency>
 			<Dependency>check-devel</Dependency>
+			<!-- geany must built with gtk3 -->
 			<Dependency>geany-devel</Dependency>
 			<Dependency>lua51-devel</Dependency>
 			<Dependency>gpgme-devel</Dependency>
@@ -33,6 +34,7 @@
 			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>enchant2-devel</Dependency>
 			<Dependency>gtkspell3-devel</Dependency>
+			<Dependency>webkit2gtk-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">overview_plugin_test.patch</Patch>
@@ -50,6 +52,7 @@
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>glib2</Dependency>
+			<!-- geany must built with gtk3 -->
 			<Dependency>geany</Dependency>
 			<Dependency>lua51</Dependency>
 			<Dependency>gpgme</Dependency>
@@ -62,6 +65,7 @@
 			<Dependency>gtkspell3</Dependency>
 			<Dependency>libassuan</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>webkit2gtk</Dependency>
 			<Dependency>libgpg-error</Dependency>
 		</RuntimeDependencies>
 		<Files>

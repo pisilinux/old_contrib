@@ -21,10 +21,12 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>upower-devel</Dependency>
 			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
+			<Dependency>ConsoleKit-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>libXScrnSaver-devel</Dependency>
@@ -36,6 +38,7 @@
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>dbus</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>

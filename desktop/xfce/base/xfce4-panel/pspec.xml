@@ -23,6 +23,8 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>vala-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
@@ -39,6 +41,7 @@
 			<Dependency>exo</Dependency>
 			<Dependency>gtk2</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>dbus</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>glib2</Dependency>

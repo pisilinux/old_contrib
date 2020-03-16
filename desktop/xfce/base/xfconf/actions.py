@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--libexecdir=/usr/libexec --enable-vala --enable-introspection \
+	autotools.configure("--enable-vala --enable-introspection \
 	\
 	--disable-gsettings-backend \
 	--disable-static \

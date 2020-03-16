@@ -21,10 +21,13 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>upower-devel</Dependency>
 			<Dependency>colord-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
+			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>libxklavier-devel</Dependency>
 			<Dependency>xorg-input-libinput-devel</Dependency>
 		</BuildDependencies>

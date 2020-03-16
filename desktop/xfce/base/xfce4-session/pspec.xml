@@ -19,6 +19,8 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>polkit-devel</Dependency>
@@ -41,6 +43,7 @@
 			<!-- mount does not work if dbus -autolaunch run from sddm.
 			<Dependency>lxdm</Dependency>
 			-->
+			<Dependency>dbus</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>

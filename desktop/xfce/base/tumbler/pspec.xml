@@ -19,6 +19,7 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>curl-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>libpng-devel</Dependency>
 			<Dependency>libgsf-devel</Dependency>
 			<Dependency>libopenraw-devel</Dependency>
@@ -34,6 +35,7 @@
 		<RuntimeDependencies>
 			<Dependency>curl</Dependency>
 			<Dependency>glib2</Dependency>
+			<Dependency>dbus</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>libpng</Dependency>
 			<Dependency>libgsf</Dependency>

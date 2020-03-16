@@ -23,6 +23,7 @@
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
@@ -40,6 +41,7 @@
 		<RuntimeDependencies>
 			<Dependency>exo</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>dbus</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>cairo</Dependency>

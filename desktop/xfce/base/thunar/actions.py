@@ -9,17 +9,15 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--prefix=/usr \
+	autotools.configure("\
 	\
-	--enable-notifications \
-	--enable-introspection \
+	--enable-notifications --enable-introspection \
 	--enable-gio-unix \
 	--enable-gudev \
 	--enable-exif \
 	--enable-pcre \
 	\
-	--disable-gtk-doc \
-	--disable-static")
+	--disable-gtk-doc --disable-static")
 
 	#pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
 	#pisitools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
@@ -33,12 +31,5 @@ def install():
 
 	pisitools.removeDir("usr/lib/systemd")
 
-#	pisitools.dodoc("AUTHORS", \
-#	"ChangeLog", \
-#	"COPYING*", \
-#	"FAQ", \
-#	"HACKING", \
-#	"NEWS", \
-#	"README", \
-#	"THANKS")
+#	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING*", "FAQ", "HACKING", "NEWS", "README", "THANKS")
 

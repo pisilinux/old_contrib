@@ -17,46 +17,41 @@
 			https://archive.xfce.org/src/xfce/tumbler/0.2/tumbler-0.2.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
-			<Dependency>gdk-pixbuf-devel</Dependency>
-			<Dependency>freetype-devel</Dependency>
-			<Dependency>libopenraw-devel</Dependency>
 			<Dependency>intltool</Dependency>
-			<Dependency>poppler-glib-devel</Dependency>
+			<Dependency>curl-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
 			<Dependency>libgsf-devel</Dependency>
+			<Dependency>libopenraw-devel</Dependency>
+			<Dependency>poppler-glib-devel</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
 			<Dependency>gst-plugins-base-devel</Dependency>
-			<Dependency>gtk3-devel</Dependency>
-			<Dependency>curl-devel</Dependency>
-			<Dependency>dbus-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>libpng-devel</Dependency>
+			<Dependency>ffmpegthumbnailer-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>tumbler</Name>
 		<RuntimeDependencies>
+			<Dependency>curl</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
+			<Dependency>libpng</Dependency>
 			<Dependency>libgsf</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>gstreamer</Dependency>
+			<Dependency>libopenraw</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>poppler-glib</Dependency>
 			<Dependency>libjpeg-turbo</Dependency>
 			<Dependency>gst-plugins-base</Dependency>
-			<Dependency>curl</Dependency>
-			<Dependency>dbus</Dependency>
-			<Dependency>glib2</Dependency>
-			<Dependency>libpng</Dependency>
-			<Dependency>freetype</Dependency>
-			<Dependency>gstreamer</Dependency>
-			<Dependency>libopenraw</Dependency>
-			<Dependency>gtk3</Dependency>
+			<Dependency>ffmpegthumbnailer</Dependency>
 		</RuntimeDependencies>
 		<Files>
+			<Path fileType="config">/etc/xdg/tumbler/tumbler.rc</Path>
 			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share/</Path>
-			<Path fileType="doc">/usr/share/doc</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
-			<Path fileType="config">/etc/xdg/tumbler/tumbler.rc</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
@@ -66,6 +61,7 @@
 		<RuntimeDependencies>
 			<Dependency release="current">tumbler</Dependency>
 			<Dependency>glib2-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>

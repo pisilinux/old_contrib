@@ -21,28 +21,11 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
-			<Dependency>gtk3-devel</Dependency>
-			<Dependency>dbus-devel</Dependency>
-			<Dependency>libXi-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>cairo-devel</Dependency>
-			<Dependency>pango-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
 			<Dependency>upower-devel</Dependency>
 			<Dependency>colord-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
-			<Dependency>libX11-devel</Dependency>
-			<Dependency>libwnck3-devel</Dependency>
-			<Dependency>libglade-devel</Dependency>
-			<Dependency>libXrandr-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
-			<Dependency>libxfce4ui-devel</Dependency>
-			<Dependency>fontconfig-devel</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
-			<Dependency>libXcursor-devel</Dependency>
-			<Dependency>libcanberra-devel</Dependency>
 			<Dependency>libxklavier-devel</Dependency>
-			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>xorg-input-libinput-devel</Dependency>
 		</BuildDependencies>
 	</Source>
@@ -50,6 +33,7 @@
 	<Package>
 		<Name>xfce4-settings</Name>
 		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
 			<Dependency>exo</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>dbus</Dependency>
@@ -72,7 +56,6 @@
 			<Dependency>libxklavier</Dependency>
 			<Dependency>libxfce4util</Dependency>
 			<Dependency>network-manager-applet</Dependency>
-			<Dependency>xorg-input-libinput</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>

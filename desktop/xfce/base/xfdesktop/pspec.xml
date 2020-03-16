@@ -10,7 +10,6 @@
 		</Packager>
 		<License>GPLv2</License>
 		<PartOf>desktop.xfce.base</PartOf>
-		<Icon>xfce4_xicon1</Icon>
 		<IsA>library</IsA>
 		<IsA>app:gui</IsA>
 		<Summary>Xfce desktop manager</Summary>
@@ -23,23 +22,15 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
-			<Dependency>dbus-devel</Dependency>
-			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
-			<Dependency>pango-devel</Dependency>
-			<Dependency>cairo-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
-			<Dependency>thunar-devel</Dependency>
-			<Dependency>garcon-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
-			<Dependency>libglade-devel</Dependency>
-			<Dependency>libwnck2-devel</Dependency>
+			<Dependency>garcon-devel</Dependency>
+			<Dependency>thunar-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
-			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
 	</Source>
@@ -48,8 +39,6 @@
 		<Name>xfdesktop</Name>
 		<RuntimeDependencies>
 			<Dependency>exo</Dependency>
-			<Dependency>dbus</Dependency>
-			<Dependency>gtk2</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>pango</Dependency>
@@ -58,7 +47,6 @@
 			<Dependency>garcon</Dependency>
 			<Dependency>xfconf</Dependency>
 			<Dependency>libX11</Dependency>
-			<Dependency>libwnck2</Dependency>
 			<Dependency>libwnck3</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>

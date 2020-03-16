@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfwm4</Name>
@@ -10,35 +10,22 @@
 		</Packager>
 		<License>GPLv2</License>
 		<PartOf>desktop.xfce.base</PartOf>
-		<Icon>xfwm4</Icon>
 		<IsA>app:gui</IsA>
 		<Summary>Xfce window manager</Summary>
 		<Description>
 			The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.
 		</Description>
 		<Archive sha1sum="08a16f03a5dea56e5628c03780106153f71c92bc" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14/src/xfwm4-4.14.0.tar.bz2
+			https://archive.xfce.org/xfce/4.14/src/xfwm4-4.14.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
-			<Dependency>pango-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
-			<Dependency>libXrandr-devel</Dependency>
-			<Dependency>libXfixes-devel</Dependency>
-			<Dependency>libXrender-devel</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
-			<Dependency>libXdamage-devel</Dependency>
-			<Dependency>libXcomposite-devel</Dependency>
-			<Dependency>startup-notification-devel</Dependency>
-			<Dependency>libxfce4util-devel</Dependency>
-			<Dependency>libxfce4ui-devel</Dependency>
-			<Dependency>libepoxy-devel</Dependency>
-			<Dependency>libglade-devel</Dependency>
-			<Dependency>libwnck3-devel</Dependency>
-			<Dependency>libXext-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
+			<Dependency>libwnck3-devel</Dependency>
+			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>libXpresent-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -50,21 +37,22 @@
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>libXi</Dependency>
-			<Dependency>libepoxy</Dependency>
-			<Dependency>libXrandr</Dependency>
-			<Dependency>libXfixes</Dependency>
-			<Dependency>libXrender</Dependency>
-			<Dependency>libXinerama</Dependency>
-			<Dependency>libXcomposite</Dependency>
-			<Dependency>startup-notification</Dependency>
-			<Dependency>libxfce4util</Dependency>
-			<Dependency>libXdamage</Dependency>
-			<Dependency>libxfce4ui</Dependency>
-			<Dependency>gdk-pixbuf</Dependency>
-			<Dependency>libwnck3</Dependency>
-			<Dependency>libXext</Dependency>
 			<Dependency>xfconf</Dependency>
 			<Dependency>libX11</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>libepoxy</Dependency>
+			<Dependency>libwnck3</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libxfce4ui</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libXrender</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXpresent</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>libxfce4util</Dependency>
+			<Dependency>libXcomposite</Dependency>
+			<Dependency>startup-notification</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>

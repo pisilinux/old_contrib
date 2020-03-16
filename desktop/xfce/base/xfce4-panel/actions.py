@@ -1,26 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Licensed under the GNU General Public License, version 2
-# See the file http://www.gnu.org/copyleft/gpl.txt
+# Licensed under the GNU General Public License, version 3.
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import get
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
 
 def setup():
+	pisitools.cflags.add("-Wno-deprecated-declarations")
 	autotools.configure("\
-	--sysconfdir=/etc \
-	--prefix=/usr \
 	\
-	--disable-gtk-doc \
-	--disable-static \
+	--enable-introspection --enable-gio-unix --enable-vala --enable-gtk2 \
 	\
-	--enable-introspection \
-	--enable-gio-unix \
-	--enable-vala \
-	--enable-gtk2 \
-	--with-x")
+	--disable-gtk-doc --disable-static")
 
 	#pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
 	#pisitools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
@@ -32,8 +26,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", \
-	"COPYING", \
-	"NEWS", \
-	"README", \
-	"TODO")
+	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README", "TODO")
+

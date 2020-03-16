@@ -23,28 +23,26 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>perl-URI</Dependency>
-			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
-			<Dependency>python-six</Dependency>
 			<Dependency>glib2-devel</Dependency>
-			<Dependency>libX11-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>exo</Name>
 		<RuntimeDependencies>
-			<Dependency>libxfce4util</Dependency>
-			<Dependency>libxfce4ui</Dependency>
-			<Dependency>gdk-pixbuf</Dependency>
-			<Dependency>libX11</Dependency>
-			<Dependency>glib2</Dependency>
-			<Dependency>pango</Dependency>
-			<Dependency>cairo</Dependency>
-			<Dependency>gtk3</Dependency>
-			<Dependency>gtk2</Dependency>
 			<Dependency>atk</Dependency>
+			<Dependency>gtk2</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libxfce4ui</Dependency>
+			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc/xdg/xfce4</Path>
@@ -63,9 +61,9 @@
 		<Summary>Development files for exo</Summary>
 		<RuntimeDependencies>
 			<Dependency release="current">exo</Dependency>
-			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libxfce4util-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>

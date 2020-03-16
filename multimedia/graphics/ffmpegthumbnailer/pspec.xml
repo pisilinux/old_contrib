@@ -36,7 +36,6 @@
 			<Dependency>ffmpeg</Dependency>
 			<Dependency>libgcc</Dependency>
 			<Dependency>libpng</Dependency>
-			<Dependency>zlib</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>

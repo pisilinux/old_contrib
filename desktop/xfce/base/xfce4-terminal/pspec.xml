@@ -10,7 +10,6 @@
 		</Packager>
 		<License>GPLv2</License>
 		<PartOf>desktop.xfce.base</PartOf>
-		<Icon>utilities-terminal</Icon>
 		<IsA>app:gui</IsA>
 		<Summary>Terminal for Xfce</Summary>
 		<Description>
@@ -22,6 +21,7 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>vte-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
 			<Dependency>gnutls-devel</Dependency>
 			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
@@ -38,8 +38,6 @@
 			<Dependency>pango</Dependency>
 			<Dependency>libX11</Dependency>
 			<Dependency>xfconf</Dependency>
-			<Dependency>gnutls</Dependency>
-			<Dependency>libpcre2</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4util</Dependency>

@@ -6,10 +6,13 @@
 
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
 
 def setup():
 #	pisitools.dosed("libffmpegthumbnailer/pngwriter.cpp", "#include <cassert>", "#include <cassert>\n#include <cstring>")
+	pisitools.cxxflags.add("-Wno-deprecated-declarations")
 	cmaketools.configure("\
+	\
 	-DCMAKE_INSTALL_DIR=/usr \
 	-DCMAKE_INSTALL_LIBDIR=lib \
 	-DCMAKE_BUILD_TYPE=Release \
@@ -22,6 +25,7 @@ def build():
 	cmaketools.make()
 
 def install():
-	cmaketools.install()
+	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README.md")
+

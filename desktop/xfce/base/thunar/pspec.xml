@@ -22,32 +22,15 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
-			<Dependency>atk-devel</Dependency>
 			<Dependency>exo-devel</Dependency>
-			<Dependency>gtk3-devel</Dependency>
-			<Dependency>dbus-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>pango-devel</Dependency>
-			<Dependency>cairo-devel</Dependency>
-			<Dependency>gconf-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
-			<Dependency>libICE-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
-			<Dependency>garcon-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libexif-devel</Dependency>
-			<Dependency>libpcre-devel</Dependency>
-			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>libgudev-devel</Dependency>
-			<Dependency>xfce4-dev-tools</Dependency>
 			<Dependency>libnotify-devel</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
-			<Dependency>fontconfig-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
-			<Dependency>libxfce4util-devel</Dependency>
-			<Dependency>desktop-file-utils</Dependency>
-			<Dependency>libjpeg-turbo-devel</Dependency>
-			<Dependency>startup-notification-devel</Dependency>
+			<Dependency>xfce4-panel-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -57,8 +40,6 @@
 			<Dependency>atk</Dependency>
 			<Dependency>exo</Dependency>
 			<Dependency>gtk3</Dependency>
-			<Dependency>dbus</Dependency>
-			<Dependency>gconf</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>cairo</Dependency>
@@ -68,13 +49,12 @@
 			<Dependency>xfconf</Dependency>
 			<Dependency>libexif</Dependency>
 			<Dependency>libpcre</Dependency>
-			<Dependency>libpcre2</Dependency>
 			<Dependency>libgudev</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
+			<Dependency>xfce4-panel</Dependency>
 			<Dependency>libxfce4util</Dependency>
-			<Dependency>desktop-file-utils</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>
@@ -92,8 +72,9 @@
 		<IsA>library</IsA>
 		<Summary>Thunar development files</Summary>
 		<RuntimeDependencies>
-			<Dependency release="current">thunar</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency release="current">thunar</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>

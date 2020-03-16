@@ -1,24 +1,20 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Licensed under the GNU General Public License, version 2
-# See the file http://www.gnu.org/copyleft/gpl.txt
+# Licensed under the GNU General Public License, version 3.
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--prefix=/usr \
+	autotools.configure("--enable-vala --enable-introspection \
 	\
+	--disable-gsettings-backend \
 	--disable-static \
 	--disable-gtk-doc \
-	--disable-perl-bindings \
-	\
-	--enable-vala \
-	--enable-profiling \
-	--enable-introspection \
-	--enable-gsettings-backend")
+	--disable-perl-bindings")
 
 	#pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
 	#pisitools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")
@@ -29,11 +25,6 @@ def build():
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	
-	pisitools.dodoc("AUTHORS", \
-	"ChangeLog", \
-	"NEWS", \
-	"README", \
-	"TODO", \
-	"COPYING")
+
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "TODO")
 

@@ -4,9 +4,9 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import get
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
 
 def setup():
 	autotools.configure("\
@@ -19,13 +19,12 @@ def setup():
 	--enable-libxklavier \
 	--enable-upower-glib \
 	--enable-xorg-libinput \
-	--enable-sound-settings \
-	--enable-pluggable-dialogs \
 	\
-	--disable-debug \
-	--disable-static")
+	--disable-static \
+	--disable-sound-settings \
+	--disable-pluggable-dialogs")
 
-	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
 def build():
 	autotools.make()

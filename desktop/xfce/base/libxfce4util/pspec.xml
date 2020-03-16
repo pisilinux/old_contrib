@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>libxfce4util</Name>
@@ -16,12 +16,11 @@
 			Libxfce4util is a basic utility non-GUI functions for Xfce desktop environment.
 		</Description>
 		<Archive sha1sum="8aafc9765102f104e9366f341e9eabf38bd71a16" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14/src/libxfce4util-4.14.0.tar.bz2
+			https://archive.xfce.org/xfce/4.14/src/libxfce4util-4.14.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>vala-devel</Dependency>
-			<Dependency>xdg-user-dirs</Dependency>
 			<Dependency>gobject-introspection-devel</Dependency>
 		</BuildDependencies>
 	</Source>
@@ -29,7 +28,6 @@
 	<Package>
 		<Name>libxfce4util</Name>
 		<RuntimeDependencies>
-			<Dependency>xdg-user-dirs</Dependency>
 			<Dependency>glib2</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -47,10 +45,8 @@
 		<IsA>data:doc</IsA>
 		<Summary>Libxfce4util development files</Summary>
 		<RuntimeDependencies>
-			<Dependency release="current">libxfce4util</Dependency>
-			<Dependency>gobject-introspection-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
-			<Dependency>vala-devel</Dependency>
+			<Dependency release="current">libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>

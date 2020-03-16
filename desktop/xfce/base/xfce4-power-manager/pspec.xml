@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-power-manager</Name>
-		<Homepage>https://goodies.xfce.org/projects/applications/xfce4-power-manager</Homepage>
+		<Homepage>https://docs.xfce.org/xfce/xfce4-power-manager/start</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -15,28 +15,20 @@
 		<Description>
 			This software is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption(such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, xfce4-power-manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.
 		</Description>
-		<Archive sha1sum="d50e77401b81f5118d4db424546b7b712dd71beb" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14/src/xfce4-power-manager-1.6.5.tar.bz2
+		<Archive sha1sum="b732bf3f39c0a9028df0e1c7bd4510058c618bef" type="tarbz2">
+			https://archive.xfce.org/src/xfce/xfce4-power-manager/1.7/xfce4-power-manager-1.7.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
-			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>dbus-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>libSM-devel</Dependency>
-			<Dependency>libICE-devel</Dependency>
-			<Dependency>libX11-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
 			<Dependency>upower-devel</Dependency>
-			<Dependency>freetype-devel</Dependency>
-			<Dependency>libglade-devel</Dependency>
-			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>xfconf-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>ConsoleKit-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
-			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>libXScrnSaver-devel</Dependency>
 		</BuildDependencies>
 	</Source>
@@ -45,7 +37,6 @@
 		<Name>xfce4-power-manager</Name>
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
-			<Dependency>gtk2</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>dbus</Dependency>
 			<Dependency>glib2</Dependency>
@@ -57,17 +48,15 @@
 			<Dependency>xfconf</Dependency>
 			<Dependency>upower</Dependency>
 			<Dependency>libXext</Dependency>
-			<Dependency>freetype</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>libXrandr</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
-			<Dependency>fontconfig</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>xfce4-panel</Dependency>
 			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="config">/etc/xdg/autostart</Path>
+			<Path fileType="config">/etc/xdg</Path>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="executable">/usr/sbin</Path>
 			<Path fileType="library">/usr/lib</Path>
@@ -79,6 +68,13 @@
 	</Package>
 
 	<History>
+		<Update release="14">
+			<Date>2020-03-16</Date>
+			<Version>1.7.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="13">
 			<Date>2019-08-12</Date>
 			<Version>1.6.5</Version>

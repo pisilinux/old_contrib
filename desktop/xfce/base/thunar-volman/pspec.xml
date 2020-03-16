@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>thunar-volman</Name>
-		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-volman</Homepage>
+		<Homepage>https://docs.xfce.org/xfce/thunar/thunar-volman</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -16,20 +16,14 @@
 			thunar-volman is an extension for the Thunar File Manager, which enables automatic management of removable drives and media. For example, if thunar-volman is installed and configured properly, and you plug in your digical camera, it will automatically spawn your preferred photo application and import the new pictures from your camera.
 		</Description>
 		<Archive sha1sum="04efe6610c376d2541eac4e6615a9ffef720f872" type="tarbz2">
-			http://archive.xfce.org/xfce/4.14/src/thunar-volman-0.9.5.tar.bz2
+			https://archive.xfce.org/src/xfce/thunar-volman/0.9/thunar-volman-0.9.5.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
-			<Dependency>gtk3-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
-			<Dependency>thunar-devel</Dependency>
 			<Dependency>libgudev-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
-			<Dependency>icon-theme-hicolor</Dependency>
-			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 

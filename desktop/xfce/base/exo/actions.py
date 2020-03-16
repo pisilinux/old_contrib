@@ -11,7 +11,7 @@ from pisi.actionsapi import get
 def setup():
 	autotools.configure("--enable-gio-unix --enable-gtk2 --disable-gtk-doc")
 
-	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
 def build():
 	autotools.make()

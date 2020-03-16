@@ -8,7 +8,7 @@ from pisi.actionsapi import get
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 
-#pisitools.flags.add("-DDCT_YUV_PRECISION=1")
+pisitools.flags.add("-DDCT_YUV_PRECISION=1")
 
 def setup():
 	autotools.autoreconf("-vfi")

@@ -19,24 +19,13 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
-			<Dependency>atk-devel</Dependency>
-			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>dbus-devel</Dependency>
-			<Dependency>glib2-devel</Dependency>
-			<Dependency>gconf-devel</Dependency>
-			<Dependency>pango-devel</Dependency>
-			<Dependency>cairo-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
-			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
-			<Dependency>libICE-devel</Dependency>
 			<Dependency>polkit-devel</Dependency>
-			<Dependency>libwnck2-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>xorg-app-devel</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
-			<Dependency>fontconfig-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
@@ -50,11 +39,11 @@
 		<Name>xfce4-session</Name>
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
-			<Dependency>gtk2</Dependency>
 			<Dependency>gtk3</Dependency>
 			<!-- mount does not work if dbus -autolaunch run from sddm.
 			<Dependency>lxdm</Dependency>
 			-->
+			<Dependency>dbus</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
@@ -63,12 +52,9 @@
 			<Dependency>libICE</Dependency>
 			<Dependency>polkit</Dependency>
 			<Dependency>xfconf</Dependency>
-			<Dependency>xorg-app</Dependency>
-			<Dependency>libwnck2</Dependency>
 			<Dependency>libwnck3</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
-			<Dependency>xfce-polkit</Dependency>
 			<Dependency>libxfce4util</Dependency>
 		</RuntimeDependencies>
 		<Files>

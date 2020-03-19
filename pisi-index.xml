@@ -2311,7 +2311,6 @@
                 <Dependency>ffmpeg</Dependency>
                 <Dependency>libgcc</Dependency>
                 <Dependency>libpng</Dependency>
-                <Dependency>zlib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -7479,6 +7478,7 @@
                 <Dependency>libpcre2-devel</Dependency>
                 <Dependency>enchant2-devel</Dependency>
                 <Dependency>gtkspell3-devel</Dependency>
+                <Dependency>webkit2gtk-devel</Dependency>
             </BuildDependencies>
             <Patches>
                 <Patch level="1">overview_plugin_test.patch</Patch>
@@ -7508,6 +7508,7 @@
                 <Dependency>gtkspell3</Dependency>
                 <Dependency>libassuan</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>webkit2gtk</Dependency>
                 <Dependency>libgpg-error</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -11300,6 +11301,52 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>sarmanpisi</Name>
+            <Homepage>https://gitlab.com/bluedevil/sarmanpisi</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">New version checker of Pisi packages</Summary>
+            <Summary xml:lang="tr">Pisi paketlerinin yeni sürümlerini arayan python aracı</Summary>
+            <Description xml:lang="en">SarmanPisi is a commandline tool for searching new versions for Pisi Linux packages. Now it can search, cpan, archlinux/packages, aur, bitbucket, github, gitlab, pypi, sourceforge and repology databases.</Description>
+            <Description xml:lang="tr">SarmanPisi komut satırı aracılığı ile yerele aldığınız pisi paketlerinin yeni sürümlerinin olup olmadığını denetleyebilen bir araçtır. Bunu yaparken pspec.xml dosyasından paketin nereden indirildiğini alır ve yine orada yeni sürüm var mı denetler. Eer bulamazsa repology ve arch veritabanlarını denetleyerek yeni sürümeri bulmaya çalışır.</Description>
+            <Archive type="targz" sha1sum="4b7cf1248603d97538bb1045e4a75a8855916d0e" name="sarmanpisi-0.1.0.tar.gz">https://gitlab.com/bluedevil/sarmanpisi/-/archive/0.1.0/sarmanpisi-0.1.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/sarmanpisi/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sarmanpisi</Name>
+            <Summary xml:lang="en">New version checker of Pisi packages</Summary>
+            <RuntimeDependencies>
+                <Dependency>python-packaging</Dependency>
+                <Dependency>python-requests</Dependency>
+                <Dependency>python-colorama</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="doc">/usr/share/doc/sarmanpisi</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="executable">/usr/bin</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-20</Date>
+                <Version>0.1.0</Version>
+                <Comment>First pisi release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-pycryptodome</Name>
             <Homepage>https://www.pycryptodome.org/</Homepage>
             <Packager>
@@ -11704,21 +11751,18 @@
             <Summary xml:lang="tr">Xapian-core için python modülü</Summary>
             <Description xml:lang="en">Xapian is an open source search engine library. python-xapian provides python bindings for xapian library.</Description>
             <Description xml:lang="tr">python-xapian, bir açık kaynak kodlu istatistiksel bilgi çıkarma kitaplığı olan xapian için python bağımlılıklarını sunar.</Description>
-            <Archive type="tarxz" sha1sum="3589216601876c88362565e0e6a1475a6c09c8d7" name="xapian-bindings-1.4.14.tar.xz">https://oligarchy.co.uk/xapian/1.4.14/xapian-bindings-1.4.14.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="04626b5eda40ad1b3f4f2c60c344ce1fca5fff53" name="xapian-bindings-1.4.15.tar.xz">https://oligarchy.co.uk/xapian/1.4.15/xapian-bindings-1.4.15.tar.xz</Archive>
             <BuildDependencies>
-                <Dependency>xapian-core-devel</Dependency>
                 <Dependency>python-sphinx-alabaster-theme</Dependency>
+                <Dependency>xapian-core-devel</Dependency>
                 <Dependency>python-imagesize</Dependency>
                 <Dependency>python-requests</Dependency>
-                <Dependency>python-urllib3</Dependency>
-                <Dependency>python-chardet</Dependency>
                 <Dependency>python-typing</Dependency>
-                <Dependency>python-Babel</Dependency>
-                <Dependency>python-idna</Dependency>
-                <Dependency>python-six</Dependency>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>python-devel</Dependency>
                 <Dependency>python-sphinx</Dependency>
+                <Dependency>python-Babel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>python-six</Dependency>
             </BuildDependencies>
             <SourceURI>programming/language/python/python-xapian/pspec.xml</SourceURI>
         </Source>
@@ -11741,7 +11785,7 @@
             <Description xml:lang="en">python-xapian-docs provides documentation files for python-xapian.</Description>
             <Description xml:lang="tr">python-xapian-docs, python-xapian için belgelendirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="1">python-xapian</Dependency>
+                <Dependency release="2">python-xapian</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc/python-xapian</Path>
@@ -11749,6 +11793,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-03-11</Date>
+                <Version>1.4.15</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-08</Date>
                 <Version>1.4.14</Version>
@@ -12794,7 +12845,7 @@
             <Summary xml:lang="tr">Python mock modülü</Summary>
             <Description xml:lang="en">mock is a library for testing in Python. It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used. This package contains a rolling backport of the standard library mock code compatible with Python 2.7 and 3.4 and up.</Description>
             <Description xml:lang="tr">Python mock modülü python uygulamalarınızı test etmenize yarar.</Description>
-            <Archive type="targz" sha1sum="5628e1ffa7b7159c84a0f73d31731d3285254b93" name="4.0.1.tar.gz">https://github.com/testing-cabal/mock/archive/4.0.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="ecc4296b0b6543e027a966eb2ec8fe845fe1d8ed" name="4.0.2.tar.gz">https://github.com/testing-cabal/mock/archive/4.0.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -12810,6 +12861,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-03-18</Date>
+                <Version>4.0.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-02-24</Date>
                 <Version>4.0.1</Version>
@@ -13141,7 +13199,7 @@
             <Summary xml:lang="tr">Python SQL Araç Kiti ve İlişkisel Nesne Haritalandırıcısı</Summary>
             <Description xml:lang="en">SQLAlchemy is the Python SQL toolkit and Object Relational Mapper that gives application developers the full power and flexibility of SQL. SQLAlchemy provides a full suite of well known enterprise-level persistence patterns, designed for efficient and high-performing database access, adapted into a simple and Pythonic domain language.</Description>
             <Description xml:lang="tr">SQLAlchemy, geliştiricisine SQL&apos;in tüm güç ve esnekliğini verebilen, python sql araç kiti ve ilişkisel nesne haritalandırıcısı sunan bir python modülüdür.</Description>
-            <Archive type="targz" sha1sum="320ef8780bc92443bcf5dedf7609174865bbe66d" name="SQLAlchemy-1.3.13.tar.gz">https://files.pythonhosted.org/packages/af/47/35edeb0f86c0b44934c05d961c893e223ef27e79e1f53b5e6f14820ff553/SQLAlchemy-1.3.13.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c9628f7c677b50a91059a563253535f794b3cbf5" name="rel_1_3_15.tar.gz">https://github.com/sqlalchemy/sqlalchemy/archive/rel_1_3_15.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -13157,6 +13215,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-03-18</Date>
+                <Version>1.3.15</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2020-03-11</Date>
+                <Version>1.3.14</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-23</Date>
                 <Version>1.3.13</Version>
@@ -14088,7 +14160,7 @@
             <Summary xml:lang="tr">Python3 için çoklu dağıtımı destekleyen DNS hizmeti keşfi uygulaması</Summary>
             <Description xml:lang="en">python3-zeroconf is a pure Python3 Multicast DNS Service Discovery Library (Bonjour/Avahi compatible).</Description>
             <Description xml:lang="tr">python3-zeroconf, çoklu dağıtım(multicast) DNS hizmetlerini python üzerinden bulabilmenize olanak sağlayan bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="9740aebabb29be27f2b6e1f672db8908be3f94e3" name="0.24.4.tar.gz">https://github.com/jstasiak/python-zeroconf/archive/0.24.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="0059d41db3507deba8b66ce91c0cd1ee1c344d08" name="0.24.5.tar.gz">https://github.com/jstasiak/python-zeroconf/archive/0.24.5.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -14103,11 +14175,18 @@
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
                 <Path fileType="doc">/usr/share/doc/python3-zeroconf</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-03-11</Date>
+                <Version>0.24.5</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-22</Date>
                 <Version>0.24.4</Version>
@@ -14139,7 +14218,7 @@
             <Summary xml:lang="tr">Python3 mock modülü</Summary>
             <Description xml:lang="en">mock is a library for testing in Python. It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used. This package contains a rolling backport of the standard library mock code compatible with Python 2.7 and 3.4 and up.</Description>
             <Description xml:lang="tr">Python mock modülü python uygulamalarınızı test etmenize yarar.</Description>
-            <Archive type="targz" sha1sum="5628e1ffa7b7159c84a0f73d31731d3285254b93" name="4.0.1.tar.gz">https://github.com/testing-cabal/mock/archive/4.0.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="ecc4296b0b6543e027a966eb2ec8fe845fe1d8ed" name="4.0.2.tar.gz">https://github.com/testing-cabal/mock/archive/4.0.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -14159,6 +14238,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-03-18</Date>
+                <Version>4.0.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2020-02-08</Date>
                 <Version>4.0.1</Version>
@@ -15499,7 +15585,7 @@
             <Summary xml:lang="tr">YouTube Chromecast APIsi sağlayan python3 bağlayıcısı.</Summary>
             <Description xml:lang="en">python3-pychromecast provides a way to talk with the Google Chromecast.</Description>
             <Description xml:lang="tr">python3-pychromecast, Google Chromecast ile konuşmayı sağayan bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="3604f51c2c479b092c107a6ec8598ec72a605c61" name="4.1.1.tar.gz">https://github.com/balloob/pychromecast/archive/4.1.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="9844556d27e8d4b6a3d9fef258c7407c92708c62" name="4.2.0.tar.gz">https://github.com/balloob/pychromecast/archive/4.2.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -15518,11 +15604,18 @@
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
                 <Path fileType="doc">/usr/share/doc/python3-pychromecast</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-03-18</Date>
+                <Version>4.2.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-01-24</Date>
                 <Version>4.1.1</Version>
@@ -16225,18 +16318,15 @@
             <Summary xml:lang="tr">Xapian-core için python modülü</Summary>
             <Description xml:lang="en">Xapian is an open source search engine library. python-xapian provides python bindings for xapian library.</Description>
             <Description xml:lang="tr">python3-xapian, bir açık kaynak kodlu istatistiksel bilgi çıkarma kitaplığı olan xapian için python bağımlılıklarını sunar.</Description>
-            <Archive type="tarxz" sha1sum="3589216601876c88362565e0e6a1475a6c09c8d7" name="xapian-bindings-1.4.14.tar.xz">https://oligarchy.co.uk/xapian/1.4.14/xapian-bindings-1.4.14.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="04626b5eda40ad1b3f4f2c60c344ce1fca5fff53" name="xapian-bindings-1.4.15.tar.xz">https://oligarchy.co.uk/xapian/1.4.15/xapian-bindings-1.4.15.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>python3-sphinx-alabaster-theme</Dependency>
                 <Dependency>xapian-core-devel</Dependency>
                 <Dependency>python3-imagesize</Dependency>
                 <Dependency>python3-requests</Dependency>
-                <Dependency>python3-urllib3</Dependency>
-                <Dependency>python3-chardet</Dependency>
                 <Dependency>python3-sphinx</Dependency>
                 <Dependency>python3-Babel</Dependency>
                 <Dependency>python3-devel</Dependency>
-                <Dependency>python3-idna</Dependency>
                 <Dependency>python3-six</Dependency>
                 <Dependency>zlib-devel</Dependency>
             </BuildDependencies>
@@ -16263,11 +16353,18 @@
                 <Dependency>python3-xapian</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="doc">/usr/share/doc/xapian-bindings/python3</Path>
                 <Path fileType="doc">/usr/share/doc/python3-xapian</Path>
-                <Path fileType="doc">/usr/share/doc/xapian3-bindings/python3</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-03-11</Date>
+                <Version>1.4.15</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-08</Date>
                 <Version>1.4.14</Version>
@@ -17105,6 +17202,65 @@
                 <Comment>First release</Comment>
                 <Name>Kamil Atlı</Name>
                 <Email>suvari@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libqjson-qt5</Name>
+            <Homepage>http://qjson.sourceforge.net</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.misc</PartOf>
+            <Summary xml:lang="en">Qt-based library that maps JSON data to QVariant objects</Summary>
+            <Summary xml:lang="tr">Qt tabanlı bu kitaplığı JSON data haritalarını QVariant nesnelere dönüştürür</Summary>
+            <Summary xml:lang="pl">Implementacja Qt formatu JSON</Summary>
+            <Description xml:lang="en">libqjson, (JavaScript Object Notation) is a lightweight data-interchange format. It can represents integer, real number, string, an ordered sequence of value, and a collection of name/value pairs.</Description>
+            <Description xml:lang="tr">libqjson-qt5, (JavaScript Object Notation) bir veri değişim biçimidir. JSON haritalarını QVariant nesnelere dönüştürür..</Description>
+            <Archive type="targz" sha1sum="46dab6e86a82ba6f178848acc4d7c967d68609d9" name="4920592171ccf83029f004880ad02aa34a60c0ab.tar.gz">https://github.com/flavio/qjson/archive/4920592171ccf83029f004880ad02aa34a60c0ab.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
+                <Dependency>cmake</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/misc/libqjson-qt5/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libqjson-qt5</Name>
+            <RuntimeDependencies>
+                <Dependency versionFrom="5.7.1">qt5-base</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libqjson-qt5-devel</Name>
+            <Summary xml:lang="en">Development files for libqjson-qt5</Summary>
+            <Summary xml:lang="tr">libqjson-qt5 için geliştirme dosyaları</Summary>
+            <Summary xml:lang="pl">Pliki nagłówkowe do libqjson-qt5</Summary>
+            <RuntimeDependencies>
+                <Dependency release="5">libqjson-qt5</Dependency>
+                <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/qjson-qt5</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/cmake/qjson-qt5</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2020-03-08</Date>
+                <Version>0.9</Version>
+                <Comment>Release Bump</Comment>
+                <Name>Pisi Linux Community</Name>
+                <Email>admin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -18220,28 +18376,15 @@
             <Description xml:lang="en">The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.</Description>
             <Description xml:lang="tr">Xfce4 pencere yöneticisi, uygulama pencerelerinin ekrana yerleştirmeyi sağlar, pencerelerin güzel görünmesini sağlar, çalışma alanlarını ve sanal masaüstlerini yönetir ve doğal olarak çoklu ekran kipini destekler.</Description>
             <Description xml:lang="pl"> Pakiet zawiera xfwm4, który jest menedżerem okiem do Xfce4. Jest on zaprojektowany do uruchamiania z resztą środowiska Xfce4.</Description>
-            <Icon>xfwm4</Icon>
-            <Archive type="tarbz2" sha1sum="08a16f03a5dea56e5628c03780106153f71c92bc" name="xfwm4-4.14.0.tar.bz2">http://archive.xfce.org/xfce/4.14/src/xfwm4-4.14.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="08a16f03a5dea56e5628c03780106153f71c92bc" name="xfwm4-4.14.0.tar.bz2">https://archive.xfce.org/xfce/4.14/src/xfwm4-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
-                <Dependency>libXrandr-devel</Dependency>
-                <Dependency>libXfixes-devel</Dependency>
-                <Dependency>libXrender-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>libXdamage-devel</Dependency>
-                <Dependency>libXcomposite-devel</Dependency>
-                <Dependency>startup-notification-devel</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
-                <Dependency>libxfce4ui-devel</Dependency>
-                <Dependency>libepoxy-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>libwnck3-devel</Dependency>
-                <Dependency>libXext-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libXpresent-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfwm4/pspec.xml</SourceURI>
         </Source>
@@ -18253,21 +18396,22 @@
                 <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>libXi</Dependency>
-                <Dependency>libepoxy</Dependency>
-                <Dependency>libXrandr</Dependency>
-                <Dependency>libXfixes</Dependency>
-                <Dependency>libXrender</Dependency>
-                <Dependency>libXinerama</Dependency>
-                <Dependency>libXcomposite</Dependency>
-                <Dependency>startup-notification</Dependency>
-                <Dependency>libxfce4util</Dependency>
-                <Dependency>libXdamage</Dependency>
-                <Dependency>libxfce4ui</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>libwnck3</Dependency>
-                <Dependency>libXext</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>libX11</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libepoxy</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXpresent</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libxfce4util</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>startup-notification</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -18376,31 +18520,18 @@
             <Description xml:lang="en">The Xfce4 panel supports multiple panels, with many options for their position, appearance, transparency and behavior. There are many items available by default to full fit a panel, like application launchers with detachable menus, a graphical pager, a tasklist, a clock, a system tray, a show / hide desktop switcher, and even more. It offers an easy way to add items using a dialog, and to move items accross different panels.</Description>
             <Description xml:lang="tr">Xfce4 paneli, farklı pozisyon, görünüm ve davranış gibi ayarlara sahip birden fazla paneli destekleyebilmektedir. Uygulama başlatıcı tipinde ayrılabilir menüler, grafiksel sayfalayıcı, görev çubuğu, saat, sistem çekmecesi, masaüstünü gizleme / görüntüleme ve bir panelde olabilecek birçok şeyi içinde barındırır. Ayrıca, diyalog penceresi kullanarak kolayca panel öğesi eklemeye ve panelden panele öğe taşımaya izin verir.</Description>
             <Description xml:lang="pl">Jest to panel dostarczany przez projekt środowiska graficznego Xfce4. Jeśli użytkownik chce posiadać wielofunkcyjny panel, który może obsługiwać aplety i tym podobne programy, to Xfce4 Panel może być wart wypróbowania. </Description>
-            <Icon>xfce4-panel</Icon>
-            <Archive type="tarbz2" sha1sum="40078f0050bcabd79766eefd2cb2aa5efd93b521" name="xfce4-panel-4.14.1.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="78ca0e5260eba6341620df0d3f3d39d6d624ce7b" name="xfce4-panel-4.14.3.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>libSM-devel</Dependency>
-                <Dependency>libICE-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
                 <Dependency>garcon-devel</Dependency>
-                <Dependency>gettext-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
-                <Dependency>freetype-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
-                <Dependency>startup-notification-devel</Dependency>
-                <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfce4-panel/pspec.xml</SourceURI>
         </Source>
@@ -18412,24 +18543,20 @@
                 <Dependency>gtk2</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>dbus</Dependency>
-                <Dependency>libSM</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>libX11</Dependency>
-                <Dependency>libICE</Dependency>
                 <Dependency>garcon</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>libXext</Dependency>
                 <Dependency>libwnck3</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>fontconfig</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="config">/etc</Path>
+                <Path fileType="config">/etc/xdg</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="data">/usr/share</Path>
@@ -18448,7 +18575,7 @@
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
-                <Dependency release="12">xfce4-panel</Dependency>
+                <Dependency release="13">xfce4-panel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -18457,6 +18584,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2020-03-16</Date>
+                <Version>4.14.3</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="12">
                 <Date>2019-12-10</Date>
                 <Version>4.14.1</Version>
@@ -18566,26 +18700,12 @@
                 <Dependency>exo-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
-                <Dependency>libXi-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
                 <Dependency>upower-devel</Dependency>
                 <Dependency>colord-devel</Dependency>
                 <Dependency>garcon-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>libwnck3-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>libXrandr-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>libXcursor-devel</Dependency>
-                <Dependency>libcanberra-devel</Dependency>
                 <Dependency>libxklavier-devel</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
                 <Dependency>xorg-input-libinput-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfce4-settings/pspec.xml</SourceURI>
@@ -18593,6 +18713,7 @@
         <Package>
             <Name>xfce4-settings</Name>
             <RuntimeDependencies>
+                <Dependency>atk</Dependency>
                 <Dependency>exo</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>dbus</Dependency>
@@ -18615,7 +18736,6 @@
                 <Dependency>libxklavier</Dependency>
                 <Dependency>libxfce4util</Dependency>
                 <Dependency>network-manager-applet</Dependency>
-                <Dependency>xorg-input-libinput</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc</Path>
@@ -18754,7 +18874,7 @@
     <SpecFile>
         <Source>
             <Name>thunar-volman</Name>
-            <Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-volman</Homepage>
+            <Homepage>https://docs.xfce.org/xfce/thunar/thunar-volman</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -18766,19 +18886,13 @@
             <Summary xml:lang="tr">Xfce dosya yöneticisi Thunar için bir eklenti</Summary>
             <Description xml:lang="en">thunar-volman is an extension for the Thunar File Manager, which enables automatic management of removable drives and media. For example, if thunar-volman is installed and configured properly, and you plug in your digical camera, it will automatically spawn your preferred photo application and import the new pictures from your camera.</Description>
             <Description xml:lang="tr">thunar-volman çıkarılabilir sürücüler ve medyanın otomatik olarak yönetimini sağlayan, Xfce dosya yöneticisi Thunar için bir eklentidir.Örneğin, Thunar-Volman doğru şekilde kurulup yapılandırıldığında, sayısal kameranızdan resim almanızı sağlayacaktır.</Description>
-            <Archive type="tarbz2" sha1sum="04efe6610c376d2541eac4e6615a9ffef720f872" name="thunar-volman-0.9.5.tar.bz2">http://archive.xfce.org/xfce/4.14/src/thunar-volman-0.9.5.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="04efe6610c376d2541eac4e6615a9ffef720f872" name="thunar-volman-0.9.5.tar.bz2">https://archive.xfce.org/src/xfce/thunar-volman/0.9/thunar-volman-0.9.5.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
-                <Dependency>thunar-devel</Dependency>
                 <Dependency>libgudev-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
-                <Dependency>icon-theme-hicolor</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/thunar-volman/pspec.xml</SourceURI>
         </Source>
@@ -18891,24 +19005,19 @@
             <Summary xml:lang="tr">Xfce arayüz kitaplığı</Summary>
             <Description xml:lang="en">libxfce4ui is a various GTK+ widgets for Xfce desktop environment.</Description>
             <Description xml:lang="tr">libxfce4ui, Xfce masaüstü ortamı için çeşitli GTK+ eklentileri içeren kitaplıktır.</Description>
-            <Archive type="tarbz2" sha1sum="5f8f80879de493f0478a5108be890cb869fb89d6" name="libxfce4ui-4.14.1.tar.bz2">http://archive.xfce.org/xfce/4.14/src/libxfce4ui-4.14.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="5f8f80879de493f0478a5108be890cb869fb89d6" name="libxfce4ui-4.14.1.tar.bz2">https://archive.xfce.org/xfce/4.14/src/libxfce4ui-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>atk-devel</Dependency>
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>vala-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
                 <Dependency>libSM-devel</Dependency>
-                <Dependency>libICE-devel</Dependency>
                 <Dependency>xfconf-devel</Dependency>
-                <Dependency>xfce4-dev-tools</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
                 <Dependency>startup-notification-devel</Dependency>
-                <Dependency>python-six</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/libxfce4ui/pspec.xml</SourceURI>
         </Source>
@@ -18918,16 +19027,16 @@
                 <Dependency>atk</Dependency>
                 <Dependency>gtk2</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>libSM</Dependency>
-                <Dependency>libICE</Dependency>
                 <Dependency>xfconf</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libX11</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4util</Dependency>
                 <Dependency>startup-notification</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libX11</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc</Path>
@@ -18944,8 +19053,9 @@
             <RuntimeDependencies>
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>libxfce4ui</Dependency>
+                <Dependency release="14">libxfce4ui</Dependency>
                 <Dependency>xfconf-devel</Dependency>
+                <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -19073,32 +19183,17 @@
             <Archive type="tarbz2" sha1sum="9d28412592946f29f61f5553845a1112a5117f7a" name="thunar-1.8.11.tar.bz2">https://archive.xfce.org/src/xfce/thunar/1.8/thunar-1.8.11.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>atk-devel</Dependency>
                 <Dependency>exo-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>gconf-devel</Dependency>
                 <Dependency>libSM-devel</Dependency>
-                <Dependency>libICE-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
-                <Dependency>garcon-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
                 <Dependency>libexif-devel</Dependency>
-                <Dependency>libpcre-devel</Dependency>
-                <Dependency>libpcre2-devel</Dependency>
                 <Dependency>libgudev-devel</Dependency>
-                <Dependency>xfce4-dev-tools</Dependency>
                 <Dependency>libnotify-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
-                <Dependency>desktop-file-utils</Dependency>
-                <Dependency>libjpeg-turbo-devel</Dependency>
-                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/thunar/pspec.xml</SourceURI>
         </Source>
@@ -19109,7 +19204,6 @@
                 <Dependency>exo</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>dbus</Dependency>
-                <Dependency>gconf</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>cairo</Dependency>
@@ -19119,13 +19213,12 @@
                 <Dependency>xfconf</Dependency>
                 <Dependency>libexif</Dependency>
                 <Dependency>libpcre</Dependency>
-                <Dependency>libpcre2</Dependency>
                 <Dependency>libgudev</Dependency>
                 <Dependency>libnotify</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
                 <Dependency>libxfce4util</Dependency>
-                <Dependency>desktop-file-utils</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc</Path>
@@ -19142,8 +19235,9 @@
             <Summary xml:lang="en">Thunar development files</Summary>
             <IsA>library</IsA>
             <RuntimeDependencies>
-                <Dependency release="13">thunar</Dependency>
                 <Dependency>gtk3-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency release="13">thunar</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -19270,11 +19364,10 @@
             <Summary xml:lang="tr">Xfce için basit yardımcı uygulama kitaplığı</Summary>
             <Description xml:lang="en">Libxfce4util is a basic utility non-GUI functions for Xfce desktop environment.</Description>
             <Description xml:lang="tr">libxfce4util, grafik arayüz fonksiyonlarını içermeyen, Xfce masaüstü yöneticisi için yazılmış basit bir uygulama kitaplığıdır.</Description>
-            <Archive type="tarbz2" sha1sum="8aafc9765102f104e9366f341e9eabf38bd71a16" name="libxfce4util-4.14.0.tar.bz2">http://archive.xfce.org/xfce/4.14/src/libxfce4util-4.14.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="8aafc9765102f104e9366f341e9eabf38bd71a16" name="libxfce4util-4.14.0.tar.bz2">https://archive.xfce.org/xfce/4.14/src/libxfce4util-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>vala-devel</Dependency>
-                <Dependency>xdg-user-dirs</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/libxfce4util/pspec.xml</SourceURI>
@@ -19282,7 +19375,6 @@
         <Package>
             <Name>libxfce4util</Name>
             <RuntimeDependencies>
-                <Dependency>xdg-user-dirs</Dependency>
                 <Dependency>glib2</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -19300,10 +19392,8 @@
             <IsA>library</IsA>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="11">libxfce4util</Dependency>
-                <Dependency>gobject-introspection-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency>vala-devel</Dependency>
+                <Dependency release="11">libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -19408,46 +19498,43 @@
             <Description xml:lang="tr">Tumbler Xfce masaüstü ortamının dosya yöneticisi için bir önizleme servisidir.</Description>
             <Archive type="tarbz2" sha1sum="0b992cf5179461784b85982b2be5bbbe372c63c3" name="tumbler-0.2.8.tar.bz2">https://archive.xfce.org/src/xfce/tumbler/0.2/tumbler-0.2.8.tar.bz2</Archive>
             <BuildDependencies>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>freetype-devel</Dependency>
-                <Dependency>libopenraw-devel</Dependency>
                 <Dependency>intltool</Dependency>
-                <Dependency>poppler-glib-devel</Dependency>
-                <Dependency>libgsf-devel</Dependency>
-                <Dependency>libjpeg-turbo-devel</Dependency>
-                <Dependency>gst-plugins-base-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
                 <Dependency>curl-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
                 <Dependency>libpng-devel</Dependency>
+                <Dependency>libgsf-devel</Dependency>
+                <Dependency>libopenraw-devel</Dependency>
+                <Dependency>poppler-glib-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>ffmpegthumbnailer-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/tumbler/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>tumbler</Name>
             <RuntimeDependencies>
+                <Dependency>curl</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>dbus</Dependency>
                 <Dependency>cairo</Dependency>
+                <Dependency>libpng</Dependency>
                 <Dependency>libgsf</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>libopenraw</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>poppler-glib</Dependency>
                 <Dependency>libjpeg-turbo</Dependency>
                 <Dependency>gst-plugins-base</Dependency>
-                <Dependency>curl</Dependency>
-                <Dependency>dbus</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libpng</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>gstreamer</Dependency>
-                <Dependency>libopenraw</Dependency>
-                <Dependency>gtk3</Dependency>
+                <Dependency>ffmpegthumbnailer</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="config">/etc/xdg/tumbler/tumbler.rc</Path>
                 <Path fileType="library">/usr/lib</Path>
                 <Path fileType="data">/usr/share/</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="config">/etc/xdg/tumbler/tumbler.rc</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <Package>
@@ -19457,6 +19544,7 @@
             <RuntimeDependencies>
                 <Dependency release="13">tumbler</Dependency>
                 <Dependency>glib2-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -19575,31 +19663,26 @@
             <Description xml:lang="en">Xfce4-appfinder is a useful software that permits you to find every application in the system supporting desktop entry format.</Description>
             <Description xml:lang="tr">Xfce4-appfinder, kullanıcının sisteminde yüklü, masastünde doğrudan çalışabilen her uygulamayı bulmasını sağlayan, kullanışlı bir uygulama bulucudur.</Description>
             <Description xml:lang="pl">Wyszukiwanie aplikacji dla środowiska graficznego Xfce4. Wyszukuje zainstalowane w systemie aplikacje.</Description>
-            <Icon>xfce4-appfinder</Icon>
-            <Archive type="tarbz2" sha1sum="d0ceed5c05b6e411d1538d9727c818a52f441cf2" name="xfce4-appfinder-4.14.0.tar.bz2">http://archive.xfce.org/xfce/4.14/src/xfce4-appfinder-4.14.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="d0ceed5c05b6e411d1538d9727c818a52f441cf2" name="xfce4-appfinder-4.14.0.tar.bz2">https://archive.xfce.org/xfce/4.14/src/xfce4-appfinder-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
-                <Dependency>libxfce4ui-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>thunar-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
-                <Dependency>garcon-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfce4-appfinder/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>xfce4-appfinder</Name>
             <RuntimeDependencies>
-                <Dependency>libxfce4util</Dependency>
-                <Dependency>libxfce4ui</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>garcon</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>gtk3</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -19709,24 +19792,13 @@
             <Archive type="tarbz2" sha1sum="1e44eb63a87fa797dbd80fc0a956ebc7a585c3cc" name="xfce4-session-4.14.1.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-session/4.14/xfce4-session-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>atk-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>gconf-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
                 <Dependency>libSM-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
-                <Dependency>libICE-devel</Dependency>
                 <Dependency>polkit-devel</Dependency>
-                <Dependency>libwnck2-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
                 <Dependency>xorg-app-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
             </BuildDependencies>
@@ -19739,8 +19811,8 @@
             <Name>xfce4-session</Name>
             <RuntimeDependencies>
                 <Dependency>atk</Dependency>
-                <Dependency>gtk2</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>dbus</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
@@ -19749,12 +19821,9 @@
                 <Dependency>libICE</Dependency>
                 <Dependency>polkit</Dependency>
                 <Dependency>xfconf</Dependency>
-                <Dependency>xorg-app</Dependency>
-                <Dependency>libwnck2</Dependency>
                 <Dependency>libwnck3</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>xfce-polkit</Dependency>
                 <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -19876,34 +19945,25 @@
             <Summary xml:lang="tr">Xfce menü kitaplığı</Summary>
             <Description xml:lang="en">garcon is an implementation of the freedesktop.org menu specification replacing the former Xfce menu library libxfce4menu. It is based on GLib/GIO only and aims at covering the entire specification except for legacy menus.</Description>
             <Description xml:lang="tr">garcon, Xfce&apos;nin eski menü kitaplığı olan libxfce4menu&apos;nun freedesktop.org menü standartlarına uygun hale getirilmiş, Xfce&apos;nin yeni menü kitaplığıdır. Sadece GLib/GIO kullanılarak yazılmıştır ve eski menüler hariç tüm özellikleri kapsamayı amaçlamaktadır.</Description>
-            <Archive type="tarbz2" sha1sum="014f0b1699a56c1a0738238a07008a5b487892ad" name="garcon-0.6.4.tar.bz2">http://archive.xfce.org/xfce/4.14/src/garcon-0.6.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="014f0b1699a56c1a0738238a07008a5b487892ad" name="garcon-0.6.4.tar.bz2">https://archive.xfce.org/xfce/4.14/src/garcon-0.6.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
-                <Dependency>xfce4-dev-tools</Dependency>
-                <Dependency>freetype-devel</Dependency>
-                <Dependency>python-six</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/garcon/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>garcon</Name>
             <RuntimeDependencies>
-                <Dependency>atk</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>fontconfig</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>libxfce4util</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>gtk2</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc</Path>
@@ -19918,6 +19978,7 @@
             <Summary xml:lang="en">garcon development files</Summary>
             <Summary xml:lang="tr">garcon geliştirme dosyaları</Summary>
             <RuntimeDependencies>
+                <Dependency>gobject-introspection-devel</Dependency>
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
@@ -20033,11 +20094,11 @@
             <PartOf>desktop.xfce.base</PartOf>
             <Summary xml:lang="en">Terminal for Xfce</Summary>
             <Description xml:lang="en">Terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.</Description>
-            <Icon>utilities-terminal</Icon>
             <Archive type="tarbz2" sha1sum="2d792aa4c46caf29559379e11e511f5fe56a529d" name="xfce4-terminal-0.8.9.1.tar.bz2">https://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.9.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>vte-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
                 <Dependency>gnutls-devel</Dependency>
                 <Dependency>libpcre2-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
@@ -20054,8 +20115,6 @@
                 <Dependency>pango</Dependency>
                 <Dependency>libX11</Dependency>
                 <Dependency>xfconf</Dependency>
-                <Dependency>gnutls</Dependency>
-                <Dependency>libpcre2</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4util</Dependency>
@@ -20159,28 +20218,20 @@
             <Description xml:lang="en">The desktop manager sets the background image, provides a right-click menu to launch applications and can optionally show files (including application launchers) or iconified windows. It includes gradient support for background color, saturation support for background image, real multiscreen and xinerama support, and it provides a desktop menu editor.</Description>
             <Description xml:lang="tr">Xfce masaüstü yöneticisi arkaplan resmini belirler, uygulamaları başlatmak, simge durumuna küçültülmüş pencereleri veya dosya seçeneklerini göstermek için sağ tık menüsünü hazırlar. Arkaplan rengi için gradyan desteği, arkaplan resmi için doygunluk desteği, gerçek çoklu ekran ve xinerama desteği içerir. Ayrıca, masaüstü menü düzenleme aracını da bünyesinde barındırır.</Description>
             <Description xml:lang="pl">xfdesktop4 ustawia obraz tła pulpitu, udostępnia menu pod prawym przyciskiem myszy do uruchamiania aplikacji oraz, opcjonalnie, może pokazywać pliki lub zminimalizowane okna.</Description>
-            <Icon>xfce4_xicon1</Icon>
             <Archive type="tarbz2" sha1sum="e7f9f99049a575f5057e69e140c2be2c035be156" name="xfdesktop-4.14.2.tar.bz2">https://archive.xfce.org/src/xfce/xfdesktop/4.14/xfdesktop-4.14.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
-                <Dependency>dbus-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency>thunar-devel</Dependency>
-                <Dependency>garcon-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>libwnck2-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+                <Dependency>thunar-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>xfce4-panel-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfdesktop/pspec.xml</SourceURI>
@@ -20189,9 +20240,8 @@
             <Name>xfdesktop</Name>
             <RuntimeDependencies>
                 <Dependency>exo</Dependency>
-                <Dependency>dbus</Dependency>
-                <Dependency>gtk2</Dependency>
                 <Dependency>gtk3</Dependency>
+                <Dependency>dbus</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>pango</Dependency>
                 <Dependency>cairo</Dependency>
@@ -20199,7 +20249,6 @@
                 <Dependency>garcon</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>libX11</Dependency>
-                <Dependency>libwnck2</Dependency>
                 <Dependency>libwnck3</Dependency>
                 <Dependency>libnotify</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
@@ -20330,7 +20379,7 @@
             <Summary xml:lang="tr">Xfce geliştirme araçları</Summary>
             <Description xml:lang="en">Xfce4-dev-tools contains common tools required by Xfce developers and people that want to build Xfce from SVN. In addition, this package contains the Xfce developer&apos;s handbook.</Description>
             <Description xml:lang="tr">Xfce4-dev-tools paketi, Xfce geliştiricileri ve SVN&apos;den Xfce inşa edecek kullanıcılar için gerekli temel araçları içine alır. Buna ek olarak pakette Xfce geliştiricileri için el kitabı da yer almaktadır.</Description>
-            <Archive type="tarbz2" sha1sum="ed962b5b28b57f3626cc11508bee257667bf7384" name="xfce4-dev-tools-4.14.0.tar.bz2">http://archive.xfce.org/xfce/4.14/src/xfce4-dev-tools-4.14.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="ed962b5b28b57f3626cc11508bee257667bf7384" name="xfce4-dev-tools-4.14.0.tar.bz2">https://archive.xfce.org/xfce/4.14/src/xfce4-dev-tools-4.14.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>glib2-devel</Dependency>
             </BuildDependencies>
@@ -20431,28 +20480,27 @@
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>perl-URI</Dependency>
-                <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency>python-six</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/exo/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>exo</Name>
             <RuntimeDependencies>
-                <Dependency>libxfce4util</Dependency>
-                <Dependency>libxfce4ui</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>gtk2</Dependency>
                 <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="config">/etc/xdg/xfce4</Path>
@@ -20471,9 +20519,9 @@
             <Summary xml:lang="tr">exo geliştirme dosyaları</Summary>
             <RuntimeDependencies>
                 <Dependency release="14">exo</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -20610,22 +20658,20 @@
             <Description xml:lang="en">Xfconf is a hirerchical (tree-like) configuration system for the Xfce graphical desktop environment.</Description>
             <Description xml:lang="tr">xfconf, Xfce masaüstü yöneticisi için yazılmış, ağaç tipi hiyerarşik yapılandırma sistemidir.</Description>
             <Description xml:lang="pl">Xfconf jest prostym systemem przechowywania i odpytywania konfiguracji.</Description>
-            <Archive type="tarbz2" sha1sum="edfa24dd862bc39d6002f40f6b9b3974c59fa250" name="xfconf-4.14.1.tar.bz2">http://archive.xfce.org/xfce/4.14/src/xfconf-4.14.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="edfa24dd862bc39d6002f40f6b9b3974c59fa250" name="xfconf-4.14.1.tar.bz2">https://archive.xfce.org/xfce/4.14/src/xfconf-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>vala-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
-                <Dependency>python-six</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfconf/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>xfconf</Name>
             <RuntimeDependencies>
-                <Dependency>libxfce4util</Dependency>
                 <Dependency>glib2</Dependency>
-                <Dependency>dbus</Dependency>
+                <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -20643,9 +20689,8 @@
             <IsA>library</IsA>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="10">xfconf</Dependency>
-                <Dependency>dbus-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
+                <Dependency release="10">xfconf</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -20729,7 +20774,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-power-manager</Name>
-            <Homepage>https://goodies.xfce.org/projects/applications/xfce4-power-manager</Homepage>
+            <Homepage>https://docs.xfce.org/xfce/xfce4-power-manager/start</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -20743,26 +20788,18 @@
             <Description xml:lang="en">This software is a power manager for the Xfce desktop, Xfce power manager manages the power sources on the computer and the devices that can be controlled to reduce their power consumption(such as LCD brightness level, monitor sleep, CPU frequency scaling). In addition, xfce4-power-manager provides a set of freedesktop-compliant DBus interfaces to inform other applications about current power level so that they can adjust their power consumption.</Description>
             <Description xml:lang="tr">Xfce güç yöneticisi, kendi güç tüketimini azaltmak için bilgisayar güç kaynakları ve kontrol edilebilir aygıtları yönetir.(LCD parlaklık seviyesi, monitör uyku, CPU frekansı ölçekleme gibi)</Description>
             <Description xml:lang="pl">Ten menedżer zasilania dla środowiska Xfce4, pozwala użytkownikom laptopów tworzyć profile zasilania dla dwóch różnych trybów: &quot;zasilanie z baterii&quot; i &quot;zasilanie z sieci&quot;, jednocześnie wciąż pozwalając użytkownikom zmieniać ustawienia DPMS i częstotliwość CPU.</Description>
-            <Archive type="tarbz2" sha1sum="d50e77401b81f5118d4db424546b7b712dd71beb" name="xfce4-power-manager-1.6.5.tar.bz2">http://archive.xfce.org/xfce/4.14/src/xfce4-power-manager-1.6.5.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="b732bf3f39c0a9028df0e1c7bd4510058c618bef" name="xfce4-power-manager-1.7.0.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-power-manager/1.7/xfce4-power-manager-1.7.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>dbus-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>libSM-devel</Dependency>
-                <Dependency>libICE-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>xfconf-devel</Dependency>
                 <Dependency>upower-devel</Dependency>
-                <Dependency>freetype-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>ConsoleKit-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>xfce4-panel-devel</Dependency>
-                <Dependency>libxfce4util-devel</Dependency>
                 <Dependency>libXScrnSaver-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfce4-power-manager/pspec.xml</SourceURI>
@@ -20771,7 +20808,6 @@
             <Name>xfce4-power-manager</Name>
             <RuntimeDependencies>
                 <Dependency>atk</Dependency>
-                <Dependency>gtk2</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>dbus</Dependency>
                 <Dependency>glib2</Dependency>
@@ -20783,17 +20819,15 @@
                 <Dependency>xfconf</Dependency>
                 <Dependency>upower</Dependency>
                 <Dependency>libXext</Dependency>
-                <Dependency>freetype</Dependency>
                 <Dependency>libnotify</Dependency>
                 <Dependency>libXrandr</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>fontconfig</Dependency>
                 <Dependency>libxfce4ui</Dependency>
                 <Dependency>xfce4-panel</Dependency>
                 <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="config">/etc/xdg/autostart</Path>
+                <Path fileType="config">/etc/xdg</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="executable">/usr/sbin</Path>
                 <Path fileType="library">/usr/lib</Path>
@@ -20804,6 +20838,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="14">
+                <Date>2020-03-16</Date>
+                <Version>1.7.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="13">
                 <Date>2019-08-12</Date>
                 <Version>1.6.5</Version>
@@ -23006,7 +23047,7 @@
     <SpecFile>
         <Source>
             <Name>xfburn</Name>
-            <Homepage>https://goodies.xfce.org/projects/applications/xfburn</Homepage>
+            <Homepage>https://docs.xfce.org/apps/xfburn</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23018,11 +23059,12 @@
             <Summary xml:lang="tr">Basit bir CD/DVD yazma aracı</Summary>
             <Description xml:lang="en">Xfburn is a simple CD/DVD burning tool based on libburnia libraries.</Description>
             <Description xml:lang="tr">Xfburn libburnia kitaplıklarını kullanan basit bir CD/DVD yazma aracıdır.</Description>
-            <Archive type="tarbz2" sha1sum="59df1b810205758708e2e6d7694fdd2b1d7580bb" name="xfburn-0.6.1.tar.bz2">https://archive.xfce.org/src/apps/xfburn/0.6/xfburn-0.6.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="4f91fa0fc670161b862425ec2e75dc226f82ecbb" name="xfburn-0.6.2.tar.bz2">https://archive.xfce.org/src/apps/xfburn/0.6/xfburn-0.6.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>gstreamer-devel</Dependency>
                 <Dependency>libisofs-devel</Dependency>
+                <Dependency>libgudev-devel</Dependency>
                 <Dependency>librsvg-devel</Dependency>
                 <Dependency>libburn-devel</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -23040,6 +23082,7 @@
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>gstreamer</Dependency>
                 <Dependency>libisofs</Dependency>
+                <Dependency>libgudev</Dependency>
                 <Dependency>libburn</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>gtk3</Dependency>
@@ -23055,6 +23098,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2020-03-16</Date>
+                <Version>0.6.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="6">
                 <Date>2019-11-19</Date>
                 <Version>0.6.1</Version>
@@ -24338,12 +24388,13 @@
                 <Email>wascheme@tuta.io</Email>
             </Packager>
             <License>GPLv2</License>
+            <License>LGPLv2</License>
             <License>LGPLv2.1</License>
             <IsA>app:utility</IsA>
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">Xfce Screensaver</Summary>
             <Description xml:lang="en">xfce4-screensaver is a screen saver and locker that aims to have simple, sane, secure defaults and be well integrated with the desktop.</Description>
-            <Archive type="tarbz2" sha1sum="7021dad215b2abc964e400881c5a98fa8b7b3d5f" name="xfce4-screensaver-0.1.8.tar.bz2">http://archive.xfce.org/src/apps/xfce4-screensaver/0.1/xfce4-screensaver-0.1.8.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="7021dad215b2abc964e400881c5a98fa8b7b3d5f" name="xfce4-screensaver-0.1.8.tar.bz2">https://archive.xfce.org/src/apps/xfce4-screensaver/0.1/xfce4-screensaver-0.1.8.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>pam-devel</Dependency>
@@ -24369,7 +24420,6 @@
                 <Dependency>pango</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>libX11</Dependency>
-                <Dependency>shadow</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>garcon</Dependency>
                 <Dependency>libXext</Dependency>
@@ -27160,6 +27210,7 @@
                 <Email>wascheme@tuta.io</Email>
             </Packager>
             <License>LGPLv2.1</License>
+            <IsA>library</IsA>
             <PartOf>desktop.misc</PartOf>
             <Summary xml:lang="en">A hack to disable gtk+ 3 client side decoration</Summary>
             <Description xml:lang="en">gtk3-nocsd is a small module used to disable the client side decoration of Gtk+ 3.</Description>
@@ -31016,29 +31067,38 @@
             <Name>albatar</Name>
             <Homepage>https://github.com/lanjelot/albatar</Homepage>
             <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Packager>
-            <License>GPLv2</License>
+            <License>custom:unknown</License>
             <IsA>app:console</IsA>
             <PartOf>network.analyzer</PartOf>
             <Summary xml:lang="en">A SQLi exploitation framework in Python.</Summary>
-            <Summary xml:lang="tr">Albatar bir SQLi açığını sömürebilen python betiği.</Summary>
-            <Description xml:lang="en">A SQLi exploitation framework in Python.</Description>
-            <Description xml:lang="tr">Albatar bir SQLi açığını sömürebilen python betiği.</Description>
-            <Archive type="targz" sha1sum="041f4a2eb3a6311c5507869d514e5dc3707ecf60" name="albatar-0.0.tar.gz">https://github.com/ibrahimkaraguzel/Sources/raw/master/albatar-0.0.tar.gz</Archive>
+            <Summary xml:lang="tr">SQLi açığını sömürebilen bir python betiği.</Summary>
+            <Description xml:lang="en">Albatar is a neat and tidy tool to exploit SQL Injection vulnerabilities.</Description>
+            <Description xml:lang="tr">Albatar, SQLi açığını sömürebilen bir python betiği.</Description>
+            <Archive type="targz" sha1sum="02197c8b5191a9dc209eb8e554a5f308f287f8cd" name="0.1.tar.gz">https://github.com/lanjelot/albatar/archive/0.1.tar.gz</Archive>
             <SourceURI>network/analyzer/albatar/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>albatar</Name>
+            <Summary xml:lang="en">A SQLi exploitation framework in Python.</Summary>
             <RuntimeDependencies>
                 <Dependency>pycurl</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-03-19</Date>
+                <Version>0.1</Version>
+                <Comment>Rebuilt for the new toolchain</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2016-04-05</Date>
                 <Version>0.0</Version>
@@ -31169,29 +31229,40 @@
             <Summary xml:lang="tr">Yüksek hızlı ağ yetkilendirme inceleme aracı</Summary>
             <Description xml:lang="en">ncrack is a high-speed network auditing tool to invesitage for weak passwords.</Description>
             <Description xml:lang="tr">ncrack ağ üzerindeki zayıf parolaları inceleme aracıdır.</Description>
-            <Archive type="targz" sha1sum="954ff0f5ed8850490c7b0e7f89dce3876791bf3b" name="ncrack-0.4ALPHA.tar.gz">http://nmap.org/ncrack/dist/ncrack-0.4ALPHA.tar.gz</Archive>
+            <Archive type="targz" sha1sum="bc442be4a2c662a22b40318eaa8fdb2bb26f3c80" name="0.7.tar.gz">https://github.com/nmap/ncrack/archive/0.7.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>gcc</Dependency>
-                <Dependency>zlib-devel</Dependency>
                 <Dependency>openssl-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>gcc</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch>SCTZineNullCheck.patch</Patch>
+            </Patches>
             <SourceURI>network/analyzer/ncrack/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>ncrack</Name>
+            <Summary xml:lang="en">High-speed network authentication investigation tool</Summary>
             <RuntimeDependencies>
-                <Dependency>zlib</Dependency>
-                <Dependency>libgcc</Dependency>
                 <Dependency>openssl</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>zlib</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="doc">/usr/share/doc/ncrack</Path>
+                <Path fileType="data">/usr/share/ncrack</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/ncrack</Path>
-                <Path fileType="doc">/usr/share/doc/ncrack</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-03-18</Date>
+                <Version>0.7</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-03-02</Date>
                 <Version>0.4</Version>
@@ -34211,7 +34282,7 @@
     <SpecFile>
         <Source>
             <Name>liferea</Name>
-            <Homepage>http://lzone.de/liferea</Homepage>
+            <Homepage>https://lzone.de/liferea/</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -34223,72 +34294,61 @@
             <Summary xml:lang="tr">RDF/RSS/CDF/Atom/Echo  beslemeler için okuyucu</Summary>
             <Description xml:lang="en">Liferea (abbreviation of Linux Feed Reader) is a news aggreagator for RSS/RDF feeds which also supports CDF channels, Atom/Echo/PIE feeds and OCS or OPML directories. It is a simple FeedReader clone for Unix.</Description>
             <Description xml:lang="tr">Liferea (Linux Feed Reader&apos;in kısaltması), RSS/RDF beslemelerini okumak için yazılmış ve aynı zamanda CDF kanallarını destekleyen haber okuyucudur. Atom/Echo/PIE beslemelerini ve OCS veya OPML dizinlerini ayrıca desteklemektedir. Unix için yazılmış basit bir FeedReader benzeri uygulamadır.</Description>
-            <Icon>liferea</Icon>
-            <Archive type="tarbz2" sha1sum="ffdd505d01473b1ec29a3da292632f474b9b83fb" name="liferea-1.10.14.tar.bz2">https://github.com/lwindolf/liferea/releases/download/v1.10.14/liferea-1.10.14.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="355a4cbe17b27ac075285b84e11237915a806d9c" name="liferea-1.13.0.tar.bz2">https://github.com/lwindolf/liferea/releases/download/v1.13.0/liferea-1.13.0.tar.bz2</Archive>
             <BuildDependencies>
-                <Dependency>gconf-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>webkit-gtk3-devel</Dependency>
-                <Dependency>libsoup-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
+                <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>libnotify-devel</Dependency>
-                <Dependency>lua-devel</Dependency>
-                <Dependency>json-glib-devel</Dependency>
-                <Dependency>libxslt-devel</Dependency>
-                <Dependency>libunique-devel</Dependency>
-                <Dependency>gsettings-desktop-schemas-devel</Dependency>
-                <Dependency>libindicate-devel</Dependency>
-                <Dependency>libindicate-devel</Dependency>
-                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>sqlite-devel</Dependency>
                 <Dependency>libpeas-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>webkit2gtk-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
             </BuildDependencies>
             <SourceURI>network/misc/liferea/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>liferea</Name>
             <RuntimeDependencies>
-                <Dependency>gconf</Dependency>
-                <Dependency>libglade</Dependency>
-                <Dependency>webkit-gtk3</Dependency>
-                <Dependency>libsoup</Dependency>
-                <Dependency>gtk3</Dependency>
                 <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
                 <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>gconf</Dependency>
                 <Dependency>pango</Dependency>
-                <Dependency>libnotify</Dependency>
-                <Dependency>lua</Dependency>
-                <Dependency>json-glib</Dependency>
-                <Dependency>libSM</Dependency>
-                <Dependency>libICE</Dependency>
-                <Dependency>libunique</Dependency>
-                <Dependency>libxslt</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>gsettings-desktop-schemas</Dependency>
-                <Dependency>libindicate-gtk3</Dependency>
-                <Dependency>libindicate</Dependency>
-                <Dependency>gobject-introspection</Dependency>
+                <Dependency>sqlite</Dependency>
                 <Dependency>libpeas</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libxslt</Dependency>
+                <Dependency>json-glib</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>webkit2gtk</Dependency>
+                <Dependency>gobject-introspection</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="config">/etc</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="doc">/usr/share/liferea/doc</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="data">/usr/share/liferea</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/glib-2.0/schemas/net.sf.liferea.gschema.xml</Path>
-                <Path fileType="data">/usr/share/appdata/liferea.appdata.xml</Path>
-                <Path fileType="data">/usr/share/GConf/gsettings/liferea.convert</Path>
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2020-03-15</Date>
+                <Version>1.13.0</Version>
+                <Comment>Ver. up</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="5">
                 <Date>2015-03-04</Date>
                 <Version>1.10.14</Version>

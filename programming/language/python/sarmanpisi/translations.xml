@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>sarmanpisi</Name>
+        <Summary xml:lang="tr">Pisi paketlerinin yeni sürümlerini arayan python aracı</Summary>
+        <Description xml:lang="tr">SarmanPisi komut satırı aracılığı ile yerele aldığınız pisi paketlerinin yeni sürümlerinin olup olmadığını denetleyebilen bir araçtır. Bunu yaparken pspec.xml dosyasından paketin nereden indirildiğini alır ve yine orada yeni sürüm var mı denetler. Eer bulamazsa repology ve arch veritabanlarını denetleyerek yeni sürümeri bulmaya çalışır.</Description>
+    </Source>
+</PISI>

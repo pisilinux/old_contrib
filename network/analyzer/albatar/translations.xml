@@ -2,7 +2,7 @@
 <PISI>
     <Source>
         <Name>albatar</Name>
-        <Summary xml:lang="tr">Albatar bir SQLi açığını sömürebilen python betiği.</Summary>
-        <Description xml:lang="tr">Albatar bir SQLi açığını sömürebilen python betiği.</Description>
+        <Summary xml:lang="tr">SQLi açığını sömürebilen bir python betiği.</Summary>
+        <Description xml:lang="tr">Albatar, SQLi açığını sömürebilen bir python betiği.</Description>
     </Source>
 </PISI>

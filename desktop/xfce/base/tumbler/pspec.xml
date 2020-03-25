@@ -20,9 +20,12 @@
 			<Dependency>intltool</Dependency>
 			<Dependency>curl-devel</Dependency>
 			<Dependency>dbus-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
 			<Dependency>libpng-devel</Dependency>
 			<Dependency>libgsf-devel</Dependency>
+			<Dependency>freetype-devel</Dependency>
 			<Dependency>libopenraw-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>poppler-glib-devel</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
 			<Dependency>gst-plugins-base-devel</Dependency>

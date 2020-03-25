@@ -21,6 +21,7 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>vala-devel</Dependency>
+			<Dependency>xdg-user-dirs</Dependency>
 			<Dependency>gobject-introspection-devel</Dependency>
 		</BuildDependencies>
 	</Source>

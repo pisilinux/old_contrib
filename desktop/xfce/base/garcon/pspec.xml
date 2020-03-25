@@ -20,8 +20,11 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
+			<Dependency>python-six</Dependency>
+			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
+			<Dependency>freetype-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>

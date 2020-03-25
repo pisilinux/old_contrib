@@ -22,16 +22,24 @@
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
-			<Dependency>gtk3-devel</Dependency>
 			<Dependency>dbus-devel</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
-			<Dependency>libX11-devel</Dependency>
-			<Dependency>garcon-devel</Dependency>
 			<Dependency>thunar-devel</Dependency>
+			<Dependency>garcon-devel</Dependency>
+			<Dependency>xfconf-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libglade-devel</Dependency>
+			<Dependency>libwnck2-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
 	</Source>

@@ -23,12 +23,26 @@
 			<Dependency>exo-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>dbus-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>glade-devel</Dependency>
+			<Dependency>xfconf-devel</Dependency>
 			<Dependency>upower-devel</Dependency>
 			<Dependency>colord-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libwnck3-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libcanberra-devel</Dependency>
 			<Dependency>libxklavier-devel</Dependency>
+			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>xorg-input-libinput-devel</Dependency>
 		</BuildDependencies>
 	</Source>

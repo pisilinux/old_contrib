@@ -44,6 +44,7 @@
 			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>fontconfig-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>

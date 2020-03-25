@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-screensaver</Name>
-		<Homepage>https://git.xfce.org/apps/xfce4-screensaver/about/</Homepage>
+		<Homepage>https://docs.xfce.org/apps/screensaver/start</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
@@ -21,6 +21,7 @@
 			https://archive.xfce.org/src/apps/xfce4-screensaver/0.1/xfce4-screensaver-0.1.8.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>xmlto</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>pam-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>

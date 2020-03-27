@@ -12,8 +12,8 @@
         <License>BSD</License>
         <IsA>library</IsA>
         <Summary>Sphinx API for Web Apps</Summary>
-        <Description>python-sphinxcontrib-websupport is the Sphinx documentation generator.</Description>
-        <Archive sha1sum="5d3293b118d31b0312c50500323d9caffad48023" type="targz">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.2.0.tar.gz</Archive>
+        <Description>sphinxcontrib-websupport provides a Python API to easily integrate Sphinx documentation into your Web application.</Description>
+        <Archive sha1sum="313f4b764872d36f890e76579985e6aaa732f4ca" type="targz">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.2.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python-devel</Dependency>
@@ -23,13 +23,26 @@
     <Package>
         <Name>python-sphinxcontrib-websupport</Name>
         <Summary>sphinxcontrib-websupport module for python</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-docutils</Dependency>
+            <Dependency>python-Jinja2</Dependency>
+            <!--<Dependency>python-sphinx</Dependency>-->
+        </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib/python2*</Path>
             <Path fileType="doc">/usr/share/doc/python-sphinxcontrib-websupport</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-03-27</Date>
+            <Version>1.2.1</Version>
+            <Comment>Patch version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="3">
             <Date>2020-02-24</Date>
             <Version>1.2.0</Version>

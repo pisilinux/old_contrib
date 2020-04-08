@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>python-gmusicapi</Name>
@@ -8,12 +8,12 @@
             <Name>Blue Devil</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>BSD</License>
         <PartOf>programming.language.python</PartOf>
+        <License>BSD</License>
         <IsA>library</IsA>
         <Summary>An unofficial client library for Google Music</Summary>
         <Description>An unofficial api for Google Play Music. gmusicapi allows control of Google Music with Python.</Description>
-        <Archive sha1sum="9841de41a0d10bb4536315f2a496d51a23d38a35" type="targz">https://github.com/simon-weber/gmusicapi/archive/12.1.1.tar.gz</Archive>
+        <Archive sha1sum="714dff17cee32b69d34efd87beb3a6a1233b029e" type="targz">https://github.com/simon-weber/gmusicapi/archive/13.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-setuptools</Dependency>
             <Dependency>python-devel</Dependency>
@@ -47,6 +47,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-04-08</Date>
+            <Version>13.0.0</Version>
+            <Comment>Major version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-23</Date>
             <Version>12.1.1</Version>

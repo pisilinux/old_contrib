@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>A pure python3 implementation of multicast DNS service discovery.</Summary>
         <Description>python3-zeroconf is a pure Python3 Multicast DNS Service Discovery Library (Bonjour/Avahi compatible).</Description>
-        <Archive sha1sum="0059d41db3507deba8b66ce91c0cd1ee1c344d08" type="targz">https://github.com/jstasiak/python-zeroconf/archive/0.24.5.tar.gz</Archive>
+        <Archive sha1sum="37e01ef67cbce7a882f3f8815c27bde6682cbf49" type="targz">https://github.com/jstasiak/python-zeroconf/archive/0.25.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
@@ -34,6 +34,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-04-08</Date>
+            <Version>0.25.0</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="3">
             <Date>2020-03-11</Date>
             <Version>0.24.5</Version>

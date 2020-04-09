@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>asio</Name>
@@ -8,11 +8,12 @@
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
+        <PartOf>network.misc</PartOf>
         <License>Boost-1.0</License>
         <IsA>library</IsA>
         <Summary>Asynchronous network library</Summary>
         <Description>Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.</Description>
-        <Archive sha1sum="04a68987b01b0bfcd47e3b73ebfb2de20d33fe0e" type="targz">https://github.com/chriskohlhoff/asio/archive/asio-1-14-0.tar.gz</Archive>
+        <Archive sha1sum="94635f4cda3c525ccc420baa8c30a759a910c659" type="targz">https://github.com/chriskohlhoff/asio/archive/asio-1-16-0.tar.gz</Archive>
         <!--<BuildDependencies>
             <Dependency>boost-devel</Dependency>
         </BuildDependencies>-->
@@ -20,6 +21,7 @@
 
     <Package>
         <Name>asio</Name>
+        <Summary>Asynchronous network library</Summary>
         <!--<RuntimeDependencies>
             <Dependency>boost</Dependency>
         </RuntimeDependencies>-->
@@ -30,6 +32,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2020-04-09</Date>
+            <Version>1.16.0</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="6">
             <Date>2019-12-02</Date>
             <Version>1.14.0</Version>

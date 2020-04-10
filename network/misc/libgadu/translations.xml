@@ -11,5 +11,6 @@
     <Package>
         <Name>libgadu-devel</Name>
         <Summary xml:lang="tr">libgadu için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">libgadu-devel, libgadu için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

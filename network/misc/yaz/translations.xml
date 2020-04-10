@@ -10,6 +10,7 @@
     <Package>
         <Name>yaz-devel</Name>
         <Summary xml:lang="tr">yaz için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">yaz-devel, yaz için geliştirme dosyalarını içerir.</Description>
     </Package>
     
     <Package>

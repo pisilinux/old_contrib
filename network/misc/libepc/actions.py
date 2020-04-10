@@ -9,8 +9,10 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+    # suppress compiler warnings
+    pisitools.cflags.add("-Wno-deprecated-declarations]")
     autotools.configure("--prefix=/usr")
-    
+    # fix unused direct dependency analysis
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
@@ -19,4 +21,4 @@ def build():
 def install():
     autotools.install()
 
-    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
+    pisitools.dodoc("COPYING", "README")

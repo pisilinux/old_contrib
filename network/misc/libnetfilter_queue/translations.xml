@@ -9,5 +9,6 @@
     <Package>
         <Name>libnetfilter_queue-devel</Name>
         <Summary xml:lang="tr">libnetfilter_queue için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">libnetfilter_queue-devel, libnetfilter_queue için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

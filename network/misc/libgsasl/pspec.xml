@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>libgsasl</Name>
@@ -8,15 +8,23 @@
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
+        <PartOf>network.misc</PartOf>
         <License>LGPLv2</License>
         <IsA>library</IsA>
         <Summary>Implementation of the SASL framework and a few common SASL mechanisms</Summary>
         <Description>GNU SASL is an implementation of the Simple Authentication and Security Layer framework and a few common SASL mechanisms. SASL is used by network servers (e.g., IMAP, SMTP) to request authentication from clients, and in clients to authenticate against servers.</Description>
-        <Archive sha1sum="283d80c9710a07b96810d52d64649355d51f1d40" type="targz">ftp://alpha.gnu.org/gnu/gsasl/libgsasl-1.7.6.tar.gz</Archive>
+        <Archive sha1sum="a34b1459e4b888e60d5f8f8065fb4ab8e91be698" type="targz">ftp://ftp.gnu.org/gnu/gsasl/libgsasl-1.8.1.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcrypt-devel</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgsasl</Name>
+        <Summary>Implementation of the SASL framework and a few common SASL mechanisms</Summary>
+        <RuntimeDependencies>
+            <Dependency>libgcrypt</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/libgsasl.so*</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
@@ -37,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-04-10</Date>
+            <Version>1.8.1</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="3">
             <Date>2016-03-23</Date>
             <Version>1.7.6</Version>

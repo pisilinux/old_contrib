@@ -10,7 +10,6 @@ from pisi.actionsapi import get
 
 def setup():
     autotools.autoreconf("-fvi")
-
     autotools.configure("--disable-static \
                          --with-pthread")
 
@@ -20,4 +19,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=\"%s\"" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "README", "NEWS", "COPYING", "ChangeLog")
+    pisitools.dodoc("COPYING", "README")

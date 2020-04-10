@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>libgadu</Name>
@@ -8,24 +8,26 @@
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
         </Packager>
+        <PartOf>network.misc</PartOf>
         <License>LGPLv2.1</License>
         <IsA>library</IsA>
         <Summary>A Gadu-gadu protocol compatible communications library</Summary>
         <Description>libgadu is intended to make it easy to add Gadu-Gadu communication support to your software.</Description>
-        <Archive sha1sum="6ecf7ca5213d6af74e636b67a1fdb92479096bb1" type="targz">https://github.com/wojtekka/libgadu/archive/1.12.1.tar.gz</Archive>
-        <Patches>
-	  <!--<Patch level="1">no-pthread.diff</Patch>  -->
-        </Patches>
+        <Archive sha1sum="252ecade86e0d53ff30c4ece71b764c571b28b2a" type="targz">https://github.com/wojtekka/libgadu/archive/1.12.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>protobuf-c-devel</Dependency>
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>libgadu</Name>
+        <Summary>A Gadu-gadu protocol compatible communications library</Summary>
         <RuntimeDependencies>
 	    <Dependency>protobuf-c</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="library">/usr/lib</Path>
             <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="library">/usr/lib</Path>
         </Files>
     </Package>
 
@@ -36,12 +38,19 @@
             <Dependency release="current">libgadu</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>
             <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>2020-04-10</Date>
+            <Version>1.12.2</Version>
+            <Comment>Patch version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="5">
             <Date>2016-03-23</Date>
             <Version>1.12.1</Version>

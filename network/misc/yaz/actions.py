@@ -10,11 +10,13 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+    # suppress compiler warnings
     shelltools.export("CFLAGS", "%s -Wno-implicit-function-declaration -Wno-int-conversion -Wno-unused-result" % get.CFLAGS())
     autotools.autoreconf("-vfi")
     autotools.configure("--enable-shared=yaz \
                         --with-xslt \
                         --disable-static")
+    # fix unused direct dependency analysis
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
     
 def build():

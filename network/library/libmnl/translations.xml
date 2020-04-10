@@ -9,5 +9,6 @@
     <Package>
         <Name>libmnl-devel</Name>
         <Summary xml:lang="tr">libmnl için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">libmnl-devel, libmnl için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

@@ -15,7 +15,7 @@
         <Summary>uget - Download manager using GTK+ and libcurl</Summary>
         <Description>uGet is an Open Source download manager application for GNU/Linux developed with GTK+.</Description>
         <Archive sha1sum="e0f2718fdf36d6db42f8f596ea15a5a987a2b2ab" type="targz">https://sourceforge.net/projects/urlget/files/uget%20%28stable%29/2.2.3/uget-2.2.3-1.tar.gz</Archive>
-        <Archive sha1sum="8e740b383d05b59a7004a7dc2cc13543dbb93188" type="tarxz">http://sourceforge.net/projects/urlget/files/aria2-plugin/1.18.x/aria2-1.18.3.tar.xz</Archive>
+        <!--Archive sha1sum="8e740b383d05b59a7004a7dc2cc13543dbb93188" type="tarxz">http://sourceforge.net/projects/urlget/files/aria2-plugin/1.18.x/aria2-1.18.3.tar.xz</Archive-->
         <BuildDependencies>
             <Dependency>intltool</Dependency>
             <Dependency>gtk3-devel</Dependency>

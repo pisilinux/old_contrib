@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:console</IsA>
+		<PartOf>multimedia.sound</PartOf>
 		<Summary>Music On Console Player.</Summary>
 		<Description>MOC (music on console) is a console audio player for Linux/Unix designed to be powerful and easy to use.</Description>
 		<Archive sha1sum="e5297f77d6d946d345b317fe7635ff74618e46f9" type="zip">

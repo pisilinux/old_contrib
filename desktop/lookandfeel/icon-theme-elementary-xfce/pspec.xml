@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>data</IsA>
+		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>Elementary Look for XFCE.</Summary>
 		<Description>Elementary icons forked from upstream, extended and maintained for Xfce.</Description>
 		<Archive sha1sum="d091512f557ec4a699f7ff63161f3ebe11c62c1a" type="targz">

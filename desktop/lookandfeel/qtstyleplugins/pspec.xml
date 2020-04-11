@@ -10,6 +10,7 @@
 		</Packager>
 		<License>unknown</License>
 		<IsA>library</IsA>
+		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>Additional style plugins for Qt.</Summary>
 		<Description>Additional style plugins for Qt.</Description>
 		<Archive sha1sum="7993bbe5c9de82c337eeadfd554cd009a79e1c08" type="zip">

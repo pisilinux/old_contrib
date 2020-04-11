@@ -11,6 +11,7 @@
 		<License>GPLv2</License>
 		<License>LGPLv2.1</License>
 		<IsA>data</IsA>
+		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>A style to bend Qt applications to look like they belong into GNOME Shell.</Summary>
 		<Description>A native style to bend Qt4 and Qt5 applications to look like they belong into GNOME Shell.</Description>
 		<Archive sha1sum="baf1d29c536bff8d39443bc052c0b57b7a8eb49e" type="targz">

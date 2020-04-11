@@ -9,12 +9,14 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure("--prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-appindicator")
+    autotools.configure("--localstatedir=/var \
+                         --disable-appindicator")
 
 def build():
     autotools.make()
 
 def install():
-    autotools.install()
+    autotools.rawInstall("DESTDIR=%s install" % get.installDIR())
+    #autotools.install()
 
     pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")

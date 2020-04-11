@@ -41,7 +41,7 @@
             <Dependency>openssl</Dependency>
             <Dependency>libnotify</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>gstreamer-next</Dependency>
+            <Dependency>gstreamer</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

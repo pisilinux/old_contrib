@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure("--prefix=/usr --disable-appindicator")
+    autotools.configure("--prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-appindicator")
 
 def build():
     autotools.make()

@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>data</IsA>
+		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>Simple and clean gtk theme</Summary>
 		<Description>
 			Simple and clean gtk theme, based on original Adwaita(supported: gtk2, gtk3, xfce 4.12+).

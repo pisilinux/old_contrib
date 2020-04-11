@@ -9,7 +9,8 @@
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>GPLv3</License>
-		<IsA>library</IsA>
+		<IsA>app</IsA>
+		<PartOf>programming.tool</PartOf>
 		<Summary>static analysis of C/C++ code.</Summary>
 		<Description>
 			 Cppcheck is a static analysis tool for C/C++ code. It provides unique code analysis to detect bugs and focuses on detecting undefined behaviour and dangerous coding constructs. The goal is to detect only real errors in the code (i.e. have very few false positives).

@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:gui</IsA>
+		<PartOf>science.astronomy</PartOf>
 		<Summary>Space simulation software.</Summary>
 		<Description>Celestia is a space simulation software that lets you explore our universe in three dimensions.</Description>
 		<Archive sha1sum="409a8b1067c5e8b3ce64887b63042aaf4ae2921f" type="targz">

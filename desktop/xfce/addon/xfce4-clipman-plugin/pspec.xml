@@ -15,13 +15,14 @@
 		<Description>
 			Clipboard Manager for the Xfce Panel and as a standalone application (it is a bundle). It keeps the clipboard contents around (even after an application quits), it is able to handle text and images, and has a feature to execute actions on specific text selection by matching them against regexes.
 		</Description>
-		<Archive sha1sum="4069d38100fb27b88da51aea5e32b00c95705258" type="tarbz2">
-			https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.4/xfce4-clipman-plugin-1.4.4.tar.bz2
+		<Archive sha1sum="8a7844eadf40c0efd996593fc8c0970240bdbeb5" type="tarbz2">
+			https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.6/xfce4-clipman-plugin-1.6.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
 			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libXtst-devel</Dependency>
 			<Dependency>qrencode-devel</Dependency>
@@ -55,6 +56,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2020-04-03</Date>
+			<Version>1.6.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
 		<Update release="2">
 			<Date>2020-03-01</Date>
 			<Version>1.4.4</Version>

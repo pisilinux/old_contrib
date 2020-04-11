@@ -9,15 +9,15 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure()
-
-	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
+	autotools.configure("--disable-static")
 
 def build():
 	autotools.make()
 
+def check():
+	autotools.make("check")
+
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "INSTALL", "NEWS", "README")
-
+	pisitools.dodoc("ChangeLog", "COPYING", "NEWS", "README")

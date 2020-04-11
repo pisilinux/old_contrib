@@ -10,6 +10,7 @@
 		</Packager>
 		<License>LGPL2.1</License>
 		<IsA>data</IsA>
+		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>GTK+2/3 themes.</Summary>
 		<Description>
 			Adwaita, Adwaita-Dark and HighContrast for GTK+2/3 base applications.

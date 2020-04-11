@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-pulseaudio-plugin</Name>
@@ -15,19 +15,19 @@
 		<Description>
 			Xfce4-pulseaudio-plugin is a panel plugin for controlling an audio output volume of the PulseAudio mixer
 		</Description>
-		<Archive sha1sum="512aeeaaf78e93c53695d9e43328d6e5b76f5b17" type="tarbz2">
-			http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/xfce4-pulseaudio-plugin-0.4.2.tar.bz2
+		<Archive sha1sum="5682fa1ed6976e94fa01c91fc5b7839bfe804241" type="tarbz2">
+			https://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/xfce4-pulseaudio-plugin-0.4.3.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
+			<Dependency>exo-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>keybinder-devel</Dependency>
-			<!-- deprecated. -->
 			<Dependency>dbus-glib-devel</Dependency>
-			<!-- -->
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>pulseaudio-libs-devel</Dependency>
@@ -37,6 +37,7 @@
 	<Package>
 		<Name>xfce4-pulseaudio-plugin</Name>
 		<RuntimeDependencies>
+			<Dependency>exo</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>xfconf</Dependency>
@@ -44,9 +45,7 @@
 			<Dependency>libwnck3</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>keybinder</Dependency>
-			<!-- deprecated. -->
 			<Dependency>dbus-glib</Dependency>
-			<!-- -->
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>xfce4-panel</Dependency>
@@ -63,6 +62,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2020-04-03</Date>
+			<Version>0.4.3</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2019-08-11</Date>
 			<Version>0.4.2</Version>

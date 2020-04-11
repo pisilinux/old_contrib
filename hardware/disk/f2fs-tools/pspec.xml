@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:console</IsA>
+		<PartOf>hardware.disk</PartOf>
 		<Summary>Userland tools for the f2fs filesystem</Summary>
 		<Description>Userland tools for the f2fs filesystem</Description>
 		<Archive sha1sum="39c4827bedae3c7c26145b2b32e266a368f408b2" type="targz">

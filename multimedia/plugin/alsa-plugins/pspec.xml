@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>library</IsA>
+		<PartOf>multimedia.plugin</PartOf>
 		<Summary>The Advanced Linux Sound Architecture (ALSA) plugins.</Summary>
 		<Description>alsa-plugins provides plugins like JACK, PulseAudio, etc. for ALSA.</Description>
 		<Archive sha1sum="e32e586e52f82dd56218277033780451a2d69271" type="tarbz2">

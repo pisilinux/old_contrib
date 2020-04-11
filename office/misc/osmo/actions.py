@@ -8,10 +8,11 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-def setup():
-	autotools.configure()
+options = "--enable-backup --enable-printing \
+--with-notes --with-tasks --with-contacts"
 
-	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
+def setup():
+	autotools.configure(options)
 
 def build():
 	autotools.make()
@@ -19,5 +20,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "INSTALL", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "FAQ", "README", "TRANSLATORS")
 

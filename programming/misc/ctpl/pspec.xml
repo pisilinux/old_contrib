@@ -9,6 +9,8 @@
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<Summary>CTPL − C Template (Parser) Library</Summary>
+		<IsA>library</IsA>
+		<PartOf>programming.misc</PartOf>
 		<Description>
 			CTPL is a template engine library written in C and distributed under the terms of the GNU GPLv3+
 		</Description>
@@ -18,7 +20,7 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>glib2-devel</Dependency>
-<!--			<Dependency>glibmm-devel</Dependency> -->
+			<!-- <Dependency>glibmm-devel</Dependency> -->
 			<Dependency>gtk-doc</Dependency>
 			<Dependency>python-six</Dependency>
 		</BuildDependencies>

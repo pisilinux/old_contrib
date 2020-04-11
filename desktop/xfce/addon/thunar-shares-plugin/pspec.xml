@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>thunar-shares-plugin</Name>
-		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-shares-plugin</Homepage>
+		<Homepage>https://docs.xfce.org/xfce/thunar/thunar-shares-plugin</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -15,16 +15,16 @@
 		<Description>
 			The Thunar Shares Plugin (thunar-shares-plugin) allows you to quickly share a folder using Samba from Thunar (the XFCE file manager) without requiring root access.
 		</Description>
-		<Archive sha1sum="0f68bdfad6f2f4729891fbead594ed6712987de0" type="tarbz2">
-			http://archive.xfce.org/src/thunar-plugins/thunar-shares-plugin/0.3/thunar-shares-plugin-0.3.0.tar.bz2
+		<Archive sha1sum="596e7c983770fc1920bfeb08863b31cb51dc0141" type="tarbz2">
+			https://archive.xfce.org/src/thunar-plugins/thunar-shares-plugin/0.3/thunar-shares-plugin-0.3.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
-			<Dependency>thunar-devel</Dependency>
 			<Dependency>samba-devel</Dependency>
-			<Dependency>xfce4-dev-tools</Dependency>
+			<Dependency>thunar-devel</Dependency>
+			<!-- <Dependency>xfce4-dev-tools</Dependency> -->
 		</BuildDependencies>
 	</Source>
 
@@ -44,6 +44,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2020-04-06</Date>
+			<Version>0.3.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2018-07-10</Date>
 			<Version>0.3.0</Version>

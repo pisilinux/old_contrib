@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/licenses/gpl.txt
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import get
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
 
 def setup():
     # install the graph and cgraph api alongside
@@ -45,12 +45,10 @@ def install():
     #for lang in ["lua", "ocaml", "php", "python23", "python24", "python25", "R", "sharp"]:
         #pisitools.removeDir("/usr/lib/graphviz/%s" % lang)
 
-    
-
     pisitools.dohtml(".")
-    pisitools.dodoc("AUTHORS", "ChangeLog", "NEWS", "README*")
+    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING")
 
     pisitools.removeDir("/usr/share/graphviz/doc")
 
     # everything has been built against cgraph, but use graph as default api
-    pisitools.dosed("%s/usr/include/graphviz/types.h" % get.installDIR(), r"#define WITH_CGRAPH 1", deleteLine=True)
+    pisitools.dosed("%s/usr/include/graphviz/types.h" % get.installDIR(), r"#define WITH_CGRAPH 1", deleteLine = True)

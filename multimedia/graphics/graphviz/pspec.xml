@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>graphviz</Name>
-        <Homepage>http://www.graphviz.org/</Homepage>
+        <Homepage>https://www.graphviz.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -19,38 +19,37 @@
             https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz
         </Archive>
         <BuildDependencies>
+            <Dependency>perl</Dependency>
+            <Dependency>libtool</Dependency>
             <Dependency>gd-devel</Dependency>
             <Dependency>pango-devel</Dependency>
+            <Dependency>python-devel</Dependency>
             <Dependency>libXaw-devel</Dependency>
             <Dependency>librsvg-devel</Dependency>
             <Dependency>freeglut-devel</Dependency>
             <Dependency>ghostscript-devel</Dependency>
-            <Dependency >libtool</Dependency>
-            <Dependency >perl</Dependency>
-            <Dependency >python-devel</Dependency>            
         </BuildDependencies>
-        <!--<Patches>
-            <Patch level="1">remove-lib64-postfix.diff</Patch>
-        </Patches>-->
+        <Patches>
+            <!-- <Patch level="1">remove-lib64-postfix.diff</Patch> -->
+        </Patches>
     </Source>
 
     <Package>
         <Name>graphviz</Name>
         <RuntimeDependencies>
             <Dependency>gd</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>libXt</Dependency>            
             <Dependency>zlib</Dependency>
             <Dependency>glib2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>libXt</Dependency>
             <Dependency>pango</Dependency>
+            <Dependency>libX11</Dependency>
             <Dependency>libXaw</Dependency>
             <Dependency>libXmu</Dependency>
             <Dependency>librsvg</Dependency>
             <Dependency>ghostscript</Dependency>
             <Dependency>libtool-ltdl</Dependency>
-            <Dependency>zlib</Dependency>
-            <Dependency>libX11</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

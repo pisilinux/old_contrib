@@ -2484,65 +2484,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>vokoscreenNG</Name>
-            <Homepage>https://github.com/vkohaupt/vokoscreenNG</Homepage>
-            <Packager>
-                <Name>Pisilinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:gui</IsA>
-            <PartOf>multimedia.video</PartOf>
-            <Summary xml:lang="en">New desktop recording program.</Summary>
-            <Description xml:lang="en">VokscreenNG is a user friendly Open Source screencaster for Linux and Windows. The new name is now vokoscreenNG and has been rewritten from scratch.</Description>
-            <Archive type="targz" sha1sum="24d37692c232b320801fa3c40e71f6f13358ed4a" name="3.0.1.tar.gz">https://github.com/vkohaupt/vokoscreenNG/archive/3.0.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>qt5-linguist</Dependency>
-                <Dependency>qt5-base-devel</Dependency>
-                <Dependency>gstreamer-devel</Dependency>
-                <Dependency>qt5-x11extras-devel</Dependency>
-                <Dependency>qt5-multimedia-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>multimedia/video/vokoscreenNG/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>vokoscreenNG</Name>
-            <RuntimeDependencies>
-                <Dependency>glib2</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>gstreamer</Dependency>
-                <Dependency>gst-libav</Dependency>
-                <Dependency>pulseaudio</Dependency>
-                <Dependency>qt5-x11extras</Dependency>
-                <Dependency>qt5-multimedia</Dependency>
-                <Dependency>gstreamer-vaapi</Dependency>
-                <Dependency>gst-plugins-bad</Dependency>
-                <Dependency>gst-plugins-base</Dependency>
-                <Dependency>gst-plugins-good</Dependency>
-                <Dependency>gst-plugins-ugly</Dependency>
-                <Dependency>libva-intel-driver</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/vokoscreenNG</Path>
-                <Path fileType="data">/usr/share/applications/vokoscreenNG.desktop</Path>
-                <Path fileType="data">/usr/share/pixmaps/vokoscreenNG.png</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-02-01</Date>
-                <Version>3.0.1</Version>
-                <Comment>Rewrited.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>gradio</Name>
             <Homepage>https://github.com/haecker-felix/Gradio</Homepage>
             <Packager>
@@ -3391,7 +3332,7 @@
             <Summary xml:lang="tr">Müzik Çalıcı Sunucusu (MPD)</Summary>
             <Description xml:lang="en">Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music. Through plugins and libraries it can play a variety of sound files while being controlled by its network protocol.</Description>
             <Description xml:lang="tr">MPD çoğu müzik dosyasını (MP3, Ogg Vorbis, FLAC, AAC, Mod vs.) çalar ve ağda yayınlar.</Description>
-            <Archive type="tarxz" sha1sum="eefac56f77a8ef77b1ae5de9083f36716de85c71" name="mpd-0.21.20.tar.xz">https://musicpd.org/download/mpd/0.21/mpd-0.21.20.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="51a2965f6c14c27f5de7d96e7e80a7f5b387edf1" name="mpd-0.21.22.tar.xz">https://musicpd.org/download/mpd/0.21/mpd-0.21.22.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>meson</Dependency>
                 <Dependency>cmake</Dependency>
@@ -3497,6 +3438,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="15">
+                <Date>2020-04-03</Date>
+                <Version>0.21.22</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="14">
                 <Date>2020-02-27</Date>
                 <Version>0.21.20</Version>
@@ -7622,7 +7570,7 @@
                 <Email>wascheme@tuta.io</Email>
             </Packager>
             <License>GPLv3</License>
-            <IsA>library</IsA>
+            <IsA>app</IsA>
             <PartOf>programming.tool</PartOf>
             <Summary xml:lang="en">static analysis of C/C++ code.</Summary>
             <Description xml:lang="en">Cppcheck is a static analysis tool for C/C++ code. It provides unique code analysis to detect bugs and focuses on detecting undefined behaviour and dangerous coding constructs. The goal is to detect only real errors in the code (i.e. have very few false positives).</Description>
@@ -7881,6 +7829,78 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libgringotts</Name>
+            <Homepage>https://directory.fsf.org/wiki/LibGringotts</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">A small, thread-safe C library.</Summary>
+            <Summary xml:lang="tr">Küçük ve evreli bir C kitaplığı</Summary>
+            <Description xml:lang="en">libgringotts is a small, thread-safe C library originally developed for Gringotts. Its purpose is to encapsulate data in an encrypted and compressed file.</Description>
+            <Description xml:lang="tr">libgringotts programcının belirli bir dosya biçiminde veri kaydetmeseine imkan veren küçük ve evreli bir C kitaplığıdır. Veriyi şifrelenmiş ve sıkıştırılmış bir şekilde kapsüllemeyi hedefler.</Description>
+            <Archive type="tarbz2" sha1sum="155ea34da99a99e897821e7677c0536ac589fff0" name="libgringotts-1.2.1.tar.bz2">https://sourceforge.net/projects/gringotts.berlios/files/libgringotts-1.2.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libmcrypt-devel</Dependency>
+                <Dependency>mhash-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">fix-doc-dir.patch</Patch>
+            </Patches>
+            <SourceURI>programming/library/libgringotts/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libgringotts</Name>
+            <RuntimeDependencies>
+                <Dependency>libmcrypt</Dependency>
+                <Dependency>mhash</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/libgringotts</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libgringotts-devel</Name>
+            <Summary xml:lang="en">Development files for libgringotts</Summary>
+            <RuntimeDependencies>
+                <Dependency release="4">libgringotts</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2020-03-22</Date>
+                <Version>1.2.1</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-01-30</Date>
+                <Version>1.2.1</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-07-06</Date>
+                <Version>1.2.1</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -8325,6 +8345,77 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>mhash</Name>
+            <Homepage>http://mhash.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">A uniform interface to several hash algorithms.</Summary>
+            <Summary xml:lang="tr">Hash algoritmaları için ortak arayüz</Summary>
+            <Description xml:lang="en">mhash is a free library which provides a uniform interface to a large number of hash algorithms.</Description>
+            <Description xml:lang="tr">mhash, çeşitli hash algoritmalarını kolayca kullanabilmek için ortak arayüz sağlayan özgür bir kitaplıktır.</Description>
+            <Archive type="tarbz2" sha1sum="d6f324e70a42a8bbf7a5458521257225afcf0caf" name="mhash-0.9.9.9.tar.bz2">mirrors://sourceforge/mhash/mhash-0.9.9.9.tar.bz2</Archive>
+            <Patches>
+                <Patch level="1">mhash-0.9.9.9-keygen_test_fix.patch</Patch>
+            </Patches>
+            <SourceURI>programming/library/mhash/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mhash</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>mhash-devel</Name>
+            <Summary xml:lang="en">Development files for mhash</Summary>
+            <Summary xml:lang="tr">mhash paketine ait geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency release="4">mhash</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="man">/usr/share/man/man3</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2020-03-22</Date>
+                <Version>0.9.9.9</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-05-20</Date>
+                <Version>0.9.9.9</Version>
+                <Comment>Rebuild, remove unneeded patches.</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-01-31</Date>
+                <Version>0.9.9.9</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvarice@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-01-30</Date>
+                <Version>0.9.9.9</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>kvantum</Name>
             <Homepage>https://github.com/tsujan/Kvantum</Homepage>
             <Packager>
@@ -8601,95 +8692,6 @@
                 <Comment>First release</Comment>
                 <Name>Mustafa Cinasal</Name>
                 <Email>muscnsl@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>codeblocks</Name>
-            <Homepage>http://www.codeblocks.org/</Homepage>
-            <Packager>
-                <Name>Pisi Linux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>programming.environment</PartOf>
-            <Summary xml:lang="en">A free C++ IDE built to meet the most demanding needs of its users</Summary>
-            <Summary xml:lang="tr">C++ için bütünleşik geliştirme araçlarını barındıran özgür yazılım</Summary>
-            <Description xml:lang="en">Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.</Description>
-            <Description xml:lang="tr">Code::Blocks, yazılımcıların en çok ihtiyaç duydukları özellikleri sağlayan, tamamen kişiselleştirilebilen ve geliştirilebilen C++ editörüdür.</Description>
-            <Icon>codeblocks</Icon>
-            <Archive type="tarxz" sha1sum="ccd9e13d271a4d1ce7ebed8c0e6d4b45fb6e927d" name="codeblocks_17.12.tar.xz">https://downloads.sourceforge.net/codeblocks/codeblocks_17.12.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>fontconfig-devel</Dependency>
-                <Dependency>hunspell-devel</Dependency>
-                <Dependency>boost-devel</Dependency>
-                <Dependency>gamin-devel</Dependency>
-                <Dependency>wxGTK-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>wxGTK3</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="1">codeblocks-17.12-scripting.patch</Patch>
-            </Patches>
-            <SourceURI>programming/environment/codeblocks/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>codeblocks</Name>
-            <Summary xml:lang="en">A free C++ IDE built to meet the most demanding needs of its users</Summary>
-            <RuntimeDependencies>
-                <Dependency>wxGTK-common</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>hunspell</Dependency>
-                <Dependency>wxBase</Dependency>
-                <Dependency>wxGTK3</Dependency>
-                <Dependency>wxGTK</Dependency>
-                <Dependency>gamin</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>gtk3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/codeblocks</Path>
-                <Path fileType="data">/usr/share/appdata</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="data">/usr/share/mime</Path>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="library">/usr/lib</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>codeblocks-devel</Name>
-            <Summary xml:lang="en">Development files of codeblocks</Summary>
-            <Summary xml:lang="tr">codeblocks paketlerine ait geliştirme dosyaları</Summary>
-            <Description xml:lang="tr">codeblocks-devel, codeblocks için geliştirme dosyalarını içerir.</Description>
-            <RuntimeDependencies>
-                <Dependency>codeblocks</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-02-24</Date>
-                <Version>17.12</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2017-05-10</Date>
-                <Version>16.01</Version>
-                <Comment>First release.</Comment>
-                <Name>Erdinç Gültekin</Name>
-                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -10153,53 +10155,6 @@
             <Update release="1">
                 <Date>2019-12-18</Date>
                 <Version>2.1.2</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-snowballstemmer</Name>
-            <Homepage>https://snowballstem.org/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Snowball stemming library collection for Python</Summary>
-            <Summary xml:lang="tr">Snowball, python için sözcük kökeni bulma kitaplığıdır.</Summary>
-            <Description xml:lang="en">Snowball is a small string processing language designed for creating stemming algorithms for use in Information Retrieval.</Description>
-            <Description xml:lang="tr">Snowball, sıklıkla kullanılan bilgi çekme yapılırken kullanılan sözcük kökü bulma işlemi için yaratılmış küçük bir sözcük işleme kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="d303e11059ecbb8ad3a6d7b08af5d2f15b83ddec" name="snowballstemmer-2.0.0.tar.gz">https://pypi.python.org/packages/source/s/snowballstemmer/snowballstemmer-2.0.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-snowballstemmer/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-snowballstemmer</Name>
-            <Summary xml:lang="en">snowballstemmer module for python</Summary>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-snowballstemmer</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-12-06</Date>
-                <Version>2.0.0</Version>
-                <Comment>Rebuilt</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-12-06</Date>
-                <Version>2.0.0</Version>
                 <Comment>First pisi release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -12165,45 +12120,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-typing</Name>
-            <Homepage>https://pypi.org/project/typing/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>PSF</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Backport of the standard library typing module</Summary>
-            <Summary xml:lang="tr">Geriye dönük Python 2.7 typing bağlayıcıları</Summary>
-            <Description xml:lang="en">This is a backport of the standard library typing module to Python versions older than 3.5. Typing defines a standard notation for Python function and variable type annotations. The notation can be used for documenting code in a concise, standard format, and it has been designed to also be used by static and runtime type checkers, static analyzers, IDEs and other tools.</Description>
-            <Description xml:lang="tr">Python 3.5&apos;dan önceki sürümler için geriye dönüklük destegi saglayan pyton2 bağlayıcısıdır.</Description>
-            <Archive type="targz" sha1sum="f977239c310a5dd5ae5b6cb598d76eba45b92ed6" name="typing-3.7.4.1.tar.gz">https://pypi.io/packages/source/t/typing/typing-3.7.4.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-typing/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-typing</Name>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc/python-typing</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-13</Date>
-                <Version>3.7.4.1</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-pyxattr</Name>
             <Homepage>http://pyxattr.k1024.org/</Homepage>
             <Packager>
@@ -12254,72 +12170,6 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-sphinxcontrib-websupport</Name>
-            <Homepage>https://www.sphinx-doc.org/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Sphinx API for Web Apps</Summary>
-            <Summary xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belgelendirme üretecisidir.</Summary>
-            <Description xml:lang="en">sphinxcontrib-websupport provides a Python API to easily integrate Sphinx documentation into your Web application.</Description>
-            <Description xml:lang="tr">python-sphinxcontrib-websupport, Sphinx belgelendirme üretecisidir. python3-sphinxcontrib-websupport, ağ uygulamalarınız için Sphinx ile bütünleşebilen python apisi sunar.</Description>
-            <Archive type="targz" sha1sum="313f4b764872d36f890e76579985e6aaa732f4ca" name="sphinxcontrib-websupport-1.2.1.tar.gz">https://pypi.org/packages/source/s/sphinxcontrib-websupport/sphinxcontrib-websupport-1.2.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-sphinxcontrib-websupport/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-sphinxcontrib-websupport</Name>
-            <Summary xml:lang="en">sphinxcontrib-websupport module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-docutils</Dependency>
-                <Dependency>python-Jinja2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="doc">/usr/share/doc/python-sphinxcontrib-websupport</Path>
-                <Path fileType="library">/usr/lib/python2*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2020-03-27</Date>
-                <Version>1.2.1</Version>
-                <Comment>Patch version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2020-02-24</Date>
-                <Version>1.2.0</Version>
-                <Comment>Minor version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-12-13</Date>
-                <Version>1.1.2</Version>
-                <Comment>Rebuilt and clean</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-13</Date>
-                <Version>1.1.2</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17879,6 +17729,7 @@
                 <Email>wascheme@tuta.io</Email>
             </Packager>
             <License>GPLv3</License>
+            <IsA>library</IsA>
             <PartOf>programming.misc</PartOf>
             <Summary xml:lang="en">CTPL − C Template (Parser) Library</Summary>
             <Description xml:lang="en">CTPL is a template engine library written in C and distributed under the terms of the GNU GPLv3+</Description>
@@ -19477,7 +19328,9 @@
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
+                <Dependency>thunar-devel</Dependency>
                 <Dependency>garcon-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/base/xfce4-appfinder/pspec.xml</SourceURI>
@@ -19598,7 +19451,7 @@
             <Description xml:lang="en">The session manager allows the user to save sessions and restore them after login. It is capable of saving several different sessions. It comes with three splash screen engines. And at last it helps you to log out, reboot, and shutdown the system.</Description>
             <Description xml:lang="tr">Xfce oturum yöneticisi, kullanıcıların oturumlarını kaydetmesine ve giriş yaptıktan sonra tekrar oturumu çağırmalarına izin verir. Birden fazla, farklı oturumları kaydetmede oldukça başarılıdır. Pakette üç tane örnek açılış teması var ve son olarak, sistemi kapatırken, yeniden başlatırken veya çıkarken kullanıcılara yardımcı olur.</Description>
             <Description xml:lang="pl">Xfce4-session jest zgodny z &quot;menedżerem sesji&quot; X11 zaprojektowanym do użycia ze środowiskiem graficznym Xfce4. Podczas wylogowywania, menedżer sesji zapisuje wszystkie uruchomione aplikacje. Przy ponownym zalogowaniu, przywraca je z oknami na tych samych pozycjach.</Description>
-            <Archive type="tarbz2" sha1sum="1e44eb63a87fa797dbd80fc0a956ebc7a585c3cc" name="xfce4-session-4.14.1.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-session/4.14/xfce4-session-4.14.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="2af701ae3e7e8990a2b6e58748277913fbe9011d" name="xfce4-session-4.14.2.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-session/4.14/xfce4-session-4.14.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
@@ -19611,6 +19464,7 @@
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>libSM-devel</Dependency>
                 <Dependency>xfconf-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>libICE-devel</Dependency>
                 <Dependency>polkit-devel</Dependency>
@@ -19657,6 +19511,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="14">
+                <Date>2020-04-03</Date>
+                <Version>4.14.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="13">
                 <Date>2020-01-15</Date>
                 <Version>4.14.1</Version>
@@ -19915,14 +19776,16 @@
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
             <PartOf>desktop.xfce.base</PartOf>
-            <Summary xml:lang="en">Terminal for Xfce</Summary>
-            <Description xml:lang="en">Terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.</Description>
-            <Archive type="tarbz2" sha1sum="2d792aa4c46caf29559379e11e511f5fe56a529d" name="xfce4-terminal-0.8.9.1.tar.bz2">https://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.9.1.tar.bz2</Archive>
+            <Summary xml:lang="en">Terminal Emulator for Xfce.</Summary>
+            <Description xml:lang="en">xfce4-terminal is a modern, lightweight, and low memory cost terminal emulator with tabs and multiple windows for the Xfce desktop environment. It offers full-customization for the key bindings, the aspect, the colors, and more.</Description>
+            <Archive type="tarbz2" sha1sum="d8244851c2372ad3029015bfef9b12feadd41e9d" name="xfce4-terminal-0.8.9.2.tar.bz2">https://archive.xfce.org/src/apps/xfce4-terminal/0.8/xfce4-terminal-0.8.9.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>vte-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>gnutls-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
+                <Dependency>utempter-devel</Dependency>
                 <Dependency>libpcre2-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
             </BuildDependencies>
@@ -19951,6 +19814,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2020-04-03</Date>
+                <Version>0.8.9.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-12-29</Date>
                 <Version>0.8.9.1</Version>
@@ -22094,10 +21964,11 @@
             <Summary xml:lang="tr">Bir uyarı gösterici</Summary>
             <Description xml:lang="en">The Xfce Notify Daemon (xfce4-notifyd for short) is a smallish program that implements the “server-side” portion of the Freedesktop desktop notifications specification.</Description>
             <Description xml:lang="tr">Xfce Notify Daemon Freedesktop masaüstü uyarı sisteminin sunucu tarafını gerçekleştiren küçük bir uygulamadır.</Description>
-            <Archive type="tarbz2" sha1sum="4ff6270b95960540f34e66af76145ed3c874a282" name="xfce4-notifyd-0.4.4.tar.bz2">http://archive.xfce.org/src/apps/xfce4-notifyd/0.4/xfce4-notifyd-0.4.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="e770acbd273d0afa6849107c38ed178cdd163575" name="xfce4-notifyd-0.6.0.tar.bz2">https://archive.xfce.org/src/apps/xfce4-notifyd/0.6/xfce4-notifyd-0.6.0.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>libX11-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
                 <Dependency>libICE-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
@@ -22109,13 +21980,16 @@
         <Package>
             <Name>xfce4-notifyd</Name>
             <RuntimeDependencies>
+                <Dependency>atk</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
                 <Dependency>xfconf</Dependency>
                 <Dependency>libnotify</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
                 <Dependency>libxfce4util</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -22128,6 +22002,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-08</Date>
+                <Version>0.6.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="4">
                 <Date>2019-07-28</Date>
                 <Version>0.4.4</Version>
@@ -23070,10 +22951,12 @@
             <Summary xml:lang="tr">Xfce ses çıkışını denetleyen bir eklenti</Summary>
             <Description xml:lang="en">Xfce4-pulseaudio-plugin is a panel plugin for controlling an audio output volume of the PulseAudio mixer</Description>
             <Description xml:lang="tr">Xfce ses çıkışını denetleyen bir eklenti</Description>
-            <Archive type="tarbz2" sha1sum="512aeeaaf78e93c53695d9e43328d6e5b76f5b17" name="xfce4-pulseaudio-plugin-0.4.2.tar.bz2">http://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/xfce4-pulseaudio-plugin-0.4.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="5682fa1ed6976e94fa01c91fc5b7839bfe804241" name="xfce4-pulseaudio-plugin-0.4.3.tar.bz2">https://archive.xfce.org/src/panel-plugins/xfce4-pulseaudio-plugin/0.4/xfce4-pulseaudio-plugin-0.4.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
+                <Dependency>exo-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
@@ -23088,6 +22971,7 @@
         <Package>
             <Name>xfce4-pulseaudio-plugin</Name>
             <RuntimeDependencies>
+                <Dependency>exo</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>xfconf</Dependency>
@@ -23111,6 +22995,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-03</Date>
+                <Version>0.4.3</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="4">
                 <Date>2019-08-11</Date>
                 <Version>0.4.2</Version>
@@ -23586,7 +23477,7 @@
             <Summary xml:lang="tr">GIO/GVfs kullanarak uzak dosya sistemleri için bağlantıları yönetme arayüzü</Summary>
             <Description xml:lang="en">Gigolo allows you to quickly connect/mount local and remote filesystems and manage bookmarks of such.</Description>
             <Description xml:lang="tr">Gigolo, yerel ve uzak dosya sistemlerinin kolayca bağlanmasını ve yönetilmesini sağlayan bir arayüzdür.</Description>
-            <Archive type="tarbz2" sha1sum="2663bc0ad0a81e73cc8238231ebbfef63ab3b196" name="gigolo-0.5.0.tar.bz2">http://archive.xfce.org/src/apps/gigolo/0.5/gigolo-0.5.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="70ecf8d14368d16579b47bee2a73b45aee905d86" name="gigolo-0.5.1.tar.bz2">https://archive.xfce.org/src/apps/gigolo/0.5/gigolo-0.5.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -23613,6 +23504,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>2020-04-03</Date>
+                <Version>0.5.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="7">
                 <Date>2019-08-13</Date>
                 <Version>0.5.0</Version>
@@ -23882,11 +23780,12 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">Clipboard manager for the Xfce Panel.</Summary>
             <Description xml:lang="en">Clipboard Manager for the Xfce Panel and as a standalone application (it is a bundle). It keeps the clipboard contents around (even after an application quits), it is able to handle text and images, and has a feature to execute actions on specific text selection by matching them against regexes.</Description>
-            <Archive type="tarbz2" sha1sum="4069d38100fb27b88da51aea5e32b00c95705258" name="xfce4-clipman-plugin-1.4.4.tar.bz2">https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.4/xfce4-clipman-plugin-1.4.4.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="8a7844eadf40c0efd996593fc8c0970240bdbeb5" name="xfce4-clipman-plugin-1.6.1.tar.bz2">https://archive.xfce.org/src/panel-plugins/xfce4-clipman-plugin/1.6/xfce4-clipman-plugin-1.6.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
                 <Dependency>xfconf-devel</Dependency>
                 <Dependency>libXtst-devel</Dependency>
                 <Dependency>qrencode-devel</Dependency>
@@ -23919,6 +23818,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-04-03</Date>
+                <Version>1.6.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2020-03-01</Date>
                 <Version>1.4.4</Version>
@@ -24097,7 +24003,7 @@
     <SpecFile>
         <Source>
             <Name>thunar-shares-plugin</Name>
-            <Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-shares-plugin</Homepage>
+            <Homepage>https://docs.xfce.org/xfce/thunar/thunar-shares-plugin</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -24109,14 +24015,13 @@
             <Summary xml:lang="tr">Samba kullanarak hızlı bir şekilde dizin paylaşmanıza izin veren bir eklenti</Summary>
             <Description xml:lang="en">The Thunar Shares Plugin (thunar-shares-plugin) allows you to quickly share a folder using Samba from Thunar (the XFCE file manager) without requiring root access.</Description>
             <Description xml:lang="tr">thunar-shares-plugin, root yetkileri gerektirmeden Samba kullanarak Thunar&apos;dan hızlı bir şekilde dizin paylaşmanıza izin verir.</Description>
-            <Archive type="tarbz2" sha1sum="0f68bdfad6f2f4729891fbead594ed6712987de0" name="thunar-shares-plugin-0.3.0.tar.bz2">http://archive.xfce.org/src/thunar-plugins/thunar-shares-plugin/0.3/thunar-shares-plugin-0.3.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="596e7c983770fc1920bfeb08863b31cb51dc0141" name="thunar-shares-plugin-0.3.1.tar.bz2">https://archive.xfce.org/src/thunar-plugins/thunar-shares-plugin/0.3/thunar-shares-plugin-0.3.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency>thunar-devel</Dependency>
                 <Dependency>samba-devel</Dependency>
-                <Dependency>xfce4-dev-tools</Dependency>
+                <Dependency>thunar-devel</Dependency>
             </BuildDependencies>
             <SourceURI>desktop/xfce/addon/thunar-shares-plugin/pspec.xml</SourceURI>
         </Source>
@@ -24135,6 +24040,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-06</Date>
+                <Version>0.3.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="4">
                 <Date>2018-07-10</Date>
                 <Version>0.3.0</Version>
@@ -24236,7 +24148,7 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">Xfce Screensaver</Summary>
             <Description xml:lang="en">xfce4-screensaver is a screen saver and locker that aims to have simple, sane, secure defaults and be well integrated with the desktop.</Description>
-            <Archive type="tarbz2" sha1sum="9e16df226dc03520551c97cbe20693ff72930962" name="xfce4-screensaver-0.1.9.tar.bz2">https://archive.xfce.org/src/apps/xfce4-screensaver/0.1/xfce4-screensaver-0.1.9.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="4c3461e845a3f58e992bacce4e781f0ff9b3ac55" name="xfce4-screensaver-0.1.10.tar.bz2">https://archive.xfce.org/src/apps/xfce4-screensaver/0.1/xfce4-screensaver-0.1.10.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>xmlto</Dependency>
                 <Dependency>intltool</Dependency>
@@ -24285,8 +24197,8 @@
         </Package>
         <History>
             <Update release="4">
-                <Date>2020-03-24</Date>
-                <Version>0.1.9</Version>
+                <Date>2020-04-03</Date>
+                <Version>0.1.10</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -26592,6 +26504,46 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>nocsd</Name>
+            <Homepage>https://github.com/ZaWertun/gtk3-nocsd</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">A hack to disable gtk+ 3 client side decoration</Summary>
+            <Description xml:lang="en">gtk3-nocsd is a small module used to disable the client side decoration of Gtk+ 3.</Description>
+            <Archive type="targz" sha1sum="616a72cf8ff1fc3a6c2c8d6f8c74feeb77d4ef8f" name="v3.0.1">https://codeload.github.com/ZaWertun/gtk3-nocsd/tar.gz/v3.0.1</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/nocsd/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>nocsd</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin/gtk3-nocsd</Path>
+                <Path fileType="library">/usr/lib/libgtk3-nocsd.so.0</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc/gtk3-nocsd</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-10-06</Date>
+                <Version>3.0.1</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>lumina-desktop</Name>
             <Homepage>https://lumina-desktop.org/</Homepage>
             <Packager>
@@ -26606,7 +26558,7 @@
             <Description xml:lang="en">The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Description>
             <Description xml:lang="tr">UNIX benzeri sistemlerde kullanım için tasarlanmış sistem arayüzlü hafif bir Masaüstü ortamıdır..</Description>
             <Icon>lumina-desktop</Icon>
-            <Archive type="targz" sha1sum="5694be83131183ebe1b9402bcf6f30913d72749c" name="v1.5.0.tar.gz">https://github.com/lumina-desktop/lumina/archive/v1.5.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="26fa7726aff964777464de5cd658b34d9c25a871" name="v1.6.0.tar.gz">https://github.com/lumina-desktop/lumina/archive/v1.6.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
                 <Dependency versionFrom="5.7.1">qt5-multimedia-devel</Dependency>
@@ -26794,6 +26746,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2020-04-12</Date>
+                <Version>1.6.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Erkan IŞIK</Name>
+                <Email>erkanisik@pisilinux.org</Email>
+            </Update>
             <Update release="2">
                 <Date>2019-07-13</Date>
                 <Version>1.5.0</Version>
@@ -27048,46 +27007,6 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>nocsd</Name>
-            <Homepage>https://github.com/ZaWertun/gtk3-nocsd</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>desktop.misc</PartOf>
-            <Summary xml:lang="en">A hack to disable gtk+ 3 client side decoration</Summary>
-            <Description xml:lang="en">gtk3-nocsd is a small module used to disable the client side decoration of Gtk+ 3.</Description>
-            <Archive type="targz" sha1sum="616a72cf8ff1fc3a6c2c8d6f8c74feeb77d4ef8f" name="v3.0.1">https://codeload.github.com/ZaWertun/gtk3-nocsd/tar.gz/v3.0.1</Archive>
-            <BuildDependencies>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>gobject-introspection-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>desktop/misc/nocsd/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>nocsd</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin/gtk3-nocsd</Path>
-                <Path fileType="library">/usr/lib/libgtk3-nocsd.so.0</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc/gtk3-nocsd</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-10-06</Date>
-                <Version>3.0.1</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>
@@ -32210,19 +32129,22 @@
                 <Email>admins@pisilinux.org</Email>
             </Packager>
             <License>LGPLv2.1</License>
-            <IsA>app:console</IsA>
+            <IsA>library</IsA>
             <PartOf>network.library</PartOf>
             <Summary xml:lang="en">libmnl is a minimalistic user-space library for Netlink developers.</Summary>
             <Summary xml:lang="tr">libmnl, Netlink geliştiricileri için minimalistik kulanıcı alanı kütüphanesidir.</Summary>
             <Description xml:lang="en">libmnl is a minimalistic user-space library for Netlink developers. There are a lot of common tasks involved in parsing, validating, and constructing both the Netlink header and TLVs that are repetitive and easy to get wrong.</Description>
             <Description xml:lang="tr">libmnl, Netlink geliştiricileri için minimalistik kulanıcı alanı kütüphanesidir. Hem Netlink başlığı hemde TLV&apos;ler gibi tekrarlayıp duran ve kolaylıkla yanlış gidebilecekler de çözümleme, doğrulama ve inşa etme gibi birçok yaygın görevler bulunmaktadır. Bu kütüphanenin amacı kodu yeniden kullanmanızı sağlamak ve tekerleği yeniden icat etmenizi engelleyecek temel yardımcıları sunmaktır.</Description>
-            <Archive type="tarbz2" sha1sum="c27e25f67c6422ebf893fc3a844af8085a1c5b63" name="libmnl-1.0.3.tar.bz2">http://netfilter.org/projects/libmnl/files/libmnl-1.0.3.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="2db40dea612e88c62fd321906be40ab5f8f1685a" name="libmnl-1.0.4.tar.bz2">https://netfilter.org/projects/libmnl/files/libmnl-1.0.4.tar.bz2</Archive>
             <SourceURI>network/library/libmnl/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>libmnl</Name>
+            <Summary xml:lang="en">libmnl is a minimalistic user-space library for Netlink developers.</Summary>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/libmnl.so.0.2.0</Path>
+                <Path fileType="library">/usr/lib/libmnl.so.0</Path>
+                <Path fileType="library">/usr/lib/libmnl.so</Path>
                 <Path fileType="doc">/usr/share/doc/libmnl</Path>
             </Files>
         </Package>
@@ -32230,15 +32152,23 @@
             <Name>libmnl-devel</Name>
             <Summary xml:lang="en">libmnl için geliştirme dosyaları</Summary>
             <Summary xml:lang="tr">libmnl için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">libmnl-devel, libmnl için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="4">libmnl</Dependency>
+                <Dependency release="5">libmnl</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="library">/usr/lib/pkgconfig/libmnl.pc</Path>
                 <Path fileType="header">/usr/include/libmnl</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-10</Date>
+                <Version>1.0.4</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2016-03-13</Date>
                 <Version>1.0.3</Version>
@@ -32487,227 +32417,6 @@
                 <Comment>First release</Comment>
                 <Name>Ertan Güven</Name>
                 <Email>ertan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>aria2</Name>
-            <Homepage>https://aria2.github.io/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <PartOf>network.download</PartOf>
-            <Summary xml:lang="en">A download utility with resuming and segmented downloading</Summary>
-            <Summary xml:lang="tr">Parçalı ve yarım kalan dosyaları indirme özelliğine sahip bir indirme aracı</Summary>
-            <Description xml:lang="en">aria2 is a download utility with resuming and segmented downloading. Supported protocols are HTTP, HTTPS, FTP and BitTorrent. It also supports Metalink version 3.0.</Description>
-            <Description xml:lang="tr">Aria2 parçalı indirme ve yarım kalan indirmeleri devam ettirme özelliklerine sahip olan bir indirme aracıdır.</Description>
-            <Archive type="tarxz" sha1sum="1e4f8dba13e6eb5860b90c567a9c03d2c4be8f18" name="aria2-1.35.0.tar.xz">https://github.com/tatsuhiro-t/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>gmp-devel</Dependency>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>c-ares-devel</Dependency>
-                <Dependency>gnutls-devel</Dependency>
-                <Dependency>nettle-devel</Dependency>
-                <Dependency>sqlite-devel</Dependency>
-                <Dependency>libxml2-devel</Dependency>
-                <Dependency>libssh2-devel</Dependency>
-                <Dependency>openssl-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/download/aria2/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>aria2</Name>
-            <RuntimeDependencies>
-                <Dependency>gmp</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>c-ares</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>gnutls</Dependency>
-                <Dependency>nettle</Dependency>
-                <Dependency>sqlite</Dependency>
-                <Dependency>libxml2</Dependency>
-                <Dependency>libssh2</Dependency>
-                <Dependency>openssl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share/bash-completion</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>aria2-devel</Name>
-            <RuntimeDependencies>
-                <Dependency release="10">aria2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-                <Path fileType="header">/usr/include</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="10">
-                <Date>2019-10-15</Date>
-                <Version>1.35.0</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="9">
-                <Date>2019-07-04</Date>
-                <Version>1.34.0</Version>
-                <Comment>Rebuild.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="8">
-                <Date>2019-04-18</Date>
-                <Version>1.34.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="7">
-                <Date>2016-03-22</Date>
-                <Version>1.21.0</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="6">
-                <Date>2015-02-15</Date>
-                <Version>1.18.9</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="5">
-                <Date>2013-11-22</Date>
-                <Version>1.18.1</Version>
-                <Comment>Version bump</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2013-10-01</Date>
-                <Version>1.18.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2013-06-15</Date>
-                <Version>1.17.1</Version>
-                <Comment>Version bump</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-04-23</Date>
-                <Version>1.16.0</Version>
-                <Comment>Dep fixed</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-12-14</Date>
-                <Version>1.16.0</Version>
-                <Comment>First release</Comment>
-                <Name>M. Tayyip Yel</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>uget</Name>
-            <Homepage>http://ugetdm.com/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>network.download</PartOf>
-            <Summary xml:lang="en">uget - Download manager using GTK+ and libcurl</Summary>
-            <Summary xml:lang="tr">Bir indirme aracı.</Summary>
-            <Description xml:lang="en">uGet is an Open Source download manager application for GNU/Linux developed with GTK+.</Description>
-            <Description xml:lang="tr">Uget, Linux için yazılmış, GTK tabanlı bir indirme yöneticisidir.</Description>
-            <Icon>uget</Icon>
-            <Archive type="targz" sha1sum="18e7f152c59aef11180c4efb11576f30d48900ff" name="uget-2.0.5.tar.gz">mirrors://sourceforge/urlget/uget (stable)/2.0.5/uget-2.0.5.tar.gz</Archive>
-            <Archive type="tarxz" sha1sum="8e740b383d05b59a7004a7dc2cc13543dbb93188" name="aria2-1.18.3.tar.xz">http://sourceforge.net/projects/urlget/files/aria2-plugin/1.18.x/aria2-1.18.3.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>intltool</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>curl-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>openssl-devel</Dependency>
-                <Dependency>libnotify-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>gstreamer-next-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/download/uget/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>uget</Name>
-            <RuntimeDependencies>
-                <Dependency>curl</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>openssl</Dependency>
-                <Dependency>libnotify</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>gstreamer-next</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/sounds</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2016-03-22</Date>
-                <Version>2.0.5</Version>
-                <Comment>Version bump, rebuilt with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-07-09</Date>
-                <Version>1.10.4</Version>
-                <Comment>Version Bump.</Comment>
-                <Name>Vedat Demir</Name>
-                <Email>vedat@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-02-17</Date>
-                <Version>1.10.3</Version>
-                <Comment>Rebuild.</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2013-02-08</Date>
-                <Version>1.10.3</Version>
-                <Comment>First release</Comment>
-                <Name>Idris Kalp</Name>
-                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -33229,29 +32938,37 @@
             <Summary xml:lang="tr">TLS/SSL - Port Çevireci.</Summary>
             <Description xml:lang="en">The stunnel package contains a program that allows you to encrypt arbitrary TCP connections inside SSL (Secure Sockets Layer) so you can easily communicate with clients over secure channels.</Description>
             <Description xml:lang="tr">Stunnel paketi istemciler ile güvenli kanallar üzerinden iletişim kurabilmek için rasgele TCP bağlantılarını şifreleyen bir program içerir.</Description>
-            <Archive type="targz" sha1sum="e9c3717ece9931d099013dbbbf613cec47452a62" name="stunnel-5.31.tar.gz">https://www.stunnel.org/downloads/stunnel-5.31.tar.gz</Archive>
+            <Archive type="targz" sha1sum="a7fa3fb55d698f50f3d54e4fc08588a119f21cad" name="stunnel-5.56.tar.gz">https://www.stunnel.org/downloads/archive/5.x/stunnel-5.56.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>zlib-devel</Dependency>
                 <Dependency>openssl-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
             </BuildDependencies>
             <SourceURI>network/misc/stunnel/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>stunnel</Name>
+            <Summary xml:lang="en">TLS/SSL - Port Wrapper</Summary>
             <RuntimeDependencies>
-                <Dependency>zlib</Dependency>
                 <Dependency>openssl</Dependency>
+                <Dependency>zlib</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="library">/usr/lib/stunnel</Path>
-                <Path fileType="library">/var/lib</Path>
+                <Path fileType="library">/var/lib/stunnel</Path>
                 <Path fileType="man">/usr/share/man/man8</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="config">/etc/stunnel</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>2020-04-10</Date>
+                <Version>5.56</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="7">
                 <Date>2016-03-23</Date>
                 <Version>5.31</Version>
@@ -33320,32 +33037,44 @@
             <Description xml:lang="en">libgadu is intended to make it easy to add Gadu-Gadu communication support to your software.</Description>
             <Description xml:lang="tr">libgadu yazılımlarınıza Gadu-Gadu iletişim desteğini kolayca ekleyebilmenizi amaçlar.</Description>
             <Description xml:lang="pl">libgadu jest biblioteką odpowiedzialną za wszelkie operacje sieciowe dotyczące serwerów Gadu-Gadu</Description>
-            <Archive type="targz" sha1sum="6ecf7ca5213d6af74e636b67a1fdb92479096bb1" name="1.12.1.tar.gz">https://github.com/wojtekka/libgadu/archive/1.12.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="252ecade86e0d53ff30c4ece71b764c571b28b2a" name="1.12.2.tar.gz">https://github.com/wojtekka/libgadu/archive/1.12.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>protobuf-c-devel</Dependency>
+            </BuildDependencies>
             <SourceURI>network/misc/libgadu/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>libgadu</Name>
+            <Summary xml:lang="en">A Gadu-gadu protocol compatible communications library</Summary>
             <RuntimeDependencies>
                 <Dependency>protobuf-c</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
         <Package>
             <Name>libgadu-devel</Name>
             <Summary xml:lang="en">Development files for libgadu</Summary>
             <Summary xml:lang="tr">libgadu için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">libgadu-devel, libgadu için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="5">libgadu</Dependency>
+                <Dependency release="6">libgadu</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="header">/usr/include</Path>
                 <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2020-04-10</Date>
+                <Version>1.12.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="5">
                 <Date>2016-03-23</Date>
                 <Version>1.12.1</Version>
@@ -33483,7 +33212,7 @@
             <Summary xml:lang="tr">Bağlantı takip sistemi programlama arayüzü</Summary>
             <Description xml:lang="en">Libnetfilter-conntrack is a userspace library providing API to the in-kernel connection tracking system.</Description>
             <Description xml:lang="tr">Libnetfilter-connection, çekirdek içindeki bağlantı takip sistemine API sağlayan bir kullanıcı alanı kitaplığıdır.</Description>
-            <Archive type="tarbz2" sha1sum="9aed8733d98af39d57fffd929c2bea70f1dcba06" name="libnetfilter_conntrack-1.0.5.tar.bz2">http://netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.5.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="4c273a1806ba39656464fc77efbaa0a4ed56a330" name="libnetfilter_conntrack-1.0.8.tar.bz2">https://netfilter.org/projects/libnetfilter_conntrack/files/libnetfilter_conntrack-1.0.8.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>libnfnetlink-devel</Dependency>
                 <Dependency>libmnl-devel</Dependency>
@@ -33492,29 +33221,38 @@
         </Source>
         <Package>
             <Name>libnetfilter_conntrack</Name>
+            <Summary xml:lang="en">Connection tracking system API</Summary>
             <RuntimeDependencies>
                 <Dependency>libnfnetlink</Dependency>
                 <Dependency>libmnl</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="library">/usr/lib/libnetfilter_conntrack.so*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
         <Package>
             <Name>libnetfilter_conntrack-devel</Name>
             <Summary xml:lang="en">Development files for libnetfilter_conntrack</Summary>
             <Summary xml:lang="tr">libnetfilter_conntrack için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">libnetfilter_conntrack-devel, libnetfilter_conntrack için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="6">libnetfilter_conntrack</Dependency>
+                <Dependency release="7">libnetfilter_conntrack</Dependency>
                 <Dependency>libnfnetlink-devel</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="header">/usr/include</Path>
                 <Path fileType="library">/usr/lib/pkgconfig/libnetfilter_conntrack.pc</Path>
+                <Path fileType="header">/usr/include</Path>
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2020-04-10</Date>
+                <Version>1.0.8</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="6">
                 <Date>2016-03-23</Date>
                 <Version>1.0.5</Version>
@@ -33959,21 +33697,22 @@
             <Summary xml:lang="tr">Kernel paket filtresi tarafından kuyruklanan paketlere kullanıcı alanı APIsi sağlayan bir kütüphane.</Summary>
             <Description xml:lang="en">libnetfilter_queue is a userspace library providing an API to packets that have been queued by the kernel packet filter. It is is part of a system that deprecates the old ip_queue / libipq mechanism.</Description>
             <Description xml:lang="tr">Kernel paket filtresi tarafından kuyruklanan paketlere kullanıcı alanı APIsi sağlayan bir kütüphanedir. Eski ip_queue / libipq mekanizmasını onaylayan sistemin bir paçasıdır.</Description>
-            <Archive type="tarbz2" sha1sum="8cc0b8ed33162281bc9fa8bcfa8c9dcb08848ff9" name="libnetfilter_queue-1.0.2.tar.bz2">http://netfilter.org/projects/libnetfilter_queue/files/libnetfilter_queue-1.0.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="3d182e3211b633d0a0f8a2b12ef80dc2621f53cb" name="libnetfilter_queue-1.0.3.tar.bz2">https://netfilter.org/projects/libnetfilter_queue/files/libnetfilter_queue-1.0.3.tar.bz2</Archive>
             <BuildDependencies>
-                <Dependency>libmnl-devel</Dependency>
                 <Dependency>libnfnetlink-devel</Dependency>
+                <Dependency>libmnl-devel</Dependency>
             </BuildDependencies>
             <SourceURI>network/misc/libnetfilter_queue/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>libnetfilter_queue</Name>
+            <Summary xml:lang="en">Userspace API to packets that have been queued by the kernel packet filter</Summary>
             <RuntimeDependencies>
-                <Dependency>libmnl</Dependency>
                 <Dependency>libnfnetlink</Dependency>
+                <Dependency>libmnl</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/libnetfilter_queue.so*</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
@@ -33981,16 +33720,24 @@
             <Name>libnetfilter_queue-devel</Name>
             <Summary xml:lang="en">libnetfilter_queue için geliştirme dosyaları</Summary>
             <Summary xml:lang="tr">libnetfilter_queue için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">libnetfilter_queue-devel, libnetfilter_queue için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libnetfilter_queue</Dependency>
+                <Dependency release="4">libnetfilter_queue</Dependency>
                 <Dependency>libnfnetlink-devel</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="library">/usr/lib/pkgconfig/libnetfilter_queue.pc</Path>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-04-10</Date>
+                <Version>1.0.3</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-03-13</Date>
                 <Version>1.0.2</Version>
@@ -34074,17 +33821,25 @@
             <Summary xml:lang="tr">Asenkron ağ kitaplığı</Summary>
             <Description xml:lang="en">Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.</Description>
             <Description xml:lang="tr">Asio, geliştiricilere kararlı bir asenkron model sunarak düşük seviyeli işlemler ve ağ işlemleri için birden fazla platformda kullanılabilen bir altyapı sunar.</Description>
-            <Archive type="targz" sha1sum="04a68987b01b0bfcd47e3b73ebfb2de20d33fe0e" name="asio-1-14-0.tar.gz">https://github.com/chriskohlhoff/asio/archive/asio-1-14-0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="94635f4cda3c525ccc420baa8c30a759a910c659" name="asio-1-16-0.tar.gz">https://github.com/chriskohlhoff/asio/archive/asio-1-16-0.tar.gz</Archive>
             <SourceURI>network/misc/asio/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>asio</Name>
+            <Summary xml:lang="en">Asynchronous network library</Summary>
             <Files>
                 <Path fileType="header">/usr/include</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2020-04-09</Date>
+                <Version>1.16.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="6">
                 <Date>2019-12-02</Date>
                 <Version>1.14.0</Version>
@@ -34251,11 +34006,18 @@
             <Summary xml:lang="tr">SASL çatısının gerçekleştirimi ve birkaç yaygın SASL mekanizması</Summary>
             <Description xml:lang="en">GNU SASL is an implementation of the Simple Authentication and Security Layer framework and a few common SASL mechanisms. SASL is used by network servers (e.g., IMAP, SMTP) to request authentication from clients, and in clients to authenticate against servers.</Description>
             <Description xml:lang="tr">GNU SASL bir Basit Kimlik Doğrulama ve Güvenlik Katmanı gerçekleştirimidir. SASL; IMAP, SMTP gibi ağ sunucularında istemcilerin kimlik doğrulamasının yapılmasında kullanılır. İstemcilerde de istemci kimliklerini sunuculara doğrulatmak için kullanılır.</Description>
-            <Archive type="targz" sha1sum="283d80c9710a07b96810d52d64649355d51f1d40" name="libgsasl-1.7.6.tar.gz">ftp://alpha.gnu.org/gnu/gsasl/libgsasl-1.7.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="a34b1459e4b888e60d5f8f8065fb4ab8e91be698" name="libgsasl-1.8.1.tar.gz">ftp://ftp.gnu.org/gnu/gsasl/libgsasl-1.8.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libgcrypt-devel</Dependency>
+            </BuildDependencies>
             <SourceURI>network/misc/libgsasl/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>libgsasl</Name>
+            <Summary xml:lang="en">Implementation of the SASL framework and a few common SASL mechanisms</Summary>
+            <RuntimeDependencies>
+                <Dependency>libgcrypt</Dependency>
+            </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/libgsasl.so*</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
@@ -34266,8 +34028,9 @@
             <Name>libgsasl-devel</Name>
             <Summary xml:lang="en">Development files for libgsasl</Summary>
             <Summary xml:lang="tr">libgsasl için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">libgsasl-devel, libgsasl için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="3">libgsasl</Dependency>
+                <Dependency release="4">libgsasl</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -34275,6 +34038,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-04-10</Date>
+                <Version>1.8.1</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2016-03-23</Date>
                 <Version>1.7.6</Version>
@@ -34314,7 +34084,7 @@
             <Description xml:lang="en">YAZ is a programmers&apos; toolkit supporting the development of Z39.50/SRW/SRU clients and servers.</Description>
             <Description xml:lang="tr">YAZ Z39.50/SRW/SRU istemci ve sunucular geliştirmek için bir programlama kitaplığıdır.</Description>
             <Description xml:lang="es">YAZ es un conjunto de herramientas para programadores que soporta del desarrollo de clientes y servidores de Z39.50/SRW/SRU.</Description>
-            <Archive type="targz" sha1sum="50d77c4ba750b20c9f5b0f17a3bf4b5433183a51" name="yaz-5.28.0.tar.gz">http://ftp.indexdata.dk/pub/yaz/yaz-5.28.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="7e49dd506ccca37660e1351f5785b1634dc32aa0" name="yaz-5.30.1.tar.gz">http://ftp.indexdata.dk/pub/yaz/yaz-5.30.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libxslt-devel</Dependency>
                 <Dependency>libxml2-devel</Dependency>
@@ -34323,27 +34093,29 @@
         </Source>
         <Package>
             <Name>yaz</Name>
+            <Summary xml:lang="en">C/C++ Z39.50v3 library</Summary>
             <RuntimeDependencies>
                 <Dependency>libxslt</Dependency>
             </RuntimeDependencies>
             <Files>
+                <Path fileType="library">/usr/lib/libyaz*</Path>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="man">/usr/share/man</Path>
                 <Path fileType="data">/usr/share</Path>
-                <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
         <Package>
             <Name>yaz-devel</Name>
             <Summary xml:lang="en">Development files for yaz</Summary>
             <Summary xml:lang="tr">yaz için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">yaz-devel, yaz için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="7">yaz</Dependency>
+                <Dependency release="8">yaz</Dependency>
                 <Dependency>libxslt-devel</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="data">/usr/lib/pkgconfig/yaz*</Path>
+                <Path fileType="header">/usr/include/yaz</Path>
             </Files>
         </Package>
         <Package>
@@ -34352,13 +34124,20 @@
             <Summary xml:lang="tr">yaz-docs için belgelendirme dosyaları</Summary>
             <Description xml:lang="tr">yaz-docs, yaz için belgelendirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="7">yaz</Dependency>
+                <Dependency release="8">yaz</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc/yaz</Path>
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>2020-04-10</Date>
+                <Version>5.30.1</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="7">
                 <Date>2019-12-03</Date>
                 <Version>5.28.0</Version>
@@ -34746,12 +34525,13 @@
             </Packager>
             <License>BSD</License>
             <IsA>app:console</IsA>
+            <IsA>library</IsA>
             <PartOf>network.misc</PartOf>
             <Summary xml:lang="en">Protocol Buffers implementation in C</Summary>
             <Summary xml:lang="tr">Google Protokol Arabelleklerinin C Uygulaması</Summary>
             <Description xml:lang="en">This is protobuf-c, a C implementation of the Google Protocol Buffers data serialization format.Needed for the libgadu Package</Description>
             <Description xml:lang="tr">protobuf-c, Google Protokol Arabelleklerinin veri serileştirmesi biçimi için bir C Uygulamasıdır. libgadu paketi için gereklidir.</Description>
-            <Archive type="targz" sha1sum="db97fc1a8ed4976725327336ff120b59b10e0ae4" name="v1.3.2.tar.gz">https://github.com/protobuf-c/protobuf-c/archive/v1.3.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="f70f592e8db0363013492df1e69e47ee8213e003" name="v1.3.3.tar.gz">https://github.com/protobuf-c/protobuf-c/archive/v1.3.3.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>protobuf-devel</Dependency>
             </BuildDependencies>
@@ -34759,14 +34539,15 @@
         </Source>
         <Package>
             <Name>protobuf-c</Name>
+            <Summary xml:lang="en">Protocol Buffers implementation in C</Summary>
             <RuntimeDependencies>
                 <Dependency>protobuf</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="all">/</Path>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
         <Package>
@@ -34775,7 +34556,7 @@
             <Summary xml:lang="tr">protobuf-c için geliştirme dosyaları</Summary>
             <Description xml:lang="tr">protobuf-c-devel, protobuf-c için geliştime dosyaları içerir.</Description>
             <RuntimeDependencies>
-                <Dependency release="3">protobuf-c</Dependency>
+                <Dependency release="4">protobuf-c</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include/google/protobuf-c</Path>
@@ -34784,6 +34565,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2020-04-09</Date>
+                <Version>1.3.3</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2019-12-25</Date>
                 <Version>1.3.2</Version>
@@ -34902,13 +34690,14 @@
             <Summary xml:lang="tr">Kolay Yayma ve Tüketme (Easy Publish and Consume) Kütüphanesi</Summary>
             <Description xml:lang="en">A library to easily publish and consume values on networks</Description>
             <Description xml:lang="tr">Ağ üzerinde kolaylıkla yayma ve tüketme yapabilen bir kütüphane.</Description>
-            <Archive type="tarxz" sha1sum="38bb8f1e7e2ee53f7c5a978cf1b59a6c4ddee8e6" name="libepc-0.4.4.tar.xz">http://ftp.gnome.org/pub/gnome/sources/libepc/0.4/libepc-0.4.4.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="97b9c1bcac0b3b729dfd159bd7375076c8e07973" name="libepc-0.4.6.tar.xz">http://ftp.gnome.org/pub/gnome/sources/libepc/0.4/libepc-0.4.6.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>gnutls-devel</Dependency>
                 <Dependency>libsoup-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
                 <Dependency>avahi-ui-devel</Dependency>
                 <Dependency>avahi-glib-devel</Dependency>
                 <Dependency>avahi-ui-gtk3-devel</Dependency>
@@ -34918,6 +34707,7 @@
         </Source>
         <Package>
             <Name>libepc</Name>
+            <Summary xml:lang="en">Easy Publish and Consume Library</Summary>
             <RuntimeDependencies>
                 <Dependency>gtk3</Dependency>
                 <Dependency>glib2</Dependency>
@@ -34930,17 +34720,18 @@
                 <Dependency>libutil-linux</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="library">/usr/lib</Path>
             </Files>
         </Package>
         <Package>
             <Name>libepc-devel</Name>
             <Summary xml:lang="en">libepc header files</Summary>
             <Summary xml:lang="tr">libepc için geliştirme dosyaları.</Summary>
+            <Description xml:lang="tr">libepc-devel, libepc için geliştirme dosyalarını içerir.</Description>
             <RuntimeDependencies>
-                <Dependency version="0.4.4">libepc</Dependency>
+                <Dependency version="0.4.6">libepc</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>gnutls-devel</Dependency>
                 <Dependency>avahi-devel</Dependency>
@@ -34955,6 +34746,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2020-04-10</Date>
+                <Version>0.4.6</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="6">
                 <Date>2016-03-23</Date>
                 <Version>0.4.4</Version>
@@ -35814,6 +35612,71 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>xournalpp</Name>
+            <Homepage>https://github.com/xournalpp/xournalpp</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">Xournal++ is a handwriting notetaking software with PDF annotation support.</Summary>
+            <Description xml:lang="en">Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux, macOS and Windows 10. Supports pen input from devices such as Wacom Tablets.</Description>
+            <Archive type="targz" sha1sum="532461588c146a90f173252621a96d57f799e206" name="1.0.17.tar.gz">https://github.com/xournalpp/xournalpp/archive/1.0.17.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>git</Dependency>
+                <Dependency>cmake</Dependency>
+                <Dependency>lua-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>util-linux</Dependency>
+                <Dependency>lsb-release</Dependency>
+                <Dependency>libzip-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>portaudio-devel</Dependency>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>poppler-glib-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>office/misc/xournalpp/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xournalpp</Name>
+            <RuntimeDependencies>
+                <Dependency>lua</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libzip</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>portaudio</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>poppler-glib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-21</Date>
+                <Version>1.0.17</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>gcstar</Name>
             <Homepage>www.gcstar.org</Homepage>
             <Packager>
@@ -36223,6 +36086,116 @@
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>osmo</Name>
+            <Homepage>http://clayo.org/osmo/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">Osmo is a handy personal organizer, which includes calendar, tasks manager, address book and notes modules.</Summary>
+            <Summary xml:lang="tr">Hızlı bir kişisel bilgi yöneticisi</Summary>
+            <Description xml:lang="en">Osmo is a handy personal organizer, which includes calendar, tasks manager, address book and notes modules. It was designed to be a small, easy to use and good looking PIM tool to help to manage personal information. In its current state the organizer is quite convenient to use - for example, the user can perform nearly all operations using the keyboard. Also, a lot of parameters are configurable to meet the user&apos;s preferences. On the technical side, Osmo is GTK+ based tool which uses a plain XML database to store all personal data.</Description>
+            <Description xml:lang="tr">Osmo, kişisel randevularınızı, önemli günlerinizi ve kişilerin adreslerini düzenlemeye yarayan ufak ve hızlı çalışan bir programdır.</Description>
+            <Archive type="targz" sha1sum="e9c32008c0daeb912fbfb103df4cf21938787b35" name="osmo-0.4.2.tar.gz">https://sourceforge.net/projects/osmo-pim/files/osmo-pim/osmo-0.4.2/osmo-0.4.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>db-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libical-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>webkit2gtk-devel</Dependency>
+                <Dependency>libarchive-devel</Dependency>
+                <Dependency>libgringotts-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>office/misc/osmo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>osmo</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libical</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libarchive</Dependency>
+                <Dependency>webkit2gtk</Dependency>
+                <Dependency>libgringotts</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="8">
+                <Date>2020-03-22</Date>
+                <Version>0.4.2</Version>
+                <Comment>Ver. up</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="7">
+                <Date>2015-02-05</Date>
+                <Version>0.2.12</Version>
+                <Comment>Add missing Dependencies</Comment>
+                <Name>Stefan Gronewold(groni)</Name>
+                <Email>groni@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2014-06-19</Date>
+                <Version>0.2.12</Version>
+                <Comment>Rebuild for libtar</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-05-01</Date>
+                <Version>0.2.12</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Burak Fazıl Ertürk</Name>
+                <Email>burakerturk@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-11-02</Date>
+                <Version>0.2.12</Version>
+                <Comment>Version bump</Comment>
+                <Name>Burak Fazıl Ertürk</Name>
+                <Email>burakerturk@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-05-25</Date>
+                <Version>0.2.10</Version>
+                <Comment>Patched.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-05-25</Date>
+                <Version>0.2.10</Version>
+                <Comment>Disable libsyncml dep.</Comment>
+                <Name>Serdar Soytetir</Name>
+                <Email>kaptan@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2011-07-11</Date>
+                <Version>0.2.10</Version>
+                <Comment>First release</Comment>
+                <Name>Pisi Linux Admins</Name>
+                <Email>admin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

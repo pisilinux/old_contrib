@@ -13,9 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Summary>
         <Description>The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Description>
-        <Archive sha1sum="5694be83131183ebe1b9402bcf6f30913d72749c" type="targz">
-            https://github.com/lumina-desktop/lumina/archive/v1.5.0.tar.gz
-        </Archive>
+        <Archive sha1sum="26fa7726aff964777464de5cd658b34d9c25a871" type="targz">https://github.com/lumina-desktop/lumina/archive/v1.6.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
             <Dependency versionFrom="5.7.1">qt5-multimedia-devel</Dependency>
@@ -217,6 +215,13 @@
     </Package>
     
     <History>
+    	<Update release="3">
+            <Date>2020-04-12</Date>
+            <Version>1.6.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>
          <Update release="2">
             <Date>2019-07-13</Date>
             <Version>1.5.0</Version>

@@ -13,7 +13,10 @@ def setup():
     shelltools.system('qmake CONFIG+="configure WITH_I18N" \
     QMAKE_CFLAGS_ISYSTEM= \
     PREFIX=/usr \
+    LIBPREFIX=/usr/lib \
+    L_MANDIR=/usr/share/man \
     QT5LIBDIR=/usr/lib/qt5 \
+    L_ETCDIR="/etc" \
     lumina.pro')
 
 def build():
@@ -21,4 +24,5 @@ def build():
 
 def install():
     qt5.install()
+
     pisitools.dodoc("LICENSE", "README*")

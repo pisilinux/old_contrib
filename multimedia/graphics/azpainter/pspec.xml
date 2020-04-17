@@ -21,6 +21,7 @@
 		<BuildDependencies>
 			<Dependency>libXi-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
 			<Dependency>libXext-devel</Dependency>
 			<Dependency>freetype-devel</Dependency>
 			<Dependency>fontconfig-devel</Dependency>

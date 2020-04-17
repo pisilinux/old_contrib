@@ -15,8 +15,8 @@
 		<Description>
 			Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux, macOS and Windows 10. Supports pen input from devices such as Wacom Tablets.
 		</Description>
-		<Archive sha1sum="532461588c146a90f173252621a96d57f799e206" type="targz">
-			https://github.com/xournalpp/xournalpp/archive/1.0.17.tar.gz
+		<Archive sha1sum="935cb3550bb44f6b3cf4da274b65ce275e983695" type="targz">
+			https://github.com/xournalpp/xournalpp/archive/1.0.18.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>git</Dependency>
@@ -50,6 +50,7 @@
 			<Dependency>portaudio</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libsndfile</Dependency>
+			<!-- <Dependency>texlive-bin</Dependency> -->
 			<Dependency>poppler-glib</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -62,8 +63,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-03-21</Date>
-			<Version>1.0.17</Version>
+			<Date>2020-04-16</Date>
+			<Version>1.0.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

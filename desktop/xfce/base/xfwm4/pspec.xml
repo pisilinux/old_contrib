@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfwm4</Name>
@@ -11,18 +11,20 @@
 		<License>GPLv2</License>
 		<PartOf>desktop.xfce.base</PartOf>
 		<IsA>app:gui</IsA>
-		<Summary>Xfce window manager</Summary>
+		<Summary>Xfce window manager.</Summary>
 		<Description>
 			The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.
 		</Description>
-		<Archive sha1sum="08a16f03a5dea56e5628c03780106153f71c92bc" type="tarbz2">
-			https://archive.xfce.org/xfce/4.14/src/xfwm4-4.14.0.tar.bz2
+		<Archive sha1sum="7db15249ac009377bba46556377ca5bab0484e3e" type="tarbz2">
+			https://archive.xfce.org/src/xfce/xfwm4/4.14/xfwm4-4.14.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
+			<Dependency>libbsd-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>libXpresent-devel</Dependency>
@@ -64,6 +66,13 @@
 	</Package>
 
 	<History>
+		<Update release="12">
+			<Date>2020-04-14</Date>
+			<Version>4.14.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="11">
 			<Date>2019-08-12</Date>
 			<Version>4.14.0</Version>

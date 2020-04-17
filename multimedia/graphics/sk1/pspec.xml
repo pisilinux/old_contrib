@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>sk1</Name>
+		<Homepage>https://sk1project.net/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
+		<Summary>sK1 2.0 - advanced vector graphics editor( release candidate 4. ).</Summary>
+		<Description>
+			sK1 is an open source cross-platform vector graphics editor like CorelDRAW, Adobe Illustrator, or Freehand. The major feature of sK1 is a professional precise printing and prepress ready PDF output.
+		</Description>
+		<Archive sha1sum="aef5f1f838faf145bc222b6a9d7cb4b8c411d946" type="targz">
+			https://downloads.sk1project.net/sk1/2.0rc4/sk1-2.0rc4.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gettext</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>lcms2-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>wxGTK-devel</Dependency>
+			<Dependency>python-devel</Dependency>
+			<Dependency>imagemagick-devel</Dependency>
+			<Dependency>python-setuptools</Dependency>
+			<Dependency>python-cairo-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>sk1</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>lcms2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>wxGTK</Dependency>
+			<Dependency>python</Dependency>
+			<Dependency>wxPython</Dependency>
+			<Dependency>imagemagick</Dependency>
+			<Dependency>python-cups</Dependency>
+			<Dependency>python-cairo</Dependency>
+			<Dependency>python-pillow</Dependency>
+			<Dependency>python-reportlab</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/sk1-wx-2.0rc4</Path>
+			<Path fileType="data">/usr/lib/sk1-wx-2.0rc4/LICENSE</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-16</Date>
+			<Version>2.0_rc4</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

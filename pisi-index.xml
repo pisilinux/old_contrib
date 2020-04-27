@@ -1833,8 +1833,8 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>azpainterb</Name>
-            <Homepage>http://azsky2.html.xdomain.jp/linux/azpainterb.html</Homepage>
+            <Name>uniconvertor</Name>
+            <Homepage>https://sk1project.net/</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -1842,40 +1842,45 @@
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
             <PartOf>multimedia.graphics</PartOf>
-            <Summary xml:lang="en">A simple full-color paint software.</Summary>
-            <Description xml:lang="en">Paint software for Linux which can be used for various purposes such as dot editing, illustration, retouching, etc. You can sense pen pressure with XInput2.</Description>
-            <Archive type="tarxz" sha1sum="8a9ec60caea2bd7e09501ed2ea8b5638b21d0526" name="azpainterb-1.1.1.tar.xz">https://dotsrc.dl.osdn.net/osdn/azpainterb/71050/azpainterb-1.1.1.tar.xz</Archive>
+            <Summary xml:lang="en">UniConvertor 2.0 - Universal graphics translator( release candidate 4. ).</Summary>
+            <Description xml:lang="en">UniConvertor is an universal graphics translator. It is a command line tool/library which uses SK2 document object model to convert one file format to another.</Description>
+            <Archive type="targz" sha1sum="4ec122e9d066b339ab3aa4d745fb45505cf76ce8" name="uniconvertor-2.0rc4.tar.gz">https://downloads.sk1project.net/uniconvertor/2.0rc4/uniconvertor-2.0rc4.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>libXi-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>libXext-devel</Dependency>
-                <Dependency>freetype-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
-                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>gettext</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>imagemagick-devel</Dependency>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-cairo-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>multimedia/graphics/azpainterb/pspec.xml</SourceURI>
+            <SourceURI>multimedia/graphics/uniconvertor/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>azpainterb</Name>
+            <Name>uniconvertor</Name>
             <RuntimeDependencies>
-                <Dependency>zlib</Dependency>
-                <Dependency>libXi</Dependency>
-                <Dependency>libpng</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>python</Dependency>
+                <Dependency>imagemagick</Dependency>
+                <Dependency>python-cairo</Dependency>
+                <Dependency>python-pillow</Dependency>
+                <Dependency>python-reportlab</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share</Path>
+                <Path fileType="library">/usr/lib/uniconvertor-2.0rc4</Path>
+                <Path fileType="data">/usr/lib/uniconvertor-2.0rc4/LICENSE</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2019-04-30</Date>
-                <Version>1.1.1</Version>
+                <Date>2020-04-16</Date>
+                <Version>2.0_rc4</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -2019,7 +2024,7 @@
     <SpecFile>
         <Source>
             <Name>graphviz</Name>
-            <Homepage>http://www.graphviz.org/</Homepage>
+            <Homepage>https://www.graphviz.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -2034,15 +2039,15 @@
             <Description xml:lang="tr">Graphviz web ve etkileşimli grafik arayüzüne, yardımcı araç ve kütüphanelere sahip açık kaynak bir grafik canlandırma yazılımıdır. Graphviz renk, font, çizelge planı, çizgi stili ayarları ve özel şekiller gibi diyagramlara yönelik bir çok kullanışlı özelliğe sahiptir.</Description>
             <Archive type="targz" sha1sum="8a44d19bcdb50df1bd8e649de472ebf868468888" name="graphviz.tar.gz">https://graphviz.gitlab.io/pub/graphviz/stable/SOURCES/graphviz.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>libtool</Dependency>
                 <Dependency>gd-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
+                <Dependency>python-devel</Dependency>
                 <Dependency>libXaw-devel</Dependency>
                 <Dependency>librsvg-devel</Dependency>
                 <Dependency>freeglut-devel</Dependency>
                 <Dependency>ghostscript-devel</Dependency>
-                <Dependency>libtool</Dependency>
-                <Dependency>perl</Dependency>
-                <Dependency>python-devel</Dependency>
             </BuildDependencies>
             <SourceURI>multimedia/graphics/graphviz/pspec.xml</SourceURI>
         </Source>
@@ -2050,19 +2055,18 @@
             <Name>graphviz</Name>
             <RuntimeDependencies>
                 <Dependency>gd</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>glib2</Dependency>
                 <Dependency>cairo</Dependency>
                 <Dependency>expat</Dependency>
                 <Dependency>libXt</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>glib2</Dependency>
                 <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
                 <Dependency>libXaw</Dependency>
                 <Dependency>libXmu</Dependency>
                 <Dependency>librsvg</Dependency>
                 <Dependency>ghostscript</Dependency>
                 <Dependency>libtool-ltdl</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>libX11</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -2106,8 +2110,8 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>azpainter</Name>
-            <Homepage>http://azsky2.html.xdomain.jp/linux/azpainter.html</Homepage>
+            <Name>sk1</Name>
+            <Homepage>https://sk1project.net/</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -2115,40 +2119,52 @@
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
             <PartOf>multimedia.graphics</PartOf>
-            <Summary xml:lang="en">A full color painting software for illustration drawing.</Summary>
-            <Description xml:lang="en">Full color painting software for Linux for illustration drawing. This is not suitable for dot editing. Since the color is handled with 16 bit color (15 bit fixed point number) internally, the accuracy of color rises, but the memory is consumed correspondingly.</Description>
-            <Archive type="tarxz" sha1sum="61a2457d9fa1c8991f62c06ecf66c806101f6412" name="azpainter-2.1.5.tar.xz">https://acc.dl.osdn.jp/azpainter/71988/azpainter-2.1.5.tar.xz</Archive>
+            <Summary xml:lang="en">sK1 2.0 - advanced vector graphics editor( release candidate 4. ).</Summary>
+            <Description xml:lang="en">sK1 is an open source cross-platform vector graphics editor like CorelDRAW, Adobe Illustrator, or Freehand. The major feature of sK1 is a professional precise printing and prepress ready PDF output.</Description>
+            <Archive type="targz" sha1sum="aef5f1f838faf145bc222b6a9d7cb4b8c411d946" name="sk1-2.0rc4.tar.gz">https://downloads.sk1project.net/sk1/2.0rc4/sk1-2.0rc4.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>libXi-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>libXext-devel</Dependency>
-                <Dependency>freetype-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
-                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>gettext</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>wxGTK-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>imagemagick-devel</Dependency>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-cairo-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>multimedia/graphics/azpainter/pspec.xml</SourceURI>
+            <SourceURI>multimedia/graphics/sk1/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>azpainter</Name>
+            <Name>sk1</Name>
             <RuntimeDependencies>
-                <Dependency>zlib</Dependency>
-                <Dependency>libXi</Dependency>
-                <Dependency>libpng</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>wxGTK</Dependency>
+                <Dependency>python</Dependency>
+                <Dependency>wxPython</Dependency>
+                <Dependency>imagemagick</Dependency>
+                <Dependency>python-cups</Dependency>
+                <Dependency>python-cairo</Dependency>
+                <Dependency>python-pillow</Dependency>
+                <Dependency>python-reportlab</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/sk1-wx-2.0rc4</Path>
+                <Path fileType="data">/usr/lib/sk1-wx-2.0rc4/LICENSE</Path>
                 <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2020-01-17</Date>
-                <Version>2.1.5</Version>
+                <Date>2020-04-16</Date>
+                <Version>2.0_rc4</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -3757,111 +3773,6 @@
                 <Comment>First release</Comment>
                 <Name>Marcin Bojara</Name>
                 <Email>marcin@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>flacon</Name>
-            <Homepage>https://flacon.github.io/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>multimedia.converter</PartOf>
-            <Summary xml:lang="en">An Audio File Encoder. Extracts audio tracks from an audio CD image to separate tracks</Summary>
-            <Summary xml:lang="tr">An Audio File Encoder. Extracts audio tracks from an audio CD image to separate tracks</Summary>
-            <Description xml:lang="en">Bir Ses Dosyası Kodlayıcısı. Ses parçalarını bir ses CD görüntüsünden ayrı parçalara ayıklar.</Description>
-            <Description xml:lang="tr">Bir Ses Dosyası Kodlayıcısı. Ses parçalarını bir ses CD görüntüsünden ayrı parçalara ayıklar.</Description>
-            <Archive type="targz" sha1sum="db4f2b6f3893038d17ce4b3510542be98ad7f162" name="v5.5.1.tar.gz">https://github.com/flacon/flacon/archive/v5.5.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>cmake</Dependency>
-                <Dependency>qt5-linguist</Dependency>
-                <Dependency>qt5-base-devel</Dependency>
-                <Dependency>uchardet-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>multimedia/converter/flacon/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>flacon</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>uchardet</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="info">/usr/share/metainfo</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-01-01</Date>
-                <Version>5.5.1</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>uchardet</Name>
-            <Homepage>https://www.freedesktop.org/wiki/Software/uchardet</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>MPL</License>
-            <IsA>library</IsA>
-            <PartOf>multimedia.converter</PartOf>
-            <Summary xml:lang="en">Encoding detector library ported from Mozilla</Summary>
-            <Summary xml:lang="tr">Encoding detector library ported from Mozilla</Summary>
-            <Description xml:lang="en">Encoding detector library ported from Mozilla</Description>
-            <Description xml:lang="tr">Encoding detector library ported from Mozilla</Description>
-            <Archive type="tarxz" sha1sum="c04257ee7fb5ebbae144311d70b42c1d7efe41b9" name="uchardet-0.0.6.tar.xz">https://www.freedesktop.org/software/uchardet/releases/uchardet-0.0.6.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>cmake</Dependency>
-            </BuildDependencies>
-            <SourceURI>multimedia/converter/uchardet/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>uchardet</Name>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>uchardet-devel</Name>
-            <Summary xml:lang="en">Development files for uchardet</Summary>
-            <RuntimeDependencies>
-                <Dependency release="1">uchardet</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/cmake</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-01-01</Date>
-                <Version>0.0.6</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -7096,109 +7007,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>geany-plugins</Name>
-            <Homepage>https://plugins.geany.org/</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>editor</PartOf>
-            <Summary xml:lang="en">Plugins for Geany</Summary>
-            <Description xml:lang="en">Plugins for Geany</Description>
-            <Archive type="tarbz2" sha1sum="537842e76efa000e56d3f77bb6f5f9e750c9c265" name="geany-plugins-1.36.tar.bz2">https://plugins.geany.org/geany-plugins/geany-plugins-1.36.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>intltool</Dependency>
-                <Dependency>cppcheck</Dependency>
-                <Dependency>vte-devel</Dependency>
-                <Dependency>vala-devel</Dependency>
-                <Dependency>ctpl-devel</Dependency>
-                <Dependency>check-devel</Dependency>
-                <Dependency>geany-devel</Dependency>
-                <Dependency>lua51-devel</Dependency>
-                <Dependency>gpgme-devel</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>gnutls-devel</Dependency>
-                <Dependency>libsoup-devel</Dependency>
-                <Dependency>libgit2-devel</Dependency>
-                <Dependency>libpcre2-devel</Dependency>
-                <Dependency>enchant2-devel</Dependency>
-                <Dependency>gtkspell3-devel</Dependency>
-                <Dependency>webkit2gtk-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="1">overview_plugin_test.patch</Patch>
-            </Patches>
-            <SourceURI>editor/geany-plugins/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>geany-plugins</Name>
-            <RuntimeDependencies>
-                <Dependency>atk</Dependency>
-                <Dependency>vte</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>ctpl</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>geany</Dependency>
-                <Dependency>lua51</Dependency>
-                <Dependency>gpgme</Dependency>
-                <Dependency>gnutls</Dependency>
-                <Dependency>libsoup</Dependency>
-                <Dependency>libxml2</Dependency>
-                <Dependency>libgit2</Dependency>
-                <Dependency>libpcre2</Dependency>
-                <Dependency>enchant2</Dependency>
-                <Dependency>gtkspell3</Dependency>
-                <Dependency>libassuan</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>webkit2gtk</Dependency>
-                <Dependency>libgpg-error</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2019-12-18</Date>
-                <Version>1.36</Version>
-                <Comment>Rebuild with gtk3.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="3">
-                <Date>2019-10-15</Date>
-                <Version>1.36</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-07-05</Date>
-                <Version>1.35</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-04-21</Date>
-                <Version>1.34</Version>
-                <Comment>build</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>micro</Name>
             <Homepage>https://micro-editor.github.io/</Homepage>
             <Packager>
@@ -7236,137 +7044,6 @@
                 <Comment>First release</Comment>
                 <Name>Erdem Ersoy</Name>
                 <Email>erdemersoy@live.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>geany</Name>
-            <Homepage>https://geany.org/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:gui</IsA>
-            <PartOf>editor</PartOf>
-            <Summary xml:lang="en">GTK+ based fast and lightweight IDE</Summary>
-            <Description xml:lang="en">GTK+ based fast and lightweight IDE</Description>
-            <Archive type="tarbz2" sha1sum="6a9b42286a4b00c4c5f5b1b60db704704ca85c50" name="geany-1.36.tar.bz2">https://download.geany.org/geany-1.36.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>libgcc</Dependency>
-                <Dependency>intltool</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>vte-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>editor/geany/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>geany</Name>
-            <RuntimeDependencies>
-                <Dependency>atk</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>vte</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man/man1</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>geany-devel</Name>
-            <Summary xml:lang="en">geany için geliştirme dosyaları</Summary>
-            <Summary xml:lang="tr">geany için geliştirme dosyaları</Summary>
-            <RuntimeDependencies>
-                <Dependency release="10">geany</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-                <Path fileType="header">/usr/include</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="10">
-                <Date>2019-12-18</Date>
-                <Version>1.36</Version>
-                <Comment>Rebuild with gtk3.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="9">
-                <Date>2019-10-15</Date>
-                <Version>1.36</Version>
-                <Comment>Version bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="8">
-                <Date>2019-07-05</Date>
-                <Version>1.35</Version>
-                <Comment>Version bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="7">
-                <Date>2019-04-16</Date>
-                <Version>1.34.1</Version>
-                <Comment>Version bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="6">
-                <Date>2014-06-04</Date>
-                <Version>1.24.1</Version>
-                <Comment>Version bump</Comment>
-                <Name>Varol Maksutoğlu</Name>
-                <Email>waroi@pisilinux.org</Email>
-            </Update>
-            <Update release="5">
-                <Date>2014-02-06</Date>
-                <Version>1.23</Version>
-                <Comment>Delete Unused Deps</Comment>
-                <Name>Varol Maksutoğlu</Name>
-                <Email>waroi@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-01-25</Date>
-                <Version>1.23</Version>
-                <Comment>rebuild unused fix and add new dep</Comment>
-                <Name>Varol Maksutoğlu</Name>
-                <Email>waroi@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2013-07-27</Date>
-                <Version>1.23</Version>
-                <Comment>Move pc files to devel pack, rebuild</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-03-13</Date>
-                <Version>1.23</Version>
-                <Comment>Version bump</Comment>
-                <Name>Ertan Güven</Name>
-                <Email>ertan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-01</Date>
-                <Version>1.22</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -7558,46 +7235,6 @@
                 <Comment>First release</Comment>
                 <Name>Kamil Atlı</Name>
                 <Email>suvari@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>cppcheck</Name>
-            <Homepage>http://cppcheck.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app</IsA>
-            <PartOf>programming.tool</PartOf>
-            <Summary xml:lang="en">static analysis of C/C++ code.</Summary>
-            <Description xml:lang="en">Cppcheck is a static analysis tool for C/C++ code. It provides unique code analysis to detect bugs and focuses on detecting undefined behaviour and dangerous coding constructs. The goal is to detect only real errors in the code (i.e. have very few false positives).</Description>
-            <Archive type="targz" sha1sum="9114a99e629ac820f417e5a4e7c7af47cb90050f" name="1.89.tar.gz">https://github.com/danmar/cppcheck/archive/1.89.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>libpcre-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/tool/cppcheck/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>cppcheck</Name>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/cppcheck</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-19</Date>
-                <Version>1.89</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>
@@ -9769,7 +9406,7 @@
             <Summary xml:lang="tr">YouTube Chromecast APIsi sağlayan python bağlayıcısı.</Summary>
             <Description xml:lang="en">python-casttube provides a way to interact with the Youtube Chromecast api.</Description>
             <Description xml:lang="tr">python-casttube YouTube Chromecast APIsi ile etkileşimi sağlayan bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="61abda9f57634a4ccfadbad546e45472c4821d34" name="0.2.0.tar.gz">https://github.com/ur1katz/casttube/archive/0.2.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="080a63f268e9348cfc87fd2ae477da386cdcc9c7" name="0.2.1.tar.gz">https://github.com/ur1katz/casttube/archive/0.2.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -9781,9 +9418,7 @@
             <Summary xml:lang="en">Python Library to YouTube Chromecast API.</Summary>
             <RuntimeDependencies>
                 <Dependency>python-requests</Dependency>
-                <Dependency>python-chardet</Dependency>
-                <Dependency>python-urllib3</Dependency>
-                <Dependency>python-idna</Dependency>
+                <Dependency>python-future</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python2*</Path>
@@ -9791,6 +9426,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-04-22</Date>
+                <Version>0.2.1</Version>
+                <Comment>Patch version bump</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-25</Date>
                 <Version>0.2.0</Version>
@@ -10711,7 +10353,7 @@
             <Summary xml:lang="tr">Plex API için resmi olmayan python bağlayıcıları</Summary>
             <Description xml:lang="en">Unofficial Python bindings for the Plex API. Our goal is to match all capabilities of the official Plex Web Client.</Description>
             <Description xml:lang="tr">python-plexapi, Plex Ağ İstemcisinin tüm yeteneklerini python üzerinden denetlenmesini sağlama amacıyla yapılmış bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="d6e01a43c52851d2734053c50a57a46dd4e3354d" name="PlexAPI-3.3.0.tar.gz">https://files.pythonhosted.org/packages/16/85/54fa59b0b6dc42a3d0b7280adbfe4b452df57e4755a50b092be2c9885c3c/PlexAPI-3.3.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="6a4d91eae489d40a40bcb0ae8821404a0f61f52d" name="PlexAPI-3.4.0.tar.gz">https://pypi.io/packages/source/p/plexapi/PlexAPI-3.4.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
@@ -10724,18 +10366,22 @@
                 <Dependency>python-websocket-client</Dependency>
                 <Dependency>python-funcsigs</Dependency>
                 <Dependency>python-requests</Dependency>
-                <Dependency>python-urllib3</Dependency>
-                <Dependency>python-chardet</Dependency>
-                <Dependency>python-idna</Dependency>
                 <Dependency>python-mock</Dependency>
                 <Dependency>python-tqdm</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
                 <Path fileType="doc">/usr/share/doc/python-plexapi</Path>
+                <Path fileType="library">/usr/lib/python2*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-04-22</Date>
+                <Version>3.4.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-26</Date>
                 <Version>3.3.0</Version>
@@ -10801,7 +10447,7 @@
             <Summary xml:lang="tr">HTTP istemci kitaplığı</Summary>
             <Description xml:lang="en">httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
             <Description xml:lang="tr">python-httplib2, diğer HTTP kütüphanelerinin desteklemediği bir çok özellik içeren bir HTTP istemci kitaplığıdır</Description>
-            <Archive type="targz" sha1sum="7ec8e7946c028460b539c38aff1d7c77d9d73717" name="v0.17.1.tar.gz">https://github.com/httplib2/httplib2/archive/v0.17.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c1e67864c555047716aca76eaaa307eef3d70d46" name="v0.17.3.tar.gz">https://github.com/httplib2/httplib2/archive/v0.17.3.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -10817,6 +10463,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2020-04-22</Date>
+                <Version>0.17.3</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2020-04-13</Date>
+                <Version>0.17.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="9">
                 <Date>2020-04-08</Date>
                 <Version>0.17.1</Version>
@@ -11243,7 +10903,7 @@
             <Summary xml:lang="tr">Spotify ağ apisi için basit bir istemci</Summary>
             <Description xml:lang="en">Spotipy is a thin client library for the Spotify Web API.</Description>
             <Description xml:lang="tr">python-spotipy Spotify ağ apisini kullanabilmek için python sarmalayıcı modülü ile basit bir istemci sunar.</Description>
-            <Archive type="targz" sha1sum="41c7b028bd9f01ac9a7d6fbd22a9a5dbe46bf06d" name="2.10.0.tar.gz">https://github.com/plamere/spotipy/archive/2.10.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="0d66f8860f847a43ede053b962ab8050c2221158" name="2.11.2.tar.gz">https://github.com/plamere/spotipy/archive/2.11.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
@@ -11262,6 +10922,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2020-04-22</Date>
+                <Version>2.11.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2020-04-13</Date>
+                <Version>2.11.1</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2020-03-27</Date>
                 <Version>2.10.0</Version>
@@ -11369,6 +11043,50 @@
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-reportlab</Name>
+            <Homepage>https://www.reportlab.com/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">ReportLab PDF Toolkit. It allows rapid creation of rich PDF documents, and also creation of charts in a variety of bitmap and vector formats.</Summary>
+            <Description xml:lang="en">ReportLab is the time-proven, ultra-robust open-source engine for creating complex, data-driven PDF documents and custom vector graphics. It&apos;s free, open-source, and written in Python.</Description>
+            <Archive type="targz" sha1sum="4489dc96b140737e9c9869f4a05a80f9971a0f6f" name="reportlab-3.5.42.tar.gz">https://files.pythonhosted.org/packages/74/0b/34dc83ed0108417358716d218eec8528b24c30597570a71cab929bce2432/reportlab-3.5.42.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-devel</Dependency>
+                <Dependency>python-pillow</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>python-setuptools</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-reportlab/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-reportlab</Name>
+            <RuntimeDependencies>
+                <Dependency>python</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>python-pillow</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-04-14</Date>
+                <Version>3.5.42</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>
@@ -13724,7 +13442,7 @@
             <Summary xml:lang="tr">Python3 için çoklu dağıtımı destekleyen DNS hizmeti keşfi uygulaması</Summary>
             <Description xml:lang="en">python3-zeroconf is a pure Python3 Multicast DNS Service Discovery Library (Bonjour/Avahi compatible).</Description>
             <Description xml:lang="tr">python3-zeroconf, çoklu dağıtım(multicast) DNS hizmetlerini python üzerinden bulabilmenize olanak sağlayan bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="37e01ef67cbce7a882f3f8815c27bde6682cbf49" name="0.25.0.tar.gz">https://github.com/jstasiak/python-zeroconf/archive/0.25.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4faed9ac1752d4c69c87b358377427857c356120" name="0.25.1.tar.gz">https://github.com/jstasiak/python-zeroconf/archive/0.25.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -13744,6 +13462,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-22</Date>
+                <Version>0.25.1</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2020-04-08</Date>
                 <Version>0.25.0</Version>
@@ -15171,7 +14896,7 @@
             <Summary xml:lang="tr">YouTube Chromecast APIsi sağlayan python3 bağlayıcısı.</Summary>
             <Description xml:lang="en">python3-pychromecast provides a way to talk with the Google Chromecast.</Description>
             <Description xml:lang="tr">python3-pychromecast, Google Chromecast ile konuşmayı sağayan bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="9844556d27e8d4b6a3d9fef258c7407c92708c62" name="4.2.0.tar.gz">https://github.com/balloob/pychromecast/archive/4.2.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="0f20cc590ff6033d55728ca9f0541c92da5ff06c" name="5.0.0.tar.gz">https://github.com/home-assistant-libs/pychromecast/archive/5.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -15195,6 +14920,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-22</Date>
+                <Version>5.0.0</Version>
+                <Comment>Major version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2020-04-13</Date>
+                <Version>4.2.3</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="3">
                 <Date>2020-03-18</Date>
                 <Version>4.2.0</Version>
@@ -15975,7 +15714,7 @@
             <Summary xml:lang="tr">Spotify ağ apisi için basit bir istemci</Summary>
             <Description xml:lang="en">Spotipy is a thin client library for the Spotify Web API.</Description>
             <Description xml:lang="tr">python3-spotipy Spotify ağ apisini kullanabilmek için python3 sarmalayıcı modülü ile basit bir istemci sunar.</Description>
-            <Archive type="targz" sha1sum="41c7b028bd9f01ac9a7d6fbd22a9a5dbe46bf06d" name="2.10.0.tar.gz">https://github.com/plamere/spotipy/archive/2.10.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="0d66f8860f847a43ede053b962ab8050c2221158" name="2.11.2.tar.gz">https://github.com/plamere/spotipy/archive/2.11.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -15996,6 +15735,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2020-04-22</Date>
+                <Version>2.11.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2020-04-13</Date>
+                <Version>2.11.1</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="4">
                 <Date>2020-03-27</Date>
                 <Version>2.10.0</Version>
@@ -16189,7 +15942,7 @@
             <Summary xml:lang="tr">HTTP istemci kitaplığı</Summary>
             <Description xml:lang="en">httplib2 is a comprehensive HTTP client library that supports many features left out of other HTTP libraries.</Description>
             <Description xml:lang="tr">python3-httplib2, diğer HTTP kütüphanelerinin desteklemediği bir çok özellik içeren bir HTTP istemci kitaplığıdır</Description>
-            <Archive type="targz" sha1sum="7ec8e7946c028460b539c38aff1d7c77d9d73717" name="v0.17.1.tar.gz">https://github.com/httplib2/httplib2/archive/v0.17.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c1e67864c555047716aca76eaaa307eef3d70d46" name="v0.17.3.tar.gz">https://github.com/httplib2/httplib2/archive/v0.17.3.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -16208,6 +15961,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2020-04-22</Date>
+                <Version>0.17.3</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2020-04-13</Date>
+                <Version>0.17.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="9">
                 <Date>2020-04-08</Date>
                 <Version>0.17.1</Version>
@@ -16288,7 +16055,7 @@
             <Summary xml:lang="tr">YouTube Chromecast APIsi sağlayan python3 bağlayıcısı.</Summary>
             <Description xml:lang="en">python3-casttube provides a way to interact with the Youtube Chromecast api.</Description>
             <Description xml:lang="tr">python3-casttube YouTube Chromecast APIsi ile etkileşimi sağlayan bir python kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="61abda9f57634a4ccfadbad546e45472c4821d34" name="0.2.0.tar.gz">https://github.com/ur1katz/casttube/archive/0.2.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="080a63f268e9348cfc87fd2ae477da386cdcc9c7" name="0.2.1.tar.gz">https://github.com/ur1katz/casttube/archive/0.2.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -16299,6 +16066,7 @@
             <Name>python3-casttube</Name>
             <Summary xml:lang="en">Python3 Library to YouTube Chromecast API.</Summary>
             <RuntimeDependencies>
+                <Dependency>python3-requests</Dependency>
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -16307,6 +16075,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-04-22</Date>
+                <Version>0.2.1</Version>
+                <Comment>Patch version bump</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-25</Date>
                 <Version>0.2.0</Version>
@@ -16331,7 +16106,7 @@
             <Summary xml:lang="tr">Plex API için resmi olmayan python3 bağlayıcıları</Summary>
             <Description xml:lang="en">Unofficial Python bindings for the Plex API. Our goal is to match all capabilities of the official Plex Web Client.</Description>
             <Description xml:lang="tr">python3-plexapi, Plex Ağ İstemcisinin tüm yeteneklerini python üzerinden denetlenmesini sağlama amacıyla yapılmış bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="d6e01a43c52851d2734053c50a57a46dd4e3354d" name="PlexAPI-3.3.0.tar.gz">https://files.pythonhosted.org/packages/16/85/54fa59b0b6dc42a3d0b7280adbfe4b452df57e4755a50b092be2c9885c3c/PlexAPI-3.3.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="6a4d91eae489d40a40bcb0ae8821404a0f61f52d" name="PlexAPI-3.4.0.tar.gz">https://pypi.io/packages/source/p/plexapi/PlexAPI-3.4.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-devel</Dependency>
             </BuildDependencies>
@@ -16347,11 +16122,18 @@
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
                 <Path fileType="doc">/usr/share/doc/python3-plexapi</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-04-22</Date>
+                <Version>3.4.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-26</Date>
                 <Version>3.3.0</Version>
@@ -16479,7 +16261,7 @@
             <Summary xml:lang="tr">Yüksek seviyeli bir eşzamanlı programlama modülü</Summary>
             <Description xml:lang="en">Eventlet is a concurrent networking library for Python that allows you to change how you run your code, not how you write it.</Description>
             <Description xml:lang="tr">python3-eventlet, nasıl kod yazdığınıza bakmayan ama kodu nasıl çalıştırdığınızı düzenleyebilen/değiştirebilen yüksek seviyeli bir ağ kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="dc4b3d1a45ae0e66519b70c0d6189610b6d35b24" name="eventlet-0.25.1.tar.gz">https://files.pythonhosted.org/packages/5a/e3/466d72d12a09cef2b80dea685141afd65914fd1cdea0be0609779be05e92/eventlet-0.25.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4d3675042341cb5e03b8b2d3c014f71436974427" name="eventlet-0.25.2.tar.gz">https://pypi.io/packages/source/e/eventlet/eventlet-0.25.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
@@ -16497,11 +16279,18 @@
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
                 <Path fileType="doc">/usr/share/doc/python3-eventlet</Path>
+                <Path fileType="library">/usr/lib/python3*</Path>
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-04-13</Date>
+                <Version>0.25.2</Version>
+                <Comment>Patch version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="1">
                 <Date>2019-12-26</Date>
                 <Version>0.25.1</Version>
@@ -17722,77 +17511,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>ctpl</Name>
-            <Homepage>https://ctpl.tuxfamily.org/</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>library</IsA>
-            <PartOf>programming.misc</PartOf>
-            <Summary xml:lang="en">CTPL − C Template (Parser) Library</Summary>
-            <Description xml:lang="en">CTPL is a template engine library written in C and distributed under the terms of the GNU GPLv3+</Description>
-            <Archive type="targz" sha1sum="5bdf50ee35a0e183f98eb0f455ccc7e1b87b8bd8" name="ctpl-0.3.4.tar.gz">http://download.tuxfamily.org/ctpl/releases/ctpl-0.3.4.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>gtk-doc</Dependency>
-                <Dependency>python-six</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/misc/ctpl/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>ctpl</Name>
-            <RuntimeDependencies>
-                <Dependency>glibmm</Dependency>
-                <Dependency>gtk-doc</Dependency>
-                <Dependency>python-six</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man/man1</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>ctpl-docs</Name>
-            <Summary xml:lang="en">GTK reference documents for ctpl</Summary>
-            <Files>
-                <Path fileType="doc">/usr/share/gtk-doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>ctpl-devel</Name>
-            <Summary xml:lang="en">Development files for ctpl</Summary>
-            <RuntimeDependencies>
-                <Dependency release="2">ctpl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019.10.18</Date>
-                <Version>0.3.4</Version>
-                <Comment>Rebuild.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019.04.21</Date>
-                <Version>0.3.4</Version>
-                <Comment>First build</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>gamin</Name>
             <Homepage>http://www.gnome.org/~veillard/gamin/</Homepage>
             <Packager>
@@ -17971,18 +17689,20 @@
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
             <PartOf>desktop.xfce.base</PartOf>
-            <Summary xml:lang="en">Xfce window manager</Summary>
+            <Summary xml:lang="en">Xfce window manager.</Summary>
             <Summary xml:lang="tr">Xfce pencere yöneticisi</Summary>
             <Summary xml:lang="pl">Menedżer okien dla projektu Xfce</Summary>
             <Description xml:lang="en">The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.</Description>
             <Description xml:lang="tr">Xfce4 pencere yöneticisi, uygulama pencerelerinin ekrana yerleştirmeyi sağlar, pencerelerin güzel görünmesini sağlar, çalışma alanlarını ve sanal masaüstlerini yönetir ve doğal olarak çoklu ekran kipini destekler.</Description>
             <Description xml:lang="pl"> Pakiet zawiera xfwm4, który jest menedżerem okiem do Xfce4. Jest on zaprojektowany do uruchamiania z resztą środowiska Xfce4.</Description>
-            <Archive type="tarbz2" sha1sum="08a16f03a5dea56e5628c03780106153f71c92bc" name="xfwm4-4.14.0.tar.bz2">https://archive.xfce.org/xfce/4.14/src/xfwm4-4.14.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="7db15249ac009377bba46556377ca5bab0484e3e" name="xfwm4-4.14.1.tar.bz2">https://archive.xfce.org/src/xfce/xfwm4/4.14/xfwm4-4.14.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libSM-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
+                <Dependency>libbsd-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
                 <Dependency>libxfce4ui-devel</Dependency>
                 <Dependency>libXpresent-devel</Dependency>
@@ -18023,6 +17743,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2020-04-14</Date>
+                <Version>4.14.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="11">
                 <Date>2019-08-12</Date>
                 <Version>4.14.0</Version>
@@ -26539,309 +26266,6 @@
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>lumina-desktop</Name>
-            <Homepage>https://lumina-desktop.org/</Homepage>
-            <Packager>
-                <Name>Ayhan Yalçınsoy</Name>
-                <Email>ayhanyalcinsoy@pisilinux.org</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>app:gui</IsA>
-            <PartOf>desktop</PartOf>
-            <Summary xml:lang="en">The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Summary>
-            <Summary xml:lang="tr">UNIX benzeri sistemlerde kullanım için tasarlanmış sistem arayüzlü hafif bir Masaüstü ortamıdır.</Summary>
-            <Description xml:lang="en">The Lumina Desktop Environment is a lightweight system interface designed for use on any Unix-like operating system.</Description>
-            <Description xml:lang="tr">UNIX benzeri sistemlerde kullanım için tasarlanmış sistem arayüzlü hafif bir Masaüstü ortamıdır..</Description>
-            <Icon>lumina-desktop</Icon>
-            <Archive type="targz" sha1sum="26fa7726aff964777464de5cd658b34d9c25a871" name="v1.6.0.tar.gz">https://github.com/lumina-desktop/lumina/archive/v1.6.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency versionFrom="5.7.1">qt5-base-devel</Dependency>
-                <Dependency versionFrom="5.7.1">qt5-multimedia-devel</Dependency>
-                <Dependency versionFrom="5.7.1">qt5-declarative-devel</Dependency>
-                <Dependency versionFrom="5.7.1">qt5-svg-devel</Dependency>
-                <Dependency versionFrom="5.7.1">qt5-x11extras-devel</Dependency>
-                <Dependency versionFrom="5.7.1">qt5-linguist</Dependency>
-                <Dependency>xcb-util-image-devel</Dependency>
-                <Dependency>xcb-util-wm-devel</Dependency>
-                <Dependency>xcb-util-devel</Dependency>
-                <Dependency>libxcb-devel</Dependency>
-                <Dependency>libxcb-devel</Dependency>
-                <Dependency>libXcomposite-devel</Dependency>
-                <Dependency>libXdamage-devel</Dependency>
-                <Dependency>libXrender-devel</Dependency>
-                <Dependency>desktop-file-utils</Dependency>
-            </BuildDependencies>
-            <SourceURI>desktop/lumina-desktop/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>lumina-desktop</Name>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-                <Dependency>libxcb</Dependency>
-                <Dependency>qt5-svg</Dependency>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>xcb-util</Dependency>
-                <Dependency>libXdamage</Dependency>
-                <Dependency>xcb-util-wm</Dependency>
-                <Dependency>qt5-x11extras</Dependency>
-                <Dependency>qt5-multimedia</Dependency>
-                <Dependency>xcb-util-image</Dependency>
-                <Dependency>fluxbox</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-desktop</Path>
-                <Path fileType="executable">/usr/bin/start-lumina-desktop</Path>
-                <Path fileType="executable">/usr/bin/lte</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/*.ogg</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/colors</Path>
-                <Path fileType="config">/usr/etc/luminaDesktop.conf.dist</Path>
-                <Path fileType="doc">/usr/share/doc/lumina-desktop</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/*.conf</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/themes</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/menu-scripts</Path>
-                <Path fileType="data">/usr/share/applications/lumina-support.desktop</Path>
-                <Path fileType="data">/usr/share/xsessions/Lumina-DE.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/lumina-desktop*</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/fluxbox*</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/globs2</Path>
-                <Path fileType="data">/usr/share/lumina-desktop/desktop-background.jpg</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-archiver</Name>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-                <Dependency>qt5-svg</Dependency>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-archiver</Path>
-                <Path fileType="data">/usr/share/applications/lumina-archiver.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/l-archiver*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-wallpapers</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/share/wallpapers</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-open</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-open</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/lumina-open*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-config</Name>
-            <RuntimeDependencies>
-                <Dependency>libxcb</Dependency>
-                <Dependency>qt5-x11extras</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-config</Path>
-                <Path fileType="data">/usr/share/applications/lumina-config.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/lumina-config*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-fm</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-fm</Path>
-                <Path fileType="data">/usr/share/applications/lumina-fm.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/lumina-fm*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-screenshot</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-screenshot</Path>
-                <Path fileType="data">/usr/share/applications/lumina-screenshot.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/l-screenshot*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-search</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-search</Path>
-                <Path fileType="data">/usr/share/applications/lumina-search.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/lumina-search*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-info</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-info</Path>
-                <Path fileType="data">/usr/share/applications/lumina-info.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/lumina-info*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-xconfig</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-xconfig</Path>
-                <Path fileType="data">/usr/share/applications/lumina-xconfig.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/lumina-xconfig*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-fileinfo</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-fileinfo</Path>
-                <Path fileType="data">/usr/share/applications/lumina-fileinfo.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/l-fileinfo*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-textedit</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-textedit</Path>
-                <Path fileType="data">/usr/share/applications/lumina-textedit.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/l-te*</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lumina-calculator</Name>
-            <RuntimeDependencies>
-                <Dependency>qt5-base</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/lumina-calculator</Path>
-                <Path fileType="data">/usr/share/applications/lumina-calculator.desktop</Path>
-                <Path fileType="localdata">/usr/share/lumina-desktop/i18n/l-calc*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2020-04-12</Date>
-                <Version>1.6.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>erkanisik@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-07-13</Date>
-                <Version>1.5.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Erkan IŞIK</Name>
-                <Email>erkanisik@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2017-03-09</Date>
-                <Version>1.2.0</Version>
-                <Comment>First release.</Comment>
-                <Name>Ayhan Yalçınsoy</Name>
-                <Email>ayhanyalcinsoy@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>fluxbox</Name>
-            <Homepage>http://www.fluxbox.org</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admin@pisilinux.org</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>app:gui</IsA>
-            <PartOf>desktop.fluxbox.base</PartOf>
-            <Summary xml:lang="en">An X11 window manager featuring tabs and an iconbar</Summary>
-            <Summary xml:lang="tr">Hafif bir X pencere yöneticisi</Summary>
-            <Description xml:lang="en">Fluxbox is a windowmanager for X that was based on the Blackbox 0.61.1 code. It is very light on resources and easy to handle but yet full of features to make an easy, and extremely fast, desktop experience.</Description>
-            <Description xml:lang="tr">Fluxbox, Blackbox 0.61.1 kodu temel alınarak geliştirilmiş bir X pencere yöneticisidir. Çok az kaynak tükettiği ve kolayca idare edildiği için çok hızlı bir masaüstü tecribesi sunar.</Description>
-            <Archive type="targz" sha1sum="47919f0345832de41ca7192ff168abd145af819f" name="fluxbox-1.3.7.tar.gz">mirrors://sourceforge/fluxbox/fluxbox-1.3.7.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>imlib2-devel</Dependency>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>libICE-devel</Dependency>
-                <Dependency>libSM-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>libXext-devel</Dependency>
-                <Dependency>libXft-devel</Dependency>
-                <Dependency>libXinerama-devel</Dependency>
-                <Dependency>libXpm-devel</Dependency>
-                <Dependency>libXrandr-devel</Dependency>
-                <Dependency>libXrender-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
-                <Dependency>fribidi-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch>fluxbox-startfluxbox-pulseaudio.patch</Patch>
-                <Patch level="1">autostart.patch</Patch>
-            </Patches>
-            <SourceURI>desktop/fluxbox/base/fluxbox/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>fluxbox</Name>
-            <RuntimeDependencies>
-                <Dependency>imlib2</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>libXft</Dependency>
-                <Dependency>libXinerama</Dependency>
-                <Dependency>libXpm</Dependency>
-                <Dependency>libXrandr</Dependency>
-                <Dependency>libXrender</Dependency>
-                <Dependency>fribidi</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>libX11</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/fluxbox</Path>
-                <Path fileType="data">/usr/share/xsessions</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/xsessions/fluxbox.desktop" permission="0644" owner="root">fluxbox.desktop</AdditionalFile>
-                <AdditionalFile target="/usr/bin/fbmenugen" permission="0755" owner="root">fbmenugen</AdditionalFile>
-                <AdditionalFile target="/usr/share/fluxbox/backgrounds/pisi-reflect.jpg" permission="0644" owner="root">pisi-reflect.jpg</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2017-03-13</Date>
-                <Version>1.3.7</Version>
-                <Comment>First release</Comment>
-                <Name>Ayhan Yalçınsoy</Name>
-                <Email>ayhanyalcinsoy@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -35623,7 +35047,7 @@
             <PartOf>office.misc</PartOf>
             <Summary xml:lang="en">Xournal++ is a handwriting notetaking software with PDF annotation support.</Summary>
             <Description xml:lang="en">Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux, macOS and Windows 10. Supports pen input from devices such as Wacom Tablets.</Description>
-            <Archive type="targz" sha1sum="532461588c146a90f173252621a96d57f799e206" name="1.0.17.tar.gz">https://github.com/xournalpp/xournalpp/archive/1.0.17.tar.gz</Archive>
+            <Archive type="targz" sha1sum="935cb3550bb44f6b3cf4da274b65ce275e983695" name="1.0.18.tar.gz">https://github.com/xournalpp/xournalpp/archive/1.0.18.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>git</Dependency>
                 <Dependency>cmake</Dependency>
@@ -35667,8 +35091,8 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2020-03-21</Date>
-                <Version>1.0.17</Version>
+                <Date>2020-04-16</Date>
+                <Version>1.0.18</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>

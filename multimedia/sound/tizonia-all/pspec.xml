@@ -8,11 +8,12 @@
             <Name>Blue DeviL</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
+        <PartOf>multimedia.sound</PartOf>
         <License>LGPL</License>
         <IsA>library</IsA>
         <Summary>Command-line cloud music player for Linux.</Summary>
         <Description>Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, Plex servers and Chromecast devices..</Description>
-        <Archive sha1sum="f3ac2e4d9cd089719262f2b9cb4b153dff57081a" type="targz">https://github.com/tizonia/tizonia-openmax-il/archive/v0.19.0.tar.gz</Archive>
+        <Archive sha1sum="0afd995a0b529b5a8d7ad290dc22c1828abc8f6e" type="targz">https://github.com/tizonia/tizonia-openmax-il/archive/v0.21.0.tar.gz</Archive>
         <BuildDependencies>
             <!-- configure dependencies -->
             <Dependency>pulseaudio-libs-devel</Dependency>
@@ -20,6 +21,7 @@
             <Dependency>libmediainfo-devel</Dependency>
             <Dependency>python3-soundcloud</Dependency>
             <Dependency>libsndfile-devel</Dependency>
+            <Dependency>bash-completion</Dependency>
             <Dependency>opusfile-devel</Dependency>
             <Dependency>boost-python3</Dependency>
             <Dependency>liboggz-devel</Dependency>
@@ -38,6 +40,8 @@
             <Dependency>dbus-devel</Dependency>
             <Dependency>flac-devel</Dependency>
             <Dependency>libspotify</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>cmake</Dependency>
             <!-- build dependencies -->
             <Dependency>libfishsound-devel</Dependency>
             <Dependency>libvpx-devel</Dependency>
@@ -108,6 +112,7 @@
             <Path fileType="data">/usr/share/tizrmd/tizonia-rm-db-initial.sql3</Path>
             <Path fileType="data">/usr/share/zsh/vendor-completions/_tizonia</Path>
             <Path fileType="data">/usr/share/applications/tizonia.desktop</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_tizonia</Path>
             <Path fileType="data">/usr/share/tizrmd/tizrm.db</Path>
             <!-- config files under /usr/share -->
             <Path fileType="config">/etc/xdg/tizonia/tizonia.conf</Path>
@@ -115,11 +120,19 @@
             
             <Path fileType="doc">/usr/share/doc/tizonia-all</Path>
             <Path fileType="data">/usr/include/tizonia</Path>
+            <Path fileType="man">/usr/share/man</Path>
             <Path fileType="library">/usr/lib</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>4020-04-24</Date>
+            <Version>0.21.0</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-01-23</Date>
             <Version>0.19.0</Version>

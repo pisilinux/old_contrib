@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary> fork of zenity - display graphical dialogs from shell scripts or command line - for gtk2</Summary>
         <Description> fork of zenity - display graphical dialogs from shell scripts or command line - for gtk2</Description>
-        <Archive sha1sum="59cfbb3de548224c1dab7edb6061e230ae973675" type="targz">https://github.com/v1cont/yad/archive/v0.42.0.tar.gz</Archive>
+        <Archive sha1sum="5eb3f68109af94de6db5f0193e6c8978dd5ed005" type="targz">https://github.com/v1cont/yad/archive/v6.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>intltool</Dependency>
             <Dependency>glib2-devel</Dependency>
@@ -46,6 +46,13 @@
     </Package>
     
     <History>
+        <Update release="2">
+            <Date>2020-04-27</Date>
+            <Version>6.0</Version>
+            <Comment>version bump</Comment>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2019-04-05</Date>
             <Version>0.42.0</Version>

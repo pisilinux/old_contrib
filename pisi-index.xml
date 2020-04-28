@@ -21264,7 +21264,7 @@
             <Summary xml:lang="tr">Müzik Çalıcı Sunucusu (MPD)</Summary>
             <Description xml:lang="en">Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music. Through plugins and libraries it can play a variety of sound files while being controlled by its network protocol.</Description>
             <Description xml:lang="tr">MPD çoğu müzik dosyasını (MP3, Ogg Vorbis, FLAC, AAC, Mod vs.) çalar ve ağda yayınlar.</Description>
-            <Archive type="tarxz" sha1sum="51a2965f6c14c27f5de7d96e7e80a7f5b387edf1" name="mpd-0.21.22.tar.xz">https://musicpd.org/download/mpd/0.21/mpd-0.21.22.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="af40bc1e3af94686c8c4d07d753f2a64a3b64521" name="mpd-0.21.23.tar.xz">https://musicpd.org/download/mpd/0.21/mpd-0.21.23.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>meson</Dependency>
                 <Dependency>cmake</Dependency>
@@ -21370,6 +21370,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="16">
+                <Date>2020-04-24</Date>
+                <Version>0.21.23</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="15">
                 <Date>2020-04-03</Date>
                 <Version>0.21.22</Version>
@@ -22116,65 +22123,6 @@
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>ethtool</Name>
-            <Homepage>https://www.kernel.org/pub/software/network/ethtool/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <PartOf>hardware.misc</PartOf>
-            <Summary xml:lang="en">Utility to examine and tune ethernet-based network interfaces</Summary>
-            <Summary xml:lang="tr">Ethernet tabanlı ağ arayüzlerini tanımlamak ve ayarlamak için kullanılan bir yazılım</Summary>
-            <Description xml:lang="en">ethtool is used for querying and changing settings of an ethernet device.</Description>
-            <Description xml:lang="tr">Ethtool ağ aygıtınızın ayarlarını listelemeye ve bu ayarları değiştirmeye yarar.</Description>
-            <Archive type="tarxz" sha1sum="67113d5adf08ec0cb2a3cb3b5de63280de6f7f3b" name="ethtool-5.4.tar.xz">https://mirrors.edge.kernel.org/pub/software/network/ethtool/ethtool-5.4.tar.xz</Archive>
-            <SourceURI>hardware/misc/ethtool/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>ethtool</Name>
-            <Summary xml:lang="en">Utility to examine and tune ethernet-based network interfaces</Summary>
-            <Files>
-                <Path fileType="bash-completion">/usr/share/bash-completion</Path>
-                <Path fileType="executable">/usr/sbin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2020-04-28</Date>
-                <Version>5.4</Version>
-                <Comment>Patch version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2019-11-04</Date>
-                <Version>5.3</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2016-02-18</Date>
-                <Version>4.2</Version>
-                <Comment>Version bump</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2010-11-19</Date>
-                <Version>2.6.36</Version>
-                <Comment>First release</Comment>
-                <Name>Onur Küçük</Name>
-                <Email>onur@pardus.org.tr</Email>
             </Update>
         </History>
     </SpecFile>
@@ -26795,7 +26743,7 @@
             <Description xml:lang="en">Xfce4-settings is a configuration manager for Xfce desktop environment.</Description>
             <Description xml:lang="tr">Xfce4-settings, Xfce masaüstü yöneticisi için yazılmış ayar yöneticisidir.</Description>
             <Description xml:lang="pl">Xfce4-settings jest interfejsem menedżera ustawień Xfce4. Wywodzi się z kilku różnych komponentów do konfiguracji niezależnych od aplikacji, ustawień wewnątrz xfconf.</Description>
-            <Archive type="tarbz2" sha1sum="c273a19445bc5ee1cd57e6332bcd82b689093b21" name="xfce4-settings-4.14.2.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="537c14ae06fb2d460fa920be6293053c8b3106eb" name="xfce4-settings-4.14.3.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -26805,12 +26753,12 @@
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
                 <Dependency>pango-devel</Dependency>
-                <Dependency>glade-devel</Dependency>
                 <Dependency>xfconf-devel</Dependency>
                 <Dependency>upower-devel</Dependency>
                 <Dependency>colord-devel</Dependency>
                 <Dependency>garcon-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
                 <Dependency>libXrandr-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
@@ -26865,6 +26813,13 @@
             </Provides>
         </Package>
         <History>
+            <Update release="18">
+                <Date>2020-04-28</Date>
+                <Version>4.14.3</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="17">
                 <Date>2020-01-15</Date>
                 <Version>4.14.2</Version>
@@ -27305,7 +27260,7 @@
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
             </Packager>
             <License>GPLv2</License>
-            <License>LGPLv2</License>
+            <License>LGPLv2.1</License>
             <IsA>library</IsA>
             <IsA>app:gui</IsA>
             <PartOf>desktop.xfce.base</PartOf>
@@ -27315,7 +27270,7 @@
             <Description xml:lang="en">The Xfce4 panel supports multiple panels, with many options for their position, appearance, transparency and behavior. There are many items available by default to full fit a panel, like application launchers with detachable menus, a graphical pager, a tasklist, a clock, a system tray, a show / hide desktop switcher, and even more. It offers an easy way to add items using a dialog, and to move items accross different panels.</Description>
             <Description xml:lang="tr">Xfce4 paneli, farklı pozisyon, görünüm ve davranış gibi ayarlara sahip birden fazla paneli destekleyebilmektedir. Uygulama başlatıcı tipinde ayrılabilir menüler, grafiksel sayfalayıcı, görev çubuğu, saat, sistem çekmecesi, masaüstünü gizleme / görüntüleme ve bir panelde olabilecek birçok şeyi içinde barındırır. Ayrıca, diyalog penceresi kullanarak kolayca panel öğesi eklemeye ve panelden panele öğe taşımaya izin verir.</Description>
             <Description xml:lang="pl">Jest to panel dostarczany przez projekt środowiska graficznego Xfce4. Jeśli użytkownik chce posiadać wielofunkcyjny panel, który może obsługiwać aplety i tym podobne programy, to Xfce4 Panel może być wart wypróbowania. </Description>
-            <Archive type="tarbz2" sha1sum="78ca0e5260eba6341620df0d3f3d39d6d624ce7b" name="xfce4-panel-4.14.3.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.3.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="81dcbec0d22f95b4de554c819fdfd97e721faf55" name="xfce4-panel-4.14.4.tar.bz2">https://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>exo-devel</Dependency>
@@ -27329,6 +27284,7 @@
                 <Dependency>libSM-devel</Dependency>
                 <Dependency>libICE-devel</Dependency>
                 <Dependency>libX11-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
                 <Dependency>garcon-devel</Dependency>
                 <Dependency>gettext-devel</Dependency>
                 <Dependency>libwnck3-devel</Dependency>
@@ -27382,7 +27338,7 @@
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libxfce4util-devel</Dependency>
-                <Dependency release="13">xfce4-panel</Dependency>
+                <Dependency release="14">xfce4-panel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -27391,6 +27347,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="14">
+                <Date>2020-04-28</Date>
+                <Version>4.14.4</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="13">
                 <Date>2020-03-16</Date>
                 <Version>4.14.3</Version>
@@ -29940,8 +29903,8 @@
             <PartOf>desktop.xfce.addon</PartOf>
             <Summary xml:lang="en">Timer plugin for Xfce4 panel</Summary>
             <Summary xml:lang="tr">Xfce4 uyarı eklentisi</Summary>
-            <Description>Xfce4-timer-plugin, ayarladığınız zamanda bir pencere açarak sizi uyaran Xfce4 panel eklentisidir.</Description>
             <Description xml:lang="en">With this plugin you can add timers (alarm or countdown) to your Xfce panel. You can display a warning window and/or run a custom command when alarm rings, repeat alarms etc.</Description>
+            <Description>Xfce4-timer-plugin, ayarladığınız zamanda bir pencere açarak sizi uyaran Xfce4 panel eklentisidir.</Description>
             <Icon>xfce4-panel</Icon>
             <Archive type="tarbz2" sha1sum="f8f502eaee45843652ec869b730a92064d42e483" name="xfce4-timer-plugin-1.7.0.tar.bz2">http://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/xfce4-timer-plugin-1.7.0.tar.bz2</Archive>
             <BuildDependencies>
@@ -32643,14 +32606,15 @@
             <IsA>app:console</IsA>
             <IsA>library</IsA>
             <PartOf>util.archive</PartOf>
-            <Summary xml:lang="en">libZ-based ZIP-access Library</Summary>
+            <Summary xml:lang="en">libZ-based ZIP-access Library.</Summary>
             <Summary xml:lang="tr">libZ tabanlı ZIP erişim kitaplığı</Summary>
-            <Description xml:lang="en">zziplib provides read access to zipped files in a zip-archive, using compression based solely on free algorithms provided by zlib.</Description>
+            <Description xml:lang="en">The ZZIPlib provides read access on ZIP-archives and unpacked data. It features an additional simplified API following the standard Posix API for file access.</Description>
             <Description xml:lang="tr">zziplib zip arşivindeki sıkıştırılmış dosyalara, zlib tarafından sunulan özgür algoritmalarla erişim sağlayan bir kitaplıktır.</Description>
-            <Archive type="tarbz2" sha1sum="147ab9bef172f2b41544adfd19daa506256d83b7" name="zziplib-0.13.68.tar.bz2">mirrors://sourceforge/zziplib/zziplib13/0.13.68/zziplib-0.13.68.tar.bz2</Archive>
+            <Archive type="targz" sha1sum="c03f539c8a6fe5f1b39db4b5d4646d869f78bdd6" name="v0.13.71.tar.gz">https://github.com/gdraheim/zziplib/archive/v0.13.71.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>libsdl-devel</Dependency>
+                <Dependency>python3</Dependency>
                 <Dependency>zlib-devel</Dependency>
+                <Dependency>libsdl-devel</Dependency>
             </BuildDependencies>
             <SourceURI>util/archive/zziplib/pspec.xml</SourceURI>
         </Source>
@@ -32670,12 +32634,12 @@
             <Summary xml:lang="en">Development files for zziplib</Summary>
             <Summary xml:lang="tr">zziplib için geliştirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="4">zziplib</Dependency>
+                <Dependency release="5">zziplib</Dependency>
                 <Dependency>libsdl-devel</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
                 <Path fileType="man">/usr/share/man/man3</Path>
             </Files>
         </Package>
@@ -32684,13 +32648,20 @@
             <Summary xml:lang="en">Documentation for zziplib</Summary>
             <Summary xml:lang="tr">zziplib için belgelendirme dosyaları</Summary>
             <RuntimeDependencies>
-                <Dependency release="4">zziplib</Dependency>
+                <Dependency release="5">zziplib</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-22</Date>
+                <Version>0.13.71</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="4">
                 <Date>2019-10-31</Date>
                 <Version>0.13.68</Version>

@@ -3883,49 +3883,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>admsnmp</Name>
-            <Homepage>https://www.freshports.org/security/ADMsnmp/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>app:console</IsA>
-            <PartOf>network</PartOf>
-            <Summary xml:lang="en">ADM SNMP audit scanner.</Summary>
-            <Summary xml:lang="tr">ADM SNMP denetim tarayıcısı.</Summary>
-            <Description xml:lang="en">ADMsnmp can brute force the snmp community name (with a wordfile) or make a wordfile list derived the hostname.</Description>
-            <Description xml:lang="tr">ADMsnmp snmp (Simple Network Management Protocol) protokolüne söz listesi kullanarak ya da makine/sistem adından söz listesi üreterek kabadayı saldırısı düzenleyebilen bir araçtır. ADMsnmp erişilen MIB yazdırılabilir mi ve geçerli tüm topluluk adlarını raporlayabilir.</Description>
-            <Archive type="targz" sha1sum="0e8cb98a47c7e473389d6cc512da76d021d0910d" name="ADMsnmp.0.1.tgz">https://dl.packetstormsecurity.net/groups/ADM/ADMsnmp.0.1.tgz</Archive>
-            <SourceURI>network/analyzer/admsnmp/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>admsnmp</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="data">/usr/share/admsnmp/</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-05</Date>
-                <Version>0.1</Version>
-                <Comment>Pisi 2.1.1 fix</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-03-30</Date>
-                <Version>0.1</Version>
-                <Comment>First Release, Built with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>bluesnarfer</Name>
             <Homepage>http://www.alighieri.org/project.html</Homepage>
             <Packager>
@@ -4423,48 +4380,6 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>adminpagefinder</Name>
-            <Homepage>http://packetstormsecurity.com/files/112855/Admin-Page-Finder-Script.html</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>custom</License>
-            <IsA>app:console</IsA>
-            <PartOf>network.analyzer</PartOf>
-            <Summary xml:lang="en">An Admin Page Finder</Summary>
-            <Summary xml:lang="tr">Bir yönetici arayüzü tarayıcısı</Summary>
-            <Description xml:lang="en">This python script looks for a large amount of possible administrative interfaces on a given site.</Description>
-            <Description xml:lang="tr">Bu python betiği verilen ağ betindeki birçok olası admin/yönetici arayüzünü tarar.</Description>
-            <Archive type="binary" sha1sum="9556deddc1b47168ad95a5258ce6e76347fe3500" name="AdminpageFinder.py.txt">https://dl.packetstormsecurity.net/UNIX/utilities/AdminpageFinder.py.txt</Archive>
-            <SourceURI>network/analyzer/adminpagefinder/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>adminpagefinder</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="executable">/usr/share</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-05</Date>
-                <Version>0.1</Version>
-                <Comment>Pisi 2.1.1 fix</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-03-30</Date>
-                <Version>0.1</Version>
-                <Comment>First release, built with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>

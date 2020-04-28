@@ -9,7 +9,7 @@
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
-		<License>LGPLv2</License>
+		<License>LGPLv2.1</License>
 		<PartOf>desktop.xfce.base</PartOf>
 		<IsA>library</IsA>
 		<IsA>app:gui</IsA>
@@ -17,8 +17,8 @@
 		<Description>
 			The Xfce4 panel supports multiple panels, with many options for their position, appearance, transparency and behavior. There are many items available by default to full fit a panel, like application launchers with detachable menus, a graphical pager, a tasklist, a clock, a system tray, a show / hide desktop switcher, and even more. It offers an easy way to add items using a dialog, and to move items accross different panels.
 		</Description>
-		<Archive sha1sum="78ca0e5260eba6341620df0d3f3d39d6d624ce7b" type="tarbz2">
-			https://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.3.tar.bz2
+		<Archive sha1sum="81dcbec0d22f95b4de554c819fdfd97e721faf55" type="tarbz2">
+			https://archive.xfce.org/src/xfce/xfce4-panel/4.14/xfce4-panel-4.14.4.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -33,6 +33,7 @@
 			<Dependency>libSM-devel</Dependency>
 			<Dependency>libICE-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
 			<Dependency>gettext-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
@@ -95,6 +96,13 @@
 	</Package>
 
 	<History>
+		<Update release="14">
+			<Date>2020-04-28</Date>
+			<Version>4.14.4</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="13">
 			<Date>2020-03-16</Date>
 			<Version>4.14.3</Version>

@@ -612,51 +612,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>crypthook</Name>
-            <Homepage>https://github.com/chokepoint/CryptHook</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>network.misc</PartOf>
-            <Summary xml:lang="en">TCP/UDP symmetric encryption tunnel wrapper.</Summary>
-            <Summary xml:lang="tr">TCP/UDP simetrik şifreleme tünel aracı.</Summary>
-            <Description xml:lang="en">CryptHook is a modular implementation for securing existing applications with symmetrical block cipher encryption. It works by hooking the base system calls for network communication send/sendto and recv/recvfrom. CryptHook will work with existing applications that rely on these system calls.</Description>
-            <Description xml:lang="tr">CryptHook simetrik blok şifreleme kullanarak varolan uygulamaları güvenli hale getirebilen bir ara yazılımdır.</Description>
-            <Archive type="targz" sha1sum="9943f50e9273b2faca9b58a28910d0f7e2efd71c" name="crypthook-0.0.tar.gz">https://github.com/ibrahimkaraguzel/Sources/raw/master/crypthook-0.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>openssl-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/misc/crypthook/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>crypthook</Name>
-            <Files>
-                <Path fileType="data">/usr/share/crypthook</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-12-02</Date>
-                <Version>0.0</Version>
-                <Comment>Rebuilt.</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-22</Date>
-                <Version>0.0</Version>
-                <Comment>First Pisi Built</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>asio</Name>
             <Homepage>http://asio.sourceforge.net/</Homepage>
             <Packager>
@@ -3028,45 +2983,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>acccheck</Name>
-            <Homepage>http://labs.portcullis.co.uk/tools/acccheck/</Homepage>
-            <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <PartOf>network.analyzer</PartOf>
-            <Summary xml:lang="en">A password dictionary attack tool</Summary>
-            <Summary xml:lang="tr">Sözlük saldırı aracı</Summary>
-            <Description xml:lang="en">A password dictionary attack tool that targets windows authentication via the SMB protocol.</Description>
-            <Description xml:lang="tr">SMB protokolü kullanarak windows yetkilendirmesine sözlük saldırısı yapabilen bir araç.</Description>
-            <Archive type="targz" sha1sum="3f845b02919f7a5de6c0b24f8748be434911492c" name="acccheck-0-2-1.tar.gz">https://labs.portcullis.co.uk/download/acccheck-0-2-1.tar.gz</Archive>
-            <SourceURI>network/analyzer/acccheck/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>acccheck</Name>
-            <Summary xml:lang="en">A password dictionary attack tool</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc/</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-03-29</Date>
-                <Version>0.2.1</Version>
-                <Comment>First release, built with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>snort</Name>
             <Homepage>http://www.snort.org</Homepage>
             <Packager>
@@ -5125,53 +5041,6 @@
                 <Comment>First release</Comment>
                 <Name>Furkan Duman</Name>
                 <Email>coderlord@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>0d1n</Name>
-            <Homepage>https://github.com/CoolerVoid/0d1n</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:console</IsA>
-            <PartOf>network</PartOf>
-            <Summary xml:lang="en">Web security tool to make fuzzing at HTTP inputs, made in C with libCurl.</Summary>
-            <Summary xml:lang="tr">01dn, libCurl kütüphanesi kullanılarak C ile yazılan, HTTP içeriklerini bulanıklaştıran bir ağ güvenlik aracıdır.</Summary>
-            <Description xml:lang="en">0d1n is a Open Source web application bruteforcer and Fuzzer, its objective is to automate exhaustive tests to search anomalies. At other point view this anomalies can be a vulnerability, These tests can follow web parameters, files, directories, forms and others.</Description>
-            <Description xml:lang="tr">0d1n, açık kaynak kodlu bir bruteforce ve bulanıklaştırma yapabilen bir ağ uygulamadır. Amacı, anomalileri aramak ve bu aramayı otomatasyona bağlamaktır. Başka bir bakış açısıyla bu aramalar ağ parametreleri, dosyalar, dizinler ve formları oluşturabilir, böylece bu anomalilerdeki zaafiyetler izlenebilir.</Description>
-            <Archive type="targz" sha1sum="a5b7067c5338a36f1f63aadf41fc6f5aacb858c5" name="OdinV2.6.tar.gz">https://github.com/CoolerVoid/0d1n/archive/OdinV2.6.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>curl-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/web/0d1n/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>0d1n</Name>
-            <Summary xml:lang="en">Web security tool to make fuzzing at HTTP inputs, made in C with libCurl.</Summary>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-29</Date>
-                <Version>2.6</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-03-28</Date>
-                <Version>2.1</Version>
-                <Comment>First Pisi Built</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -11930,66 +11799,6 @@
                 <Comment>First release</Comment>
                 <Name>Fatih Turgel</Name>
                 <Email>hitaf@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>yara</Name>
-            <Homepage>https://plusvic.github.io/yara/</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">The pattern matching swiss knife for malware researchers.</Summary>
-            <Summary xml:lang="tr">Kötücül Yazılım Çözümleme Aracı</Summary>
-            <Description xml:lang="en">YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.</Description>
-            <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araçtır.</Description>
-            <Archive type="targz" sha1sum="81a243423352d66f5ec0cb657098c27f035cd164" name="v3.11.0.tar.gz">https://github.com/VirusTotal/yara/archive/v3.11.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>openssl-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/yara/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>yara</Name>
-            <Summary xml:lang="en">The pattern matching swiss knife for malware researchers.</Summary>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc/yara</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>yara-devel</Name>
-            <Summary xml:lang="en">Development files for yara</Summary>
-            <RuntimeDependencies>
-                <Dependency>yara</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
-                <Path fileType="header">/usr/include</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-26</Date>
-                <Version>3.11.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-05-05</Date>
-                <Version>3.4.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -21992,42 +21801,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>cmospwd</Name>
-            <Homepage>http://www.cgsecurity.org/wiki/CmosPwd</Homepage>
-            <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>app:console</IsA>
-            <PartOf>hardware.misc</PartOf>
-            <Summary xml:lang="en">Decrypts password stored in CMOS used to access BIOS setup.</Summary>
-            <Summary xml:lang="tr">BIOS&apos;a erişen CMOS şifresini çözmeye yarayan bir araç.</Summary>
-            <Description xml:lang="en">CmosPwd decrypts password stored in cmos used to access BIOS SETUP. With CmosPwd, you can also backup, restore and erase/kill cmos.</Description>
-            <Description xml:lang="tr">CmosPwd, cmos içerisindeki BIOS&apos;a erişim sağlayan şifreyi çözmeye yarayan bir araçtır. CmosPwd ile cmos&apos;u yedekleyebilir, eski haline döndürebilir ya da silebilirsiniz.</Description>
-            <Archive type="tarbz2" sha1sum="71ef5ffe8c76b5177d32300b7992a91fb859419e" name="cmospwd-5.0.tar.bz2">http://www.cgsecurity.org/cmospwd-5.0.tar.bz2</Archive>
-            <SourceURI>hardware/misc/cmospwd/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>cmospwd</Name>
-            <Summary xml:lang="en">Decrypts password stored in CMOS used to access BIOS setup.</Summary>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-04-24</Date>
-                <Version>5.0</Version>
-                <Comment>First Pisi Built</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>florence</Name>
             <Homepage>http://florence.sourceforge.net/english.html</Homepage>
             <Packager>
@@ -22453,50 +22226,6 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>binwalk</Name>
-            <Homepage>http://binwalk.org/</Homepage>
-            <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>app:console</IsA>
-            <PartOf>hardware.firmware</PartOf>
-            <Summary xml:lang="en">Firmware analysis tool</Summary>
-            <Summary xml:lang="tr">Firmware çözümleme aracı</Summary>
-            <Description xml:lang="en">Binwalk is a firmware analysis tool designed for analyzing, reverse engineering and extracting data contained in firmware images.</Description>
-            <Description xml:lang="tr">Binwalk, firmware imajlarında yüklü veriyi çıkartan, tersine mühendislik uygulayan veçözümleyen bir firmware çözümleme aracıdır.</Description>
-            <Archive type="targz" sha1sum="7a958497f7eccd951379d2e358a4ca94317cd6bc" name="v2.1.1.tar.gz">https://github.com/devttys0/binwalk/archive/v2.1.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>hardware/firmware/binwalk/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>binwalk</Name>
-            <Summary xml:lang="en">Firmware analysis tool</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-04-24</Date>
-                <Version>2.1.1</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -32934,51 +32663,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>pdfcrack</Name>
-            <Homepage>http://pdfcrack.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPL</License>
-            <PartOf>util.crypt</PartOf>
-            <Summary xml:lang="en">A Password Recovery Tool for PDF-files</Summary>
-            <Summary xml:lang="tr">PDF Parola Kırıcı</Summary>
-            <Description xml:lang="en">PDFCrack is a GNU/Linux (other POSIX-compatible systems should work too) tool for recovering passwords and content from PDF-files. It is small, command line driven without external dependencies.</Description>
-            <Description xml:lang="tr">PDF dosyalarında kaybolan parolaları geri getirir.</Description>
-            <Archive type="targz" sha1sum="1a6c788cc6acd526a1c6c6521322db198f27dc1b" name="pdfcrack-0.15.tar.gz">mirrors://sourceforge/pdfcrack/pdfcrack/pdfcrack-0.15/pdfcrack-0.15.tar.gz</Archive>
-            <SourceURI>util/crypt/pdfcrack/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>pdfcrack</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc/pdfcrack</Path>
-            </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/man/man1/pdfcrack.1" permission="0644" owner="root">pdfcrack.1</AdditionalFile>
-            </AdditionalFiles>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2016-05-03</Date>
-                <Version>0.15</Version>
-                <Comment>Version bump</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2011-10-30</Date>
-                <Version>0.11</Version>
-                <Comment>First release.</Comment>
-                <Name>Serdar Dalgıç</Name>
-                <Email>serdar@pardus.org.tr</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>aeskeyfind</Name>
             <Homepage>http://citp.princeton.edu/memory/code/</Homepage>
             <Packager>
@@ -33404,46 +33088,6 @@
                 <Comment>First Release</Comment>
                 <Name>Stefan Gronewold</Name>
                 <Email>groni@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>pdf-parser</Name>
-            <Homepage>https://blog.didierstevens.com/programs/pdf-tools/</Homepage>
-            <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Packager>
-            <License>as-is</License>
-            <IsA>app:console</IsA>
-            <PartOf>util.admin</PartOf>
-            <Summary xml:lang="en">A PDF Document Parsing Tool</Summary>
-            <Summary xml:lang="tr">PDF Çözümleme Aracı</Summary>
-            <Description xml:lang="en">Parses a PDF document to identify the fundamental elements used in the analyzed file.</Description>
-            <Description xml:lang="tr">Bir PDF belgesini temel ögelerine ayırarak çözümleyebilen bir python betiği.</Description>
-            <Archive type="zip" sha1sum="e2533ead38b6d06c6bc47dd676de278fc72023ec" target="pdf-parser-0.6.4" name="pdf-parser_V0_6_4.zip">http://didierstevens.com/files/software/pdf-parser_V0_6_4.zip</Archive>
-            <BuildDependencies>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>util/admin/pdf-parser/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>pdf-parser</Name>
-            <RuntimeDependencies>
-                <Dependency>python</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-05-03</Date>
-                <Version>0.6.4</Version>
-                <Comment>First release, built with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>

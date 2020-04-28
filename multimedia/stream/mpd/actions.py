@@ -9,6 +9,9 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+#	pisitools.dosed("doc/meson.build", "sphinx-build", "sphinx-build3")
+	pisitools.ldflags.add("-lbsd")
+	pisitools.cxxflags.add("-lbsd")
 	shelltools.system("meson --prefix=/usr \
 	\
 	-Ddocumentation=false \

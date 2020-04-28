@@ -15,8 +15,8 @@
 		<Description>
 			Xfce4-settings is a configuration manager for Xfce desktop environment.
 		</Description>
-		<Archive sha1sum="c273a19445bc5ee1cd57e6332bcd82b689093b21" type="tarbz2">
-			https://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.2.tar.bz2
+		<Archive sha1sum="537c14ae06fb2d460fa920be6293053c8b3106eb" type="tarbz2">
+			https://archive.xfce.org/src/xfce/xfce4-settings/4.14/xfce4-settings-4.14.3.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -27,12 +27,12 @@
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>cairo-devel</Dependency>
 			<Dependency>pango-devel</Dependency>
-			<Dependency>glade-devel</Dependency>
 			<Dependency>xfconf-devel</Dependency>
 			<Dependency>upower-devel</Dependency>
 			<Dependency>colord-devel</Dependency>
 			<Dependency>garcon-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>libXrandr-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
@@ -98,6 +98,13 @@
 	</Package>
 
 	<History>
+		<Update release="18">
+			<Date>2020-04-28</Date>
+			<Version>4.14.3</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="17">
 			<Date>2020-01-15</Date>
 			<Version>4.14.2</Version>

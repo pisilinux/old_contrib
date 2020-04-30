@@ -2605,43 +2605,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>airflood</Name>
-            <Homepage>https://packetstormsecurity.com/files/51127/airflood-0.1.tar.gz.html</Homepage>
-            <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>app:console</IsA>
-            <PartOf>network</PartOf>
-            <Summary xml:lang="en">A modification of aireplay</Summary>
-            <Summary xml:lang="tr">Airflood geliştirilmiş bir aireplay türü programdır.</Summary>
-            <Description xml:lang="en">A modification of aireplay that allows for a DOS in in the AP. This program fills the table of clients of the AP with random MACs doing impossible new connections.</Description>
-            <Description xml:lang="tr">Airflood, erişim noktalarına DoS saldırısı yapılmasına olanak veren bir modifiye edilmiş aireplay programıdır. Bu program erişim noktasının istemci tablosunun rasgele MAC adresleriyle doldurarak ollanaksız bağlantılar yapılmasını sağlar.</Description>
-            <Archive type="targz" sha1sum="1b4256cf8657a639da09a438ea19b487967b4bd4" name="airflood-0.1.tar.gz">https://github.com/ibrahimkaraguzel/Sources/raw/master/airflood-0.1.tar.gz</Archive>
-            <SourceURI>network/analyzer/airflood/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>airflood</Name>
-            <RuntimeDependencies>
-                <Dependency>glibc-32bit</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2016-04-04</Date>
-                <Version>0.1</Version>
-                <Comment>First Pisi Built</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>ettercap</Name>
             <Homepage>http://ettercap.sourceforge.net/</Homepage>
             <Packager>
@@ -3339,110 +3302,6 @@
                 <Comment>First release</Comment>
                 <Name>Marcin Bojara</Name>
                 <Email>marcin@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>metasploit</Name>
-            <Homepage>http://www.metasploit.com/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>app:console</IsA>
-            <PartOf>network.analyzer</PartOf>
-            <Summary xml:lang="en">An advanced platform for developing, testing, and using vulnerability exploit code</Summary>
-            <Summary xml:lang="tr">Güvenlik analizi için yazılım geliştirme ve deneme altyapısı</Summary>
-            <Description xml:lang="en">Metasploit provides useful information to people who perform penetration testing, IDS signature development, and exploit research. This project was created to provide information on exploit techniques and to create a useful resource for exploit developers and security professionals.</Description>
-            <Description xml:lang="tr">Metasploit güvenlik analizi, saldırgan tesbit sistemi vb. konularla ilgilenenler için gerekli altyapıyı sunan, açıklardan yararlanma teknikleri vb. güvenlik konularında saldırı yazılımı geliştiricileri ve güvenlik uzmanları için bilgi kaynağı olma amacı güden bir projedir.</Description>
-            <Archive type="targz" sha1sum="ef1df2beb85b596719bcf0dd4bed7bd6aef0b32e" name="metasploit-framework-4.11.21.tar.gz">https://github.com/ibrahimkaraguzel/Sources/raw/master/metasploit-framework-4.11.21.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>git</Dependency>
-                <Dependency>wget</Dependency>
-                <Dependency>bison</Dependency>
-                <Dependency>libtool</Dependency>
-                <Dependency>autoconf</Dependency>
-                <Dependency>rubygems</Dependency>
-                <Dependency>apr-util</Dependency>
-                <Dependency>apr-devel</Dependency>
-                <Dependency>curl-devel</Dependency>
-                <Dependency>ruby-devel</Dependency>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>jre7-openjdk</Dependency>
-                <Dependency>ruby-bundler</Dependency>
-                <Dependency>sqlite-devel</Dependency>
-                <Dependency>libpcap-devel</Dependency>
-                <Dependency>libxml2-devel</Dependency>
-                <Dependency>libxslt-devel</Dependency>
-                <Dependency>libyaml-devel</Dependency>
-                <Dependency>ncurses-devel</Dependency>
-                <Dependency>openssl-devel</Dependency>
-                <Dependency>readline-devel</Dependency>
-                <Dependency>postgresql-lib</Dependency>
-                <Dependency>subversion-devel</Dependency>
-                <Dependency>postgresql-server</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/analyzer/metasploit/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>metasploit</Name>
-            <RuntimeDependencies>
-                <Dependency>apr</Dependency>
-                <Dependency>git</Dependency>
-                <Dependency>curl</Dependency>
-                <Dependency>nmap</Dependency>
-                <Dependency>ruby</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>sqlite</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>libpcap</Dependency>
-                <Dependency>libxml2</Dependency>
-                <Dependency>libxslt</Dependency>
-                <Dependency>libyaml</Dependency>
-                <Dependency>ncurses</Dependency>
-                <Dependency>openssl</Dependency>
-                <Dependency>pgadmin3</Dependency>
-                <Dependency>readline</Dependency>
-                <Dependency>subversion</Dependency>
-                <Dependency>postgresql-lib</Dependency>
-                <Dependency>postgresql-server</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc/metasploit</Path>
-                <Path fileType="data">/usr/share/metasploit</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="4">
-                <Date>2016-04-27</Date>
-                <Version>4.11.21</Version>
-                <Comment>Version bump.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-09-14</Date>
-                <Version>4.10.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Aydın Demirel</Name>
-                <Email>aydin.demirel@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-02-01</Date>
-                <Version>4.8.2</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Kamil Atlı</Name>
-                <Email>suvarice@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-01</Date>
-                <Version>4.4</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -8372,84 +8231,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>retdec</Name>
-            <Homepage>https://retdec.com/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.debug</PartOf>
-            <Summary xml:lang="en">RetDec is a retargetable machine-code decompiler based on LLVM.</Summary>
-            <Summary xml:lang="tr">LLVM temelli, yeniden hedeflenebilir makine kodu çözümleyicisi.</Summary>
-            <Description xml:lang="en">RetDec is an open-source retargetable machine-code decompiler based on LLVM. The supported file formats are ELF, PE, Mach-O, COFF, AR (archive), Intel HEX and raw machine code. Supported architectures are 32-bit: Intel x86, ARM, MIPS, PIC32, and PowerPC 64-bit: x86-64.</Description>
-            <Description xml:lang="tr">Retdec (Retargetable Decompiler),  llvm temelli, yeniden hedeflenebilir makine kodu çözümleyicisidir. Retdec ELF, PE, Mach-O, COFF, AR (archive), Intel HEX ve ham makine kodlarının çözümlenmesini destekler. Ayrıca retdec 32-bit: Intel x86, ARM, MIPS, PIC32, ve PowerPC ile 64-bit: x86-64 işlemci mimarilerini destekler.</Description>
-            <Archive type="targz" sha1sum="8b61d0b64558f419b5510d03daa8dc78fb66a76e" name="v3.3.tar.gz">https://github.com/avast/retdec/archive/v3.3.tar.gz</Archive>
-            <Archive type="tarxz" sha1sum="f1a527961533a0afb4a20cd048e53a2eb86eace1" target="retdec-3.3/retdec-support" name="retdec-support_2019-03-08.tar.xz">https://github.com/avast/retdec-support/releases/download/2019-03-08/retdec-support_2019-03-08.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>openssl-devel</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>valgrind</Dependency>
-                <Dependency>cmake</Dependency>
-                <Dependency>llvm</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch>SCT-retdec-CMakeLists.patch</Patch>
-                <Patch>SCT-libdwarf-CMakeLists.patch</Patch>
-            </Patches>
-            <SourceURI>programming/debug/retdec/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>retdec</Name>
-            <Summary xml:lang="en">RetDec is a retargetable machine-code decompiler based on LLVM.</Summary>
-            <RuntimeDependencies>
-                <Dependency>openssl</Dependency>
-                <Dependency>python3</Dependency>
-                <Dependency>zlib</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/retdec-signature-from-library-creator.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-archive-decompiler.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-macho-extractor</Path>
-                <Path fileType="executable">/usr/bin/retdec-decompiler.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-ar-extractor</Path>
-                <Path fileType="executable">/usr/bin/retdec-unpacker.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-fileinfo.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-bin2llvmir</Path>
-                <Path fileType="executable">/usr/bin/retdec-llvmir2hll</Path>
-                <Path fileType="executable">/usr/bin/retdec-color-c.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-config.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-pat2yara</Path>
-                <Path fileType="executable">/usr/bin/retdec-fileinfo</Path>
-                <Path fileType="executable">/usr/bin/retdec-unpacker</Path>
-                <Path fileType="executable">/usr/bin/retdec-utils.py</Path>
-                <Path fileType="executable">/usr/bin/retdec-stacofin</Path>
-                <Path fileType="executable">/usr/bin/retdec-idr2pat</Path>
-                <Path fileType="executable">/usr/bin/retdec-bin2pat</Path>
-                <Path fileType="executable">/usr/bin/retdec-config</Path>
-                <Path fileType="executable">/usr/bin/retdec-getsig</Path>
-                <Path fileType="executable">/usr/bin/retdec-yarac</Path>
-                <Path fileType="library">/usr/lib/libretdec-libdwarf.so</Path>
-                <Path fileType="library">/usr/lib/libretdec-libelf.so</Path>
-                <Path fileType="doc">/usr/share/doc/retdec</Path>
-                <Path fileType="data">/usr/share/retdec</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-02-27</Date>
-                <Version>3.3</Version>
-                <Comment>First pisi release.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>plasma</Name>
             <Homepage>https://github.com/joelpx/plasma</Homepage>
             <Packager>
@@ -10880,103 +10661,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-ipaddress</Name>
-            <Homepage>https://github.com/phihag/ipaddress</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>PSFL</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Python 3.3+&apos;s ipaddress for older Python versions</Summary>
-            <Summary xml:lang="tr">Python için ipaddress modülü</Summary>
-            <Description xml:lang="en">python-ipaddress ipaddress provides the capabilities to create, manipulate and operate on IPv4 and IPv6 addresses and networks. This module is a backport for python 2.7 and python versions up to 3.2.</Description>
-            <Description xml:lang="tr">python-ipaddress modülü Python3.3 ile gelen ipaddress modülünün python 2.7 ve python 3.2&apos;ye kadar olan sürümlerinde de çalışmasını sağlar.</Description>
-            <Archive type="targz" sha1sum="8446393aaedd42401926f4469486b939dcd3fca9" name="v1.0.23.tar.gz">https://github.com/phihag/ipaddress/archive/v1.0.23.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-ipaddress/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-ipaddress</Name>
-            <Summary xml:lang="en">ipaddress module for python</Summary>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-25</Date>
-                <Version>1.0.23</Version>
-                <Comment>First release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-ecdsa</Name>
-            <Homepage>https://github.com/warner/python-ecdsa</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">ECDSA implementation for Python</Summary>
-            <Summary xml:lang="tr">Python için ECDSA Kriptografi Uygulaması</Summary>
-            <Description xml:lang="en">This is an easy-to-use implementation of ECDSA cryptography (Elliptic Curve Digital Signature Algorithm), implemented purely in Python, released under the MIT license. With this library, you can quickly create keypairs (signing key and verifying key), sign messages, and verify the signatures. The keys and signatures are very short, making them easy to handle and incorporate into other protocols.</Description>
-            <Description xml:lang="tr">Python için kolay kullanımlı, MIT lisanslı ECDSA kriptografi (Elliptic Curve Digital Signature Algorithm) modülü. Bu kitaplık ile hızlıca anahtar oluşturabilir (giriş ahahtarı ve doğrulama anahtarı), iletileri imzalayabilir ve imzalarınızı doğrulayabilirsiniz. Anahtar ile imzalar çok kısadır ve diğer protokollere bütünlleştirmek oldukça kolaydır.</Description>
-            <Archive type="targz" sha1sum="b30cd3527393e262e0dd8c77423e4e8907c2936c" name="python-ecdsa-0.15.tar.gz">https://github.com/warner/python-ecdsa/archive/python-ecdsa-0.15.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-ecdsa/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-ecdsa</Name>
-            <Summary xml:lang="en">ECDSA module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-six</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-ecdsa</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2020-01-23</Date>
-                <Version>0.15</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-11-21</Date>
-                <Version>0.14.1</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-01</Date>
-                <Version>0.13</Version>
-                <Comment>First Pisi Release, built with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-pycrypto</Name>
             <Homepage>https://www.dlitz.net/software/pycrypto/</Homepage>
             <Packager>
@@ -11431,46 +11115,6 @@
                 <Date>2019-11-26</Date>
                 <Version>3.0.5</Version>
                 <Comment>First pisi release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-pynacl</Name>
-            <Homepage>https://github.com/pyca/pynacl/</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Python binding to the Networking and Cryptography (NaCl) library</Summary>
-            <Summary xml:lang="tr">Python için NaCl modülü</Summary>
-            <Description xml:lang="en">python-pynacl PyNaCl is a Python binding to libsodium, which is a fork of the Networking and Cryptography library. These libraries have a stated goal of improving usability, security and speed.</Description>
-            <Description xml:lang="tr">PyNaCl, ağ ve kriptografi kitaplığınından geliştirilen libsodium kitaplığının python modülüdür.</Description>
-            <Archive type="targz" sha1sum="c078953e5643ad4ff7881a4627f5147eb5c76cf4" name="PyNaCl-1.3.0.tar.gz">https://pypi.org/packages/source/P/PyNaCl/PyNaCl-1.3.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-pynacl/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-pynacl</Name>
-            <Summary xml:lang="en">PyNaCl module for python</Summary>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-11-25</Date>
-                <Version>1.3.0</Version>
-                <Comment>First release</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
@@ -12137,59 +11781,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-yara</Name>
-            <Homepage>https://plusvic.github.io/yara/</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Yara is a pattern matching swiss knife for malware researchers.</Summary>
-            <Summary xml:lang="tr">Python için yara modülü</Summary>
-            <Description xml:lang="en">YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.This package contains python3 bindings of yara tool.</Description>
-            <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araç olan yara&apos;nın python modülüdür.</Description>
-            <Archive type="targz" sha1sum="8e1c6c31875d1df685b4a97faf8d58287e8c38a4" name="v3.11.0.tar.gz">https://github.com/VirusTotal/yara-python/archive/v3.11.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-                <Dependency>yara-devel</Dependency>
-                <Dependency>yara</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-yara/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-yara</Name>
-            <Summary xml:lang="en">Yara module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>yara</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python*</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-26</Date>
-                <Version>3.11.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-05-05</Date>
-                <Version>3.4.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python-future</Name>
             <Homepage>http://python-future.org/</Homepage>
             <Packager>
@@ -12356,53 +11947,6 @@
             <Update release="1">
                 <Date>2019-11-06</Date>
                 <Version>3.11</Version>
-                <Comment>First pisi release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-pycparser</Name>
-            <Homepage>https://github.com/eliben/pycparser</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Complete C99 parser in pure Python</Summary>
-            <Summary xml:lang="tr">Python ile yazilmis C99 cozumleyicisi</Summary>
-            <Description xml:lang="en">pycparser is a parser for the C language, written in pure Python. It is a module designed to be easily integrated into applications that need to parse C source code.</Description>
-            <Description xml:lang="tr">pycparser, C kaynak kodunu çözümlemesi gereken uygulamalara kolaylıkla bütünleşebilen bir python modülüdür.</Description>
-            <Archive type="targz" sha1sum="3a7e92b87f9fe0b863ec99b0c4ee9f90a32a3c3f" name="release_v2.20.tar.gz">https://github.com/eliben/pycparser/archive/release_v2.20.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-pycparser/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-pycparser</Name>
-            <Summary xml:lang="en">Complete C99 parser in pure Python</Summary>
-            <Files>
-                <Path fileType="doc">/usr/share/doc/python-pycparser</Path>
-                <Path fileType="library">/usr/lib/python2*</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-03-04</Date>
-                <Version>2.20</Version>
-                <Comment>Minor version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-07</Date>
-                <Version>2.19</Version>
                 <Comment>First pisi release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -14434,60 +13978,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-yara</Name>
-            <Homepage>https://plusvic.github.io/yara/</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Apache</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Yara is a pattern matching swiss knife for malware researchers.</Summary>
-            <Summary xml:lang="tr">Python3 için yara modülü</Summary>
-            <Description xml:lang="en">YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns.This package contains python3 bindings of yara tool.</Description>
-            <Description xml:lang="tr">Kötücül yazılım araştırmacıları için, zararlıları çözümleyebilen, tanılayabilen ve sınıflandırabilen bir araç olan yara&apos;nın python3 modülüdür.</Description>
-            <Archive type="targz" sha1sum="8e1c6c31875d1df685b4a97faf8d58287e8c38a4" name="v3.11.0.tar.gz">https://github.com/VirusTotal/yara-python/archive/v3.11.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>yara-devel</Dependency>
-                <Dependency>yara</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-yara/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-yara</Name>
-            <Summary xml:lang="en">Yara module for python3</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-                <Dependency>yara</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-26</Date>
-                <Version>3.11.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-05-05</Date>
-                <Version>3.4.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-monotonic</Name>
             <Homepage>https://github.com/atdt/monotonic</Homepage>
             <Packager>
@@ -14569,64 +14059,6 @@
                 <Comment>First release</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-ecdsa</Name>
-            <Homepage>https://github.com/warner/python-ecdsa</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">ECDSA implementation for Python</Summary>
-            <Summary xml:lang="tr">Python3 için ECDSA Kriptografi Uygulaması</Summary>
-            <Description xml:lang="en">This is an easy-to-use implementation of ECDSA cryptography (Elliptic Curve Digital Signature Algorithm), implemented purely in Python, released under the MIT license. With this library, you can quickly create keypairs (signing key and verifying key), sign messages, and verify the signatures. The keys and signatures are very short, making them easy to handle and incorporate into other protocols.</Description>
-            <Description xml:lang="tr">Python3 için kolay kullanımlı, MIT lisanslı ECDSA kriptografi (Elliptic Curve Digital Signature Algorithm) modülü. Bu kitaplık ile hızlıca anahtar oluşturabilir (giriş ahahtarı ve doğrulama anahtarı), iletileri imzalayabilir ve imzalarınızı doğrulayabilirsiniz. Anahtar ile imzalar çok kısadır ve diğer protokollere bütünlleştirmek oldukça kolaydır.</Description>
-            <Archive type="targz" sha1sum="b30cd3527393e262e0dd8c77423e4e8907c2936c" name="python-ecdsa-0.15.tar.gz">https://github.com/warner/python-ecdsa/archive/python-ecdsa-0.15.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-ecdsa/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-ecdsa</Name>
-            <Summary xml:lang="en">ECDSA module for python</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-six</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-ecdsa</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2020-01-23</Date>
-                <Version>0.15</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-11-21</Date>
-                <Version>0.14.1</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-01</Date>
-                <Version>0.13</Version>
-                <Comment>First Pisi Release, built with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -21205,6 +20637,70 @@
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>disks</Name>
+            <Homepage>https://wiki.gnome.org/Apps/Disks</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="en">gnome disk utility</Summary>
+            <Description xml:lang="en">View, modify and configure disks and media.</Description>
+            <Archive type="tarxz" sha1sum="e121768d591fd621b6c8c0d04ad594fc83ed7885" name="gnome-disk-utility-3.34.5.tar.xz">https://download.gnome.org/sources/gnome-disk-utility/3.34/gnome-disk-utility-3.34.5.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>cmake</Dependency>
+                <Dependency>xz-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>udisks2-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>libsecret-devel</Dependency>
+                <Dependency>libdvdread-devel</Dependency>
+                <Dependency>libpwquality-devel</Dependency>
+                <Dependency>libcanberra-gtk-devel</Dependency>
+                <Dependency>libcanberra-gtk3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/disks/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>disks</Name>
+            <RuntimeDependencies>
+                <Dependency>xz</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>udisks2</Dependency>
+                <Dependency>libsecret</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libdvdread</Dependency>
+                <Dependency>libpwquality</Dependency>
+                <Dependency>libcanberra-gtk3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-04-30</Date>
+                <Version>3.34.5</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>

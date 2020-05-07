@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>kvantum</Name>
@@ -12,7 +12,7 @@
         <IsA>library</IsA>
         <Summary>Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
         <Description>Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
-        <Archive sha1sum="15088ec6f2d1934585e811ee7453c8896f303c38" type="targz">https://github.com/tsujan/Kvantum/archive/V0.14.1.tar.gz</Archive>
+        <Archive sha1sum="7929e128c728308c43e511e6c34b927f6153dd6f" type="tarxz">https://github.com/tsujan/Kvantum/releases/download/V0.15.3/Kvantum-0.15.3.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>libX11-devel</Dependency>
             <Dependency>qt5-svg-devel</Dependency>
@@ -45,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2020-04-30</Date>
+            <Version>0.15.3</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
         <Update release="4">
             <Date>2020-02-01</Date>
             <Version>0.14.1</Version>

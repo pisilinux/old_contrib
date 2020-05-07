@@ -15,8 +15,8 @@
 		<Description>
 			The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.
 		</Description>
-		<Archive sha1sum="7db15249ac009377bba46556377ca5bab0484e3e" type="tarbz2">
-			https://archive.xfce.org/src/xfce/xfwm4/4.14/xfwm4-4.14.1.tar.bz2
+		<Archive sha1sum="32ad3b845d8f7b6b08949b4d527ef04a4268d75d" type="tarbz2">
+			https://archive.xfce.org/src/xfce/xfwm4/4.14/xfwm4-4.14.2.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -66,6 +66,13 @@
 	</Package>
 
 	<History>
+		<Update release="13">
+			<Date>2020-04-30</Date>
+			<Version>4.14.2</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="12">
 			<Date>2020-04-14</Date>
 			<Version>4.14.1</Version>

@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>xfce4-notifyd</Name>
-		<Homepage>https://git.xfce.org/apps/xfce4-notifyd/about/</Homepage>
+		<Homepage>https://docs.xfce.org/apps/notifyd/start</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>
@@ -15,8 +15,8 @@
 		<Description>
 			The Xfce Notify Daemon (xfce4-notifyd for short) is a smallish program that implements the “server-side” portion of the Freedesktop desktop notifications specification.
 		</Description>
-		<Archive sha1sum="e770acbd273d0afa6849107c38ed178cdd163575" type="tarbz2">
-			https://archive.xfce.org/src/apps/xfce4-notifyd/0.6/xfce4-notifyd-0.6.0.tar.bz2
+		<Archive sha1sum="678bb804ba2e9580ec4a42dda80738bf453d7651" type="tarbz2">
+			https://archive.xfce.org/src/apps/xfce4-notifyd/0.6/xfce4-notifyd-0.6.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -56,6 +56,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2020-04-30</Date>
+			<Version>0.6.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2020-04-08</Date>
 			<Version>0.6.0</Version>

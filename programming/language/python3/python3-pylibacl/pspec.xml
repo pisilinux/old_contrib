@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python3-pylibacl</Name>
-        <Homepage>http://pylibacl.k1024.org/</Homepage>
+        <Homepage>https://pylibacl.k1024.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

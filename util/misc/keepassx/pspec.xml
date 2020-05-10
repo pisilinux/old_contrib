@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>keepassx</Name>
-        <Homepage>http://www.keepassx.org</Homepage>
+        <Homepage>https://www.keepassx.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

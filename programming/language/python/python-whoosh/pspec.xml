@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python-whoosh</Name>
-        <Homepage>http://bitbucket.org/mchaput/whoosh</Homepage>
+        <Homepage>https://github.com/mchaput/whoosh</Homepage>
         <Packager>
             <Name>Blue Devil</Name>
             <Email>bluedevil@sctzine.com</Email>

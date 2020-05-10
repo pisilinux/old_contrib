@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python3-beautifulsoup4</Name>
-        <Homepage>http://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
+        <Homepage>https://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

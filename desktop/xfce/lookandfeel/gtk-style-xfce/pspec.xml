@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>gtk-style-xfce</Name>
-        <Homepage>http://www.xfce.org</Homepage>
+        <Homepage>https://www.xfce.org/</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>tumbler</Name>
-		<Homepage>https://www.xfce.org/</Homepage>
+		<Homepage>https://docs.xfce.org/xfce/thunar/tumbler</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

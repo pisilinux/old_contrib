@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>python3-msgpack</Name>
-        <Homepage>http://msgpack.org/</Homepage>
+        <Homepage>https://msgpack.org/</Homepage>
         <Packager>
             <Name>Blue DeviL</Name>
             <Email>bluedevil@sctzine.com</Email>

@@ -134,7 +134,7 @@
             <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="data">/usr/lib/qt4/imports</Path>
             <Path fileType="data">/usr/lib/qt4/templates</Path>
-	    <Path fileType="data">/usr/share/doc/qt</Path>
+            <Path fileType="data">/usr/share/doc/qt</Path>
             <Path fileType="localedata">/usr/share/qt4/translations/*_tr.*</Path>
         </Files>
         <AdditionalFiles>

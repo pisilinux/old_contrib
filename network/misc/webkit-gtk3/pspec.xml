@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>webkit-gtk3</Name>
-        <Homepage>http://webkitgtk.org</Homepage>
+        <Homepage>https://webkitgtk.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

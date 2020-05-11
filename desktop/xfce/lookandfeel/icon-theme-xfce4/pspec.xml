@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>icon-theme-xfce4</Name>
-        <Homepage>http://www.xfce.org</Homepage>
+        <Homepage>https://www.xfce.org/</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

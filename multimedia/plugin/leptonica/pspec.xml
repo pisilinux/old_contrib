@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>leptonica</Name>
-        <Homepage>http://code.google.com/p/leptonica/</Homepage>
+        <Homepage>http://www.leptonica.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

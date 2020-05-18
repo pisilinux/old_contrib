@@ -277,7 +277,7 @@
     <SpecFile>
         <Source>
             <Name>webkit-gtk3</Name>
-            <Homepage>http://webkitgtk.org</Homepage>
+            <Homepage>https://webkitgtk.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -1051,7 +1051,7 @@
     <SpecFile>
         <Source>
             <Name>webkit2gtk</Name>
-            <Homepage>http://webkitgtk.org</Homepage>
+            <Homepage>https://webkitgtk.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -9812,7 +9812,7 @@
     <SpecFile>
         <Source>
             <Name>python-appdirs</Name>
-            <Homepage>http://github.com/ActiveState/appdirs</Homepage>
+            <Homepage>https://github.com/ActiveState/appdirs</Homepage>
             <Packager>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -10798,7 +10798,7 @@
     <SpecFile>
         <Source>
             <Name>python-msgpack</Name>
-            <Homepage>http://msgpack.org/</Homepage>
+            <Homepage>https://msgpack.org/</Homepage>
             <Packager>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -11168,7 +11168,7 @@
     <SpecFile>
         <Source>
             <Name>python-pylibacl</Name>
-            <Homepage>http://pylibacl.k1024.org/</Homepage>
+            <Homepage>https://pylibacl.k1024.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -11279,7 +11279,7 @@
     <SpecFile>
         <Source>
             <Name>python-beautifulsoup4</Name>
-            <Homepage>http://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
+            <Homepage>https://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -11578,7 +11578,7 @@
     <SpecFile>
         <Source>
             <Name>python-pyxattr</Name>
-            <Homepage>http://pyxattr.k1024.org/</Homepage>
+            <Homepage>https://pyxattr.k1024.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -11841,7 +11841,7 @@
     <SpecFile>
         <Source>
             <Name>python-paramiko</Name>
-            <Homepage>http://www.lag.net/paramiko/</Homepage>
+            <Homepage>https://www.paramiko.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -12658,7 +12658,7 @@
     <SpecFile>
         <Source>
             <Name>python-whoosh</Name>
-            <Homepage>http://bitbucket.org/mchaput/whoosh</Homepage>
+            <Homepage>https://github.com/mchaput/whoosh</Homepage>
             <Packager>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -13080,55 +13080,8 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-ipaddress</Name>
-            <Homepage>https://github.com/phihag/ipaddress</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>PSFL</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Python 3.3+&apos;s ipaddress for older Python versions</Summary>
-            <Summary xml:lang="tr">Python3.2 ve daha düşük sürümler için ipaddress modülü</Summary>
-            <Description xml:lang="en">python-ipaddress ipaddress provides the capabilities to create, manipulate and operate on IPv4 and IPv6 addresses and networks. This module is a backport for python 2.7 and python versions up to 3.2.</Description>
-            <Description xml:lang="tr">python-ipaddress modülü Python3.3 ile gelen ipaddress modülünün python 2.7 ve python 3.2&apos;ye kadar olan sürümlerinde de çalışmasını sağlar.</Description>
-            <Archive type="targz" sha1sum="8446393aaedd42401926f4469486b939dcd3fca9" name="v1.0.23.tar.gz">https://github.com/phihag/ipaddress/archive/v1.0.23.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-ipaddress/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-ipaddress</Name>
-            <Summary xml:lang="en">ipaddress module for python3.2-</Summary>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-12-11</Date>
-                <Version>1.0.23</Version>
-                <Comment>Rebuilt.</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2019-11-25</Date>
-                <Version>1.0.23</Version>
-                <Comment>First release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-whoosh</Name>
-            <Homepage>http://bitbucket.org/mchaput/whoosh</Homepage>
+            <Homepage>https://github.com/mchaput/whoosh</Homepage>
             <Packager>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -13677,7 +13630,7 @@
     <SpecFile>
         <Source>
             <Name>python3-pyside2-tools</Name>
-            <Homepage>https://qt-project.org/wiki/PySide2</Homepage>
+            <Homepage>https://doc.qt.io/qtforpython/</Homepage>
             <Packager>
                 <Name>Metehan Özbek</Name>
                 <Email>mthnzbk@gmail.com</Email>
@@ -13737,7 +13690,7 @@
     <SpecFile>
         <Source>
             <Name>python3-pylibacl</Name>
-            <Homepage>http://pylibacl.k1024.org/</Homepage>
+            <Homepage>https://pylibacl.k1024.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -13810,7 +13763,7 @@
     <SpecFile>
         <Source>
             <Name>python3-msgpack</Name>
-            <Homepage>http://msgpack.org/</Homepage>
+            <Homepage>https://msgpack.org/</Homepage>
             <Packager>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -14117,7 +14070,7 @@
     <SpecFile>
         <Source>
             <Name>python3-appdirs</Name>
-            <Homepage>http://github.com/ActiveState/appdirs</Homepage>
+            <Homepage>https://github.com/ActiveState/appdirs</Homepage>
             <Packager>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -14306,7 +14259,7 @@
     <SpecFile>
         <Source>
             <Name>python3-beautifulsoup4</Name>
-            <Homepage>http://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
+            <Homepage>https://www.crummy.com/software/BeautifulSoup/index.html</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -14667,50 +14620,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-backports.functools_lru_cache</Name>
-            <Homepage>https://github.com/jaraco/backports.functools_lru_cache</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Backport of functools.lru_cache from Python 3.3</Summary>
-            <Summary xml:lang="tr">Python 3.3&apos;ten functions.lru_cache modülünün backportu</Summary>
-            <Description xml:lang="en">Backport of functools.lru_cache from Python 3.3 as published at ActiveState.</Description>
-            <Description xml:lang="tr">ActiveState tarafından yayımlandığı gibi Python 3.3&apos;teki functools.lru_cache modülünün geriye dönüklüğünü sağlayan python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="4120a77124ac33b17b90b759aa6bf32bb5fbfcf5" name="v1.6.1.tar.gz">https://github.com/jaraco/backports.functools_lru_cache/archive/v1.6.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools-scm</Dependency>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-backports.functools_lru_cache/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-backports.functools_lru_cache</Name>
-            <Summary xml:lang="en">Backport of functools.lru_cache from Python 3.3</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-backports.functools_lru_cache</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-24</Date>
-                <Version>1.6.1</Version>
-                <Comment>First release</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-prelude</Name>
             <Homepage>https://github.com/michel-slm/python-prelude</Homepage>
             <Packager>
@@ -14745,49 +14654,6 @@
             <Update release="1">
                 <Date>2020-02-11</Date>
                 <Version>0.1.0</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-ifaddr</Name>
-            <Homepage>https://github.com/pydron/ifaddr</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Python3 Library to enumerate all network interfaces.</Summary>
-            <Summary xml:lang="tr">Sistemdeki tüm ağ kartlarının IP addreslerini numaralandırıp sıralayabilen bir python3 kitaplığıdır.</Summary>
-            <Description xml:lang="en">python3-ifaddr is a small Python library that allows you to find all the IP addresses of the computer.</Description>
-            <Description xml:lang="tr">python3-ifaddr bilgisayarınızda bulunan tüm ağ kartlarının ip adreslerini döndürebilen bir python3 kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="fc151270d72327a1f7bec1e583261b31f74e2fc2" name="0.1.6.tar.gz">https://github.com/pydron/ifaddr/archive/0.1.6.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-ifaddr/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-ifaddr</Name>
-            <Summary xml:lang="en">Python3 Library to enumerate all network interfaces.</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-ifaddr</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-25</Date>
-                <Version>0.1.6</Version>
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -15201,7 +15067,7 @@
     <SpecFile>
         <Source>
             <Name>python3-pyxattr</Name>
-            <Homepage>http://pyxattr.k1024.org/</Homepage>
+            <Homepage>https://pyxattr.k1024.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -15506,7 +15372,7 @@
     <SpecFile>
         <Source>
             <Name>python3-pyside2</Name>
-            <Homepage>https://qt-project.org/wiki/PySide2</Homepage>
+            <Homepage>https://doc.qt.io/qtforpython/</Homepage>
             <Packager>
                 <Name>Metehan Özbek</Name>
                 <Email>mthnzbk@gmail.com</Email>
@@ -16567,7 +16433,7 @@
             <PartOf>programming.library</PartOf>
             <Summary xml:lang="en">Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
             <Description xml:lang="en">Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
-            <Archive type="targz" sha1sum="15088ec6f2d1934585e811ee7453c8896f303c38" name="V0.14.1.tar.gz">https://github.com/tsujan/Kvantum/archive/V0.14.1.tar.gz</Archive>
+            <Archive type="tarxz" sha1sum="7929e128c728308c43e511e6c34b927f6153dd6f" name="Kvantum-0.15.3.tar.xz">https://github.com/tsujan/Kvantum/releases/download/V0.15.3/Kvantum-0.15.3.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>qt5-svg-devel</Dependency>
@@ -16599,6 +16465,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2020-04-30</Date>
+                <Version>0.15.3</Version>
+                <Comment>Version bump</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
             <Update release="4">
                 <Date>2020-02-01</Date>
                 <Version>0.14.1</Version>
@@ -18420,7 +18293,7 @@
     <SpecFile>
         <Source>
             <Name>opusfile</Name>
-            <Homepage>http://www.opus-codec.org/</Homepage>
+            <Homepage>https://www.opus-codec.org/</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -19180,7 +19053,7 @@
     <SpecFile>
         <Source>
             <Name>tesseract</Name>
-            <Homepage>http://code.google.com/p/tesseract-ocr/</Homepage>
+            <Homepage>https://github.com/tesseract-ocr/tesseract</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -19449,7 +19322,7 @@
     <SpecFile>
         <Source>
             <Name>tesseract-tessdata</Name>
-            <Homepage>http://code.google.com/p/tesseract-ocr/</Homepage>
+            <Homepage>https://github.com/tesseract-ocr</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -19823,7 +19696,7 @@
     <SpecFile>
         <Source>
             <Name>leptonica</Name>
-            <Homepage>http://code.google.com/p/leptonica/</Homepage>
+            <Homepage>http://www.leptonica.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -20819,6 +20692,69 @@
                 <Comment>First Pisi Built with Docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>fuse3</Name>
+            <Homepage>http://fuse.sourceforge.net</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>hardware.disk</PartOf>
+            <Summary xml:lang="fr">Interface implémentée dans l&apos;environnement utilisateur (userpace) pour les systèmes de fichier.</Summary>
+            <Summary xml:lang="en">An interface for filesystems implemented in userspace</Summary>
+            <Summary xml:lang="tr">Kullanıcı düzeyinde dosya sistemi oluştumaya yarayan kitaplık</Summary>
+            <Summary xml:lang="es">Una interfaz para sistemas de archivos implementados en el espacio de usuario</Summary>
+            <Description xml:lang="en">fuse is a backend allowing regular users to (un)mount filesystems for their own use.</Description>
+            <Description xml:lang="tr">FUSE, kullanıcıların kendileri için dosya sistemleri oluşturmasına, bağlamasına ve bağı koparmasına imkân veren bir arkauç kitaplıktır.</Description>
+            <Archive type="tarxz" sha1sum="19745a3ac7d6a38c12d16c624639b2fe0ce75e96" name="fuse-3.9.1.tar.xz">https://github.com/libfuse/libfuse/releases/download/fuse-3.9.1/fuse-3.9.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>doxygen</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>gettext-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>hardware/disk/fuse3/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>fuse3</Name>
+            <RuntimeDependencies>
+                <Dependency>glibc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/bin</Path>
+                <Path fileType="executable">/sbin</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>fuse3-devel</Name>
+            <Summary xml:lang="en">Development files for fuse3</Summary>
+            <Summary xml:lang="tr">fuse3 için geliştirme dosyaları</Summary>
+            <PartOf>system.devel</PartOf>
+            <RuntimeDependencies>
+                <Dependency release="1">fuse3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-02-01</Date>
+                <Version>3.9.1</Version>
+                <Comment>First release</Comment>
+                <Name>Mustafa Cinasal</Name>
+                <Email>muscnsl@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -22372,7 +22308,7 @@
     <SpecFile>
         <Source>
             <Name>gtkmm3</Name>
-            <Homepage>http://www.gtkmm.org/</Homepage>
+            <Homepage>https://www.gtkmm.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -23757,7 +23693,7 @@
     <SpecFile>
         <Source>
             <Name>xfwm4-themes</Name>
-            <Homepage>http://www.xfce.org</Homepage>
+            <Homepage>https://www.xfce.org/</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23809,7 +23745,7 @@
     <SpecFile>
         <Source>
             <Name>gtk-style-xfce</Name>
-            <Homepage>http://www.xfce.org</Homepage>
+            <Homepage>https://www.xfce.org/</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -23886,7 +23822,7 @@
     <SpecFile>
         <Source>
             <Name>icon-theme-xfce4</Name>
-            <Homepage>http://www.xfce.org</Homepage>
+            <Homepage>https://www.xfce.org/</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -24471,7 +24407,7 @@
             <Description xml:lang="en">The Xfce4 window manager manages the placement of application windows on the screen, provides beautiful window decorations, manages workspaces or virtual desktops, and natively supports multiscreen mode.</Description>
             <Description xml:lang="tr">Xfce4 pencere yöneticisi, uygulama pencerelerinin ekrana yerleştirmeyi sağlar, pencerelerin güzel görünmesini sağlar, çalışma alanlarını ve sanal masaüstlerini yönetir ve doğal olarak çoklu ekran kipini destekler.</Description>
             <Description xml:lang="pl"> Pakiet zawiera xfwm4, który jest menedżerem okiem do Xfce4. Jest on zaprojektowany do uruchamiania z resztą środowiska Xfce4.</Description>
-            <Archive type="tarbz2" sha1sum="7db15249ac009377bba46556377ca5bab0484e3e" name="xfwm4-4.14.1.tar.bz2">https://archive.xfce.org/src/xfce/xfwm4/4.14/xfwm4-4.14.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="32ad3b845d8f7b6b08949b4d527ef04a4268d75d" name="xfwm4-4.14.2.tar.bz2">https://archive.xfce.org/src/xfce/xfwm4/4.14/xfwm4-4.14.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -24519,6 +24455,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2020-04-30</Date>
+                <Version>4.14.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="12">
                 <Date>2020-04-14</Date>
                 <Version>4.14.1</Version>
@@ -24608,7 +24551,7 @@
     <SpecFile>
         <Source>
             <Name>tumbler</Name>
-            <Homepage>https://www.xfce.org/</Homepage>
+            <Homepage>https://docs.xfce.org/xfce/thunar/tumbler</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -26276,7 +26219,7 @@
             <Description xml:lang="en">Xfconf is a hirerchical (tree-like) configuration system for the Xfce graphical desktop environment.</Description>
             <Description xml:lang="tr">xfconf, Xfce masaüstü yöneticisi için yazılmış, ağaç tipi hiyerarşik yapılandırma sistemidir.</Description>
             <Description xml:lang="pl">Xfconf jest prostym systemem przechowywania i odpytywania konfiguracji.</Description>
-            <Archive type="tarbz2" sha1sum="edfa24dd862bc39d6002f40f6b9b3974c59fa250" name="xfconf-4.14.1.tar.bz2">https://archive.xfce.org/xfce/4.14/src/xfconf-4.14.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="5d963f803edc6609b0337c688aa232c926e00fc8" name="xfconf-4.14.3.tar.bz2">https://archive.xfce.org/src/xfce/xfconf/4.14/xfconf-4.14.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>python-six</Dependency>
@@ -26310,7 +26253,7 @@
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency release="10">xfconf</Dependency>
+                <Dependency release="11">xfconf</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -26319,6 +26262,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2020-04-30</Date>
+                <Version>4.14.3</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-08-12</Date>
                 <Version>4.14.1</Version>
@@ -29579,6 +29529,87 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>xfce4-whiskermenu-plugin</Name>
+            <Homepage>https://docs.xfce.org/panel-plugins/xfce4-whiskermenu-plugin</Homepage>
+            <Packager>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app</IsA>
+            <PartOf>desktop.xfce.addon</PartOf>
+            <Summary xml:lang="en">Alternate Xfce menu.</Summary>
+            <Description xml:lang="en">Whisker Menu is an alternate application launcher for Xfce.</Description>
+            <Archive type="tarbz2" sha1sum="637c2c3a4729b99896b337edd267ffb14bf9f7bd" name="xfce4-whiskermenu-plugin-2.4.4.tar.bz2">https://archive.xfce.org/src/panel-plugins/xfce4-whiskermenu-plugin/2.4/xfce4-whiskermenu-plugin-2.4.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>exo-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>garcon-devel</Dependency>
+                <Dependency>xfconf-devel</Dependency>
+                <Dependency>libxfce4ui-devel</Dependency>
+                <Dependency>xfce4-panel-devel</Dependency>
+                <Dependency>libxfce4util-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/xfce/addon/xfce4-whiskermenu-plugin/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xfce4-whiskermenu-plugin</Name>
+            <RuntimeDependencies>
+                <Dependency>exo</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>garcon</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libxfce4ui</Dependency>
+                <Dependency>xfce4-panel</Dependency>
+                <Dependency>libxfce4util</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2020-04-30</Date>
+                <Version>2.4.4</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="3">
+                <Date>2015-03-02</Date>
+                <Version>1.5.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ayhan Yalçınsoy</Name>
+                <Email>ayhanyalcinsoy@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-01-28</Date>
+                <Version>1.3.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-01-08</Date>
+                <Version>1.3.0</Version>
+                <Comment>First release</Comment>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>mousepad</Name>
             <Homepage>https://git.xfce.org/apps/mousepad/about/</Homepage>
             <Packager>
@@ -29776,7 +29807,7 @@
     <SpecFile>
         <Source>
             <Name>xfce4-notifyd</Name>
-            <Homepage>https://git.xfce.org/apps/xfce4-notifyd/about/</Homepage>
+            <Homepage>https://docs.xfce.org/apps/notifyd/start</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -29788,7 +29819,7 @@
             <Summary xml:lang="tr">Bir uyarı gösterici</Summary>
             <Description xml:lang="en">The Xfce Notify Daemon (xfce4-notifyd for short) is a smallish program that implements the “server-side” portion of the Freedesktop desktop notifications specification.</Description>
             <Description xml:lang="tr">Xfce Notify Daemon Freedesktop masaüstü uyarı sisteminin sunucu tarafını gerçekleştiren küçük bir uygulamadır.</Description>
-            <Archive type="tarbz2" sha1sum="e770acbd273d0afa6849107c38ed178cdd163575" name="xfce4-notifyd-0.6.0.tar.bz2">https://archive.xfce.org/src/apps/xfce4-notifyd/0.6/xfce4-notifyd-0.6.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="678bb804ba2e9580ec4a42dda80738bf453d7651" name="xfce4-notifyd-0.6.1.tar.bz2">https://archive.xfce.org/src/apps/xfce4-notifyd/0.6/xfce4-notifyd-0.6.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>libX11-devel</Dependency>
@@ -29826,6 +29857,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2020-04-30</Date>
+                <Version>0.6.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="5">
                 <Date>2020-04-08</Date>
                 <Version>0.6.0</Version>
@@ -30345,7 +30383,7 @@
             <Description xml:lang="en">Qt is a cross platform GUI toolkit.</Description>
             <Description xml:lang="tr">Qt bir çok platformda çalışabilen ve grafiksel kullanıcı arayüzü (GUI) oluşturmaya yarayan bir araç takımıdır.</Description>
             <Description xml:lang="es">Qt es un toolkit para GUI multiplataforma.</Description>
-            <Archive type="targz" sha1sum="ddf9c20ca8309a116e0466c42984238009525da6" name="qt-everywhere-opensource-src-4.8.6.tar.gz">http://download.qt-project.org/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="ddf9c20ca8309a116e0466c42984238009525da6" name="qt-everywhere-opensource-src-4.8.6.tar.gz">http://download.qt-project.org/archive/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>libpng-devel</Dependency>
@@ -30577,53 +30615,6 @@
                 <Comment>First release</Comment>
                 <Name>Yusuf Aydemir</Name>
                 <Email>yusuf.aydemir@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>lzip</Name>
-            <Homepage>https://www.nongnu.org/lzip/lzip.html</Homepage>
-            <Packager>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:console</IsA>
-            <PartOf>util.archive</PartOf>
-            <Summary xml:lang="en">Lzip is a lossless data (de)compressor</Summary>
-            <Summary xml:lang="tr">Veri kayıpsız bir veri sıkıştırma, geri açma aracı</Summary>
-            <Description xml:lang="en">Lzip is a lossless data compressor with a user interface similar to the one of gzip or bzip2. Lzip is about as fast as gzip, compresses most files more than bzip2, and is better than both from a data recovery perspective.</Description>
-            <Description xml:lang="tr">Lzip, gzip ve bzip2 benzeri veri kayıpsız sıkıştırma yapabilen bir araçtır. Lzip gzip kadar hızlı, bzip2&apos;den daha iyi şıkıştırm oranına sahip ve görece her iki uygulamadan daha iyi bir sıkıştırma aracıdır.</Description>
-            <Archive type="targz" sha1sum="08bea2f275d639bfe85fe30887d269b96eac34e1" name="lzip-1.21.tar.gz">http://download.savannah.nongnu.org/releases/lzip/lzip-1.21.tar.gz</Archive>
-            <SourceURI>util/archive/lzip/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>lzip</Name>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="info">/usr/share/info</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-07-04</Date>
-                <Version>1.21</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-23</Date>
-                <Version>1.17</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -31083,106 +31074,6 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>xarchiver</Name>
-            <Homepage>http://xarchiver.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:gui</IsA>
-            <PartOf>util.archive</PartOf>
-            <Summary xml:lang="en">A lightweight GTK+3 archiving/compression tool(continuation of the Xfce master branch).</Summary>
-            <Summary xml:lang="tr">GTK+3 tabanlı hafif ve sade bir arşiv yöneticisi</Summary>
-            <Description xml:lang="en">GTK+3 frontend to 7z, zip, rar, tar, bzip2, gzip, arj, lha, rpm and deb(open and extract only). Xarchiver allows you to create, add, extract and delete files in the above formats. 7z, zip, rar, arj password protected archives are supported.</Description>
-            <Description xml:lang="tr">Xarchiver, 7z, zip, rar, tar, bzip2, gzip, arj, lha, rpm ve deb için GTK+3 tabanlı bir uygulamadır. Bu formatlarda arşivleme, ekleme, çıkarma ve silme işlemlerini yapabilir. Ayrıca parola korumalı 7z, zip, rar ve arj dosyalarını da destekler.</Description>
-            <Icon>xarchiver</Icon>
-            <Archive type="targz" sha1sum="db763b3eaf926ebfc78ba0f647902d0d3764a813" name="0.5.4.14">https://codeload.github.com/ib/xarchiver/tar.gz/0.5.4.14</Archive>
-            <BuildDependencies>
-                <Dependency>intltool</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>libxslt-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>util/archive/xarchiver/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>xarchiver</Name>
-            <RuntimeDependencies>
-                <Dependency>gtk3</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libxslt</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>rar</Dependency>
-                <Dependency>lzip</Dependency>
-                <Dependency>bzip2</Dependency>
-                <Dependency>p7zip</Dependency>
-                <Dependency>unrar</Dependency>
-                <Dependency>libzip</Dependency>
-                <Dependency>xdg-utils</Dependency>
-                <Dependency>libarchive</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib/xfce4/thunar-archive-plugin/xarchiver.tap</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="data">/usr/share/pixmaps/xarchiver</Path>
-                <Path fileType="data">/usr/share/doc/xarchiver/images</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man/man1</Path>
-                <Path fileType="doc">/usr/share/doc/xarchiver</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="6">
-                <Date>2019-04-15</Date>
-                <Version>0.5.4.14</Version>
-                <Comment>Version bump from git branch</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-            <Update release="5">
-                <Date>2016-04-03</Date>
-                <Version>0.5.4</Version>
-                <Comment>Rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2015-01-25</Date>
-                <Version>0.5.4</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Stefan Gronewold(groni)</Name>
-                <Email>groni@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-06-03</Date>
-                <Version>0.5.3</Version>
-                <Comment>Version bump</Comment>
-                <Name>Serdar Soytetir</Name>
-                <Email>kaptan@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-11-11</Date>
-                <Version>0.5.2</Version>
-                <Comment>Release bump, change partof.</Comment>
-                <Name>Serdar Soytetir</Name>
-                <Email>kaptan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2010-09-28</Date>
-                <Version>0.5.2</Version>
-                <Comment>First release</Comment>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -31695,45 +31586,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>zopfli</Name>
-            <Homepage>https://github.com/google/zopfli</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Packager>
-            <License>Apache-2</License>
-            <IsA>app:console</IsA>
-            <PartOf>util.archive</PartOf>
-            <Summary xml:lang="en">Compression algorithm.</Summary>
-            <Description xml:lang="en">Zopfli Compression Algorithm is a compression library programmed in C to perform very good, but slow, deflate or zlib compression.</Description>
-            <Archive type="targz" sha1sum="f41af7ea641dc322dec637302a63d63fcecf410d" name="zopfli-1.0.3.tar.gz">https://github.com/google/zopfli/archive/zopfli-1.0.3.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>cmake</Dependency>
-            </BuildDependencies>
-            <SourceURI>util/archive/zopfli/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>zopfli</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib/cmake</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-01-01</Date>
-                <Version>1.0.3</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>zziplib</Name>
             <Homepage>http://zziplib.sourceforge.net/</Homepage>
             <Packager>
@@ -31897,7 +31749,7 @@
     <SpecFile>
         <Source>
             <Name>keepassx</Name>
-            <Homepage>http://www.keepassx.org</Homepage>
+            <Homepage>https://www.keepassx.org/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>

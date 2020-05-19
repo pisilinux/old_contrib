@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>libmnl</Name>
-        <Homepage>http://netfilter.org/projects/libmnl/</Homepage>
+        <Homepage>https://netfilter.org/projects/libmnl/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

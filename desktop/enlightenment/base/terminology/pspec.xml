@@ -20,7 +20,7 @@
 			<Dependency>meson</Dependency>
 			<Dependency>cmake</Dependency>
 			<Dependency>efl-devel</Dependency>
-			<Dependency>enlightenment-devel</Dependency>
+			<!-- <Dependency>enlightenment-devel</Dependency> -->
 		</BuildDependencies>
 	</Source>
 

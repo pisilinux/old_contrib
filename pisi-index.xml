@@ -3105,55 +3105,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>admid-pack</Name>
-            <Homepage>http://packetstormsecurity.com/files/10080/ADMid-pkg.tgz.html</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>app:console</IsA>
-            <PartOf>network.analyzer</PartOf>
-            <Summary xml:lang="en">ADM DNS spoofing tools</Summary>
-            <Summary xml:lang="tr">DNS Yanıltma Aracı</Summary>
-            <Description xml:lang="en">Uses a variety of active and passive methods to spoof DNS packets. Very powerful.</Description>
-            <Description xml:lang="tr">ADM, Ağ paketlerini yanlış IP&apos;ye gönderen bir araçtır. - DNS paketlerini yanlış veya sahte yerlere göndermek için çeşitli etkin ya da etkin olmayan yöntemleri kullanır.</Description>
-            <Archive type="targz" sha1sum="6e3b7ea5e5b0f90d410c540ca2aff28ac2adbc1e" name="ADMid-pkg.tgz">https://dl.packetstormsecurity.net/groups/ADM/ADM-DNS-SPOOF/ADMid-pkg.tgz</Archive>
-            <BuildDependencies>
-                <Dependency>libpcap-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/analyzer/admid-pack/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>admid-pack</Name>
-            <Summary xml:lang="en">ADM DNS spoofing tools</Summary>
-            <RuntimeDependencies>
-                <Dependency>libpcap</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2019-11-05</Date>
-                <Version>0.1</Version>
-                <Comment>Pisi Linux 2.1.1 fix</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-03-29</Date>
-                <Version>0.1</Version>
-                <Comment>First release, built with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>ngrep</Name>
             <Homepage>http://ngrep.sourceforge.net/</Homepage>
             <Packager>
@@ -6152,6 +6103,113 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>connman</Name>
+            <Homepage>https://git.kernel.org/pub/scm/network/connman/connman.git/about/</Homepage>
+            <Packager>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>network.connection</PartOf>
+            <Summary xml:lang="en">Connection Manager.</Summary>
+            <Summary xml:lang="pl">Zarządca połączeń</Summary>
+            <Description xml:lang="en">The ConnMan project provides a daemon for managing internet connections within embedded devices running the Linux operating system. The Connection Manager is designed to be slim and to use as few resources as possible.</Description>
+            <Description xml:lang="pl">Projekt ConnMan udostępnia demona do zarządzania połączeniami z Internetem na urządzeniach wbudowanych z działającym Linuksem jako systemem operacyjnym. Zarządca połączeń został zaprojektowany jako lekki i używający jak najmniej zasobów, dzięki czemu może być łatwo integrowany. Ma w pełni modularny system, który można rozszerzać poprzez wtyczki, aby obsługiwał wszelkie rodzaje przewodowych i bezprzewodowych połączeń.</Description>
+            <Archive type="tarxz" sha1sum="ff27f3d7653a2b13ae30eaa6b3d154d53f09d439" name="connman-1.38.tar.xz">https://mirrors.edge.kernel.org/pub/linux/network/connman/connman-1.38.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>ppp-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>polkit-devel</Dependency>
+                <Dependency>libmnl-devel</Dependency>
+                <Dependency>gnutls-devel</Dependency>
+                <Dependency>iptables-devel</Dependency>
+                <Dependency>readline-devel</Dependency>
+                <Dependency>bluez-libs-devel</Dependency>
+                <Dependency>openconnect-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/connection/connman/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>connman</Name>
+            <RuntimeDependencies>
+                <Dependency>ppp</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libmnl</Dependency>
+                <Dependency>gnutls</Dependency>
+                <Dependency>readline</Dependency>
+                <Dependency>iptables</Dependency>
+                <Dependency>openconnect</Dependency>
+                <Dependency>wpa_supplicant</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="executable">/usr/sbin/connman*</Path>
+                <Path fileType="library">/usr/lib/connman/*</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="data">/usr/share/polkit-1</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>connman-devel</Name>
+            <Summary xml:lang="en">Development files and headers for connman.</Summary>
+            <Summary xml:lang="tr">connman için geliştirme dosyaları</Summary>
+            <Summary xml:lang="pl">Pliki nagłówkowe connman</Summary>
+            <RuntimeDependencies>
+                <Dependency release="5">connman</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/connman</Path>
+                <Path fileType="data">/usr/lib/pkgconfig/connman.pc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2020-04-30</Date>
+                <Version>1.38</Version>
+                <Comment>Ver. up</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="4">
+                <Date>2014-06-14</Date>
+                <Version>1.24</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Aydın Demirel</Name>
+                <Email>aydin.demirel@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-12-06</Date>
+                <Version>1.20</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Yusuf Aydemir</Name>
+                <Email>yusuf.aydemir@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-03-01</Date>
+                <Version>1.12</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-01-09</Date>
+                <Version>1.10</Version>
+                <Comment>First release</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>sqlninja</Name>
             <Homepage>http://sqlninja.sourceforge.net/</Homepage>
             <Packager>
@@ -6608,7 +6666,7 @@
     <SpecFile>
         <Source>
             <Name>libmnl</Name>
-            <Homepage>http://netfilter.org/projects/libmnl/</Homepage>
+            <Homepage>https://netfilter.org/projects/libmnl/</Homepage>
             <Packager>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
@@ -6678,6 +6736,90 @@
             <Update release="1">
                 <Date>2012-09-02</Date>
                 <Version>1.0.3</Version>
+                <Comment>First release</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>poedit</Name>
+            <Homepage>https://poedit.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>app:gui</IsA>
+            <PartOf>editor</PartOf>
+            <Summary xml:lang="en">A cross-platform translation editor.</Summary>
+            <Summary xml:lang="tr">Platform bağımsız gettext po düzenleyicisi</Summary>
+            <Description xml:lang="en">This program is a simple translation editor for PO and XLIFF files. It also serves as a GUI frontend to more GNU gettext utilities and catalogs editor/source code parser. It helps with translating applications into another language.</Description>
+            <Description xml:lang="tr">Poedit, GNU Gettext arayüzü ve katalog düzenleyicisi / kaynak kod ayrıştırıcısıdır. Uygulamaları başka dillere çevirmede yardımcı olur. Detaylı bilgi için GNU Gettext dökümantasyonu ya da wxWidgets wxLocale sınıf referanslarına göz atın.</Description>
+            <Archive type="targz" sha1sum="2718cf26b78886fc7448f1773040dcccb7949f9f" name="poedit-2.3.1.tar.gz">https://github.com/vslavik/poedit/releases/download/v2.3.1-oss/poedit-2.3.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>wxGTK3</Dependency>
+                <Dependency>db-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
+                <Dependency>wxGTK-devel</Dependency>
+                <Dependency>wxGTK-common</Dependency>
+                <Dependency>gettext-devel</Dependency>
+                <Dependency>gtkspell3-devel</Dependency>
+                <Dependency>luceneplusplus-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>editor/poedit/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>poedit</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>boost</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>icu4c</Dependency>
+                <Dependency>wxGTK3</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>gettext</Dependency>
+                <Dependency>gtkspell3</Dependency>
+                <Dependency>wxGTK-common</Dependency>
+                <Dependency>luceneplusplus</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2020-04-30</Date>
+                <Version>2.3.1</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-03-10</Date>
+                <Version>1.5.5</Version>
+                <Comment>Rebuild</Comment>
+                <Name>Varol Maksutoğlu</Name>
+                <Email>waroi@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-02-28</Date>
+                <Version>1.5.5</Version>
+                <Comment>Version bump</Comment>
+                <Name>Ertan Güven</Name>
+                <Email>ertan@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2013-01-10</Date>
+                <Version>1.5.4</Version>
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
@@ -7438,6 +7580,59 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>luceneplusplus</Name>
+            <Homepage>https://github.com/luceneplusplus/LucenePlusPlus</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv3</License>
+            <License>Apache-2.0</License>
+            <IsA>library</IsA>
+            <PartOf>programming.misc</PartOf>
+            <Summary xml:lang="en">An up to date C++ port of the popular Java Lucene library, a high-performance, full-featured text search engine.</Summary>
+            <Description xml:lang="en">Lucene++ is an up to date C++ port of the popular Java Lucene library, a high-performance, full-featured text search engine.</Description>
+            <Archive type="targz" sha1sum="b2c38e7ca5056934a5bdb1a69ea251110e3c0377" name="rel_3.0.7.tar.gz">https://github.com/luceneplusplus/LucenePlusPlus/archive/rel_3.0.7.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>boost-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/misc/luceneplusplus/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>luceneplusplus</Name>
+            <RuntimeDependencies>
+                <Dependency>boost</Dependency>
+                <Dependency>libgcc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>luceneplusplus-devel</Name>
+            <Summary xml:lang="en">Development files for luceneplusplus</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">luceneplusplus</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-04-13</Date>
+                <Version>3.0.7</Version>
+                <Comment>First Release.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>
@@ -16033,6 +16228,59 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>cdk</Name>
+            <Homepage>https://invisible-island.net/cdk/cdk.html</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>custom</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">This is a modified/enhanced version of Cdk.</Summary>
+            <Description xml:lang="en">Cdk stands for &apos;Curses Development Kit&apos; and it currently contains 21 ready to use widgets which facilitate the speedy development of full screen curses programs. This little project of mine started as a test to see how compatible my Linux machine was to other UNIX breeds. While doing this I discovered Ncurses, and played with it. These widgets are the result of over a years worth of playing.</Description>
+            <Archive type="targz" sha1sum="2383e27d4a5846bb897ea4a8bff22ccd0c9678b0" name="cdk-5.0-20200228.tgz">https://invisible-mirror.net/archives/cdk/cdk-5.0-20200228.tgz</Archive>
+            <BuildDependencies>
+                <Dependency>ncurses-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/library/cdk/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cdk</Name>
+            <RuntimeDependencies>
+                <Dependency>ncurses</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>cdk-devel</Name>
+            <RuntimeDependencies>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>perl</Dependency>
+                <Dependency release="1">cdk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-04-30</Date>
+                <Version>5.0.20200228</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>celestia</Name>
             <Homepage>https://github.com/CelestiaProject/Celestia</Homepage>
             <Packager>
@@ -17324,6 +17572,86 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gaupol</Name>
+            <Homepage>https://otsaloma.io/gaupol/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.editor</PartOf>
+            <Summary xml:lang="en">Editor for text-based subtitle files.</Summary>
+            <Summary xml:lang="tr">Metin yazı biçimli altyazıları düzenleme aracı</Summary>
+            <Description xml:lang="en">Gaupol is an editor for text-based subtitle files. It supports multiple subtitle file formats and provides means of creating, editing and translating subtitles and timing subtitles to match video.</Description>
+            <Description xml:lang="tr">Metin yazı biçimli altyazıları düzenleme aracıdır. Çeşitli altyazı türlerini desteklemektedir. Ayrıca yazı içeriğini ve zamanlamayı düzeltmenize olanak sağlar.</Description>
+            <Archive type="targz" sha1sum="d5778b55fdd63163e6f1348b6827ff5ee692fbda" name="1.8.tar.gz">https://github.com/otsaloma/gaupol/archive/1.8.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-pygobject3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/editor/gaupol/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gaupol</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>iso-codes</Dependency>
+                <Dependency>gst-libav</Dependency>
+                <Dependency>mpv-player</Dependency>
+                <Dependency>python3-cairo</Dependency>
+                <Dependency>python3-chardet</Dependency>
+                <Dependency>gst-plugins-bad</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>python3-pygobject3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2020-04-30</Date>
+                <Version>1.8</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="3">
+                <Date>2014-06-18</Date>
+                <Version>0.19.2</Version>
+                <Comment>Rebuild for gcc</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-02-22</Date>
+                <Version>0.19.2</Version>
+                <Comment>rebuild</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvarice@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-08-17</Date>
+                <Version>0.19.2</Version>
+                <Comment>First release</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>sdl-gfx</Name>
             <Homepage>http://www.ferzkopp.net/Software/SDL_gfx-2.0/</Homepage>
             <Packager>
@@ -17650,6 +17978,62 @@
                 <Comment>First release.</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gphoto2</Name>
+            <Homepage>http://www.gphoto.org/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.misc</PartOf>
+            <Summary xml:lang="en">Digital camera software.</Summary>
+            <Description xml:lang="en">gPhoto2 is a free, redistributable, ready to use set of digital camera software applications for Unix-like systems, written by a whole team of dedicated volunteers around the world. It supports more than 2500 cameras.</Description>
+            <Archive type="tarbz2" sha1sum="021b214aaf58540f4afef49639bdbabda3fd03af" name="gphoto2-2.5.23.tar.bz2">https://sourceforge.net/projects/gphoto/files/gphoto/2.5.23/gphoto2-2.5.23.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>cdk-devel</Dependency>
+                <Dependency>popt-devel</Dependency>
+                <Dependency>aalib-devel</Dependency>
+                <Dependency>readline-devel</Dependency>
+                <Dependency>libgphoto2-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">cdk_header_path.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/misc/gphoto2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gphoto2</Name>
+            <RuntimeDependencies>
+                <Dependency>cdk</Dependency>
+                <Dependency>popt</Dependency>
+                <Dependency>aalib</Dependency>
+                <Dependency>libexif</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>readline</Dependency>
+                <Dependency>libgphoto2</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-24</Date>
+                <Version>2.5.23</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>
@@ -18080,6 +18464,103 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gthumb</Name>
+            <Homepage>https://wiki.gnome.org/Apps/Gthumb</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">Image browser, viewer, organizer and simple editor.</Summary>
+            <Description xml:lang="en">An image viewer and browser utility for the GNOME environment.</Description>
+            <Archive type="tarxz" sha1sum="8eabc653d0ad4ec1de66f3b1cba3e2795ee56fe8" name="gthumb-3.10.0.tar.xz">https://download.gnome.org/sources/gthumb/3.10/gthumb-3.10.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>cmake</Dependency>
+                <Dependency>itstool</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>tiff-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>exiv2-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>gnome-common</Dependency>
+                <Dependency>libraw-devel</Dependency>
+                <Dependency>colord-devel</Dependency>
+                <Dependency>gettext-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>libsecret-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>libunique-devel</Dependency>
+                <Dependency>json-glib-devel</Dependency>
+                <Dependency>webkit2gtk-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/graphics/gthumb/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gthumb</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>colord</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libraw</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>json-glib</Dependency>
+                <Dependency>libsecret</Dependency>
+                <Dependency>exiv2-libs</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>webkit2gtk</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gthumb-devel</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency release="1">gthumb</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-04-30</Date>
+                <Version>3.10.0</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>ffmpegthumbnailer</Name>
             <Homepage>https://github.com/dirkvdb/ffmpegthumbnailer</Homepage>
             <Packager>
@@ -18312,6 +18793,78 @@
             <Update release="1">
                 <Date>2020-04-16</Date>
                 <Version>2.0_rc4</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>geeqie</Name>
+            <Homepage>http://www.geeqie.org/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.graphics</PartOf>
+            <Summary xml:lang="en">Geeqie is a lightweight image viewer for Linux, BSDs and compatibles.</Summary>
+            <Description xml:lang="en">Geeqie can be used as a simple, fast, database-free image viewer, but equally it can be used to manage large collections of images.</Description>
+            <Archive type="tarxz" sha1sum="fe14b122744a4297e9e98a9cfc5821f2b5e6e1ce" name="geeqie-1.5.1.tar.xz">http://www.geeqie.org/geeqie-1.5.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>lua-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>tiff-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>lirc-devel</Dependency>
+                <Dependency>lcms2-devel</Dependency>
+                <Dependency>lua51-devel</Dependency>
+                <Dependency>exiv2-devel</Dependency>
+                <Dependency>openjpeg2-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>ffmpegthumbnailer-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/graphics/geeqie/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>geeqie</Name>
+            <RuntimeDependencies>
+                <Dependency>lua</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>lirc</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>lcms2</Dependency>
+                <Dependency>lua51</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>zenity</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>gphoto2</Dependency>
+                <Dependency>openjpeg2</Dependency>
+                <Dependency>exiv2-libs</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>ffmpegthumbnailer</Dependency>
+                <Dependency>perl-Image-ExifTool</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-03-24</Date>
+                <Version>1.5.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -20995,20 +21548,17 @@
             <PartOf>desktop.lookandfeel</PartOf>
             <Summary xml:lang="en">GTK+2/3 themes.</Summary>
             <Description xml:lang="en">Adwaita, Adwaita-Dark and HighContrast for GTK+2/3 base applications.</Description>
-            <Archive type="tarbz2" sha1sum="44ca944b23030b13b3ae8bfdadb48ba78a49d49b" name="gnome-themes-extra-3.28.tar.bz2">https://gitlab.gnome.org/GNOME/gnome-themes-extra/-/archive/3.28/gnome-themes-extra-3.28.tar.bz2</Archive>
+            <Archive type="targz" sha1sum="02d7407a66fcdcaee236b48631922cf59458626c" name="3.28.0.1.tar.gz">https://github.com/4fury/gnome-themes-extra-community/archive/3.28.0.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>gnome-common</Dependency>
-                <Dependency>gettext-devel</Dependency>
-                <Dependency>zopfli</Dependency>
-                <Dependency>inkscape</Dependency>
                 <Dependency>gtk2-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
                 <Dependency>librsvg-devel</Dependency>
+                <Dependency>gettext-devel</Dependency>
             </BuildDependencies>
             <Patches>
-                <Patch level="1">gtk2_widget_colors.patch</Patch>
+                <Patch level="1">disable_insensitive_widget_shade.patch</Patch>
             </Patches>
             <SourceURI>desktop/lookandfeel/gnome-themes-extra/pspec.xml</SourceURI>
         </Source>
@@ -21025,6 +21575,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2020-04-30</Date>
+                <Version>3.28.0.1</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2020-01-01</Date>
                 <Version>3.28</Version>
@@ -22607,6 +23164,553 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>python-efl</Name>
+            <Homepage>https://www.enlightenment.org/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <License>LGPLv3</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.enlightenment.base</PartOf>
+            <Summary xml:lang="en">efl python bindings</Summary>
+            <Description xml:lang="en">PYTHON-EFL are the python bindings for the whole EFL stack.</Description>
+            <Archive type="tarxz" sha1sum="8e07e0db990840bcd4362c3b5d359e7587d5cffd" name="python-efl-1.24.0.tar.xz">https://download.enlightenment.org/rel/bindings/python/python-efl-1.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>cython3</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>efl-devel</Dependency>
+                <Dependency>dbus-python3</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>dbus-python-common</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/enlightenment/base/python-efl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-efl</Name>
+            <RuntimeDependencies>
+                <Dependency>efl</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-04-30</Date>
+                <Version>1.24.0</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>terminology</Name>
+            <Homepage>https://www.enlightenment.org/about-terminology</Homepage>
+            <Packager>
+                <Name>Erdinç Gültekin</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.enlightenment.base</PartOf>
+            <Summary xml:lang="tr">Enlightenment için terminal emüülatörü</Summary>
+            <Summary xml:lang="en">A terminal emulator for Enlightenment.</Summary>
+            <Summary xml:lang="nl">Een terminal emulator voor Enlightenment</Summary>
+            <Description xml:lang="tr">Enlightenment için ekstra atraksiyonları olan hoş bir terminal emülatörü.</Description>
+            <Description xml:lang="en">A EFL terminal emulator with some extra bells and whistles for Enlightenment.</Description>
+            <Description xml:lang="nl">Een EFL terminal emulator met wat extra toeters en bellen voor Enlightenment.</Description>
+            <Archive type="tarxz" sha1sum="5b49478f689373a46b7902b6be66eda6a5034c38" name="terminology-1.7.0.tar.xz">https://download.enlightenment.org/rel/apps/terminology/terminology-1.7.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>cmake</Dependency>
+                <Dependency>efl-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/enlightenment/base/terminology/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>terminology</Name>
+            <RuntimeDependencies>
+                <Dependency>efl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2020-04-30</Date>
+                <Version>1.7.0</Version>
+                <Comment>Ver. up</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="5">
+                <Date>2014-06-08</Date>
+                <Version>0.5.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-07-09</Date>
+                <Version>0.3.0</Version>
+                <Comment>rebuild</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-04-23</Date>
+                <Version>0.3.0</Version>
+                <Comment>rebuild</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-03-28</Date>
+                <Version>0.3.0</Version>
+                <Comment>bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-12-31</Date>
+                <Version>0.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>efl</Name>
+            <Homepage>https://www.enlightenment.org/</Homepage>
+            <Packager>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Packager>
+            <License>BSD</License>
+            <License>LGPLv2.1</License>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.enlightenment.base</PartOf>
+            <Summary xml:lang="en">Enlightenment Foundation Libraries</Summary>
+            <Summary xml:lang="tr">Enlightenment kütüphaneleri.</Summary>
+            <Description xml:lang="en">efl, Enlightenment Foundation Libraries</Description>
+            <Description xml:lang="tr">efl,Enlightenment için çalışma kütüphanelerini içerir.</Description>
+            <Archive type="tarxz" sha1sum="edf97e6e8a79d847839e179e97825c8aa4d0280e" name="efl-1.24.1.tar.xz">https://download.enlightenment.org/rel/libs/efl/efl-1.24.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>ninja</Dependency>
+                <Dependency>libXp</Dependency>
+                <Dependency>doxygen</Dependency>
+                <Dependency>valgrind</Dependency>
+                <Dependency>lua-devel</Dependency>
+                <Dependency>tiff-devel</Dependency>
+                <Dependency>webp-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>scim-devel</Dependency>
+                <Dependency>libc-client</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>avahi-devel</Dependency>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>libXau-devel</Dependency>
+                <Dependency>libbsd-devel</Dependency>
+                <Dependency>luajit-devel</Dependency>
+                <Dependency>libraw-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>giflib-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libsdl2-devel</Dependency>
+                <Dependency>fribidi-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>libXtst-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>xine-lib-devel</Dependency>
+                <Dependency>libglade-devel</Dependency>
+                <Dependency>libXdmcp-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>gstreamer-devel</Dependency>
+                <Dependency>openjpeg2-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXdamage-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libspectre-devel</Dependency>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>libXpresent-devel</Dependency>
+                <Dependency>poppler-cpp-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>libutil-linux-devel</Dependency>
+                <Dependency>libXScrnSaver-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency>gst-plugins-base-devel</Dependency>
+                <Dependency>xcb-util-keysyms-devel</Dependency>
+                <Dependency>wayland-protocols-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/enlightenment/base/efl/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>efl</Name>
+            <RuntimeDependencies>
+                <Dependency>dbus</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>tiff</Dependency>
+                <Dependency>webp</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>eudev</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>giflib</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libraw</Dependency>
+                <Dependency>luajit</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXtst</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libsdl2</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libunwind</Dependency>
+                <Dependency>openjpeg2</Dependency>
+                <Dependency>scim-libs</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libspectre</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXpresent</Dependency>
+                <Dependency>poppler-cpp</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>wayland-server</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>shared-mime-info</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>efl-devel</Name>
+            <Summary xml:lang="en">Developments for efl</Summary>
+            <Summary xml:lang="tr">efl için geliştirme başlıkları</Summary>
+            <RuntimeDependencies>
+                <Dependency>lua-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>avahi-devel</Dependency>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>eudev-devel</Dependency>
+                <Dependency>luajit-devel</Dependency>
+                <Dependency>pixman-devel</Dependency>
+                <Dependency>c-ares-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>fribidi-devel</Dependency>
+                <Dependency>libexif-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency>libsdl2-devel</Dependency>
+                <Dependency>libXtst-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>wayland-server</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>libXfixes-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libunwind-devel</Dependency>
+                <Dependency>libXdamage-devel</Dependency>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>libsndfile-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXpresent-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>pulseaudio-libs-devel</Dependency>
+                <Dependency release="2">efl</Dependency>
+                <Dependency>wayland-protocols-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2020-04-30</Date>
+                <Version>1.24.1</Version>
+                <Comment>Ver. up</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="1">
+                <Date>2014-06-08</Date>
+                <Version>1.10.0</Version>
+                <Comment>First Release</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>enlightenment</Name>
+            <Homepage>https://www.enlightenment.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.enlightenment.base</PartOf>
+            <Summary xml:lang="tr">Enlightenment Pencere Yöneticisi</Summary>
+            <Summary xml:lang="en">Enlightenment Desktop Shell</Summary>
+            <Summary xml:lang="nl">Enlightenment Desktop Shell</Summary>
+            <Description xml:lang="tr">Enlightenment, X Pencere Sistemi için tasarlanmış güçlü, genişletilebilir, yapılandırılabilir ve göze hitap eden bir pencere yöneticisidir.</Description>
+            <Description xml:lang="en">Enlightenment is a window manager for the X Window System that is designed to be powerful, extensible, configurable and pretty darned good looking! It is one of the more graphically intense window managers.</Description>
+            <Description xml:lang="nl">Enlightenment is een window manager voor het X Window System dat is ontworpen om krachtige, uitbreidbare, configureerbare en er ook verdomd goed uit ziet! Het is een van de meer grafisch-intensieve window managers</Description>
+            <Archive type="tarxz" sha1sum="5a5b717885f6438392b7b8ce8d3ded90bd5a757a" name="enlightenment-0.24.0.tar.xz">https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.24.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>meson</Dependency>
+                <Dependency>ninja</Dependency>
+                <Dependency>efl-devel</Dependency>
+                <Dependency>pam-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>alsa-lib-devel</Dependency>
+                <Dependency>bluez-libs-devel</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+                <Dependency>xorg-server-xwayland</Dependency>
+                <Dependency>xcb-util-keysyms-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/enlightenment/base/enlightenment/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>enlightenment</Name>
+            <RuntimeDependencies>
+                <Dependency>efl</Dependency>
+                <Dependency>pam</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>acpid</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>udisks2</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>bluez-libs</Dependency>
+                <Dependency>polkit-gnome</Dependency>
+                <Dependency>libxkbcommon</Dependency>
+                <Dependency>libutil-linux</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>wayland-server</Dependency>
+                <Dependency>pulseaudio-libs</Dependency>
+                <Dependency>xcb-util-keysyms</Dependency>
+                <Dependency>icon-theme-hicolor</Dependency>
+                <Dependency>desktop-file-utils</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>enlightenment-devel</Name>
+            <Summary xml:lang="tr">enlightenment için geliştirme dosyaları</Summary>
+            <Summary xml:lang="en">Development files for enlightenment</Summary>
+            <Summary xml:lang="nl">enlightenment ontwikkeling bestanden</Summary>
+            <RuntimeDependencies>
+                <Dependency release="10">enlightenment</Dependency>
+                <Dependency>efl-devel</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>wayland-server</Dependency>
+                <Dependency>wayland-protocols</Dependency>
+                <Dependency>libxkbcommon-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="10">
+                <Date>2020-04-30</Date>
+                <Version>0.24.0</Version>
+                <Comment>Ver. up</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="9">
+                <Date>2014-06-08</Date>
+                <Version>0.18.8</Version>
+                <Comment>Version bump</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="8">
+                <Date>2013-09-06</Date>
+                <Version>0.17.4</Version>
+                <Comment>Add connman for runtime dependencies</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="7">
+                <Date>2013-08-02</Date>
+                <Version>0.17.4</Version>
+                <Comment>Version bump</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="6">
+                <Date>2013-05-27</Date>
+                <Version>0.17.3</Version>
+                <Comment>bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="5">
+                <Date>2013-04-26</Date>
+                <Version>0.17.2.1</Version>
+                <Comment>Dep Fixed.</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="4">
+                <Date>2013-04-23</Date>
+                <Version>0.17.2.1</Version>
+                <Comment>bump</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="3">
+                <Date>2013-03-31</Date>
+                <Version>0.17.1</Version>
+                <Comment>bugfix relaese, fix themes</Comment>
+                <Name>Erdinç Gültekin</Name>
+                <Email>erdincgultekin@pisilinux.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2013-01-26</Date>
+                <Version>0.17.0</Version>
+                <Comment>Add quick start patch</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-12-23</Date>
+                <Version>0.17.0</Version>
+                <Comment>First release</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>econnman</Name>
+            <Homepage>https://www.enlightenment.org/</Homepage>
+            <Packager>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
+            </Packager>
+            <License>LGPLv3</License>
+            <IsA>app</IsA>
+            <PartOf>desktop.enlightenment.addon</PartOf>
+            <Summary xml:lang="en">EFL user interface for connman.</Summary>
+            <Description xml:lang="en">EFL user interface for connman (Connection Manager).</Description>
+            <Archive type="tarxz" sha1sum="7a59e7a2d9b2592ceaaf16f9acbfca96573ac351" name="econnman-1.1.tar.xz">https://download.enlightenment.org/rel/apps/econnman/econnman-1.1.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>efl-devel</Dependency>
+                <Dependency>connman-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/enlightenment/addon/econnman/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>econnman</Name>
+            <RuntimeDependencies>
+                <Dependency>connman</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/econnman-bin</Path>
+                <Path fileType="data">/usr/share/applications/econnman-agent.desktop</Path>
+                <Path fileType="data">/usr/share/applications/econnman.desktop</Path>
+                <Path fileType="doc">/usr/share/doc/econnman/*</Path>
+                <Path fileType="data">/usr/share/econnman/theme/default.edj</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2020-04-30</Date>
+                <Version>1.1</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-06-08</Date>
+                <Version>1.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Alihan Öztürk</Name>
+                <Email>alihan@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-12-21</Date>
+                <Version>1.0.0</Version>
+                <Comment>First release</Comment>
+                <Name>Marcin Bojara</Name>
+                <Email>marcin@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>

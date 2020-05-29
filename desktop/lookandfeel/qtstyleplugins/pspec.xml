@@ -26,6 +26,7 @@
 		<Name>qtstyleplugins</Name>
 		<RuntimeDependencies>
 			<Dependency>qt5-base</Dependency>
+			<Dependency>gtk2-engines-murrine</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib/qt5</Path>

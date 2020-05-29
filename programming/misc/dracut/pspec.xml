@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>dracut</Name>
+        <Homepage>https://dracut.wiki.kernel.org/</Homepage>
+        <Packager>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Packager>
+        <Summary>initramfs system</Summary>
+        <Description>dracut is an event driven initramfs infrastructure. dracut (the tool) is used to create an initramfs image by copying tools and files from an installed system and combining it with the dracut framework</Description>
+        <License>GPLv2.1</License>
+        <Archive sha1sum="44f5b7304976b57ac4fca4dd94e99d1a131e6f62" type="tarxz">https://mirrors.edge.kernel.org/pub/linux/utils/boot/dracut/dracut-050.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>xz-devel</Dependency>
+            <Dependency>pkgconfig</Dependency>
+            <Dependency>asciidoc</Dependency>
+            <Dependency>libkmod-devel</Dependency>
+            <Dependency>bash-completion</Dependency>
+        </BuildDependencies>
+
+        <Patches>
+<!--             <Patch></Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>dracut</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/lib</Path>
+            <Path fileType="data">/usr/share/bash-completion</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <RuntimeDependencies>
+            <Dependency>libkmod</Dependency>
+            <Dependency releaseFrom="2">grub2</Dependency>
+            <Dependency>xz</Dependency>
+        </RuntimeDependencies>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+            <COMAR script="packageHandler.py">System.PackageHandler</COMAR>
+        </Provides>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/apply-live-updates.sh">dracutrc.d/apply-live-updates.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/ayarlar.sh">dracutrc.d/ayarlar.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/checkisomd5@.service">dracutrc.d/checkisomd5@.service</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/dmsquash-generator.sh">dracutrc.d/dmsquash-generator.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/dmsquash-live-genrules.sh">dracutrc.d/dmsquash-live-genrules.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/dmsquash-live-root.sh">dracutrc.d/dmsquash-live-root.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/dmsquash-liveiso-genrules.sh">dracutrc.d/dmsquash-liveiso-genrules.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/iso-scan.sh">dracutrc.d/iso-scan.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/module-setup.sh">dracutrc.d/module-setup.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/parse-dmsquash-live.sh">dracutrc.d/parse-dmsquash-live.sh</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/etc/dracut/dracutrc.d/parse-iso-scan.sh">dracutrc.d/parse-iso-scan.sh</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>dracut-devel</Name>
+        <Summary>Development files for dracut</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">dracut</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+
+    <History>
+        <Update release="1">
+            <Date>2020-05-29</Date>
+            <Version>050</Version>
+            <Comment>First release</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -61,7 +61,7 @@
 	</Package>
 
 	<History>
-		<Update release="5">
+		<Update release="4">
 			<Date>2020-04-30</Date>
 			<Version>2.3.1</Version>
 			<Comment>Ver. bump</Comment>

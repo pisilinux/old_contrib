@@ -9,7 +9,11 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+t = "./themes/*/gtk-2.0"
+
 def setup():
+	shelltools.system("sed -i '82a\ \ GtkMenuBar::window-dragging\ =\ 1' %s/main.rc" % t)
+	shelltools.system("sed -i '83a\ \ GtkToolbar::window-dragging\ =\ 1' %s/main.rc" % t)
 	shelltools.system("./autogen.sh --prefix=/usr")
 
 def build():

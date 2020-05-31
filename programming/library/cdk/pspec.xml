@@ -19,6 +19,7 @@
 			https://invisible-mirror.net/archives/cdk/cdk-5.0-20200228.tgz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>Xaw3d-devel</Dependency>
 			<Dependency>ncurses-devel</Dependency>
 		</BuildDependencies>
 	</Source>

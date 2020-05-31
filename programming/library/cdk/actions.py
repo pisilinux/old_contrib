@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--with-shared")
+	autotools.configure("--with-xaw3d --with-xaw3dxft --with-shared")
 
 def build():
 	autotools.make()

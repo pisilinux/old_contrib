@@ -17,8 +17,8 @@
 		<Description>
 			Thunar has been designed from the ground up to be fast and easy-to-use. Its user interface is clean and intuitive, and does not include any confusing or useless options. Thunar is fast and responsive with a good start up time and directory load time. Thunar is accessible using Assistive Technologies and is fully standarts compliant.
 		</Description>
-		<Archive sha1sum="f50547e2751182ac3ee873fa27060685b1d19ef2" type="tarbz2">
-			https://archive.xfce.org/src/xfce/thunar/1.8/thunar-1.8.14.tar.bz2
+		<Archive sha1sum="fc97c166ed78ccdeca8092516cd9edec6d1606a2" type="tarbz2">
+			https://archive.xfce.org/src/xfce/thunar/1.8/thunar-1.8.15.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -115,6 +115,13 @@
 	</Package>
 
 	<History>
+		<Update release="15">
+			<Date>2020-06-05</Date>
+			<Version>1.8.15</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="14">
 			<Date>2020-03-24</Date>
 			<Version>1.8.14</Version>

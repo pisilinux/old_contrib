@@ -15,8 +15,8 @@
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>Enlightenment Foundation Libraries</Summary>
 		<Description>efl, Enlightenment Foundation Libraries</Description>
-		<Archive sha1sum="edf97e6e8a79d847839e179e97825c8aa4d0280e" type="tarxz">
-			https://download.enlightenment.org/rel/libs/efl/efl-1.24.1.tar.xz
+		<Archive sha1sum="d2d23ef4bcb1a0c1bbe294e5e259591c27c9a709" type="tarxz">
+			https://download.enlightenment.org/rel/libs/efl/efl-1.24.2.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -191,8 +191,8 @@
 
 	<History>
 		<Update release="2">
-			<Date>2020-04-30</Date>
-			<Version>1.24.1</Version>
+			<Date>2020-06-05</Date>
+			<Version>1.24.2</Version>
 			<Comment>Ver. up</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

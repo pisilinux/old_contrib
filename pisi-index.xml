@@ -9284,153 +9284,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-Net-DNS</Name>
-            <Homepage>https://metacpan.org/release/Net-DNS</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl interface to the DNS resolver</Summary>
-            <Description xml:lang="en">Net::DNS is a collection of Perl modules that act as a Domain Name System (DNS) resolver. It allows the programmer to perform DNS queries that are beyond the capabilities of gethostbyname and gethostbyaddr.</Description>
-            <Description xml:lang="tr">Net::DNS, bir DNS (Domain Name System -Alan Adı Sistemi) çözücüsü olarak işleyen bir Perl modülleri kolleksiyonudur. Programcıya isim ile bağlantı sağlama (gethostbyname) ve adres ile bağlantı sağlamanın (gethostbyaddr) ötesinde olan DNS sorgularının çalışması için izin verir.</Description>
-            <Description xml:lang="es">Net::DNS es una collección de módulos Perl con funciones de un servidor de nombres de dominio (DNS). Permite al programador realizar consultas DNS más allá de las facilidades de gethostbyname y gethostbyaddr.</Description>
-            <Archive type="targz" sha1sum="a663eb462f15c900737e6c66456354f0157de8a7" name="Net-DNS-1.23.tar.gz">https://cpan.metacpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-1.23.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Test-Pod</Dependency>
-                <Dependency>perl-Digest-HMAC</Dependency>
-                <Dependency>perl-Net-LibIDN2</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Net-DNS/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Net-DNS</Name>
-            <Summary xml:lang="en">Perl interface to the DNS resolver</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/perl</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="8">
-                <Date>2020-03-27</Date>
-                <Version>1.23</Version>
-                <Comment>Minor version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="7">
-                <Date>2020-02-22</Date>
-                <Version>1.22</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="6">
-                <Date>2020-01-08</Date>
-                <Version>1.21</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="5">
-                <Date>2016-04-24</Date>
-                <Version>1.05_05</Version>
-                <Comment>Version bump</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>0.68</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-28</Date>
-                <Version>0.68</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-12-06</Date>
-                <Version>0.68</Version>
-                <Comment>rebuild for perl</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-11</Date>
-                <Version>0.68</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-NetPacket</Name>
-            <Homepage>https://metacpan.org/release/NetPacket</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">assemble/disassemble network packets at the protocol level</Summary>
-            <Summary xml:lang="tr">Protokol seviyesinde ağ paketlerini assemble/disassemble etmeye yarayan bir araç.</Summary>
-            <Description xml:lang="en">&quot;NetPacket&quot; provides a base class for a cluster of modules related to decoding and encoding of network protocols. Each &quot;NetPacket&quot; descendent module knows how to encode and decode packets for the network protocol it implements. Consult the documentation for the module in question for protocol-specific implementation.</Description>
-            <Description xml:lang="tr">NetPacket&quot; ağ protokollerini encode/decode etmeye yarayan bir çok temel sınıf sağlayan bir perl kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="4ccb767d5fa47dc4c7b5b2d622dc68699d6b02e3" name="NetPacket-1.7.2.tar.gz">https://cpan.metacpan.org/authors/id/Y/YA/YANICK/NetPacket-1.7.2.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-NetPacket/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-NetPacket</Name>
-            <Summary xml:lang="en">assemble/disassemble network packets at the protocol level</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-01-08</Date>
-                <Version>1.7.2</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-24</Date>
-                <Version>1.6.0</Version>
-                <Comment>First release, built with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-DBD-SQLite</Name>
             <Homepage>http://search.cpan.org/dist/DBD-SQLite/</Homepage>
             <Packager>
@@ -9601,116 +9454,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-Net-Pcap</Name>
-            <Homepage>https://metacpan.org/release/Net-Pcap</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Interface to pcap(3) LBL packet capture library</Summary>
-            <Summary xml:lang="tr">pcap(3) LBL paket yakalama kitaplığı arayüzü</Summary>
-            <Description xml:lang="en">The Net::Pcap module is a Perl binding to the LBL pcap(3) packet capture library.</Description>
-            <Description xml:lang="tr">Net::Pcap modülü, pcap(3) LBL paket yakalama kitaplığı için bir Perl arayüzüdür.</Description>
-            <Archive type="targz" sha1sum="9e53643cbe93e497af8c24cebe02bd7934194854" name="Net-Pcap-0.18.tar.gz">https://cpan.metacpan.org/authors/id/S/SA/SAPER/Net-Pcap-0.18.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>libpcap-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="1">Net-Pcap-0.18-Adapt-a-test-to-libpcap-1.8.0.patch</Patch>
-                <Patch level="1">Net-Pcap-0.18-Fix-build-with-libpcap-1.9.0.patch</Patch>
-            </Patches>
-            <SourceURI>programming/language/perl/perl-Net-Pcap/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Net-Pcap</Name>
-            <Summary xml:lang="en">Interface to pcap(3) LBL packet capture library</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>libpcap</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-01-08</Date>
-                <Version>0.18</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-24</Date>
-                <Version>0.17</Version>
-                <Comment>First release, built with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Net-RawIP</Name>
-            <Homepage>http://search.cpan.org/dist/Net-RawIP/</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl extension to manipulate raw IP packets with interface to libpcap</Summary>
-            <Summary xml:lang="tr">Raw IP adreslerini libpcap ile değiştirmeye yarayan perl eklentisi.</Summary>
-            <Description xml:lang="en">Net::RawIP, a perl module can to manipulate raw IP packets, with an optional feature for manipulating Ethernet headers.</Description>
-            <Description xml:lang="tr">Net::RawIP, ham IP paketlerini ve ethernet başlıklarını değiştirebilen bir perl modülüdür.</Description>
-            <Archive type="targz" sha1sum="e1e2a85374436e314bce7cfb091415ebf72e6fba" name="Net-RawIP-0.25.tar.gz">http://search.cpan.org/CPAN/authors/id/S/SA/SAPER/Net-RawIP-0.25.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>libpcap-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Net-RawIP/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Net-RawIP</Name>
-            <Summary xml:lang="en">Perl extension to manipulate raw IP packets with interface to libpcap</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>libpcap</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2020-01-08</Date>
-                <Version>0.25</Version>
-                <Comment>Rebuilt.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-24</Date>
-                <Version>0.25</Version>
-                <Comment>First release, built with docker.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Linux-Desktopfiles</Name>
             <Homepage>https://metacpan.org/module/Linux::DesktopFiles</Homepage>
             <Packager>
@@ -9773,53 +9516,6 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admin@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Net-LibIDN2</Name>
-            <Homepage>https://metacpan.org/release/Net-LibIDN2</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Net::LibIDN2 - Perl bindings for GNU Libidn2</Summary>
-            <Summary xml:lang="tr">GNU Libidn2 için perl bağlayıcıları.</Summary>
-            <Description xml:lang="en">Provides bindings for GNU Libidn2, a C library for handling internationalized domain names based on IDNA 2008, Punycode and TR46.</Description>
-            <Description xml:lang="tr">perl-Net-LibIDN2, GNU Libidn2 için perl bağlayıcıları sunar.</Description>
-            <Archive type="targz" sha1sum="257a4c08c56609439869a366f6d037252ea45fb2" name="Net-LibIDN2-1.01.tar.gz">https://cpan.metacpan.org/authors/id/T/TH/THOR/Net-LibIDN2-1.01.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl-Module-Build</Dependency>
-                <Dependency>libidn2-devel</Dependency>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Net-LibIDN2/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Net-LibIDN2</Name>
-            <Summary xml:lang="en">Net::LibIDN2 - Perl bindings for GNU Libidn2</Summary>
-            <RuntimeDependencies>
-                <Dependency>libidn2</Dependency>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/perl</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-02-22</Date>
-                <Version>1.01</Version>
-                <Comment>First release.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -9959,51 +9655,6 @@
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-IO-Socket-IP</Name>
-            <Homepage>https://metacpan.org/release/IO-Socket-IP</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Family-neutral IP socket supporting both IPv4 and IPv6</Summary>
-            <Summary xml:lang="tr">Hem IPv4 hem de IPv6 soketlerini destekleyen perl modülü</Summary>
-            <Description xml:lang="en">This module provides a protocol-independent way to use IPv4 and IPv6 sockets, as a drop-in replacement for IO::Socket::INET. Most constructor arguments and methods are provided in a backward-compatible way.</Description>
-            <Description xml:lang="tr">IO::Socket::IP, Bu modül hem IPv4 hem de IPv6 soketlerini protokolden bağımsız kullanmayı destekler.</Description>
-            <Archive type="targz" sha1sum="4e12fc601a7d71189c4b49c2a72b46bc8f939993" name="IO-Socket-IP-0.39.tar.gz">https://cpan.metacpan.org/authors/id/P/PE/PEVANS/IO-Socket-IP-0.39.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl-Module-Build</Dependency>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-IO-Socket-IP/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-IO-Socket-IP</Name>
-            <Summary xml:lang="en">Family-neutral IP socket supporting both IPv4 and IPv6</Summary>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/perl</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-01-08</Date>
-                <Version>0.39</Version>
-                <Comment>First release.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -19850,7 +19501,7 @@
             <Summary xml:lang="tr">ucbirimden youtube, spotify dinleme ortamı</Summary>
             <Description xml:lang="en">Command-line cloud music player for Linux with support for Spotify, Google Play Music, YouTube, SoundCloud, Plex servers and Chromecast devices..</Description>
             <Description xml:lang="tr">tizonia-all, Spotify, Google Play Music, YouTube, SoundCloud, Plex sunuculari and Chromecast aygitlarindan komut satiri uzerinden muzik dinlemenizi saglayan uygulama.</Description>
-            <Archive type="targz" sha1sum="0afd995a0b529b5a8d7ad290dc22c1828abc8f6e" name="v0.21.0.tar.gz">https://github.com/tizonia/tizonia-openmax-il/archive/v0.21.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="80705541e835a836c95b58fd685604ab7e1acdbd" name="v0.22.0.tar.gz">https://github.com/tizonia/tizonia-openmax-il/archive/v0.22.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>pulseaudio-libs-devel</Dependency>
                 <Dependency>libutil-linux-devel</Dependency>
@@ -19955,6 +19606,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>4020-06-02</Date>
+                <Version>0.22.0</Version>
+                <Comment>Minor version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
             <Update release="2">
                 <Date>4020-04-24</Date>
                 <Version>0.21.0</Version>
@@ -23479,7 +23137,7 @@
             <Summary xml:lang="tr">Enlightenment kütüphaneleri.</Summary>
             <Description xml:lang="en">efl, Enlightenment Foundation Libraries</Description>
             <Description xml:lang="tr">efl,Enlightenment için çalışma kütüphanelerini içerir.</Description>
-            <Archive type="tarxz" sha1sum="edf97e6e8a79d847839e179e97825c8aa4d0280e" name="efl-1.24.1.tar.xz">https://download.enlightenment.org/rel/libs/efl/efl-1.24.1.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="d2d23ef4bcb1a0c1bbe294e5e259591c27c9a709" name="efl-1.24.2.tar.xz">https://download.enlightenment.org/rel/libs/efl/efl-1.24.2.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>meson</Dependency>
@@ -23652,8 +23310,8 @@
         </Package>
         <History>
             <Update release="2">
-                <Date>2020-04-30</Date>
-                <Version>1.24.1</Version>
+                <Date>2020-06-05</Date>
+                <Version>1.24.2</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -23684,7 +23342,7 @@
             <Description xml:lang="tr">Enlightenment, X Pencere Sistemi için tasarlanmış güçlü, genişletilebilir, yapılandırılabilir ve göze hitap eden bir pencere yöneticisidir.</Description>
             <Description xml:lang="en">Enlightenment is a window manager for the X Window System that is designed to be powerful, extensible, configurable and pretty darned good looking! It is one of the more graphically intense window managers.</Description>
             <Description xml:lang="nl">Enlightenment is een window manager voor het X Window System dat is ontworpen om krachtige, uitbreidbare, configureerbare en er ook verdomd goed uit ziet! Het is een van de meer grafisch-intensieve window managers</Description>
-            <Archive type="tarxz" sha1sum="5a5b717885f6438392b7b8ce8d3ded90bd5a757a" name="enlightenment-0.24.0.tar.xz">https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.24.0.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="d21284f5182a0f423ed7d1cb4be78094ae16dad6" name="enlightenment-0.24.1.tar.xz">https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.24.1.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>meson</Dependency>
@@ -23693,6 +23351,7 @@
                 <Dependency>pam-devel</Dependency>
                 <Dependency>libXext-devel</Dependency>
                 <Dependency>wayland-devel</Dependency>
+                <Dependency>connman-devel</Dependency>
                 <Dependency>alsa-lib-devel</Dependency>
                 <Dependency>bluez-libs-devel</Dependency>
                 <Dependency>libxkbcommon-devel</Dependency>
@@ -23710,6 +23369,7 @@
                 <Dependency>acpid</Dependency>
                 <Dependency>pixman</Dependency>
                 <Dependency>udisks2</Dependency>
+                <Dependency>connman</Dependency>
                 <Dependency>alsa-lib</Dependency>
                 <Dependency>bluez-libs</Dependency>
                 <Dependency>polkit-gnome</Dependency>
@@ -23751,8 +23411,8 @@
         </Package>
         <History>
             <Update release="10">
-                <Date>2020-04-30</Date>
-                <Version>0.24.0</Version>
+                <Date>2020-06-05</Date>
+                <Version>0.24.1</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
                 <Email>wascheme@tuta.io</Email>
@@ -25259,7 +24919,7 @@
             <Summary xml:lang="en">Xfce file manager</Summary>
             <Description xml:lang="en">Thunar has been designed from the ground up to be fast and easy-to-use. Its user interface is clean and intuitive, and does not include any confusing or useless options. Thunar is fast and responsive with a good start up time and directory load time. Thunar is accessible using Assistive Technologies and is fully standarts compliant.</Description>
             <Icon>Thunar</Icon>
-            <Archive type="tarbz2" sha1sum="f50547e2751182ac3ee873fa27060685b1d19ef2" name="thunar-1.8.14.tar.bz2">https://archive.xfce.org/src/xfce/thunar/1.8/thunar-1.8.14.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="fc97c166ed78ccdeca8092516cd9edec6d1606a2" name="thunar-1.8.15.tar.bz2">https://archive.xfce.org/src/xfce/thunar/1.8/thunar-1.8.15.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
@@ -25333,7 +24993,7 @@
             <RuntimeDependencies>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
-                <Dependency release="14">thunar</Dependency>
+                <Dependency release="15">thunar</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -25345,13 +25005,20 @@
             <Summary xml:lang="en">Thunar reference documents</Summary>
             <IsA>data:doc</IsA>
             <RuntimeDependencies>
-                <Dependency release="14">thunar</Dependency>
+                <Dependency release="15">thunar</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="doc">/usr/share/gtk-doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="15">
+                <Date>2020-06-05</Date>
+                <Version>1.8.15</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="14">
                 <Date>2020-03-24</Date>
                 <Version>1.8.14</Version>

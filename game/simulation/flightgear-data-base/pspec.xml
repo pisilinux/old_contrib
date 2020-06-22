@@ -13,7 +13,7 @@
         <IsA>data</IsA>
         <Summary>Flightgear data files</Summary>
         <Description>Contains base data files for Flightgear simulator. You can also install additional data files, including the 3 DVD sized world map from the original website.</Description>
-        <Archive sha1sum="8daec4ca2b46cc9a4b3179c25bc79a0a86745faa" type="tarbz2">http://downloads.sourceforge.net/project/flightgear/release-2016.4/FlightGear-2016.4.4-data.tar.bz2</Archive>
+        <Archive sha1sum="06040a4dc271a97c41d9ee098711ae300e6a1bf4" type="tarbz2">http://mirrors.ibiblio.org/flightgear/ftp/release-2020.1/FlightGear-2020.1.1-data.tar.bz2</Archive>
     </Source>
 
     <Package>
@@ -24,6 +24,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-06-11</Date>
+            <Version>2020.1.1</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>
         <Update release="1">
             <Date>2017-01-18</Date>
             <Version>2016.4.4</Version>

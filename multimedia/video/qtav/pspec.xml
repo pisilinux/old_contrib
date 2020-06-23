@@ -14,30 +14,30 @@
         <Archive sha1sum="e9df4e653d62202c446bce70389338db6e84f691" type="targz">https://github.com/wang-bin/QtAV/archive/v1.11.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt5-base-devel</Dependency>
-            <Dependency>openal-devel</Dependency>            
+            <Dependency>openal-devel</Dependency>
             <Dependency>pkgconfig</Dependency>
             <Dependency>zlib-devel</Dependency>
             <Dependency>ffmpeg-devel</Dependency>
-             <Dependency>libXv-devel</Dependency>
-             <Dependency>mesa-devel</Dependency>
+            <Dependency>libXv-devel</Dependency>
+            <Dependency>mesa-devel</Dependency>
             <Dependency>libva-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>libXext-devel</Dependency>
-             <Dependency>portaudio-devel</Dependency>
+            <Dependency>portaudio-devel</Dependency>
             <Dependency>libass-devel</Dependency>
             <Dependency>pulseaudio-libs-devel</Dependency>
-            <Dependency>qt5-declarative-devel</Dependency>            
+            <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>extra-cmake-modules</Dependency>
-        </BuildDependencies>        
+        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>qtav</Name>
-        <IsA>app:gui</IsA>        
+        <IsA>app:gui</IsA>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>openal</Dependency>
-            <Dependency>ffmpeg</Dependency>            
+            <Dependency>ffmpeg</Dependency>
             <Dependency>libgcc</Dependency>
             <Dependency>libXv</Dependency>
             <Dependency>libass</Dependency>
@@ -56,6 +56,7 @@
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package> 
+
     <Package>
         <Name>qtav-devel</Name>
         <Summary>Development files for qtav</Summary>
@@ -63,7 +64,7 @@
             <Dependency release="current">qtav</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include</Path>            
+            <Path fileType="header">/usr/include</Path>
         </Files>
     </Package>
 

@@ -22,9 +22,15 @@
 			https://github.com/gdraheim/zziplib/archive/v0.13.71.tar.gz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>cmake</Dependency>
 			<Dependency>python3</Dependency>
+			<Dependency>libxslt</Dependency>
 			<Dependency>zlib-devel</Dependency>
+			<Dependency>aalib-devel</Dependency>
+			<Dependency>docbook-xsl</Dependency>
+			<Dependency>docbook-xml</Dependency>
 			<Dependency>libsdl-devel</Dependency>
+			<Dependency>libsdl2-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
 			<!--
@@ -72,6 +78,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2020-06-23</Date>
+			<Version>0.13.71</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2020-04-22</Date>
 			<Version>0.13.71</Version>

@@ -9,24 +9,22 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-w = "-Wno-unused-result -Wno-deprecated-declarations"
-
 def setup():
 	shelltools.makedirs("build")
 	shelltools.cd("build")
 
 	shelltools.export("CFLAGS", "-lpthread")
-	pisitools.cxxflags.add(w)
+	pisitools.cxxflags.add("-Wno-unused-result -Wno-deprecated-declarations")
 	cmaketools.configure("-DCMAKE_BUILD_TYPE=Release", sourceDir = '..')
 
 def build():
 	shelltools.cd("build")
+	cmaketools.make()
 	cmaketools.make("translations")
 
 def install():
 	shelltools.cd("build")
 	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
-	shelltools.cd("..")
 
-	pisitools.dodoc("AUTHORS", "CHANGELOG.md", "LICENSE", "README.md")
+	pisitools.dodoc("../AUTHORS", "../CHANGELOG.md", "../LICENSE", "../README.md")
 

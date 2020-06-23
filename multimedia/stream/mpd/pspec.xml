@@ -15,8 +15,8 @@
 		<Description>
 			Music Player Daemon (MPD) is a flexible, powerful, server-side application for playing music. Through plugins and libraries it can play a variety of sound files while being controlled by its network protocol.
 		</Description>
-		<Archive sha1sum="af40bc1e3af94686c8c4d07d753f2a64a3b64521" type="tarxz">
-			https://musicpd.org/download/mpd/0.21/mpd-0.21.23.tar.xz
+		<Archive sha1sum="ffbc50a8a08951de132ba990b93d55cade58ef57" type="tarxz">
+			https://musicpd.org/download/mpd/0.21/mpd-0.21.24.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
@@ -65,7 +65,6 @@
 			<Dependency>libcdio-paranoia-devel</Dependency>
 			<Dependency>jack-audio-connection-kit-devel</Dependency>
 			<!-- for documentation build. -->
-			<!--
 			<Dependency>python3-six</Dependency>
 			<Dependency>python3-Babel</Dependency>
 			<Dependency>python3-sphinx</Dependency>
@@ -75,7 +74,6 @@
 			<Dependency>python3-snowballstemmer</Dependency>
 			<Dependency>python3-sphinx-alabaster-theme</Dependency>
 			<Dependency>python3-sphinxcontrib-websupport</Dependency>
-			-->
 		</BuildDependencies>
 	</Source>
 
@@ -132,7 +130,7 @@
 			<Path fileType="executable">/usr/bin</Path>
 			<!-- <Path fileType="data">/usr/lib/tmpfiles.d/</Path> -->
 			<Path fileType="data">/usr/share/icons</Path>
-			<!-- <Path fileType="man">/usr/share/man</Path> -->
+			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 		<AdditionalFiles>
@@ -147,6 +145,13 @@
 	</Package>
 
 	<History>
+		<Update release="17">
+			<Date>2020-06-23</Date>
+			<Version>0.21.24</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="16">
 			<Date>2020-04-24</Date>
 			<Version>0.21.23</Version>

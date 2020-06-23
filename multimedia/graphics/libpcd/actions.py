@@ -8,21 +8,11 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "--enable-outputs \
-     --disable-visualizer \
-     --disable-clock \
-     --disable-static \
-     --with-taglib \
-    "
-
-def setup():
-	autotools.configure(j)
-
 def build():
-	autotools.make()
+	autotools.make("prefix=/usr")
 
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s prefix=/usr" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "COPYING", "INSTALL", "NEWS")
+	pisitools.dodoc("README")
 

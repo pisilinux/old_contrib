@@ -14,7 +14,6 @@ z = "-Wno-strict-prototypes -Wno-stringop-truncation \
 
 def build():
 	pisitools.cflags.add(z)
-
 	pythonmodules.compile()
 
 def install():

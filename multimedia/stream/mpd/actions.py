@@ -12,7 +12,7 @@ def setup():
 #	pisitools.dosed("doc/meson.build", "sphinx-build", "sphinx-build3")
 	pisitools.ldflags.add("-lbsd")
 	pisitools.cxxflags.add("-lbsd")
-	mesontools.configure("-Ddocumentation=false -Dfifo=false \
+	mesontools.configure("-Ddocumentation=true -Dfifo=false \
 	\
 	-Dtcp=true \
 	-Ddsd=true \

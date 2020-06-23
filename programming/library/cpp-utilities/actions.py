@@ -9,24 +9,26 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "-DCMAKE_BUILD_TYPE=release \
-     -DCMAKE_INSTALL_PREFIX=/usr \
-     -DENABLE_DOCUMENTATION=ON \
-     -DBUILD_SHARED_LIBS=ON \
-     -DENABLE_UTILS=ON -L \
-    "
+i = "-DBUILD_SHARED_LIBS=ON \
+     -DUSE_STANDARD_FILESYSTEM=OFF \
+     -DFORCE_BOOST_IOSTREAMS_FOR_NATIVE_FILE_BUFFER=ON -L \
+"
 
 def setup():
-	shelltools.system("./bootstrap")
-	cmaketools.configure(j)
+	shelltools.export("CXX", "/usr/bin/clang++")
+	shelltools.export("CC", "/usr/bin/clang")
+
+	shelltools.makedirs("build")
+	shelltools.cd("build")
+	cmaketools.configure(i, sourceDir = '..')
 
 def build():
+	shelltools.cd("build")
 	cmaketools.make()
 
 def install():
+	shelltools.cd("build")
 	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
-	for t in ["utils/nfs-cat", "utils/nfs-cp", "utils/nfs-ls"]:
-		pisitools.dobin(t)
 
-	pisitools.dodoc("COPYING", "README")
+	pisitools.dodoc("../LICENSE", "../README.md")
 

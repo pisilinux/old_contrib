@@ -30,7 +30,7 @@
 			<Dependency>qt5-multimedia-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">input_fields_improves.patch</Patch>
+			<Patch level="1">backport.patch</Patch>
 		</Patches>
 	</Source>
 

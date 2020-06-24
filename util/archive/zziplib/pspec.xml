@@ -48,7 +48,7 @@
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="library">/usr/lib</Path>
-			<Path fileType="data">/usr/share/aclocal</Path>
+			<Path fileType="man">/usr/share/man/man3</Path>
 		</Files>
 	</Package>
 
@@ -58,11 +58,12 @@
 		<RuntimeDependencies>
 			<Dependency release="current">zziplib</Dependency>
 			<Dependency>libsdl-devel</Dependency>
+			<Dependency>libsdl2-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>
 			<Path fileType="library">/usr/lib/pkgconfig</Path>
-			<Path fileType="man">/usr/share/man/man3</Path>
+			<Path fileType="data">/usr/share/aclocal</Path>
 		</Files>
 	</Package>
 

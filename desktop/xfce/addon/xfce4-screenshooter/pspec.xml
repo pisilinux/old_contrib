@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-screenshooter</Name>
-		<Homepage>https://goodies.xfce.org/projects/applications/xfce4-screenshooter</Homepage>
+		<Homepage>https://docs.xfce.org/apps/screenshooter/start</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -19,8 +19,11 @@
 			https://archive.xfce.org/src/apps/xfce4-screenshooter/1.9/xfce4-screenshooter-1.9.7.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>python3</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
 			<Dependency>libsoup-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
@@ -32,10 +35,13 @@
 		<RuntimeDependencies>
 			<Dependency>exo</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>libSM</Dependency>
 			<Dependency>libICE</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libxml2</Dependency>
 			<Dependency>libXext</Dependency>
 			<Dependency>libsoup</Dependency>
 			<Dependency>libXfixes</Dependency>
@@ -56,6 +62,13 @@
 	</Package>
 
 	<History>
+		<Update release="7">
+			<Date>2020-06-25</Date>
+			<Version>1.9.7</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="6">
 			<Date>2019-11-19</Date>
 			<Version>1.9.7</Version>

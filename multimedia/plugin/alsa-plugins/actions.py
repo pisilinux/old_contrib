@@ -29,7 +29,7 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 	pisitools.insinto("/usr/share/alsa/alsa.conf.d", "pulse/%s.example" % t, "%s" % t)
-	pisitools.dosym("usr/share/alsa/alsa.conf.d/%s" % t, "/etc/alsa/conf.d/%s" % t)
+	pisitools.dosym("/usr/share/alsa/alsa.conf.d/%s" % t, "/etc/alsa/conf.d/%s" % t)
 
 	pisitools.dodoc("COPYING", "COPYING.GPL", "doc/*.txt", "doc/README*")
 

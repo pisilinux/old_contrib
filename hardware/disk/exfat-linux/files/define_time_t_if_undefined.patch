@@ -1,0 +1,14 @@
+## https://github.com/arter97/exfat-linux/pull/13
+--- a/misc.c	2019-10-29 11:35:05.000000000 +0300
++++ b/misc.c	2020-06-25 07:30:06.661878960 +0300
+@@ -20,6 +20,10 @@
+ #include "exfat.h"
+ #include "version.h"
+ 
++#ifndef _TIME_T
++typedef __kernel_old_time_t	time_t;
++#endif
++
+ #ifdef CONFIG_EXFAT_UEVENT
+ static struct kobject exfat_uevent_kobj;
+ 

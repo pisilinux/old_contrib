@@ -10,13 +10,14 @@ from pisi.actionsapi import get
 
 def setup():
 	pisitools.cflags.add("-Wno-deprecated-declarations")
-	autotools.configure("--disable-static --with-gnome-default-appsdir=no")
+	autotools.configure("--disable-static")
 
 def build():
 	autotools.make()
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	pisitools.removeDir("/usr/share/gnome-control-center")
 
 	pisitools.dodoc("AUTHORS", "ChangeLog",	"COPYING", "NEWS", "README", "THANKS")
 

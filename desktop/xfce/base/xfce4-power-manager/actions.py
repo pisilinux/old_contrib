@@ -9,8 +9,6 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-#	pisitools.dosed("src/xfpm-polkit.c", "procfs.h", "sys/procfs.h")
-#	pisitools.dosed("configure", "procfs.h", "sys/procfs.h")
 	autotools.configure("--enable-network-manager --enable-polkit")
 
 def build():

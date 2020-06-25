@@ -8,13 +8,14 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+i = "--enable-procacpi \
+     --enable-sysfsacpi \
+     --enable-libsensors \
+     --enable-notification \
+    "
+
 def setup():
-	autotools.configure("--prefix=/usr \
-	--enable-netcat \
-	--enable-procacpi \
-	--enable-sysfsacpi \
-	--enable-libsensors \
-	--enable-notification")
+	autotools.configure(i)
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
@@ -25,3 +26,4 @@ def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
+

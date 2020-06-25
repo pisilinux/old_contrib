@@ -42,7 +42,7 @@
 		<Name>tagparser-devel</Name>
 		<RuntimeDependencies>
 			<Dependency release="current">tagparser</Dependency>
-			<Dependency>cpp-utilities</Dependency>
+			<Dependency>cpp-utilities-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>

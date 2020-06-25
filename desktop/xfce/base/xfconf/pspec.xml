@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfconf</Name>
@@ -19,6 +19,7 @@
 			https://archive.xfce.org/src/xfce/xfconf/4.14/xfconf-4.14.3.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>python3</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>python-six</Dependency>
 			<Dependency>vala-devel</Dependency>
@@ -61,7 +62,7 @@
 
 	<History>
 		<Update release="11">
-			<Date>2020-04-30</Date>
+			<Date>2020-06-25</Date>
 			<Version>4.14.3</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>

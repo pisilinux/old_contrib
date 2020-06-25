@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-notes-plugin</Name>
@@ -13,12 +13,14 @@
 		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>Notes plugin provides you a quick way you had do with Post-It's</Summary>
 		<Description>The notes plugin provides you a quick way to paste text, to write down a list of things, to leave a note to your friend, or whatever you had do with Post-It's.</Description>
-		<Archive sha1sum="37d1a497ea26e796336feb4b0a247b7c4c7a66cd" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-notes-plugin/1.8/xfce4-notes-plugin-1.8.1.tar.bz2</Archive>
+		<Archive sha1sum="37d1a497ea26e796336feb4b0a247b7c4c7a66cd" type="tarbz2">
+			https://archive.xfce.org/src/panel-plugins/xfce4-notes-plugin/1.8/xfce4-notes-plugin-1.8.1.tar.bz2
+		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
+			<Dependency>libunique-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
-			<Dependency>libunique-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -48,6 +50,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2020-06-25</Date>
+			<Version>1.8.1</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>Ayhan Yalçınsoy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Update>
 		<Update release="4">
 			<Date>2015-10-06</Date>
 			<Version>1.8.1</Version>

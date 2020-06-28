@@ -43,7 +43,7 @@
 		<Update release="5">
 			<Date>2020-06-25</Date>
 			<Version>0.5.1</Version>
-			<Comment>Ver. bump</Comment>
+			<Comment>Rebuild.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>

@@ -42,6 +42,7 @@
 			<Dependency>tiff</Dependency>
 			<Dependency>webp</Dependency>
 			<Dependency>lirc</Dependency>
+			<Dependency>exiv2</Dependency>
 			<Dependency>fbida</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>glib2</Dependency>

@@ -13,8 +13,8 @@
 		<PartOf>hardware.disk</PartOf>
 		<Summary>gnome disk utility</Summary>
 		<Description>View, modify and configure disks and media.</Description>
-		<Archive sha1sum="7e4a4bfc7f48abca5beb653e90e8ca8f3cd7e72b" type="tarxz">
-			https://download.gnome.org/sources/gnome-disk-utility/3.36/gnome-disk-utility-3.36.1.tar.xz
+		<Archive sha1sum="e121768d591fd621b6c8c0d04ad594fc83ed7885" type="tarxz">
+			https://download.gnome.org/sources/gnome-disk-utility/3.34/gnome-disk-utility-3.34.5.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
@@ -60,7 +60,7 @@
 	<History>
 		<Update release="1">
 			<Date>2020-06-24</Date>
-			<Version>3.36.1</Version>
+			<Version>3.34.5</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

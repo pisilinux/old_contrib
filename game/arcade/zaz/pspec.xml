@@ -13,7 +13,7 @@
         <Icon>zaz</Icon>
         <Summary>Luxor and Zuma like game</Summary>
         <Description>Zaz is a game where the player has to get rid of incoming balls by arranging them in triplets.</Description>
-        <Archive sha1sum="a453b74d30bfb9b349b7a8213122a18c5e851924" type="targz">https://sourceforge.net/projects/zaz/files/zaz-1.0.0.tar.bz2</Archive>
+        <Archive sha1sum="a453b74d30bfb9b349b7a8213122a18c5e851924" type="tarbz2">https://sourceforge.net/projects/zaz/files/zaz-1.0.0.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libsdl-devel</Dependency>
             <Dependency>libvorbis-devel</Dependency>

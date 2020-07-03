@@ -41,7 +41,6 @@
 		<Name>florence</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk3</Dependency>
-			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>libX11</Dependency>
@@ -81,7 +80,7 @@
 
 	<History>
 		<Update release="4">
-			<Date>2020-06-24</Date>
+			<Date>2020-01-09</Date>
 			<Version>0.6.3</Version>
 			<Comment>Rebuild.</Comment>
 			<Name>fury</Name>

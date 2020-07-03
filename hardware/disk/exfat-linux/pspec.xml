@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>exfat-linux</Name>
@@ -15,18 +15,14 @@
 		<Description>
 			This exFAT filesystem module for Linux kernel is based on sdFAT drivers by Samsung, which is used with their smartphone lineups.
 		</Description>
-		<Archive sha1sum="b03e8314ac52aacd2b5ae0f3ec643c353685d468" type="targz">
-			https://codeload.github.com/arter97/exfat-linux/tar.gz/2.2.0-3arter97
+		<Archive sha1sum="9725a30410a3816536077a42e676e9b86133ce3c" type="targz">
+			https://codeload.github.com/arter97/exfat-linux/tar.gz/2.2.0-2arter97
 		</Archive>
 		<BuildDependencies>
 			<Dependency>kernel</Dependency>
 			<Dependency>linux-firmware</Dependency>
 			<Dependency>kernel-module-headers</Dependency>
 		</BuildDependencies>
-		<Patches>
-			<Patch level="1">define_time_t_if_undefined.patch</Patch>
-			<!-- <Patch level="1">time_t_to_ktime_t.patch</Patch> -->
-		</Patches>
 	</Source>
 
 	<Package>
@@ -42,7 +38,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-25</Date>
+			<Date>2019-10-15</Date>
 			<Version>2.2.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

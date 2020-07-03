@@ -8,14 +8,7 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-i = "-Wno-deprecated-declarations \
-     -Wno-unused-result \
-     -Wno-implicit-function-declaration \
-     -Wno-incompatible-pointer-types \
-    "
-
 def setup():
-	pisitools.cflags.add(i)
 	autotools.configure("--disable-static --without-docs")
 
 def build():

@@ -26,7 +26,6 @@
 			<Dependency>tagparser-devel</Dependency>
 			<Dependency>qtutilities-devel</Dependency>
 			<Dependency>cpp-utilities-devel</Dependency>
-			<Dependency>qt5-webengine-devel</Dependency>
 			<Dependency>qt5-multimedia-devel</Dependency>
 			<!-- <Dependency>reflective-rapidjson-devel</Dependency> -->
 		</BuildDependencies>
@@ -40,7 +39,6 @@
 			<Dependency>tagparser</Dependency>
 			<Dependency>qtutilities</Dependency>
 			<Dependency>cpp-utilities</Dependency>
-			<Dependency>qt5-webengine</Dependency>
 			<Dependency>qt5-declarative</Dependency>
 			<!-- <Dependency>reflective-rapidjson</Dependency> -->
 		</RuntimeDependencies>

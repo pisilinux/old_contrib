@@ -16,8 +16,8 @@
 		<Description>
 			A tag editor with Qt GUI and command-line interface supporting MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska.
 		</Description>
-		<Archive sha1sum="c4875025258d9bc99b095fbc43632509de11bb56" type="targz">
-			https://github.com/Martchus/tageditor/archive/v3.3.7.tar.gz
+		<Archive sha1sum="a79bf88e853c532142406b38c58f073b6cbcb3ff" type="targz">
+			https://github.com/Martchus/tageditor/archive/v3.3.8.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -28,10 +28,8 @@
 			<Dependency>cpp-utilities-devel</Dependency>
 			<Dependency>qt5-webengine-devel</Dependency>
 			<Dependency>qt5-multimedia-devel</Dependency>
+			<!-- <Dependency>reflective-rapidjson-devel</Dependency> -->
 		</BuildDependencies>
-		<Patches>
-			<Patch level="1">backport.patch</Patch>
-		</Patches>
 	</Source>
 
 	<Package>
@@ -44,6 +42,7 @@
 			<Dependency>cpp-utilities</Dependency>
 			<Dependency>qt5-webengine</Dependency>
 			<Dependency>qt5-declarative</Dependency>
+			<!-- <Dependency>reflective-rapidjson</Dependency> -->
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
@@ -54,8 +53,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-05</Date>
-			<Version>3.3.7</Version>
+			<Date>2020-07-08</Date>
+			<Version>3.3.8</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

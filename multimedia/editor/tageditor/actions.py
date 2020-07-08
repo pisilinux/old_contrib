@@ -9,16 +9,16 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-i = "-DWEBVIEW_PROVIDER=webengine \
+j = "-DDISABLE_DEPRECATED_QT_FEATURES=ON \
      -DJS_PROVIDER=qml \
-     -DDISABLE_DEPRECATED_QT_FEATURES=ON -L \
+     -DWEBVIEW_PROVIDER=none -L \
     "
 
 def setup():
 	pisitools.cxxflags.add("-Wno-unused-result")
 	shelltools.makedirs("build")
 	shelltools.cd("build")
-	cmaketools.configure(i, sourceDir = '..')
+	cmaketools.configure(j, sourceDir = '..')
 
 def build():
 	shelltools.cd("build")

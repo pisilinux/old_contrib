@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>libXpresent</Name>
@@ -40,7 +40,7 @@
 		<RuntimeDependencies>
 			<Dependency release="current">libXpresent</Dependency>
 			<Dependency>xorg-proto</Dependency>
-			<Dependency>libX11</Dependency>
+			<Dependency>libX11-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>
@@ -50,7 +50,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-03-03</Date>
+			<Date>2020-06-25</Date>
 			<Version>1.0.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

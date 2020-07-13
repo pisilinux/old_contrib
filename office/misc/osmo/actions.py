@@ -8,11 +8,16 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-options = "--enable-backup --enable-printing \
---with-notes --with-tasks --with-contacts"
+j = "--enable-backup \
+     --enable-printing \
+     --with-notes \
+     --with-tasks \
+     --with-contacts \
+    "
 
 def setup():
-	autotools.configure(options)
+	pisitools.cflags.add("-Wno-pointer-sign -Wno-unused-result")
+	autotools.configure(j)
 
 def build():
 	autotools.make()

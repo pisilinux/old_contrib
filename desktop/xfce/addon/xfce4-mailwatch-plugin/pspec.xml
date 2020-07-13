@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-mailwatch-plugin</Name>
@@ -13,18 +13,20 @@
 		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>A mailbox plugin for Xfce4</Summary>
 		<Description>A mailbox watch/check plugin for the Xfce4 panel</Description>
-		<Archive sha1sum="d0ab5e543211b951e01242efeb4ab3145db5c4c4" type="tarbz2">http://archive.xfce.org/src/panel-plugins/xfce4-mailwatch-plugin/1.2/xfce4-mailwatch-plugin-1.2.0.tar.bz2</Archive>
+		<Archive sha1sum="d0ab5e543211b951e01242efeb4ab3145db5c4c4" type="tarbz2">
+			https://archive.xfce.org/src/panel-plugins/xfce4-mailwatch-plugin/1.2/xfce4-mailwatch-plugin-1.2.0.tar.bz2
+		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
 			<Dependency>gtk2-devel</Dependency>
 			<Dependency>gnutls-devel</Dependency>
+			<Dependency>openssl-devel</Dependency>
+			<Dependency>libgcrypt-devel</Dependency>
 			<Dependency>gdk-pixbuf-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
-			<Dependency>openssl-devel</Dependency>
-			<Dependency>libgcrypt-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -34,12 +36,12 @@
 			<Dependency>exo</Dependency>
 			<Dependency>gtk2</Dependency>
 			<Dependency>gnutls</Dependency>
+			<Dependency>openssl</Dependency>
+			<Dependency>libgcrypt</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>xfce4-panel</Dependency>
 			<Dependency>libxfce4util</Dependency>
-			<Dependency>openssl</Dependency>
-			<Dependency>libgcrypt</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib</Path>
@@ -50,6 +52,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2020-07-14</Date>
+			<Version>1.2.0</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="2">
 			<Date>2015-03-04</Date>
 			<Version>1.2.0</Version>
@@ -66,3 +75,4 @@
 		</Update>
 	</History>
 </PISI>
+

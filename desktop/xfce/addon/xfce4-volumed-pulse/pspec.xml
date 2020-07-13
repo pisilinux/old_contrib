@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce4-volumed-pulse</Name>
@@ -9,18 +9,16 @@
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv3</License>
-		<IsA>app:gui</IsA>
+		<IsA>app</IsA>
 		<PartOf>desktop.xfce.addon</PartOf>
 		<Summary>Fork of xfce4-volumed with support for PulseAudio</Summary>
-		<Description>
-			Basic daemon enabling the XF86 Volume keys and supporting synchronous volume notifications
-		</Description>
+		<Description>Basic daemon enabling the XF86 Volume keys and supporting synchronous volume notifications.</Description>
 		<Archive sha1sum="ee28e49fff77b26e9297a442d502602e33619e28" type="tarbz2">
-			http://archive.xfce.org/src/apps/xfce4-volumed-pulse/0.2/xfce4-volumed-pulse-0.2.3.tar.bz2
+			https://archive.xfce.org/src/apps/xfce4-volumed-pulse/0.2/xfce4-volumed-pulse-0.2.3.tar.bz2
 		</Archive>
 		<BuildDependencies>
-			<Dependency>pulseaudio-libs-devel</Dependency>
 			<Dependency>gst-plugins-base-devel</Dependency>
+			<Dependency>pulseaudio-libs-devel</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>keybinder-devel</Dependency>
@@ -37,6 +35,7 @@
 			<Dependency>libnotify</Dependency>
 			<Dependency>keybinder</Dependency>
 			<Dependency>xfconf</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>gtk3</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -47,6 +46,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2020-06-25</Date>
+			<Version>0.2.3</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2019-07-26</Date>
 			<Version>0.2.3</Version>

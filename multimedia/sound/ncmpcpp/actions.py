@@ -8,16 +8,15 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+j = "--enable-outputs \
+     --disable-visualizer \
+     --disable-clock \
+     --disable-static \
+     --with-taglib \
+    "
+
 def setup():
-	autotools.configure("\
-	\
-	--enable-outputs \
-	\
-	--disable-visualizer \
-	--disable-clock \
-	--disable-static \
-	\
-	--with-taglib")
+	autotools.configure(j)
 
 def build():
 	autotools.make()

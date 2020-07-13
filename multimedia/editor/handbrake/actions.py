@@ -9,23 +9,25 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+i = "--disable-static \
+     --disable-rpath \
+     --disable-silent-rules \
+     --enable-qsv \
+     --enable-x265 \
+     --enable-numa \
+     --enable-fdk-aac \
+     --enable-libav-aac \
+    "
+
 def setup():
+	shelltools.export("CXXFLAGS", get.CXXFLAGS())
+	shelltools.export("CFLAGS", get.CFLAGS())
 	shelltools.cd("gtk")
 #	pisitools.dosed("configure.ac", "AM_CONFIG_HEADER", "AC_CONFIG_HEADERS")
 #	pisitools.dosed("configure.ac", "AM_PROG_CC_STDC", "AC_PROG_CC")
 	autotools.autoreconf("-fiv")
 	shelltools.cd("..")
-	autotools.rawConfigure("--prefix=/usr --force \
-	\
-	--enable-qsv \
-	--enable-x265 \
-	--enable-numa \
-	--enable-fdk-aac \
-	--enable-libav-aac \
-	\
-	--disable-rpath \
-	--disable-static \
-	--disable-silent-rules")
+	autotools.rawConfigure("--prefix=/usr --force %s" % i)
 
 def build():
 	shelltools.cd("build")
@@ -34,12 +36,6 @@ def build():
 def install():
 	shelltools.cd("build")
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	shelltools.cd("..")
-	pisitools.dodoc(\
-	\
-	"AUTHORS.markdown", \
-	"COPYING", \
-	"LICENSE", \
-	"NEWS.markdown", \
-	"README.markdown", "THANKS.markdown")
+
+	pisitools.dodoc("../*.markdown", "../COPYING", "../LICENSE")
 

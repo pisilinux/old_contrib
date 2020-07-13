@@ -6,13 +6,12 @@
 
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
 
 def setup():
 #	pisitools.dosed("doc/meson.build", "sphinx-build", "sphinx-build3")
 	pisitools.ldflags.add("-lbsd")
 	pisitools.cxxflags.add("-lbsd")
-	mesontools.configure("-Ddocumentation=false -Dfifo=false \
+	mesontools.configure("-Ddocumentation=true -Dfifo=false \
 	\
 	-Dtcp=true \
 	-Ddsd=true \
@@ -51,9 +50,12 @@ def setup():
 	-Dyajl=enabled \
 	-Dzlib=enabled \
 	-Dzzip=enabled \
+	-Dqobuz=enabled \
+	-Dtidal=enabled \
 	-Diconv=enabled \
 	-Dshout=enabled \
 	-Dbzip2=enabled \
+	-Dshine=enabled \
 	-Dpulse=enabled \
 	-Dexpat=enabled \
 	-Dopenal=enabled \
@@ -84,10 +86,7 @@ def setup():
 	-Dzeroconf=auto \
 	\
 	-Dsoxr=disabled \
-	-Dqobuz=disabled \
-	-Dtidal=disabled \
 	-Dsndio=disabled \
-	-Dshine=disabled \
 	-Dadplug=disabled \
 	-Dtremor=disabled \
 	-Dmpcdec=disabled \

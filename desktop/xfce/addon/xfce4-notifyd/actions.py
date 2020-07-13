@@ -8,6 +8,8 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+pisitools.cflags.add("-Wno-deprecated-declarations")
+
 def setup():
 	autotools.configure("--enable-dbus-start-daemon \
 	--enable-old-get-server-information-signature \

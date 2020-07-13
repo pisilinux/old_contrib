@@ -8,15 +8,15 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+i = "--disable-dependency-tracking \
+     --disable-clutter \
+     --enable-tray-plugin \
+     --enable-notify-plugin \
+     --enable-mpris2-plugin \
+    "
+
 def setup():
-	autotools.configure("--disable-dependency-tracking \
-	--disable-clutter \
-	\
-	--enable-gtk-doc \
-	--enable-taglib \
-	--enable-tray-plugin \
-	--enable-notify-plugin \
-	--enable-mpris2-plugin")
+	autotools.configure(i)
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
@@ -26,5 +26,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "INSTALL", "NEWS", "README", "THANKS", "TODO")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "THANKS", "TODO")
 

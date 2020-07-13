@@ -42,6 +42,8 @@
 			<Dependency>tiff</Dependency>
 			<Dependency>webp</Dependency>
 			<Dependency>lirc</Dependency>
+			<Dependency>exiv2</Dependency>
+			<Dependency>fbida</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>lcms2</Dependency>
@@ -69,7 +71,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-03-24</Date>
+			<Date>2020-06-23</Date>
 			<Version>1.5.1</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

@@ -20,6 +20,7 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
+			<Dependency>libxslt</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -30,6 +31,7 @@
 			<Dependency>glibc</Dependency>
 		</RuntimeDependencies>
 		<Files>
+			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="data">/usr/lib/cmake/*</Path>
 			<Path fileType="library">/usr/lib/libnfs.so</Path>
 			<Path fileType="library">/usr/lib/libnfs.so.11.0.0</Path>
@@ -52,6 +54,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2020-06-23</Date>
+			<Version>4.0.0</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="2">
 			<Date>2019-10-28</Date>
 			<Version>4.0.0</Version>

@@ -18,7 +18,8 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>efl-devel</Dependency>
-			<!-- <Dependency>python-efl</Dependency> -->
+			<Dependency>python-efl</Dependency>
+			<Dependency>python3-devel</Dependency>
 			<Dependency>connman-devel</Dependency>
 			
 		</BuildDependencies>
@@ -28,7 +29,7 @@
 		<Name>econnman</Name>
 		<RuntimeDependencies>
 			<Dependency>connman</Dependency>
-			<!-- <Dependency>python-efl</Dependency> -->
+			<Dependency>python-efl</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin/econnman-bin</Path>

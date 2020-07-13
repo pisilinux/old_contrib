@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>thunar-vcs-plugin</Name>
-		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-vcs-plugin</Homepage>
+		<Homepage>https://docs.xfce.org/xfce/thunar/thunar-vcs-plugin</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -16,7 +16,7 @@
 			The Thunar VCS Plugin adds Subversion and GIT actions to the context menu of thunar. This gives a SVN integration and GIT integration to Thunar.
 		</Description>
 		<Archive sha1sum="bf94601c450165e63267343f9460367883b84c5a" type="tarbz2">
-			http://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.2/thunar-vcs-plugin-0.2.0.tar.bz2
+			https://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.2/thunar-vcs-plugin-0.2.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -29,6 +29,7 @@
 	<Package>
 		<Name>thunar-vcs-plugin</Name>
 		<RuntimeDependencies>
+			<Dependency>apr</Dependency>
 			<Dependency>exo</Dependency>
 			<Dependency>atk</Dependency>
 			<Dependency>gtk3</Dependency>
@@ -36,9 +37,10 @@
 			<Dependency>pango</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>thunar</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>subversion</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4util</Dependency>
-			<Dependency>subversion</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/libexec</Path>
@@ -50,6 +52,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2020-06-25</Date>
+			<Version>0.2.0</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2019-07-26</Date>
 			<Version>0.2.0</Version>

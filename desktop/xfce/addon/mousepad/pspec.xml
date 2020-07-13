@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>mousepad</Name>
@@ -16,11 +16,12 @@
 			Mousepad aims to be an easy-to-use and fast editor. Our target is an editor for quickly editing text files, not a development environment or an editor with a huge bunch of plugins. On the other hand we try to use the latest Gtk+ features available, which means that if Gtk adds something new in a major release that is useful for the editor, we will likely bump the Gtk dependency and integrate this new feature in Mousepad.
 		</Description>
 		<Archive sha1sum="26f0a2860973c4acd425dc8b5e7736ba6cb9a459" type="tarbz2">
-			http://archive.xfce.org/src/apps/mousepad/0.4/mousepad-0.4.2.tar.bz2
+			https://archive.xfce.org/src/apps/mousepad/0.4/mousepad-0.4.2.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>xfconf-devel</Dependency>
 			<Dependency>libxml2-devel</Dependency>
@@ -47,6 +48,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2020-06-25</Date>
+			<Version>0.4.2</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2019-07-28</Date>
 			<Version>0.4.2</Version>

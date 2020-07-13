@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfburn</Name>
@@ -25,6 +25,8 @@
 			<Dependency>libgudev-devel</Dependency>
 			<Dependency>librsvg-devel</Dependency>
 			<Dependency>libburn-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>exo-devel</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>gst-plugins-base-devel</Dependency>
@@ -58,7 +60,7 @@
 
 	<History>
 		<Update release="7">
-			<Date>2020-03-16</Date>
+			<Date>2020-06-25</Date>
 			<Version>0.6.2</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>

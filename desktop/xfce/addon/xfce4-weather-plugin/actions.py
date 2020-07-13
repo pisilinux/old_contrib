@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--prefix=/usr")
+	autotools.configure()
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 

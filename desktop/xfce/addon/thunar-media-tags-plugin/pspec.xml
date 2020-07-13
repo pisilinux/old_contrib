@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>thunar-media-tags-plugin</Name>
-		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-media-tags-plugin</Homepage>
+		<Homepage>https://docs.xfce.org/xfce/thunar/media-tags</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -17,28 +17,29 @@
 			The Thunar Media Tags Plugin (thunar-media-tags-plugin) adds special features for media files to the Thunar File Manager.
 		</Description>
 		<Archive sha1sum="93beb24d8b3ba2b7da22c18e6b23512d45516e38" type="tarbz2">
-			http://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin/0.3/thunar-media-tags-plugin-0.3.0.tar.bz2
+			https://archive.xfce.org/src/thunar-plugins/thunar-media-tags-plugin/0.3/thunar-media-tags-plugin-0.3.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>gettext</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>exo-devel</Dependency>
 			<Dependency>thunar-devel</Dependency>
 			<Dependency>taglib-devel</Dependency>
-			<Dependency>exo-devel</Dependency>
-			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>libxml2-devel</Dependency>
-			<Dependency>intltool</Dependency>
-			<Dependency>gettext</Dependency>
+			<Dependency>libxfce4ui-devel</Dependency>
+			<Dependency>libxfce4util-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>thunar-media-tags-plugin</Name>
 		<RuntimeDependencies>
+			<Dependency>exo</Dependency>
+			<Dependency>atk</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>thunar</Dependency>
 			<Dependency>taglib</Dependency>
-			<Dependency>exo</Dependency>
-			<Dependency>atk</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib</Path>
@@ -48,6 +49,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2020-06-25</Date>
+			<Version>0.3.0</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2019-07-26</Date>
 			<Version>0.3.0</Version>

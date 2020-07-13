@@ -9,6 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+	pisitools.cflags.add("-Wno-deprecated-declarations")
 	autotools.configure("--enable-gio-unix --enable-gtk2 --disable-gtk-doc")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")

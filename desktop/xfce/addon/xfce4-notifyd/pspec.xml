@@ -19,6 +19,7 @@
 			https://archive.xfce.org/src/apps/xfce4-notifyd/0.6/xfce4-notifyd-0.6.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>python3</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libXpm-devel</Dependency>
@@ -35,10 +36,12 @@
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
 			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>libX11</Dependency>
 			<Dependency>xfconf</Dependency>
+			<Dependency>harfbuzz</Dependency>
 			<Dependency>libnotify</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
@@ -56,16 +59,9 @@
 	</Package>
 
 	<History>
-		<Update release="6">
-			<Date>2020-04-30</Date>
-			<Version>0.6.1</Version>
-			<Comment>Ver. bump</Comment>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Update>
 		<Update release="5">
-			<Date>2020-04-08</Date>
-			<Version>0.6.0</Version>
+			<Date>2020-06-25</Date>
+			<Version>0.6.1</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>xfce-polkit</Name>
@@ -17,6 +17,7 @@
 			https://codeload.github.com/ncopa/xfce-polkit/tar.gz/v0.3
 		</Archive>
 		<BuildDependencies>
+			<Dependency>python3</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>polkit-devel</Dependency>
@@ -24,12 +25,15 @@
 			<Dependency>libxfce4ui-devel</Dependency>
 		</BuildDependencies>
 	</Source>
+
 	<Package>
 		<Name>xfce-polkit</Name>
 		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>polkit</Dependency>
 			<Dependency>libpcre2</Dependency>
+			<Dependency>libxfce4ui</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>
@@ -37,7 +41,15 @@
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
+
 	<History>
+		<Update release="2">
+			<Version>0.3</Version>
+			<Date>2020-06-25</Date>
+			<Comment>Rebuild.</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
 		<Update release="1">
 			<Version>0.3</Version>
 			<Date>2019-07-11</Date>
@@ -47,3 +59,4 @@
 		</Update>
 	</History>
 </PISI>
+

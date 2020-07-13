@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>thunar-archive-plugin</Name>
-		<Homepage>https://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin</Homepage>
+		<Homepage>https://docs.xfce.org/xfce/thunar/archive</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -14,15 +14,14 @@
 		<Summary>A plugin allows you to create and extract archive files</Summary>
 		<Description>The Thunar Archive Plugin allows you to create and extract archive files using the file context menus in the Thunar file manager.</Description>
 		<Archive sha1sum="a5f2e9c57b2439364b089eeccd1a7d0e926a0cc2" type="tarbz2">
-			http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.4/thunar-archive-plugin-0.4.0.tar.bz2
+			https://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.4/thunar-archive-plugin-0.4.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
-			<Dependency>thunar-devel</Dependency>
-			<Dependency>xfce4-dev-tools</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>exo-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
+			<Dependency>thunar-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -44,6 +43,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2020-06-25</Date>
+			<Version>0.4.0</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2018-07-10</Date>
 			<Version>0.4.0</Version>

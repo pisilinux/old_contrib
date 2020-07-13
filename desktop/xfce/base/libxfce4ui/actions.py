@@ -8,19 +8,17 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+i = "--with-vendor-info='Pisi Linux' \
+     --enable-gtk2 \
+     --enable-vala \
+     --enable-introspection \
+     --enable-startup-notification \
+     --disable-static \
+    "
+
 def setup():
 	pisitools.cflags.add("-Wno-deprecated-declarations")
-	autotools.configure("\
-	\
-	--enable-gtk2 \
-	--enable-vala \
-	--enable-tests \
-	--enable-introspection \
-	--enable-startup-notification \
-	\
-	--disable-static \
-	\
-	--with-vendor-info='Pisi Linux'")
+	autotools.configure(i)
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 

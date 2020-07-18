@@ -8,11 +8,10 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+j = "-DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib"
+
 def setup():
-	cmaketools.configure("\
-	-DCMAKE_BUILD_TYPE=release \
-	-DCMAKE_INSTALL_PREFIX=/usr \
-	-DCMAKE_INSTALL_LIBDIR=lib")
+	cmaketools.configure(j)
 
 def build():
 	cmaketools.make()

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>parole</Name>
@@ -19,51 +19,44 @@
 			https://archive.xfce.org/src/apps/parole/1.0/parole-1.0.5.tar.bz2
 		</Archive>
 		<BuildDependencies>
+			<Dependency>gtk-doc</Dependency>
 			<Dependency>intltool</Dependency>
-			<Dependency>python-six</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>python-six</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>docbook-xsl</Dependency>
+			<Dependency>xfconf-devel</Dependency>
+			<Dependency>taglib-devel</Dependency>
 			<Dependency>libxslt-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>gstreamer-devel</Dependency>
-			<!-- deprecated. -->
 			<Dependency>dbus-glib-devel</Dependency>
-			<!-- -->
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
 			<Dependency>gst-plugins-base-devel</Dependency>
-			<Dependency>gtk-doc</Dependency>
-			<Dependency>xfconf-devel</Dependency>
-			<Dependency>taglib-devel</Dependency>
-			<Dependency>xfce4-dev-tools</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<!--
-			<Patch level="1">parole-0.2.0.6-underlinking.patch</Patch>
-			-->
+			<!-- <Patch level="1">parole-0.2.0.6-underlinking.patch</Patch> -->
 		</Patches>
 	</Source>
 
 	<Package>
 		<Name>parole</Name>
 		<RuntimeDependencies>
-			<Dependency>libX11</Dependency>
-			<Dependency>gstreamer</Dependency>
-			<!-- deprecated. -->
-			<Dependency>dbus-glib</Dependency>
-			<!-- -->
-			<Dependency>gst-plugins-base</Dependency>
-			<Dependency>libnotify</Dependency>
-			<Dependency>gdk-pixbuf</Dependency>
-			<Dependency>libxfce4ui</Dependency>
-			<Dependency>libxfce4util</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>dbus</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>taglib</Dependency>
 			<Dependency>xfconf</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>gstreamer</Dependency>
+			<Dependency>dbus-glib</Dependency>
+			<Dependency>libnotify</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libxfce4ui</Dependency>
+			<Dependency>libxfce4util</Dependency>
+			<Dependency>gst-plugins-base</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
@@ -79,6 +72,9 @@
 		<Summary>Development files for parole</Summary>
 		<RuntimeDependencies>
 			<Dependency release="current">parole</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libxfce4util-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>
@@ -87,6 +83,13 @@
 	</Package>
 
 	<History>
+		<Update release="12">
+			<Date>2020-06-25</Date>
+			<Version>1.0.5</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="11">
 			<Date>2019-11-19</Date>
 			<Version>1.0.5</Version>

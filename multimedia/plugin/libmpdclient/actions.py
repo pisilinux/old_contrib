@@ -6,7 +6,6 @@
 
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
 
 def setup():
 	mesontools.configure("-Dtcp=true")
@@ -18,3 +17,4 @@ def install():
 	mesontools.install()
 
 	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README.rst")
+

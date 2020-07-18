@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>osmo</Name>
-		<Homepage>http://clayo.org/osmo/</Homepage>
+		<Homepage>http://osmo-pim.sourceforge.net/</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>
@@ -17,8 +17,8 @@
 		<Description>
 			Osmo is a handy personal organizer, which includes calendar, tasks manager, address book and notes modules. It was designed to be a small, easy to use and good looking PIM tool to help to manage personal information. In its current state the organizer is quite convenient to use - for example, the user can perform nearly all operations using the keyboard. Also, a lot of parameters are configurable to meet the user's preferences. On the technical side, Osmo is GTK+ based tool which uses a plain XML database to store all personal data.
 		</Description>
-		<Archive sha1sum="e9c32008c0daeb912fbfb103df4cf21938787b35" type="targz">
-			https://sourceforge.net/projects/osmo-pim/files/osmo-pim/osmo-0.4.2/osmo-0.4.2.tar.gz
+		<Archive sha1sum="e614a8080306388465d06e862aaab3b79f4990f7" type="targz">
+			https://sourceforge.net/projects/osmo-pim/files/osmo-pim/osmo-0.4.4/osmo-0.4.4.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>db-devel</Dependency>
@@ -59,6 +59,13 @@
 	</Package>
 
 	<History>
+		<Update release="9">
+			<Date>2020-07-12</Date>
+			<Version>0.4.4</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="8">
 			<Date>2020-03-22</Date>
 			<Version>0.4.2</Version>

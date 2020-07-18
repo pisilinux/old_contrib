@@ -8,13 +8,16 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+i = "--enable-vala \
+     --enable-introspection \
+     --disable-static \
+     --disable-gtk-doc \
+     --disable-perl-bindings \
+     --disable-gsettings-backend \
+    "
+
 def setup():
-	autotools.configure("--enable-vala --enable-introspection \
-	\
-	--disable-gsettings-backend \
-	--disable-static \
-	--disable-gtk-doc \
-	--disable-perl-bindings")
+	autotools.configure(i)
 
 	#pisitools.dosed("libtool", "^(hardcode_libdir_flag_spec=).*", '\\1""')
 	#pisitools.dosed("libtool", "^(runpath_var=)LD_RUN_PATH", "\\1DIE_RPATH_DIE")

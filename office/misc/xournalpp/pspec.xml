@@ -51,6 +51,7 @@
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libsndfile</Dependency>
 			<!-- <Dependency>texlive-bin</Dependency> -->
+			<!-- <Dependency>texlive-core</Dependency> -->
 			<Dependency>poppler-glib</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -63,7 +64,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-04-16</Date>
+			<Date>2020-06-24</Date>
 			<Version>1.0.18</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

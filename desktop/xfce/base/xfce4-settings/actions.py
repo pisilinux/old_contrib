@@ -8,21 +8,21 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+i = "--enable-xorg-libinput \
+     --enable-upower-glib \
+     --enable-libxklavier \
+     --enable-libnotify \
+     --enable-gio-unix \
+     --enable-xcursor \
+     --enable-colord \
+     --enable-xrandr \
+     --disable-pluggable-dialogs \
+     --disable-sound-settings \
+     --disable-static \
+    "
+
 def setup():
-	autotools.configure("\
-	\
-	--enable-colord \
-	--enable-xrandr \
-	--enable-xcursor \
-	--enable-gio-unix \
-	--enable-libnotify \
-	--enable-libxklavier \
-	--enable-upower-glib \
-	--enable-xorg-libinput \
-	\
-	--disable-static \
-	--disable-sound-settings \
-	--disable-pluggable-dialogs")
+	autotools.configure(i)
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 

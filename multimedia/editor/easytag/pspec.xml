@@ -21,6 +21,7 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>itstool</Dependency>
+			<Dependency>python3</Dependency>
 			<Dependency>intltool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>flac-devel</Dependency>
@@ -41,6 +42,11 @@
 			<Dependency>desktop-file-utils</Dependency>
 			<Dependency>appstream-glib-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">ru_translation.patch</Patch>
+			<Patch level="1">basque_translation.patch</Patch>
+			<Patch level="1">slovenian_translation.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>
@@ -72,7 +78,7 @@
 
 	<History>
 		<Update release="7">
-			<Date>2019-12-16</Date>
+			<Date>2020-06-23</Date>
 			<Version>2.4.3</Version>
 			<Comment>Ver. up</Comment>
 			<Name>fury</Name>

@@ -16,8 +16,8 @@
 		<Description>
 			With this plugin you can add timers (alarm or countdown) to your Xfce panel. You can display a warning window and/or run a custom command when alarm rings, repeat alarms etc.
 		</Description>
-		<Archive sha1sum="f8f502eaee45843652ec869b730a92064d42e483" type="tarbz2">
-			https://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/xfce4-timer-plugin-1.7.0.tar.bz2
+		<Archive sha1sum="63f88d7afd2ba085c4f0e58dbfd241d9a622a789" type="tarbz2">
+			https://archive.xfce.org/src/panel-plugins/xfce4-timer-plugin/1.7/xfce4-timer-plugin-1.7.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -50,9 +50,9 @@
 
 	<History>
 		<Update release="5">
-			<Date>2020-06-25</Date>
-			<Version>1.7.0</Version>
-			<Comment>Rebuild.</Comment>
+			<Date>2020-08-01</Date>
+			<Version>1.7.1</Version>
+			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>

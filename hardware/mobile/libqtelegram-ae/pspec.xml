@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>libtelegram-ae</Name>
+        <Name>libqtelegram-ae</Name>
         <Homepage>https://launchpad.net/libqtelegram</Homepage>
         <Packager>
             <Name>Stefan Gronewold (groni)</Name>
@@ -14,8 +14,8 @@
         <Description>libqtelegram is a Qt asynchronous library. It was based originally on telegram-cli code (https://github.com/vysheng/tg). It now makes use of Qt signal-slot mechanism and exposes a convenient API. libqtelegram-aseman-edition forked libqtelegram and continues to add new features..</Description>
         <Archive sha1sum="d46e05d0a37b5ea3fc3c31127868cf2007d76c2e" type="targz">https://github.com/Aseman-Land/libqtelegram-aseman-edition/archive/v6.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>            
-            <Dependency>qt5-multimedia-devel</Dependency>            
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>qt5-multimedia-devel</Dependency>
             <Dependency>qt5-declarative-devel</Dependency>
             <Dependency>qt5-quick1-devel</Dependency>
             <Dependency>qt5-graphicaleffects</Dependency>
@@ -23,35 +23,35 @@
             <Dependency>plasma-nm</Dependency>
             <Dependency>openssl-devel</Dependency>
             <Dependency>zlib-devel</Dependency>
-        </BuildDependencies>   
+        </BuildDependencies>
     </Source>
 
     <Package>
-        <Name>libtelegram-ae</Name>
+        <Name>libqtelegram-ae</Name>
         <RuntimeDependencies>
             <Dependency>qt5-base</Dependency>
             <Dependency>zlib</Dependency>
-            <Dependency>libgcc</Dependency>            
-            <Dependency>openssl</Dependency>            
-        </RuntimeDependencies> 
+            <Dependency>libgcc</Dependency>
+            <Dependency>openssl</Dependency>
+        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
-            <Path fileType="doc">/usr/share</Path>            
+            <Path fileType="doc">/usr/share</Path>
         </Files>
     </Package>
-    
-    <Package>
-        <Name>libtelegram-ae-devel</Name>
-        <Summary>Development files for libtelegram-ae</Summary>
-        <RuntimeDependencies>
-            <Dependency release="current">libtelegram-ae</Dependency>            
-        </RuntimeDependencies> 
-        <Files>
-            <Path fileType="header">/usr/include</Path>            
-        </Files>
-    </Package>   
 
-    <History>        
+    <Package>
+        <Name>libqtelegram-ae-devel</Name>
+        <Summary>Development files for libqtelegram-ae</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libqtelegram-ae</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
         <Update release="1">
             <Date>2015-12-02</Date>
             <Version>0.6</Version>

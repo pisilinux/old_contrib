@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>orage</Name>
-		<Homepage>https://github.com/xfce-mirror/orage</Homepage>
+		<Homepage>https://github.com/balena/orage</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>
 			<Email>ayhanyalcinsoy@pisilinux.org</Email>

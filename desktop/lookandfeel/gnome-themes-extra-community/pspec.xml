@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>gnome-themes-extra</Name>
+		<Name>gnome-themes-extra-community</Name>
 		<Homepage>https://gitlab.gnome.org/GNOME/gnome-themes-extra</Homepage>
 		<Packager>
 			<Name>fury</Name>
@@ -30,7 +30,7 @@
 	</Source>
 
 	<Package>
-		<Name>gnome-themes-extra</Name>
+		<Name>gnome-themes-extra-community</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk2-engines-murrine</Dependency>
 		</RuntimeDependencies>

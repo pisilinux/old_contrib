@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>icon-theme-elementary-xfce</Name>
@@ -13,8 +13,8 @@
 		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>Elementary Look for XFCE.</Summary>
 		<Description>Elementary icons forked from upstream, extended and maintained for Xfce.</Description>
-		<Archive sha1sum="d091512f557ec4a699f7ff63161f3ebe11c62c1a" type="targz">
-			https://github.com/shimmerproject/elementary-xfce/archive/v0.14.tar.gz
+		<Archive sha1sum="63127ebe8a841f01518c8fe9f33ffb1977555cb9" type="targz">
+			https://github.com/shimmerproject/elementary-xfce/archive/v0.15.1.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>optipng</Dependency>
@@ -32,6 +32,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2020-08-11</Date>
+			<Version>0.15.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="2">
 			<Date>2020-01-15</Date>
 			<Version>0.14</Version>

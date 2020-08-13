@@ -27,7 +27,7 @@
 			<Dependency>libjpeg-turbo-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">cdk_header_path.patch</Patch>
+			<!-- <Patch level="1">cdk_header_path.patch</Patch> -->
 		</Patches>
 	</Source>
 

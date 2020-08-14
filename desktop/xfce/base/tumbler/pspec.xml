@@ -13,8 +13,8 @@
 		<PartOf>desktop.xfce.base</PartOf>
 		<Summary>A thumbnail service</Summary>
 		<Description>Tumbler is a thumbnail service for the filemanager of Xfce desktop environment.</Description>
-		<Archive sha1sum="1b845060ed377c92e8c2a264c1d7f1b7cf78b5fe" type="tarbz2">
-			https://archive.xfce.org/src/xfce/tumbler/0.2/tumbler-0.2.9.tar.bz2
+		<Archive sha1sum="3222d6748c9a249ef3abe94868fabd8542f31dd4" type="tarbz2">
+			https://archive.xfce.org/src/xfce/tumbler/0.3/tumbler-0.3.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -77,8 +77,8 @@
 
 	<History>
 		<Update release="14">
-			<Date>2020-08-11</Date>
-			<Version>0.2.9</Version>
+			<Date>2020-08-14</Date>
+			<Version>0.3.0</Version>
 			<Comment>Ver. bump</Comment>
 			<Email>wascheme@tuta.io</Email>
 			<Name>fury</Name>

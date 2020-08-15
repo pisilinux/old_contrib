@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>mate-applet-streamer</Name>
+		<Homepage>https://www.musicpd.org/</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>service</IsA>
+		<PartOf>multimedia.stream</PartOf>
+		<Summary>Mate Aplet Online Radio Player</Summary>
+		<Description>
+			This is a panel applet to let you play your favourite online radio station from your system tray or panel with a single click. It includes two large directories of online radio stations, each featuring thousands of listings:
+		</Description>
+		<Archive sha1sum="59e61ccfdb8585976b6eaac11fe4a923215b3d5f" type="targz">
+			http://www.zavedil.com/wp-content/uploads/2017/06/mate-applet-streamer-0.4.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>sqlite-devel</Dependency>
+			<Dependency>gst-plugins-base-devel</Dependency>
+			<Dependency>libnotify-devel</Dependency>
+			<Dependency>mate-panel-devel</Dependency>
+			<Dependency>gst-plugins-bad-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>mate-applet-streamer</Name>
+		<RuntimeDependencies>
+			<Dependency>gst-plugins-base</Dependency>
+			<Dependency>libnotify</Dependency>
+			<Dependency>mate-panel</Dependency>
+			<Dependency>gst-plugins-bad</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>sqlite</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/libexec/</Path>
+			<Path fileType="data">/usr/share/icons</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-08-15</Date>
+			<Version>0.4.0</Version>
+			<Comment>First release</Comment>
+			<Name>Erkan IŞIK</Name>
+			<Email>erkanisik@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+

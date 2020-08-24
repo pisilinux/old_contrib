@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-	autotools.configure("--with-xaw3d --with-xaw3dxft --with-shared")
+	autotools.configure("--enable-hdr-subdir --with-Xaw3d --with-Xaw3dxft --with-shared")
 
 def build():
 	autotools.make()

@@ -15,8 +15,8 @@
 		<Description>
 			garcon is an implementation of the freedesktop.org menu specification replacing the former Xfce menu library libxfce4menu. It is based on GLib/GIO only and aims at covering the entire specification except for legacy menus.
 		</Description>
-		<Archive sha1sum="014f0b1699a56c1a0738238a07008a5b487892ad" type="tarbz2">
-			https://archive.xfce.org/xfce/4.14/src/garcon-0.6.4.tar.bz2
+		<Archive sha1sum="0321fd62d25cbe155c54decdf8a3b200e9c7bda1" type="tarbz2">
+			https://archive.xfce.org/src/xfce/garcon/0.7/garcon-0.7.1.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>python3</Dependency>
@@ -28,6 +28,7 @@
 			<Dependency>freetype-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>libxfce4util-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -40,6 +41,7 @@
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libxfce4ui</Dependency>
 			<Dependency>libxfce4util</Dependency>
+			<Dependency>gobject-introspection</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>
@@ -80,9 +82,9 @@
 
 	<History>
 		<Update release="12">
-			<Date>2020-06-25</Date>
-			<Version>0.6.4</Version>
-			<Comment>Rebuild.</Comment>
+			<Date>2020-08-18</Date>
+			<Version>0.7.1</Version>
+			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>

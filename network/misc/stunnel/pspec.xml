@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>stunnel</Name>
-        <Homepage>www.stunnel.org</Homepage>
+        <Homepage>https://www.stunnel.org</Homepage>
         <Packager>
             <Name>Osman Erkan</Name>
             <Email>osman.erkan@pisilinux.org</Email>

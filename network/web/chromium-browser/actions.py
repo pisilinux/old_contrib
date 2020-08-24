@@ -10,12 +10,10 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 
 def setup():
-
     shelltools.export("LC_ALL", "C")
     shelltools.system("sed -i 's|icu)|icu-i18n)|g' build/linux/system.gyp")
     shelltools.system("export -n CFLAGS CXXFLAGS")
 
-    
     options = "\
                -Duse_system_expat=1 \
                -Duse_system_flac=1 \
@@ -65,55 +63,49 @@ def setup():
                -Dgoogle_api_key=AIzaSyBINKL31ZYd8W5byPuwTXYK6cEyoceGh6Y \
                -Dgoogle_default_client_id=879512332529.apps.googleusercontent.com \
                -Dgoogle_default_client_secret=RmQPJJeL1cNJ8iETnoVD4X17 "
-   
+
     shelltools.system("build/linux/unbundle/replace_gyp_files.py  %s" % options)
-   
+
     shelltools.export("GYP_GENERATORS","ninja")
     shelltools.system("build/gyp_chromium build/all.gyp --depth=. %s" % options)
-    
-  
+
 def build():
-    
     shelltools.system("ninja -C out/Release chrome")
     shelltools.system("ninja -C out/Release chrome_sandbox")
     shelltools.system("ninja -C out/Release chromedriver")
 
 def install():
-  
     shelltools.cd("out/Release")
 
     shelltools.makedirs("%s/usr/lib/chromium-browser" % get.installDIR())
-    
-    binaries_for_inst=["chrome", "chrome_sandbox", "chromedriver", "natives_blob.bin", "snapshot_blob.bin"]
+
+binaries_for_inst=["chrome", "chrome_sandbox", "chromedriver", "natives_blob.bin", "snapshot_blob.bin"]
     #libraries_for_inst=["libffmpegsumo.so", "icudtl.dat"]
 
-   
     # install and strip binaries
     for mybin in binaries_for_inst:
         pisitools.insinto("/usr/lib/chromium-browser", mybin)
-       
+
     # install and strip shared libs  
     # for mylib in libraries_for_inst:
         # pisitools.insinto("/usr/lib/chromium-browser", mylib)
-         
+
     pisitools.dosym("/usr/lib/chromium-browser/chrome", "/usr/lib/chromium-browser/chromium-browser")
     pisitools.rename("/usr/lib/chromium-browser/chrome_sandbox", "chrome-sandbox")
     shelltools.chmod("%s/usr/lib/chromium-browser/chrome-sandbox" % get.installDIR(), 04755)
-    
+
      # install rest of needed files
     pisitools.insinto("/usr/lib/chromium-browser", "*.pak")
     pisitools.insinto("/usr/lib/chromium-browser", "locales")
     pisitools.insinto("/usr/lib/chromium-browser", "resources")
-    
+
     pisitools.newman("chrome.1", "chromium-browser.1")
-    
+
     shelltools.cd("../..")
     for size in ["22", "24", "48", "64", "128", "256"]:
         pisitools.insinto("/usr/share/icons/hicolor/%sx%s/apps" %(size, size), "chrome/app/theme/chromium/product_logo_%s.png" % size, "chromium-browser.png")
-   		
+
     pisitools.dosym("/usr/share/icons/hicolor/256x256/apps/chromium-browser.png", "/usr/share/pixmaps/chromium-browser.png")
-    
+
     pisitools.dodoc("LICENSE")
 
-
-    

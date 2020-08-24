@@ -1,7 +1,7 @@
 <PISI>
     <Source>
         <Name>gcstar</Name>
-        <Homepage>www.gcstar.org</Homepage>
+        <Homepage>http://www.gcstar.org</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

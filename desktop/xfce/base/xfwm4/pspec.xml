@@ -25,6 +25,7 @@
 			<Dependency>libX11-devel</Dependency>
 			<Dependency>libXpm-devel</Dependency>
 			<Dependency>libbsd-devel</Dependency>
+			<Dependency>libXres-devel</Dependency>
 			<Dependency>libwnck3-devel</Dependency>
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>libXpresent-devel</Dependency>
@@ -41,6 +42,7 @@
 			<Dependency>libXi</Dependency>
 			<Dependency>xfconf</Dependency>
 			<Dependency>libX11</Dependency>
+			<Dependency>libXres</Dependency>
 			<Dependency>libXext</Dependency>
 			<Dependency>libepoxy</Dependency>
 			<Dependency>libwnck3</Dependency>

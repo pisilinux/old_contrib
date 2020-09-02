@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <PISI>
 	<Source>
-		<Name>mate-appler-streamer</Name>
+		<Name>mate-applet-streamer</Name>
 		<Summary xml:lang="en">Online Radio Applet.</Summary>
 		<Description xml:lang="en">This is a Mate panel applet to let you play your favourite online radio station from your system tray or panel with a single click.</Description>
 	</Source>

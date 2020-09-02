@@ -15,8 +15,8 @@
 		<Description>
 			garcon is an implementation of the freedesktop.org menu specification replacing the former Xfce menu library libxfce4menu. It is based on GLib/GIO only and aims at covering the entire specification except for legacy menus.
 		</Description>
-		<Archive sha1sum="0321fd62d25cbe155c54decdf8a3b200e9c7bda1" type="tarbz2">
-			https://archive.xfce.org/src/xfce/garcon/0.7/garcon-0.7.1.tar.bz2
+		<Archive sha1sum="9c7598a79b1e71ebc5f5a0003082b75b84e50dde" type="tarbz2">
+			https://archive.xfce.org/src/xfce/garcon/0.7/garcon-0.7.0.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>python3</Dependency>
@@ -83,7 +83,7 @@
 	<History>
 		<Update release="12">
 			<Date>2020-08-18</Date>
-			<Version>0.7.1</Version>
+			<Version>0.7.0</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

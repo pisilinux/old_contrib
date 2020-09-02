@@ -3,15 +3,15 @@
 <PISI>
 	<Source>
 		<Name>mate-applet-streamer</Name>
-		<Homepage>https://www.musicpd.org/</Homepage>
+		<Homepage>http://www.zavedil.com/online-radio-applet/</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
 		<License>GPLv2</License>
-		<IsA>service</IsA>
+		<IsA>app</IsA>
 		<PartOf>multimedia.stream</PartOf>
-		<Summary>Mate Aplet Online Radio Player</Summary>
+		<Summary>Mate Applet Online Radio Player</Summary>
 		<Description>
 			This is a panel applet to let you play your favourite online radio station from your system tray or panel with a single click. It includes two large directories of online radio stations, each featuring thousands of listings:
 		</Description>

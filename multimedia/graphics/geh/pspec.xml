@@ -19,7 +19,10 @@
 			https://github.com/software-revive/geh-rv/releases/download/0.4.0/geh-0.4.0.tar.gz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>libICE</Dependency>
 			<Dependency>gtk3-devel</Dependency>
+			<Dependency>gnome-common</Dependency>
+			<!-- <Dependency>gobject-introspection-devel</Dependency> -->
 		</BuildDependencies>
 	</Source>
 

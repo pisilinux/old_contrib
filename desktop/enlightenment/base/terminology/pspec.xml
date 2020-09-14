@@ -13,8 +13,8 @@
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>A terminal emulator for Enlightenment.</Summary>
 		<Description>A EFL terminal emulator with some extra bells and whistles for Enlightenment.</Description>
-		<Archive sha1sum="5b49478f689373a46b7902b6be66eda6a5034c38" type="tarxz">
-			https://download.enlightenment.org/rel/apps/terminology/terminology-1.7.0.tar.xz
+		<Archive sha1sum="6749f267c65260a33c7311e701ee8e4b37ba9020" type="tarxz">
+			https://download.enlightenment.org/rel/apps/terminology/terminology-1.8.1.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
@@ -39,8 +39,8 @@
 
 	<History>
 		<Update release="6">
-			<Date>2020-04-30</Date>
-			<Version>1.7.0</Version>
+			<Date>2020-08-12</Date>
+			<Version>1.8.1</Version>
 			<Comment>Ver. up</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

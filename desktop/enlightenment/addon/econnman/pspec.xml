@@ -21,7 +21,6 @@
 			<Dependency>python-efl</Dependency>
 			<Dependency>python3-devel</Dependency>
 			<Dependency>connman-devel</Dependency>
-			
 		</BuildDependencies>
 	</Source>
 

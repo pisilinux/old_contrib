@@ -11,7 +11,7 @@
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.converter</PartOf>
-		<Summary>A GTK+ and python sound converter application.</Summary>
+		<Summary>A gstreamer-based audio converter application written in python3/Gtk+3.</Summary>
 		<Description>
 			A simple sound converter application for the GNOME environment. It reads anything the GStreamer library can read, and writes WAV, FLAC, MP3, and Ogg Vorbis files.
 		</Description>

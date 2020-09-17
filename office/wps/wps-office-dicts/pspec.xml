@@ -17,7 +17,6 @@
         <Archive sha1sum="ab32d59ce9c44451760d5a7846102089df0c8082" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/de_DE.zip</Archive>
         <Archive sha1sum="9c2c55aef3f0dbc0db266a6d9d170f29a404902c" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/el_GR.zip</Archive>
         <Archive sha1sum="24ba8db91b0913a033fab1c44da0e654e4449c5c" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/en_GB.zip</Archive>
-        <Archive sha1sum="1f0ac13b8f3067b34c30f6a63b54efe2d7b2190f" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/en_US.zip</Archive>
         <Archive sha1sum="880c20620784885baa3e10367e4632d22de13743" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/es_ES.zip</Archive>
         <Archive sha1sum="2ad526cd456d474e44eac3941f85b2329120ce20" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/fr_FR.zip</Archive>
         <Archive sha1sum="048f06abdb224eaee744f350547576c3be9c485a" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/hr_HR.zip</Archive>
@@ -87,17 +86,6 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/en_GB</Path>
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>wps-office-en_US</Name>
-        <Summary>en_US for WPS Office</Summary>
-        <RuntimeDependencies>
-            <Dependency>wps-office</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/en_US</Path>
         </Files>
     </Package>
 

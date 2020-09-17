@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>keepassx</Name>
@@ -27,7 +27,7 @@
             <Dependency>libXi-devel</Dependency>
             <Dependency>libX11-devel</Dependency>
             <Dependency>cmake</Dependency>
-        </BuildDependencies>        
+        </BuildDependencies>
     </Source>
 
     <Package>
@@ -45,7 +45,7 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="localedata">/usr/share/icons/hicolor</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/keepassx</Path>
             <Path fileType="library">/usr/lib</Path>
             <Path fileType="data">/usr/share/mime</Path>
@@ -57,10 +57,10 @@
     <History>
         <Update release="1">
             <Date>2016-05-27</Date>
-            <Version>2.0.2</Version>
+            <Version>2.0.3</Version>
             <Comment>First Release.</Comment>
             <Name>Stefan Gronewold(groni)</Name>
             <Email>groni@pisilinux.org</Email>
-        </Update>        
+        </Update>
     </History>
 </PISI>

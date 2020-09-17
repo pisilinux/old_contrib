@@ -4,17 +4,14 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import mesontools
+from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
 
-def setup():
-	mesontools.configure()
-
 def build():
-	mesontools.build()
+	pythonmodules.compile(pyVer = '3')
 
 def install():
-	mesontools.install()
+	pythonmodules.install(pyVer = '3')
 
-	pisitools.dodoc("AUTHORS", "ChangeLog*", "COPYING", "NEWS", "README.md")
+	pisitools.dodoc("AUTHORS", "README.md")
 

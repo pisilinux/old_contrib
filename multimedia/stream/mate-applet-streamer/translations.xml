@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <PISI>
 	<Source>
-		<Name>mpd</Name>
-		<Summary xml:lang="tr">Müzik Çalıcı Sunucusu (MPD)</Summary>
-		<Description xml:lang="tr">MPD çoğu müzik dosyasını (MP3, Ogg Vorbis, FLAC, AAC, Mod vs.) çalar ve ağda yayınlar.</Description>
+		<Name>mate-applet-streamer</Name>
+		<Summary xml:lang="en">Online Radio Applet.</Summary>
+		<Description xml:lang="en">This is a Mate panel applet to let you play your favourite online radio station from your system tray or panel with a single click.</Description>
 	</Source>
 </PISI>

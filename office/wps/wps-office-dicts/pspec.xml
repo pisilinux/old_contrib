@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>wps-office-dicts</Name>
-        <Homepage>http://wps-community.org/download/dicts</Homepage>
+        <Homepage>https://github.com/wps-community/wps_community_website/</Homepage>
         <Packager>
             <Name>Ali Algul</Name>
             <Email>aligulle3801@gmail.com</Email>
@@ -12,34 +12,36 @@
         <PartOf>office</PartOf>
         <Summary>dictionary for WPS Office</Summary>
         <Description>dictionary for WPS Office</Description>
-        <Archive sha1sum="974af03ac6f7995f4a5a82e24e4ac6ee0b9d15fe" type="zip">http://wps-community.org/download/dicts/ca_ES.zip</Archive>
-        <Archive sha1sum="e1679916ec803e711c8b11d06e60d5f3918ea7cb" type="zip">http://wps-community.org/download/dicts/cs_CZ.zip</Archive>
-        <Archive sha1sum="ab32d59ce9c44451760d5a7846102089df0c8082" type="zip">http://wps-community.org/download/dicts/de_DE.zip</Archive>
-        <Archive sha1sum="9c2c55aef3f0dbc0db266a6d9d170f29a404902c" type="zip">http://wps-community.org/download/dicts/el_GR.zip</Archive>
-        <Archive sha1sum="24ba8db91b0913a033fab1c44da0e654e4449c5c" type="zip">http://wps-community.org/download/dicts/en_GB.zip</Archive>
-        <Archive sha1sum="880c20620784885baa3e10367e4632d22de13743" type="zip">http://wps-community.org/download/dicts/es_ES.zip</Archive>
-        <Archive sha1sum="2ad526cd456d474e44eac3941f85b2329120ce20" type="zip">http://wps-community.org/download/dicts/fr_FR.zip</Archive>
-        <Archive sha1sum="048f06abdb224eaee744f350547576c3be9c485a" type="zip">http://wps-community.org/download/dicts/hr_HR.zip</Archive>
-        <Archive sha1sum="aaa7e9d09d432837ba17eae0f680753d2c290085" type="zip">http://wps-community.org/download/dicts/it_IT.zip</Archive>
-        <Archive sha1sum="bd6280d7635699271890a5163e7008ba62155774" type="zip">http://wps-community.org/download/dicts/km_KH.zip</Archive>
-        <Archive sha1sum="c215e3ed224c75cd20bb9176aa982abae99023b1" type="zip">http://wps-community.org/download/dicts/lt_LT.zip</Archive>
-        <Archive sha1sum="0cc26c86545aa7a0bff9f34fafec6e795f022383" type="zip">http://wps-community.org/download/dicts/nl_NL.zip</Archive>
-        <Archive sha1sum="a0c25cf977d7e02daabb1256b3d3ffd438c05842" type="zip">http://wps-community.org/download/dicts/pl_PL.zip</Archive>
-        <Archive sha1sum="af185af9dbb576216ae5de69101ed3a2ae70e7da" type="zip">http://wps-community.org/download/dicts/pt_BR.zip</Archive>
-        <Archive sha1sum="57d2a25257154d104d8938183bce2b67c68495c5" type="zip">http://wps-community.org/download/dicts/pt_PT.zip</Archive>
-        <Archive sha1sum="b7d1365c4d22daf997d5ce46e2a253690e6ea26b" type="zip">http://wps-community.org/download/dicts/ro_RO.zip</Archive>
-        <Archive sha1sum="f9ee7f90a296a920f4edaf746bca14de605327ae" type="zip">http://wps-community.org/download/dicts/ru_RU.zip</Archive>
-        <Archive sha1sum="97613d961b76730a157ed611b3c0d3e76e518c89" type="zip">http://wps-community.org/download/dicts/sk_SK.zip</Archive>
-        <Archive sha1sum="828655a2418709d5415dfae9f91fca95e28f90be" type="zip">http://wps-community.org/download/dicts/sv_SE.zip</Archive>
-        <Archive sha1sum="467908aefffc4dea537d2a97aac6e105502c1abe" type="zip">http://wps-community.org/download/dicts/tr_TR.zip</Archive>
-        <Archive sha1sum="f816233f69c420a37cf9651a2e618734ecffa2f5" type="zip">http://wps-community.org/download/dicts/uk_UA.zip</Archive>
+        <Archive sha1sum="974af03ac6f7995f4a5a82e24e4ac6ee0b9d15fe" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/ca_ES.zip</Archive>
+        <Archive sha1sum="e1679916ec803e711c8b11d06e60d5f3918ea7cb" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/cs_CZ.zip</Archive>
+        <Archive sha1sum="ab32d59ce9c44451760d5a7846102089df0c8082" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/de_DE.zip</Archive>
+        <Archive sha1sum="9c2c55aef3f0dbc0db266a6d9d170f29a404902c" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/el_GR.zip</Archive>
+        <Archive sha1sum="24ba8db91b0913a033fab1c44da0e654e4449c5c" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/en_GB.zip</Archive>
+        <Archive sha1sum="880c20620784885baa3e10367e4632d22de13743" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/es_ES.zip</Archive>
+        <Archive sha1sum="2ad526cd456d474e44eac3941f85b2329120ce20" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/fr_FR.zip</Archive>
+        <Archive sha1sum="048f06abdb224eaee744f350547576c3be9c485a" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/hr_HR.zip</Archive>
+        <Archive sha1sum="aaa7e9d09d432837ba17eae0f680753d2c290085" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/it_IT.zip</Archive>
+        <Archive sha1sum="bd6280d7635699271890a5163e7008ba62155774" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/km_KH.zip</Archive>
+        <Archive sha1sum="c215e3ed224c75cd20bb9176aa982abae99023b1" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/lt_LT.zip</Archive>
+        <Archive sha1sum="0cc26c86545aa7a0bff9f34fafec6e795f022383" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/nl_NL.zip</Archive>
+        <Archive sha1sum="a0c25cf977d7e02daabb1256b3d3ffd438c05842" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/pl_PL.zip</Archive>
+        <Archive sha1sum="af185af9dbb576216ae5de69101ed3a2ae70e7da" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/pt_BR.zip</Archive>
+        <Archive sha1sum="57d2a25257154d104d8938183bce2b67c68495c5" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/pt_PT.zip</Archive>
+        <Archive sha1sum="b7d1365c4d22daf997d5ce46e2a253690e6ea26b" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/ro_RO.zip</Archive>
+        <Archive sha1sum="f9ee7f90a296a920f4edaf746bca14de605327ae" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/ru_RU.zip</Archive>
+        <Archive sha1sum="97613d961b76730a157ed611b3c0d3e76e518c89" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/sk_SK.zip</Archive>
+        <Archive sha1sum="828655a2418709d5415dfae9f91fca95e28f90be" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/sv_SE.zip</Archive>
+        <Archive sha1sum="f816233f69c420a37cf9651a2e618734ecffa2f5" target="opt/kingsoft/wps-office/office6/dicts/spellcheck" type="zip">https://github.com/wps-community/wps_community_website/raw/master/root/download/dicts/uk_UA.zip</Archive>
     </Source>
 
     <Package>
         <Name>wps-office-ca_ES</Name>
-        <Summary>ca_ES  for WPS Office</Summary>
+        <Summary>ca_ES for WPS Office</Summary>
+        <RuntimeDependencies>
+            <Dependency>wps-office</Dependency>
+        </RuntimeDependencies>
         <Files>
-             <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/ca_ES</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/ca_ES</Path>
         </Files>
     </Package>
 
@@ -50,7 +52,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/cs_CZ</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/cs_CZ</Path>
         </Files>
     </Package>
 
@@ -61,7 +63,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/de_DE</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/de_DE</Path>
         </Files>
     </Package>
 
@@ -72,7 +74,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/el_GR</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/el_GR</Path>
         </Files>
     </Package>
 
@@ -83,7 +85,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/en_GB</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/en_GB</Path>
         </Files>
     </Package>
 
@@ -94,7 +96,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/es_ES</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/es_ES</Path>
         </Files>
     </Package>
 
@@ -105,7 +107,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/fr_FR</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/fr_FR</Path>
         </Files>
     </Package>
 
@@ -116,7 +118,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/hr_HR</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/hr_HR</Path>
         </Files>
     </Package>
 
@@ -127,7 +129,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/it_IT</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/it_IT</Path>
         </Files>
     </Package>
 
@@ -138,7 +140,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/km_KH</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/km_KH</Path>
         </Files>
     </Package>
 
@@ -149,7 +151,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/lt_LT</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/lt_LT</Path>
         </Files>
     </Package>
 
@@ -160,7 +162,18 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/nl_NL</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/nl_NL</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wps-office-pl_PL</Name>
+        <Summary>pl_PL for WPS Office</Summary>
+        <RuntimeDependencies>
+            <Dependency>wps-office</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/pl_PL</Path>
         </Files>
     </Package>
 
@@ -171,7 +184,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/pt_BR</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/pt_BR</Path>
         </Files>
     </Package>
 
@@ -182,7 +195,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/pt_PT</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/pt_PT</Path>
         </Files>
     </Package>
 
@@ -193,7 +206,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/ro_RO</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/ro_RO</Path>
         </Files>
     </Package>
 
@@ -204,7 +217,18 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/ru_RU</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/ru_RU</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>wps-office-sk_SK</Name>
+        <Summary>sk_SK for WPS Office</Summary>
+        <RuntimeDependencies>
+            <Dependency>wps-office</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/sk_SK</Path>
         </Files>
     </Package>
 
@@ -215,18 +239,7 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/sv_SE</Path> 
-        </Files>
-    </Package>
-
-    <Package>
-        <Name>wps-office-tr_TR</Name>
-        <Summary>tr_TR for WPS Office</Summary>
-        <RuntimeDependencies>
-            <Dependency>wps-office</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/tr_TR</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/sv_SE</Path>
         </Files>
     </Package>
 
@@ -237,11 +250,18 @@
             <Dependency>wps-office</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="lib">/usr/lib/kingsoft/wps-office/office6/dicts/uk_UA</Path> 
+            <Path fileType="data">/opt/kingsoft/wps-office/office6/dicts/spellcheck/uk_UA</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-09-17</Date>
+            <Version>0.1</Version>
+            <Comment>Update links.</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
         <Update release="1">
             <Date>2017-06-12</Date>
             <Version>0.1</Version>

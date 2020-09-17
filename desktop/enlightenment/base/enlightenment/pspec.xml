@@ -13,8 +13,8 @@
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>Enlightenment Desktop Shell</Summary>
 		<Description>Enlightenment is a window manager for the X Window System that is designed to be powerful, extensible, configurable and pretty darned good looking! It is one of the more graphically intense window managers.</Description>
-		<Archive sha1sum="d21284f5182a0f423ed7d1cb4be78094ae16dad6" type="tarxz">
-			https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.24.1.tar.xz
+		<Archive sha1sum="0d043a38fb805aeca3d398908e0a3eab6bf511ec" type="tarxz">
+			https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.24.2.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -84,8 +84,8 @@
 
 	<History>
 		<Update release="10">
-			<Date>2020-06-05</Date>
-			<Version>0.24.1</Version>
+			<Date>2020-08-12</Date>
+			<Version>0.24.2</Version>
 			<Comment>Ver. up</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

@@ -9,12 +9,13 @@
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>GPLv2</License>
+		<License>LGPLv2.1</License>
 		<IsA>app:console</IsA>
 		<PartOf>hardware.disk</PartOf>
 		<Summary>Userland tools for the f2fs filesystem</Summary>
 		<Description>Userland tools for the f2fs filesystem</Description>
-		<Archive sha1sum="39c4827bedae3c7c26145b2b32e266a368f408b2" type="targz">
-			https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.13.0.tar.gz
+		<Archive sha1sum="33cab82da464a393a1f91d7871fa4a0b828d9fb1" type="targz">
+			https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.14.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>libutil-linux-devel</Dependency>
@@ -36,6 +37,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2020-09-12</Date>
+			<Version>1.14.0</Version>
+			<Comment>Ver. bump</Comment>
+			<Email>wascheme@tuta.io</Email>
+			<Name>fury</Name>
+		</Update>
 		<Update release="2">
 			<Date>2020-06-24</Date>
 			<Version>1.13.0</Version>
@@ -52,3 +60,4 @@
 		</Update>
 	</History>
 </PISI>
+

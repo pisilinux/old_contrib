@@ -6,11 +6,14 @@
 
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import qt5
-from pisi.actionsapi import get
+
+j = "USE_SYSTEM_QUAZIP=1 \
+     USE_SYSTEM_HUNSPELL=1 \
+     INTERNAL_TERMINAL=1 \
+    "
 
 def setup():
-	pisitools.cxxflags.add("-Wno-deprecated-declarations")
-	qt5.configure("texstudio.pro", parameters='USE_SYSTEM_QUAZIP=1 USE_SYSTEM_HUNSPELL=1')
+	qt5.configure("texstudio.pro", parameters="'%s'" % j)
 
 def build():
 	qt5.make()

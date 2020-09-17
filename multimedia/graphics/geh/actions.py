@@ -8,12 +8,15 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-WorkDir = "mt-st-%s" % get.srcVERSION()
+def setup():
+#	autotools.autoreconf("-vif")
+	autotools.configure("--disable-gtk2")
 
 def build():
-    autotools.make("CC=%s RPM_OPT_FLAGS=\"%s\"" % (get.CC(), get.CFLAGS()))
+	autotools.make()
 
 def install():
-    autotools.install("RPM_BUILD_ROOT=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("stinit.def.examples", "README*")
+	pisitools.dodoc("AUTHORS", "LICENSE", "NEWS", "README")
+

@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>boo</Name>
-        <Homepage>http://boo.codehaus.org</Homepage>
+        <Homepage>http://boo-language.github.io/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -37,8 +37,8 @@
     <History>
         <Update release="1">
             <Date>2018-01-06</Date>
-            <Version>0.9.3.3457</Version>
-            <Comment>version bump</Comment>
+            <Version>0.9.4.9</Version>
+            <Comment>First release.</Comment>
             <Name>Ali Algul</Name>
             <Email>aligulle3801@gmail.com</Email>
         </Update>

@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>strawberry</Name>
+		<Homepage>https://www.strawberrymusicplayer.org/</Homepage>
+		<Packager>
+			<Name>Pisilinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.sound</PartOf>
+		<Summary>Strawberry Music Player.</Summary>
+		<Description>
+			Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It's written in C++ using the Qt 5 or 6 toolkit.
+		</Description>
+		<Archive sha1sum="5012db356a2119fc2efa2e19f21650a98440858b" type="tarxz">
+			https://files.strawberrymusicplayer.org/strawberry-0.7.2.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>ccache</Dependency>
+			<Dependency>gst-libav</Dependency>
+			<Dependency>glew-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>boost-devel</Dependency>
+			<Dependency>fftw3-devel</Dependency>
+			<Dependency>libmtp-devel</Dependency>
+			<Dependency>ffmpeg-devel</Dependency>
+			<Dependency>taglib-devel</Dependency>
+			<Dependency>gnutls-devel</Dependency>
+			<Dependency>libusb-devel</Dependency>
+			<Dependency>sqlite-devel</Dependency>
+			<Dependency>qt5-linguist</Dependency>
+			<Dependency>qt5-sql-odbc</Dependency>
+			<Dependency>qt5-sql-mysql</Dependency>
+			<Dependency>libcdio-devel</Dependency>
+			<Dependency>udisks2-devel</Dependency>
+			<Dependency>libgpod-devel</Dependency>
+			<Dependency>qt5-svg-devel</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>qt5-sql-sqlite</Dependency>
+			<Dependency>qca2-qt5-devel</Dependency>
+			<Dependency>libplist-devel</Dependency>
+			<Dependency>libqjson-devel</Dependency>
+			<Dependency>protobuf-devel</Dependency>
+			<Dependency>mesa-glu-devel</Dependency>
+			<Dependency>crypto++-devel</Dependency>
+			<Dependency>alsa-lib-devel</Dependency>
+			<Dependency>qt5-qdbusviewer</Dependency>
+			<Dependency>libnotify-devel</Dependency>
+			<Dependency>liblastfm-devel</Dependency>
+			<Dependency>gstreamer-devel</Dependency>
+			<Dependency>qt5-phonon-devel</Dependency>
+			<Dependency>qt5-webkit-devel</Dependency>
+			<Dependency>gst-plugins-ugly</Dependency>
+			<Dependency>gst-plugins-good</Dependency>
+			<Dependency>libechonest-devel</Dependency>
+			<Dependency>google-sparsehash</Dependency>
+			<Dependency>libmygpo-qt-devel</Dependency>
+			<Dependency>qt5-sql-postgresql</Dependency>
+			<Dependency>qt5-designer-devel</Dependency>
+			<Dependency>icon-theme-hicolor</Dependency>
+			<Dependency>desktop-file-utils</Dependency>
+			<Dependency>extra-cmake-modules</Dependency>
+			<Dependency>libkvkontakte-devel</Dependency>
+			<Dependency>qt5-x11extras-devel</Dependency>
+			<Dependency>qt5-assistant-devel</Dependency>
+			<Dependency>appstream-glib-devel</Dependency>
+			<Dependency>libchromaprint-devel</Dependency>
+			<Dependency>gst-plugins-bad-devel</Dependency>
+			<Dependency>pulseaudio-libs-devel</Dependency>
+			<Dependency>libimobiledevice-devel</Dependency>
+			<Dependency>gst-plugins-base-devel</Dependency>
+			<Dependency>libcdio-paranoia-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level="1">nothing_works.patch</Patch> -->
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>strawberry</Name>
+		<RuntimeDependencies>
+			<Dependency>zlib</Dependency>
+			<Dependency>mesa</Dependency>
+			<Dependency>glew</Dependency>
+			<Dependency>fftw3</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>libmtp</Dependency>
+			<Dependency>libusb</Dependency>
+			<Dependency>sqlite</Dependency>
+			<Dependency>taglib</Dependency>
+			<Dependency>libcdio</Dependency>
+			<Dependency>udisks2</Dependency>
+			<Dependency>libgpod</Dependency>
+			<Dependency>protobuf</Dependency>
+			<Dependency>crypto++</Dependency>
+			<Dependency>alsa-lib</Dependency>
+			<Dependency>qt5-base</Dependency>
+			<Dependency>gstreamer</Dependency>
+			<Dependency>libnotify</Dependency>
+			<Dependency>liblastfm</Dependency>
+			<Dependency>qt5-phonon</Dependency>
+			<Dependency>libmygpo-qt</Dependency>
+			<Dependency>qt5-x11extras</Dependency>
+			<Dependency>libchromaprint</Dependency>
+			<Dependency>pulseaudio-libs</Dependency>
+			<Dependency>gst-plugins-bad</Dependency>
+			<Dependency>gst-plugins-base</Dependency>
+			<Dependency>gst-plugins-ugly</Dependency>
+			<Dependency>gst-plugins-good</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-19</Date>
+			<Version>0.7.2</Version>
+			<Comment>First build.</Comment>
+			<Name>Pisilinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+

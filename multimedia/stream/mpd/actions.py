@@ -63,6 +63,7 @@ def setup():
 	-Dvorbis=enabled \
 	-Dudisks=enabled \
 	-Dwebdav=enabled \
+	-Dmpcdec=enabled \
 	-Dffmpeg=enabled \
 	-Dmikmod=enabled \
 	-Did3tag=enabled \
@@ -89,7 +90,6 @@ def setup():
 	-Dsndio=disabled \
 	-Dadplug=disabled \
 	-Dtremor=disabled \
-	-Dmpcdec=disabled \
 	-Dsidplay=disabled \
 	-Dsystemd=disabled \
 	-Dwildmidi=disabled")

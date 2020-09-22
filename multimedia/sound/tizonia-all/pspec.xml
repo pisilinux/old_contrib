@@ -16,37 +16,37 @@
         <Archive sha1sum="80705541e835a836c95b58fd685604ab7e1acdbd" type="targz">https://github.com/tizonia/tizonia-openmax-il/archive/v0.22.0.tar.gz</Archive>
         <BuildDependencies>
             <!-- configure dependencies -->
-            <Dependency>pulseaudio-libs-devel</Dependency>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>libmediainfo-devel</Dependency>
-            <Dependency>python3-soundcloud</Dependency>
-            <Dependency>libsndfile-devel</Dependency>
-            <Dependency>bash-completion</Dependency>
-            <Dependency>opusfile-devel</Dependency>
-            <Dependency>boost-python3</Dependency>
-            <Dependency>liboggz-devel</Dependency>
-            <Dependency>libopus-devel</Dependency>
-            <Dependency>python3-devel</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>meson</Dependency>
+            <Dependency>curl-devel</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>flac-devel</Dependency>
+            <Dependency>libspotify</Dependency>
+            <Dependency>expat-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>check-devel</Dependency>
+            <Dependency>log4c-devel</Dependency>
             <Dependency>libmad-devel</Dependency>
             <Dependency>libsdl-devel</Dependency>
             <Dependency>mpg123-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
             <Dependency>taglib-devel</Dependency>
-            <Dependency>expat-devel</Dependency>
-            <Dependency>boost-devel</Dependency>
-            <Dependency>check-devel</Dependency>
-            <Dependency>log4c-devel</Dependency>
-            <Dependency>curl-devel</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>flac-devel</Dependency>
-            <Dependency>libspotify</Dependency>
-            <Dependency>meson</Dependency>
-            <Dependency>cmake</Dependency>
+            <Dependency>boost-python3</Dependency>
+            <Dependency>liboggz-devel</Dependency>
+            <Dependency>libopus-devel</Dependency>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>opusfile-devel</Dependency>
+            <Dependency>bash-completion</Dependency>
+            <Dependency>libsndfile-devel</Dependency>
+            <Dependency>libmediainfo-devel</Dependency>
+            <Dependency>python3-soundcloud</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
+            <Dependency>pulseaudio-libs-devel</Dependency>
             <!-- build dependencies -->
-            <Dependency>libfishsound-devel</Dependency>
-            <Dependency>libvpx-devel</Dependency>
-            <Dependency>faad2-devel</Dependency>
             <Dependency>lame-devel</Dependency>
+            <Dependency>faad2-devel</Dependency>
+            <Dependency>libvpx-devel</Dependency>
+            <Dependency>libfishsound-devel</Dependency>
         </BuildDependencies>
     </Source>
     
@@ -54,20 +54,13 @@
         <Name>tizonia-all</Name>
         <Summary>Command-line cloud music player for Linux.</Summary>
         <RuntimeDependencies>
-            <Dependency>libutil-linux-devel</Dependency>
-            <Dependency>pulseaudio-libs</Dependency>
-            <Dependency>boost-python3</Dependency>
-            <Dependency>libfishsound</Dependency>
-            <Dependency>libmediainfo</Dependency>
-            <Dependency>dbus-devel</Dependency>
-            <Dependency>libsndfile</Dependency>
-            <Dependency>libspotify</Dependency>
-            <Dependency>libvorbis</Dependency>
-            <Dependency>alsa-lib</Dependency>
-            <Dependency>opusfile</Dependency>
-            <Dependency>liboggz</Dependency>
-            <Dependency>libopus</Dependency>
-            <Dependency>python3</Dependency>
+            <Dependency>flac</Dependency>
+            <Dependency>lame</Dependency>
+            <Dependency>boost</Dependency>
+            <Dependency>expat</Dependency>
+            <Dependency>faad2</Dependency>
+            <Dependency>log4c</Dependency>
+            <Dependency>speex</Dependency>
             <Dependency>libmad</Dependency>
             <Dependency>libogg</Dependency>
             <Dependency>libsdl</Dependency>
@@ -76,52 +69,61 @@
             <Dependency>mpg123</Dependency>
             <Dependency>sqlite</Dependency>
             <Dependency>taglib</Dependency>
-            <Dependency>boost</Dependency>
-            <Dependency>expat</Dependency>
-            <Dependency>faad2</Dependency>
-            <Dependency>log4c</Dependency>
-            <Dependency>speex</Dependency>
-            <Dependency>flac</Dependency>
-            <Dependency>lame</Dependency>
+            <Dependency>liboggz</Dependency>
+            <Dependency>libopus</Dependency>
+            <Dependency>python3</Dependency>
+            <Dependency>alsa-lib</Dependency>
+            <Dependency>opusfile</Dependency>
+            <Dependency>libvorbis</Dependency>
+            <Dependency>dbus-devel</Dependency>
+            <Dependency>libsndfile</Dependency>
+            <Dependency>libspotify</Dependency>
+            <Dependency>libfishsound</Dependency>
+            <Dependency>libmediainfo</Dependency>
+            <Dependency>boost-python3</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>libutil-linux-devel</Dependency>
             
-            <Dependency>python3-pychromecast</Dependency>
+            <Dependency>python3-pafy</Dependency>
+            <Dependency>python3-numpy</Dependency>
+            <Dependency>python3-joblib</Dependency>
+            <Dependency>python3-plexapi</Dependency>
+            <Dependency>python3-spotipy</Dependency>
+            <Dependency>python3-eventlet</Dependency>
+            <Dependency>python3-gmusicapi</Dependency>
             <Dependency>python3-fuzzywuzzy</Dependency>
             <Dependency>python3-soundcloud</Dependency>
             <Dependency>python3-youtube_dl</Dependency>
-            <Dependency>python3-gmusicapi</Dependency>
-            <Dependency>python3-eventlet</Dependency>
-            <Dependency>python3-plexapi</Dependency>
-            <Dependency>python3-spotipy</Dependency>
-            <Dependency>python3-pafy</Dependency>
+            <Dependency>python3-pychromecast</Dependency>
         </RuntimeDependencies>
         <Files>
             <!-- binary files under /usr/bin -->
-            <Path fileType="executable">/usr/bin/tizonia-dbusxx-introspect</Path>
-            <Path fileType="executable">/usr/bin/tizonia-rm-db-generate.sh</Path>
-            <Path fileType="executable">/usr/bin/tizonia-dbusxx-xml2cpp</Path>
-            <Path fileType="executable">/usr/bin/tizonia-rm-db-dump.sh</Path>
-            <Path fileType="executable">/usr/bin/tizonia-remote</Path>
-            <Path fileType="executable">/usr/bin/tizcastd</Path>
-            <Path fileType="executable">/usr/bin/tizonia</Path>
             <Path fileType="executable">/usr/bin/tizrmd</Path>
+            <Path fileType="executable">/usr/bin/tizonia</Path>
+            <Path fileType="executable">/usr/bin/tizcastd</Path>
+            <Path fileType="executable">/usr/bin/tizonia-remote</Path>
+            <Path fileType="executable">/usr/bin/tizonia-rm-db-dump.sh</Path>
+            <Path fileType="executable">/usr/bin/tizonia-dbusxx-xml2cpp</Path>
+            <Path fileType="executable">/usr/bin/tizonia-rm-db-generate.sh</Path>
+            <Path fileType="executable">/usr/bin/tizonia-dbusxx-introspect</Path>
             <!-- data files under /usr/share -->
-            <Path fileType="data">/usr/share/dbus-1/services/com.aratelia.tiz.cast.service</Path>
-            <Path fileType="data">/usr/share/dbus-1/services/com.aratelia.tiz.rm.service</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/tizonia.png</Path>
-            <Path fileType="data">/usr/share/bash-completion/completions/tizonia</Path>
-            <Path fileType="data">/usr/share/tizrmd/tizonia-rm-db-initial.sql3</Path>
-            <Path fileType="data">/usr/share/zsh/vendor-completions/_tizonia</Path>
-            <Path fileType="data">/usr/share/applications/tizonia.desktop</Path>
-            <Path fileType="data">/usr/share/zsh/site-functions/_tizonia</Path>
             <Path fileType="data">/usr/share/tizrmd/tizrm.db</Path>
+            <Path fileType="data">/usr/share/zsh/site-functions/_tizonia</Path>
+            <Path fileType="data">/usr/share/applications/tizonia.desktop</Path>
+            <Path fileType="data">/usr/share/zsh/vendor-completions/_tizonia</Path>
+            <Path fileType="data">/usr/share/tizrmd/tizonia-rm-db-initial.sql3</Path>
+            <Path fileType="data">/usr/share/bash-completion/completions/tizonia</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/256x256/apps/tizonia.png</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/com.aratelia.tiz.rm.service</Path>
+            <Path fileType="data">/usr/share/dbus-1/services/com.aratelia.tiz.cast.service</Path>
             <!-- config files under /usr/share -->
-            <Path fileType="config">/etc/xdg/tizonia/tizonia.conf</Path>
             <Path fileType="config">/etc/xdg/tizonia/log4crc</Path>
+            <Path fileType="config">/etc/xdg/tizonia/tizonia.conf</Path>
             
-            <Path fileType="doc">/usr/share/doc/tizonia-all</Path>
-            <Path fileType="data">/usr/include/tizonia</Path>
-            <Path fileType="man">/usr/share/man</Path>
             <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/include/tizonia</Path>
+            <Path fileType="doc">/usr/share/doc/tizonia-all</Path>
         </Files>
     </Package>
 

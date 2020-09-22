@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-joblib</Name>
+        <Summary xml:lang="tr">Python' da hafif iletişim hattı sağlayan bir araç takımı</Summary>
+        <Description xml:lang="tr">python3-joblib python' da hafif iletişim hattı sağlayan bir araç takımı sunar.</Description>
+    </Source>
+</PISI>

@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>Unofficial Python bindings for the Plex API.</Summary>
         <Description>Unofficial Python bindings for the Plex API. Our goal is to match all capabilities of the official Plex Web Client.</Description>
-        <Archive sha1sum="6a4d91eae489d40a40bcb0ae8821404a0f61f52d" type="targz">https://pypi.io/packages/source/p/plexapi/PlexAPI-3.4.0.tar.gz</Archive>
+        <Archive sha1sum="57b82e6a84eadbe151449534b3b7ec563f05daa8" type="targz">https://pypi.io/packages/source/p/plexapi/PlexAPI-4.1.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
         </BuildDependencies>
@@ -23,18 +23,25 @@
         <Name>python3-plexapi</Name>
         <Summary>Unofficial Python3 bindings for the Plex API.</Summary>
         <RuntimeDependencies>
-            <Dependency>python3-websocket-client</Dependency>
-            <Dependency>python3-requests</Dependency>
-            <Dependency>python3-tqdm</Dependency>
             <Dependency>python3</Dependency>
+            <Dependency>python3-tqdm</Dependency>
+            <Dependency>python3-requests</Dependency>
+            <Dependency>python3-websocket-client</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="doc">/usr/share/doc/python3-plexapi</Path>
             <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-plexapi</Path>
         </Files>
     </Package>
     
     <History>
+        <Update release="3">
+            <Date>2020-09-22</Date>
+            <Version>4.1.1</Version>
+            <Comment>Major version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="2">
             <Date>2020-04-22</Date>
             <Version>3.4.0</Version>

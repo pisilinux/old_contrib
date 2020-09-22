@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>perl-DBD-SQLite</Name>
-        <Homepage>http://search.cpan.org/dist/DBD-SQLite/</Homepage>
+        <Homepage>https://metacpan.org/pod/DBD::SQLite</Homepage>
         <Packager>
             <Name>Pisi Linux Admins</Name>
             <Email>admins@pisilinux.org</Email>
@@ -20,8 +20,7 @@
             <Dependency>sqlite-devel</Dependency>
         </BuildDependencies>
         <Patches>
-            <!--<
-            <Patch level="1">perl-DBD-SQLite-bz543982.patch</Patch>-->
+            <!-- <Patch level="1">perl-DBD-SQLite-bz543982.patch</Patch> -->
         </Patches>
     </Source>
 
@@ -76,7 +75,7 @@
             <Name>Marcin Bojara</Name>
             <Email>marcin@pisilinux.org</Email>
         </Update>
-	<Update release="2">
+        <Update release="2">
             <Date>2013-11-09</Date>
             <Version>1.40</Version>
             <Comment>Version bump</Comment>

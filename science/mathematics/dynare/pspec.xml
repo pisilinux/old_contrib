@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>dynare</Name>
+        <Homepage>https://www.dynare.org/</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>science.mathematics</PartOf>
+        <License>GPL</License>
+        <IsA>library</IsA>
+        <Summary>A software platform for handling (economic) DSGE and OLG models.</Summary>
+        <Description>Dynare is a software platform for handling a wide class of economic models, in particular dynamic stochastic general equilibrium (DSGE) and overlapping generations (OLG) models.</Description>
+        <Archive sha1sum="a74d0ef4ae64dcf173538e89b99f80a614afda5b" type="tarxz">https://www.dynare.org/release/source/dynare-4.6.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gsl-devel</Dependency>
+            <Dependency>boost-devel</Dependency>
+            <Dependency>matio-devel</Dependency>
+            <Dependency>lapack-devel</Dependency>
+            <Dependency>octave-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>dynare</Name>
+        <Summary>A software platform for handling (economic) DSGE and OLG models.</Summary>
+        <RuntimeDependencies>
+            <Dependency>gsl</Dependency>
+            <Dependency>blas</Dependency>
+            <Dependency>matio</Dependency>
+            <Dependency>lapack</Dependency>
+            <Dependency>octave</Dependency>
+            <Dependency>libglomp</Dependency>
+            <Dependency>SuiteSparse</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/info</Path>
+            <Path fileType="doc">/usr/share/doc/dynare</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>dynare-devel</Name>
+        <Summary>Development files for dynare</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">dynare</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-06-08</Date>
+            <Version>4.6.2</Version>
+            <Comment>First pisi release.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

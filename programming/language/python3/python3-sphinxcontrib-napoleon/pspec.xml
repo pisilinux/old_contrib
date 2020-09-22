@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-sphinxcontrib-napoleon</Name>
+        <Homepage>https://github.com/sphinx-contrib/napoleon</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python3</PartOf>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Marching toward legible docstrings.</Summary>
+        <Description>sphinxcontrib-napoleon is a Sphinx extension that enables Sphinx to parse both NumPy and Google style docstrings - the style recommended by Khan Academy.</Description>
+        <Archive sha1sum="86149993647a8f8656b07453ec27813d740b7c1c" type="targz">https://pypi.org/packages/source/s/sphinxcontrib-napoleon/sphinxcontrib-napoleon-0.7.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-sphinxcontrib-napoleon</Name>
+        <Summary>sphinxcontrib-napoleon module for python</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-sphinxcontrib-napoleon</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-09-22</Date>
+            <Version>0.7</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

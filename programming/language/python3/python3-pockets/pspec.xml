@@ -2,18 +2,18 @@
 <!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>python3-soundcloud</Name>
-        <Homepage>https://github.com/soundcloud/soundcloud-python/</Homepage>
+        <Name>python3-pockets</Name>
+        <Homepage>https://github.com/RobRuana/pockets</Homepage>
         <Packager>
-            <Name>Blue Devil</Name>
+            <Name>Blue DeviL</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
         <PartOf>programming.language.python3</PartOf>
-        <License>BSDv2</License>
+        <License>BSD-3</License>
         <IsA>library</IsA>
-        <Summary>A Python wrapper around the Soundcloud API.</Summary>
-        <Description>python3-soundcloud is a Python wrapper around the Soundcloud API.</Description>
-        <Archive sha1sum="e75370c05e61f7ab2b9be0b83c46ce114505850b" type="targz">https://pypi.org/packages/source/s/soundcloud/soundcloud-0.5.0.tar.gz</Archive>
+        <Summary>A collection of helpful Python tools!</Summary>
+        <Description>python3-pockets provides a collection of helpful Python tools.</Description>
+        <Archive sha1sum="9f74cfaae3d9ac7407e4cde67e9cf4272d66f4cf" type="targz">https://pypi.io/packages/source/p/pockets/pockets-0.9.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python3-devel</Dependency>
             <Dependency>python3-setuptools</Dependency>
@@ -21,24 +21,23 @@
     </Source>
 
     <Package>
-        <Name>python3-soundcloud</Name>
-        <Summary>A Python wrapper around the Soundcloud API.</Summary>
+        <Name>python3-pockets</Name>
+        <Summary>A collection of helpful Python tools!</Summary>
         <RuntimeDependencies>
             <Dependency>python3</Dependency>
             <Dependency>python3-six</Dependency>
-            <Dependency>python3-requests</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python3*</Path>
-            <Path fileType="doc">/usr/share/doc/python3-soundcloud</Path>
+            <Path fileType="doc">/usr/share/doc/python3-pockets</Path>
         </Files>
     </Package>
-
+    
     <History>
         <Update release="1">
-            <Date>2020-01-24</Date>
-            <Version>0.5.0</Version>
-            <Comment>First Pisi Release</Comment>
+            <Date>2020-09-22</Date>
+            <Version>0.9.1</Version>
+            <Comment>First pisi release.</Comment>
             <Name>Blue Devil</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Update>

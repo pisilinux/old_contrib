@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-regex</Name>
+        <Summary xml:lang="tr">Python ile beraber gelen re modülüne alternatif bir düzenli ifadeler modülüdür.</Summary>
+        <Description xml:lang="tr">python3-regex, python ile beraber gelen re modülüne alternatif bir düzenli ifadeler modülü sağlar.</Description>
+    </Source>
+</PISI>

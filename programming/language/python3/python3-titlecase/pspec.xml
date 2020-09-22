@@ -13,10 +13,10 @@
         <IsA>library</IsA>
         <Summary>Python library to capitalize strings as specified by the New York Times Manual of Style.</Summary>
         <Description>This filter changes all words to Title Caps, and attempts to be clever about SMALL words like a/an/the in the input. This module is a python port of John Gruber's titlecase.pl</Description>
-        <Archive sha1sum="ed6b31d691af0a9bc4620c32d1d0981185b3321e" type="targz">https://github.com/ppannuto/python-titlecase/archive/v0.12.tar.gz</Archive>
+        <Archive sha1sum="43b0073e9185ad2e6ed0c2d7570c285ad9c91be7" type="targz">https://github.com/ppannuto/python-titlecase/archive/v0.13.1.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python3-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -27,13 +27,20 @@
             <Dependency>python3</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="doc">/usr/share/doc/python3-titlecase</Path>
-            <Path fileType="executable">/usr/bin/titlecase</Path>
             <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="executable">/usr/bin/titlecase</Path>
+            <Path fileType="doc">/usr/share/doc/python3-titlecase</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-09-22</Date>
+            <Version>0.13.1</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2020-02-10</Date>
             <Version>0.12.0</Version>

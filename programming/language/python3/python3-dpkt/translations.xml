@@ -5,4 +5,10 @@
         <Summary xml:lang="tr">python3-dpkt, paket yaratan ve paketlerle etkileşebilen bir python3 kitaplığıdır.</Summary>
         <Description xml:lang="tr">python3-dpkt, temel TCP/IP protokolleri için basit ve hızlı bir paket yaratma/çözümleme python modülüdür.</Description>
     </Source>
+
+    <Package>
+        <Name>python3-dpkt-docs</Name>
+        <Summary xml:lang="tr">python3-dpkt için belgelendirme dosyaları</Summary>
+        <Description xml:lang="tr">python3-dpkt-docs, python3-dpkt için belgelendirme dosyalarını içerir.</Description>
+    </Package>
 </PISI>

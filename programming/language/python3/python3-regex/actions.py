@@ -4,11 +4,16 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/licenses/gpl.txt
 
-from pisi.actionsapi import shelltools
+from pisi.actionsapi import pisitools
 from pisi.actionsapi import pythonmodules
 
-shelltools.export("SETUPTOOLS_SCM_PRETEND_VERSION","1.0.1")
 def build():
+    # suppress compiler warnings
+    options = ''.join([
+              '-Wno-missing-braces ',
+              '-Wno-maybe-uninitialized ',
+              '-Wno-unused-but-set-variable'])
+    pisitools.cflags.add("%s" % options)
     pythonmodules.compile(pyVer="3")
 
 def install():

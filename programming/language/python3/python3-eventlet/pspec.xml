@@ -13,10 +13,10 @@
         <IsA>library</IsA>
         <Summary>Highly concurrent networking library.</Summary>
         <Description>Eventlet is a concurrent networking library for Python that allows you to change how you run your code, not how you write it.</Description>
-        <Archive sha1sum="4d3675042341cb5e03b8b2d3c014f71436974427" type="targz">https://pypi.io/packages/source/e/eventlet/eventlet-0.25.2.tar.gz</Archive>
+        <Archive sha1sum="d4a5a99b5e4afc48cb8cbc496831e59dbda4a905" type="targz">https://pypi.io/packages/source/e/eventlet/eventlet-0.27.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python3-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -24,19 +24,26 @@
         <Name>python3-eventlet</Name>
         <Summary>Highly concurrent networking library.</Summary>
         <RuntimeDependencies>
-            <Dependency>python3-dnspython</Dependency>
-            <Dependency>python3-monotonic</Dependency>
-            <Dependency>python3-greenlet</Dependency>
-            <Dependency>python3-six</Dependency>
             <Dependency>python3</Dependency>
+            <Dependency>python3-six</Dependency>
+            <Dependency>python3-greenlet</Dependency>
+            <Dependency>python3-monotonic</Dependency>
+            <Dependency>python3-dnspython</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="doc">/usr/share/doc/python3-eventlet</Path>
             <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-eventlet</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-09-22</Date>
+            <Version>0.27.0</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="2">
             <Date>2020-04-13</Date>
             <Version>0.25.2</Version>

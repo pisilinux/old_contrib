@@ -355,6 +355,73 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>dynare</Name>
+            <Homepage>https://www.dynare.org/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>library</IsA>
+            <PartOf>science.mathematics</PartOf>
+            <Summary xml:lang="en">A software platform for handling (economic) DSGE and OLG models.</Summary>
+            <Summary xml:lang="tr">DSGE ve OLG modellerini işleyebilmek için bir yazılım platformu.</Summary>
+            <Description xml:lang="en">Dynare is a software platform for handling a wide class of economic models, in particular dynamic stochastic general equilibrium (DSGE) and overlapping generations (OLG) models.</Description>
+            <Description xml:lang="tr">dynare, DSGE ve OLG modellerini işleyebilmek için bir yazılım platformu sunar.</Description>
+            <Archive type="tarxz" sha1sum="a74d0ef4ae64dcf173538e89b99f80a614afda5b" name="dynare-4.6.2.tar.xz">https://www.dynare.org/release/source/dynare-4.6.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gsl-devel</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>matio-devel</Dependency>
+                <Dependency>lapack-devel</Dependency>
+                <Dependency>octave-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>science/mathematics/dynare/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dynare</Name>
+            <Summary xml:lang="en">A software platform for handling (economic) DSGE and OLG models.</Summary>
+            <RuntimeDependencies>
+                <Dependency>gsl</Dependency>
+                <Dependency>blas</Dependency>
+                <Dependency>matio</Dependency>
+                <Dependency>lapack</Dependency>
+                <Dependency>octave</Dependency>
+                <Dependency>libglomp</Dependency>
+                <Dependency>SuiteSparse</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/info</Path>
+                <Path fileType="doc">/usr/share/doc/dynare</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>dynare-devel</Name>
+            <Summary xml:lang="en">Development files for dynare</Summary>
+            <Summary xml:lang="tr">dynare için geliştirme dosyaları</Summary>
+            <Description xml:lang="tr">dynare-devel, dynare için geliştirme dosyalarını içerir.</Description>
+            <RuntimeDependencies>
+                <Dependency release="1">dynare</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-06-08</Date>
+                <Version>4.6.2</Version>
+                <Comment>First pisi release.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>sofastats</Name>
             <Homepage>http://www.sofastatistics.com</Homepage>
             <Packager>
@@ -29992,6 +30059,54 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>cowsay</Name>
+            <Homepage>https://github.com/tnalpgge/rank-amateur-cowsay</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>app:console</IsA>
+            <PartOf>programming.misc</PartOf>
+            <Summary xml:lang="en">Configurable talking cow.</Summary>
+            <Summary xml:lang="tr">Konuşma balonu ayarlanabilir inek</Summary>
+            <Description xml:lang="en">cowsay provides, configurable talking cow and a few other creatures).</Description>
+            <Description xml:lang="tr">cowsay, konuşma balonu ayarlanabilir ascii biçeminde inek resmini uçbirime basar.</Description>
+            <Archive type="targz" sha1sum="ea5526e1fe3f02e80c8d62b3fc9e1dff51c0d08e" name="cowsay-3.04.tar.gz">https://github.com/tnalpgge/rank-amateur-cowsay/archive/cowsay-3.04.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">cowsay.patch</Patch>
+                <Patch>SCTZineInstallFix.patch</Patch>
+            </Patches>
+            <SourceURI>programming/misc/cowsay/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>cowsay</Name>
+            <Summary xml:lang="en">Configurable talking cow.</Summary>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/cows</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2020-09-17</Date>
+                <Version>3.04</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
             </Update>
         </History>
     </SpecFile>

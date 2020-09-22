@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>perl-Net-IP</Name>
-        <Homepage>http://search.cpan.org/~manu/Net-IP</Homepage>
+        <Homepage>https://metacpan.org/pod/Net::IP</Homepage>
         <Packager>
             <Name>Pisi Linux Admins</Name>
             <Email>admins@pisilinux.org</Email>

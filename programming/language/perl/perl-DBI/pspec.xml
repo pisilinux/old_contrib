@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>perl-DBI</Name>
-        <Homepage>http://search.cpan.org/dist/DBI/</Homepage>
+        <Homepage>https://dbi.perl.org/</Homepage>
         <Packager>
             <Name>Blue Devil</Name>
             <Email>bluedevil@sctzine.com</Email>

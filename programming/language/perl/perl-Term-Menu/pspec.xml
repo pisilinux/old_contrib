@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>perl-Term-Menu</Name>
-        <Homepage>http://search.cpan.org/~dazjorz/Term-Menu-0.10/lib/Term/Menu.pm</Homepage>
+        <Homepage>https://metacpan.org/pod/Term::Menu</Homepage>
         <Packager>
             <Name>Blue Devil</Name>
             <Email>bluedevil@sctzine.com</Email>

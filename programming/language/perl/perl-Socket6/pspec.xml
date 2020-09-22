@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>perl-Socket6</Name>
-        <Homepage>http://search.cpan.org/dist/Socket6</Homepage>
+        <Homepage>https://metacpan.org/pod/Socket6</Homepage>
         <Packager>
             <Name>Pisi Linux Admins</Name>
             <Email>admins@pisilinux.org</Email>
@@ -62,7 +62,7 @@
             <Name>Marcin Bojara</Name>
             <Email>marcin@pisilinux.org</Email>
         </Update>
-	<Update release="2">
+        <Update release="2">
             <Date>2013-11-08</Date>
             <Version>0.23</Version>
             <Comment>Rebuild</Comment>

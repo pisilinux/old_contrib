@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>python3-greenlet</Name>
@@ -8,15 +8,15 @@
             <Name>Blue Devil</Name>
             <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>MIT</License>
         <PartOf>programming.language.python3</PartOf>
+        <License>MIT</License>
         <IsA>library</IsA>
         <Summary>Lightweight in-process concurrent programming.</Summary>
         <Description>The greenlet package is a spin-off of Stackless, a version of CPython that supports micro-threads called "tasklets". Tasklets run pseudo-concurrently (typically in a single or a few OS-level threads) and are synchronized with data exchanges on "channels".</Description>
-        <Archive sha1sum="af883ea443d34f599f358c7262dc032cd3b436ab" type="targz">https://github.com/python-greenlet/greenlet/archive/0.4.15.tar.gz</Archive>
+        <Archive sha1sum="33973b9d5d012803d116fbc0e62fccf845a2327e" type="targz">https://github.com/python-greenlet/greenlet/archive/0.4.17.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python3-setuptools</Dependency>
             <Dependency>python3-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -44,6 +44,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-09-22</Date>
+            <Version>0.4.17</Version>
+            <Comment>Patch version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2019-12-26</Date>
             <Version>0.4.15</Version>

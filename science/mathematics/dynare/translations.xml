@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>dynare</Name>
+        <Summary xml:lang="tr">DSGE ve OLG modellerini işleyebilmek için bir yazılım platformu.</Summary>
+        <Description xml:lang="tr">dynare, DSGE ve OLG modellerini işleyebilmek için bir yazılım platformu sunar.</Description>
+    </Source>
+
+    <Package>
+        <Name>dynare-devel</Name>
+        <Summary xml:lang="tr">dynare için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">dynare-devel, dynare için geliştirme dosyalarını içerir.</Description>
+    </Package>
+</PISI>

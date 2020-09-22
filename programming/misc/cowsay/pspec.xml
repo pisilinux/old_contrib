@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cowsay</Name>
+        <Homepage>https://github.com/tnalpgge/rank-amateur-cowsay</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.misc</PartOf>
+        <License>GPL</License>
+        <IsA>app:console</IsA>
+        <Summary>Configurable talking cow.</Summary>
+        <Description>cowsay provides, configurable talking cow and a few other creatures).</Description>
+        <Archive sha1sum="ea5526e1fe3f02e80c8d62b3fc9e1dff51c0d08e" type="targz">https://github.com/tnalpgge/rank-amateur-cowsay/archive/cowsay-3.04.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">cowsay.patch</Patch>
+            <Patch>SCTZineInstallFix.patch</Patch>
+        </Patches>
+    </Source>
+    
+    <Package>
+        <Name>cowsay</Name>
+        <Summary>Configurable talking cow.</Summary>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/cows</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-09-17</Date>
+            <Version>3.04</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

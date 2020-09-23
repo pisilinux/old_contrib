@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>strawberry</Name>
+        <Summary xml:lang="tr">Strawberry müzik oynatma yazılımı.</Summary>
+        <Description xml:lang="tr">Strawberry 2018 yılının clementine yazılımından çatallanmış ve Qt5 platformu üzerine yapılmış bir müzik oynatma yazılımı ve düzenleyicisidir.</Description>
+    </Source>
+</PISI>

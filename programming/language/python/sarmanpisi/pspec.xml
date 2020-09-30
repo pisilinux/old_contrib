@@ -14,7 +14,7 @@
         <IsA>app:console</IsA>
         <Summary>New version checker of Pisi packages</Summary>
         <Description>SarmanPisi is a commandline tool for searching new versions for Pisi Linux packages. Now it can search, cpan, archlinux/packages, aur, bitbucket, github, gitlab, pypi, sourceforge and repology databases.</Description>
-        <Archive sha1sum="5b0bb81ea4a43edc34f138e3966b5913289bf8a7" type="targz">https://gitlab.com/bluedevil/sarmanpisi/-/archive/0.2.0/sarmanpisi-0.2.0.tar.gz</Archive>
+        <Archive sha1sum="52d7f9ebf4f159450f6595e3a912273c9c1d2d04" type="targz">https://gitlab.com/bluedevil/sarmanpisi/-/archive/0.3.0/sarmanpisi-0.3.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>python-devel</Dependency>
         </BuildDependencies>
@@ -24,18 +24,25 @@
         <Name>sarmanpisi</Name>
         <Summary>New version checker of Pisi packages</Summary>
         <RuntimeDependencies>
-            <Dependency>python-packaging</Dependency>
             <Dependency>python-requests</Dependency>
             <Dependency>python-colorama</Dependency>
+            <Dependency>python-packaging</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="doc">/usr/share/doc/sarmanpisi</Path>
-            <Path fileType="library">/usr/lib/python2*</Path>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/sarmanpisi</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2020-10-01</Date>
+            <Version>0.3.0</Version>
+            <Comment>Minor version bump</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="2">
             <Date>2020-03-28</Date>
             <Version>0.2.0</Version>

@@ -14,8 +14,8 @@
 		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>A style to bend Qt applications to look like they belong into GNOME Shell.</Summary>
 		<Description>A native style to bend Qt4 and Qt5 applications to look like they belong into GNOME Shell.</Description>
-		<Archive sha1sum="ecf956be736138ab375cb3724ce8fa2faac16c8b" type="targz">
-			https://github.com/FedoraQt/adwaita-qt/archive/1.1.4.tar.gz
+		<Archive sha1sum="d37ce5f2e4257d0b2c657c072ff33006d0580e9a" type="targz">
+			https://github.com/FedoraQt/adwaita-qt/archive/1.1.90.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -32,6 +32,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2020-10-01</Date>
+			<Version>1.1.90</Version>
+			<Comment>Version bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="2">
 			<Date>2020-06-21</Date>
 			<Version>1.1.4</Version>

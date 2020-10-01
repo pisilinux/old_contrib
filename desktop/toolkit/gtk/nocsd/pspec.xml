@@ -37,16 +37,9 @@
 	</Package>
 
 	<History>
-		<Update release="4">
+		<Update release="2">
 			<Date>2020-10-01</Date>
 			<Version>3.0.4</Version>
-			<Comment>Ver. bump</Comment>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
-		</Update>
-		<Update release="2">
-			<Date>2020-08-01</Date>
-			<Version>3.0.3</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

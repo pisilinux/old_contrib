@@ -13,8 +13,8 @@
 		<PartOf>desktop.toolkit.gtk</PartOf>
 		<Summary> A hack to disable gtk+ 3 client side decoration</Summary>
 		<Description>gtk3-nocsd is a small module used to disable the client side decoration of Gtk+ 3.</Description>
-		<Archive sha1sum="aa9bc1be4def27d07eee9d3dd77362b69768f4db" type="targz">
-			https://github.com/ZaWertun/gtk3-nocsd/archive/v3.0.3.tar.gz
+		<Archive sha1sum="95298a0a09bcd1634916e490cc152eb3d18ee083" type="targz">
+			https://github.com/ZaWertun/gtk3-nocsd/archive/v3.0.4.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gtk3-devel</Dependency>
@@ -38,8 +38,8 @@
 
 	<History>
 		<Update release="2">
-			<Date>2020-08-01</Date>
-			<Version>3.0.3</Version>
+			<Date>2020-10-01</Date>
+			<Version>3.0.4</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

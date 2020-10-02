@@ -45,6 +45,7 @@ def setup():
 	-Dopus=enabled \
 	-Dlame=enabled \
 	-Djack=enabled \
+	-Dsoxr=enabled \
 	-Ddbus=enabled \
 	-Dpcre=enabled \
 	-Dyajl=enabled \
@@ -86,7 +87,6 @@ def setup():
 	\
 	-Dzeroconf=auto \
 	\
-	-Dsoxr=disabled \
 	-Dsndio=disabled \
 	-Dadplug=disabled \
 	-Dtremor=disabled \

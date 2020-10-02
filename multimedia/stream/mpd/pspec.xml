@@ -46,6 +46,7 @@
 			<Dependency>libnfs-devel</Dependency>
 			<Dependency>libcdio-devel</Dependency>
 			<Dependency>libopus-devel</Dependency>
+			<Dependency>libsoxr-devel</Dependency>
 			<Dependency>libupnp-devel</Dependency>
 			<Dependency>twolame-devel</Dependency>
 			<Dependency>wavpack-devel</Dependency>
@@ -108,6 +109,7 @@
 			<Dependency>libnfs</Dependency>
 			<Dependency>libcdio</Dependency>
 			<Dependency>libopus</Dependency>
+			<Dependency>libsoxr</Dependency>
 			<Dependency>libupnp</Dependency>
 			<Dependency>twolame</Dependency>
 			<Dependency>wavpack</Dependency>
@@ -152,7 +154,7 @@
 
 	<History>
 		<Update release="18">
-			<Date>2020-09-21</Date>
+			<Date>2020-10-01</Date>
 			<Version>0.21.26</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>

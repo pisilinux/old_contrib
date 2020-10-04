@@ -27,6 +27,11 @@
 			<Dependency>libxfce4ui-devel</Dependency>
 			<Dependency>xfce4-panel-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">enable_keyboard_scrolling_in_details_pane.patch</Patch>
+			<Patch level="1">support_solarmoon_and_solarmidnight.patch</Patch>
+			<Patch level="1">fix_day_and_night_calculation.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>
@@ -53,7 +58,7 @@
 
 	<History>
 		<Update release="3">
-			<Date>2020-06-25</Date>
+			<Date>2020-10-04</Date>
 			<Version>0.10.1</Version>
 			<Comment>Ver. bump</Comment>
 			<Email>wascheme@tuta.io</Email>

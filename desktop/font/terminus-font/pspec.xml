@@ -5,8 +5,8 @@
 		<Name>terminus-font</Name>
 		<Homepage>http://terminus-font.sourceforge.net/</Homepage>
 		<Packager>
-			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Name>Sezai Yeniay</Name>
+			<Email>sezaiyeniay@pisilinux.org</Email>
 		</Packager>
 		<License>OFL</License>
 		<License>GPLv2</License>
@@ -17,7 +17,7 @@
 			Terminus Font is a clean, fixed width bitmap font, designed for long (8 and more hours per day) work with computers. Version 4.48 contains 1354 characters, covers about 120 language sets and supports ISO8859-1/2/5/7/9/13/15/16, Paratype-PT154/PT254, KOI8-R/U/E/F, Esperanto, many IBM, Windows and Macintosh code pages, as well as the IBM VGA, vt100 and xterm pseudographic characters.
 		</Description>
 		<Archive sha1sum="56d7502ca81998c73a82a6ec36e12631254ae441" type="targz">
-			https://netix.dl.sourceforge.net/project/terminus-font/terminus-font-4.48/terminus-font-4.48.tar.gz
+			https://sourceforge.net/projects/terminus-font/files/terminus-font-4.48/terminus-font-4.48.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>python3</Dependency>

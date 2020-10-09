@@ -15,8 +15,8 @@
         <Description>
             Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It's written in C++ using the Qt 5 or 6 toolkit.
         </Description>
-        <Archive sha1sum="5012db356a2119fc2efa2e19f21650a98440858b" type="tarxz">
-            https://files.strawberrymusicplayer.org/strawberry-0.7.2.tar.xz
+        <Archive sha1sum="3ac7f2fc4143c7a708c6591b7adcd16ea51cba40" type="tarxz">
+            https://files.strawberrymusicplayer.org/strawberry-0.8.1.tar.xz
         </Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
@@ -125,8 +125,8 @@
 
     <History>
         <Update release="1">
-            <Date>2020-09-19</Date>
-            <Version>0.7.2</Version>
+            <Date>2020-10-10</Date>
+            <Version>0.8.1</Version>
             <Comment>First build.</Comment>
             <Name>Pisilinux Community</Name>
             <Email>admins@pisilinux.org</Email>

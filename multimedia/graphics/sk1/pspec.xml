@@ -15,8 +15,8 @@
 		<Description>
 			sK1 is an open source cross-platform vector graphics editor like CorelDRAW, Adobe Illustrator, or Freehand. The major feature of sK1 is a professional precise printing and prepress ready PDF output.
 		</Description>
-		<Archive sha1sum="aef5f1f838faf145bc222b6a9d7cb4b8c411d946" type="targz">
-			https://downloads.sk1project.net/sk1/2.0rc4/sk1-2.0rc4.tar.gz
+		<Archive sha1sum="631963feaa251bddcfcb47761c37bc76364826ac" type="zip">
+			https://github.com/sk1project/sk1-wx/archive/f467be787adf80202af562587f9792c039bca27f.zip
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gettext</Dependency>
@@ -51,14 +51,20 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="library">/usr/lib/sk1-wx-2.0rc4</Path>
-			<Path fileType="data">/usr/lib/sk1-wx-2.0rc4/LICENSE</Path>
+			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="data">/usr/share</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2020-10-18</Date>
+			<Version>2.0_rc5</Version>
+			<Comment>Rebuild from git.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="1">
 			<Date>2020-04-16</Date>
 			<Version>2.0_rc4</Version>

@@ -7,19 +7,20 @@
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
 
-w = "-Wno-unused-but-set-variable \
-     -Wno-unused-function \
-     -Wno-misleading-indentation \
-     -Wno-maybe-uninitialized \
-     -Wno-strict-prototypes \
-     -Wno-incompatible-pointer-types \
-     -Wno-strict-aliasing \
-     -Wno-pointer-sign \
-     -Wno-format \
-    "
+j = ''.join([
+     '"-Wno-incompatible-pointer-types',
+     ' -Wno-unused-but-set-variable',
+     ' -Wno-misleading-indentation',
+     ' -Wno-maybe-uninitialized',
+     ' -Wno-strict-prototypes',
+     ' -Wno-unused-function',
+     ' -Wno-strict-aliasing',
+     ' -Wno-pointer-sign',
+     ' -Wno-format "',
+    ])
 
 def build():
-	pisitools.cflags.add(w)
+	pisitools.cflags.add(j)
 	pythonmodules.compile()
 
 def install():

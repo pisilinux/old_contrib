@@ -8,15 +8,15 @@
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
-		<License>GPLv3</License>
+		<License>AGPLv3</License>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.graphics</PartOf>
 		<Summary>UniConvertor 2.0 - Universal graphics translator( release candidate 4. ).</Summary>
 		<Description>
 			UniConvertor is an universal graphics translator. It is a command line tool/library which uses SK2 document object model to convert one file format to another.
 		</Description>
-		<Archive sha1sum="4ec122e9d066b339ab3aa4d745fb45505cf76ce8" type="targz">
-			https://downloads.sk1project.net/uniconvertor/2.0rc4/uniconvertor-2.0rc4.tar.gz
+		<Archive sha1sum="284a275630b548bc2faf0198e804d6526c218530" type="zip">
+			https://github.com/sk1project/uniconvertor/archive/96b7638144849b6e4868405f485fbf54f436727a.zip
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gettext</Dependency>
@@ -45,13 +45,20 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="library">/usr/lib/uniconvertor-2.0rc4</Path>
-			<Path fileType="data">/usr/lib/uniconvertor-2.0rc4/LICENSE</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<!-- <Path fileType="data">/usr/lib/uniconvertor-2.0rc5/LICENSE</Path> -->
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2020-10-18</Date>
+			<Version>2.0_rc5</Version>
+			<Comment>Rebuild from git.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="1">
 			<Date>2020-04-16</Date>
 			<Version>2.0_rc4</Version>

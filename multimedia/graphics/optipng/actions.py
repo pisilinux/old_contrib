@@ -8,9 +8,15 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+t = ''.join([
+    '"-prefix=/usr',
+    ' -mandir=/usr/share/man',
+    ' -with-system-zlib',
+    ' -with-system-libpng "'
+    ])
+
 def setup():
-	autotools.rawConfigure("\
-	-prefix=/usr -mandir=/usr/share/man -with-system-zlib -with-system-libpng")
+	autotools.rawConfigure(t)
 
 def build():
 	autotools.make()
@@ -19,6 +25,5 @@ def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dohtml("doc/*.html")
-	pisitools.dodoc(\
-	"AUTHORS.txt", "LICENSE.txt", "README.txt", "doc/history.txt", "doc/todo.txt")
+	pisitools.dodoc("*.txt", "doc/history.txt", "doc/todo.txt")
 

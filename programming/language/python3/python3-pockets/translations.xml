@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-pockets</Name>
+        <Summary xml:lang="tr">Yardımcı Python araçları</Summary>
+        <Description xml:lang="tr">python3-pockets, yardımcı python araçları içeren python kitaplığı ve araçları sunar.</Description>
+    </Source>
+</PISI>

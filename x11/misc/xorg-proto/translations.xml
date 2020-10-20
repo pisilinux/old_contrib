@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>xorg-proto</Name>
+        <Summary xml:lang="tr">combined X.Org X11 Protocol headers
+</Summary>
+        <Description xml:lang="tr">combined X.Org X11 Protocol headers</Description>
+    </Source>
+</PISI>

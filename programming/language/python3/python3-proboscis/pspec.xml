@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python3-proboscis</Name>
+        <Homepage>https://github.com/rackerlabs/python-proboscis</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <PartOf>programming.language.python3</PartOf>
+        <IsA>library</IsA>
+        <Summary>python3-proboscis brings TestNG features to Python.</Summary>
+        <Description>Proboscis is a Python test framework that extends Python's built-in unittest module and Nose with features from TestNG.</Description>
+        <Archive sha1sum="7c8f1dc81f4591a05defc1bb15cc93c007de492e" type="targz">https://files.pythonhosted.org/packages/3c/c8/c187818ab8d0faecdc3c16c1e0b2e522f3b38570f0fb91dcae21662019d0/proboscis-1.2.6.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-proboscis</Name>
+        <Summary>python3-proboscis brings TestNG features to Python.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-proboscis</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-24</Date>
+            <Version>1.2.6.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

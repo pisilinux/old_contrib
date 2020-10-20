@@ -11,7 +11,7 @@ from pisi.actionsapi import get
 def setup():
     autotools.autoreconf("-fi")
     autotools.configure("--disable-static")
-    
+    # fix unused direct dependency analysis
     pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():

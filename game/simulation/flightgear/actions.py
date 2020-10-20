@@ -10,13 +10,15 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    cmaketools.configure("-DCMAKE_INSTALL_PREFIX=/usr \
-                          -DCMAKE_INSTALL_LIBDIR=lib \
-                          -DFG_DATA_DIR=/usr/share/flightgear")
+    cmaketools.configure(" -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_INSTALL_LIBDIR=lib \
+    -DFG_DATA_DIR:STRING='/usr/share/flightgear/data' \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DFG_BUILD_TYPE=Release")
 
 def build():
     cmaketools.make()
-    shelltools.system("sed -i 's|Exec=.*|Exec=fgfs --fg-root=/usr/share/flightgear/data|' package/flightgear.desktop")
+    
 def install():
     cmaketools.install()
     

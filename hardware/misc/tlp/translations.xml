@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tlp</Name>
+        <Summary xml:lang="tr">Linux Gelişmiş Güç Yönetimi</Summary>
+        <Description xml:lang="tr">TLP, her teknik ayrıntıyı anlamadan Linux için gelişmiş güç yönetiminin avantajlarını sunar.</Description>
+    </Source>
+
+    <Source>
+        <Name>tlp-rdw</Name>
+        <Summary xml:lang="tr">Linux Gelişmiş Güç Yönetimi - Radyo Aygıtı Sihirbazı</Summary>
+        <Description xml:lang="tr">TLP-RDW, her teknik ayrıntıyı anlamadan Linux için gelişmiş güç yönetiminin avantajlarını sunar.</Description>
+    </Source>
+</PISI>

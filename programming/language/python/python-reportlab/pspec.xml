@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>python-reportlab</Name>
+		<Homepage>https://www.reportlab.com/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>BSD</License>
+		<IsA>library</IsA>
+		<PartOf>programming.language.python</PartOf>
+		<Summary>
+			ReportLab PDF Toolkit. It allows rapid creation of rich PDF documents, and also creation of charts in a variety of bitmap and vector formats.
+		</Summary>
+		<Description>
+			ReportLab is the time-proven, ultra-robust open-source engine for creating complex, data-driven PDF documents and custom vector graphics. It's free, open-source, and written in Python.
+		</Description>
+		<Archive sha1sum="4489dc96b140737e9c9869f4a05a80f9971a0f6f" type="targz">
+			https://files.pythonhosted.org/packages/source/r/reportlab/reportlab-3.5.42.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python-devel</Dependency>
+			<Dependency>python-pillow</Dependency>
+			<Dependency>freetype-devel</Dependency>
+			<Dependency>python-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>python-reportlab</Name>
+		<RuntimeDependencies>
+			<Dependency>python</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>python-pillow</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-04-14</Date>
+			<Version>3.5.42</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-pdfkit</Name>
+        <Summary xml:lang="tr">Webkit rendering motorunu kullanarak HTML'i PDF'e dönüştüren, Wkhtmltopdf python sarmalayıcı kitaplık.</Summary>
+        <Description xml:lang="tr">python3-pdfkit, webkit rendering motorunu kullanarak HTML'i PDF'e dönüştüren, Wkhtmltopdf python sarmalayıcı kitaplığını sunar.</Description>
+    </Source>
+</PISI>

@@ -9,25 +9,11 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="paramiko-%s" % get.srcVERSION()
-
-def setup():
-    shelltools.cd("..")
-    shelltools.makedirs("build_python3")
-    shelltools.copytree("./%s" % WorkDir,  "build_python3")
-    shelltools.cd(WorkDir)
-
 def build():
     pythonmodules.compile()
 
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.compile(pyVer="3")
-
 def install():
     pythonmodules.install()
-    
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.install(pyVer="3")
 
-    for dirs in ["demos", "tests"]:
+    for dirs in ["demos"]:
         pisitools.insinto("%s/%s" % (get.docDIR(), get.srcNAME()), dirs)

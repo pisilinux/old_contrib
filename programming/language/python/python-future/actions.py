@@ -6,27 +6,12 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
-from pisi.actionsapi import get
-
-WorkDir="future-%s" % get.srcVERSION()
-
-def setup():
-    shelltools.cd("..")
-    shelltools.makedirs("build_python3")
-    shelltools.copytree("./%s" % WorkDir,  "build_python3")
-    shelltools.cd(WorkDir)
 
 def build():
     pythonmodules.compile()
 
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.compile(pyVer="3")
-
 def install():
     pythonmodules.install()
-    
-    shelltools.cd("../build_python3/%s" % WorkDir)
-    pythonmodules.install(pyVer="3")
-
-    pisitools.dodoc("LICENSE*", "MANIFEST*", "README*", "PKG-INFO")
+    pisitools.rename("/usr/bin/futurize","futurize-py2")
+    pisitools.rename("/usr/bin/pasteurize","pasteurize-py2")
+    pisitools.dodoc("LICENSE*")

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>epydoc</Name>
+        <Summary xml:lang="tr">Python için otomatik API belgelendirme üretecidir.</Summary>
+        <Description xml:lang="tr">epydoc, Python modülleri için otomatik API belgelendirmesi üretebilen bir araçtır.</Description>
+    </Source>
+</PISI>

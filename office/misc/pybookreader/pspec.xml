@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>pybookreader</Name>
+		<Homepage>http://pybookreader.narod.ru/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:gui</IsA>
+		<Summary>Book Reader</Summary>
+		<Description>
+			PyBookReader is a Book Reader for Linux/FreeBSD/other operation systems.
+		</Description>
+		<Archive sha1sum="a688e579bfed277e1570b72b0f78934a79d72a4f" type="targz">
+			https://sourceforge.net/projects/pybookreader/files/PyBookReader/PyBookReader%2BOrnamentBook-0.5.0/PyBookReader-0.5.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>python-devel</Dependency>
+			<Dependency>libxml2-devel</Dependency>
+			<Dependency>python-gtk-devel</Dependency>
+			<Dependency>python-setuptools</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<Patch level="1">obprefs.patch</Patch>
+			<Patch level="1">pbrprefs.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>pybookreader</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2</Dependency>
+			<!-- <Dependency>xpdf</Dependency> -->
+			<Dependency>python</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>python-gtk</Dependency>
+			<Dependency>python-cairo</Dependency>
+			<Dependency>python-pygobject</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share/applications/pybr.desktop</Path>
+			<Path fileType="data">/usr/share/applications/ob.desktop</Path>
+			<Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+		<AdditionalFiles>
+			<AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pybr.desktop">pybr.desktop</AdditionalFile>
+			<AdditionalFile owner="root" permission="0644" target="/usr/share/applications/ob.desktop">ob.desktop</AdditionalFile>
+		</AdditionalFiles>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2019-11-23</Date>
+			<Version>0.5.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-xapian</Name>
+        <Summary xml:lang="tr">Xapian-core için python modülü</Summary>
+        <Description xml:lang="tr">python3-xapian, bir açık kaynak kodlu istatistiksel bilgi çıkarma kitaplığı olan xapian için python bağımlılıklarını sunar.</Description>
+    </Source>
+    <Package>
+        <Name>python3-xapian-docs</Name>
+        <Summary xml:lang="tr">python3-xapian için belgelendirme dosyaları</Summary>
+        <Description xml:lang="tr">python3-xapian-docs, python3-xapian için belgelendirme dosyalarını içerir.</Description>
+    </Package>
+</PISI>

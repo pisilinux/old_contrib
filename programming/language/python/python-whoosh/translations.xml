@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-whoosh</Name>
+        <Summary xml:lang="tr">Tamamen python ile gelistirilmis hizli metin indisleme, arama ve heceleme denetimi yapabilen python kitapligi</Summary>
+        <Description xml:lang="tr">Whoosh hizli bol ozellikli tam metin isdisleme ve arama ozellikleri bulunan tamamen python ile yazilmis bir kitapliktir</Description>
+    </Source>
+</PISI>

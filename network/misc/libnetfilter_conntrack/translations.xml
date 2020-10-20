@@ -9,5 +9,6 @@
     <Package>
         <Name>libnetfilter_conntrack-devel</Name>
         <Summary xml:lang="tr">libnetfilter_conntrack için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">libnetfilter_conntrack-devel, libnetfilter_conntrack için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

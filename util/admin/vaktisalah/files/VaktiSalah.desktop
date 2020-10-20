@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=VaktiSalah
+Version=1.0
+Exec=VaktiSalah
+Comment=a Simple Prayer Times Application
+Icon=vaktisalah
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Utility;

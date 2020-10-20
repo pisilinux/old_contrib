@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-dpkt</Name>
+        <Homepage>https://github.com/kbandla/dpkt</Homepage>
+        <Packager>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python3</PartOf>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Python library for interacting with and creating packets.</Summary>
+        <Description>A fast, simple packet creation/parsing python module with definitions for the basic TCP/IP protocols.</Description>
+        <Archive sha1sum="6c41fe6d17e5d2950168b25b385aacd20b42abdc" type="targz">https://github.com/kbandla/dpkt/archive/v1.9.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>python3-setuptools</Dependency>
+            <!-- for documentation-->
+            <Dependency>python3-mock</Dependency>
+            <Dependency>python3-sphinx</Dependency>
+            <Dependency>python3-pockets</Dependency>
+            <Dependency>python3-sphinxcontrib-napoleon</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-dpkt</Name>
+        <Summary>Python3 library for interacting with and creating packets.</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python3*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-dpkt/LICENSE</Path>
+            <Path fileType="doc">/usr/share/doc/python3-dpkt/README*</Path>
+            <Path fileType="doc">/usr/share/doc/python3-dpkt/AUTHORS*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>python3-dpkt-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Documentation files for python3-dpkt</Summary>
+        <Description>python3-dpkt-docs provides documentation files for python3-dpkt.</Description>
+        <RuntimeDependencies>
+            <Dependency release="current">python3-dpkt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/python3-dpkt/html</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2020-09-22</Date>
+            <Version>1.9.3</Version>
+            <Comment>Patch version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2019-11-21</Date>
+            <Version>1.9.2</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2016-03-28</Date>
+            <Version>1.8.7</Version>
+            <Comment>First release, rebuilt with docker</Comment>
+            <Name>İbrahim KARAGÜZEL</Name>
+            <Email>karaguzelibrahim@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

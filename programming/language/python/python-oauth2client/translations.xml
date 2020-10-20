@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-oauth2client</Name>
+        <Summary xml:lang="tr">OAuth 2.0 için istemci kitaplığı</Summary>
+        <Description xml:lang="tr">python-oauth2client, OAuth 2.0 ile korunan kaynaklara erişmek için kullanılan bir python kitaplığıdır.</Description>
+    </Source>
+</PISI>

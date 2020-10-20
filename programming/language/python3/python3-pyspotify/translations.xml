@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-pyspotify</Name>
+        <Summary xml:lang="tr">Python için libspotify sarmalayıcı modülü</Summary>
+        <Description xml:lang="tr">Python için libspotify sarmalayıcı modülü sunar.</Description>
+    </Source>
+</PISI>

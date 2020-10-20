@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>terminus-font</Name>
+		<Homepage>http://terminus-font.sourceforge.net/</Homepage>
+		<Packager>
+			<Name>Sezai Yeniay</Name>
+			<Email>sezaiyeniay@pisilinux.org</Email>
+		</Packager>
+		<License>OFL</License>
+		<License>GPLv2</License>
+		<IsA>data</IsA>
+		<PartOf>desktop.font</PartOf>
+		<Summary>Fixed width bitmap font.</Summary>
+		<Description>
+			Terminus Font is a clean, fixed width bitmap font, designed for long (8 and more hours per day) work with computers. Version 4.48 contains 1354 characters, covers about 120 language sets and supports ISO8859-1/2/5/7/9/13/15/16, Paratype-PT154/PT254, KOI8-R/U/E/F, Esperanto, many IBM, Windows and Macintosh code pages, as well as the IBM VGA, vt100 and xterm pseudographic characters.
+		</Description>
+		<Archive sha1sum="56d7502ca81998c73a82a6ec36e12631254ae441" type="targz">
+			https://sourceforge.net/projects/terminus-font/files/terminus-font-4.48/terminus-font-4.48.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3</Dependency>
+			<Dependency>xorg-app</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>terminus-font</Name>
+		<Files>
+			<Path fileType="config">/etc/fonts/conf.avail/75-yes-terminus.conf</Path>
+			<Path fileType="config">/etc/fonts/conf.d/75-yes-terminus.conf</Path>
+			<Path fileType="data">/usr/share/kbd/consolefonts</Path>
+			<Path fileType="data">/usr/share/fonts/misc</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="4">
+			<Date>2019-12-12</Date>
+			<Version>4.48</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="3">
+			<Date>2014-05-09</Date>
+			<Version>4.39</Version>
+			<Comment>Version bump.</Comment>
+			<Name>Yusuf Aydemir</Name>
+			<Email>yusuf.aydemir@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2014-03-09</Date>
+			<Version>4.36</Version>
+			<Comment>Rebuild</Comment>
+			<Name>Varol Maksutoğlu</Name>
+			<Email>waroi@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2012-09-21</Date>
+			<Version>4.36</Version>
+			<Comment>First release</Comment>
+			<Name>Sezai Yeniay</Name>
+			<Email>sezaiyeniay@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+

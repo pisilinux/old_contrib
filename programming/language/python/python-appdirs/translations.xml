@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-appdirs</Name>
+        <Summary xml:lang="tr">Platforma özel dizin belirleyebilen küçük bir python kitaplığı.</Summary>
+        <Description xml:lang="tr">python-appdirs, yazdığınız uygulama kullanıcı verisini nerede saklamalı sorusuna yanıt vermeye çalışan küçük bir python kitaplığıdır.</Description>
+    </Source>
+</PISI>

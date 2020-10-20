@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>3proxy</Name>
-        <Homepage>http://3proxy.ru/</Homepage>
+        <Homepage>https://3proxy.ru/</Homepage>
         <Packager>
             <Name>İbrahim KARAGÜZEL</Name>
             <Email>karaguzelibrahim@gmail.com</Email>

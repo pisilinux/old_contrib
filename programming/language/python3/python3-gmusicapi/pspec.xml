@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python3-gmusicapi</Name>
+        <Homepage>https://github.com/simon-weber/gmusicapi</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python3</PartOf>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>An unofficial client library for Google Music</Summary>
+        <Description>An unofficial api for Google Play Music. gmusicapi allows control of Google Music with Python3.</Description>
+        <Archive sha1sum="714dff17cee32b69d34efd87beb3a6a1233b029e" type="targz">https://github.com/simon-weber/gmusicapi/archive/13.0.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-setuptools</Dependency>
+            <Dependency>python3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python3-gmusicapi</Name>
+        <Summary>An unofficial client library for Google Music</Summary>
+        <RuntimeDependencies>
+            <Dependency>python3-mechanicalsoup</Dependency>
+            <Dependency>python3-oauth2client</Dependency>
+            <Dependency>python3-validictory</Dependency>
+            <Dependency>python3-decorator</Dependency>
+            <Dependency>python3-protobuf</Dependency>
+            <Dependency>python3-dateutil</Dependency>
+            <Dependency>python3-gpsoauth</Dependency>
+            <Dependency>python3-httplib2</Dependency>
+            <Dependency>python3-requests</Dependency>
+            <Dependency>python3-appdirs</Dependency>
+            <Dependency>python3-mutagen</Dependency>
+            <Dependency>python3-future</Dependency>
+            <Dependency>python3-six</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc/python3-gmusicapi</Path>
+            <Path fileType="library">/usr/lib/python3*</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2020-04-08</Date>
+            <Version>13.0.0</Version>
+            <Comment>Major version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-12-23</Date>
+            <Version>12.1.1</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

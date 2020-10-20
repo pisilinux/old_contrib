@@ -1,14 +1,15 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>perl-Term-Menu</Name>
-        <Homepage>http://search.cpan.org/~dazjorz/Term-Menu-0.10/lib/Term/Menu.pm</Homepage>
+        <Homepage>https://metacpan.org/pod/Term::Menu</Homepage>
         <Packager>
-            <Name>İbrahim KARAGÜZEL</Name>
-            <Email>karaguzelibrahim@gmail.com</Email>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>GPL</License>
+        <License>Perl 5</License>
+        <PartOf>programming.language.perl</PartOf>
         <IsA>library</IsA>
         <Summary>Perl extension for asking questions and printing menus at the terminal.</Summary>
         <Description>Term::Menu is a highly tweakable module that eases the task of programming user interactivity. It helps you to get information from users, and to ask what they really want. It uses basic print commands, and has no dependancies</Description>
@@ -20,6 +21,7 @@
 
     <Package>
         <Name>perl-Term-Menu</Name>
+        <Summary>Perl extension for asking questions and printing menus at the terminal.</Summary>
         <RuntimeDependencies>
             <Dependency>perl</Dependency>
         </RuntimeDependencies>
@@ -31,6 +33,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2020-01-08</Date>
+            <Version>0.10</Version>
+            <Comment>Rebuilt.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2016-04-22</Date>
             <Version>0.10</Version>

@@ -1,39 +1,49 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>stunnel</Name>
-        <Homepage>www.stunnel.org</Homepage>
+        <Homepage>https://www.stunnel.org</Homepage>
         <Packager>
             <Name>Osman Erkan</Name>
             <Email>osman.erkan@pisilinux.org</Email>
         </Packager>
+        <PartOf>network.misc</PartOf>
         <License>GPLv2</License>
         <IsA>app:gui</IsA>
         <Summary>TLS/SSL - Port Wrapper</Summary>
         <Description>The stunnel package contains a program that allows you to encrypt arbitrary TCP connections inside SSL (Secure Sockets Layer) so you can easily communicate with clients over secure channels.</Description>
-        <Archive sha1sum="e9c3717ece9931d099013dbbbf613cec47452a62" type="targz">https://www.stunnel.org/downloads/stunnel-5.31.tar.gz</Archive>
+        <Archive sha1sum="a7fa3fb55d698f50f3d54e4fc08588a119f21cad" type="targz">https://www.stunnel.org/downloads/archive/5.x/stunnel-5.56.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
             <Dependency>openssl-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
     <Package>
         <Name>stunnel</Name>
+        <Summary>TLS/SSL - Port Wrapper</Summary>
         <RuntimeDependencies>
-            <Dependency>zlib</Dependency>
             <Dependency>openssl</Dependency>
+            <Dependency>zlib</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib/stunnel</Path>
-            <Path fileType="library">/var/lib</Path>
+            <Path fileType="library">/var/lib/stunnel</Path>
             <Path fileType="man">/usr/share/man/man8</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="executable">/usr/bin</Path>
             <Path fileType="config">/etc/stunnel</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
+
     <History>
+        <Update release="8">
+            <Date>2020-04-10</Date>
+            <Version>5.56</Version>
+            <Comment>Minor version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="7">
             <Date>2016-03-23</Date>
             <Version>5.31</Version>

@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python-rsa</Name>
+        <Homepage>https://stuvel.eu/rsa</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>Apache</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>python-rsa is a pure-Python RSA implementation</Summary>
+        <Description>python-rsa is a pure-Python RSA implementation. It supports encryption and decryption, signing and verifying signatures, and key generation according to PKCS#1 version 1.5. It can be used as a Python library as well as on the commandline. </Description>
+        <Archive sha1sum="8a68dcee7bd2a7727c253b9ed2820cd1b5b9241a" type="targz">https://files.pythonhosted.org/packages/cb/d0/8f99b91432a60ca4b1cd478fd0bdf28c1901c58e3a9f14f4ba3dba86b57f/rsa-4.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-rsa</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin/pyrsa-verify-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-keygen-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-priv2pub-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-sign-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-encrypt-py2</Path>
+            <Path fileType="executable">/usr/bin/pyrsa-decrypt-py2</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-rsa</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-23</Date>
+            <Version>4.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

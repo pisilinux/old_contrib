@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-gmusicapi</Name>
+        <Summary xml:lang="tr">Google music için api sunan resmi olmayan python bağlayıcısı</Summary>
+        <Description xml:lang="tr">python-gmusicapi, Google music için api sunan resmi olmayan python bağlayıcısıdır. Python kullanarak Google Music uygulamasını denetleyebilmenize olanak tanır.</Description>
+    </Source>
+</PISI>

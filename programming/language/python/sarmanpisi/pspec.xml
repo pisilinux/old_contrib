@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sarmanpisi</Name>
+        <Homepage>https://gitlab.com/bluedevil/sarmanpisi</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python</PartOf>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>New version checker of Pisi packages</Summary>
+        <Description>SarmanPisi is a commandline tool for searching new versions for Pisi Linux packages. Now it can search, cpan, archlinux/packages, aur, bitbucket, github, gitlab, pypi, sourceforge and repology databases.</Description>
+        <Archive sha1sum="52d7f9ebf4f159450f6595e3a912273c9c1d2d04" type="targz">https://gitlab.com/bluedevil/sarmanpisi/-/archive/0.3.0/sarmanpisi-0.3.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sarmanpisi</Name>
+        <Summary>New version checker of Pisi packages</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-requests</Dependency>
+            <Dependency>python-colorama</Dependency>
+            <Dependency>python-packaging</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/sarmanpisi</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2020-10-01</Date>
+            <Version>0.3.0</Version>
+            <Comment>Minor version bump</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2020-03-28</Date>
+            <Version>0.2.0</Version>
+            <Comment>Minor version bump</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2020-03-20</Date>
+            <Version>0.1.0</Version>
+            <Comment>First pisi release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Master PDF Editor 4
 Comment=Edit PDF files
+Comment[tr]=PDF Duzenleme Araci
 Exec=/usr/bin/masterpdfeditor4 %f
 Path=/opt/master-pdf-editor-4
 Terminal=false

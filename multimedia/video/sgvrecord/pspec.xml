@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sgvrecord</Name>
+        <Homepage>https://github.com/yucefsourani/sgvrecord</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Simple Tool To Record Screen</Summary>
+        <Description>Simple Tool To Record Screen</Description>
+        <Archive sha1sum="993fb38c712e12c9051a09c820768dedf596f7fa" type="targz">https://github.com/Rmys/sgvrecord/archive/v1.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python3-devel</Dependency>
+            <Dependency>libwnck3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sgvrecord</Name>
+        <RuntimeDependencies>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/app*</Path>
+            <Path fileType="info">/usr/share/icons</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-02-02</Date>
+            <Version>1.0</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

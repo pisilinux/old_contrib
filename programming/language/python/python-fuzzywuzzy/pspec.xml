@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-fuzzywuzzy</Name>
+        <Homepage>https://github.com/seatgeek/fuzzywuzzy</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.language.python</PartOf>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>python-fuzzywuzzy is a pure-Python RSA implementation</Summary>
+        <Description>Fuzzy string matching like a boss. It uses Levenshtein Distance to calculate the differences between sequences in a simple-to-use package.</Description>
+        <Archive sha1sum="faf1975fbba55bdb94ca07d544ca8b42af45310c" type="targz">https://github.com/seatgeek/fuzzywuzzy/archive/0.18.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-fuzzywuzzy</Name>
+        <Summary>python-fuzzywuzzy is a pure-Python RSA implementation</Summary>
+        <RuntimeDependencies>
+            <Dependency>python-Levenshtein</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-fuzzywuzzy</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2020-02-24</Date>
+            <Version>0.18.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-12-26</Date>
+            <Version>0.17.0</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

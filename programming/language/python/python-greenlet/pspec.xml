@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python-greenlet</Name>
+        <Homepage>https://github.com/python-greenlet/greenlet</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>Lightweight in-process concurrent programming.</Summary>
+        <Description>The greenlet package is a spin-off of Stackless, a version of CPython that supports micro-threads called "tasklets". Tasklets run pseudo-concurrently (typically in a single or a few OS-level threads) and are synchronized with data exchanges on "channels".</Description>
+        <Archive sha1sum="af883ea443d34f599f358c7262dc032cd3b436ab" type="targz">https://github.com/python-greenlet/greenlet/archive/0.4.15.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-greenlet</Name>
+        <Summary>Lightweight in-process concurrent programming.</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-greenlet</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>python-greenlet-devel</Name>
+        <Summary>Development headers for the python-greenlet.</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">python-greenlet</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-26</Date>
+            <Version>0.4.15</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

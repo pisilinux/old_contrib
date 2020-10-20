@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gtkspellmm</Name>
+        <Homepage>http://gtkspell.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>C++ binding for gtkspell</Summary>
+        <Description>C++ binding for gtkspell</Description>
+        <Archive sha1sum="a4e0dea595575ad428ae051df4587a13bfc9eba4" type="tarxz">https://sourceforge.net/projects/gtkspell/files/gtkspellmm/gtkspellmm-3.0.5.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gtkmm3-devel</Dependency>
+            <Dependency>gtkspell3-devel</Dependency>
+            <Dependency>libsigc++-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gtkspellmm</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>gtkmm3</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>gtkspell3</Dependency>
+            <Dependency>libsigc++</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="header">/usr/gtkspellmm-3.0</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>gtkspellmm-devel</Name>
+        <Summary>Development files for gtkspellmm</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtkspellmm</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glibmm-devel</Dependency>
+            <Dependency>gtkmm3-devel</Dependency>
+            <Dependency>gtkspell3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-01-26</Date>
+            <Version>3.0.5</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

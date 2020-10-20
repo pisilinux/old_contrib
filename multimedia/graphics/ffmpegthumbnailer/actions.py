@@ -2,22 +2,30 @@
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/licenses/gpl.txt
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import autotools
+from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
 
 def setup():
-    pisitools.dosed("libffmpegthumbnailer/pngwriter.cpp", "#include <cassert>", "#include <cassert>\n#include <cstring>")
-    autotools.configure("--disable-static \
-                         --enable-png \
-                         --enable-jpeg")
+#	pisitools.dosed("libffmpegthumbnailer/pngwriter.cpp", "#include <cassert>", "#include <cassert>\n#include <cstring>")
+	pisitools.cxxflags.add("-Wno-deprecated-declarations")
+	cmaketools.configure("\
+	\
+	-DCMAKE_INSTALL_DIR=/usr \
+	-DCMAKE_INSTALL_LIBDIR=lib \
+	-DCMAKE_BUILD_TYPE=Release \
+	\
+	-DENABLE_GIO=ON \
+	-DENABLE_TESTS=ON \
+	-DENABLE_THUMBNAILER=ON")
 
 def build():
-    autotools.make()
+	cmaketools.make()
 
 def install():
-    autotools.install()
+	cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    # Empty files: NEWS, TODO
-    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README.md")
+

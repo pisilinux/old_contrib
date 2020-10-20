@@ -4,12 +4,16 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/copyleft/gpl.txt.
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 
 def setup():
+    #shelltools.system("./autogen.sh")
+    #autotools.aclocal()
+    #autotools.autoreconf()
     autotools.configure("--without-tinyxml \
                          --enable-ttf-font-dir=/usr/share/fonts/freefont/")
 
@@ -19,4 +23,4 @@ def build():
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("COPYING", "ChangeLog", "README", "THANKS")
+    #pisitools.dodoc("COPYING", "ChangeLog", "README", "THANKS")

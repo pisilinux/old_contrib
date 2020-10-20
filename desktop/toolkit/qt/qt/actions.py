@@ -173,7 +173,7 @@ def install():
 
     # Remove useless image directory, images of HTML docs are in doc/html/images
     #pisitools.removeDir("%s/src" % qt4.docdir)
-    
+
     pisitools.removeDir("/usr/share/qt4/phrasebooks")
 
     pisitools.dodoc("changes-*", "LGPL_EXCEPTION.txt", "LICENSE.*", "README")

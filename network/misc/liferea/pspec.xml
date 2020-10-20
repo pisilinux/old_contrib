@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>liferea</Name>
+        <Homepage>https://lzone.de/liferea/</Homepage>
+        <Packager>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds</Summary>
+        <Description>Liferea (abbreviation of Linux Feed Reader) is a news aggreagator for RSS/RDF feeds which also supports CDF channels, Atom/Echo/PIE feeds and OCS or OPML directories. It is a simple FeedReader clone for Unix.</Description>
+        <Archive sha1sum="355a4cbe17b27ac075285b84e11237915a806d9c" type="tarbz2">https://github.com/lwindolf/liferea/releases/download/v1.13.0/liferea-1.13.0.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>libxslt-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>json-glib-devel</Dependency>
+            <Dependency>webkit2gtk-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>gsettings-desktop-schemas-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>liferea</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>libxslt</Dependency>
+            <Dependency>json-glib</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>webkit2gtk</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2020-03-15</Date>
+            <Version>1.13.0</Version>
+            <Comment>Ver. up</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
+        <Update release="5">
+            <Date>2015-03-04</Date>
+            <Version>1.10.14</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Ayhan Yalçınsoy</Name>
+            <Email>ayhanyalcinsoy@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
+            <Date>2014-05-29</Date>
+            <Version>1.10.9</Version>
+            <Comment>Version bump</Comment>
+            <Name>Burak Fazıl Ertürk</Name>
+            <Email>burakerturk@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2013-10-11</Date>
+            <Version>1.10.3</Version>
+            <Comment>bump</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2013-08-26</Date>
+            <Version>1.8.5</Version>
+            <Comment>Release bump.</Comment>
+            <Name>Serdar Soytetir</Name>
+            <Email>kaptan@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2012-05-03</Date>
+            <Version>1.8.5</Version>
+            <Comment>First release</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

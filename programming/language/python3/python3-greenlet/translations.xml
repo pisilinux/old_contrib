@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-greenlet</Name>
+        <Summary xml:lang="tr">Hafif bir eşzamanlı programlama modülü</Summary>
+        <Description xml:lang="tr">python3-greenlet tasklet de denilen mikro-iş parçacıklarını desktekleyen bir CPython modülüdür.</Description>
+    </Source>
+    <Package>
+        <Name>python3-greenlet-devel</Name>
+        <Summary xml:lang="tr">python3-greenlet için geliştime dosyaları</Summary>
+        <Description xml:lang="tr">python3-greenlet-devel, python3-greenlet için geliştime dosyaları içerir.</Description>
+    </Package>
+</PISI>

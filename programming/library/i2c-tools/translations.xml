@@ -1,0 +1,7 @@
+<PISI>
+    <Source>
+        <Name>i2c-tools</Name>
+        <Summary xml:lang="tr">A heterogeneous set of I2C tools for Linux</Summary>
+        <Description xml:lang="tr">A heterogeneous set of I2C tools for Linux</Description>
+    </Source>
+</PISI>

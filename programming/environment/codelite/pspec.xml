@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>codelite</Name>
+        <Homepage>https://codelite.org/</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <PartOf>programming.environment</PartOf>
+        <License>GPL</License>
+        <Icon>codelite</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>CodeLite, a cross platform C/C++/PHP and Node.js IDE written in C++</Summary>
+        <Description>CodeLite is a free, open source, cross platform IDE specialized in C, C++, PHP and JavaScript (mainly for backend developers using Node.js) programming languages, which runs best on all major platforms (Windows, macOS and Linux).</Description>
+        <Archive sha1sum="790b903016c628ad18e368aa3ec03a2240aa34ab" type="targz">https://github.com/eranif/codelite/archive/14.0.tar.gz</Archive>
+        <Archive sha1sum="f15666992129f34a028be0e8c188697ace9841e8" type="zip" target="codelite-14.0/wxgui">http://repos.codelite.org/wxCrafterLibs/wxgui.zip</Archive>
+        <BuildDependencies>
+            <Dependency>hunspell-devel</Dependency>
+            <Dependency>libssh-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>mariadb-lib</Dependency>
+            <Dependency>wxGTK-devel</Dependency>
+            <Dependency>lldb-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>cmake</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>codelite</Name>
+        <Summary>CodeLite, a cross platform C/C++/PHP and Node.js IDE written in C++</Summary>
+        <RuntimeDependencies>
+            <Dependency>wxGTK-common</Dependency>
+            <Dependency>hunspell</Dependency>
+            <Dependency>libssh</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>lldb</Dependency>
+            <Dependency>gtk2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <!-- Codelite binaries -->
+            <Path fileType="executable">/usr/bin/codelite_open_helper.py</Path>
+            <Path fileType="executable">/usr/bin/codelite_kill_children</Path>
+            <Path fileType="executable">/usr/bin/codelite-lsp-helper</Path>
+            <Path fileType="executable">/usr/bin/codelite_fix_files</Path>
+            <Path fileType="executable">/usr/bin/codelite_cppcheck</Path>
+            <Path fileType="executable">/usr/bin/codelite-terminal</Path>
+            <Path fileType="executable">/usr/bin/codelite_indexer</Path>
+            <Path fileType="executable">/usr/bin/codelite_xterm</Path>
+            <Path fileType="executable">/usr/bin/codelite-echo</Path>
+            <Path fileType="executable">/usr/bin/codelite-lldb</Path>
+            <Path fileType="executable">/usr/bin/codelite-make</Path>
+            <Path fileType="executable">/usr/bin/codelite_exec</Path>
+            <Path fileType="executable">/usr/bin/codelite-cc</Path>
+            <Path fileType="executable">/usr/bin/codelite</Path>
+            <!-- Codelite desktop file -->
+            <Path fileType="data">/usr/share/applications/codelite.desktop</Path>
+            <!-- Codelite data files -->
+            <Path fileType="data">/usr/share/codelite</Path>
+            <!-- Codelite man pages -->
+            <Path fileType="man">/usr/share/man/man1/codelite_fix_files.1</Path>
+            <Path fileType="man">/usr/share/man/man1/codelite-make.1</Path>
+            <Path fileType="man">/usr/share/man/man1/codelite.1</Path>
+            <!-- Codelite icon files -->
+            <Path fileType="data">/usr/share/icons</Path>
+            <!-- Codelite locale files -->
+            <Path fileType="data">/usr/share/locale</Path>
+            <!-- Codelite library files -->
+            <Path fileType="library">/usr/lib/codelite</Path>
+            <!-- Codelite doc files -->
+            <Path fileType="doc">/usr/share/doc/codelite</Path>
+            <!--
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+            -->
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2020-02-25</Date>
+            <Version>17.12</Version>
+            <Comment>First pisi release.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

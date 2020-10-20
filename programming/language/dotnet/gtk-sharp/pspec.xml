@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gtk-sharp</Name>
+        <Homepage>http://www.mono-project.com/GtkSharp</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>A C# language binding for the GTK+</Summary>
+        <Description>Gtk-sharp is a C# language binding for the GTK+ toolkit.</Description>
+        <Archive sha1sum="65616d63c06e3d0b937f27f973fed88cf275781b" type="targz">https://github.com/mono/gtk-sharp/archive/2.12.41.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>mono-devel</Dependency>
+            <Dependency>libglade-devel</Dependency>
+            <Dependency>gtk2-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+<!--             <Patch level="0">glib-fix-01.patch</Patch> -->
+<!--             <Patch level="0">glib-fix-02.patch</Patch> -->
+<!--             <Patch level="0">glib-fix-03.patch</Patch> -->
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gtk-sharp</Name>
+        <RuntimeDependencies>
+            <Dependency>mono-runtime</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>glib2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/gapi-*</Path>
+            <Path fileType="doc">/usr/share/doc/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gtk-sharp-devel</Name>
+        <Summary>Development files for gtk-sharp</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtk-sharp</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-01-06</Date>
+            <Version>2.12.41</Version>
+            <Comment>version bump</Comment>
+            <Name>Ali Algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

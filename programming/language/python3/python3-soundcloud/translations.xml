@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-soundcloud</Name>
+        <Summary xml:lang="tr">Soundcloud APIsini kullanabilen python sarmalayıcı modülü</Summary>
+        <Description xml:lang="tr">python3-spotipy Soundcloud APIsini kullanabilen python sarmalayıcı modülü sunar.</Description>
+    </Source>
+</PISI>

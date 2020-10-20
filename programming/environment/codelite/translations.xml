@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>codelite</Name>
+        <Summary xml:lang="tr">Codelite, C/C++/PHP ve Node.js için bütünleşik geliştirme araçlarını içerisinde bulunduran özgür yazılım</Summary>
+        <Description xml:lang="tr">Codelite, C/C++/PHP ve Node.js için bütünleşik geliştirme araçlarını içerisinde bulunduran, tamamen kişiselleştirilebilen ve geliştirilebilen bütünleşik geliştirme ortamıdır.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gtkspell3</Name>
+        <Homepage>http://gtkspell.sourceforge.net/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>C++ binding for gtkspell</Summary>
+        <Description>C++ binding for gtkspell</Description>
+        <Archive sha1sum="5a77b84891f6877fcf273c68ae8187912068304f" type="tarxz">https://sourceforge.net/projects/gtkspell/files/3.0.10/gtkspell3-3.0.10.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>intltool</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>python-six</Dependency>
+            <Dependency>enchant2-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gtkspell3</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>enchant2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>gtkspell3-devel</Name>
+        <Summary>Development files for gtkspell3</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtkspell3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>enchant2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>gtkspell3-docs</Name>
+        <Summary>Development files for gtkspell3</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gtkspell3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-01-26</Date>
+            <Version>3.0.10</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>lrzsz</Name>
+        <Summary xml:lang="tr">xmodem, ymodem and zmodem file transfer protocols</Summary>
+        <Description xml:lang="tr">xmodem, ymodem and zmodem file transfer protocols</Description>
+    </Source>
+</PISI>

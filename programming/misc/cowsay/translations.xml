@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cowsay</Name>
+        <Summary xml:lang="tr">Konuşma balonu ayarlanabilir inek</Summary>
+        <Description xml:lang="tr">cowsay, konuşma balonu ayarlanabilir ascii biçeminde inek resmini uçbirime basar.</Description>
+    </Source>
+</PISI>

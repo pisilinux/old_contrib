@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>dejagnu</Name>
+        <Homepage>https://www.gnu.org/software/dejagnu</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>Framework for testing other programs</Summary>
+        <Description>DejaGnu is an Expect/Tcl based framework for testing other programs. DejaGnu has several purposes: to make it easy to write tests for any program; to allow you to write tests which will be portable to any host or target where a program must be tested; and to standardize the output format of all tests (making it easier to integrate the testing into software development).</Description>
+        <Archive sha1sum="e8a28b8db857592f8f5d05a1c47bf2d2b823f1e9" type="targz">mirrors://gnu/dejagnu/dejagnu-1.6.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>expect</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">env-timeout.patch</Patch>
+            <Patch level="1">etc-dejagnu.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>dejagnu</Name>
+        <RuntimeDependencies>
+            <Dependency>expect</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/dejagnu</Path>
+            <Path fileType="info">/usr/share/info</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/dejagnu/site.exp">site.exp</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <Package>
+        <Name>dejagnu-devel</Name>
+        <PartOf>system.devel</PartOf>
+        <Summary>Development files for dejagnu</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">dejagnu</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-21</Date>
+            <Version>1.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

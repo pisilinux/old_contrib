@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>stalonetray</Name>
+		<Homepage>http://stalonetray.sourceforge.net/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>Stalonetray is a stand-alone freedesktop.org and KDE system tray (notification area) for X Window System/X11.</Summary>
+		<Description>
+			Stalonetray is a stand-alone freedesktop.org and KDE system tray (notification area) for X Window System/X11 (e.g. X.Org or XFree86). It has full XEMBED support and minimal dependencies: an X11 lib only. Stalonetray works with virtually any EWMH-compliant window manager.
+		</Description>
+		<Archive sha1sum="3e7332b10877d9ae05cdb96341f3d1b95ce6f69e" type="tarbz2">
+			https://sourceforge.net/projects/stalonetray/files/stalonetray/stalonetray-0.8.3/stalonetray-0.8.3.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libSM</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>stalonetray</Name>
+		<RuntimeDependencies>
+			<Dependency>libX11</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-09-07</Date>
+			<Version>0.8.3</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

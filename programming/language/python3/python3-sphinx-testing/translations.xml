@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-sphinx-testing</Name>
+        <Summary xml:lang="tr">Sphinx eklentileri için test araç sınıfları ve yordamları</Summary>
+        <Description xml:lang="tr">sphinx-testing Sphinx eklentileri için test araç sınıfları ve yordamları sağlayan python kitaplığıdır.</Description>
+    </Source>
+</PISI>

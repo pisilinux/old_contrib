@@ -10,13 +10,14 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
 def setup():
-    shelltools.export("CFLAGS", "%s -fPIC" % get.CFLAGS())
-    for i in ["NEWS", "AUTHORS", "COPYING"]:
-        shelltools.touch(i)
+    #shelltools.export("CFLAGS", "%s -fPIC" % get.CFLAGS())
+    #for i in ["NEWS", "AUTHORS", "COPYING"]:
+    #    shelltools.touch(i)
 
     autotools.autoreconf("-vfi")
-    autotools.configure("--disable-dependency-tracking \
-                         --disable-static")
+    autotools.configure()
+    #autotools.configure("--disable-dependency-tracking \
+    #                     --disable-static")
 
 def build():
     autotools.make()

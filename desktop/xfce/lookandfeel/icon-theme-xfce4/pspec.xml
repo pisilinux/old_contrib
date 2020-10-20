@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>icon-theme-xfce4</Name>
-        <Homepage>http://www.xfce.org</Homepage>
+        <Homepage>https://www.xfce.org/</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -14,6 +14,7 @@
         <Description>Icon theme Rodent for the Xfce Desktop Environment.</Description>
         <Archive sha1sum="0c0d0c45cd4a7f609310db8e9d17c1c4a131a6e7"  type="tarbz2">http://archive.xfce.org/src/art/xfce4-icon-theme/4.4/xfce4-icon-theme-4.4.3.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>intltool</Dependency>
             <Dependency>icon-theme-hicolor</Dependency>
         </BuildDependencies>
     </Source>

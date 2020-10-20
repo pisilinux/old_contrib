@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-casttube</Name>
+        <Summary xml:lang="tr">YouTube Chromecast APIsi sağlayan python bağlayıcısı.</Summary>
+        <Description xml:lang="tr">python-casttube YouTube Chromecast APIsi ile etkileşimi sağlayan bir python kitaplığıdır.</Description>
+    </Source>
+</PISI>

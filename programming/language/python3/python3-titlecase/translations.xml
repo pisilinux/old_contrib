@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python3-titlecase</Name>
+        <Summary xml:lang="tr">Python3 titlecase modülü</Summary>
+        <Description xml:lang="tr">python3-titlecase modülü verilen söz dizisindeki tüm ilk harfleri büyük yapan python kitaplığıdır.</Description>
+    </Source>
+</PISI>

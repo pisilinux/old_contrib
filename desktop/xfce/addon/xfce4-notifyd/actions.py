@@ -1,21 +1,27 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# Licensed under the GNU General Public License, version 2
-# See the file http://www.gnu.org/copyleft/gpl.txt
+# Licensed under the GNU General Public License, version 3.
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
+from pisi.actionsapi import get
+
+pisitools.cflags.add("-Wno-deprecated-declarations")
 
 def setup():
-    autotools.configure()
+	autotools.configure("--enable-dbus-start-daemon \
+	--enable-old-get-server-information-signature \
+	--enable-old-notification-closed-signature")
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    autotools.install()
-    
-    pisitools.remove("/usr/share/icons/hicolor/icon-theme.cache")
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "README")
+	pisitools.removeDir("usr/lib/systemd")
+
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README")
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-funcsigs</Name>
+        <Summary xml:lang="tr">Python için PEP362'den yordam imzalari</Summary>
+        <Description xml:lang="tr">python-funcsigs Python 3.3'un inspect modülünün geriye uyumluluk kitaplığıdır.</Description>
+    </Source>
+</PISI>

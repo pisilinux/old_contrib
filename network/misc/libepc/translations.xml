@@ -9,5 +9,6 @@
     <Package>
         <Name>libepc-devel</Name>
         <Summary xml:lang="tr">libepc için geliştirme dosyaları.</Summary>
+        <Description xml:lang="tr">libepc-devel, libepc için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

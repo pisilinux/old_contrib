@@ -3,6 +3,6 @@
     <Source>
         <Name>python-pypcap</Name>
         <Summary xml:lang="tr">Python pcap modülü</Summary>
-        <Description xml:lang="tr">python-pypcap, libpcap için basitleştirilmiş, nesne tabanlı bir Python dönüştürücüsüdür.</Description>
+        <Description xml:lang="tr">python-pypcap, python için basitleştirilmiş, nesne tabanlı bir sarmalayıcı modüldür.</Description>
     </Source>
 </PISI>

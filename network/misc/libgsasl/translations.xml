@@ -9,5 +9,6 @@
     <Package>
         <Name>libgsasl-devel</Name>
         <Summary xml:lang="tr">libgsasl için geliştirme dosyaları</Summary>
+        <Description xml:lang="tr">libgsasl-devel, libgsasl için geliştirme dosyalarını içerir.</Description>
     </Package>
 </PISI>

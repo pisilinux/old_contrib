@@ -1,53 +1,56 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>python-msgpack</Name>
-        <Homepage>http://msgpack.org/</Homepage>
+        <Homepage>https://msgpack.org/</Homepage>
         <Packager>
-            <Name>İbrahim KARAGÜZEL</Name>
-            <Email>karaguzelibrahim@gmail.com</Email>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
         </Packager>
-        <License>Apache</License>
         <PartOf>programming.language.python</PartOf>
+        <License>Apache</License>
         <IsA>library</IsA>
         <Summary>Python msgpack module</Summary>
         <Description>MessagePack serializer implementation for Python.</Description>
-        <Archive sha1sum="d5a3869ab8149914bf0ead9db7bdeb0b83e661c9" type="targz">https://github.com/msgpack/msgpack-python/archive/0.4.7.tar.gz</Archive>
+        <Archive sha1sum="fc44bc073193018f0973e9fb21f17ce4a9567684" type="targz">https://github.com/msgpack/msgpack-python/archive/v1.0.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>python3-setuptools</Dependency>
             <Dependency>python-setuptools</Dependency>
-            <Dependency>python3-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>cython3</Dependency>
-            <Dependency>cython</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>python-msgpack</Name>
         <Summary>Python msgpack module</Summary>
-        <RuntimeDependencies>
-            <Dependency>python</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib/python2*</Path>
             <Path fileType="doc">/usr/share/doc</Path>
         </Files>
     </Package>
-    
-    <Package>
-        <Name>python3-msgpack</Name>
-        <Summary>Python3 msgpack module</Summary>
-        <RuntimeDependencies>
-            <Dependency>python3</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib/python3*</Path>
-        </Files>
-    </Package>
 
     <History>
+        <Update release="4">
+            <Date>2020-02-24</Date>
+            <Version>1.0.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2019-12-13</Date>
+            <Version>0.6.2</Version>
+            <Comment>Rebuilt and split packages</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2019-11-22</Date>
+            <Version>0.6.2</Version>
+            <Comment>Ver. bump</Comment>
+            <Name>Blue DeviL</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
         <Update release="1">
             <Date>2016-04-22</Date>
             <Version>0.4.7</Version>

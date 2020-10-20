@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM 'http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd'>
+<PISI>
+    <Source>
+        <Name>python-appdirs</Name>
+        <Homepage>https://github.com/ActiveState/appdirs</Homepage>
+        <Packager>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Packager>
+        <License>MIT</License>
+        <PartOf>programming.language.python</PartOf>
+        <IsA>library</IsA>
+        <Summary>A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir".</Summary>
+        <Description>What directory should your app use for storing user data? This small Python module is for determining appropriate platform-specific dirs, e.g. a "user data dir".</Description>
+        <Archive sha1sum="9ad09395ed489ad66e9688e49087ce1814c64276" type="targz">https://files.pythonhosted.org/packages/48/69/d87c60746b393309ca30761f8e2b49473d43450b150cb08f3c6df5c11be5/appdirs-1.4.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python-setuptools</Dependency>
+            <Dependency>python-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>python-appdirs</Name>
+        <Summary>A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir".</Summary>
+        <Files>
+            <Path fileType="library">/usr/lib/python2*</Path>
+            <Path fileType="doc">/usr/share/doc/python-appdirs</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2019-12-24</Date>
+            <Version>1.4.3</Version>
+            <Comment>First Pisi Release</Comment>
+            <Name>Blue Devil</Name>
+            <Email>bluedevil@sctzine.com</Email>
+        </Update>
+    </History>
+</PISI>

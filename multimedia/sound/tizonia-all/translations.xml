@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tizonia-all</Name>
+        <Summary xml:lang="tr">ucbirimden youtube, spotify dinleme ortamı</Summary>
+        <Description xml:lang="tr">tizonia-all, Spotify, Google Play Music, YouTube, SoundCloud, Plex sunucuları ve Chromecast aygıtlarından komut satırı üzerinden müzik dinlemenizi sağlayan uygulama.</Description>
+    </Source>
+</PISI>

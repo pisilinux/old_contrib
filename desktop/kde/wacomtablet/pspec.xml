@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wacomtablet</Name>
+        <Homepage>https://download.kde.org/</Homepage>
+        <Packager>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>KDE GUI for the Wacom Linux Drivers</Summary>
+        <Description>Linux Wacom Projesi, Linux işletim sistemi altında Wacom tabletlerini yapılandırmak ve çalıştırmak için sürücüleri, kütüphaneleri ve belgeleri yönetir.</Description>
+        <Archive sha1sum="d915fc79657321ddb6f7c439e5634309a2f2d4ba" type="tarxz">https://download.kde.org/stable/wacomtablet/3.0.0/wacomtablet-3.0.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ki18n-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>libxcb-devel</Dependency>
+            <Dependency>kconfig-devel</Dependency>
+            <Dependency>kxmlgui-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>kdoctools-devel</Dependency>
+            <Dependency>kcoreaddons-devel</Dependency>
+            <Dependency>kdbusaddons-devel</Dependency>
+            <Dependency>kglobalaccel-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>kconfigwidgets-devel</Dependency>
+            <Dependency>knotifications-devel</Dependency>
+            <Dependency>kwidgetsaddons-devel</Dependency>
+            <Dependency>extra-cmake-modules</Dependency>
+            <Dependency>plasma-framework-devel</Dependency>
+            <Dependency>xorg-input-wacom-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wacomtablet</Name>
+        <RuntimeDependencies>
+            <Dependency>ki18n</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>kconfig</Dependency>
+            <Dependency>kxmlgui</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kcoreaddons</Dependency>
+            <Dependency>kdbusaddons</Dependency>
+            <Dependency>kglobalaccel</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>kconfigwidgets</Dependency>
+            <Dependency>knotifications</Dependency>
+            <Dependency>kwidgetsaddons</Dependency>
+            <Dependency>plasma-framework</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/metainfo</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-04-10</Date>
+            <Version>3.0.0</Version>
+            <Comment>First release</Comment>
+            <Name>Mustafa Cinasal</Name>
+            <Email>muscnsl@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

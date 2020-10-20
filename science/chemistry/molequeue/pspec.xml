@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>molequeue</Name>
+        <Homepage>https://www.openchemistry.org/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>custom</License>
+        <IsA>library</IsA>
+        <Summary>Desktop integration of high performance computing resources</Summary>
+        <Description>MoleQueue is an open-source, cross-platform, system-tray resident desktop application for abstracting, managing, and coordinating the execution of tasks both locally and on remote computational resources.</Description>
+        <Archive sha1sum="45ad4450aa9732a97ec309681a2b03b9b15568f8" type="targz">https://github.com/OpenChemistry/molequeue/releases/download/0.9.0/molequeue-0.9.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>cmake</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>molequeue</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <Package>
+        <Name>molequeue-devel</Name>
+        <Summary>Development files for molequeue</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">molequeue</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/cmake</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2019-01-27</Date>
+            <Version>0.9.0</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

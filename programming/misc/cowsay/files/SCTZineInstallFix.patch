@@ -1,0 +1,60 @@
+--- install.sh.orig	2016-06-25 04:45:15.000000000 +0200
++++ install.sh	2020-09-18 01:52:01.558305284 +0200
+@@ -17,6 +17,8 @@
+ cat <<DOG
+ ===================
+ cowsay Installation
++     SCT Rules
++     BlueDeviL
+ ===================
+ 
+ Searching for useful perl executables...
+@@ -53,16 +55,16 @@
+ usethisperl=$1
+ echo I will be using $1 because I know it will work.
+ 
+-echo Now I need an installation prefix.  I will use /usr/local unless
+-printf "you give me a better idea here: "
+-if [ -n "$backdoor" ]; then
+-	prefix=$backdoor
+-	printf "%s (specified on command line)\n" $prefix
+-else
+-	read prefix
+-fi
++#echo Now I need an installation prefix.  I will use /usr/local unless
++#printf "you give me a better idea here: "
++#if [ -n "$backdoor" ]; then
++#	prefix=$backdoor
++#	printf "%s (specified on command line)\n" $prefix
++#else
++#	read prefix
++#fi
+ 
+-PREFIX=${prefix:-/usr/local}
++PREFIX=${prefix:-/var/pisi/cowsay-3.04-1/install/usr}
+ 
+ echo Okay, time to install this puppy.
+ 
+@@ -73,10 +75,10 @@
+ $usethisperl -p install.pl cowsay > $PREFIX/bin/cowsay
+ chmod a+x $PREFIX/bin/cowsay
+ ln -s cowsay $PREFIX/bin/cowthink
+-mkdir -p $PREFIX/man/man1 || ($mkdir $PREFIX; mkdir $PREFIX/man; mkdir $PREFIX/man/man1)
+-$usethisperl -p install.pl cowsay.1 > $PREFIX/man/man1/cowsay.1
+-chmod a+r $PREFIX/man/man1/cowsay.1
+-ln -s cowsay.1 $PREFIX/man/man1/cowthink.1
++mkdir -p $PREFIX/share/man/man1 || ($mkdir $PREFIX; mkdir $PREFIX/man; mkdir $PREFIX/share/man/man1)
++$usethisperl -p install.pl cowsay.1 > $PREFIX/share/man/man1/cowsay.1
++chmod a+r $PREFIX/share/man/man1/cowsay.1
++ln -s cowsay.1 $PREFIX/share/man/man1/cowthink.1
+ mkdir -p $PREFIX/share/cows || (mkdir $PREFIX; mkdir $PREFIX/share; mkdir $PREFIX/share/cows)
+ tar -cf - $filelist | (cd $PREFIX/share && tar -xvf -)
+ set +x
+@@ -90,3 +92,7 @@
+ fi
+ 
+ echo Installation complete!  Enjoy the cows!
++echo PisiLinux is Da Best
++echo ===========================
++echo       www.sctzine.com
++echo ===========================

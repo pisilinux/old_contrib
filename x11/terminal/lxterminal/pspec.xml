@@ -1,69 +1,82 @@
 <?xml version="1.0" ?>
 <!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
-    <Source>
-        <Name>lxterminal</Name>
-        <Homepage>http://wiki.lxde.org/en/LXTerminal</Homepage>
-        <Packager>
-            <Name>PisiLinux Community</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Packager>
-        <License>GPLv2</License>
-        <Icon>lxterminal</Icon>
-        <IsA>app:gui</IsA>
-	<PartOf>desktop.lxde.base</PartOf>
-        <Summary>Lightweight terminal emulator</Summary>
-        <Description>Lxterminal is a Lightweight vte-based tabbed terminal emulator for LXDE.</Description>
-        <Archive sha1sum="3914c8e0552f7b8e1e32fde69244f90c16072df4" type="targz">mirrors://sourceforge/lxde/lxterminal-0.1.11.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>vte-devel</Dependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>gdk-pixbuf-devel</Dependency>
-        </BuildDependencies>
-            <Patches>
-                <Patch level="1">background_alpha.patch</Patch>
-            </Patches>
-    </Source>
+	<Source>
+		<Name>lxterminal</Name>
+		<Homepage>https://wiki.lxde.org/en/LXTerminal</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<Icon>lxterminal</Icon>
+		<IsA>app:gui</IsA>
+		<Summary>Lightweight terminal emulator.</Summary>
+		<Description>Lxterminal is a Lightweight vte-based tabbed terminal emulator for LXDE.</Description>
+		<Archive sha1sum="896c32c065e065d62591f4484ff1dca8ac6f7ce7" type="tarxz">
+			mirrors://sourceforge/lxde/lxterminal-0.3.2.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>vte-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>gnutls-devel</Dependency>
+			<Dependency>libpcre2-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level="1">background_alpha.patch</Patch> -->
+		</Patches>
+	</Source>
 
-    <Package>
-        <Name>lxterminal</Name>
-        <RuntimeDependencies>
-            <Dependency>vte</Dependency>
-            <Dependency>gtk2</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="man">/usr/share/man</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/pixmaps</Path>
-            <Path fileType="data">/usr/share/lxterminal</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-        </Files>
-    </Package>
+	<Package>
+		<Name>lxterminal</Name>
+		<RuntimeDependencies>
+			<Dependency>vte</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="data">/usr/share/icons</Path>
+			<Path fileType="data">/usr/share/applications</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
 
-    <History>
-         <Update release="3">
-            <Date>2013-10-11</Date>
-            <Version>0.1.11</Version>
-            <Comment>rebuild</Comment>
-            <Name>Erdinç Gültekin</Name>
-            <Email>erdincgultekin@pisilinux.org</Email>
-        </Update> 
-         <Update release="2">
-            <Date>2013-08-14</Date>
-            <Version>0.1.11</Version>
-            <Comment>rebuild</Comment>
-            <Name>Erdinç Gültekin</Name>
-            <Email>erdincgultekin@pisilinux.org</Email>
-        </Update> 
-        <Update release="1">
-            <Date>2012-06-17</Date>
-            <Version>0.1.11</Version>
-            <Comment>First release</Comment>
-            <Name>Erdinç Gültekin</Name>
-            <Email>admins@pisilinux.org</Email>
-        </Update>
-    </History>
+	<History>
+		<Update release="4">
+			<Date>2020-01-16</Date>
+			<Version>0.3.2</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="3">
+			<Date>2013-10-11</Date>
+			<Version>0.1.11</Version>
+			<Comment>rebuild</Comment>
+			<Name>Erdinç Gültekin</Name>
+			<Email>erdincgultekin@pisilinux.org</Email>
+		</Update>
+		<Update release="2">
+			<Date>2013-08-14</Date>
+			<Version>0.1.11</Version>
+			<Comment>rebuild</Comment>
+			<Name>Erdinç Gültekin</Name>
+			<Email>erdincgultekin@pisilinux.org</Email>
+		</Update>
+		<Update release="1">
+			<Date>2012-06-17</Date>
+			<Version>0.1.11</Version>
+			<Comment>First release</Comment>
+			<Name>Erdinç Gültekin</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Update>
+	</History>
 </PISI>
+

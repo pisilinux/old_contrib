@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libgdiplus</Name>
+        <Homepage>http://www.mono-project.com</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>Library for using System.Drawing with Mono</Summary>
+        <Description>Libgdiplus is an open source implementation of the GDI+ API. This is part of the Mono project.</Description>
+        <Archive sha1sum="af2fc5c5425286ec55b5f18726d6a0c6aaf633e6" type="targz">http://download.mono-project.com/sources/libgdiplus/libgdiplus-4.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libjpeg-turbo-devel</Dependency>
+            <Dependency>tiff-devel</Dependency>
+            <Dependency>giflib-devel</Dependency>
+            <Dependency>libexif-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libgdiplus</Name>
+        <RuntimeDependencies>
+            <Dependency>tiff</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>libexif</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libgdiplus-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">libgdiplus</Dependency>
+            <Dependency>glib2-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2018-01-06</Date>
+            <Version>4.2</Version>
+            <Comment>versıon bump</Comment>
+            <Name>Ali Algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

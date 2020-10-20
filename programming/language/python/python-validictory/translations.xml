@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>python-validictory</Name>
+        <Summary xml:lang="tr">Python için genel maksatlı veri onaylama kitaplığı</Summary>
+        <Description xml:lang="tr">python-validictory, Python için genel maksatlı veri onaylama kitaplığı sunar.</Description>
+    </Source>
+</PISI>

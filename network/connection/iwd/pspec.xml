@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>iwd</Name>
+        <Homepage>https://git.kernel.org/cgit/network/wireless/</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>LGPLv2.1</License>
+        <IsA>library</IsA>
+        <Summary>Internet Wireless Daemon</Summary>
+        <Description>Internet Wireless Daemon</Description>
+        <Archive sha1sum="a250f16588fa2acd3ed54206167351ddc700a62c" type="tarxz">https://mirrors.edge.kernel.org/pub/linux/network/wireless/iwd-0.8.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>readline-devel</Dependency>
+            <Dependency>dbus-devel</Dependency> -->
+            <Dependency>asciidoc</Dependency> -->
+            <Dependency>libtool</Dependency> -->
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>iwd</Name>
+        <RuntimeDependencies>
+            <Dependency>readline</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+    
+    <History>
+        <Update release="1">
+            <Date>2018-09-26</Date>
+            <Version>0.8</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

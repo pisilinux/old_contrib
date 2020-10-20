@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>efl</Name>
+		<Homepage>https://www.enlightenment.org/</Homepage>
+		<Packager>
+			<Name>Alihan Öztürk</Name>
+			<Email>alihan@pisilinux.org</Email>
+		</Packager>
+		<License>BSD</License>
+		<License>LGPLv2.1</License>
+		<License>GPLv2</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.enlightenment.base</PartOf>
+		<Summary>Enlightenment Foundation Libraries</Summary>
+		<Description>efl, Enlightenment Foundation Libraries</Description>
+		<Archive sha1sum="6e8e7fe8920db8c6533c174cb1d93a6527c7a19d" type="tarxz">
+			https://download.enlightenment.org/rel/libs/efl/efl-1.24.3.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>cmake</Dependency>
+			<Dependency>meson</Dependency>
+			<Dependency>ninja</Dependency>
+			<Dependency>libXp</Dependency>
+			<Dependency>doxygen</Dependency>
+			<Dependency>valgrind</Dependency>
+			<Dependency>lua-devel</Dependency>
+			<Dependency>tiff-devel</Dependency>
+			<Dependency>webp-devel</Dependency>
+			<Dependency>mesa-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
+			<Dependency>scim-devel</Dependency>
+			<Dependency>libc-client</Dependency>
+			<Dependency>eudev-devel</Dependency>
+			<Dependency>avahi-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>libXau-devel</Dependency>
+			<Dependency>libbsd-devel</Dependency>
+			<Dependency>luajit-devel</Dependency>
+			<Dependency>libraw-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
+			<Dependency>giflib-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libsdl2-devel</Dependency>
+			<Dependency>fribidi-devel</Dependency>
+			<Dependency>openssl-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>librsvg-devel</Dependency>
+			<Dependency>libXtst-devel</Dependency>
+			<Dependency>wayland-devel</Dependency>
+			<Dependency>xine-lib-devel</Dependency>
+			<Dependency>libglade-devel</Dependency>
+			<Dependency>libXdmcp-devel</Dependency>
+			<Dependency>harfbuzz-devel</Dependency>
+			<Dependency>gstreamer-devel</Dependency>
+			<Dependency>openjpeg2-devel</Dependency>
+			<Dependency>libXfixes-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXdamage-devel</Dependency>
+			<Dependency>libXrender-devel</Dependency>
+			<Dependency>libspectre-devel</Dependency>
+			<Dependency>libsndfile-devel</Dependency>
+			<Dependency>libXpresent-devel</Dependency>
+			<Dependency>poppler-cpp-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<Dependency>libxkbcommon-devel</Dependency>
+			<Dependency>libutil-linux-devel</Dependency>
+			<Dependency>libXScrnSaver-devel</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+			<Dependency>libjpeg-turbo-devel</Dependency>
+			<Dependency>pulseaudio-libs-devel</Dependency>
+			<Dependency>gst-plugins-base-devel</Dependency>
+			<Dependency>xcb-util-keysyms-devel</Dependency>
+			<Dependency>wayland-protocols-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>efl</Name>
+		<RuntimeDependencies>
+			<Dependency>dbus</Dependency>
+			<Dependency>mesa</Dependency>
+			<Dependency>tiff</Dependency>
+			<Dependency>webp</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>eudev</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>giflib</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>libraw</Dependency>
+			<Dependency>luajit</Dependency>
+			<Dependency>pixman</Dependency>
+			<Dependency>fribidi</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>libXtst</Dependency>
+			<Dependency>librsvg</Dependency>
+			<Dependency>libsdl2</Dependency>
+			<Dependency>openssl</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>gstreamer</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libunwind</Dependency>
+			<Dependency>openjpeg2</Dependency>
+			<Dependency>scim-libs</Dependency>
+			<Dependency>fontconfig</Dependency>
+			<Dependency>libXcursor</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXrender</Dependency>
+			<Dependency>libspectre</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>libXpresent</Dependency>
+			<Dependency>poppler-cpp</Dependency>
+			<Dependency>libxkbcommon</Dependency>
+			<Dependency>libXScrnSaver</Dependency>
+			<Dependency>libXcomposite</Dependency>
+			<Dependency>libjpeg-turbo</Dependency>
+			<Dependency>libutil-linux</Dependency>
+			<Dependency>wayland-client</Dependency>
+			<Dependency>wayland-server</Dependency>
+			<Dependency>gst-plugins-base</Dependency>
+			<Dependency>shared-mime-info</Dependency>
+			<Dependency>desktop-file-utils</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>efl-devel</Name>
+		<Summary>Developments for efl</Summary>
+		<RuntimeDependencies>
+			<Dependency>lua-devel</Dependency>
+			<Dependency>zlib-devel</Dependency>
+			<Dependency>dbus-devel</Dependency>
+			<Dependency>avahi-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>eudev-devel</Dependency>
+			<Dependency>luajit-devel</Dependency>
+			<Dependency>pixman-devel</Dependency>
+			<Dependency>c-ares-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libxcb-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>fribidi-devel</Dependency>
+			<Dependency>libexif-devel</Dependency>
+			<Dependency>openssl-devel</Dependency>
+			<Dependency>libsdl2-devel</Dependency>
+			<Dependency>libXtst-devel</Dependency>
+			<Dependency>wayland-devel</Dependency>
+			<Dependency>harfbuzz-devel</Dependency>
+			<Dependency>wayland-client</Dependency>
+			<Dependency>wayland-server</Dependency>
+			<Dependency>freetype-devel</Dependency>
+			<Dependency>libXfixes-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libunwind-devel</Dependency>
+			<Dependency>libXdamage-devel</Dependency>
+			<Dependency>libsndfile-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+			<Dependency>libsndfile-devel</Dependency>
+			<Dependency>libXrender-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXpresent-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<Dependency>libxkbcommon-devel</Dependency>
+			<Dependency>libjpeg-turbo-devel</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+			<Dependency>pulseaudio-libs-devel</Dependency>
+			<Dependency release="current">efl</Dependency>
+			<Dependency>wayland-protocols-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="2">
+			<Date>2020-06-22</Date>
+			<Version>1.24.3</Version>
+			<Comment>Ver. up</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+		<Update release="1">
+			<Date>2014-06-08</Date>
+			<Version>1.10.0</Version>
+			<Comment>First Release</Comment>
+			<Name>Alihan Öztürk</Name>
+			<Email>alihan@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>

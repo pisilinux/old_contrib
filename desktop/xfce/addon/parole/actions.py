@@ -2,27 +2,29 @@
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/licenses/gpl.txt
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-def setup():
-#    shelltools.export("LDFLAGS", "%s -lX11" % get.LDFLAGS())
-    shelltools.makedirs("m4")
-    shelltools.system("/usr/bin/xdt-autogen")
-    autotools.configure("--disable-dependency-tracking \
-                         --enable-libnotify \
-                         --enable-taglib")
+i = "--disable-dependency-tracking \
+     --disable-clutter \
+     --enable-tray-plugin \
+     --enable-notify-plugin \
+     --enable-mpris2-plugin \
+    "
 
-    pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
+def setup():
+	autotools.configure(i)
+
+	pisitools.dosed("libtool", " -shared ", " -Wl,--as-needed -shared ")
 
 def build():
-    autotools.make()
+	autotools.make()
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("AUTHORS", "ChangeLog*", "COPYING", "NEWS", "README")
+	pisitools.dodoc("AUTHORS", "ChangeLog", "COPYING", "NEWS", "README", "THANKS", "TODO")
+

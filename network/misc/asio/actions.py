@@ -4,29 +4,28 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file http://www.gnu.org/copyleft/gpl.txt.
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-empty_makefile = """
-all:
- 
-install:
-		
-"""
-
 def setup():
-    shelltools.unlink("src/Makefile.in")
-    shelltools.echo("src/Makefile.in", empty_makefile)
-
+    shelltools.cd("asio")
+    shelltools.system("./autogen.sh")
+    autotools.autoreconf("-fiv")
+    # suppress compiler warnings
+    pisitools.cxxflags.add("-Wno-unused-result")
     autotools.configure()
 
 def build():
+    shelltools.cd("asio")
     autotools.make()
 
-def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+def check():
+    shelltools.cd("asio")
+    autotools.make("check")
 
-    pisitools.dohtml("doc/*")
+def install():
+    shelltools.cd("asio")
+    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
     pisitools.dodoc("COPYING", "LICENSE*", "README*")

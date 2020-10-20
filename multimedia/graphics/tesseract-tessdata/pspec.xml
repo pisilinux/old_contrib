@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>tesseract-tessdata</Name>
-        <Homepage>http://code.google.com/p/tesseract-ocr/</Homepage>
+        <Homepage>https://github.com/tesseract-ocr</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

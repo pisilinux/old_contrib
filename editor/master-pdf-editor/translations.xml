@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>master-pdf-editor</Name>
-        <Summary xml:lang="tr">Master PDF Editor PDF dosyalarını düzenler veya yaratır.(Son ücretsiz sürümdür)</Summary>
-        <Description xml:lang="tr">Master PDF Editor PDF dosyalarını düzenleme ve yaratma gibi işleriniz için ileri düzey işlevsellik sağlar</Description>
-    </Source>
-</PISI>

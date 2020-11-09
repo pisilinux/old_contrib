@@ -1,6 +1,0 @@
-#!/bin/bash
-
-if [[ "$(pgrep -u $USER)" ]]; then
-	kill -15 $(pgrep -u $USER)
-fi
-

@@ -45,6 +45,7 @@
 			<Dependency>dbus-glib</Dependency>
 			<Dependency>dbus-python3</Dependency>
 			<Dependency>python3-psutil</Dependency>
+			<Dependency>python3-configobj</Dependency>
 			<Dependency>python3-pygobject3</Dependency>
 			<Dependency>gsettings-desktop-schemas</Dependency>
 		</RuntimeDependencies>

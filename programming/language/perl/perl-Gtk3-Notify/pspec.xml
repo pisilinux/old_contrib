@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-Gtk3-Notify</Name>
+		<Homepage>https://metacpan.org/pod/Gtk3::Notify</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>library</IsA>
+		<Summary>Gtk3::Notify - Perl interface to libnotify.</Summary>
+		<Description>Gtk3::Notify - Perl interface to libnotify.</Description>
+		<Archive sha1sum="6998e400994c6e8b6b910d02299a9cc998bb063f" type="targz">
+			https://cpan.metacpan.org/authors/id/T/TV/TVIGNAUD/Gtk3-Notify-0.03.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl-Gtk3</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libnotify-devel</Dependency>
+			<Dependency>perl-ExtUtils-Depends</Dependency>
+			<Dependency>perl-ExtUtils-MakeMaker</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+			<Dependency>perl-Glib-Object-Introspection</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-Gtk3-Notify</Name>
+		<RuntimeDependencies>
+			<Dependency>glib2</Dependency>
+			<Dependency>libnotify</Dependency>
+			<Dependency>perl-Gtk3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-11-28</Date>
+			<Version>0.03</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

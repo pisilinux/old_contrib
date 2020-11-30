@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>modem-manager-gui</Name>
+		<Homepage>https://sourceforge.net/projects/modem-manager-gui/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>Modem Manager GUI is a simple GTK based graphical interface.</Summary>
+		<Description>
+			Modem Manager GUI is a simple GTK based graphical interface compatible with Modem manager, Wader and oFono system services able to control EDGE/3G/4G broadband modem specific functions. You can check balance of your SIM card, send or receive SMS messages, control mobile traffic consuption and more using Modem Manager GUI.
+		</Description>
+		<Archive sha1sum="66b602a45a3ca754ebe6e40c7f54d4f0034bc213" type="targz">
+			https://sourceforge.net/projects/modem-manager-gui/files/modem-manager-gui-0.0.20.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>meson</Dependency>
+			<Dependency>itstool</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>modem-manager-gui</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="config">/etc</Path>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-11-28</Date>
+			<Version>0.0.20</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

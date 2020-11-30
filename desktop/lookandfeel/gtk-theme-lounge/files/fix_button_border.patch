@@ -1,0 +1,19 @@
+--- a/src/gtk3/gtk3-common.scss	2019-11-09
++++ b/src/gtk3/gtk3-common.scss	2020-10-18
+@@ -965,15 +965,15 @@ toolbar.inline-toolbar toolbutton {
+ }
+ 
+ %linked_middle {
+-  &:not(.osd) {
++  &:not(.osd):not(:only-child) {
+     margin-right: -1px;
+   }
+ 
+   border-radius: 0;
+   -gtk-outline-radius: 0;
+ 
+   popover &, &:not(entry) {
+-    &, &:disabled { border-left-color: transparent; }
++    &:not(:first-child):not(:only-child), &:not(:first-child):not(:only-child):disabled { border-left-color: transparent; }
+ 
+     &.suggested-action:focus { border-left-color: _border_color($selected_bg_color); }

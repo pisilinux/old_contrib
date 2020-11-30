@@ -30,6 +30,7 @@
 		<Name>geh</Name>
 		<RuntimeDependencies>
 			<Dependency>gtk3</Dependency>
+			<Dependency>pango</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 		</RuntimeDependencies>
 		<Files>

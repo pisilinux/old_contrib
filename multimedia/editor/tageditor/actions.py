@@ -10,7 +10,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 j = "-DDISABLE_DEPRECATED_QT_FEATURES=ON \
-     -DJS_PROVIDER=qml \
+     -DJS_PROVIDER=none \
      -DWEBVIEW_PROVIDER=none -L \
     "
 

@@ -15,8 +15,8 @@
 		<Description>
 			Cdk stands for 'Curses Development Kit' and it currently contains 21 ready to use widgets which facilitate the speedy development of full screen curses programs. This little project of mine started as a test to see how compatible my Linux machine was to other UNIX breeds. While doing this I discovered Ncurses, and played with it. These widgets are the result of over a years worth of playing.
 		</Description>
-		<Archive sha1sum="2383e27d4a5846bb897ea4a8bff22ccd0c9678b0" type="targz">
-			https://invisible-mirror.net/archives/cdk/cdk-5.0-20200228.tgz
+		<Archive sha1sum="be7695be27dd36cf1639d2d39a4920b79a63f411" type="targz">
+			https://invisible-mirror.net/archives/cdk/cdk-5.0-20200923.tgz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>Xaw3d-devel</Dependency>
@@ -52,8 +52,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-04-30</Date>
-			<Version>5.0.20200228</Version>
+			<Date>2020-11-28</Date>
+			<Version>5.0.20200923</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

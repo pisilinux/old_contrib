@@ -6,14 +6,19 @@
 
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
+from pisi.actionsapi import pisitools
 
 def setup():
-	pass
-#	shelltools.system("mv setup-sk1.py setup.py")
+	# fix permissions.
+	shelltools.system("chmod 644 src/sk1\.*")
+	shelltools.system("chmod 644 LICENSE")
+#	pass
 
 def build():
 	pythonmodules.compile()
 
 def install():
 	pythonmodules.install()
+
+	pisitools.dodoc("LICENSE")
 

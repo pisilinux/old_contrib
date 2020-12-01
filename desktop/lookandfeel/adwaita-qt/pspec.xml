@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>adwaita-qt</Name>
@@ -14,27 +14,46 @@
 		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>A style to bend Qt applications to look like they belong into GNOME Shell.</Summary>
 		<Description>A native style to bend Qt4 and Qt5 applications to look like they belong into GNOME Shell.</Description>
-		<Archive sha1sum="d37ce5f2e4257d0b2c657c072ff33006d0580e9a" type="targz">
-			https://github.com/FedoraQt/adwaita-qt/archive/1.1.90.tar.gz
+		<Archive sha1sum="765410f230560cf22186b07ad0fd731d63657de4" type="targz">
+			https://github.com/FedoraQt/adwaita-qt/archive/1.1.91.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
 			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>qt5-x11extras-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
 		<Name>adwaita-qt</Name>
+		<RuntimeDependencies>
+			<Dependency>libxcb</Dependency>
+			<Dependency>qt5-base</Dependency>
+			<Dependency>qt5-x11extras</Dependency>
+		</RuntimeDependencies>
 		<Files>
-			<Path fileType="library">/usr/lib/qt5/plugins/styles/adwaita.so</Path>
+			<Path fileType="library">/usr/lib</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>adwaita-qt-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">adwaita-qt</Dependency>
+			<Dependency>qt5-base</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/cmake</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="header">/usr/include</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="3">
-			<Date>2020-10-01</Date>
-			<Version>1.1.90</Version>
+			<Date>2020-12-02</Date>
+			<Version>1.1.91</Version>
 			<Comment>Version bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

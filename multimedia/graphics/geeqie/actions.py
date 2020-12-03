@@ -8,22 +8,24 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-e = "--enable-lirc \
+j = "--disable-map \
      --disable-pdf \
-     --disable-map \
+     --disable-djvu \
+     --disable-heif \
      --disable-gtk3 \
      --disable-gpu-accel \
      --disable-debug-log \
     "
 
 def setup():
-	pisitools.cflags.add("-Wno-deprecated-declarations")
-	pisitools.cxxflags.add("-Wno-deprecated-declarations")
-	autotools.configure(e)
+	autotools.autoreconf("-vif")
+	autotools.configure(j)
 
 def build():
 	autotools.make()
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+#	pisitools.dodoc("AUTHORS", "ChangeLog", "NEWS", "README*")
 

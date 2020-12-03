@@ -15,8 +15,8 @@
 		<Description>
 			Geeqie can be used as a simple, fast, database-free image viewer, but equally it can be used to manage large collections of images.
 		</Description>
-		<Archive sha1sum="fe14b122744a4297e9e98a9cfc5821f2b5e6e1ce" type="tarxz">
-			http://www.geeqie.org/geeqie-1.5.1.tar.xz
+		<Archive sha1sum="f707374491170673e7a8db8c57eec7fc780045bf" type="tarxz">
+			http://www.geeqie.org/geeqie-1.6.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -71,8 +71,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-06-23</Date>
-			<Version>1.5.1</Version>
+			<Date>2020-12-03</Date>
+			<Version>1.6</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

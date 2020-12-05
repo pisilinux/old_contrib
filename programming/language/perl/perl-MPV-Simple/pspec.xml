@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-MPV-Simple</Name>
+		<Homepage>https://metacpan.org/pod/MPV::Simple</Homepage>
+		<Packager>
+			<Name>Pisi Linux Admins</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>perl_5</License>
+		<IsA>library</IsA>
+		<Summary>MPV::Simple is simple binding to libmpv/MPV.</Summary>
+		<Description>
+			MPV::Simple - Perl extension for the MPV audio and video player using libmpv.
+		</Description>
+		<Archive sha1sum="6e3bdb07e2c0700cd45ad58290a822c2aa2395d2" type="targz">
+			https://cpan.metacpan.org/authors/id/P/PE/PERLMAX/MPV-Simple-0.67.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>mpv-player-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-MPV-Simple</Name>
+		<RuntimeDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-JSON</Dependency>
+			<Dependency>mpv-player</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2020-12-06</Date>
+			<Version>0.67</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

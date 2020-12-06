@@ -34,7 +34,6 @@
 			<Dependency>alsa-utils</Dependency>
 			<Dependency>vorbis-tools</Dependency>
 			<Dependency>perl-Net-DBus</Dependency>
-			<Dependency>perl-MPV-Simple</Dependency>
 			<Dependency>perl-XML-Parser</Dependency>
 			<Dependency>perl-Gtk3-Notify</Dependency>
 			<Dependency>gst-plugins-ugly</Dependency>

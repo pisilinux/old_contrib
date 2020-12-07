@@ -28,6 +28,7 @@
 		<Name>puddletag</Name>
 		<RuntimeDependencies>
 			<Dependency>python3-qt5</Dependency>
+			<Dependency>libchromaprint</Dependency>
 			<Dependency>python3-mutagen</Dependency>
 			<Dependency>python3-configobj</Dependency>
 			<Dependency>python3-pyparsing</Dependency>

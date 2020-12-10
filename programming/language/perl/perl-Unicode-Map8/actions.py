@@ -15,8 +15,8 @@ def build():
 	perlmodules.make()
 
 def check():
-	pass
-#	perlmodules.make("test")
+#	pass
+	perlmodules.make("test")
 
 def install():
 	perlmodules.install()

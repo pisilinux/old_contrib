@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>perl-Font-FreeType</Name>
@@ -14,8 +14,8 @@
 		<Description>
 			This module allows Perl programs to conveniently read information from font files. All the font access is done through the FreeType2 library, which supports many formats. It can render images of characters with high-quality hinting and antialiasing, extract metrics information, and extract the outlines of characters in scalable formats like TrueType.
 		</Description>
-		<Archive sha1sum="65562a8ed4056eccde3c2fb9766c5d5c5cab22fb" type="targz">
-			https://cpan.metacpan.org/authors/id/D/DM/DMOL/Font-FreeType-0.13.tar.gz
+		<Archive sha1sum="38c9a9c9c0c26fd8f30b663a235cefdd7f6ec208" type="targz">
+			https://cpan.metacpan.org/authors/id/D/DM/DMOL/Font-FreeType-0.16.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>perl</Dependency>
@@ -23,6 +23,7 @@
 			<Dependency>perl-File-Which</Dependency>
 			<Dependency>perl-Test-Warnings</Dependency>
 			<Dependency>perl-Devel-CheckLib</Dependency>
+			<Dependency>perl-ExtUtils-MakeMaker</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -41,8 +42,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2019-12-12</Date>
-			<Version>0.13</Version>
+			<Date>2020-12-13</Date>
+			<Version>0.16</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

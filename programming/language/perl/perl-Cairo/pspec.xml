@@ -34,7 +34,6 @@
 			<Dependency>perl</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>freetype</Dependency>
-			<Dependency>perl-DynaLoader</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib</Path>

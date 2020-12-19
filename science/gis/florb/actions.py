@@ -26,6 +26,9 @@ def build():
 
 def install():
 	pisitools.dobin("build/src/florb")
+	pisitools.dopixmaps("src/res/florb.png")
+	shelltools.chmod("src/res/florb.svg", mode = 0644)
+	pisitools.insinto("/usr/share/icons/hicolor/scalable/apps", "src/res/florb.svg")
 
 #	pisitools.dodoc("LICENSE.txt", "README.txt")
 

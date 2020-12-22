@@ -14,7 +14,7 @@ def setup():
 	shelltools.export("PATH", ".")
 
 def build():
-	shelltools.system("scons -j1 target_python=python3 prefix=/usr sbindir=/sbin udevdir=/lib/udev")
+	shelltools.system("scons target_python=python3 prefix=/usr sbindir=/usr/sbin udevdir=/lib/udev")
 
 def install():
 	shelltools.system("DESTDIR=%s scons udev-install prefix=/usr" % get.installDIR())
@@ -25,7 +25,4 @@ def install():
 	# Install UDEV files
 #	pisitools.insinto("/lib/udev/rules.d", "gpsd.rules", "99-gpsd.rules")
 #	pisitools.dobin("gpsd.hotplug", "/lib/udev")
-
-	# Fix permissions
-#	shelltools.chmod("%s/usr/lib/%s/site-packages/gps/gps.py" % (get.installDIR(), get.curPYTHON()))
 

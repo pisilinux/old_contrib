@@ -25,15 +25,9 @@
 
     <History>
         <Update release="1">
-<<<<<<< HEAD
-            <Date>2012-09-20</Date>
-            <Version>1.10</Version>
-            <Comment>First release For 2.0</Comment>
-=======
             <Date>2020-10-21</Date>
             <Version>1.10</Version>
             <Comment>First release</Comment>
->>>>>>> 424f83d44aa99de8485374a553829e8d9f9796b3
             <Name>Ali Cengiz Kurt</Name>
             <Email>alicengizkurt@gmail.com</Email>
         </Update>

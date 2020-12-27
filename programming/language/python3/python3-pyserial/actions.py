@@ -11,7 +11,6 @@ def setup():
 
 def build():
 	pass
-#	pythonmodules.compile(pyVer = '3')
 
 def install():
 	pythonmodules.install(pyVer = '3')

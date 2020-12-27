@@ -9,15 +9,17 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+shelltools.export("PYTHONDONTWRITEBYTECODE", "1")
+i = "/usr/bin/env python3 $(which scons)"
+
 def setup():
-	shelltools.system("ln -s /usr/bin/python3 python")
-	shelltools.export("PATH", ".")
+	pass
 
 def build():
-	shelltools.system("scons target_python=python3 prefix=/usr sbindir=/usr/sbin udevdir=/lib/udev")
+	shelltools.system("%s target_python=python3 prefix=/usr sbindir=/usr/sbin udevdir=/lib/udev" % i)
 
 def install():
-	shelltools.system("DESTDIR=%s scons udev-install prefix=/usr" % get.installDIR())
+	shelltools.system("DESTDIR=%s %s udev-install prefix=/usr" % (get.installDIR(), i))
 
 	# fix shebang
 	shelltools.system("find %s/usr/bin -type f -exec sed -i 's|env\ python$|env python3|g' {} \;" % get.installDIR())

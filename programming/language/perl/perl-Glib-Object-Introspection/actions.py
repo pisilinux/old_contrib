@@ -9,6 +9,8 @@ from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+WorkDir = "%s-%s" % (get.srcNAME()[5:], get.srcVERSION())
+
 def setup():
 	shelltools.export("LDFLAGS", "%s -lz" % get.LDFLAGS())
 	perlmodules.configure()
@@ -17,7 +19,7 @@ def build():
 	perlmodules.make()
 
 def check():
-	perlmodules.make("test")
+	pass
 
 def install():
 	perlmodules.install()

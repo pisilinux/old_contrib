@@ -14,8 +14,8 @@
 		<Description>
 			Cairo provides Perl bindings for the vector graphics library cairo. It supports multiple output targets, including PNG, PDF and SVG. Cairo produces identical output on all those targets.
 		</Description>
-		<Archive sha1sum="d9aeb9e471e4ab366b4b3b6aac9c37172983d054" type="targz">
-			https://cpan.metacpan.org/authors/id/X/XA/XAOC/Cairo-1.107.tar.gz
+		<Archive sha1sum="b284984cd5fc2666c25662dee1575e3fbdc60efc" type="targz">
+			https://cpan.metacpan.org/authors/id/X/XA/XAOC/Cairo-1.108.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>perl</Dependency>
@@ -24,6 +24,7 @@
 			<Dependency>perl-ExtUtils-Depends</Dependency>
 			<Dependency>perl-Test-Number-Delta</Dependency>
 			<Dependency>perl-ExtUtils-PkgConfig</Dependency>
+			<Dependency>perl-ExtUtils-MakeMaker</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -43,8 +44,8 @@
 
 	<History>
 		<Update release="5">
-			<Date>2019-12-12</Date>
-			<Version>1.107</Version>
+			<Date>2020-12-13</Date>
+			<Version>1.108</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

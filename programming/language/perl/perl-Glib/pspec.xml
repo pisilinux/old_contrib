@@ -12,8 +12,8 @@
 		<IsA>library</IsA>
 		<Summary>Perl wrappers for the GLib utility and Object libraries</Summary>
 		<Description>This module provides perl access to Glib and GLib's GObject libraries. GLib is a portability and utility library; GObject provides a generic type system with inheritance and a powerful signal system. Together these libraries are used as the foundation for many of the libraries that make up the Gnome environment, and are used in many unrelated projects.</Description>
-		<Archive sha1sum="38c2655621ce2e92b73e2301cabd3a7f5af2a488" type="targz">
-			https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-1.3291.tar.gz
+		<Archive sha1sum="6875f1026ea81e15f091f870d3da44c604019aef" type="targz">
+			https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-1.3293.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>perl</Dependency>
@@ -38,8 +38,8 @@
 
 	<History>
 		<Update release="5">
-			<Date>2019-12-12</Date>
-			<Version>1.3291</Version>
+			<Date>2020-12-13</Date>
+			<Version>1.3293</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

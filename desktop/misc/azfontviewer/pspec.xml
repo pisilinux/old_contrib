@@ -11,9 +11,9 @@
 		<License>MIT</License>
 		<IsA>app:gui</IsA>
 		<PartOf>desktop.misc</PartOf>
-		<Summary>A simple full-color paint software.</Summary>
+		<Summary>A font viewer that directly reads and previews font files.</Summary>
 		<Description>
-			Paint software for Linux which can be used for various purposes such as dot editing, illustration, retouching, etc. You can sense pen pressure with XInput2.
+			A font viewer that directly reads and previews font files. It uses new mlk gui toolchain.
 		</Description>
 		<Archive sha1sum="a9bd701929796fb4d1974e8cb4ee6f2e36ae36d9" type="tarxz">
 			http://azsky2.html.xdomain.jp/arc/azfontviewer-1.0.0.tar.xz

@@ -1,0 +1,39 @@
+--- a/xpdf/GlobalParams.cc	2019-09-25 19:54:33.000000000 +0000
++++ b/xpdf/GlobalParams.cc	2021-01-01 08:28:37.719056727 +0000
+@@ -471,6 +471,7 @@
+ 
+ #if HAVE_FONTCONFIG
+ void SysFontList::scanFontconfigFonts() {
++  FcConfig *cfg;
+   FcPattern *pattern;
+   FcObjectSet *objSet;
+   FcFontSet *fontSet;
+@@ -481,7 +482,9 @@
+   char c;
+   int fontNum, i, j, n;
+ 
+-  FcInit();
++  if (!(cfg = FcInitLoadConfigAndFonts())) {
++    return;
++  }
+ 
+   pattern = FcPatternBuild(NULL,
+ 			   FC_OUTLINE, FcTypeBool, FcTrue,
+@@ -489,7 +492,7 @@
+ 			   NULL);
+   objSet = FcObjectSetBuild(FC_FAMILY, FC_STYLE, FC_STYLELANG,
+ 			    FC_FILE, FC_INDEX, NULL);
+-  fontSet = FcFontList(NULL, pattern, objSet);
++  fontSet = FcFontList(cfg, pattern, objSet);
+   FcPatternDestroy(pattern);
+   FcObjectSetDestroy(objSet);
+ 
+@@ -568,7 +571,7 @@
+     FcFontSetDestroy(fontSet);
+   }
+ 
+-  FcFini();
++  FcConfigDestroy(cfg);
+ }
+ #endif // HAVE_FONTCONFIG
+ 

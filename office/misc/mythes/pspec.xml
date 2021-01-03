@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>mythes</Name>
+		<Homepage>https://hunspell.github.io/</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>LGPLv2.1</License>
+		<Icon>mythes</Icon>
+		<IsA>app:gui</IsA>
+		<PartOf>office.misc</PartOf>
+		<Summary>A simple thesaurus for Libreoffice, OpenOffice, AbiWord etc.</Summary>
+		<Description>MyThes is a simple thesaurus that uses a structured text data file and an index file with binary search to lookup words and phrases and return information on part of speech, meanings, and synonyms.</Description>
+		<Archive sha1sum="c038831d84882cdf639e038e44decb1e40527591" type="targz">
+			mirrors://sourceforge/hunspell/MyThes/mythes-1.2.4.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>hunspell-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>mythes</Name>
+		<RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>mythes-devel</Name>
+		<Summary>mythes için geliştirme dosyaları</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">mythes</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-01-03</Date>
+			<Version>1.2.4</Version>
+			<Comment>First Beta build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

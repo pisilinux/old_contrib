@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>lyx</Name>
+		<Homepage>https://www.lyx.org/</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:gui</IsA>
+		<PartOf>editor</PartOf>
+		<Summary>Graphical frontend for LaTeX.</Summary>
+		<Description>Lyx is a document processor that encourages an approach to writing based on the structure of your documents, not their appearance. With Lyx, the amount of time you deal with LaTeX syntax to create documents will decrease drastically.</Description>
+		<Archive sha1sum="4956e634febd1ee8db291a25c10bc4ccf3bd80e9" type="tarxz">
+			https://ftp.lip6.fr/pub/lyx/stable/2.3.x/lyx-2.3.6.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>texlive-bin</Dependency>
+			<Dependency>boost-devel</Dependency>
+			<Dependency>mythes-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>qt5-svg-devel</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>enchant2-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>lyx</Name>
+		<RuntimeDependencies>
+			<Dependency>mythes</Dependency>
+			<Dependency>qt5-svg</Dependency>
+			<Dependency>qt5-base</Dependency>
+			<Dependency>enchant2</Dependency>
+			<Dependency>hunspell</Dependency>
+			<Dependency>ghostscript</Dependency>
+			<Dependency>texlive-core</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-01-03</Date>
+			<Version>2.3.6</Version>
+			<Comment>First Beta build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

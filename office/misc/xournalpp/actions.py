@@ -10,11 +10,11 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
+#	shelltools.export("CFLAGS", "-lpthread")
+	pisitools.cxxflags.add("-Wno-unused-result -Wno-deprecated-declarations")
+
 	shelltools.makedirs("build")
 	shelltools.cd("build")
-
-	shelltools.export("CFLAGS", "-lpthread")
-	pisitools.cxxflags.add("-Wno-unused-result -Wno-deprecated-declarations")
 	cmaketools.configure("-DCMAKE_BUILD_TYPE=Release", sourceDir = '..')
 
 def build():

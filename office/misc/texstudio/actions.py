@@ -7,13 +7,10 @@
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import qt5
 
-j = "USE_SYSTEM_QUAZIP=1 \
-     USE_SYSTEM_HUNSPELL=1 \
-     INTERNAL_TERMINAL=1 \
-    "
+j = "USE_SYSTEM_QUAZIP=1 USE_SYSTEM_HUNSPELL=1 INTERNAL_TERMINAL=1"
 
 def setup():
-	qt5.configure("texstudio.pro", parameters="'%s'" % j)
+	qt5.configure("texstudio.pro", parameters='%s' % j)
 
 def build():
 	qt5.make()
@@ -21,5 +18,5 @@ def build():
 def install():
 	qt5.install()
 
-	pisitools.dodoc("COPYING", "README.md")
+#	pisitools.dodoc("COPYING", "README.md")
 

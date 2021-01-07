@@ -10,7 +10,7 @@
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
-		<PartOf>office.misc</PartOf>
+		<PartOf>editor</PartOf>
 		<Summary>TeXstudio is a fully featured LaTeX editor.</Summary>
 		<Description>
 			TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.

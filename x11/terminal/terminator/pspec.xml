@@ -10,6 +10,7 @@
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:gui</IsA>
+		<PartOf>x11.terminal</PartOf>
 		<Summary>Multiple terminals in one window.</Summary>
 		<Description>In April of 2020 we started moving Terminator to GitHub. A new team wanted to continue the work of the original authors.</Description>
 		<Archive sha1sum="c22aac2114f47fcf48883e46d60d05d5365c4fd9" type="targz">

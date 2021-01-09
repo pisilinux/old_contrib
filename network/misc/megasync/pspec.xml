@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>megasync</Name>
+        <Homepage>http://mega.nz/</Homepage>
+        <Packager>
+            <Name>ali algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Packager>
+        <License>MEGA LIMITED CODE REVIEW LICENCE</License>
+        <IsA>app</IsA>
+        <Summary>MEGA cloud drive</Summary>
+        <Description>Easy automated syncing between your computers and your MEGA cloud drive</Description>
+        <Archive sha1sum="c2d7424e3eb6b9e9bbbcb2e573b3aca5f4917428" type="targz">https://codeload.github.com/meganz/MEGAsync/tar.gz/v4.3.3.0_Linux</Archive>
+        <Archive sha1sum="7eafb15cbafa8a4aa8456da9a8a8108b91cb5b0d" type="targz">https://codeload.github.com/meganz/sdk/tar.gz/v3.6.9</Archive>
+        
+        <BuildDependencies>
+            <Dependency>libraw-devel</Dependency>
+            <Dependency>crypto++-devel</Dependency>
+            <Dependency>libsodium-devel</Dependency>
+            <Dependency>c-ares-devel</Dependency>
+            <Dependency>libmediainfo-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>openssl-devel</Dependency>
+            <Dependency>libuv-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>zlib-devel</Dependency>
+            <Dependency>curl-devel</Dependency>
+        </BuildDependencies>
+       
+    </Source>
+
+    <Package>
+        <Name>megasync</Name>
+       
+        <RuntimeDependencies>
+            <Dependency>libuv</Dependency>
+            <Dependency>c-ares</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>libmediainfo</Dependency>
+            <Dependency>libsodium</Dependency>
+            <Dependency>crypto++</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>openssl</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>libzen</Dependency>
+            <Dependency>libxcb</Dependency>
+            <Dependency>libraw</Dependency>
+            <Dependency>libgcc</Dependency>
+            <Dependency>ffmpeg</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>curl</Dependency>
+            <Dependency>zlib</Dependency>
+        </RuntimeDependencies>
+      
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>           
+        </Files>
+       
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/megasync.desktop">megasync.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/mega.png">mega.png</AdditionalFile>
+        </AdditionalFiles>
+      
+    </Package>
+   
+    <History>
+        <Update release="1">
+            <Date>2020-12-25</Date>
+            <Version>4.3.3.0</Version>
+            <Comment>First release</Comment>
+            <Name>ali algul</Name>
+            <Email>aligulle3801@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

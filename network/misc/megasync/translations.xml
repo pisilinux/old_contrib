@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>MEGAsync</Name>
+        <Summary xml:lang="tr">MEGA cloud drive</Summary>
+        <Description xml:lang="tr">Easy automated syncing between your computers and your MEGA cloud drive</Description>
+    </Source>
+</PISI>

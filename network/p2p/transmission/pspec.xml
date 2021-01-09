@@ -31,8 +31,7 @@
 			<Dependency>miniupnpc-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<!-- <Patch level="1">fix_desktop_gtk_name.patch</Patch> -->
-			<!-- <Patch level="1">fix-optflags.patch</Patch> -->
+			<!-- <Patch level="1">missing.patch</Patch> -->
 		</Patches>
 	</Source>
 

@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>claws-mail</Name>
+		<Homepage>https://www.claws-mail.org/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>network.mail</PartOf>
+		<Summary>Claws Mail is an email client (and news reader), based on GTK+.</Summary>
+		<Description>
+			Claws Mail is a lightweight and highly configurable email client and news reader based on the GTK+ GUI toolkit.
+		</Description>
+		<Archive sha1sum="f06a31496ccc95468b37a23988eb9bdcd4477f82" type="targz">
+			<!-- snapshot from https://git.claws-mail.org/?p=claws.git;a=snapshot;h=f04096b7c36d5060fa3ce51a1a2a3945bd257c99;sf=tgz -->
+			https://github.com/4fury/sources/raw/master/f04096b7c36d5060fa3ce51a1a2a3945bd257c99.tgz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>flex</Dependency>
+			<Dependency>bison</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>gpgme-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
+			<Dependency>gnutls-devel</Dependency>
+			<Dependency>openssl-devel</Dependency>
+			<Dependency>libical-devel</Dependency>
+			<Dependency>librsvg-devel</Dependency>
+			<Dependency>libetpan-devel</Dependency>
+			<Dependency>compface-devel</Dependency>
+			<Dependency>libnotify-devel</Dependency>
+			<Dependency>libsocket-devel</Dependency>
+			<Dependency>NetworkManager-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<Patch level="1">git_version.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>claws-mail</Name>
+		<RuntimeDependencies>
+			<Dependency>curl</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>perl</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>expat</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>gpgme</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libSM</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>gnutls</Dependency>
+			<Dependency>nettle</Dependency>
+			<Dependency>libical</Dependency>
+			<Dependency>librsvg</Dependency>
+			<Dependency>libetpan</Dependency>
+			<Dependency>compface</Dependency>
+			<Dependency>dbus-glib</Dependency>
+			<Dependency>libnotify</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libarchive</Dependency>
+			<Dependency>libgpg-error</Dependency>
+			<!-- <Dependency>openldap-client</Dependency> -->
+			<Dependency>startup-notification</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc/clawsmail</Path>
+		</Files>
+		<AdditionalFiles>
+			<!-- <AdditionalFile owner="" permission="" target=""></AdditionalFile> -->
+		</AdditionalFiles>
+		<Provides>
+			<!-- <COMAR script=""></COMAR> -->
+		</Provides>
+	</Package>
+
+	<Package>
+		<Name>claws-mail-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">claws-mail</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-01-13</Date>
+			<Version>3.17.8.14</Version>
+			<Comment>First build from gtk3 branch.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

@@ -15,8 +15,8 @@
 		<Description>
 			Gaupol is an editor for text-based subtitle files. It supports multiple subtitle file formats and provides means of creating, editing and translating subtitles and timing subtitles to match video.
 		</Description>
-		<Archive sha1sum="d5778b55fdd63163e6f1348b6827ff5ee692fbda" type="targz">
-			https://github.com/otsaloma/gaupol/archive/1.8.tar.gz
+		<Archive sha1sum="596460f595004cec257a1d8ae931281bf4bb2068" type="targz">
+			https://github.com/otsaloma/gaupol/archive/1.9.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gtk3-devel</Dependency>
@@ -53,6 +53,13 @@
 	</Package>
 
 	<History>
+		<Update release="5">
+			<Date>2021-01-20</Date>
+			<Version>1.9</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="4">
 			<Date>2020-04-30</Date>
 			<Version>1.8</Version>

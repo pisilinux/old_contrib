@@ -9,7 +9,8 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "-DDISABLE_DEPRECATED_QT_FEATURES=ON \
+j = "-DCMAKE_BUILD_TYPE=Release \
+     -DDISABLE_DEPRECATED_QT_FEATURES=ON \
      -DJS_PROVIDER=none \
      -DWEBVIEW_PROVIDER=none -L \
     "

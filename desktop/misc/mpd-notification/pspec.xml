@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>mpd-notification</Name>
+		<Homepage>https://github.com/wlhlm/mpd-notification</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>MIT</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>Notifications for MPD.</Summary>
+		<Description>This little program creates a notification everytime mpd plays a track.</Description>
+		<Archive sha1sum="609c0752dbcfd1cf2c395d577f7f90ebac13b3b0" type="zip">
+			https://codeload.github.com/wlhlm/mpd-notification/zip/3c819f5aa75c2e83a42cdf237a0e84da833c2248
+		</Archive>
+		<BuildDependencies>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>libnotify-devel</Dependency>
+			<Dependency>libmpdclient-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>mpd-notification</Name>
+		<RuntimeDependencies>
+			<Dependency>libnotify</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libmpdclient</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin/mpd-notification</Path>
+			<Path fileType="man">/usr/share/man/man1/mpd-notification.1</Path>
+			<Path fileType="doc">/usr/share/doc/</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-01-21</Date>
+			<Version>2015.11.26</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

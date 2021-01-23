@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>picom</Name>
-		<Homepage>https://github.com/yshui/picom/releases</Homepage>
+		<Homepage>https://github.com/yshui/picom/</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
@@ -34,6 +34,9 @@
 			<Dependency>xcb-util-image-devel</Dependency>
 			<Dependency>xcb-util-renderutil-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">config.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>
@@ -50,7 +53,7 @@
 			<Dependency>libxcb</Dependency>
 			<Dependency>pixman</Dependency>
 			<Dependency>libpcre</Dependency>
-			<Dependency>libglvnd</Dependency>			
+			<Dependency>libglvnd</Dependency>
 			<Dependency>libconfig</Dependency>
 			<Dependency>xcb-util-image</Dependency>
 			<Dependency>xcb-util-renderutil</Dependency>

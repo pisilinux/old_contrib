@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>tesseract-data</Name>
-        <Summary xml:lang="tr">An OCR programm</Summary>
-        <Description xml:lang="tr">An OCR programm</Description>
-    </Source>
-</PISI>

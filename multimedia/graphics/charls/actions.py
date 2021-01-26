@@ -7,13 +7,14 @@
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 
+j = "-DCMAKE_INSTALL_PREFIX=/usr \
+     -DCMAKE_INSTALL_LIBDIR=lib \
+     -DCMAKE_BUILD_TYPE=Release \
+     -DBUILD_SHARED_LIBS=ON \
+    "
+
 def setup():
-	cmaketools.configure("\
-	\
-	-DCMAKE_INSTALL_PREFIX=/usr \
-	-DCMAKE_INSTALL_LIBDIR=lib \
-	-DCMAKE_BUILD_TYPE=Release \
-	-DBUILD_SHARED_LIBS=ON")
+	cmaketools.configure(j)
 
 def build():
 	cmaketools.make()

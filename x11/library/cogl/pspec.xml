@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>cogl</Name>
+		<Homepage>https://lazka.github.io/pgi-docs/Cogl-1.0/index.html</Homepage>
+		<Packager>
+			<Name>Pisi Linux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>MIT</License>
+		<IsA>library</IsA>
+		<PartOf>x11.library</PartOf>
+		<Summary>A low level OpenGL abstraction library.</Summary>
+		<Description>Cogl is a low level OpenGL abstraction library developed for (and part of) Clutter.</Description>
+		<Archive sha1sum="b92d70f74b1df95ba5aeceff4dd203801982bc4f" type="tarxz">
+			mirrors://gnome/cogl/1.22/cogl-1.22.8.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>mesa-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>libglvnd-devel</Dependency>
+			<Dependency>gtkglext-devel</Dependency>
+			<Dependency>libXfixes-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXdamage-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>cogl</Name>
+		<RuntimeDependencies>
+			<Dependency>mesa</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>libglvnd</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libXdamage</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="data">/usr/share</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>cogl-devel</Name>
+		<RuntimeDependencies>
+			<Dependency>mesa-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>libglvnd-devel</Dependency>
+			<Dependency>libXfixes-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>libXdamage-devel</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+			<Dependency release="current">cogl</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="data">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-01-17</Date>
+			<Version>1.22.8</Version>
+			<Comment>First Beta release.</Comment>
+			<Name>Pisi Linux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>
+

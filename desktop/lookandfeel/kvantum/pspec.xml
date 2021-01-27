@@ -10,6 +10,7 @@
         </Packager>
         <License>GPLv3</License>
         <IsA>library</IsA>
+        <PartOf>desktop.lookandfeel</PartOf>
         <Summary>Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
         <Description>Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
         <Archive sha1sum="7112dbf24b70eff82f028f61f9ad37b4a6983824" type="tarxz">https://github.com/tsujan/Kvantum/releases/download/V0.18.0/Kvantum-0.18.0.tar.xz</Archive>

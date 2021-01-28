@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libxdg-basedir</Name>
+		<Homepage>https://github.com/davmac314/libxdg-basedir</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>MIT</License>
+		<IsA>library</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>libxdg-basedir is an implementation of the XDG Base Directory specifications.</Summary>
+		<Description>libxdg-basedir is an implementation of the XDG Base Directory specifications.</Description>
+		<Archive sha1sum="1eac3b35b90f3930b730f2f4af8452cba77f425e" type="tarxz">
+			https://github.com/davmac314/libxdg-basedir/releases/download/v1.2.2/libxdg-basedir-1.2.2.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<!-- <Dependency></Dependency> -->
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>libxdg-basedir</Name>
+		<RuntimeDependencies>
+			<!-- <Dependency></Dependency> -->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>libxdg-basedir-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">libxdg-basedir</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-01-23</Date>
+			<Version>1.2.2</Version>
+			<Comment>First Beta build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>
+

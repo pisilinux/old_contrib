@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>charls</Name>
@@ -14,17 +14,14 @@
 		<Description>
 			CharLS is a C++ implementation of the JPEG-LS standard for lossless and near-lossless image compression and decompression. JPEG-LS is a low-complexity image compression standard that matches JPEG 2000 compression ratios.
 		</Description>
-		<Archive sha1sum="e40cbf0f1bfc1bb88c10b28f819e840fea8941af" type="targz">
-			https://github.com/team-charls/charls/archive/2.1.0.tar.gz
+		<Archive sha1sum="7824c230d5b8a1de33f1c9c2177b1640c26d74ef" type="targz">
+			https://github.com/team-charls/charls/archive/2.2.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<!--
-			<Patch level="0">charls-cmake-fix.patch</Patch>
-			<Patch level="0">charls-fix-tests.patch</Patch>
-			-->
+			<!-- <Patch level="1">missing.patch</Patch> -->
 		</Patches>
 	</Source>
 
@@ -41,20 +38,29 @@
 
 	<Package>
 		<Name>charls-devel</Name>
-		<Summary>Development files for charls</Summary>
+		<Summary>Development files for charls.</Summary>
 		<RuntimeDependencies>
 			<Dependency release="current">charls</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/cmake</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
 		</Files>
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2021-01-26</Date>
+			<Version>2.2.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="2">
 			<Date>2020-01-17</Date>
 			<Version>2.1.0</Version>
-			<Comment>Rebuild.</Comment>
+			<Comment>Version bump.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
 		</Update>

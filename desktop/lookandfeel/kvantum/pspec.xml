@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kvantum</Name>
+        <Homepage>https://github.com/tsujan/Kvantum</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <PartOf>desktop.lookandfeel</PartOf>
+        <Summary>Kvantum is an SVG-based theme engine for Qt4/Qt5, KDE and LXQt.</Summary>
+        <Description>Kvantum Qt4 / Qt5, KDE ve LXQt için SVG tabanlı bir tema motorudur.</Description>
+        <Archive sha1sum="7112dbf24b70eff82f028f61f9ad37b4a6983824" type="tarxz">https://github.com/tsujan/Kvantum/releases/download/V0.18.0/Kvantum-0.18.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libX11-devel</Dependency>
+            <Dependency>qt5-linguist</Dependency>
+            <Dependency>qt5-svg-devel</Dependency>
+            <Dependency>qt5-base-devel</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
+            <Dependency>qt5-designer-devel</Dependency>
+            <Dependency>kwindowsystem-devel</Dependency>
+            <Dependency>qt5-x11extras-devel</Dependency>
+            <Dependency>qt5-assistant-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kvantum</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+            <Dependency>libX11</Dependency>
+            <Dependency>qt5-svg</Dependency>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>kwindowsystem</Dependency>
+            <Dependency>qt5-x11extras</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/Kvantum</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="7">
+            <Date>2020-10-04</Date>
+            <Version>0.18.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="6">
+            <Date>2020-10-04</Date>
+            <Version>0.17.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="5">
+            <Date>2020-04-30</Date>
+            <Version>0.15.3</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="4">
+            <Date>2020-02-01</Date>
+            <Version>0.14.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="3">
+            <Date>2019-10-14</Date>
+            <Version>0.12.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="2">
+            <Date>2019-07-30</Date>
+            <Version>0.11.2</Version>
+            <Comment>Version bump</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+        <Update release="1">
+            <Date>2019-03-01</Date>
+            <Version>0.10.9</Version>
+            <Comment>First release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

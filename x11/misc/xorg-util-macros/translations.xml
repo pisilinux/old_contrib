@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>xorg-util-makros</Name>
-        <Summary xml:lang="tr">X.Org Autotools macros</Summary>
-        <Description xml:lang="tr">X.Org Autotools macros</Description>
-    </Source>
-</PISI>

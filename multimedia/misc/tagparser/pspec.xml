@@ -13,8 +13,8 @@
 		<PartOf>multimedia.misc</PartOf>
 		<Summary>C++ library for reading and writing MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska tags.</Summary>
 		<Description>C++ library for reading and writing MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska tags.</Description>
-		<Archive sha1sum="aeaa47f326914c7c010f11306e0f013d10c49fbf" type="targz">
-			https://github.com/Martchus/tagparser/archive/v9.3.0.tar.gz
+		<Archive sha1sum="9dc3c80d9f8e0cdba56f0793babb3c576538a1e5" type="targz">
+			https://github.com/Martchus/tagparser/archive/v9.4.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -47,13 +47,14 @@
 		<Files>
 			<Path fileType="header">/usr/include</Path>
 			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="data">/usr/share/tagparser</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="1">
-			<Date>2020-11-22</Date>
-			<Version>9.3.0</Version>
+			<Date>2021-01-20</Date>
+			<Version>9.4.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

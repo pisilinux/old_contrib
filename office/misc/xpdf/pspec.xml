@@ -15,8 +15,8 @@
 		<Description>
 			Xpdf is an open source viewer for Portable Document Format (PDF) files. (These are also sometimes also called 'Acrobat' files, from the name of Adobe's PDF software.)  The Xpdf project also includes a PDF text extractor, PDF-to-PostScript converter, and various other utilities.
 		</Description>
-		<Archive sha1sum="2b22ad40749e151a095d28a6cf4c9e5727f8d643" type="targz">
-			https://dl.xpdfreader.com/xpdf-4.02.tar.gz
+		<Archive sha1sum="3e71b44fc98460b0f97a18594feb0e3c4e4248d9" type="targz">
+			https://dl.xpdfreader.com/xpdf-4.03.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -29,7 +29,7 @@
 			<Dependency>fontconfig-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">fontconfig.patch</Patch>
+			<!-- <Patch level="1">fontconfig.patch</Patch> -->
 		</Patches>
 	</Source>
 
@@ -54,8 +54,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2021-01-01</Date>
-			<Version>4.02</Version>
+			<Date>2021-01-2</Date>
+			<Version>4.03</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

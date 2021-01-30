@@ -13,10 +13,11 @@
 		<PartOf>desktop.lookandfeel</PartOf>
 		<Summary>Elementary Look for XFCE.</Summary>
 		<Description>Elementary icons forked from upstream, extended and maintained for Xfce.</Description>
-		<Archive sha1sum="63127ebe8a841f01518c8fe9f33ffb1977555cb9" type="targz">
-			https://github.com/shimmerproject/elementary-xfce/archive/v0.15.1.tar.gz
+		<Archive sha1sum="e202bca3a2441bd15af5aa8d6ac54610b221f328" type="targz">
+			https://github.com/shimmerproject/elementary-xfce/archive/v0.15.2.tar.gz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>librsvg</Dependency>
 			<Dependency>optipng</Dependency>
 			<Dependency>inkscape</Dependency>
 			<Dependency>gtk3-devel</Dependency>
@@ -33,8 +34,8 @@
 
 	<History>
 		<Update release="3">
-			<Date>2020-08-11</Date>
-			<Version>0.15.1</Version>
+			<Date>2021-01-31</Date>
+			<Version>0.15.2</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

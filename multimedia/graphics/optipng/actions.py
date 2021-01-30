@@ -9,10 +9,10 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 t = ''.join([
-    '"-prefix=/usr',
+    ' -prefix=/usr',
     ' -mandir=/usr/share/man',
     ' -with-system-zlib',
-    ' -with-system-libpng "'
+    ' -with-system-libpng '
     ])
 
 def setup():

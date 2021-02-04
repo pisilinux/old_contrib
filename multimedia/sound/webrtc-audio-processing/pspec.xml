@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>webrtc-audio-processing</Name>
+        <Homepage>https://freedesktop.org/software/pulseaudio/webrtc-audio-processing/</Homepage>
+        <Packager>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>library</IsA>
+        <Summary>AudioProcessing library based on Google's implementation of WebRTC</Summary>
+        <Description>AudioProcessing library based on Google's implementation of WebRTC</Description>
+        <Archive sha1sum="7aa63a6bfe0e5056cfcf883b2de3496ab214ac13" type="tarxz">http://freedesktop.org/software/pulseaudio/webrtc-audio-processing/webrtc-audio-processing-0.3.1.tar.xz</Archive>
+        <BuildDependencies>
+<!--             <Dependency>git</Dependency> --> -->
+        </BuildDependencies>
+        
+    </Source>
+
+    <Package>
+        <Name>webrtc-audio-processing</Name>
+        <RuntimeDependencies>
+            <Dependency>libgcc</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/lib/libwebrtc_audio_processing*</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>webrtc-audio-processing-devel</Name>
+        <Summary>Development files for webrtc-audio-processing</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">webrtc-audio-processing</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-01-30</Date>
+            <Version>0.3.1</Version>
+            <Comment>First release</Comment>
+            <Name>Kamil Atlı</Name>
+            <Email>suvari@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>

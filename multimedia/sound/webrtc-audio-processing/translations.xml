@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>webrtc-audio-processing</Name>
+        <Summary xml:lang="en">AudioProcessing library based on Google's implementation of WebRTC</Summary>
+        <Description xml:lang="en">AudioProcessing library based on Google's implementation of WebRTC</Description>
+    </Source>
+</PISI>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>vte28</Name>
@@ -10,32 +10,30 @@
 		</Packager>
 		<License>LGPLv2</License>
 		<Summary>Xft powered terminal widget</Summary>
-		<Description>
-			The VTE package contains a termcap file implementation for terminal emulators.
-		</Description>
+		<Description>The VTE package contains a termcap file implementation for terminal emulators.</Description>
 		<Archive sha1sum="b0af0701ef9d6c7ede9c578366b12a70ac47ab66" type="tarxz">
 			mirrors://gnome/vte/0.28/vte-0.28.2.tar.xz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>gtk-doc</Dependency>
 			<Dependency>intltool</Dependency>
+			<Dependency>atk-devel</Dependency>
 			<Dependency>gtk2-devel</Dependency>
+			<Dependency>vala-devel</Dependency>
+			<Dependency>python-six</Dependency>
 			<Dependency>glib2-devel</Dependency>
-			<Dependency>ncurses-devel</Dependency>
-			<Dependency>gobject-introspection-devel</Dependency>
-			<Dependency>fontconfig-devel</Dependency>
 			<Dependency>pango-devel</Dependency>
 			<Dependency>cairo-devel</Dependency>
-			<Dependency>gtk-doc</Dependency>
-			<Dependency>gdk-pixbuf-devel</Dependency>
-			<Dependency>atk-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
-			<Dependency>harfbuzz-devel</Dependency>
-			<Dependency>graphite2-devel</Dependency>
-			<Dependency>python-six</Dependency>
 			<Dependency>gnutls-devel</Dependency>
+			<Dependency>ncurses-devel</Dependency>
 			<Dependency>libpcre-devel</Dependency>
 			<Dependency>libglade-devel</Dependency>
-			<Dependency>vala-devel</Dependency>
+			<Dependency>harfbuzz-devel</Dependency>
+			<Dependency>graphite2-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
 			 <Patch level="1">vte-0.28.2-limit-arguments.patch</Patch>
@@ -50,19 +48,19 @@
 		<Name>vte28</Name>
 		<IsA>library</IsA>
 		<RuntimeDependencies>
-			<Dependency>gobject-introspection</Dependency>
-			<Dependency>gtk2</Dependency>
 			<Dependency>atk</Dependency>
+			<Dependency>gtk2</Dependency>
 			<Dependency>zlib</Dependency>
 			<Dependency>cairo</Dependency>
-			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>glib2</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>libgcc</Dependency>
 			<Dependency>gnutls</Dependency>
+			<Dependency>libX11</Dependency>
 			<Dependency>libpcre</Dependency>
 			<Dependency>ncurses</Dependency>
-			<Dependency>glib2</Dependency>
-			<Dependency>libX11</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>gobject-introspection</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin/vte</Path>

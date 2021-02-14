@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>menu-cache</Name>
+		<Homepage>https://github.com/lxde/menu-cache</Homepage>
+		<Packager>
+			<Name>Ayhan Yalçınsoy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Packager>
+		<License>LGPL-2.1</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.lxde</PartOf>
+		<Summary>A library creating and utilizing caches to speed up freedesktop.org application menus.</Summary>
+		<Description>menu-cache is a library creating and utilizing caches to speed up freedesktop.org application menus.</Description>
+		<Archive sha1sum="01e6035aa1fe76d7047bdec235254aa5ce17394a" type="tarxz">
+			mirrors://sourceforge/lxde/menu-cache/1.1/menu-cache-1.1.0.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libfm-extra-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<Patch level="1">gcc10.patch</Patch>
+			<Patch level="1">fix_memory_leaks.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>menu-cache</Name>
+		<RuntimeDependencies>
+			<Dependency>glib2</Dependency>
+			<!-- <Dependency>libfm-extra</Dependency> -->
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/libexec</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>menu-cache-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">menu-cache</Dependency>
+			<Dependency>glib2-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-02-13</Date>
+			<Version>1.1.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

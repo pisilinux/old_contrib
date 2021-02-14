@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>lxhotkey</Name>
+		<Homepage>https://www.lxde.org/</Homepage>
+		<Packager>
+			<Name>Ayhan Yalçınsoy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app</IsA>
+		<PartOf>desktop.lxde</PartOf>
+		<Summary>A lightweight global keyboard shortcuts configurator.</Summary>
+		<Description>LXHotkey is an universal application for the Lightweight X11 Desktop Environment (LXDE) which allows view and change global keyboard shortcuts for Window Manager actions, including ones to start applications.</Description>
+		<Archive sha1sum="2f41397a07dc3ae19607be23f61f09cdb93c8a3d" type="tarxz">
+			mirrors://sourceforge/lxde/lxhotkey-0.1.1.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libfm-devel</Dependency>
+			<Dependency>libunistring-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>lxhotkey</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libfm</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libunistring</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>lxhotkey-devel</Name>
+		<RuntimeDependencies>
+			<Dependency>libfm-devel</Dependency>
+			<Dependency release="current">lxhotkey</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-02-13</Date>
+			<Version>0.1.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

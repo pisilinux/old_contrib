@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>lxappearance-obconf</Name>
+		<Homepage>https://www.lxde.org/</Homepage>
+		<Packager>
+			<Name>Ayhan Yalçınsy</Name>
+			<Email>ayhanyalcinsoy@pisilinux.org</Email>
+		</Packager>
+		<License>GPL-2</License>
+		<IsA>library</IsA>
+		<PartOf>desktop.lxde</PartOf>
+		<Summary>Plugin to configure Openbox inside LXAppearance.</Summary>
+		<Description>This plugin adds an additional tab called "Window Border" to LXAppearance.It is only visible when the plugin is installed and Openbox is in use.</Description>
+		<Archive sha1sum="dcb5604bb1143add0fb7ea235661ad9313747288" type="tarxz">
+			mirrors://sourceforge/lxde/lxappearance-obconf-0.2.3.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>atk-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
+			<Dependency>libICE-devel</Dependency>
+			<Dependency>imlib2-devel</Dependency>
+			<Dependency>libXft-devel</Dependency>
+			<Dependency>gettext-devel</Dependency>
+			<Dependency>openbox-devel</Dependency>
+			<Dependency>librsvg-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+			<Dependency>lxappearance-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>lxappearance-obconf</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>libSM</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>imlib2</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXft</Dependency>
+			<Dependency>librsvg</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>openbox</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>fontconfig</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/lxappearance</Path>
+			<Path fileType="data">/usr/share/lxappearance</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-02-13</Date>
+			<Version>0.2.3</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

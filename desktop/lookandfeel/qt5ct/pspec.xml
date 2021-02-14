@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>qt5ct</Name>
+		<Homepage>https://sourceforge.net/projects/qt5ct</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPLv3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>desktop.lookandfeel</PartOf>
+		<Summary>Qt5 configuration tool.</Summary>
+		<Description>
+			This program allows users to configure Qt5 settings (theme, font, icons, etc.) under DE/WM without Qt integration.
+		</Description>
+		<Archive sha1sum="df8364b6bdffa6a585f293dc63f7c7125382dc68" type="tarbz2">
+			https://sourceforge.net/projects/qt5ct/files/qt5ct-1.1.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>qt5-linguist</Dependency>
+			<Dependency>qt5-svg-devel</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>kwindowsystem-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>qt5ct</Name>
+		<RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>qt5-svg</Dependency>
+			<Dependency>qt5-base</Dependency>
+			<Dependency>kwindowsystem</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="data">/usr/share/qt5ct</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-02-14</Date>
+			<Version>1.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>
+

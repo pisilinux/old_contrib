@@ -12,8 +12,8 @@
 		<IsA>app:console</IsA>
 		<Summary>Connection Manager.</Summary>
 		<Description>The ConnMan project provides a daemon for managing internet connections within embedded devices running the Linux operating system. The Connection Manager is designed to be slim and to use as few resources as possible.</Description>
-		<Archive sha1sum="ff27f3d7653a2b13ae30eaa6b3d154d53f09d439" type="tarxz">
-			https://mirrors.edge.kernel.org/pub/linux/network/connman/connman-1.38.tar.xz
+		<Archive sha1sum="dd04fb520a73201ebaa3e2b8ae1cabd27261a389" type="tarxz">
+			https://mirrors.edge.kernel.org/pub/linux/network/connman/connman-1.39.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>ppp-devel</Dependency>
@@ -22,6 +22,7 @@
 			<Dependency>polkit-devel</Dependency>
 			<Dependency>libmnl-devel</Dependency>
 			<Dependency>gnutls-devel</Dependency>
+			<Dependency>wpa_supplicant</Dependency>
 			<Dependency>iptables-devel</Dependency>
 			<Dependency>readline-devel</Dependency>
 			<Dependency>bluez-libs-devel</Dependency>
@@ -35,6 +36,7 @@
 			<Dependency>ppp</Dependency>
 			<Dependency>dbus</Dependency>
 			<Dependency>glib2</Dependency>
+			<Dependency>polkit</Dependency>
 			<Dependency>libmnl</Dependency>
 			<Dependency>gnutls</Dependency>
 			<Dependency>readline</Dependency>
@@ -44,14 +46,16 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="executable">/usr/sbin/connman*</Path>
-			<Path fileType="library">/usr/lib/connman/*</Path>
+			<Path fileType="executable">/usr/sbin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/etc</Path>
 			<Path fileType="data">/usr/share</Path>
-			<Path fileType="data">/usr/share/dbus-1</Path>
-			<Path fileType="data">/usr/share/polkit-1</Path>
 			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc</Path>  
 		</Files>
+		<Provides>
+			<!-- <COMAR script="service.py">System.Service</COMAR> -->
+		</Provides>
 	</Package>
 
 	<Package>
@@ -69,6 +73,13 @@
 	</Package>
 
 	<History>
+		<Update release="6">
+			<Date>2021-02-17</Date>
+			<Version>1.39</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="5">
 			<Date>2020-04-30</Date>
 			<Version>1.38</Version>

@@ -24,6 +24,9 @@
 			<Dependency>openssl-devel</Dependency>
 			<Dependency>cyrus-sasl-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">Detect_extra_data_after_STARTTLS_response_and_exit.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>
@@ -55,7 +58,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2021-01-13</Date>
+			<Date>2021-02-19</Date>
 			<Version>1.9.4</Version>
 			<Comment>First Beta build.</Comment>
 			<Name>fury</Name>

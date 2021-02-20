@@ -15,8 +15,8 @@
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>Enlightenment Foundation Libraries</Summary>
 		<Description>efl, Enlightenment Foundation Libraries</Description>
-		<Archive sha1sum="6e8e7fe8920db8c6533c174cb1d93a6527c7a19d" type="tarxz">
-			https://download.enlightenment.org/rel/libs/efl/efl-1.24.3.tar.xz
+		<Archive sha1sum="0cf4054105835862f95dc66afb69c9a2a3c16ac3" type="tarxz">
+			https://download.enlightenment.org/rel/libs/efl/efl-1.25.1.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -32,6 +32,7 @@
 			<Dependency>dbus-devel</Dependency>
 			<Dependency>scim-devel</Dependency>
 			<Dependency>libc-client</Dependency>
+			<Dependency>glib2-devel</Dependency>
 			<Dependency>eudev-devel</Dependency>
 			<Dependency>avahi-devel</Dependency>
 			<Dependency>libXi-devel</Dependency>
@@ -103,6 +104,7 @@
 			<Dependency>librsvg</Dependency>
 			<Dependency>libsdl2</Dependency>
 			<Dependency>openssl</Dependency>
+			<Dependency>libglvnd</Dependency>
 			<Dependency>freetype</Dependency>
 			<Dependency>harfbuzz</Dependency>
 			<Dependency>gstreamer</Dependency>
@@ -190,6 +192,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2021-02-17</Date>
+			<Version>1.25.1</Version>
+			<Comment>Ver. bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="2">
 			<Date>2020-06-22</Date>
 			<Version>1.24.3</Version>

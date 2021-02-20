@@ -14,8 +14,8 @@
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>efl python bindings</Summary>
 		<Description>PYTHON-EFL are the python bindings for the whole EFL stack.</Description>
-		<Archive sha1sum="8e07e0db990840bcd4362c3b5d359e7587d5cffd" type="tarxz">
-			https://download.enlightenment.org/rel/bindings/python/python-efl-1.24.0.tar.xz
+		<Archive sha1sum="346e79cc70f169c381c2c6b096b7e4a08a0c1a6f" type="tarxz">
+			https://download.enlightenment.org/rel/bindings/python/python-efl-1.25.0.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cython3</Dependency>
@@ -42,6 +42,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-02-17</Date>
+			<Version>1.25.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="1">
 			<Date>2020-04-30</Date>
 			<Version>1.24.0</Version>

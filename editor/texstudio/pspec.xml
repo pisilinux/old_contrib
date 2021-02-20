@@ -15,8 +15,8 @@
 		<Description>
 			TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.
 		</Description>
-		<Archive sha1sum="c7236e9b85b1379a66ccd2eddea51bd72c993931" type="targz">
-			mirrors://sourceforge/project/texstudio/3.0.4/3.0.4.tar.gz
+		<Archive sha1sum="d7400af301eda2a6bd2f4731b299e5631dde50ef" type="targz">
+			mirrors://sourceforge/project/texstudio/3.1.0/3.1.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>zlib-devel</Dependency>
@@ -57,8 +57,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2021-01-03</Date>
-			<Version>3.0.4</Version>
+			<Date>2021-02-18</Date>
+			<Version>3.1.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

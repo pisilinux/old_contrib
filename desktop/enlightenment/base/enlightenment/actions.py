@@ -10,7 +10,6 @@ from pisi.actionsapi import pisitools
 j = "-Dwl=true \
      -Ddrm=true \
      -Dmount-eeze=true \
-     -Dwl-drm=false \
      -Dsystemd=false \
      -Dgeolocation=false \
     "

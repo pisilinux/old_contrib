@@ -8,6 +8,7 @@ from pisi.actionsapi import shelltools, autotools, pisitools, get
 
 def setup():
 	shelltools.system("NOCONFIGURE=1 ./autogen.sh")
+	pisitools.cflags.add("-Wno-deprecated-declarations")
 	autotools.configure("--enable-alternate-addressbook --disable-static")
 
 	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")

@@ -8,18 +8,28 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-z = "--disable-selinux \
-     --enable-pptp \
-     --enable-openconnect \
+i = "--enable-openconnect \
+     --enable-session-policy-local \
      --enable-polkit \
      --enable-client \
+     --enable-wifi \
+     --enable-gadget \
+     --enable-ethernet \
+     --enable-loopback \
      --enable-nmcompat \
+     --enable-bluetooth \
+     --disable-pptp \
+     --disable-selinux \
+     --with-dbusconfdir=/etc \
+     --with-dbusdatadir=/usr/share \
      --with-systemdunitdir='' \
      --with-tmpfilesdir='' \
     "
 
 def setup():
-	autotools.configure(z)
+	pisitools.ldflags.add("-lc -lpolkit-agent-1 -lpolkit-gobject-1")
+	autotools.autoreconf("-vif")
+	autotools.configure(i)
 
 def build():
 	autotools.make()

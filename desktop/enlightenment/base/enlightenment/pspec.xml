@@ -27,8 +27,10 @@
 			<Dependency>connman-devel</Dependency>
 			<Dependency>alsa-lib-devel</Dependency>
 			<Dependency>bluez-libs-devel</Dependency>
+			<Dependency>xkeyboard-config</Dependency>
 			<Dependency>libxkbcommon-devel</Dependency>
 			<Dependency>xorg-server-xwayland</Dependency>
+			<Dependency>pulseaudio-libs-devel</Dependency>
 			<Dependency>xcb-util-keysyms-devel</Dependency>
 		</BuildDependencies>
 	</Source>
@@ -83,6 +85,13 @@
 	</Package>
 
 	<History>
+		<Update release="11">
+			<Date>2021-02-18</Date>
+			<Version>0.24.2</Version>
+			<Comment>Rebuild</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="10">
 			<Date>2020-08-12</Date>
 			<Version>0.24.2</Version>

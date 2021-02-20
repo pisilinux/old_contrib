@@ -15,9 +15,9 @@
 		<Description>
 			Claws Mail is a lightweight and highly configurable email client and news reader based on the GTK+ GUI toolkit.
 		</Description>
-		<Archive sha1sum="f06a31496ccc95468b37a23988eb9bdcd4477f82" type="targz">
+		<Archive sha1sum="ef3268699adbdea98eefa6bf9c089d58fa57c6d5" type="targz">
 			<!-- snapshot from https://git.claws-mail.org/?p=claws.git;a=snapshot;h=f04096b7c36d5060fa3ce51a1a2a3945bd257c99;sf=tgz -->
-			https://github.com/4fury/sources/raw/master/f04096b7c36d5060fa3ce51a1a2a3945bd257c99.tgz
+			https://github.com/4fury/sources/raw/master/89149776cbb8bbc3ef50158f2f430085098ebb23.tgz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>flex</Dependency>
@@ -29,6 +29,7 @@
 			<Dependency>openssl-devel</Dependency>
 			<Dependency>libical-devel</Dependency>
 			<Dependency>librsvg-devel</Dependency>
+			<Dependency>enchant2-devel</Dependency>
 			<Dependency>libetpan-devel</Dependency>
 			<Dependency>compface-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
@@ -58,6 +59,7 @@
 			<Dependency>nettle</Dependency>
 			<Dependency>libical</Dependency>
 			<Dependency>librsvg</Dependency>
+			<Dependency>enchant2</Dependency>
 			<Dependency>libetpan</Dependency>
 			<Dependency>compface</Dependency>
 			<Dependency>dbus-glib</Dependency>
@@ -97,8 +99,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2021-01-13</Date>
-			<Version>3.17.8.14</Version>
+			<Date>2021-02-20</Date>
+			<Version>3.17.8.23</Version>
 			<Comment>First build from gtk3 branch.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

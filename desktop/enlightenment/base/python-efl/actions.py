@@ -5,10 +5,7 @@
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import pythonmodules
-from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
-
-shelltools.export("PYTHON", "/usr/bin/python3")
 
 def build():
 	pythonmodules.compile(pyVer = "3")

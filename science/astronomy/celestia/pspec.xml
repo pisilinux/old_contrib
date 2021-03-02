@@ -13,8 +13,8 @@
 		<PartOf>science.astronomy</PartOf>
 		<Summary>Space simulation software.</Summary>
 		<Description>Celestia is a space simulation software that lets you explore our universe in three dimensions.</Description>
-		<Archive sha1sum="fbd404e0a132f0b555cf2e061e36bd384fb6038c" type="targz">
-			https://github.com/CelestiaProject/Celestia/archive/1.6.2.1.tar.gz
+		<Archive sha1sum="6e2fb4481dd69a5a81e31dc4352f2cf3680740d8" type="targz">
+			https://github.com/CelestiaProject/Celestia/archive/1.6.2.2.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>lua-devel</Dependency>
@@ -49,6 +49,7 @@
 			<Dependency>libogg</Dependency>
 			<Dependency>gtkglext</Dependency>
 			<Dependency>mesa-glu</Dependency>
+			<Dependency>libglvnd</Dependency>
 			<Dependency>libtheora</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libjpeg-turbo</Dependency>
@@ -63,8 +64,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-11-28</Date>
-			<Version>1.6.2.1</Version>
+			<Date>2021-02-24</Date>
+			<Version>1.6.2.2</Version>
 			<Comment>Ver. bump</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

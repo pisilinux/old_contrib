@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>libfm</Name>
+		<Name>libfm-extra</Name>
 		<Homepage>https://github.com/lxde/libfm</Homepage>
 		<Packager>
 			<Name>Ayhan Yalçınsoy</Name>

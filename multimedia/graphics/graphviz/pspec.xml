@@ -15,8 +15,8 @@
         <Description>
             Graphviz is open source graph visualization software which has web and interactive graphical interfaces, and auxiliary tools and libraries. Graphviz has many useful features for diagrams, such as options for colors, fonts, tabular node layouts, line styles, and custom shapes.
         </Description>
-        <Archive sha1sum="b9bf80383da06d8d75ccb15a38d1c23d5a667b97" type="tarbz2">
-            https://gitlab.com/graphviz/graphviz/-/archive/2.46.0/graphviz-2.46.0.tar.bz2
+        <Archive sha1sum="af16cbc07c746b760260eedcbfc14673aea17672" type="tarbz2">
+            https://gitlab.com/graphviz/graphviz/-/archive/2.46.1/graphviz-2.46.1.tar.bz2
         </Archive>
         <BuildDependencies>
             <Dependency>perl</Dependency>
@@ -85,8 +85,8 @@
 
     <History>
         <Update release="2">
-            <Date>2021-01-26</Date>
-            <Version>2.46.0</Version>
+            <Date>2021-02-24</Date>
+            <Version>2.46.1</Version>
             <Comment>Version bump.</Comment>
             <Name>fury</Name>
             <Email>wascheme@tuta.io</Email>

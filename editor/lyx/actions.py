@@ -9,19 +9,21 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-j = "--enable-qt5 \
+j = "PYTHON=/usr/bin/python3 \
+     --enable-qt5 \
      --enable-build-type=release \
      --disable-rpath \
      --disable-stdlib-debug \
      --with-enchant \
      --with-hunspell \
+     --without-included-zlib \
      --without-included-boost \
+     --without-included-iconv \
      --without-included-mythes \
+     --without-included-hunspell \
     "
 
 def setup():
-	shelltools.export("PYTHON", "/usr/bin/python3")
-#	autotools.autoreconf("-fi")
 	autotools.configure(j)
 
 def build():
@@ -30,5 +32,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("ANNOUNCE", "NEWS", "README", "UPGRADING")
+	pisitools.dodoc("ANNOUNCE", "README")
 

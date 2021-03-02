@@ -38,9 +38,9 @@
 
 	<Package>
 		<Name>libfm</Name>
-		<Conflicts>
+		<Replaces>
 			<Package>libfm-extra</Package>
-		</Conflicts>
+		</Replaces>
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
 			<Dependency>gtk3</Dependency>
@@ -67,9 +67,9 @@
 
 	<Package>
 		<Name>libfm-devel</Name>
-		<Conflicts>
+		<Replaces>
 			<Package>libfm-extra-devel</Package>
-		</Conflicts>
+		</Replaces>
 		<RuntimeDependencies>
 			<Dependency release="current">libfm</Dependency>
 			<Dependency>gtk3-devel</Dependency>

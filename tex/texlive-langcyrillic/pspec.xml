@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>texlive-langcyrillic</Name>
+		<Homepage>http://www.tug.org/texlive</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>data</IsA>
+		<Summary>TeXLive Cyrillic</Summary>
+		<Description>texlive-lang-cyrillic contains TeXLive Cyrillic scripts.</Description>
+		<Archive sha1sum="fa51f2ed4edfc8974e66325ee9b621d54bedff6a" type="zip">
+			https://sources.archlinux.org/other/texlive/texlive-langcyrillic-2020.56674-src.zip
+		</Archive>
+		<BuildDependencies>
+			<Dependency>texlive-core</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>texlive-langcyrillic</Name>
+		<RuntimeDependencies>
+			<Dependency>texlive-core</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="data">/var/lib/texmf</Path>
+		</Files>
+		<AdditionalFiles>
+			<AdditionalFile owner="root" permission="0644" target="/var/lib/texmf/pisilinux/installedpkgs/texlive-langcyrillic.maps">texlive-langcyrillic.maps</AdditionalFile>
+		</AdditionalFiles>
+		<Provides>
+			<COMAR script="package.py">System.Package</COMAR>
+		</Provides>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-03-07</Date>
+			<Version>2020.56674</Version>
+			<Comment>First Beta release.</Comment>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Update>
+	</History>
+</PISI>

@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>texlive-latexextra</Name>
+        <Homepage>https://www.tug.org/texlive</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data:doc</IsA>
+        <Summary>TeXLive LaTeX supplementary packages</Summary>
+        <Description>texlive-latexextra is TeXLive LaTeX supplementary packages.</Description>
+        <Archive sha1sum="37a27b0f820e717c1745d2fd273d1f53b9b3298a" type="zip">
+            https://sources.archlinux.org/other/texlive/texlive-latexextra-2020.57067-src.zip
+        </Archive>
+        <BuildDependencies>
+            <Dependency>texlive-core</Dependency>
+            <Dependency>perl-File-Which</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>texlive-latexextra</Name>
+        <RuntimeDependencies>
+            <!-- <Dependency>jdk8-openjdk</Dependency> -->
+            <Dependency>texlive-core</Dependency>
+            <Dependency>perl-File-Which</Dependency>
+            <!-- <Dependency>texlive-pictures</Dependency> -->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/var/lib/texmf</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/var/lib/texmf/pisilinux/installedpkgs/texlive-latexextra.maps">texlive-latexextra.maps</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-03-14</Date>
+            <Version>2020.57067</Version>
+            <Comment>First Beta release.</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
+

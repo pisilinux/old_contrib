@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>texlive-formatsextra</Name>
+        <Homepage>https://www.tug.org/texlive</Homepage>
+        <Packager>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <IsA>data:doc</IsA>
+        <Summary>TeXLive Extra Formats</Summary>
+        <Description>texlive-formatsextra copntains TeXLive Extra Formats.</Description>
+        <Archive sha1sum="06e2a11f2544992e9c679d4b198738bfa16d3bab" type="zip">
+            https://sources.archlinux.org/other/texlive/texlive-formatsextra-2020.56699-src.zip
+        </Archive>
+        <BuildDependencies>
+            <Dependency>texlive-core</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>texlive-formatsextra</Name>
+        <RuntimeDependencies>
+            <Dependency>texlive-core</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/var/lib/texmf</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-03-14</Date>
+            <Version>2020.56699</Version>
+            <Comment>First Beta release</Comment>
+            <Name>PisiLinux Community</Name>
+            <Email>admins@pisilinux.org</Email>
+        </Update>
+    </History>
+</PISI>
+

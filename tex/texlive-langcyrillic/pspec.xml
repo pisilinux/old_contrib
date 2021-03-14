@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>texlive-langcyrillic</Name>
-		<Homepage>http://www.tug.org/texlive</Homepage>
+		<Homepage>https://www.tug.org/texlive</Homepage>
 		<Packager>
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>

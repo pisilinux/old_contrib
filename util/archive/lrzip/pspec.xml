@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>lrzip</Name>
-        <Homepage>http://ck.kolivas.org/apps/lrzip/</Homepage>
+        <Homepage>https://github.com/ckolivas/lrzip</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -12,20 +12,22 @@
         <IsA>app:console</IsA>
         <Summary>A (de)compressor optimised for large files</Summary>
         <Description>This is a compression program optimised for large files. The larger the file and the more memory you have, the better the compression advantage this program will provide, especially for files larger than 100MB.</Description>
-        <Archive sha1sum="9c33f6458d39443dbf71b5c66820d4d653daf3c0" type="tarbz2">http://ck.kolivas.org/apps/lrzip/lrzip-0.621.tar.bz2</Archive>
+        <Archive sha1sum="6acaaffb0fda9ed85b29fb774a7e814f5781f6b2" type="tarxz">http://ck.kolivas.org/apps/lrzip/lrzip-0.641.tar.xz</Archive>
         <BuildDependencies>
-            <Dependency>zlib-devel</Dependency>
+            <Dependency>lz4-devel</Dependency>
             <Dependency>lzo-devel</Dependency>
+            <Dependency>zlib-devel</Dependency>
         </BuildDependencies>
     </Source>
 
     <Package>
         <Name>lrzip</Name>
         <RuntimeDependencies>
-            <Dependency>libgcc</Dependency>
-            <Dependency>bzip2</Dependency>
-            <Dependency>zlib</Dependency>
+            <Dependency>lz4</Dependency>
             <Dependency>lzo</Dependency>
+            <Dependency>zlib</Dependency>
+            <Dependency>bzip2</Dependency>
+            <Dependency>libgcc</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -48,6 +50,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2021-03-15</Date>
+            <Version>0.641</Version>
+            <Comment>Version bump.</Comment>
+            <Name>fury</Name>
+            <Email>uglyside@yandex.ru</Email>
+        </Update>
         <Update release="4">
             <Date>2016-04-03</Date>
             <Version>0.621</Version>

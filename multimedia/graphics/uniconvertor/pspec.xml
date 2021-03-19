@@ -15,8 +15,8 @@
 		<Description>
 			UniConvertor is an universal graphics translator. It is a command line tool/library which uses SK2 document object model to convert one file format to another.
 		</Description>
-		<Archive sha1sum="284a275630b548bc2faf0198e804d6526c218530" type="zip">
-			https://github.com/sk1project/uniconvertor/archive/96b7638144849b6e4868405f485fbf54f436727a.zip
+		<Archive sha1sum="fd7d29d2779b221eb2a65e08539f04c94cccb07b" type="tarxz">
+			https://github.com/4fury/sources/raw/master/uniconvertor_ce8693c.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gettext</Dependency>
@@ -46,14 +46,13 @@
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="library">/usr/lib</Path>
-			<!-- <Path fileType="data">/usr/lib/uniconvertor-2.0rc5/LICENSE</Path> -->
 			<Path fileType="doc">/usr/share/doc</Path>
 		</Files>
 	</Package>
 
 	<History>
 		<Update release="2">
-			<Date>2020-10-18</Date>
+			<Date>2021-03-20</Date>
 			<Version>2.0_rc5</Version>
 			<Comment>Rebuild from git.</Comment>
 			<Name>fury</Name>

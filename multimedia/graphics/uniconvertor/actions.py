@@ -7,9 +7,10 @@
 from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
 
+#WorkDir = "."
+
 def setup():
 	pass
-#	shelltools.system("mv setup-uc2.py setup.py")
 
 def build():
 	pythonmodules.compile()

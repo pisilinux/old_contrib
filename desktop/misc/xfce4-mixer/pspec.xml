@@ -54,12 +54,10 @@
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
-			<Path fileType="executable">/usr/libexec</Path>
-			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="library">/usr/lib/xfce4/panel/plugins</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 			<Path fileType="data">/usr/share/pixmaps</Path>
 			<Path fileType="data">/usr/share/applications</Path>
-			<Path fileType="data">/usr/share/xfce4-mixer</Path>
 			<Path fileType="data">/usr/share/xfce4</Path>
 			<Path fileType="doc">/usr/share/doc</Path>
 			<Path fileType="man">/usr/share/man</Path>

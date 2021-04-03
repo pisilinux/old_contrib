@@ -8,11 +8,10 @@ from pisi.actionsapi import pythonmodules
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 
+#WorkDir = "."
+
 def setup():
-	# fix permissions.
-	shelltools.system("chmod 644 src/sk1\.*")
-	shelltools.system("chmod 644 LICENSE")
-#	pass
+	pass
 
 def build():
 	pythonmodules.compile()
@@ -20,5 +19,5 @@ def build():
 def install():
 	pythonmodules.install()
 
-	pisitools.dodoc("LICENSE")
+#	pisitools.dodoc("LICENSE")
 

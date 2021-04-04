@@ -23,12 +23,14 @@
 			<Dependency>gnutls-devel</Dependency>
 			<Dependency>dbus-python3</Dependency>
 			<Dependency>python3-devel</Dependency>
+			<Dependency>python3-wheel</Dependency>
 			<Dependency>gettext-devel</Dependency>
 			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>python3-psutil</Dependency>
 			<Dependency>dbus-glib-devel</Dependency>
 			<Dependency>keybinder-devel</Dependency>
 			<Dependency>python3-setuptools</Dependency>
+			<Dependency>python3-pytest-runner</Dependency>
 			<Dependency>python3-pygobject3-devel</Dependency>
 			<Dependency>gsettings-desktop-schemas-devel</Dependency>
 		</BuildDependencies>

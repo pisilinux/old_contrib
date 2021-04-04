@@ -13,8 +13,8 @@
 		<PartOf>x11.terminal</PartOf>
 		<Summary>Multiple terminals in one window.</Summary>
 		<Description>In April of 2020 we started moving Terminator to GitHub. A new team wanted to continue the work of the original authors.</Description>
-		<Archive sha1sum="3bee5a467ddc6f6591b81fae3fbb33a9cd70a9c7" type="targz">
-			https://github.com/gnome-terminator/terminator/releases/download/v2.1.0/terminator-2.1.0.tar.gz
+		<Archive sha1sum="c33d2970e5c1e443530d0e1ec0d46e84d4330835" type="targz">
+			https://github.com/gnome-terminator/terminator/releases/download/v2.1.1/terminator-2.1.1.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>intltool</Dependency>
@@ -60,6 +60,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-04-04</Date>
+			<Version>2.1.1</Version>
+			<Comment>Version bump</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="1">
 			<Date>2021-01-18</Date>
 			<Version>2.1.0</Version>

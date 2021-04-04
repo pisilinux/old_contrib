@@ -10,7 +10,7 @@ from pisi.actionsapi import pisitools
 
 def setup():
 	shelltools.system("find . -type f -exec sed -i 's/env\ python$/env python3/g' {} \;")
-#	pass
+	pisitools.dosed("setup.py", "gtk-update", "gtk3-update")
 
 def build():
 	pythonmodules.compile(pyVer = '3')

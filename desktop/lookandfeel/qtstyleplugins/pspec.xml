@@ -20,6 +20,10 @@
 			<Dependency>gtk2-devel</Dependency>
 			<Dependency>qt5-base-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">0001-fix-build-against-Qt-5.15.patch</Patch>
+			<Patch level="1">0002-fix-gtk2-background.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>

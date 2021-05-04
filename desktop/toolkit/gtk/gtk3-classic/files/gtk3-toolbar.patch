@@ -1,0 +1,15 @@
+--- gtk3-3.22.29/gtk/gtktoolbar.c.orig	2018-04-11 16:56:32.968605978 +0300
++++ gtk3-3.22.29/gtk/gtktoolbar.c	2018-04-11 16:57:57.640367323 +0300
+@@ -102,9 +102,9 @@
+ #define SPACE_LINE_START    2.0
+ #define SPACE_LINE_END      8.0
+ 
+-#define DEFAULT_ICON_SIZE GTK_ICON_SIZE_LARGE_TOOLBAR
+-#define DEFAULT_TOOLBAR_STYLE GTK_TOOLBAR_BOTH_HORIZ
+-#define DEFAULT_ANIMATION_STATE TRUE
++#define DEFAULT_ICON_SIZE GTK_ICON_SIZE_SMALL_TOOLBAR
++#define DEFAULT_TOOLBAR_STYLE GTK_TOOLBAR_ICONS
++#define DEFAULT_ANIMATION_STATE FALSE
+ 
+ #define MAX_HOMOGENEOUS_N_CHARS 13 /* Items that are wider than this do not participate
+ 				    * in the homogeneous game. In units of

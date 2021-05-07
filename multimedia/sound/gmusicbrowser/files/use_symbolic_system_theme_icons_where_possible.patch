@@ -1,0 +1,2727 @@
+From eeab4d25b67e73962340730d62a9cb2f404d5c08 Mon Sep 17 00:00:00 2001
+From: Darin <newhoa@protonmail.com>
+Date: Sun, 21 Jun 2020 12:20:28 -0400
+Subject: [PATCH 1/9] Gmusicbrowser now uses more symbolic system theme icons where possible.
+
+---
+ gmusicbrowser_layout.pm | 104 ++++++++++++++++++++--------------------
+ gmusicbrowser_list.pm   |  54 ++++++++++-----------
+ gmusicbrowser_songs.pm  |   2 +-
+ gmusicbrowser_tags.pm   |   6 +--
+ layouts/contrib.layout  |  54 ++++++++++-----------
+ layouts/pages.layout    |  10 ++--
+ plugins/albuminfo.pm    |  12 ++---
+ plugins/lyrics.pm       |   8 ++--
+ 9 files changed, 175 insertions(+), 175 deletions(-)
+
+diff --git a/gmusicbrowser_layout.pm b/gmusicbrowser_layout.pm
+index aacebc71..5c907cdb 100644
+--- a/gmusicbrowser_layout.pm
++++ b/gmusicbrowser_layout.pm
+@@ -49,20 +49,20 @@ our @MenuQueue=
+ );
+ 
+ our @MainMenu=
+-(	{label => _"Add files or folders",code => sub {::ChooseAddPath(0,1)},	stockicon => 'gtk-add' },
+-	{label => _"Settings",		code => 'OpenPref',	stockicon => 'gtk-preferences' },
+-	{label => _"Open Browser",	code => \&::OpenBrowser,stockicon => 'gmb-playlist' },
+-	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'gtk-info'},
+-	{label => _"Switch to fullscreen mode",code => \&::ToggleFullscreenLayout, stockicon => 'gtk-fullscreen'},
+-	{label => _"About",		code => \&::AboutDialog,stockicon => 'gtk-about' },
+-	{label => _"Quit",		code => \&::Quit,	stockicon => 'gtk-quit' },
++(	{label => _"Add files or folders",code => sub {::ChooseAddPath(0,1)},	stockicon => 'list-add-symbolic' },
++	{label => _"Settings",		code => 'OpenPref',	stockicon => 'preferences-system-symbolic' },
++	{label => _"Open Browser",	code => \&::OpenBrowser,stockicon => 'application-add-symbolic' },
++	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'help-info-symbolic'},
++	{label => _"Switch to fullscreen mode",code => \&::ToggleFullscreenLayout, stockicon => 'view-fullscreen-symbolic'},
++	{label => _"About",		code => \&::AboutDialog,stockicon => 'help-about-symbolic' },
++	{label => _"Quit",		code => \&::Quit,	stockicon => 'window-close-symbolic' },
+ );
+ 
+ our %Widgets=
+ (	Prev =>
+ 	{	class	=> 'Layout::Button',
+ 		#size	=> SIZE_BUTTONS,
+-		stock	=> 'gtk-media-previous',
++		stock	=> 'media-skip-backward-symbolic',
+ 		tip	=> _"Recently played songs",
+ 		text	=> _"Previous",
+ 		group	=> 'Recent',
+@@ -73,7 +73,7 @@ our %Widgets=
+ 	},
+ 	Stop =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gtk-media-stop',
++		stock	=> 'media-playback-stop-symbolic',
+ 		tip	=> _"Stop",
+ 		activate=> \&::Stop,
+ 		click2	=> 'EnqueueAction(stop)',
+@@ -82,7 +82,7 @@ our %Widgets=
+ 	Play =>
+ 	{	class	=> 'Layout::Button',
+ 		state	=> sub {$::TogPlay? 'pause' : 'play'},
+-		stock	=> {pause => 'gtk-media-pause', play => 'gtk-media-play' },
++		stock	=> {pause => 'media-playback-pause-symbolic', play => 'media-playback-start-symbolic' },
+ 		tip	=> sub {$::TogPlay? _"Pause" : _"Play"},
+ 		activate=> \&::PlayPause,
+ 		click3	=> 'Stop',
+@@ -90,7 +90,7 @@ our %Widgets=
+ 	},
+ 	Next =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gtk-media-next',
++		stock	=> 'media-skip-forward-symbolic',
+ 		tip	=> _"Next Song",
+ 		text	=> _"Next",
+ 		group	=> 'Next',
+@@ -103,7 +103,7 @@ our %Widgets=
+ 	{	class	=> 'Layout::Button',
+ 		oldopt1 => 'toggle',
+ 		options => 'toggle',
+-		stock	=> 'gmb-playlist',
++		stock	=> 'application-add-symbolic',
+ 		tip	=> _"Open Browser window",
+ 		activate=> sub { ::OpenSpecialWindow('Browser',$_[0]{toggle}); },
+ 		click3	=> sub { ::OpenSpecialWindow('Browser'); },
+@@ -112,21 +112,21 @@ our %Widgets=
+ 	{	class	=> 'Layout::Button',
+ 		oldopt1 => 'toggle',
+ 		options => 'toggle',
+-		stock	=> 'gtk-info',
++		stock	=> 'help-info-symbolic',
+ 		tip	=> _"Open Context window",
+ 		activate=> sub { ::OpenSpecialWindow('Context',$_[0]{toggle}); },
+ 		click3	=> sub { ::OpenSpecialWindow('Context'); },
+ 	},
+ 	OpenQueue	=>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gmb-queue-window',
++		stock	=> 'view-list-symbolic',
+ 		tip	=> _"Open Queue window",
+ 		options => 'toggle',
+ 		activate=> sub { ::OpenSpecialWindow('Queue',$_[0]{toggle}); },
+ 	},
+ 	Pref =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gtk-preferences',
++		stock	=> 'preferences-system-symbolic',
+ 		tip	=> _"Edit Settings",
+ 		text	=> _"Settings",
+ 		activate=> 'OpenPref',
+@@ -135,7 +135,7 @@ our %Widgets=
+ 	},
+ 	Quit =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gtk-quit',
++		stock	=> 'application-exit',
+ 		tip	=> _"Quit",
+ 		activate=> \&::Quit,
+ 		click2	=> 'EnqueueAction(quit)',
+@@ -148,7 +148,7 @@ our %Widgets=
+ 		options	=> 'field',
+ 		field	=> 'fullfilename',	#default field to make sure it's defined
+ 		state	=> sub { ($::TogLock && $::TogLock eq $_[0]{field})? 'on' : 'off' },
+-		stock	=> { on => 'gmb-lock', off => '. gmb-locklight' },
++		stock	=> { on => 'channel-secure-symbolic', off => '. channel-secure-symbolic' },
+ 		tip	=> sub { ::__x(_"Lock on {field}", field=> Songs::FieldName($_[0]{field})) },
+ 		click1	=> sub {::ToggleLock($_[0]{field});},
+ 		event	=> 'Lock',
+@@ -175,7 +175,7 @@ our %Widgets=
+ 		button	=> 0,
+ 		size	=> SIZE_FLAGS,
+ 		state	=> sub { my $s=$::Options{'Sort'};($s=~m/^random:/)? 'random' : ($s eq 'shuffle')? 'shuffle' : 'sorted'; },
+-		stock	=> { random => 'gmb-random', shuffle => 'gmb-shuffle', sorted => 'gtk-sort-ascending' },
++		stock	=> { random => 'view-grid-symbolic', shuffle => 'media-playlist-shuffle-symbolic', sorted => 'media-playlist-consecutive-symbolic' },
+ 		tip	=> sub { _("Play order") ." :\n". ::ExplainSort($::Options{Sort}); },
+ 		text	=> sub { ::ExplainSort($::Options{Sort},1); },
+ 		click1	=> 'MenuPlayOrder',
+@@ -188,7 +188,7 @@ our %Widgets=
+ 		size	=> SIZE_FLAGS,
+ 		state	=> sub { defined $::ListMode ? 'list'
+ 			: $::SelectedFilter->is_empty ? 'library' : 'filter'; },
+-		stock	=> { list => 'gmb-list', library => 'gmb-library', filter => 'gmb-filter' },
++		stock	=> { list => 'view-filter-symbolic', library => 'view-filter-symbolic', filter => 'view-filter-symbolic' },
+ 		tip	=> sub
+ 			{ defined $::ListMode	? _"static list"
+ 						: _("Playlist filter :\n").$::SelectedFilter->explain;
+@@ -207,8 +207,8 @@ our %Widgets=
+ 				  $::QueueAction? $::QueueAction :
+ 						 'noqueue'
+ 				},
+-		stock	=> sub  {$_[0] eq 'queue'  ?	'gmb-queue' :
+-				 $_[0] eq 'noqueue'?	'. gmb-queue' :
++		stock	=> sub  {$_[0] eq 'queue'  ?	'format-indent-more-symbolic' :
++				 $_[0] eq 'noqueue'?	'format-indent-more-symbolic' :
+ 							$::QActions{$_[0]}{icon} ;
+ 				},
+ 		tip	=> sub { if ($::NextAction) { return $::QActions{$::NextAction}{long_next} }
+@@ -424,13 +424,13 @@ our %Widgets=
+ 	QueueList =>
+ 	{	New	=> sub { $_[0]{type}='Q'; SongList::Common->new($_[0]); },
+ 		tabtitle=> _"Queue",
+-		tabicon	=> 'gmb-queue',
++		tabicon	=> 'format-indent-more-symbolic',
+ 		issonglist=>1,
+ 	},
+ 	PlayList =>
+ 	{	New	=> sub { $_[0]{type}='A'; SongList::Common->new($_[0]); },
+ 		tabtitle=> _"Playlist",
+-		tabicon	=> 'gtk-media-play',
++		tabicon	=> 'media-playback-play-symbolic',
+ 		issonglist=>1,
+ 	},
+ 	SongList =>
+@@ -446,7 +446,7 @@ our %Widgets=
+ 	{	New 	=> sub { $_[0]{type}='L'; SongList::Common->new($_[0]); },
+ 		tabtitle=> \&SongList::Common::MakeTitleLabel,
+ 		tabrename=>\&SongList::Common::RenameTitleLabel,
+-		tabicon	=> 'gmb-list',
++		tabicon	=> 'view-list-symbolic',
+ 		issonglist=>1,
+ 	},
+ 	TabbedLists =>
+@@ -470,7 +470,7 @@ our %Widgets=
+ 		group	=> 'Play',
+ 		expander=> 1,
+ 		hide_empty => 1,
+-		tabicon	=> 'gtk-info',
++		tabicon	=> 'help-info-symbolic',
+ 		tabtitle=> _"Song informations",
+ 	},
+ 	PictureBrowser=>
+@@ -493,7 +493,7 @@ our %Widgets=
+ 		nowrap	=> 0,
+ 		schange	=> \&Layout::PictureBrowser::queue_song_changed,
+ 		autoadd_type	=> 'context page pictures',
+-		tabicon		=> 'gmb-picture',
++		tabicon		=> 'folder-pictures-symbolic',
+ 		tabtitle	=> _"Album pictures",
+ 	},
+ 	AABox	=>
+@@ -573,14 +573,14 @@ our %Widgets=
+ 	Refresh =>
+ 	{	class	=> 'Layout::Button',
+ 		size	=> 'menu',
+-		stock	=> 'gtk-refresh',
++		stock	=> 'view-refresh-symbolic',
+ 		tip	=> _"Refresh list",
+ 		activate=> sub { ::RefreshFilters($_[0]); },
+ 	},
+ 	PlayFilter =>
+ 	{	class	=> 'Layout::Button',
+ 		size	=> 'menu',
+-		stock	=> 'gtk-media-play',
++		stock	=> 'view-filter-symbolic',
+ 		tip	=> _"Play filter",
+ 		activate=> sub { ::Select( filter => ::GetFilter($_[0]), song=> 'trykeep', play =>1 ); },
+ 		click2	=> sub { ::EnqueueFilter( ::GetFilter($_[0]) ); },
+@@ -588,14 +588,14 @@ our %Widgets=
+ 	QueueFilter =>
+ 	{	class	=> 'Layout::Button',
+ 		size	=> 'menu',
+-		stock	=> 'gmb-queue',
++		stock	=> 'view-list-symbolic',
+ 		tip	=> _"Enqueue filter",
+ 		activate=> sub { ::EnqueueFilter( ::GetFilter($_[0]) ); },
+ 	},
+ 	ResetFilter =>
+ 	{	class	=> 'Layout::Button',
+ 		size	=> 'menu',
+-		stock	=> 'gtk-clear',
++		stock	=> 'edit-clear-symbolic',
+ 		tip	=> _"Reset filter",
+ 		activate=> sub { ::SetFilter($_[0],undef); },
+ 	},
+@@ -611,13 +611,13 @@ our %Widgets=
+ 	},
+ 	Choose =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gtk-add',
++		stock	=> 'list-add-symbolic',
+ 		tip	=> _"Choose Artist/Album/Song",
+ 		activate=> sub { Layout::Window->new('Search'); },
+ 	},
+ 	ChooseRandAlbum =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gmb-random-album',
++		stock	=> 'media-playlist-shuffle-symbolic',
+ 		tip	=> _"Choose Random Album",
+ 		options => 'action',
+ 		activate=> sub { my $al=AA::GetAAList('album'); my $r=int rand(@$al); my $key=$al->[$r]; my $list=AA::GetIDs('album',$key); if (my $ac=$_[0]{action}) { ::DoActionForList($ac,$list); } else { my $ID=::FindFirstInListPlay($list); ::Select( song => $ID)}; },
+@@ -656,7 +656,7 @@ our %Widgets=
+ 	},
+ 	ShuffleList	=>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gmb-shuffle',
++		stock	=> 'media-playlist-shuffle-symbolic',
+ 		size	=> SIZE_FLAGS,
+ 		tip	=> _"Shuffle list",
+ 		activate=> sub { my $songarray= ::GetSongArray($_[0]) || return; $songarray->Shuffle; },
+@@ -666,7 +666,7 @@ our %Widgets=
+ 	},
+ 	EmptyList	=>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gtk-clear',
++		stock	=> 'edit-clear-symbolic',
+ 		size	=> SIZE_FLAGS,
+ 		tip	=> _"Empty list",
+ 		activate=> sub { my $songarray= ::GetSongArray($_[0]) || return; $songarray->Replace(); },
+@@ -682,7 +682,7 @@ our %Widgets=
+ 	},
+ 	Fullscreen	=>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'gtk-fullscreen',
++		stock	=> 'view-fullscreen-symbolic',
+ 		tip	=> _"Toggle fullscreen mode",
+ 		text	=> _"Fullscreen",
+ 		activate=> \&::ToggleFullscreenLayout,
+@@ -2455,10 +2455,10 @@ package Layout::NoteBook;
+ use base 'Gtk3::Notebook';
+ 
+ our @contextmenu=
+-(	{ label => _"New list",		code => sub { $_[0]{self}->newtab('EditList',1,{songarray=>''}); },	type=> 'L', stockicon => 'gtk-add', },
+-	{ label => _"Open Queue",	code => sub { $_[0]{self}->newtab('QueueList',1); },			type=> 'L', stockicon => 'gmb-queue',
++(	{ label => _"New list",		code => sub { $_[0]{self}->newtab('EditList',1,{songarray=>''}); },	type=> 'L', stockicon => 'list-add-symbolic', },
++	{ label => _"Open Queue",	code => sub { $_[0]{self}->newtab('QueueList',1); },			type=> 'L', stockicon => 'view-list-symbolic',
+ 		test => sub { !grep $_->{name} eq 'QueueList', $_[0]{self}->get_children } },
+-	{ label => _"Open Playlist",	code => sub { $_[0]{self}->newtab('PlayList',1); },			type=> 'L', stockicon => 'gtk-media-play',
++	{ label => _"Open Playlist",	code => sub { $_[0]{self}->newtab('PlayList',1); },			type=> 'L', stockicon => 'media-playback-play-symbolic',
+ 		test => sub { !grep $_->{name} eq 'PlayList', $_[0]{self}->get_children } },
+ 	{ label => _"Open existing list", code => sub { $_[0]{self}->newtab('EditList',1, {songarray=>$_[1]}); },	type=> 'L',
+ 		submenu => sub { my %h; $h{ $_->{array}->GetName }=1 for grep $_->{name}=~m/^EditList\d*$/, $_[0]{self}->get_children; return [grep !$h{$_}, ::GetListOfSavedLists()]; } },
+@@ -2470,7 +2470,7 @@ our @contextmenu=
+ 	},
+ 	{ label => _"Delete list", code => sub { $_[0]{page}->DeleteList; },	type=> 'L',  istrue=>'page',	test => sub { $_[0]{page}{name}=~m/^EditList\d*$/; } },
+ 	{ label => _"Rename",	code => \&pagerename_cb,				istrue => 'rename',},
+-	{ label => _"Close",	code => sub { $_[0]{self}->close_tab($_[0]{page},1); },	istrue => 'close',	stockicon=> 'gtk-close',},
++	{ label => _"Close",	code => sub { $_[0]{self}->close_tab($_[0]{page},1); },	istrue => 'close',	stockicon=> 'application-exit-symbolic',},
+ );
+ 
+ our @DefaultOptions=
+@@ -2511,7 +2511,7 @@ sub new
+ 	{	$self->{blacklist}{$_}=undef for split / +/, $bl;
+ 	}
+ 	if ($opt->{typesubmenu} && $opt->{newbutton} && $opt->{newbutton} ne 'none') # add a button next to the tabs to show new-tab menu
+-	{	my $button= ::NewIconButton('gtk-add');
++	{	my $button= ::NewIconButton('tab-new-symbolic');
+ 		$button->signal_connect(button_press_event => \&newbutton_cb);
+ 		$button->signal_connect(clicked => \&newbutton_cb);
+ 		$button->show_all;
+@@ -2615,7 +2615,7 @@ sub Pack
+ 		$close->set_can_focus(0);
+ 		::weaken( $close->{page}=$wg );
+ 		$close->signal_connect(clicked => sub {my $page=$_[0]{page}; my $self=$page->get_parent; $self->close_tab($page,1);});
+-		$close->add(Gtk3::Image->new_from_file(::PIXPATH.'smallclosetab.png'));
++		$close->add(Gtk3::Image->new_from_stock('close-symbolic','menu'));
+ 	}
+ 	my $tab= Gtk3::Box->new( ($angle%180 ? 'vertical' : 'horizontal'),0 );
+ 	my @icons= $angle%180 ? ($close,0,$icon,4) : ($icon,4,$close,0);
+@@ -4117,17 +4117,17 @@ package Layout::PictureBrowser;
+ use base 'Gtk3::Box';
+ 
+ our @toolbar=
+-(	{ stockicon=> 'gmb-view-list',	label=>_"Show file list",  toggleoption=>'self/show_list',  cb=> sub { $_[0]{self}->update_showhide; }, },
+-	{ stockicon=> 'gtk-zoom-in',	label=>_"Zoom in",	cb=> sub { $_[0]{view}->change_zoom('+'); },	},
+-	{ stockicon=> 'gtk-zoom-out',	label=>_"Zoom out",	cb=> sub { $_[0]{view}->change_zoom('-'); },	},
+-	{ stockicon=> 'gtk-zoom-100',	label=>_"Zoom 1:1",	cb=> sub { $_[0]{view}->change_zoom(1); },	},
+-	{ stockicon=> 'gtk-zoom-fit',	label=>_"Zoom to fit",	cb=> sub { $_[0]{view}->set_zoom_fit; },	},
+-	{ stockicon=> 'gtk-fullscreen',	label=>_"Fullscreen",	cb=> sub { $_[0]{view}->set_fullscreen(1); },	},
+-#	{ stockicon=> 'gtk-go-back',	label=>_"Previous picture",		cb=> sub { $_[0]{self}->change_file(-1); },	},
+-#	{ stockicon=> 'gtk-go-forward',	label=>_"Next picture",			cb=> sub { $_[0]{self}->change_file(1); },	},
+-#	{ stockicon=> 'gtk-',		label=>_"Rotate clockwise",		cb=> sub { $_[0]{view}->rotate(1); },	},
+-#	{ stockicon=> 'gtk-',		label=>_"Rotate counterclockwise",	cb=> sub { $_[0]{view}->rotate(-1); },	},
+-	{ stockicon=> 'gtk-jump-to',	label=> sub { $_[0]{self}{group} eq 'Play' ? _"Follow playing song" : _"Follow selected song"; },
++(	{ stockicon=> 'view-list-symbolic',		label=>_"Show file list",  toggleoption=>'self/show_list',  cb=> sub { $_[0]{self}->update_showhide; }, },
++	{ stockicon=> 'zoom-in-symbolic',		label=>_"Zoom in",	cb=> sub { $_[0]{view}->change_zoom('+'); },	},
++	{ stockicon=> 'zoom-out-symbolic',		label=>_"Zoom out",	cb=> sub { $_[0]{view}->change_zoom('-'); },	},
++	{ stockicon=> 'zoom-original-symbolic',		label=>_"Zoom 1:1",	cb=> sub { $_[0]{view}->change_zoom(1); },	},
++	{ stockicon=> 'zoom-fit-best-symbolic',		label=>_"Zoom to fit",	cb=> sub { $_[0]{view}->set_zoom_fit; },	},
++	{ stockicon=> 'view-fullscreen-symbolic',	label=>_"Fullscreen",	cb=> sub { $_[0]{view}->set_fullscreen(1); },	},
++#	{ stockicon=> 'go-last-symbolic',		label=>_"Previous picture",		cb=> sub { $_[0]{self}->change_file(-1); },	},
++#	{ stockicon=> 'go-next-symbolic',		label=>_"Next picture",			cb=> sub { $_[0]{self}->change_file(1); },	},
++#	{ stockicon=> 'object-rotate-right-symbolic',	label=>_"Rotate clockwise",		cb=> sub { $_[0]{view}->rotate(1); },	},
++#	{ stockicon=> 'object-rotate-left-symbolic',	label=>_"Rotate counterclockwise",	cb=> sub { $_[0]{view}->rotate(-1); },	},
++	{ stockicon=> 'go-jump-symbolic',		label=> sub { $_[0]{self}{group} eq 'Play' ? _"Follow playing song" : _"Follow selected song"; },
+ 	  toggleoption=>'self/follow',	cb=> sub { $_[0]{self}->queue_song_changed; },
+ 	},
+ );
+diff --git a/gmusicbrowser_list.pm b/gmusicbrowser_list.pm
+index 86361853..2503ca2f 100644
+--- a/gmusicbrowser_list.pm
++++ b/gmusicbrowser_list.pm
+@@ -44,7 +44,7 @@ sub makeLockToggle
+ {	my $opt=$_[0];
+ 	my $toggle= Gtk3::ToggleButton->new;
+ 	$toggle->set_relief( $opt->{relief} ) if $opt->{relief};
+-	$toggle->add(Gtk3::Image->new_from_stock('gmb-lock','menu'));
++	$toggle->add(Gtk3::Image->new_from_stock('channel-secure-symbolic','menu'));
+ 	#$toggle->set_active(1) if $self->{Filter0};
+ 	$toggle->signal_connect( clicked =>sub
+ 		{	my $self=$_[0];
+@@ -88,7 +88,7 @@ sub make_sort_menu
+ 	    $menu->append($item);
+ 	}
+ 	my $itemEditSort= Gtk3::ImageMenuItem->new(_"Custom...");
+-	$itemEditSort->set_image( Gtk3::Image->new_from_stock('gtk-preferences','menu') );
++	$itemEditSort->set_image( Gtk3::Image->new_from_stock('preferences-system-symbolic','menu') );
+ 	$itemEditSort->signal_connect (activate => sub
+ 	{	my $sort=::EditSortOrder($selfitem,$songlist->{sort});
+ 		$songlist->Sort($sort) if $sort;
+@@ -283,13 +283,13 @@ sub new
+ 	bless $self, $class;
+ 
+ 	$self->{group}=$opt->{group};
+-	$self->{bshuffle}=::NewIconButton('gmb-shuffle',($opt->{small} ? '' : _"Shuffle"),sub {::GetSongArray($self)->Shuffle});
+-	$self->{brm}=	::NewIconButton('gtk-remove',	($opt->{small} ? '' : _"Remove"),sub {::GetSonglist($self)->RemoveSelected});
+-	$self->{bclear}=::NewIconButton('gtk-clear',	($opt->{small} ? '' : _"Clear"),sub {::GetSonglist($self)->Empty} );
+-	$self->{bup}=	::NewIconButton('gtk-go-up',		undef,	sub {::GetSonglist($self)->MoveUpDown(1)});
+-	$self->{bdown}=	::NewIconButton('gtk-go-down',		undef,	sub {::GetSonglist($self)->MoveUpDown(0)});
+-	$self->{btop}=	::NewIconButton('gtk-goto-top',		undef,	sub {::GetSonglist($self)->MoveUpDown(1,1)});
+-	$self->{bbot}=	::NewIconButton('gtk-goto-bottom',	undef,	sub {::GetSonglist($self)->MoveUpDown(0,1)});
++	$self->{bshuffle}=::NewIconButton('media-playback-shuffle-symbolic',($opt->{small} ? '' : _"Shuffle"),sub {::GetSongArray($self)->Shuffle});
++	$self->{brm}=	::NewIconButton('list-remove-symbolic',	($opt->{small} ? '' : _"Remove"),sub {::GetSonglist($self)->RemoveSelected});
++	$self->{bclear}=::NewIconButton('edit-clear-symbolic',	($opt->{small} ? '' : _"Clear"),sub {::GetSonglist($self)->Empty} );
++	$self->{bup}=	::NewIconButton('go-up-symbolic',		undef,	sub {::GetSonglist($self)->MoveUpDown(1)});
++	$self->{bdown}=	::NewIconButton('go-down-symbolic',		undef,	sub {::GetSonglist($self)->MoveUpDown(0)});
++	$self->{btop}=	::NewIconButton('go-top-symbolic',		undef,	sub {::GetSonglist($self)->MoveUpDown(1,1)});
++	$self->{bbot}=	::NewIconButton('go-bottom-symbolic',	undef,	sub {::GetSonglist($self)->MoveUpDown(0,1)});
+ 
+ 	$self->{brm}->set_tooltip_text(_"Remove selected songs");
+ 	$self->{bclear}->set_tooltip_text(_"Remove all songs");
+@@ -1706,7 +1706,7 @@ our @cMenu=
+ 		isdefined => 'filter',	stockicon => 'gtk-add',	id => 'addplay',
+ 	},
+ 	{ label=> _"Enqueue",	code => sub { ::EnqueueFilter($_[0]{filter}); },
+-		isdefined => 'filter',	stockicon => 'gmb-queue',	id => 'enqueue',
++		isdefined => 'filter',	stockicon => 'format-indent-more-symbolic',	id => 'enqueue',
+ 	},
+ 	{ label=> _"Set as primary filter",
+ 		code => sub {my $fp=$_[0]{filterpane}; ::SetFilter( $_[0]{self}, $_[0]{filter}, 1, $fp->{group} ); },
+@@ -1724,15 +1724,15 @@ our @cMenu=
+ 		notempty => 'rawpathlist' },
+ 	{ label=> _"Check for updated/removed songs", code => sub { ::IdleCheck(  @{ $_[0]{filter}->filter } ); },
+ 		isdefined => 'filter', stockicon => 'gtk-refresh', istrue => 'pathlist' }, #doesn't really need pathlist, but makes less sense for non-folder pages
+-	{ label=> _"Set Picture",	stockicon => 'gmb-picture',
++	{ label=> _"Set Picture",	stockicon => 'folder-pictures-symbolic',
+ 		code => sub { my $gid=$_[0]{gidlist}[0]; ::ChooseAAPicture(undef,$_[0]{field},$gid); },
+ 		onlyone=> 'gidlist',	test => sub { Songs::FilterListProp($_[0]{field},'picture') && $_[0]{gidlist}[0]>0; },
+ 	},
+ 	{ label => _"Auto-select Pictures",	code => sub { ::AutoSelPictures( $_[0]{field}, @{ $_[0]{gidlist} } ); },
+ 		onlymany=> 'gidlist',	test => sub { $_[0]{field} eq 'album' }, #test => sub { Songs::FilterListProp($_[0]{field},'picture'); },
+-		stockicon => 'gmb-picture',
++		stockicon => 'folder-pictures-symbolic',
+ 	},
+-	{ label=> _"Set icon",		stockicon => 'gmb-picture',
++	{ label=> _"Set icon",		stockicon => 'folder-pictures-symbolic',
+ 		code => sub { my $gid=$_[0]{gidlist}[0]; Songs::ChooseIcon($_[0]{field},$gid); },
+ 		onlyone=> 'gidlist',	test => sub { Songs::FilterListProp($_[0]{field},'icon') && $_[0]{gidlist}[0]>0; },
+ 	},
+@@ -1786,8 +1786,8 @@ sub new
+ 	$InterB->add($InterBL);
+ 	my $InvertB= Gtk3::ToggleButton->new;
+ 	my $optB= Gtk3::Button->new;
+-	$InvertB->add(Gtk3::Image->new_from_stock('gmb-invert','menu'));
+-	$optB->add(Gtk3::Image->new_from_stock('gtk-preferences','menu'));
++	$InvertB->add(Gtk3::Image->new_from_stock('media-playlist-repeat-symbolic','menu'));
++	$optB->add(Gtk3::Image->new_from_stock('view-filter-symbolic','menu'));
+ 	$InvertB->signal_connect( toggled => sub {$self->{invert}=$_[0]->get_active;} );
+ 	$InterB->signal_connect(  toggled => sub {$self->{inter} =$_[0]->get_active;} );
+ 	$optB->signal_connect( button_press_event => \&PopupOpt );
+@@ -3063,9 +3063,9 @@ INIT
+   );
+ 
+   %Modes=
+-  (	F => [_"Saved filters",	'sfilter',	'SavedFilters',	\&UpdateSavedFilters,	'gmb-filter'	,\&::SaveFilter, 'filter000'],
+-	L => [_"Saved lists",	'slist',	'SavedLists',	\&UpdateSavedLists,	'gmb-list'	,\&::SaveList, 'list000'],
+-	P => [_"Playing",	'play',		undef,		\&UpdatePlayingFilters,	'gtk-media-play'	],
++  (	F => [_"Saved filters",	'sfilter',	'SavedFilters',	\&UpdateSavedFilters,	'view-filter-symbolic'	,\&::SaveFilter, 'filter000'],
++	L => [_"Saved lists",	'slist',	'SavedLists',	\&UpdateSavedLists,	'view-list-symbolic'	,\&::SaveList, 'list000'],
++	P => [_"Playing",	'play',		undef,		\&UpdatePlayingFilters,	'media-playback-start-symbolic'	],
+   );
+ }
+ 
+@@ -3381,8 +3381,8 @@ sub new
+ 	$img->signal_connect(button_press_event => \&GMB::Picture::pixbox_button_press_cb,1); # 1 : mouse button 1
+ 
+ 	my $buttonbox= Gtk3::VBox->new;
+-	my $Bfilter=::NewIconButton('gmb-filter',undef,sub { my $self= $_[0]->GET_ancestor; $self->filter },'none');
+-	my $Bplay=::NewIconButton('gtk-media-play',undef,sub
++	my $Bfilter=::NewIconButton('view-filter-symbolic',undef,sub { my $self= $_[0]->GET_ancestor; $self->filter },'none');
++	my $Bplay=::NewIconButton('media-playback-start-symbolic',undef,sub
+ 		{	my $self= $_[0]->GET_ancestor;
+ 			return unless defined $self->{SelID};
+ 			my $filter=Songs::MakeFilterFromGID($self->{aa},$self->{Sel});
+@@ -3407,7 +3407,7 @@ sub new
+ 	{	$self->{'index'}=0;
+ 		$self->signal_connect(scroll_event => \&AABox_scroll_event_cb);
+ 		$self->add_events(['scroll-mask']);
+-		my $BAlblist=::NewIconButton('gmb-playlist',undef,undef,'none');
++		my $BAlblist=::NewIconButton('media-optical-symbolic',undef,undef,'none');
+ 		$BAlblist->signal_connect(button_press_event => \&AlbumListButton_press_cb);
+ 		$BAlblist->set_tooltip_text(_"Choose Album From this Artist");
+ 		$buttonbox->pack_start($BAlblist, ::FALSE, ::FALSE, 0);
+@@ -4100,9 +4100,9 @@ sub new
+ 	$self->pack_start($songlist, ::TRUE,::TRUE,0);
+ 	if ($opt->{buttons})
+ 	{	my $hbox2= Gtk3::HBox->new;
+-		my $Bqueue=::NewIconButton('gmb-queue',		_"Enqueue",	sub { $songlist->EnqueueSelected; });
+-		my $Bplay= ::NewIconButton('gtk-media-play',	_"Play",	sub { $songlist->PlaySelected; });
+-		my $Bclose=::NewIconButton('gtk-close',		_"Close",	sub {$self->get_toplevel->close_window});
++		my $Bqueue=::NewIconButton('format-indent-more-symbolic',		_"Enqueue",	sub { $songlist->EnqueueSelected; });
++		my $Bplay= ::NewIconButton('media-playback-start-symbolic',	_"Play",	sub { $songlist->PlaySelected; });
++		my $Bclose=::NewIconButton('close-symbolic',			_"Close",	sub {$self->get_toplevel->close_window});
+ 		$hbox2->pack_end($_, ::FALSE,::FALSE,4) for $Bclose,$Bplay,$Bqueue;
+ 		$self->pack_end($hbox2, ::FALSE,::FALSE,0);
+ 	}
+@@ -4164,9 +4164,9 @@ sub new
+ 	$self->pack_start($sw, ::TRUE,::TRUE,0);
+ 	if ($opt->{buttons})
+ 	{	my $hbox2= Gtk3::HBox->new;
+-		my $Bqueue=::NewIconButton('gmb-queue',     _"Enqueue",	\&Enqueue);
+-		my $Bplay= ::NewIconButton('gtk-media-play',_"Play",	\&Play);
+-		my $Bclose=::NewIconButton('gtk-close',     _"Close",	sub {$self->get_toplevel->close_window});
++		my $Bqueue=::NewIconButton('format-indent-more-symbolic',		_"Enqueue",	\&Enqueue);
++		my $Bplay= ::NewIconButton('media-playback-start-symbolic',	_"Play",	\&Play);
++		my $Bclose=::NewIconButton('clost-symbolic',			_"Close",	sub {$self->get_toplevel->close_window});
+ 		$hbox2->pack_end($_, ::FALSE,::FALSE,4) for $Bclose,$Bplay,$Bqueue;
+ 		$self->pack_end($hbox2, ::FALSE,::FALSE,0);
+ 	}
+diff --git a/gmusicbrowser_songs.pm b/gmusicbrowser_songs.pm
+index 892a7ffd..27ad8438 100644
+--- a/gmusicbrowser_songs.pm
++++ b/gmusicbrowser_songs.pm
+@@ -2838,7 +2838,7 @@ sub PrefFields	#preference dialog for fields
+ 		$treeview->set_cursor($store->get_path($iter));
+ 	    });
+ 
+-	my $newcst=::NewIconButton('gtk-add', _"New custom field", sub
++	my $newcst=::NewIconButton('folder-new-symbolic', _"New custom field", sub
+ 		{	my $iter=$store->append($store->get_iter_from_string($custom_root));
+ 			$store->set($iter,0,'',1,'',2,::TRUE);
+ 			my $path=$store->get_path($iter);
+diff --git a/gmusicbrowser_tags.pm b/gmusicbrowser_tags.pm
+index dc13e55d..cf125e03 100644
+--- a/gmusicbrowser_tags.pm
++++ b/gmusicbrowser_tags.pm
+@@ -767,9 +767,9 @@ sub new
+ 	$self->{check_re}=	my $check_re=	Gtk3::CheckButton->new(_"Use default regular expression");
+ 	$self->{error}=		my $error=	Gtk3::Label->new;
+ 	$self->{preview}=	my $preview=	Gtk3::Label->new;
+-	$self->{remove_button}=	my $button_del= ::NewIconButton('gtk-remove',_"Remove");
+-	$self->{add_button}=	my $button_add= ::NewIconButton('gtk-save',_"Save");
+-	my $button_new= ::NewIconButton('gtk-new', _"New");
++	$self->{remove_button}=	my $button_del= ::NewIconButton('list-remove-symbolic',_"Remove");
++	$self->{add_button}=	my $button_add= ::NewIconButton('document-save-symbolic',_"Save");
++	my $button_new= ::NewIconButton('list-add-symbolic', _"New");
+ 	$button_del->signal_connect(clicked=>\&button_cb,'remove');
+ 	$button_add->signal_connect(clicked=>\&button_cb,'save');
+ 	$button_new->signal_connect(clicked=>\&button_cb,'new');
+diff --git a/layouts/contrib.layout b/layouts/contrib.layout
+index 017941ea..4821d8d6 100644
+--- a/layouts/contrib.layout
++++ b/layouts/contrib.layout
+@@ -258,9 +258,9 @@ group
+ 		-HSeparator2 \
+ 		#-MBLayouts \
+ 		-HSeparator3 \
+-		-Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...") \
+-		-Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+-		-Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now")
++		-Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=folder-new-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...") \
++		-Button2(click1="RunPerlCode(::IdleCheck)",stock=view-refresh-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
++		-Button3(click1="RunPerlCode(::IdleScan)",stock=zoom-in-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"scan now")
+ 
+ 
+ [Garage6]
+@@ -317,9 +317,9 @@ BMSettings	= (icon=gtk-preferences,size="large-toolbar") \
+ 	MenuItem14(command=OpenPref,label=_"Settings",icon="gtk-preferences") \
+ 	MenuItem05(command=Quit,label=_"Quit",icon="gtk-quit")
+ SMLibrary	= (label=_"Library") \
+-	MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="gtk-add") \
+-	MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="gtk-refresh") \
+-	MenuItem33(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="gtk-zoom-in")
++	MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
++	MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-symbolic") \
++	MenuItem33(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="zoom-in-symbolic")
+ 
+ ### main : Filter1, Artist, Songlist, Queue, Context ###
+ HBMain		= VBLeft VBArtist _VBSongStatus VBQueue Context
+@@ -414,9 +414,9 @@ VBMain = HBMenu 1Filler2 _HBMainContainer 1Filler3
+ 
+ 			-Quit(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+ 			-Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
+-			-Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=gtk-add,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...") \
+-			-Button2(click1="RunPerlCode(::IdleCheck)",stock=gtk-refresh,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+-			-Button3(click1="RunPerlCode(::IdleScan)",stock=gtk-zoom-in,size=button,minwidth=34,maxwidth=34,tip=_"scan now")	\
++			-Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=folder-new-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...") \
++			-Button2(click1="RunPerlCode(::IdleCheck)",stock=view-refresh-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
++			-Button3(click1="RunPerlCode(::IdleScan)",stock=zoom-in-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"scan now")	\
+ 			-Queue(size=button,minwidth=34,maxwidth=34)  \
+ 			-10Filter(size=button,minwidth=34,maxwidth=34)  \
+ 			-Sort(size=button,minwidth=34,maxwidth=34) \
+@@ -585,9 +585,9 @@ BMSettings	= (icon=gtk-preferences,size="button") \
+ 	MenuItem12(command=OpenPref,label=_"Settings",icon="gtk-preferences") \
+ 	MenuItem13(command=Quit,label=_"Quit",icon="gtk-quit")
+ SMLibrary	= (label=_"Library") \
+-	MenuItem21(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="gtk-add") \
+-	MenuItem22(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="gtk-refresh") \
+-	MenuItem23(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="gtk-zoom-in")
++	MenuItem21(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
++	MenuItem22(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-symbolic") \
++	MenuItem23(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="zoom-in-symbolic")
+ SMViews = (label="Show/Hide") \
+ 			     MenuItem31(togglewidget=HBLeft,label=_"Library",icon="gmb-library") \
+ 			    MenuItem32(togglewidget=VBQueue,label=_"Queue",icon="gmb-queue") \
+@@ -661,12 +661,12 @@ VBLeft 		= _HPLeft1 HBStatus
+ 		-HBButtomMore1 \
+ 		-HBButtomMore2 \
+ 		-HBButtomMore3
+-    HBButtomLess2 = ToggleButton11(relief=none,togglegroup=40,size=menu,icon=gtk-clear,widget=HBButtomMore1,tip=_"Close a filter")
+-    HBButtomLess3 = ToggleButton12(relief=none,togglegroup=40,size=menu,icon=gtk-clear,widget=HPLeft2|HBButtomMore2|HBButtomLess2,tip=_"Close a filter")
+-    HBButtomLess4 = ToggleButton13(relief=none,togglegroup=40,size=menu,icon=gtk-clear,widget=HPLeft3|HPLeft2|HBButtomMore3|HBButtomLess3,tip=_"Close a filter")
+-    HBButtomMore1 = ToggleButton14(relief=none,togglegroup=40,size=menu,icon=gtk-add,widget=HPLeft2|HBButtomLess2|HBButtomMore2,tip=_"Add a filter")
+-    HBButtomMore2 = ToggleButton15(relief=none,togglegroup=40,size=menu,icon=gtk-add,widget=HPLeft3|HPLeft2|HBButtomLess3|HBButtomMore3,tip=_"Add a filter")
+-    HBButtomMore3 = ToggleButton16(relief=none,togglegroup=40,size=menu,icon=gtk-add,widget=HPLeft3|HPLeft2|VBAlbum|HBButtomLess4,tip=_"Add a filter")
++    HBButtomLess2 = ToggleButton11(relief=none,togglegroup=40,size=menu,icon=edit-clear-symbolic,widget=HBButtomMore1,tip=_"Close a filter")
++    HBButtomLess3 = ToggleButton12(relief=none,togglegroup=40,size=menu,icon=edit-clear-symbolic,widget=HPLeft2|HBButtomMore2|HBButtomLess2,tip=_"Close a filter")
++    HBButtomLess4 = ToggleButton13(relief=none,togglegroup=40,size=menu,icon=edit-clear-symbolic,widget=HPLeft3|HPLeft2|HBButtomMore3|HBButtomLess3,tip=_"Close a filter")
++    HBButtomMore1 = ToggleButton14(relief=none,togglegroup=40,size=menu,icon=folder-new-symbolic,widget=HPLeft2|HBButtomLess2|HBButtomMore2,tip=_"Add a filter")
++    HBButtomMore2 = ToggleButton15(relief=none,togglegroup=40,size=menu,icon=folder-new-symbolic,widget=HPLeft3|HPLeft2|HBButtomLess3|HBButtomMore3,tip=_"Add a filter")
++    HBButtomMore3 = ToggleButton16(relief=none,togglegroup=40,size=menu,icon=folder-new-symbolic,widget=HPLeft3|HPLeft2|VBAlbum|HBButtomLess4,tip=_"Add a filter")
+ #### Library filter
+ VBLibrary 	= ABSearchBox _FilterPane0(nb=2,hidebb=1,hidetabs=0,tabpos=left90,\
+ 		pages=savedtree|folder,\
+@@ -727,18 +727,18 @@ HBTop		=  HBCover VBButtons _15VBPlayer(yalign=0.5) VBSettings(yalign=0.5)
+ 		LayoutItem \
+ 		PlayItem \
+ 		SeparatorMenuItem02 \
+-		MenuItem03(click1=OpenCustom(Equalizer),label=_"Equalizer",icon=gmb-equalizer) \
++		MenuItem03(click1=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) \
+ 		SeparatorMenuItem03 \
+-		MenuItem04(command=OpenPref,label=_"Settings",icon="gtk-preferences")
++		MenuItem04(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic")
+ 	SMLibrary = (label=_"Library") \
+-		MenuItem10(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="gtk-add") \
+-		MenuItem11(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="gtk-refresh") \
+-		MenuItem12(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="gtk-zoom-in")
++		MenuItem10(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
++		MenuItem11(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-sybolic") \
++		MenuItem12(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="zoom-in-symbolic")
+ 
+ #### Right main panel
+ HPRight 	= _VBSongStatus _NBContextMain
+ ##### Library
+-VBSongStatus 	= (tabtitle=_"Library",tabicon="gmb-library") _VBMosaicSongList HBTotal
++VBSongStatus 	= (tabtitle=_"Library",tabicon="application-add-symbolic") _VBMosaicSongList HBTotal
+   VBMosaicSongList = _HBSongListtree
+     HBSongListtree =  \
+ 		_SongTree(cols="playandqueueandtrack title length playcount genre",colwidth="artist 124 lastplay 107 length 49 playandqueue 19 playandqueueandtrack 20 playcount 22 title 344 titleaa 397 track 21",grouping="album|artistalbum_breadcrumbs(picsize=100)|disc|discleft(width=15)",follow=1,sort="year album disc track") \
+@@ -748,9 +748,9 @@ VBSongStatus 	= (tabtitle=_"Library",tabicon="gmb-library") _VBMosaicSongList HB
+       HBMosaic = _FilterPane4(nb=4,hidebb=1,pages=album,page_album/mode=mosaic,page_album/mmarkup=1,page_album/mpicsize=72,hidetabs=1)
+       HBTotal = _HBToggle HBStatutSongList
+ 	HBToggle = \
+-		ToggleButton30(relief=none,size=menu,icon=gmb-view-list,widget=HBSongPlaylist,togglegroup=30,tip=_"Simple List View") \
+-		ToggleButton31(relief=none,size=menu,icon=gmb-view-tree,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
+-		ToggleButton32(relief=none,size=menu,icon=gmb-view-mosaic,widget=HBMosaic,togglegroup=30,tip=_"Mosaic View") \
++		ToggleButton30(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=30,tip=_"Simple List View") \
++		ToggleButton31(relief=none,size=menu,icon=view-list-compact-symbolic,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
++		ToggleButton32(relief=none,size=menu,icon=view-grid-symbolic,widget=HBMosaic,togglegroup=30,tip=_"Mosaic View") \
+ 		VSeparator30 \
+ 		Sort(button=1,size=menu,tip=_"Right-click to toggle shuffle/random") \
+ 		2Filter35(button=1,size=menu,tip=_"Right-click to remove filters") \
+diff --git a/layouts/pages.layout b/layouts/pages.layout
+index ec118a7a..2df315d5 100644
+--- a/layouts/pages.layout
++++ b/layouts/pages.layout
+@@ -4,21 +4,21 @@
+ Type= P
+ Name= _"Same title"
+ VBmain = _SongTree(group=Play:title)
+-Icon=gmb-song
++Icon=folder-music-symbolic
+ Title= _"Title"
+ 
+ [same_album]
+ Type= P
+ Name= _"Same album"
+ VBmain = _SongTree(group=Play:album)
+-Icon=gmb-album
++Icon=media-optical-symbolic
+ Title= _"Album"
+ 
+ [same_artist]
+ Type= P
+ Name= _"Same artist"
+ VBmain = _SongTree(group=Play:first_artist)
+-Icon=gmb-artist
++Icon=system-users-symbolic
+ Title= _"Artist"
+ 
+ [same_year]
+@@ -32,12 +32,12 @@ Type= P
+ Name= _"Search"
+ VBmain	 = HBSearch _SongList(group=search)
+  HBSearch= _SimpleSearch(group=search)
+-Icon=gtk-find
++Icon=edit-find-symbolic
+ 
+ [song_info]
+ Type= P
+ Name= _"Song informations"
+ Title= _"Info"
+ VBmain=  _SongInfo
+-Icon= gtk-info
++Icon= help-info-symbolic
+ 
+diff --git a/plugins/albuminfo.pm b/plugins/albuminfo.pm
+index ff3cac45..edd2e072 100644
+--- a/plugins/albuminfo.pm
++++ b/plugins/albuminfo.pm
+@@ -199,8 +199,8 @@ sub new {
+ 	$statbox->pack_start($self->{ratingpic},0,0,2);
+ 
+ 	# "Refresh", "save" and "search" buttons
+-	my $refreshbutton = ::NewIconButton('gtk-refresh', undef, sub { song_changed($_[0],'force'); }, "none", _"Refresh");
+-	my $savebutton	  = ::NewIconButton('gtk-save', undef, sub
++	my $refreshbutton = ::NewIconButton('view-refresh-symbolic', undef, sub { song_changed($_[0],'force'); }, "none", _"Refresh");
++	my $savebutton	  = ::NewIconButton('document-save-symbolic', undef, sub
+ 		{my $self= $_[0]->GET_ancestor; save_review(::GetSelID($self),$self->{fields})}, "none", _"Save review");
+ 	$savebutton->show_all;
+ 	$savebutton->set_no_show_all(1);
+@@ -210,7 +210,7 @@ sub new {
+ 
+ 	my $searchbutton= Gtk3::ToggleButton->new;
+ 	$searchbutton->set_relief('none');
+-	$searchbutton->add(Gtk3::Image->new_from_stock('gtk-find','menu'));
++	$searchbutton->add(Gtk3::Image->new_from_stock('edit-find-symbolic','menu'));
+ 	$searchbutton->signal_connect(clicked => sub {my $self= $_[0]->GET_ancestor;
+ 		if ($_[0]->get_active()) {$self->manual_search()} else {$self->song_changed()}});
+ 	my $buttonbox= Gtk3::HBox->new;
+@@ -253,9 +253,9 @@ sub new {
+ 	my $searchview= Gtk3::VBox->new;
+ 	$self->{search}= my $search  = Gtk3::Entry->new;
+ 	$search->set_tooltip_text(_"Enter album name");
+-	my $Bsearch = ::NewIconButton('gtk-find', _"Search");
+-	my $Bok     = Gtk3::Button->new_from_stock('gtk-ok');
+-	my $Bcancel = Gtk3::Button->new_from_stock('gtk-cancel');
++	my $Bsearch = ::NewIconButton('edit-find-symbolic', _"Search");
++	my $Bok     = Gtk3::Button->new_from_stock('dialog-ok');
++	my $Bcancel = Gtk3::Button->new_from_stock('dialog-cancel');
+ 	$Bok    ->set_size_request(80, -1);
+ 	$Bcancel->set_size_request(80, -1);
+ 	# Year is a 'Glib::String' to avoid printing "0" when year is missing. Caveat: will give wrong sort order for albums released before year 1000 or after year 9999 :)
+diff --git a/plugins/lyrics.pm b/plugins/lyrics.pm
+index af7ab6f0..0e0d0388 100644
+--- a/plugins/lyrics.pm
++++ b/plugins/lyrics.pm
+@@ -149,9 +149,9 @@ sub new
+ 	$toolbar->set_style( $options->{ToolbarStyle}||'both-horiz' );
+ 	$toolbar->set_icon_size( $options->{ToolbarSize}||'small-toolbar' );
+ 	for my $aref
+-	(	[backb => 'gtk-go-back',\&Back_cb,	_"Previous page"],
+-		[saveb => 'gtk-save',	\&Save_text,	_"Save",	_"Save lyrics"],
+-		[undef, 'gtk-refresh',	\&Refresh_cb,	_"Refresh"],
++	(	[backb => 'go-previous-symbolic',	\&Back_cb,	_"Previous page"],
++		[saveb => 'document-save-symbolic',	\&Save_text,	_"Save",	_"Save lyrics"],
++		[undef, 'view-refresh-symbolic',		\&Refresh_cb,	_"Refresh"],
+ 	)
+ 	{	my ($key,$stock,$cb,$label,$tip)=@$aref;
+ 		my $item= Gtk3::ToolButton->new_from_stock($stock);
+@@ -166,7 +166,7 @@ sub new
+ 	# create follow toggle button, function from GMB::Context
+ 	my $follow=$self->new_follow_toolitem;
+ 
+-	$self->{editb}= my $editmode= Gtk3::ToggleToolButton->new_from_stock('gtk-edit');
++	$self->{editb}= my $editmode= Gtk3::ToggleToolButton->new_from_stock('document-edit-symbolic');
+ 	$editmode->signal_connect(toggled=> sub { SetEditable($_[0],$_[0]->get_active); });
+ 	$editmode->set_tooltip_text(_"Edit mode");
+ 
+
+From d20f1c7277e88d8a7bdab135113f0af85aa69ab5 Mon Sep 17 00:00:00 2001
+From: Darin <newhoa@protonmail.com>
+Date: Sun, 21 Jun 2020 13:49:42 -0400
+Subject: [PATCH 2/9] Gmusicbrowser now uses more symbolic system theme icons
+ where possible.
+
+---
+ gmusicbrowser_layout.pm       |  4 +--
+ gmusicbrowser_list.pm         | 18 +++++------
+ gmusicbrowser_tags.pm         | 14 ++++----
+ layouts/contrib.layout        | 60 +++++++++++++++++------------------
+ layouts/makeitlooklike.layout | 48 ++++++++++++++--------------
+ plugins/lyrics.pm             |  2 +-
+ 7 files changed, 96 insertions(+), 98 deletions(-)
+
+diff --git a/gmusicbrowser_layout.pm b/gmusicbrowser_layout.pm
+index 5c907cdb..83780e03 100644
+--- a/gmusicbrowser_layout.pm
++++ b/gmusicbrowser_layout.pm
+@@ -55,7 +55,7 @@ our @MainMenu=
+ 	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'help-info-symbolic'},
+ 	{label => _"Switch to fullscreen mode",code => \&::ToggleFullscreenLayout, stockicon => 'view-fullscreen-symbolic'},
+ 	{label => _"About",		code => \&::AboutDialog,stockicon => 'help-about-symbolic' },
+-	{label => _"Quit",		code => \&::Quit,	stockicon => 'window-close-symbolic' },
++	{label => _"Quit",		code => \&::Quit,	stockicon => 'application-exit-symbolic' },
+ );
+ 
+ our %Widgets=
+@@ -430,7 +430,7 @@ our %Widgets=
+ 	PlayList =>
+ 	{	New	=> sub { $_[0]{type}='A'; SongList::Common->new($_[0]); },
+ 		tabtitle=> _"Playlist",
+-		tabicon	=> 'media-playback-play-symbolic',
++		tabicon	=> 'view-list-compact-symbolic',
+ 		issonglist=>1,
+ 	},
+ 	SongList =>
+diff --git a/gmusicbrowser_list.pm b/gmusicbrowser_list.pm
+index 2503ca2f..d140d8e5 100644
+--- a/gmusicbrowser_list.pm
++++ b/gmusicbrowser_list.pm
+@@ -847,7 +847,7 @@ our @ColumnMenu=
+ 			delete $names{$_->{colid}} for $_[0]{self}->get_child->get_columns;
+ 			return \%names;
+ 		},	submenu_reverse =>1,
+-	  code	=> sub { $_[0]{self}->ToggleColumn($_[1],$_[0]{pos}); },	stockicon => 'gtk-add'
++	  code	=> sub { $_[0]{self}->ToggleColumn($_[1],$_[0]{pos}); },	stockicon => 'list-add-symbolic'
+ 	},
+ 	{ label => sub { _('_Remove this column').' ('. ($SLC_Prop{$_[0]{pos}}{menu} || $SLC_Prop{$_[0]{pos}}{title}).')' },
+ 	  code	=> sub { $_[0]{self}->ToggleColumn($_[0]{pos},$_[0]{pos}); },	stockicon => 'gtk-remove'
+@@ -1700,10 +1700,10 @@ my @MenuSubGroup=
+ 
+ our @cMenu=
+ (	{ label=> _"Play",	code => sub { ::Select(filter=>$_[0]{filter},song=>'first',play=>1); },
+-		isdefined => 'filter',	stockicon => 'gtk-media-play',	id => 'play'
++		isdefined => 'filter',	stockicon => 'media-playback-start-symbolic',	id => 'play'
+ 	},
+ 	{ label=> _"Append to playlist",	code => sub { ::DoActionForList('addplay',$_[0]{filter}->filter); },
+-		isdefined => 'filter',	stockicon => 'gtk-add',	id => 'addplay',
++		isdefined => 'filter',	stockicon => 'list-add-symbolic',	id => 'addplay',
+ 	},
+ 	{ label=> _"Enqueue",	code => sub { ::EnqueueFilter($_[0]{filter}); },
+ 		isdefined => 'filter',	stockicon => 'format-indent-more-symbolic',	id => 'enqueue',
+@@ -1723,7 +1723,7 @@ our @cMenu=
+ 	{ label=> _"Scan for new songs", code => sub { ::IdleScan( @{$_[0]{rawpathlist}} ); },
+ 		notempty => 'rawpathlist' },
+ 	{ label=> _"Check for updated/removed songs", code => sub { ::IdleCheck(  @{ $_[0]{filter}->filter } ); },
+-		isdefined => 'filter', stockicon => 'gtk-refresh', istrue => 'pathlist' }, #doesn't really need pathlist, but makes less sense for non-folder pages
++		isdefined => 'filter', stockicon => 'view-refresh-symbolic', istrue => 'pathlist' }, #doesn't really need pathlist, but makes less sense for non-folder pages
+ 	{ label=> _"Set Picture",	stockicon => 'folder-pictures-symbolic',
+ 		code => sub { my $gid=$_[0]{gidlist}[0]; ::ChooseAAPicture(undef,$_[0]{field},$gid); },
+ 		onlyone=> 'gidlist',	test => sub { Songs::FilterListProp($_[0]{field},'picture') && $_[0]{gidlist}[0]>0; },
+@@ -1968,7 +1968,7 @@ sub button_press_event_cb
+ 
+ 	if (keys %pages)
+ 	{	my $new= Gtk3::ImageMenuItem->new(_"Add tab");
+-		$new->set_image( Gtk3::Image->new_from_stock('gtk-add','menu') );
++		$new->set_image( Gtk3::Image->new_from_stock('tab-new-symbolic','menu') );
+ 		my $submenu= Gtk3::Menu->new;
+ 		for my $pid (sort {$pages{$a} cmp $pages{$b}} keys %pages)
+ 		{	my $item= Gtk3::ImageMenuItem->new_with_label($pages{$pid});
+@@ -3044,11 +3044,11 @@ use constant { TRUE  => 1, FALSE => 0, COL_name=>0, COL_type=>1, COL_icon=>2, CO
+ our @cMenu; our %Modes;
+ INIT
+ { @cMenu=
+-  (	{ label => _"New filter",	code => sub { ::EditFilter($_[0]{self},undef,''); },	stockicon => 'gtk-add' },
++  (	{ label => _"New filter",	code => sub { ::EditFilter($_[0]{self},undef,''); },	stockicon => 'list-add-symbolic' },
+ 	{ label => _"Edit filter",	code => sub { ::EditFilter($_[0]{self},undef,$_[0]{names}[0]); },
+ 		mode => 'F',	onlyone => 'names' },
+ 	{ label => _"Remove filter",	code => sub { ::SaveFilter($_[0]{names}[0],undef); },
+-		mode => 'F',	onlyone => 'names',	stockicon => 'gtk-remove' },
++		mode => 'F',	onlyone => 'names',	stockicon => 'list-remove-symbolic' },
+ 	{ label => _"Save current filter as",	code => sub { ::EditFilter($_[0]{self},$_[0]{curfilter},''); },
+ 		 stockicon => 'gtk-save',	isdefined => 'curfilter',	test => sub { ! $_[0]{curfilter}->is_empty; } },
+ 	{ label => _"Save current list as",	code => sub { $_[0]{self}->CreateNewFL('L',[@{ $_[0]{songlist}{array} }]); },
+@@ -6908,7 +6908,7 @@ our @ColumnMenu=
+ 			delete $names{$_->{colid}} for grep $_->{colid}, map $_->get_button, $_[0]{self}->get_columns;
+ 			return \%names;
+ 		},	submenu_reverse =>1,
+-		code => sub { $_[0]{songtree}->AddColumn($_[1],$_[0]{insertpos}); }, stockicon => 'gtk-add',
++		code => sub { $_[0]{songtree}->AddColumn($_[1],$_[0]{insertpos}); }, stockicon => 'list-add-symbolic',
+ 	},
+ 	{ label=> sub { _('_Remove this column').' ('.($SongTree::STC{$_[0]{colid}}{menutitle}||$SongTree::STC{$_[0]{colid}}{title}).')' },
+ 	  code => sub { $_[0]{songtree}->remove_column($_[0]{cellnb}) },	stockicon => 'gtk-remove', isdefined => 'colid',
+@@ -7698,7 +7698,7 @@ sub new
+ 	$sw->set_policy('never','automatic');
+ 	$sw->add($vbox);
+ 	$self->{vbox}=$vbox;
+-	my $badd= ::NewIconButton('gtk-add',_"Add a group",sub {$_[0]->get_parent->AddRow('album|default');} );
++	my $badd= ::NewIconButton('list-add-symbolic',_"Add a group",sub {$_[0]->get_parent->AddRow('album|default');} );
+ 	$self->add($sw);
+ 	$self->pack_start($badd,0,0,2);
+ 	$self->Set($init);
+diff --git a/gmusicbrowser_tags.pm b/gmusicbrowser_tags.pm
+index cf125e03..daf27d93 100644
+--- a/gmusicbrowser_tags.pm
++++ b/gmusicbrowser_tags.pm
+@@ -1210,7 +1210,7 @@ sub new
+ 	$self->{field}=$field;
+ 	$self->{ID}=$ID;
+ 	my $button= Gtk3::Button->new;
+-	my $add= ::NewIconButton('gtk-add');
++	my $add= ::NewIconButton('list-add-symbolic');
+ 	my $entry= $self->{entry}= Gtk3::Entry->new;
+ 	my $label= $self->{label}= Gtk3::Label->new;
+ 	$label->set_ellipsize('end');
+@@ -1305,7 +1305,7 @@ sub new
+ 	$self->{field}=$field;
+ 	my $sg= Gtk3::SizeGroup->new('horizontal');
+ 	my $entry= $self->{entry}= Gtk3::Entry->new;
+-	my $add= ::NewIconButton('gtk-add');
++	my $add= ::NewIconButton('list-add-symbolic');
+ 	my $removeall= ::NewIconButton('gtk-clear', _"Remove all", \&clear);
+ 	$add->signal_connect( button_press_event => sub { add_entry_text_cb($_[0]); $_[0]->grab_focus;1; } );
+ 	$add->signal_connect( clicked => \&add_entry_text_cb );
+@@ -1521,9 +1521,9 @@ sub new
+ 	$view->signal_connect(drag_leave => sub { delete $_[0]{dnd_message}; });
+ 	$self->signal_connect(destroy=> sub { my $self=shift; $self->{drop_job}->Abort if $self->{drop_job}; });
+ 
+-	my $button_del= ::NewIconButton('gtk-remove', _"Remove picture");
+-	my $button_set= ::NewIconButton('gtk-open',_"Set picture");
+-	my $button_new= $self->{button_new}= ::NewIconButton('gtk-add', _"Add picture");
++	my $button_del= ::NewIconButton('list-remove-symbolic', _"Remove picture");
++	my $button_set= ::NewIconButton('folder-pictures-symbolic',_"Set picture");
++	my $button_new= $self->{button_new}= ::NewIconButton('list-add-symbolic', _"Add picture");
+ 	my $combo_type= $self->{combo_type}= Gtk3::ComboBoxText->new;
+ 	my $entry_desc= $self->{entry_desc}= Gtk3::Entry->new;
+ 	my $info_label= $self->{info_label}= Gtk3::Label->new;
+@@ -1989,7 +1989,7 @@ sub new
+ 	$self->add($sw);
+ 
+ 	if (my $list=$tagtype->{addlist})
+-	{	my $addbut=::NewIconButton('gtk-add',_"add");
++	{	my $addbut=::NewIconButton('list-add-symbolic',_"add");
+ 		my $addlist= Gtk3::ComboBoxText->new;
+ 		my $hbox= Gtk3::HBox->new(FALSE,8);
+ 		$hbox->pack_start($_,FALSE,FALSE,0) for $addlist,$addbut;
+@@ -2074,7 +2074,7 @@ sub addrow
+ 
+ 	my $delbut= Gtk3::Button->new;
+ 	$delbut->set_relief('none');
+-	$delbut->add(Gtk3::Image->new_from_stock('gtk-remove','menu'));
++	$delbut->add(Gtk3::Image->new_from_stock('list-remove-symbolic','menu'));
+ 	$table->attach($delbut,0,1,$row,$row+1,'shrink','shrink',1,1);
+ 	$delbut->signal_connect( clicked => sub
+ 		{ $widget->{deleted}=1;
+diff --git a/layouts/contrib.layout b/layouts/contrib.layout
+index 4821d8d6..1a087165 100644
+--- a/layouts/contrib.layout
++++ b/layouts/contrib.layout
+@@ -301,21 +301,21 @@ HBTimeSlider	= \
+ HBSettings	= \
+ 	ToggleButton11(relief=none,size=menu,icon=gmb-library,widget=VBLeft,tip=_"Library") \
+ 	ToggleButton12(relief=none,size=menu,icon=gmb-artist,widget=VBArtist,tip=_"Artists") \
+-	ToggleButton13(icon=gmb-queue,relief=none,size=menu,widget=VBQueue,tip=_"Queue") \
+-	ToggleButton14(icon=gtk-about,relief=none,size=menu,widget=Context,tip=_"Context") \
++	ToggleButton13(icon=format-indent-more-symbolic,relief=none,size=menu,widget=VBQueue,tip=_"Queue") \
++	ToggleButton14(icon=help-about-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
+ 	VSeparator4 \
+ 	ExtraButtons(size=large-toolbar) \
+ 	BMSettings \
+ 	Quit2(size=large-toolbar,minwidth=34,maxwidth=34,tip=_"Quit")
+-BMSettings	= (icon=gtk-preferences,size="large-toolbar") \
++BMSettings	= (icon=preferences-system-symbolic,size="large-toolbar") \
+ 	SMLibrary \
+ 	LayoutItem \
+ 	PlayItem \
+ 	SeparatorMenuItem01 \
+-	MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=gmb-equalizer) \
++	MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) \
+ 	SeparatorMenuItem20 \
+-	MenuItem14(command=OpenPref,label=_"Settings",icon="gtk-preferences") \
+-	MenuItem05(command=Quit,label=_"Quit",icon="gtk-quit")
++	MenuItem14(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic") \
++	MenuItem05(command=Quit,label=_"Quit",icon="application-exit-symbolic")
+ SMLibrary	= (label=_"Library") \
+ 	MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
+ 	MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-symbolic") \
+@@ -340,7 +340,7 @@ NBFilter1	= (tabpos="bottom") VBFilter10 VBFilter11 VBFilter12 VBFilter13 VBFilt
+ VBCover		= _Filler1 HBCover _Filler2
+ HBCover		= _Filler3 Cover(overlay=6x6:350x350:elementary/overlay.png,default=elementary/no-cover.svg,showcover=0) _Filler4
+ HBStatus	= \
+-	ToggleButton2(icon=gmb-picture,relief=none,size=menu,widget=VBCover,tip=_"Show/Hide Cover") \
++	ToggleButton2(icon=folder-pictures-symbolic,relief=none,size=menu,widget=VBCover,tip=_"Show/Hide Cover") \
+ 	-3Total(format=short,relief=none,button=1,mode=library,size="small")
+ 
+ ### Artist
+@@ -350,12 +350,12 @@ VBArtist = _FilterPane1(nb=3,hidebb=1,pages=artist,page_artist/lmarkup=1,hidetab
+ VBSongStatus 	= (tabtitle=_"Playlist") ABToggle _VBMosaicSongList HBTotal
+ ABToggle	= (yalign=0,yscale=0.0) HBToggle
+ HBToggle	= \
+-	ToggleButton31(relief=none,size=menu,icon=gmb-album,widget=VPMosaic,tip=_"Albums") \
++	ToggleButton31(relief=none,size=menu,icon=folder-pictures-symbolic,widget=VPMosaic,tip=_"Albums") \
+ 	VSeparator5 \
+-	ToggleButton32(relief=none,size=menu,icon=gmb-view-list,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
+-	ToggleButton33(relief=none,size=menu,icon=gmb-view-tree,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
++	ToggleButton32(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
++	ToggleButton33(relief=none,size=menu,icon=view-list-compact-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
+ 	VSeparator6 \
+-	ToggleButton34(relief=none,size=menu,icon=gtk-find,widget=ABSearchBox2,tip=_"Search") \
++	ToggleButton34(relief=none,size=menu,icon=edit-find-symbolic,widget=ABSearchBox2,tip=_"Search") \
+ 	_ABSearchBox2 \
+ 	-Sort(button=1,size=menu,tip=_"Right-click to toggle shuffle/random") \
+ 	-2Filter35(button=1,size=menu,tip=_"Right-click to remove filters") \
+@@ -413,7 +413,7 @@ VBMain = HBMenu 1Filler2 _HBMainContainer 1Filler3
+ 			_VBVolume \
+ 
+ 			-Quit(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+-			-Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
++			-Pref(stock=preferences-system-symbolic,size=button,minwidth=34,maxwidth=34) \
+ 			-Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=folder-new-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...") \
+ 			-Button2(click1="RunPerlCode(::IdleCheck)",stock=view-refresh-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+ 			-Button3(click1="RunPerlCode(::IdleScan)",stock=zoom-in-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"scan now")	\
+@@ -538,7 +538,7 @@ NBFilter1	= (tabpos="bottom") VBFilter10 VBFilter11 VBFilter12 VBFilter13 VBFilt
+ VBCover		= _Filler7 HBCover _Filler8
+ HBCover		= _Filler9 Cover(overlay=6x6:350x350:elementary/overlay.png,default=elementary/no-cover.svg,showcover=0) _Filler10
+ HBStatus	= \
+-	ToggleButton1(icon=gmb-picture,relief=none,size=button,widget=VBCover,tip=_"Show/Hide Cover") \
++	ToggleButton1(icon=folder-pictures-symbolic,relief=none,size=button,widget=VBCover,tip=_"Show/Hide Cover") \
+ 	-3Total(format=short,relief=none,button=1,mode=library,size="small")
+ 
+ ### Songlist
+@@ -550,8 +550,8 @@ HBSongListtree	=  \
+ 	_HBSongPlaylist
+ HBSongPlaylist	= _SongList(cols="playandqueueandtrack title artist album year length playcount",sort=artist,colwidth="album 200 artist 200 file 400 lastplay 100 length 41 path 413 playandqueueandtrack 24 playcount 96 rating 80 title 270 track 21 year 31",follow=1,sort="year album disc track")
+ HBTotal = \
+-	ToggleButton21(relief=none,size=button,icon=gmb-view-list,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
+-	ToggleButton22(relief=none,size=button,icon=gmb-view-tree,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
++	ToggleButton21(relief=none,size=button,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
++	ToggleButton22(relief=none,size=button,icon=view-list-compact-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
+ 	Sort(button=1,size=button,tip=_"Right-click to toggle shuffle/random") \
+ 	2Filter35(button=1,size=button,tip=_"Right-click to remove filters") \
+ 	-Total2(size=small)
+@@ -570,29 +570,29 @@ VBButtons	= VBPlayingControls _VBVolume VBPanelsControls
+ VBPlayingControls	= Prev(size=button) Play(size=button) Next(click2=NextAlbum,size=button)
+ VBVolume 	= VolumeIcon(button=1,click2=mute,tip=_"Left-clic or scrollwheel to change, right-click to mute") _VolumeSlider
+ VBPanelsControls = \
+-	ToggleButton31(icon=gtk-about,relief=none,size=menu,widget=Context,tip=_"Context") \
++	ToggleButton31(icon=help-about-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
+ 	-Quit2(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+ 	-BMSettings \
+ 	-ExtraButtons(size=button)
+-BMSettings	= (icon=gtk-preferences,size="button") \
++BMSettings	= (icon=preferences-system-symbolic,size="button") \
+ 	SMLibrary \
+ 	LayoutItem \
+ 	PlayItem \
+ 	SMViews \
+ 	SeparatorMenuItem01 \
+-	MenuItem11(command=OpenCustom(Equalizer),label=_"Equalizer",icon=gmb-equalizer) \
++	MenuItem11(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) \
+ 	SeparatorMenuItem20 \
+-	MenuItem12(command=OpenPref,label=_"Settings",icon="gtk-preferences") \
+-	MenuItem13(command=Quit,label=_"Quit",icon="gtk-quit")
++	MenuItem12(command=OpenPref,label=_"Settings",icon="prefernces-system-symbolic") \
++	MenuItem13(command=Quit,label=_"Quit",icon="application-exit-symbolic")
+ SMLibrary	= (label=_"Library") \
+ 	MenuItem21(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
+ 	MenuItem22(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-symbolic") \
+ 	MenuItem23(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="zoom-in-symbolic")
+ SMViews = (label="Show/Hide") \
+-			     MenuItem31(togglewidget=HBLeft,label=_"Library",icon="gmb-library") \
+-			    MenuItem32(togglewidget=VBQueue,label=_"Queue",icon="gmb-queue") \
+-			    MenuItem34(togglewidget=VPMosaic,label=_"Albums",icon="gmb-album") \
+-			    MenuItem35(togglewidget=ABSearchBox,label=_"Search",icon="gtk-find")
++			     MenuItem31(togglewidget=HBLeft,label=_"Library",icon="application-add-symbolic") \
++			    MenuItem32(togglewidget=VBQueue,label=_"Queue",icon="format-indent-more-symbolic") \
++			    MenuItem34(togglewidget=VPMosaic,label=_"Albums",icon="folder-pictures-symbolic") \
++			    MenuItem35(togglewidget=ABSearchBox,label=_"Search",icon="edit-find-symbolic")
+ 
+ ### positioning and sizing ###
+ HSize0		= 300 VBQueue Context
+@@ -714,15 +714,15 @@ HBTop		=  HBCover VBButtons _15VBPlayer(yalign=0.5) VBSettings(yalign=0.5)
+ 		_TimeSlider(direct_mode=1) \
+ 		-Length(markup="$length",initsize="XX:XX",xalign=1)
+   VBSettings = _Filler70 HBSettings1 HBSettings2  _Filler71
+-    HBSettings1	= _Filler80 HBVolume BMSettings Quit1(icon=gmb-turnoff,size=large-toolbar,minwidth=34,maxwidth=34,tip=_"Quit") _Filler81
++    HBSettings1	= _Filler80 HBVolume BMSettings Quit1(icon=system-shutdown-symbolic,size=large-toolbar,minwidth=34,maxwidth=34,tip=_"Quit") _Filler81
+     HBSettings2 = _Filler90 \
+ 		HBButtonContext \
+ 		ExtraButtons(size=menu) \
+ 		_Filler91
+       HBVolume	= VolumeIcon(button=1,size=large-toolbar,click2=mute,tip=_"Scrollwheel to change, right-click to mute")
+ 
+-      HBButtonContext = ToggleButton24(relief=none,size=menu,icon=gtk-about,widget=NBContextMain,tip=_"Open context & queue panel")
+-      BMSettings = (icon=gtk-preferences,size=large-toolbar) \
++      HBButtonContext = ToggleButton24(relief=none,size=menu,icon=help-about-symbolic,widget=NBContextMain,tip=_"Open context & queue panel")
++      BMSettings = (icon=preferences-system-symbolic,size=large-toolbar) \
+ 		SMLibrary \
+ 		LayoutItem \
+ 		PlayItem \
+@@ -761,9 +761,9 @@ VBSongStatus 	= (tabtitle=_"Library",tabicon="application-add-symbolic") _VBMosa
+ ##### Context
+ NBContextMain 	= HBLyrics VBQueue NBContext
+ ##### Lyrics tab
+-HBLyrics 	= (tabtitle=_"Lyrics",tabicon="gtk-about") _PluginLyrics
++HBLyrics 	= (tabtitle=_"Lyrics",tabicon="help-about-symbolic") _PluginLyrics
+ ##### Queue tab
+-VBQueue 	= (tabtitle=_"Queue",tabicon="gmb-queue")  \
++VBQueue 	= (tabtitle=_"Queue",tabicon="format-indent-more-symbolic")  \
+ 		HBQueueActions  \
+ 		_QueueList(group=3,songtree=1,tabicon="",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) \
+ 		HBQueueStatut
+@@ -772,7 +772,7 @@ VBQueue 	= (tabtitle=_"Queue",tabicon="gmb-queue")  \
+ 
+ ##### Other context
+ 
+-NBContext	= (tabtitle=_"More info",tabicon="gtk-about",tabpos=left90) @same_artist @song_info
++NBContext	= (tabtitle=_"More info",tabicon="help-about-symbolic",tabpos=left90) @same_artist @song_info
+ 
+ 
+ 
+diff --git a/layouts/makeitlooklike.layout b/layouts/makeitlooklike.layout
+index 7a6aa403..943bd6f9 100644
+--- a/layouts/makeitlooklike.layout
++++ b/layouts/makeitlooklike.layout
+@@ -44,29 +44,29 @@ VBMain = HBMenubar _HPSidebarCenter HBStatusbar
+     HBMenubar = _MBEdit
+         MBEdit = SMMusic0 SMEdit1 SMView2 SMControl3 SMHelp4
+             SMMusic0 = (label=_"File") \
+-                MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add folder ...",icon="gtk-add") \
++                MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add folder ...",icon="folder-add-symbolic") \
+                 SeparatorMenuItem01 \
+-                MenuItem02(command=Quit,label=_"Quit",icon="gtk-quit")
++                MenuItem02(command=Quit,label=_"Quit",icon="application-exit-symbolic")
+             SMEdit1 = (label=_"Edit") \
+-                MenuItem10(command=EnqueueSelected,label=_"Queue",icon="gmb-queue") \
++                MenuItem10(command=EnqueueSelected,label=_"Queue",icon="format-indent-more-symbolic") \
+                 # MenuItem11(command=,label=_"Add to playlist") \ \
+                 SeparatorMenuItem10 \
+-                MenuItem14(command=OpenPref,label=_"Preferences",icon="gtk-preferences")
++                MenuItem14(command=OpenPref,label=_"Preferences",icon="preferences-system-symbolic")
+ 
+             # SMView menu for common mode
+             SMView2 = (label=_"View") \
+-                MenuItem25(command=GoToCurrentSong,label=_"Go to Playing Track",icon="go-jump") \
++                MenuItem25(command=GoToCurrentSong,label=_"Go to Playing Track",icon="go-jump-symbolic") \
+                 SeparatorMenuItem21 \
+                 LayoutItem \
+                 MenuItem24(togglewidget=HBSearchAndToolbar,label=_"Playlist Utilities Bar")
+ 
+             SMControl3 = (label=_"Tools") \
+-                MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="gtk-refresh") \
+-                MenuItem33(command="OpenSongProp",label=_"Track Properties",icon="gtk-properties") \
++                MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="view-refresh-symbolic") \
++                MenuItem33(command="OpenSongProp",label=_"Track Properties",icon="preferences-system-symbolic") \
+                 MenuItem34(click1=OpenCustom(Equalizer),label=_"Equalizer")
+ 
+             SMHelp4 = (label=_"Help") \
+-                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="gtk-about")
++                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
+ 
+     HPSidebarCenter = VBSidebar VBCenter
+ 
+@@ -170,7 +170,7 @@ VBMain = HBMenubar _HPSidebarCenter HBStatusbar
+             HBSongLists = _NBSongLists \
+                 3Filler7
+ 
+-                NBSongLists = (typesubmenu='L') SongList(tabtitle=_"Playlist 1",mode=playlist,tabicon="gmb-list",cols="playandqueue track title album artist length")
++                NBSongLists = (typesubmenu='L') SongList(tabtitle=_"Playlist 1",mode=playlist,tabicon="view-list-symbolic",cols="playandqueue track title album artist length")
+ 
+             HBPlayer = (maxheight=100,minheight=100) \
+                 HBCover \
+@@ -272,13 +272,13 @@ VBMain = HBMenubar HBToolbar VBSliderbar _HPSidebarCenterContext HBStatusbar
+                 MenuItem34(command=DecVolume,label=_"Decrease volume")
+ 
+             SMHelp4 = (label=_"Help") \
+-                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="gtk-about")
++                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
+ 
+     HBToolbar = Play Prev Next \
+         3VSeparator1 \
+         Sort(button=1,relief=none,minwidth=35) \
+-        ToggleButton4(relief=none,minwidth=35,size=button,icon=gtk-find,widget=HBFilters,tip=_"Show/Hide Browser") \
+-        ToggleButton5(relief=none,minwidth=35,size=button,icon=gtk-info,widget=Context,tip=_"Change the context visibility") \
++        ToggleButton4(relief=none,minwidth=35,size=button,icon=edit-find-symbolic,widget=HBFilters,tip=_"Show/Hide Browser") \
++        ToggleButton5(relief=none,minwidth=35,size=button,icon=help-info-symbolic,widget=Context,tip=_"Change the context visibility") \
+         -HBVolume
+ 
+         HBVolume = VolumeIcon(size=menu,button=1)
+@@ -416,26 +416,26 @@ VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
+ #                    MenuItem11(command=,label=_"Open files") \
+                      MenuItem13(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Files ...") \
+ #                    SeparatorMenuItem11 \
+-                    MenuItem15(command=OpenPref,label=_"Preferences",icon="gtk-preferences") \
+-                    MenuItem16(command=Quit,label=_"Quit",icon="gtk-quit")
++                    MenuItem15(command=OpenPref,label=_"Preferences",icon="preferences-system-symbolic") \
++                    MenuItem16(command=Quit,label=_"Quit",icon="application-exit-symbolic")
+ 
+                 SMMenu2 = (label=_"Playback") \
+                     SeparatorMenuItem21 \
+-                    MenuItem26(command=PlayPause,label=_"Play",icon="gtk-media-play") \
+-                    MenuItem27(command=Stop,label=_"Stop",icon="gtk-media-stop") \
+-                    MenuItem28(command=PrevSong,label=_"Previous",icon="gtk-media-previous") \
+-                    MenuItem29(command=NextSong,label=_"Next",icon="gtk-media-next") \
++                    MenuItem26(command=PlayPause,label=_"Play",icon="media-playback-start-symbolic") \
++                    MenuItem27(command=Stop,label=_"Stop",icon="media-playback-stop-symbolic") \
++                    MenuItem28(command=PrevSong,label=_"Previous",icon="media-skip-backward-symbolic") \
++                    MenuItem29(command=NextSong,label=_"Next",icon="media-skip-forward-symbolic") \
+                     SeparatorMenuItem215 \
+-                    MenuItem215(command="OpenSongProp",label=_"Show song details",icon="gtk-properties")
++                    MenuItem215(command="OpenSongProp",label=_"Show song details",icon="preferences-system-symbolic")
+ 
+                 SMMenu3 = (label=_"Playlist") \
+                     LSortItem \
+-                    MenuItem32(command=ToggleRandom,label=_"Random Playback",icon="gmb-random") \
++                    MenuItem32(command=ToggleRandom,label=_"Random Playback",icon="media-playlist-shuffle-symbolic") \
+                     SeparatorMenuItem31 \
+-                    MenuItem33(command="RunPerlCode(::IdleCheck)",label=_"Refresh",icon="gtk-refresh") \
+-                    MenuItem34(command="RunPerlCode(::IdleScan)",label=_"Rescan",icon="gtk-refresh") \
++                    MenuItem33(command="RunPerlCode(::IdleCheck)",label=_"Refresh",icon="view-refresh-symbolic") \
++                    MenuItem34(command="RunPerlCode(::IdleScan)",label=_"Rescan",icon="view-refresh-symbolic") \
+                     SeparatorMenuItem32 \
+-                    MenuItem39(command="OpenCustom(Audacious_PLM)",label=_"Playlists",icon="gmb-playlist")
++                    MenuItem39(command="OpenCustom(Audacious_PLM)",label=_"Playlists",icon="view-list-symbolic")
+ 
+                 SMMenu5 = (label=_"Output") \
+                     MenuItem51(command=OpenCustom(Equalizer),label=_"Equalizer")
+@@ -449,7 +449,7 @@ VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
+                     MenuItem64(togglewidget=HBStatusbar,label=_"Show status bar",resize="")
+ 
+                 SMMenu7 = (label=_"Help") \
+-                    MenuItem71(command="RunPerlCode(::AboutDialog)",label=_"About",icon="gtk-about")
++                    MenuItem71(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
+ 
+ 
+ 
+diff --git a/plugins/lyrics.pm b/plugins/lyrics.pm
+index 0e0d0388..04543b3a 100644
+--- a/plugins/lyrics.pm
++++ b/plugins/lyrics.pm
+@@ -100,7 +100,7 @@ if (my $site=$::Options{OPT.'LyricSite'}) { delete $::Options{OPT.'LyricSite'} u
+ 
+ my $lyricswidget=
+ {	class		=> __PACKAGE__,
+-	tabicon		=> 'gmb-lyrics',		# no icon by that name by default
++	tabicon		=> 'format-text-bold-symbolic',
+ 	tabtitle	=> _"Lyrics",
+ 	saveoptions	=> 'HideToolbar font follow justification edit',
+ 	schange		=> sub { $_[0]->SongChanged($_[1]); }, #$_[1] is new ID
+
+From 612ce11a312cfe4be7671dd06d9ccaa5e1a96a9d Mon Sep 17 00:00:00 2001
+From: Darin <newhoa@protonmail.com>
+Date: Sun, 21 Jun 2020 14:07:22 -0400
+Subject: [PATCH 3/9] Gmusicbrowser now uses more symbolic system theme icons
+ where possible.
+
+---
+
+diff --git a/gmusicbrowser_layout.pm b/gmusicbrowser_layout.pm
+index 83780e03..efc486c5 100644
+--- a/gmusicbrowser_layout.pm
++++ b/gmusicbrowser_layout.pm
+@@ -51,11 +51,11 @@ our @MenuQueue=
+ our @MainMenu=
+ (	{label => _"Add files or folders",code => sub {::ChooseAddPath(0,1)},	stockicon => 'list-add-symbolic' },
+ 	{label => _"Settings",		code => 'OpenPref',	stockicon => 'preferences-system-symbolic' },
+-	{label => _"Open Browser",	code => \&::OpenBrowser,stockicon => 'application-add-symbolic' },
+-	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'help-info-symbolic'},
++	{label => _"Open Browser",	code => \&::OpenBrowser,stockicon => 'window-new-symbolic' },
++	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'dialog-information-symbolic'},
+ 	{label => _"Switch to fullscreen mode",code => \&::ToggleFullscreenLayout, stockicon => 'view-fullscreen-symbolic'},
+ 	{label => _"About",		code => \&::AboutDialog,stockicon => 'help-about-symbolic' },
+-	{label => _"Quit",		code => \&::Quit,	stockicon => 'application-exit-symbolic' },
++	{label => _"Quit",		code => \&::Quit,	stockicon => 'window-close-symbolic' },
+ );
+ 
+ our %Widgets=
+@@ -103,7 +103,7 @@ our %Widgets=
+ 	{	class	=> 'Layout::Button',
+ 		oldopt1 => 'toggle',
+ 		options => 'toggle',
+-		stock	=> 'application-add-symbolic',
++		stock	=> 'window-new-symbolic',
+ 		tip	=> _"Open Browser window",
+ 		activate=> sub { ::OpenSpecialWindow('Browser',$_[0]{toggle}); },
+ 		click3	=> sub { ::OpenSpecialWindow('Browser'); },
+@@ -112,7 +112,7 @@ our %Widgets=
+ 	{	class	=> 'Layout::Button',
+ 		oldopt1 => 'toggle',
+ 		options => 'toggle',
+-		stock	=> 'help-info-symbolic',
++		stock	=> 'dialog-information-symbolic',
+ 		tip	=> _"Open Context window",
+ 		activate=> sub { ::OpenSpecialWindow('Context',$_[0]{toggle}); },
+ 		click3	=> sub { ::OpenSpecialWindow('Context'); },
+@@ -135,7 +135,7 @@ our %Widgets=
+ 	},
+ 	Quit =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'application-exit',
++		stock	=> 'window-close-symbolic',
+ 		tip	=> _"Quit",
+ 		activate=> \&::Quit,
+ 		click2	=> 'EnqueueAction(quit)',
+@@ -188,7 +188,7 @@ our %Widgets=
+ 		size	=> SIZE_FLAGS,
+ 		state	=> sub { defined $::ListMode ? 'list'
+ 			: $::SelectedFilter->is_empty ? 'library' : 'filter'; },
+-		stock	=> { list => 'view-filter-symbolic', library => 'view-filter-symbolic', filter => 'view-filter-symbolic' },
++		stock	=> { list => 'view-list-symbolic', library => 'view-list-symbolic', filter => 'view-list-symbolic' },
+ 		tip	=> sub
+ 			{ defined $::ListMode	? _"static list"
+ 						: _("Playlist filter :\n").$::SelectedFilter->explain;
+@@ -430,7 +430,7 @@ our %Widgets=
+ 	PlayList =>
+ 	{	New	=> sub { $_[0]{type}='A'; SongList::Common->new($_[0]); },
+ 		tabtitle=> _"Playlist",
+-		tabicon	=> 'view-list-compact-symbolic',
++		tabicon	=> 'view-list-symbolic',
+ 		issonglist=>1,
+ 	},
+ 	SongList =>
+@@ -470,7 +470,7 @@ our %Widgets=
+ 		group	=> 'Play',
+ 		expander=> 1,
+ 		hide_empty => 1,
+-		tabicon	=> 'help-info-symbolic',
++		tabicon	=> 'dialog-information-symbolic',
+ 		tabtitle=> _"Song informations",
+ 	},
+ 	PictureBrowser=>
+@@ -580,7 +580,7 @@ our %Widgets=
+ 	PlayFilter =>
+ 	{	class	=> 'Layout::Button',
+ 		size	=> 'menu',
+-		stock	=> 'view-filter-symbolic',
++		stock	=> 'media-playback-start-symbolic',
+ 		tip	=> _"Play filter",
+ 		activate=> sub { ::Select( filter => ::GetFilter($_[0]), song=> 'trykeep', play =>1 ); },
+ 		click2	=> sub { ::EnqueueFilter( ::GetFilter($_[0]) ); },
+@@ -2470,7 +2470,7 @@ our @contextmenu=
+ 	},
+ 	{ label => _"Delete list", code => sub { $_[0]{page}->DeleteList; },	type=> 'L',  istrue=>'page',	test => sub { $_[0]{page}{name}=~m/^EditList\d*$/; } },
+ 	{ label => _"Rename",	code => \&pagerename_cb,				istrue => 'rename',},
+-	{ label => _"Close",	code => sub { $_[0]{self}->close_tab($_[0]{page},1); },	istrue => 'close',	stockicon=> 'application-exit-symbolic',},
++	{ label => _"Close",	code => sub { $_[0]{self}->close_tab($_[0]{page},1); },	istrue => 'close',	stockicon=> 'window-close-symbolic',},
+ );
+ 
+ our @DefaultOptions=
+@@ -2615,7 +2615,7 @@ sub Pack
+ 		$close->set_can_focus(0);
+ 		::weaken( $close->{page}=$wg );
+ 		$close->signal_connect(clicked => sub {my $page=$_[0]{page}; my $self=$page->get_parent; $self->close_tab($page,1);});
+-		$close->add(Gtk3::Image->new_from_stock('close-symbolic','menu'));
++		$close->add(Gtk3::Image->new_from_stock('window-close-symbolic','menu'));
+ 	}
+ 	my $tab= Gtk3::Box->new( ($angle%180 ? 'vertical' : 'horizontal'),0 );
+ 	my @icons= $angle%180 ? ($close,0,$icon,4) : ($icon,4,$close,0);
+diff --git a/gmusicbrowser_list.pm b/gmusicbrowser_list.pm
+index d140d8e5..2f9da582 100644
+--- a/gmusicbrowser_list.pm
++++ b/gmusicbrowser_list.pm
+@@ -283,7 +283,7 @@ sub new
+ 	bless $self, $class;
+ 
+ 	$self->{group}=$opt->{group};
+-	$self->{bshuffle}=::NewIconButton('media-playback-shuffle-symbolic',($opt->{small} ? '' : _"Shuffle"),sub {::GetSongArray($self)->Shuffle});
++	$self->{bshuffle}=::NewIconButton('media-playlist-shuffle-symbolic',($opt->{small} ? '' : _"Shuffle"),sub {::GetSongArray($self)->Shuffle});
+ 	$self->{brm}=	::NewIconButton('list-remove-symbolic',	($opt->{small} ? '' : _"Remove"),sub {::GetSonglist($self)->RemoveSelected});
+ 	$self->{bclear}=::NewIconButton('edit-clear-symbolic',	($opt->{small} ? '' : _"Clear"),sub {::GetSonglist($self)->Empty} );
+ 	$self->{bup}=	::NewIconButton('go-up-symbolic',		undef,	sub {::GetSonglist($self)->MoveUpDown(1)});
+@@ -850,7 +850,7 @@ our @ColumnMenu=
+ 	  code	=> sub { $_[0]{self}->ToggleColumn($_[1],$_[0]{pos}); },	stockicon => 'list-add-symbolic'
+ 	},
+ 	{ label => sub { _('_Remove this column').' ('. ($SLC_Prop{$_[0]{pos}}{menu} || $SLC_Prop{$_[0]{pos}}{title}).')' },
+-	  code	=> sub { $_[0]{self}->ToggleColumn($_[0]{pos},$_[0]{pos}); },	stockicon => 'gtk-remove'
++	  code	=> sub { $_[0]{self}->ToggleColumn($_[0]{pos},$_[0]{pos}); },	stockicon => 'list-remove-symbolic'
+ 	},
+ 	{ label => _("Edit row tip").'...', code => sub { $_[0]{self}->EditRowTip; },
+ 	},
+@@ -1736,7 +1736,7 @@ our @cMenu=
+ 		code => sub { my $gid=$_[0]{gidlist}[0]; Songs::ChooseIcon($_[0]{field},$gid); },
+ 		onlyone=> 'gidlist',	test => sub { Songs::FilterListProp($_[0]{field},'icon') && $_[0]{gidlist}[0]>0; },
+ 	},
+-	{ label=> _"Remove label",	stockicon => 'gtk-remove',
++	{ label=> _"Remove label",	stockicon => 'list-remove-symbolic',
+ 		code => sub { my $gid=$_[0]{gidlist}[0]; ::RemoveLabel($_[0]{field},$gid); },
+ 		onlyone=> 'gidlist',	test => sub { $_[0]{field} eq 'label' && $_[0]{gidlist}[0] !=0 },	#FIXME make it generic rather than specific to field label ? #FIXME find a better way to check if gid is special than comparing it to 0
+ 	},
+@@ -1751,7 +1751,7 @@ our @cMenu=
+ 	  submenu_ordered_hash => 1, submenu_reverse => 1,
+ 	  check => 'self/simplify',  istrue=>'folderview',
+ 	},
+-	{ label => _"Options", submenu => \@MenuPageOptions, stock => 'gtk-preferences', isdefined => 'field' },
++	{ label => _"Options", submenu => \@MenuPageOptions, stock => 'preferences-system-symbolic', isdefined => 'field' },
+ 	{ label => _"Show buttons",	toggleoption => '!filterpane/hidebb',	code => sub { my $fp=$_[0]{filterpane}; $fp->{bottom_buttons}->set_visible(!$fp->{hidebb}); }, },
+ 	{ label => _"Show tabs",	toggleoption => '!filterpane/hidetabs',	code => sub { my $fp=$_[0]{filterpane}; $fp->{notebook}->set_show_tabs( !$fp->{hidetabs} ); }, },
+ );
+@@ -1778,7 +1778,7 @@ sub new
+ 
+ 	my $spin= Gtk3::SpinButton->new( Gtk3::Adjustment->new($self->{min}, 1, 9999, 1, 10, 0) ,10,0  );
+ 	$spin->signal_connect( value_changed => sub { $self->update_children($_[0]->get_value); } );
+-	my $ResetB=::NewIconButton('gtk-clear',undef,sub { ::SetFilter($_[0],undef,$nb,$group); });
++	my $ResetB=::NewIconButton('edit-clear-symbolic',undef,sub { ::SetFilter($_[0],undef,$nb,$group); });
+ 	$ResetB->set_sensitive(0);
+ 	my $InterB= Gtk3::ToggleButton->new;
+ 	my $InterBL=Gtk3::Label->new;
+@@ -1787,7 +1787,7 @@ sub new
+ 	my $InvertB= Gtk3::ToggleButton->new;
+ 	my $optB= Gtk3::Button->new;
+ 	$InvertB->add(Gtk3::Image->new_from_stock('media-playlist-repeat-symbolic','menu'));
+-	$optB->add(Gtk3::Image->new_from_stock('view-filter-symbolic','menu'));
++	$optB->add(Gtk3::Image->new_from_stock('view-list-symbolic','menu'));
+ 	$InvertB->signal_connect( toggled => sub {$self->{invert}=$_[0]->get_active;} );
+ 	$InterB->signal_connect(  toggled => sub {$self->{inter} =$_[0]->get_active;} );
+ 	$optB->signal_connect( button_press_event => \&PopupOpt );
+@@ -1981,7 +1981,7 @@ sub button_press_event_cb
+ 	}
+ 	if ($nb->get_n_pages>1)
+ 	{	my $item= Gtk3::ImageMenuItem->new(_"Remove this tab");
+-		$item->set_image( Gtk3::Image->new_from_stock('gtk-remove','menu') );
++		$item->set_image( Gtk3::Image->new_from_stock('list-remove-symbolic','menu') );
+ 		$item->signal_connect(activate=> \&RemovePage_cb,$self);
+ 		$menu->append($item);
+ 	}
+@@ -2320,7 +2320,7 @@ sub set_cursor_to_row
+ 
+ sub make_searchbox
+ {	my $entry= Gtk3::Entry->new;	#FIXME tooltip
+-	my $clear=::NewIconButton('gtk-clear',undef,sub { $_[0]->{entry}->set_text(''); },'none' );	#FIXME tooltip
++	my $clear=::NewIconButton('edit-clear-symbolic',undef,sub { $_[0]->{entry}->set_text(''); },'none' );	#FIXME tooltip
+ 	$clear->{entry}=$entry;
+ 	my $hbox= Gtk3::HBox->new(0,0);
+ 	$hbox->pack_end($clear,0,0,0);
+@@ -3050,20 +3050,20 @@ INIT
+ 	{ label => _"Remove filter",	code => sub { ::SaveFilter($_[0]{names}[0],undef); },
+ 		mode => 'F',	onlyone => 'names',	stockicon => 'list-remove-symbolic' },
+ 	{ label => _"Save current filter as",	code => sub { ::EditFilter($_[0]{self},$_[0]{curfilter},''); },
+-		 stockicon => 'gtk-save',	isdefined => 'curfilter',	test => sub { ! $_[0]{curfilter}->is_empty; } },
++		 stockicon => 'document-save-as-symbolic',	isdefined => 'curfilter',	test => sub { ! $_[0]{curfilter}->is_empty; } },
+ 	{ label => _"Save current list as",	code => sub { $_[0]{self}->CreateNewFL('L',[@{ $_[0]{songlist}{array} }]); },
+-		stockicon => 'gtk-save',	isdefined => 'songlist' },
++		stockicon => 'document-save-as-symbolic',	isdefined => 'songlist' },
+ 	{ label => _("Edit list").'...',	code => sub { ::WEditList( $_[0]{names}[0] ); },
+ 		mode => 'L',	onlyone => 'names' },
+ 	{ label => _"Remove list",	code => sub { ::SaveList($_[0]{names}[0],undef); },
+-		stockicon => 'gtk-remove',	mode => 'L', onlyone => 'names', },
++		stockicon => 'list-remove-symbolic',	mode => 'L', onlyone => 'names', },
+ 	{ label => _"Rename",	code => sub { my $tv=$_[0]{self}{treeview}; $tv->set_cursor($_[0]{treepaths}[0],$tv->get_column(0),TRUE); },
+ 		notempty => 'names',	onlyone => 'treepaths' },
+ 	{ label => _("Import list").'...',	code => sub { ::Choose_and_import_playlist_files($_[0]{self}); }, mode => 'L', },
+   );
+ 
+   %Modes=
+-  (	F => [_"Saved filters",	'sfilter',	'SavedFilters',	\&UpdateSavedFilters,	'view-filter-symbolic'	,\&::SaveFilter, 'filter000'],
++  (	F => [_"Saved filters",	'sfilter',	'SavedFilters',	\&UpdateSavedFilters,	'view-list-symbolic'	,\&::SaveFilter, 'filter000'],
+ 	L => [_"Saved lists",	'slist',	'SavedLists',	\&UpdateSavedLists,	'view-list-symbolic'	,\&::SaveList, 'list000'],
+ 	P => [_"Playing",	'play',		undef,		\&UpdatePlayingFilters,	'media-playback-start-symbolic'	],
+   );
+@@ -3381,7 +3381,7 @@ sub new
+ 	$img->signal_connect(button_press_event => \&GMB::Picture::pixbox_button_press_cb,1); # 1 : mouse button 1
+ 
+ 	my $buttonbox= Gtk3::VBox->new;
+-	my $Bfilter=::NewIconButton('view-filter-symbolic',undef,sub { my $self= $_[0]->GET_ancestor; $self->filter },'none');
++	my $Bfilter=::NewIconButton('view-list-symbolic',undef,sub { my $self= $_[0]->GET_ancestor; $self->filter },'none');
+ 	my $Bplay=::NewIconButton('media-playback-start-symbolic',undef,sub
+ 		{	my $self= $_[0]->GET_ancestor;
+ 			return unless defined $self->{SelID};
+@@ -3635,8 +3635,8 @@ sub new
+ 	$self->set_max_width_chars($opt->{minwidthchar}) if $opt->{minwidthchar};
+ 	$self->set_max_width_chars($opt->{maxwidthchar}) if $opt->{maxwidthchar};
+ 	unless ($opt->{noselector})
+-	{	$self->set_icon_from_stock('primary','gtk-find');
+-		$self->set_icon_from_stock('secondary','gtk-clear');
++	{	$self->set_icon_from_icon_name('primary','edit-find-symbolic');
++		$self->set_icon_from_icon_name('secondary','edit-clear-symbolic');
+ 		$self->set_icon_activatable($_,1) for qw/primary secondary/;
+ 		$self->set_icon_tooltip_text('primary',_"Search options");
+ 		$self->set_icon_tooltip_text('secondary',_"Reset filter");
+@@ -5392,13 +5392,13 @@ sub new					##currently the returned widget must be put in ->{isearchbox} of a p
+ 	$entry->signal_connect( changed => \&changed );
+ 	$entry->signal_connect(key_press_event	=> \&key_press_event_cb);
+ 	my $select=::NewIconButton('gtk-index',	undef, \&select,'none',_"Select matches");
+-	my $next=::NewIconButton('gtk-go-down',	($nolabel ? undef : _"Next"),	 \&button_cb,'none');
+-	my $prev=::NewIconButton('gtk-go-up',	($nolabel ? undef : _"Previous"),\&button_cb,'none');
++	my $next=::NewIconButton('go-down-symbolic',	($nolabel ? undef : _"Next"),	 \&button_cb,'none');
++	my $prev=::NewIconButton('go-up-symbolic',	($nolabel ? undef : _"Previous"),\&button_cb,'none');
+ 	$prev->{is_previous}=1;
+-	my $close= $self->{close_button}= ::NewIconButton('gtk-close', undef, \&close,'none');
++	my $close= $self->{close_button}= ::NewIconButton('window-close-symbolic', undef, \&close,'none');
+ 	my $label= Gtk3::Label->new(_"Find :");
+ 	my $options=Gtk3::Button->new;
+-	$options->add(Gtk3::Image->new_from_stock('gtk-preferences','menu'));
++	$options->add(Gtk3::Image->new_from_stock('preferences-system-symbolic','menu'));
+ 	$options->signal_connect( button_press_event => \&PopupOpt );
+ 	$options->set_relief('none');
+ 	$options->set_tooltip_text(_"options");
+@@ -6911,7 +6911,7 @@ our @ColumnMenu=
+ 		code => sub { $_[0]{songtree}->AddColumn($_[1],$_[0]{insertpos}); }, stockicon => 'list-add-symbolic',
+ 	},
+ 	{ label=> sub { _('_Remove this column').' ('.($SongTree::STC{$_[0]{colid}}{menutitle}||$SongTree::STC{$_[0]{colid}}{title}).')' },
+-	  code => sub { $_[0]{songtree}->remove_column($_[0]{cellnb}) },	stockicon => 'gtk-remove', isdefined => 'colid',
++	  code => sub { $_[0]{songtree}->remove_column($_[0]{cellnb}) },	stockicon => 'list-remove-symbolic', isdefined => 'colid',
+ 	},
+ 	{ label => _("Edit row tip").'...', code => sub { $_[0]{songtree}->EditRowTip; },
+ 	},
+@@ -7721,7 +7721,7 @@ sub AddRow
+ 	if ($skin=~s/\((.*)\)$//) { $opt=::ParseOptions($1) }
+ 	my $typelist=TextCombo::Tree->new( Songs::ListGroupTypes(), $type );
+ 	my $skinlist=TextCombo->new({map {$_ => $SongTree::GroupSkin{$_}{title}||$_} keys %SongTree::GroupSkin}, $skin, \&skin_changed_cb );
+-	my $button=::NewIconButton('gtk-remove',undef,sub
++	my $button=::NewIconButton('list-remove-symbolic',undef,sub
+ 		{ my $button=$_[0];
+ 		  my $box= $button->get_parent->get_parent;
+ 		  $box->get_parent->remove($box);
+diff --git a/gmusicbrowser_songs.pm b/gmusicbrowser_songs.pm
+index 27ad8438..b4296028 100644
+--- a/gmusicbrowser_songs.pm
++++ b/gmusicbrowser_songs.pm
+@@ -2838,7 +2838,7 @@ sub PrefFields	#preference dialog for fields
+ 		$treeview->set_cursor($store->get_path($iter));
+ 	    });
+ 
+-	my $newcst=::NewIconButton('folder-new-symbolic', _"New custom field", sub
++	my $newcst=::NewIconButton('list-add-symbolic', _"New custom field", sub
+ 		{	my $iter=$store->append($store->get_iter_from_string($custom_root));
+ 			$store->set($iter,0,'',1,'',2,::TRUE);
+ 			my $path=$store->get_path($iter);
+diff --git a/layouts/contrib.layout b/layouts/contrib.layout
+index 1a087165..da7323dc 100644
+--- a/layouts/contrib.layout
++++ b/layouts/contrib.layout
+@@ -302,7 +302,7 @@ HBSettings	= \
+ 	ToggleButton11(relief=none,size=menu,icon=gmb-library,widget=VBLeft,tip=_"Library") \
+ 	ToggleButton12(relief=none,size=menu,icon=gmb-artist,widget=VBArtist,tip=_"Artists") \
+ 	ToggleButton13(icon=format-indent-more-symbolic,relief=none,size=menu,widget=VBQueue,tip=_"Queue") \
+-	ToggleButton14(icon=help-about-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
++	ToggleButton14(icon=dialog-information-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
+ 	VSeparator4 \
+ 	ExtraButtons(size=large-toolbar) \
+ 	BMSettings \
+@@ -315,7 +315,7 @@ BMSettings	= (icon=preferences-system-symbolic,size="large-toolbar") \
+ 	MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) \
+ 	SeparatorMenuItem20 \
+ 	MenuItem14(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic") \
+-	MenuItem05(command=Quit,label=_"Quit",icon="application-exit-symbolic")
++	MenuItem05(command=Quit,label=_"Quit",icon="window-close-symbolic")
+ SMLibrary	= (label=_"Library") \
+ 	MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
+ 	MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-symbolic") \
+@@ -353,7 +353,7 @@ HBToggle	= \
+ 	ToggleButton31(relief=none,size=menu,icon=folder-pictures-symbolic,widget=VPMosaic,tip=_"Albums") \
+ 	VSeparator5 \
+ 	ToggleButton32(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
+-	ToggleButton33(relief=none,size=menu,icon=view-list-compact-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
++	ToggleButton33(relief=none,size=menu,icon=view-list-view-list-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
+ 	VSeparator6 \
+ 	ToggleButton34(relief=none,size=menu,icon=edit-find-symbolic,widget=ABSearchBox2,tip=_"Search") \
+ 	_ABSearchBox2 \
+@@ -551,7 +551,7 @@ HBSongListtree	=  \
+ HBSongPlaylist	= _SongList(cols="playandqueueandtrack title artist album year length playcount",sort=artist,colwidth="album 200 artist 200 file 400 lastplay 100 length 41 path 413 playandqueueandtrack 24 playcount 96 rating 80 title 270 track 21 year 31",follow=1,sort="year album disc track")
+ HBTotal = \
+ 	ToggleButton21(relief=none,size=button,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
+-	ToggleButton22(relief=none,size=button,icon=view-list-compact-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
++	ToggleButton22(relief=none,size=button,icon=view-list-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
+ 	Sort(button=1,size=button,tip=_"Right-click to toggle shuffle/random") \
+ 	2Filter35(button=1,size=button,tip=_"Right-click to remove filters") \
+ 	-Total2(size=small)
+@@ -570,7 +570,7 @@ VBButtons	= VBPlayingControls _VBVolume VBPanelsControls
+ VBPlayingControls	= Prev(size=button) Play(size=button) Next(click2=NextAlbum,size=button)
+ VBVolume 	= VolumeIcon(button=1,click2=mute,tip=_"Left-clic or scrollwheel to change, right-click to mute") _VolumeSlider
+ VBPanelsControls = \
+-	ToggleButton31(icon=help-about-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
++	ToggleButton31(icon=dialog-information-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
+ 	-Quit2(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+ 	-BMSettings \
+ 	-ExtraButtons(size=button)
+@@ -583,13 +583,13 @@ BMSettings	= (icon=preferences-system-symbolic,size="button") \
+ 	MenuItem11(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) \
+ 	SeparatorMenuItem20 \
+ 	MenuItem12(command=OpenPref,label=_"Settings",icon="prefernces-system-symbolic") \
+-	MenuItem13(command=Quit,label=_"Quit",icon="application-exit-symbolic")
++	MenuItem13(command=Quit,label=_"Quit",icon="window-close-symbolic")
+ SMLibrary	= (label=_"Library") \
+ 	MenuItem21(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
+ 	MenuItem22(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-symbolic") \
+ 	MenuItem23(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="zoom-in-symbolic")
+ SMViews = (label="Show/Hide") \
+-			     MenuItem31(togglewidget=HBLeft,label=_"Library",icon="application-add-symbolic") \
++			     MenuItem31(togglewidget=HBLeft,label=_"Library",icon="window-new-symbolic") \
+ 			    MenuItem32(togglewidget=VBQueue,label=_"Queue",icon="format-indent-more-symbolic") \
+ 			    MenuItem34(togglewidget=VPMosaic,label=_"Albums",icon="folder-pictures-symbolic") \
+ 			    MenuItem35(togglewidget=ABSearchBox,label=_"Search",icon="edit-find-symbolic")
+@@ -721,7 +721,7 @@ HBTop		=  HBCover VBButtons _15VBPlayer(yalign=0.5) VBSettings(yalign=0.5)
+ 		_Filler91
+       HBVolume	= VolumeIcon(button=1,size=large-toolbar,click2=mute,tip=_"Scrollwheel to change, right-click to mute")
+ 
+-      HBButtonContext = ToggleButton24(relief=none,size=menu,icon=help-about-symbolic,widget=NBContextMain,tip=_"Open context & queue panel")
++      HBButtonContext = ToggleButton24(relief=none,size=menu,icon=dialog-information-symbolic,widget=NBContextMain,tip=_"Open context & queue panel")
+       BMSettings = (icon=preferences-system-symbolic,size=large-toolbar) \
+ 		SMLibrary \
+ 		LayoutItem \
+@@ -749,7 +749,7 @@ VBSongStatus 	= (tabtitle=_"Library",tabicon="application-add-symbolic") _VBMosa
+       HBTotal = _HBToggle HBStatutSongList
+ 	HBToggle = \
+ 		ToggleButton30(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=30,tip=_"Simple List View") \
+-		ToggleButton31(relief=none,size=menu,icon=view-list-compact-symbolic,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
++		ToggleButton31(relief=none,size=menu,icon=view-list-symbolic,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
+ 		ToggleButton32(relief=none,size=menu,icon=view-grid-symbolic,widget=HBMosaic,togglegroup=30,tip=_"Mosaic View") \
+ 		VSeparator30 \
+ 		Sort(button=1,size=menu,tip=_"Right-click to toggle shuffle/random") \
+@@ -761,7 +761,7 @@ VBSongStatus 	= (tabtitle=_"Library",tabicon="application-add-symbolic") _VBMosa
+ ##### Context
+ NBContextMain 	= HBLyrics VBQueue NBContext
+ ##### Lyrics tab
+-HBLyrics 	= (tabtitle=_"Lyrics",tabicon="help-about-symbolic") _PluginLyrics
++HBLyrics 	= (tabtitle=_"Lyrics",tabicon="window-close-symbolic") _PluginLyrics
+ ##### Queue tab
+ VBQueue 	= (tabtitle=_"Queue",tabicon="format-indent-more-symbolic")  \
+ 		HBQueueActions  \
+@@ -772,7 +772,7 @@ VBQueue 	= (tabtitle=_"Queue",tabicon="format-indent-more-symbolic")  \
+ 
+ ##### Other context
+ 
+-NBContext	= (tabtitle=_"More info",tabicon="help-about-symbolic",tabpos=left90) @same_artist @song_info
++NBContext	= (tabtitle=_"More info",tabicon="dialog-information-symbolic",tabpos=left90) @same_artist @song_info
+ 
+ 
+ 
+diff --git a/layouts/makeitlooklike.layout b/layouts/makeitlooklike.layout
+index 943bd6f9..4bd29f65 100644
+--- a/layouts/makeitlooklike.layout
++++ b/layouts/makeitlooklike.layout
+@@ -44,9 +44,9 @@ VBMain = HBMenubar _HPSidebarCenter HBStatusbar
+     HBMenubar = _MBEdit
+         MBEdit = SMMusic0 SMEdit1 SMView2 SMControl3 SMHelp4
+             SMMusic0 = (label=_"File") \
+-                MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add folder ...",icon="folder-add-symbolic") \
++                MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add folder ...",icon="folder-new-symbolic") \
+                 SeparatorMenuItem01 \
+-                MenuItem02(command=Quit,label=_"Quit",icon="application-exit-symbolic")
++                MenuItem02(command=Quit,label=_"Quit",icon="window-close-symbolic")
+             SMEdit1 = (label=_"Edit") \
+                 MenuItem10(command=EnqueueSelected,label=_"Queue",icon="format-indent-more-symbolic") \
+                 # MenuItem11(command=,label=_"Add to playlist") \ \
+@@ -66,7 +66,7 @@ VBMain = HBMenubar _HPSidebarCenter HBStatusbar
+                 MenuItem34(click1=OpenCustom(Equalizer),label=_"Equalizer")
+ 
+             SMHelp4 = (label=_"Help") \
+-                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
++                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="dialog-information-symbolic")
+ 
+     HPSidebarCenter = VBSidebar VBCenter
+ 
+@@ -272,13 +272,13 @@ VBMain = HBMenubar HBToolbar VBSliderbar _HPSidebarCenterContext HBStatusbar
+                 MenuItem34(command=DecVolume,label=_"Decrease volume")
+ 
+             SMHelp4 = (label=_"Help") \
+-                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
++                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="dialog-information-symbolic")
+ 
+     HBToolbar = Play Prev Next \
+         3VSeparator1 \
+         Sort(button=1,relief=none,minwidth=35) \
+         ToggleButton4(relief=none,minwidth=35,size=button,icon=edit-find-symbolic,widget=HBFilters,tip=_"Show/Hide Browser") \
+-        ToggleButton5(relief=none,minwidth=35,size=button,icon=help-info-symbolic,widget=Context,tip=_"Change the context visibility") \
++        ToggleButton5(relief=none,minwidth=35,size=button,icon=dialog-information-symbolic,widget=Context,tip=_"Change the context visibility") \
+         -HBVolume
+ 
+         HBVolume = VolumeIcon(size=menu,button=1)
+@@ -417,7 +417,7 @@ VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
+                      MenuItem13(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Files ...") \
+ #                    SeparatorMenuItem11 \
+                     MenuItem15(command=OpenPref,label=_"Preferences",icon="preferences-system-symbolic") \
+-                    MenuItem16(command=Quit,label=_"Quit",icon="application-exit-symbolic")
++                    MenuItem16(command=Quit,label=_"Quit",icon="window-close-symbolic")
+ 
+                 SMMenu2 = (label=_"Playback") \
+                     SeparatorMenuItem21 \
+@@ -449,7 +449,7 @@ VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
+                     MenuItem64(togglewidget=HBStatusbar,label=_"Show status bar",resize="")
+ 
+                 SMMenu7 = (label=_"Help") \
+-                    MenuItem71(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
++                    MenuItem71(command="RunPerlCode(::AboutDialog)",label=_"About",icon="dialog-information-symbolic")
+ 
+ 
+ 
+diff --git a/layouts/pages.layout b/layouts/pages.layout
+index 2df315d5..46550f0a 100644
+--- a/layouts/pages.layout
++++ b/layouts/pages.layout
+@@ -39,5 +39,5 @@ Type= P
+ Name= _"Song informations"
+ Title= _"Info"
+ VBmain=  _SongInfo
+-Icon= help-info-symbolic
++Icon=dialog-information-symbolic
+ 
+
+From e650af60f3919a56af743df579437458b752b92f Mon Sep 17 00:00:00 2001
+From: Darin <newhoa@protonmail.com>
+Date: Sun, 21 Jun 2020 23:54:30 -0400
+Subject: [PATCH 5/9] Gmusicbrowser now uses more symbolic system theme icons
+ where possible.
+
+---
+ gmusicbrowser_layout.pm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/gmusicbrowser_layout.pm b/gmusicbrowser_layout.pm
+index efc486c5..ba58c47e 100644
+--- a/gmusicbrowser_layout.pm
++++ b/gmusicbrowser_layout.pm
+@@ -595,7 +595,7 @@ our %Widgets=
+ 	ResetFilter =>
+ 	{	class	=> 'Layout::Button',
+ 		size	=> 'menu',
+-		stock	=> 'edit-clear-symbolic',
++		stock	=> 'edit-clear-all-symbolic',
+ 		tip	=> _"Reset filter",
+ 		activate=> sub { ::SetFilter($_[0],undef); },
+ 	},
+
+From 356a45257e79ce0f68280a1cb1753ef2d9432561 Mon Sep 17 00:00:00 2001
+From: Darin <newhoa@protonmail.com>
+Date: Mon, 22 Jun 2020 01:11:56 -0400
+Subject: [PATCH 6/9] Gmusicbrowser now uses more symbolic system theme icons
+ where possible.
+
+---
+ gmusicbrowser_layout.pm |  4 ++--
+ layouts/contrib.layout  | 26 +++++++++++++-------------
+ layouts/shimmer.layout  | 14 +++++++-------
+ plugins/webcontext.pm   |  2 +-
+ 5 files changed, 24 insertions(+), 24 deletions(-)
+
+diff --git a/gmusicbrowser_layout.pm b/gmusicbrowser_layout.pm
+index ba58c47e..89a2fa5e 100644
+--- a/gmusicbrowser_layout.pm
++++ b/gmusicbrowser_layout.pm
+@@ -188,7 +188,7 @@ our %Widgets=
+ 		size	=> SIZE_FLAGS,
+ 		state	=> sub { defined $::ListMode ? 'list'
+ 			: $::SelectedFilter->is_empty ? 'library' : 'filter'; },
+-		stock	=> { list => 'view-list-symbolic', library => 'view-list-symbolic', filter => 'view-list-symbolic' },
++		stock	=> { list => 'media-optical-symbolic', library => 'view-list-symbolic', filter => 'view-list-symbolic' },
+ 		tip	=> sub
+ 			{ defined $::ListMode	? _"static list"
+ 						: _("Playlist filter :\n").$::SelectedFilter->explain;
+@@ -2458,7 +2458,7 @@ our @contextmenu=
+ (	{ label => _"New list",		code => sub { $_[0]{self}->newtab('EditList',1,{songarray=>''}); },	type=> 'L', stockicon => 'list-add-symbolic', },
+ 	{ label => _"Open Queue",	code => sub { $_[0]{self}->newtab('QueueList',1); },			type=> 'L', stockicon => 'view-list-symbolic',
+ 		test => sub { !grep $_->{name} eq 'QueueList', $_[0]{self}->get_children } },
+-	{ label => _"Open Playlist",	code => sub { $_[0]{self}->newtab('PlayList',1); },			type=> 'L', stockicon => 'media-playback-play-symbolic',
++	{ label => _"Open Playlist",	code => sub { $_[0]{self}->newtab('PlayList',1); },			type=> 'L', stockicon => 'media-playback-start-symbolic',
+ 		test => sub { !grep $_->{name} eq 'PlayList', $_[0]{self}->get_children } },
+ 	{ label => _"Open existing list", code => sub { $_[0]{self}->newtab('EditList',1, {songarray=>$_[1]}); },	type=> 'L',
+ 		submenu => sub { my %h; $h{ $_->{array}->GetName }=1 for grep $_->{name}=~m/^EditList\d*$/, $_[0]{self}->get_children; return [grep !$h{$_}, ::GetListOfSavedLists()]; } },
+diff --git a/layouts/contrib.layout b/layouts/contrib.layout
+index da7323dc..cb3892f7 100644
+--- a/layouts/contrib.layout
++++ b/layouts/contrib.layout
+@@ -254,7 +254,7 @@ group
+ 		Queue(size=button,minwidth=34,maxwidth=34)  \
+ 
+ 		-Quit(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+-		-Pref(stock=gtk-preferences,size=button,minwidth=34,maxwidth=34) \
++		-Pref(stock=preferences-system-symbolic,size=button,minwidth=34,maxwidth=34) \
+ 		-HSeparator2 \
+ 		#-MBLayouts \
+ 		-HSeparator3 \
+@@ -288,9 +288,9 @@ HBVolume	= (yalign=0,yscale=0.0) VolumeIcon(button=1,click2=mute,tip=_"Left-clic
+ VBPlayer	= 1Filler0 HBTitle HBTimeSlider
+ HBTitle		= \
+ 	Title(expand_max=300,ellipsize=end,markup="<big><b>%t</b></big> ",tip=_"Title: %t (Track No. %n)",yalign=0.5) \
+-	LockAlbum(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") \
++	LockAlbum(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") \
+ 	Album(tip=_"Album: %l (%Y)",ellipsize=end,expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0) \
+-	LockArtist(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") \
++	LockArtist(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") \
+ 	Artist(tip=_"Artist: %a",expand_max=200,yalign=0.5,ellipsize=end,markup="<big> </big>%a") \
+ 	-Stars(yalign=0.5)
+ HBTimeSlider	= \
+@@ -299,10 +299,10 @@ HBTimeSlider	= \
+ 	-Length(markup="$length",initsize="XX:XX",xalign=1)
+ 
+ HBSettings	= \
+-	ToggleButton11(relief=none,size=menu,icon=gmb-library,widget=VBLeft,tip=_"Library") \
+-	ToggleButton12(relief=none,size=menu,icon=gmb-artist,widget=VBArtist,tip=_"Artists") \
+-	ToggleButton13(icon=format-indent-more-symbolic,relief=none,size=menu,widget=VBQueue,tip=_"Queue") \
+-	ToggleButton14(icon=dialog-information-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
++	ToggleButton11(relief=none,size=menu,icon=media-optical-symbolic,widget=VBLeft,tip=_"Library") \
++	ToggleButton12(relief=none,size=menu,icon=system-users-symbolic,widget=VBArtist,tip=_"Artists") \
++	ToggleButton13(relief=none,size=menu,icon=format-indent-more-symbolic,widget=VBQueue,tip=_"Queue") \
++	ToggleButton14(relief=none,size=menu,icon=dialog-information-symbolic,widget=Context,tip=_"Context") \
+ 	VSeparator4 \
+ 	ExtraButtons(size=large-toolbar) \
+ 	BMSettings \
+@@ -353,7 +353,7 @@ HBToggle	= \
+ 	ToggleButton31(relief=none,size=menu,icon=folder-pictures-symbolic,widget=VPMosaic,tip=_"Albums") \
+ 	VSeparator5 \
+ 	ToggleButton32(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
+-	ToggleButton33(relief=none,size=menu,icon=view-list-view-list-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
++	ToggleButton33(relief=none,size=menu,icon=sidebar-tree-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
+ 	VSeparator6 \
+ 	ToggleButton34(relief=none,size=menu,icon=edit-find-symbolic,widget=ABSearchBox2,tip=_"Search") \
+ 	_ABSearchBox2 \
+@@ -373,7 +373,7 @@ HBTotal = -Total2(size=small)
+ ### Queue
+ VBQueue 	= \
+ 	EditListButtons(group=3,small=1,relief=none) \
+-	_QueueList(group=3,songtree=1,tabicon="",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) \
++	_QueueList(group=3,songtree=1,tabicon="format-indent-more-symbolic",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) \
+ 	HBQueueActions
+ HBQueueActions = -Total3(size="small",group=3)
+ 
+@@ -560,7 +560,7 @@ HBTotal = \
+ ### Queue
+ VBQueue 	= \
+ 	EditListButtons(group=3,small=1,relief=none) \
+-	_QueueList(group=3,songtree=1,tabicon="",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) \
++	_QueueList(group=3,songtree=1,tabicon="format-indent-more-symbolic",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) \
+ 	HBQueueActions
+ HBQueueActions = -Total3(size="small",group=3)
+ 
+@@ -738,7 +738,7 @@ HBTop		=  HBCover VBButtons _15VBPlayer(yalign=0.5) VBSettings(yalign=0.5)
+ #### Right main panel
+ HPRight 	= _VBSongStatus _NBContextMain
+ ##### Library
+-VBSongStatus 	= (tabtitle=_"Library",tabicon="application-add-symbolic") _VBMosaicSongList HBTotal
++VBSongStatus 	= (tabtitle=_"Library",tabicon="window-new-symbolic") _VBMosaicSongList HBTotal
+   VBMosaicSongList = _HBSongListtree
+     HBSongListtree =  \
+ 		_SongTree(cols="playandqueueandtrack title length playcount genre",colwidth="artist 124 lastplay 107 length 49 playandqueue 19 playandqueueandtrack 20 playcount 22 title 344 titleaa 397 track 21",grouping="album|artistalbum_breadcrumbs(picsize=100)|disc|discleft(width=15)",follow=1,sort="year album disc track") \
+@@ -749,7 +749,7 @@ VBSongStatus 	= (tabtitle=_"Library",tabicon="application-add-symbolic") _VBMosa
+       HBTotal = _HBToggle HBStatutSongList
+ 	HBToggle = \
+ 		ToggleButton30(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=30,tip=_"Simple List View") \
+-		ToggleButton31(relief=none,size=menu,icon=view-list-symbolic,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
++		ToggleButton31(relief=none,size=menu,icon=sidebar-tree-symbolic,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
+ 		ToggleButton32(relief=none,size=menu,icon=view-grid-symbolic,widget=HBMosaic,togglegroup=30,tip=_"Mosaic View") \
+ 		VSeparator30 \
+ 		Sort(button=1,size=menu,tip=_"Right-click to toggle shuffle/random") \
+@@ -765,7 +765,7 @@ HBLyrics 	= (tabtitle=_"Lyrics",tabicon="window-close-symbolic") _PluginLyrics
+ ##### Queue tab
+ VBQueue 	= (tabtitle=_"Queue",tabicon="format-indent-more-symbolic")  \
+ 		HBQueueActions  \
+-		_QueueList(group=3,songtree=1,tabicon="",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) \
++		_QueueList(group=3,songtree=1,tabicon="format-indent-more-symbolic",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) \
+ 		HBQueueStatut
+   HBQueueActions = VSeparator40 EditListButtons(group=3,small=1,relief=none)
+   HBQueueStatut =  QueueActions -Total3(size="small",group=3)
+diff --git a/layouts/shimmer.layout b/layouts/shimmer.layout
+index 1e544dfb..c6bee7d4 100644
+--- a/layouts/shimmer.layout
++++ b/layouts/shimmer.layout
+@@ -13,14 +13,14 @@ HBTop		= ABButtons _15VBPlayer 10ABToggle -5ABSettings
+ ABButtons	= (yalign=0,yscale=0.0) HBButtons
+ HBButtons	= Prev Play Next(click2=NextAlbum)
+ VBPlayer	= 1Filler0 HBTitle HBTimeSlider
+-HBTitle		= _Title(expand_max=500,markup="<big><b>%t</b></big> ",tip=_"Title: %t (Track No. %n)",yalign=0.5,ellipsize=end) LockAlbum(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") Album(tip=_"Album: %l (%Y)",expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0,ellipsize=end) LockArtist(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") Artist(tip=_"Artist: %a",expand_max=300,yalign=0.5,markup="<big> </big>%a",ellipsize=end) -Stars(yalign=0.5)
++HBTitle		= _Title(expand_max=500,markup="<big><b>%t</b></big> ",tip=_"Title: %t (Track No. %n)",yalign=0.5,ellipsize=end) LockAlbum(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") Album(tip=_"Album: %l (%Y)",expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0,ellipsize=end) LockArtist(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") Artist(tip=_"Artist: %a",expand_max=300,yalign=0.5,markup="<big> </big>%a",ellipsize=end) -Stars(yalign=0.5)
+ HBTimeSlider	= PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
+ ABToggle	= (yalign=0,yscale=0.0) HBToggle
+-HBToggle	= ToggleButton0(relief=none,size=large-toolbar,icon=gmb-view-list,widget=VPSongPlaylist,togglegroup=1,tip=_"Simple List View") ToggleButton1(relief=none,size=large-toolbar,icon=gmb-view-tree,widget=SongTree,togglegroup=1,tip=_"Songtree View") ToggleButton2(relief=none,size=large-toolbar,icon=gmb-view-mosaic,widget=FilterPane2,togglegroup=1,tip=_"Mosaic View") Fullscreen(stock=gmb-view-fullscreen,size=large-toolbar) 10Filler2 ABSearchBox
++HBToggle	= ToggleButton0(relief=none,size=large-toolbar,icon=view-list-symbolic,widget=VPSongPlaylist,togglegroup=1,tip=_"Simple List View") ToggleButton1(relief=none,size=large-toolbar,icon=sidebar-tree-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") ToggleButton2(relief=none,size=large-toolbar,icon=view-grid-symbolic,widget=FilterPane2,togglegroup=1,tip=_"Mosaic View") Fullscreen(stock=view-fullscreen-symbolic,size=large-toolbar) 10Filler2 ABSearchBox
+ ABSearchBox	= (yalign=0) SimpleSearch(suggest=1)
+ ABSettings	= (yalign=0,yscale=0.0) HBSettings
+ HBSettings	= ExtraButtons(size=large-toolbar) BMSettings
+-BMSettings	= (icon=gtk-preferences,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=gmb-equalizer) SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="gtk-preferences") MenuItem05(command=Quit,label=_"Quit",icon="gtk-quit")
++BMSettings	= (icon=gtk-preferences,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="gtk-preferences") MenuItem05(command=Quit,label=_"Quit",icon="gtk-quit")
+ SMLibrary	= (label=_"Library") MenuItem00(command="RunPerlCode(::ChooseAddPath(1,1))",label=_"Add Music",icon="gtk-add") MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="gtk-refresh")
+ ### main left: artist pane and album-cover ###
+ VBLeft		= _VBListCover HBStatus
+@@ -30,7 +30,7 @@ NBList		= (tabpos="bottom") QueueList(songtree=1,tabtitle=_"Queue (%n)",tabicon=
+ HBLyrics	= (tabtitle=_"Lyrics") _PluginLyrics
+ VBArtistinfo	= (tabtitle=_"Artist") _PluginArtistinfo
+ VBAlbuminfo	= (tabtitle=_"Album") _PluginAlbuminfo
+-HBStatus	= 3Total(noheader=1,format=short,relief=none,button=1,mode=library) -2Sort(button=1,tip=_"Right-click to toggle shuffle/random") -2Filter(button=1,tip=_"Right-click to remove filters") -2ToggleButton3(icon=gmb-picture,relief=none,size=menu,widget=Cover,tip=_"Show/Hide Cover")
++HBStatus	= 3Total(noheader=1,format=short,relief=none,button=1,mode=library) -2Sort(button=1,tip=_"Right-click to toggle shuffle/random") -2Filter(button=1,tip=_"Right-click to remove filters") -2ToggleButton3(icon=folder-pictures-symbolic,relief=none,size=menu,widget=Cover,tip=_"Show/Hide Cover")
+ ### main right: list/tree/mosaic widgets ###
+ VBRight		= _HBSongListtree Progress
+ HBSongListtree	= _SongTree(cols="playandqueueandtrack title length ratingpic",colwidth="artist 124 lastplay 107 length 49 playandqueue 19 playandqueueandtrack 20 playcount 22 ratingpic 100 title 390 titleaa 397 track 21",grouping="album|artistalbum_breadcrumbs(picsize=100)|disc|discleft(width=15)",follow=1,sort="year album disc track") _VPSongPlaylist _FilterPane2(nb=3,hidebb=1,pages=album,page_album/mode=mosaic,page_album/mmarkup=1,page_album/mpicsize=96,hidetabs=1)
+@@ -63,7 +63,7 @@ HBTop		= VBButtons _15VBPlayer -5VBSettings
+ VBButtons	= HBButtons 3Filler4
+ HBButtons	= Prev Play Next(click2=NextAlbum)
+ VBPlayer	= HBTitle VBTime
+-HBTitle		= Title(expand_max=300,markup="<big><b>%t</b></big> ",tip=_"Title: %t (Track No. %n)".if($track,pesc($track)),yalign=0.5,ellipsize=end) LockAlbum(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") Album(tip=_"Album: %l (%Y)",expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0,ellipsize=end) LockArtist(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") Artist(tip=_"Artist: %a",expand_max=200,yalign=0.5,markup="<big> </big>%a",ellipsize=end) -Stars(yalign=0.5)
++HBTitle		= Title(expand_max=300,markup="<big><b>%t</b></big> ",tip=_"Title: %t (Track No. %n)".if($track,pesc($track)),yalign=0.5,ellipsize=end) LockAlbum(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") Album(tip=_"Album: %l (%Y)",expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0,ellipsize=end) LockArtist(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") Artist(tip=_"Artist: %a",expand_max=200,yalign=0.5,markup="<big> </big>%a",ellipsize=end) -Stars(yalign=0.5)
+ VBTime		= _HBTimeSlider _SimpleSearch(suggest=1)
+ HBTimeSlider	= PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
+ VBSettings	= HBPrefSearch 5Filler5
+@@ -108,9 +108,9 @@ HPMain		= _FilterPane2(nb=3,hidebb=1,pages=album,page_album/mode=mosaic,page_alb
+ HBNowPlaying	= HBButtons 15Filler0 _HBTitle
+ HBButtons	= Prev Play Next
+ HBTitle		= Title(expand_max=300,ellipsize=end,markup="<big><b>%t</b></big> ",tip=_"Title: %t (Track No. %n)".if($track,pesc($track)),yalign=0.5) \
+-		  LockAlbum(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") \
++		  LockAlbum(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") \
+ 		  Album(tip=_"Album: %l (%Y)",ellipsize=end,expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0) \
+-		  LockArtist(stock="on:gmb-lock gmb-lockopen off:gmb-breadcrumb gmb-locklight") \
++		  LockArtist(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") \
+ 		  Artist(tip=_"Artist: %a",expand_max=200,yalign=0.5,ellipsize=end,markup="<big> </big>%a") \
+ 		  -ToggleButton1(size=button,relief=none,icon=gtk-find,widget=VBSidebar) \
+ 		  -20Stars(yalign=0.5)
+diff --git a/plugins/webcontext.pm b/plugins/webcontext.pm
+index 44595760..1416d187 100644
+--- a/plugins/webcontext.pm
++++ b/plugins/webcontext.pm
+@@ -120,7 +120,7 @@ our %Predefined =
+ our %Widgets=
+ (	PluginWebLyrics =>
+ 	{	class		=> 'GMB::Plugin::WebContext::Lyrics',
+-		tabicon		=> 'gmb-lyrics',		# no icon by that name by default
++		tabicon		=> 'format-text-bold-symbolic',
+ 		tabtitle	=> _"Lyrics",
+ 		schange		=> \&Update,
+ 		group		=> 'Play',
+
+From ce0a2da7aeb2302b888add21647cda705150525f Mon Sep 17 00:00:00 2001
+From: Darin <newhoa@protonmail.com>
+Date: Mon, 22 Jun 2020 01:31:32 -0400
+Subject: [PATCH 7/9] Gmusicbrowser now uses more symbolic system theme icons
+ where possible.
+
+---
+ gmusicbrowser_layout.pm |  4 ++--
+ layouts/shimmer.layout  | 18 +++++++++---------
+ 2 files changed, 11 insertions(+), 11 deletions(-)
+
+diff --git a/gmusicbrowser_layout.pm b/gmusicbrowser_layout.pm
+index 89a2fa5e..77abb553 100644
+--- a/gmusicbrowser_layout.pm
++++ b/gmusicbrowser_layout.pm
+@@ -55,7 +55,7 @@ our @MainMenu=
+ 	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'dialog-information-symbolic'},
+ 	{label => _"Switch to fullscreen mode",code => \&::ToggleFullscreenLayout, stockicon => 'view-fullscreen-symbolic'},
+ 	{label => _"About",		code => \&::AboutDialog,stockicon => 'help-about-symbolic' },
+-	{label => _"Quit",		code => \&::Quit,	stockicon => 'window-close-symbolic' },
++	{label => _"Quit",		code => \&::Quit,	stockicon => 'system-shutdown-symbolic' },
+ );
+ 
+ our %Widgets=
+@@ -135,7 +135,7 @@ our %Widgets=
+ 	},
+ 	Quit =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'window-close-symbolic',
++		stock	=> 'system-shutdown-symbolic',
+ 		tip	=> _"Quit",
+ 		activate=> \&::Quit,
+ 		click2	=> 'EnqueueAction(quit)',
+diff --git a/layouts/shimmer.layout b/layouts/shimmer.layout
+index c6bee7d4..5abd01a6 100644
+--- a/layouts/shimmer.layout
++++ b/layouts/shimmer.layout
+@@ -20,13 +20,13 @@ HBToggle	= ToggleButton0(relief=none,size=large-toolbar,icon=view-list-symbolic,
+ ABSearchBox	= (yalign=0) SimpleSearch(suggest=1)
+ ABSettings	= (yalign=0,yscale=0.0) HBSettings
+ HBSettings	= ExtraButtons(size=large-toolbar) BMSettings
+-BMSettings	= (icon=gtk-preferences,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="gtk-preferences") MenuItem05(command=Quit,label=_"Quit",icon="gtk-quit")
+-SMLibrary	= (label=_"Library") MenuItem00(command="RunPerlCode(::ChooseAddPath(1,1))",label=_"Add Music",icon="gtk-add") MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="gtk-refresh")
++BMSettings	= (icon=preferences-system-symbolic,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic") MenuItem05(command=Quit,label=_"Quit",icon="system-shutdown-symbolic")
++SMLibrary	= (label=_"Library") MenuItem00(command="RunPerlCode(::ChooseAddPath(1,1))",label=_"Add Music",icon="list-add-symbolic") MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="view-refresh-symbolic")
+ ### main left: artist pane and album-cover ###
+ VBLeft		= _VBListCover HBStatus
+ #VBListCover	= _NBList Cover(overlay=6x6:350x350:elementary/overlay.png,default=elementary/no-cover.svg,showcover=0) # uncomment this line to add overlay shadow
+ VBListCover	= _NBList 1Cover(default=elementary/no-cover.svg,showcover=0)
+-NBList		= (tabpos="bottom") QueueList(songtree=1,tabtitle=_"Queue (%n)",tabicon="",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1,hscrollbar=0) HBLyrics VBAlbuminfo VBArtistinfo
++NBList		= (tabpos="bottom") QueueList(songtree=1,tabtitle=_"Queue (%n)",tabicon="format-indent-more-symbolic",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1,hscrollbar=0) HBLyrics VBAlbuminfo VBArtistinfo
+ HBLyrics	= (tabtitle=_"Lyrics") _PluginLyrics
+ VBArtistinfo	= (tabtitle=_"Artist") _PluginArtistinfo
+ VBAlbuminfo	= (tabtitle=_"Album") _PluginAlbuminfo
+@@ -39,7 +39,7 @@ HBFilters	= _FilterPane3(nb=2,hidebb=1,page=genre,hidetabs=1) _FilterPane10(nb=3
+ HBSonglist	= _SongList(cols="playandqueue track title artist album year length playcount",sort=artist,colwidth="album 200 artist 200 file 400 lastplay 100 length 41 path 413 playandqueue 24 playcount 96 rating 80 title 270 track 21 year 31",follow=1,sort="year album disc track")
+ #VBMosaic	= FRToggleMosaic _VPMosaicAlbum _VPMosaicArtist
+ #FRToggleMosaic	= (shadow=in) HBToggleMosaicClose
+-#HBToggleMosaicClose = ABToggleMosaic -ToggleButton6(widget=FRToggleMosaic,label="",icon="gtk-close",tip=_"Hide Artist/Album bar")
++#HBToggleMosaicClose = ABToggleMosaic -ToggleButton6(widget=FRToggleMosaic,label="",icon="sidebar-hide-symbolic",tip=_"Hide Artist/Album bar")
+ #ABToggleMosaic	= (xalign=0.5,xscale=0.0) HBToggleMosaic
+ #HBToggleMosaic	= 3ToggleButton4(widget=VPMosaicAlbum,togglegroup=2,label=" Album ",relief=none) 3ToggleButton5(widget=VPMosaicArtist,togglegroup=2,label=" Artist ",relief=none)
+ #VPMosaicAlbum	= _FilterPane2(nb=3,hidebb=1,pages=album,page_album/mode=mosaic,page_album/mmarkup=1,page_album/mpicsize=96,hidetabs=1)
+@@ -67,10 +67,10 @@ HBTitle		= Title(expand_max=300,markup="<big><b>%t</b></big> ",tip=_"Title: %t (
+ VBTime		= _HBTimeSlider _SimpleSearch(suggest=1)
+ HBTimeSlider	= PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
+ VBSettings	= HBPrefSearch 5Filler5
+-HBPrefSearch	= ToggleButton0(size=large-toolbar,relief=none,icon=gtk-find,widget=SimpleSearch) ExtraButtons BMSettings
+-BMSettings	= (icon=gtk-preferences,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer") SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="gtk-preferences") MenuItem05(command=Quit,label=_"Quit",icon="gtk-quit")
+-SMLibrary	= (label=_"Library") MenuItem00(command="RunPerlCode(::ChooseAddPath(1,1))",label=_"Add Music",icon="gtk-add") MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="gtk-refresh")
+-NBList		= (tabpos="bottom") HBSongListtree QueueList(songtree=1,tabtitle=_"Queue (%n)",tabicon="",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) HBLyrics VBAbout
++HBPrefSearch	= ToggleButton0(size=large-toolbar,relief=none,icon=edit-find-symbolic,widget=SimpleSearch) ExtraButtons BMSettings
++BMSettings	= (icon=preferences-system-symbolic,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon="media-eq-symbolic") SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic") MenuItem05(command=Quit,label=_"Quit",icon="system-shutdown-symbolic")
++SMLibrary	= (label=_"Library") MenuItem00(command="RunPerlCode(::ChooseAddPath(1,1))",label=_"Add Music",icon="list-add-symbolic") MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="view-refresh-symbolic")
++NBList		= (tabpos="bottom") HBSongListtree QueueList(songtree=1,tabtitle=_"Queue (%n)",tabicon="format-indent-more-symbolic",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) HBLyrics VBAbout
+ HBLyrics	= (tabtitle=_"Lyrics") _PluginLyrics
+ VBAbout		= (tabtitle=_"Info") _PluginArtistinfo
+ HBSongListtree	= (tabtitle=_"Playlist") _SongTree(cols="playandqueueandtrack title length ratingpic",colwidth="artist 124 lastplay 107 length 49 playandqueue 19 playandqueueandtrack 20 playcount 22 ratingpic 100 title 390 titleaa 397 track 21",grouping="album|Compact(picsize=50)|disc|discleft(width=15)",follow=1,sort="year album disc track")
+@@ -112,7 +112,7 @@ HBTitle		= Title(expand_max=300,ellipsize=end,markup="<big><b>%t</b></big> ",tip
+ 		  Album(tip=_"Album: %l (%Y)",ellipsize=end,expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0) \
+ 		  LockArtist(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") \
+ 		  Artist(tip=_"Artist: %a",expand_max=200,yalign=0.5,ellipsize=end,markup="<big> </big>%a") \
+-		  -ToggleButton1(size=button,relief=none,icon=gtk-find,widget=VBSidebar) \
++		  -ToggleButton1(size=button,relief=none,icon=edit-find-symbolic,widget=VBSidebar) \
+ 		  -20Stars(yalign=0.5)
+ VBSidebar	= 4Filler1 7HBSearch _7HBQueue 4Filler2
+ HBQueue		= 14_QueueList(group=1,songtree=1,cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1)
+
+From a3202f35745b435e3db4e3b57bbc52aecbce97a7 Mon Sep 17 00:00:00 2001
+From: Darin <newhoa@protonmail.com>
+Date: Mon, 22 Jun 2020 01:58:21 -0400
+Subject: [PATCH 8/9] Gmusicbrowser now uses more symbolic system theme icons where possible.
+
+---
+
+diff --git a/gmusicbrowser_layout.pm b/gmusicbrowser_layout.pm
+index 77abb553..5745a7dd 100644
+--- a/gmusicbrowser_layout.pm
++++ b/gmusicbrowser_layout.pm
+@@ -50,9 +50,9 @@ our @MenuQueue=
+ 
+ our @MainMenu=
+ (	{label => _"Add files or folders",code => sub {::ChooseAddPath(0,1)},	stockicon => 'list-add-symbolic' },
+-	{label => _"Settings",		code => 'OpenPref',	stockicon => 'preferences-system-symbolic' },
+-	{label => _"Open Browser",	code => \&::OpenBrowser,stockicon => 'window-new-symbolic' },
+-	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'dialog-information-symbolic'},
++	{label => _"Settings",		code => 'OpenPref',	stockicon => 'emblem-system-symbolic' },
++	{label => _"Open Browser",	code => \&::OpenBrowser,stockicon => 'view-dual-symbolic' },
++	{label => _"Open Context window",code => \&::ContextWindow, stockicon => 'view-dual-symbolic'},
+ 	{label => _"Switch to fullscreen mode",code => \&::ToggleFullscreenLayout, stockicon => 'view-fullscreen-symbolic'},
+ 	{label => _"About",		code => \&::AboutDialog,stockicon => 'help-about-symbolic' },
+ 	{label => _"Quit",		code => \&::Quit,	stockicon => 'system-shutdown-symbolic' },
+@@ -103,7 +103,7 @@ our %Widgets=
+ 	{	class	=> 'Layout::Button',
+ 		oldopt1 => 'toggle',
+ 		options => 'toggle',
+-		stock	=> 'window-new-symbolic',
++		stock	=> 'view-dual-symbolic',
+ 		tip	=> _"Open Browser window",
+ 		activate=> sub { ::OpenSpecialWindow('Browser',$_[0]{toggle}); },
+ 		click3	=> sub { ::OpenSpecialWindow('Browser'); },
+@@ -112,7 +112,7 @@ our %Widgets=
+ 	{	class	=> 'Layout::Button',
+ 		oldopt1 => 'toggle',
+ 		options => 'toggle',
+-		stock	=> 'dialog-information-symbolic',
++		stock	=> 'help-about-symbolic',
+ 		tip	=> _"Open Context window",
+ 		activate=> sub { ::OpenSpecialWindow('Context',$_[0]{toggle}); },
+ 		click3	=> sub { ::OpenSpecialWindow('Context'); },
+@@ -126,7 +126,7 @@ our %Widgets=
+ 	},
+ 	Pref =>
+ 	{	class	=> 'Layout::Button',
+-		stock	=> 'preferences-system-symbolic',
++		stock	=> 'emblem-system-symbolic',
+ 		tip	=> _"Edit Settings",
+ 		text	=> _"Settings",
+ 		activate=> 'OpenPref',
+@@ -470,7 +470,7 @@ our %Widgets=
+ 		group	=> 'Play',
+ 		expander=> 1,
+ 		hide_empty => 1,
+-		tabicon	=> 'dialog-information-symbolic',
++		tabicon	=> 'help-about-symbolic',
+ 		tabtitle=> _"Song informations",
+ 	},
+ 	PictureBrowser=>
+diff --git a/gmusicbrowser_list.pm b/gmusicbrowser_list.pm
+index 2f9da582..e8afb858 100644
+--- a/gmusicbrowser_list.pm
++++ b/gmusicbrowser_list.pm
+@@ -88,7 +88,7 @@ sub make_sort_menu
+ 	    $menu->append($item);
+ 	}
+ 	my $itemEditSort= Gtk3::ImageMenuItem->new(_"Custom...");
+-	$itemEditSort->set_image( Gtk3::Image->new_from_stock('preferences-system-symbolic','menu') );
++	$itemEditSort->set_image( Gtk3::Image->new_from_stock('emblem-system-symbolic','menu') );
+ 	$itemEditSort->signal_connect (activate => sub
+ 	{	my $sort=::EditSortOrder($selfitem,$songlist->{sort});
+ 		$songlist->Sort($sort) if $sort;
+@@ -1751,7 +1751,7 @@ our @cMenu=
+ 	  submenu_ordered_hash => 1, submenu_reverse => 1,
+ 	  check => 'self/simplify',  istrue=>'folderview',
+ 	},
+-	{ label => _"Options", submenu => \@MenuPageOptions, stock => 'preferences-system-symbolic', isdefined => 'field' },
++	{ label => _"Options", submenu => \@MenuPageOptions, stock => 'emblem-system-symbolic', isdefined => 'field' },
+ 	{ label => _"Show buttons",	toggleoption => '!filterpane/hidebb',	code => sub { my $fp=$_[0]{filterpane}; $fp->{bottom_buttons}->set_visible(!$fp->{hidebb}); }, },
+ 	{ label => _"Show tabs",	toggleoption => '!filterpane/hidetabs',	code => sub { my $fp=$_[0]{filterpane}; $fp->{notebook}->set_show_tabs( !$fp->{hidetabs} ); }, },
+ );
+@@ -5398,7 +5398,7 @@ sub new					##currently the returned widget must be put in ->{isearchbox} of a p
+ 	my $close= $self->{close_button}= ::NewIconButton('window-close-symbolic', undef, \&close,'none');
+ 	my $label= Gtk3::Label->new(_"Find :");
+ 	my $options=Gtk3::Button->new;
+-	$options->add(Gtk3::Image->new_from_stock('preferences-system-symbolic','menu'));
++	$options->add(Gtk3::Image->new_from_stock('emblem-system-symbolic','menu'));
+ 	$options->signal_connect( button_press_event => \&PopupOpt );
+ 	$options->set_relief('none');
+ 	$options->set_tooltip_text(_"options");
+diff --git a/layouts/contrib.layout b/layouts/contrib.layout
+index cb3892f7..3be524b1 100644
+--- a/layouts/contrib.layout
++++ b/layouts/contrib.layout
+@@ -14,7 +14,7 @@ HPmain		= _HPpart
+ HPpart		= VBpart2 NBpart3
+ VBpart2		= HBSearch _VPcenter
+ NBpart3		= PluginLyrics(shadow=none,HideToolbar=1) QueueList(hideif=empty,songtree=1,cols="albumminipic titleaa length") PluginArtistinfo(tabtitle="Artist Info") VPAlbum
+-VPAlbum		= (tabtitle="Album") AABox(aa=album) _SongTree1(group=Play:artist)
++VPAlbum		= (tabtitle="Album",tabicon="folder-pictures-symbolic") AABox(aa=album) _SongTree1(group=Play:artist)
+ VPcenter	= _VBcenterdown
+ VBcenterdown	= _SongTree(grouping="artist|pic(myfont=Arial%20Italic%2018,picsize=20,showyear=)|album|pic(myfont=Arial%20Bold%2018,picsize=250,showyear=1)")
+ HBSearch	= SimpleSearch -Total
+@@ -41,7 +41,7 @@ HBtimebar		= Time(markup=%s,initsize="-XX:XX") _Scale LabelTime(markup='%m ')
+ HPmain		= _HPpart
+ HPpart			= VBpart2 NBpart3
+ VBpart2			= HBSearch _VPcenter
+-NBpart3			= PluginLyrics(shadow=none,HideToolbar=1) QueueList(hideif=empty,songtree=1,cols="albumminipic titleaa length") PluginArtistinfo(tabtitle="Artist Info") VPAlbum
++NBpart3			= PluginLyrics(shadow=none,HideToolbar=1) QueueList(hideif=empty,songtree=1,cols="albumminipic titleaa length") PluginArtistinfo(tabtitle="Artist Info",tabicon="folder-pictures-symbolic") VPAlbum
+ VPAlbum			= (tabtitle='Album') AABox(aa=album) _SongTree1(group=Play:artist)
+ VPcenter	= _VBcenterdown
+ VBcenterdown    = _SongTree(grouping="artist|pic(myfont=Arial%20Italic%2018,picsize=20,showyear=)|album|pic(myfont=Arial%20Bold%2018,picsize=600,showyear=1)" cols="Spacer playandqueueandtrack titleartist year length" )
+@@ -254,7 +254,7 @@ group
+ 		Queue(size=button,minwidth=34,maxwidth=34)  \
+ 
+ 		-Quit(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+-		-Pref(stock=preferences-system-symbolic,size=button,minwidth=34,maxwidth=34) \
++		-Pref(stock=emblem-system-symbolic,size=button,minwidth=34,maxwidth=34) \
+ 		-HSeparator2 \
+ 		#-MBLayouts \
+ 		-HSeparator3 \
+@@ -302,19 +302,19 @@ HBSettings	= \
+ 	ToggleButton11(relief=none,size=menu,icon=media-optical-symbolic,widget=VBLeft,tip=_"Library") \
+ 	ToggleButton12(relief=none,size=menu,icon=system-users-symbolic,widget=VBArtist,tip=_"Artists") \
+ 	ToggleButton13(relief=none,size=menu,icon=format-indent-more-symbolic,widget=VBQueue,tip=_"Queue") \
+-	ToggleButton14(relief=none,size=menu,icon=dialog-information-symbolic,widget=Context,tip=_"Context") \
++	ToggleButton14(relief=none,size=menu,icon=help-about-symbolic,widget=Context,tip=_"Context") \
+ 	VSeparator4 \
+ 	ExtraButtons(size=large-toolbar) \
+ 	BMSettings \
+ 	Quit2(size=large-toolbar,minwidth=34,maxwidth=34,tip=_"Quit")
+-BMSettings	= (icon=preferences-system-symbolic,size="large-toolbar") \
++BMSettings	= (icon=emblem-system-symbolic,size="large-toolbar") \
+ 	SMLibrary \
+ 	LayoutItem \
+ 	PlayItem \
+ 	SeparatorMenuItem01 \
+ 	MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) \
+ 	SeparatorMenuItem20 \
+-	MenuItem14(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic") \
++	MenuItem14(command=OpenPref,label=_"Settings",icon="emblem-system-symbolic") \
+ 	MenuItem05(command=Quit,label=_"Quit",icon="window-close-symbolic")
+ SMLibrary	= (label=_"Library") \
+ 	MenuItem00(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
+@@ -352,8 +352,8 @@ ABToggle	= (yalign=0,yscale=0.0) HBToggle
+ HBToggle	= \
+ 	ToggleButton31(relief=none,size=menu,icon=folder-pictures-symbolic,widget=VPMosaic,tip=_"Albums") \
+ 	VSeparator5 \
+-	ToggleButton32(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
+-	ToggleButton33(relief=none,size=menu,icon=sidebar-tree-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
++	ToggleButton32(relief=none,size=menu,icon=view-dual-symbolic,widget=HBSongPlaylist,togglegroup=1,tip=_"Simple List View") \
++	ToggleButton33(relief=none,size=menu,icon=view-list-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") \
+ 	VSeparator6 \
+ 	ToggleButton34(relief=none,size=menu,icon=edit-find-symbolic,widget=ABSearchBox2,tip=_"Search") \
+ 	_ABSearchBox2 \
+@@ -413,7 +413,7 @@ VBMain = HBMenu 1Filler2 _HBMainContainer 1Filler3
+ 			_VBVolume \
+ 
+ 			-Quit(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+-			-Pref(stock=preferences-system-symbolic,size=button,minwidth=34,maxwidth=34) \
++			-Pref(stock=emblem-system-symbolic,size=button,minwidth=34,maxwidth=34) \
+ 			-Button1(click1="RunPerlCode(::ChooseAddPath(0,1))",stock=folder-new-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"Add folder ...") \
+ 			-Button2(click1="RunPerlCode(::IdleCheck)",stock=view-refresh-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"check now") \
+ 			-Button3(click1="RunPerlCode(::IdleScan)",stock=zoom-in-symbolic,size=button,minwidth=34,maxwidth=34,tip=_"scan now")	\
+@@ -570,11 +570,11 @@ VBButtons	= VBPlayingControls _VBVolume VBPanelsControls
+ VBPlayingControls	= Prev(size=button) Play(size=button) Next(click2=NextAlbum,size=button)
+ VBVolume 	= VolumeIcon(button=1,click2=mute,tip=_"Left-clic or scrollwheel to change, right-click to mute") _VolumeSlider
+ VBPanelsControls = \
+-	ToggleButton31(icon=dialog-information-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
++	ToggleButton31(icon=help-about-symbolic,relief=none,size=menu,widget=Context,tip=_"Context") \
+ 	-Quit2(size=button,minwidth=34,maxwidth=34,tip=_"Quit") \
+ 	-BMSettings \
+ 	-ExtraButtons(size=button)
+-BMSettings	= (icon=preferences-system-symbolic,size="button") \
++BMSettings	= (icon=emblem-system-symbolic,size="button") \
+ 	SMLibrary \
+ 	LayoutItem \
+ 	PlayItem \
+@@ -589,7 +589,7 @@ SMLibrary	= (label=_"Library") \
+ 	MenuItem22(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-symbolic") \
+ 	MenuItem23(command="RunPerlCode(::IdleCheck)",label=_"Check Collection",icon="zoom-in-symbolic")
+ SMViews = (label="Show/Hide") \
+-			     MenuItem31(togglewidget=HBLeft,label=_"Library",icon="window-new-symbolic") \
++			     MenuItem31(togglewidget=HBLeft,label=_"Library",icon="view-dual-symbolic") \
+ 			    MenuItem32(togglewidget=VBQueue,label=_"Queue",icon="format-indent-more-symbolic") \
+ 			    MenuItem34(togglewidget=VPMosaic,label=_"Albums",icon="folder-pictures-symbolic") \
+ 			    MenuItem35(togglewidget=ABSearchBox,label=_"Search",icon="edit-find-symbolic")
+@@ -721,15 +721,15 @@ HBTop		=  HBCover VBButtons _15VBPlayer(yalign=0.5) VBSettings(yalign=0.5)
+ 		_Filler91
+       HBVolume	= VolumeIcon(button=1,size=large-toolbar,click2=mute,tip=_"Scrollwheel to change, right-click to mute")
+ 
+-      HBButtonContext = ToggleButton24(relief=none,size=menu,icon=dialog-information-symbolic,widget=NBContextMain,tip=_"Open context & queue panel")
+-      BMSettings = (icon=preferences-system-symbolic,size=large-toolbar) \
++      HBButtonContext = ToggleButton24(relief=none,size=menu,icon=help-about-symbolic,widget=NBContextMain,tip=_"Open context & queue panel")
++      BMSettings = (icon=emblem-system-symbolic,size=large-toolbar) \
+ 		SMLibrary \
+ 		LayoutItem \
+ 		PlayItem \
+ 		SeparatorMenuItem02 \
+ 		MenuItem03(click1=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) \
+ 		SeparatorMenuItem03 \
+-		MenuItem04(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic")
++		MenuItem04(command=OpenPref,label=_"Settings",icon="emblem-system-symbolic")
+ 	SMLibrary = (label=_"Library") \
+ 		MenuItem10(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Music",icon="folder-new-symbolic") \
+ 		MenuItem11(command="RunPerlCode(::IdleScan)",label=_"Scan Collection",icon="view-refresh-sybolic") \
+@@ -738,7 +738,7 @@ HBTop		=  HBCover VBButtons _15VBPlayer(yalign=0.5) VBSettings(yalign=0.5)
+ #### Right main panel
+ HPRight 	= _VBSongStatus _NBContextMain
+ ##### Library
+-VBSongStatus 	= (tabtitle=_"Library",tabicon="window-new-symbolic") _VBMosaicSongList HBTotal
++VBSongStatus 	= (tabtitle=_"Library",tabicon="view-dual-symbolic") _VBMosaicSongList HBTotal
+   VBMosaicSongList = _HBSongListtree
+     HBSongListtree =  \
+ 		_SongTree(cols="playandqueueandtrack title length playcount genre",colwidth="artist 124 lastplay 107 length 49 playandqueue 19 playandqueueandtrack 20 playcount 22 title 344 titleaa 397 track 21",grouping="album|artistalbum_breadcrumbs(picsize=100)|disc|discleft(width=15)",follow=1,sort="year album disc track") \
+@@ -748,8 +748,8 @@ VBSongStatus 	= (tabtitle=_"Library",tabicon="window-new-symbolic") _VBMosaicSon
+       HBMosaic = _FilterPane4(nb=4,hidebb=1,pages=album,page_album/mode=mosaic,page_album/mmarkup=1,page_album/mpicsize=72,hidetabs=1)
+       HBTotal = _HBToggle HBStatutSongList
+ 	HBToggle = \
+-		ToggleButton30(relief=none,size=menu,icon=view-list-symbolic,widget=HBSongPlaylist,togglegroup=30,tip=_"Simple List View") \
+-		ToggleButton31(relief=none,size=menu,icon=sidebar-tree-symbolic,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
++		ToggleButton30(relief=none,size=menu,icon=view-dual-symbolic,widget=HBSongPlaylist,togglegroup=30,tip=_"Simple List View") \
++		ToggleButton31(relief=none,size=menu,icon=view-list-symbolic,widget=SongTree,togglegroup=30,tip=_"Songtree View") \
+ 		ToggleButton32(relief=none,size=menu,icon=view-grid-symbolic,widget=HBMosaic,togglegroup=30,tip=_"Mosaic View") \
+ 		VSeparator30 \
+ 		Sort(button=1,size=menu,tip=_"Right-click to toggle shuffle/random") \
+@@ -772,7 +772,7 @@ VBQueue 	= (tabtitle=_"Queue",tabicon="format-indent-more-symbolic")  \
+ 
+ ##### Other context
+ 
+-NBContext	= (tabtitle=_"More info",tabicon="dialog-information-symbolic",tabpos=left90) @same_artist @song_info
++NBContext	= (tabtitle=_"More info",tabicon="help-about-symbolic",tabpos=left90) @same_artist @song_info
+ 
+ 
+ 
+diff --git a/layouts/makeitlooklike.layout b/layouts/makeitlooklike.layout
+index 4bd29f65..c6e14069 100644
+--- a/layouts/makeitlooklike.layout
++++ b/layouts/makeitlooklike.layout
+@@ -51,7 +51,7 @@ VBMain = HBMenubar _HPSidebarCenter HBStatusbar
+                 MenuItem10(command=EnqueueSelected,label=_"Queue",icon="format-indent-more-symbolic") \
+                 # MenuItem11(command=,label=_"Add to playlist") \ \
+                 SeparatorMenuItem10 \
+-                MenuItem14(command=OpenPref,label=_"Preferences",icon="preferences-system-symbolic")
++                MenuItem14(command=OpenPref,label=_"Preferences",icon="emblem-system-symbolic")
+ 
+             # SMView menu for common mode
+             SMView2 = (label=_"View") \
+@@ -62,11 +62,11 @@ VBMain = HBMenubar _HPSidebarCenter HBStatusbar
+ 
+             SMControl3 = (label=_"Tools") \
+                 MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="view-refresh-symbolic") \
+-                MenuItem33(command="OpenSongProp",label=_"Track Properties",icon="preferences-system-symbolic") \
++                MenuItem33(command="OpenSongProp",label=_"Track Properties",icon="emblem-system-symbolic") \
+                 MenuItem34(click1=OpenCustom(Equalizer),label=_"Equalizer")
+ 
+             SMHelp4 = (label=_"Help") \
+-                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="dialog-information-symbolic")
++                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
+ 
+     HPSidebarCenter = VBSidebar VBCenter
+ 
+@@ -272,13 +272,13 @@ VBMain = HBMenubar HBToolbar VBSliderbar _HPSidebarCenterContext HBStatusbar
+                 MenuItem34(command=DecVolume,label=_"Decrease volume")
+ 
+             SMHelp4 = (label=_"Help") \
+-                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="dialog-information-symbolic")
++                MenuItem41(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
+ 
+     HBToolbar = Play Prev Next \
+         3VSeparator1 \
+         Sort(button=1,relief=none,minwidth=35) \
+         ToggleButton4(relief=none,minwidth=35,size=button,icon=edit-find-symbolic,widget=HBFilters,tip=_"Show/Hide Browser") \
+-        ToggleButton5(relief=none,minwidth=35,size=button,icon=dialog-information-symbolic,widget=Context,tip=_"Change the context visibility") \
++        ToggleButton5(relief=none,minwidth=35,size=button,icon=help-about-symbolic,widget=Context,tip=_"Change the context visibility") \
+         -HBVolume
+ 
+         HBVolume = VolumeIcon(size=menu,button=1)
+@@ -416,7 +416,7 @@ VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
+ #                    MenuItem11(command=,label=_"Open files") \
+                      MenuItem13(command="RunPerlCode(::ChooseAddPath(0,1))",label=_"Add Files ...") \
+ #                    SeparatorMenuItem11 \
+-                    MenuItem15(command=OpenPref,label=_"Preferences",icon="preferences-system-symbolic") \
++                    MenuItem15(command=OpenPref,label=_"Preferences",icon="emblem-system-symbolic") \
+                     MenuItem16(command=Quit,label=_"Quit",icon="window-close-symbolic")
+ 
+                 SMMenu2 = (label=_"Playback") \
+@@ -426,7 +426,7 @@ VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
+                     MenuItem28(command=PrevSong,label=_"Previous",icon="media-skip-backward-symbolic") \
+                     MenuItem29(command=NextSong,label=_"Next",icon="media-skip-forward-symbolic") \
+                     SeparatorMenuItem215 \
+-                    MenuItem215(command="OpenSongProp",label=_"Show song details",icon="preferences-system-symbolic")
++                    MenuItem215(command="OpenSongProp",label=_"Show song details",icon="emblem-system-symbolic")
+ 
+                 SMMenu3 = (label=_"Playlist") \
+                     LSortItem \
+@@ -449,7 +449,7 @@ VBMain = HBMenubar HBToolbar _HBPlaylist HBSonginfo 3HBStatusbar
+                     MenuItem64(togglewidget=HBStatusbar,label=_"Show status bar",resize="")
+ 
+                 SMMenu7 = (label=_"Help") \
+-                    MenuItem71(command="RunPerlCode(::AboutDialog)",label=_"About",icon="dialog-information-symbolic")
++                    MenuItem71(command="RunPerlCode(::AboutDialog)",label=_"About",icon="help-about-symbolic")
+ 
+ 
+ 
+diff --git a/layouts/pages.layout b/layouts/pages.layout
+index 46550f0a..ea28c7c4 100644
+--- a/layouts/pages.layout
++++ b/layouts/pages.layout
+@@ -25,6 +25,7 @@ Title= _"Artist"
+ Type= P
+ Name= _"Same year"
+ VBmain = _SongTree(group=Play:year)
++Icon=alarm-symbolic
+ Title= _"Year"
+ 
+ [search_page]
+@@ -39,5 +40,5 @@ Type= P
+ Name= _"Song informations"
+ Title= _"Info"
+ VBmain=  _SongInfo
+-Icon=dialog-information-symbolic
++Icon=help-about-symbolic
+ 
+diff --git a/layouts/shimmer.layout b/layouts/shimmer.layout
+index 5abd01a6..92b9fd9d 100644
+--- a/layouts/shimmer.layout
++++ b/layouts/shimmer.layout
+@@ -16,11 +16,11 @@ VBPlayer	= 1Filler0 HBTitle HBTimeSlider
+ HBTitle		= _Title(expand_max=500,markup="<big><b>%t</b></big> ",tip=_"Title: %t (Track No. %n)",yalign=0.5,ellipsize=end) LockAlbum(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") Album(tip=_"Album: %l (%Y)",expand_max=200,yalign=0.5,markup="<big> </big>%l ",showcover=0,ellipsize=end) LockArtist(stock="on:channel-secure-symbolic channel-secure-symbolic off:gmb-breadcrumb channel-secure-symbolic") Artist(tip=_"Artist: %a",expand_max=300,yalign=0.5,markup="<big> </big>%a",ellipsize=end) -Stars(yalign=0.5)
+ HBTimeSlider	= PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
+ ABToggle	= (yalign=0,yscale=0.0) HBToggle
+-HBToggle	= ToggleButton0(relief=none,size=large-toolbar,icon=view-list-symbolic,widget=VPSongPlaylist,togglegroup=1,tip=_"Simple List View") ToggleButton1(relief=none,size=large-toolbar,icon=sidebar-tree-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") ToggleButton2(relief=none,size=large-toolbar,icon=view-grid-symbolic,widget=FilterPane2,togglegroup=1,tip=_"Mosaic View") Fullscreen(stock=view-fullscreen-symbolic,size=large-toolbar) 10Filler2 ABSearchBox
++HBToggle	= ToggleButton0(relief=none,size=large-toolbar,icon=view-dual-symbolic,widget=VPSongPlaylist,togglegroup=1,tip=_"Simple List View") ToggleButton1(relief=none,size=large-toolbar,icon=view-list-symbolic,widget=SongTree,togglegroup=1,tip=_"Songtree View") ToggleButton2(relief=none,size=large-toolbar,icon=view-grid-symbolic,widget=FilterPane2,togglegroup=1,tip=_"Mosaic View") Fullscreen(stock=view-fullscreen-symbolic,size=large-toolbar) 10Filler2 ABSearchBox
+ ABSearchBox	= (yalign=0) SimpleSearch(suggest=1)
+ ABSettings	= (yalign=0,yscale=0.0) HBSettings
+ HBSettings	= ExtraButtons(size=large-toolbar) BMSettings
+-BMSettings	= (icon=preferences-system-symbolic,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic") MenuItem05(command=Quit,label=_"Quit",icon="system-shutdown-symbolic")
++BMSettings	= (icon=open-menu-symbolic,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon=media-eq-symbolic) SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="emblem-system-symbolic") MenuItem05(command=Quit,label=_"Quit",icon="system-shutdown-symbolic")
+ SMLibrary	= (label=_"Library") MenuItem00(command="RunPerlCode(::ChooseAddPath(1,1))",label=_"Add Music",icon="list-add-symbolic") MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="view-refresh-symbolic")
+ ### main left: artist pane and album-cover ###
+ VBLeft		= _VBListCover HBStatus
+@@ -68,7 +68,7 @@ VBTime		= _HBTimeSlider _SimpleSearch(suggest=1)
+ HBTimeSlider	= PlayingTime(markup="%s",initsize="XX:XX",xalign=0) _TimeSlider(direct_mode=1) -Length(markup="$length",initsize="XX:XX",xalign=1)
+ VBSettings	= HBPrefSearch 5Filler5
+ HBPrefSearch	= ToggleButton0(size=large-toolbar,relief=none,icon=edit-find-symbolic,widget=SimpleSearch) ExtraButtons BMSettings
+-BMSettings	= (icon=preferences-system-symbolic,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon="media-eq-symbolic") SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="preferences-system-symbolic") MenuItem05(command=Quit,label=_"Quit",icon="system-shutdown-symbolic")
++BMSettings	= (icon=open-menu-symbolic,size="large-toolbar") SMLibrary LayoutItem PlayItem SeparatorMenuItem01 MenuItem34(command=OpenCustom(Equalizer),label=_"Equalizer",icon="media-eq-symbolic") SeparatorMenuItem20 MenuItem14(command=OpenPref,label=_"Settings",icon="emblem-system-symbolic") MenuItem05(command=Quit,label=_"Quit",icon="system-shutdown-symbolic")
+ SMLibrary	= (label=_"Library") MenuItem00(command="RunPerlCode(::ChooseAddPath(1,1))",label=_"Add Music",icon="list-add-symbolic") MenuItem32(command="RunPerlCode(::IdleScan)",label=_"Rescan Collection",icon="view-refresh-symbolic")
+ NBList		= (tabpos="bottom") HBSongListtree QueueList(songtree=1,tabtitle=_"Queue (%n)",tabicon="format-indent-more-symbolic",cols="queuenumber titleaa",colwidth="queuenumber 20 titleaa 248",showbb=1) HBLyrics VBAbout
+ HBLyrics	= (tabtitle=_"Lyrics") _PluginLyrics
+
+--- a/gmusicbrowser.pl	2020-11-19 19:08:43.000000000 +0300
++++ b/gmusicbrowser.pl	2021-04-30 20:25:19.978007306 +0300
+@@ -573,14 +573,14 @@
+ # autofill : indicate that this mode use the maxautofill value
+ # can_next : this mode can be use with $NextAction
+ our %QActions=
+-(	''	=> {order=>0,				short=> _"normal",		long=> _"Normal mode", can_next=>1, },
+-	autofill=> {order=>10, icon=>'gtk-refresh',	short=> _"autofill",		long=> _"Auto-fill queue",					changed=>\&QAutoFill,	 keep=>1,save=>1,autofill=>1, },
+-	'wait'	=> {order=>20, icon=>'gmb-wait',	short=> _"wait for more",	long=> _"Wait for more when queue empty",	action=>\&Stop,	changed=>\&QWaitAutoPlay,keep=>1,save=>1, },
+-	stop	=> {order=>30, icon=>'gtk-media-stop',	short=> _"stop",		long=> _"Stop when queue empty",		action=>\&Stop,
++(	''	=> {order=>0,						short=> _"normal",		long=> _"Normal mode", can_next=>1, },
++	autofill=> {order=>10, icon=>'view-refresh-symbolic',		short=> _"autofill",		long=> _"Auto-fill queue",					changed=>\&QAutoFill,	 keep=>1,save=>1,autofill=>1, },
++	'wait'	=> {order=>20, icon=>'preferences-system-time-symbolic',	short=> _"wait for more",	long=> _"Wait for more when queue empty",	action=>\&Stop,	changed=>\&QWaitAutoPlay,keep=>1,save=>1, },
++	stop	=> {order=>30, icon=>'media-playback-stop-symbolic',	short=> _"stop",		long=> _"Stop when queue empty",		action=>\&Stop,
+ 			can_next=>1, long_next=>_"Stop after this song", },
+-	quit	=> {order=>40, icon=>'gtk-quit',	short=> _"quit",		long=> _"Quit when queue empty",		action=>\&Quit,
++	quit	=> {order=>40, icon=>'system-shutdown-symbolic',		short=> _"quit",		long=> _"Quit when queue empty",		action=>\&Quit,
+ 			can_next=>1, long_next=>_"Quit after this song"},
+-	turnoff => {order=>50, icon=>'gmb-turnoff',	short=> _"turn off",		long=> _"Turn off computer when queue empty", 	action=>sub {Stop(); TurnOff();},
++	turnoff => {order=>50, icon=>'system-shutdown-symbolic',		short=> _"turn off",		long=> _"Turn off computer when queue empty", 	action=>sub {Stop(); TurnOff();},
+ 			condition=> sub { $::Options{Shutdown_cmd} }, can_next=>1, long_next=>_"Turn off computer after this song"},
+ );
+ 
+@@ -636,7 +636,7 @@
+ our @submenuRemove=
+ (	{ label => sub {$_[0]{mode} eq 'Q' ? _"Remove from queue" : $_[0]{mode} eq 'A' ? _"Remove from playlist" : _"Remove from list"},	code => sub { $_[0]{self}->RemoveSelected; }, mode => 'BLQA', istrue=> 'allowremove', },
+ 	{ label => _"Remove from library",	code => sub { SongsRemove($_[0]{IDs}); }, },
+-	{ label => _"Remove from disk",		code => sub { DeleteFiles($_[0]{IDs}); },	test => sub {!$CmdLine{ro}},	stockicon => 'gtk-delete' },
++	{ label => _"Remove from disk",		code => sub { DeleteFiles($_[0]{IDs}); },	test => sub {!$CmdLine{ro}},	stockicon => 'edit-delete-symbolic' },
+ );
+ our @submenuQueue=
+ (	{ label => _"Prepend",			code => sub {  QueueInsert( @{ $_[0]{IDs} } ); }, },
+@@ -646,47 +646,42 @@
+ #modes : S:Search, B:Browser, Q:Queue, L:List, P:Playing song in the player window, F:Filter Panels (submenu "x songs")
+ our @SongCMenu;
+ unshift @SongCMenu,  #unshift instead of "=" because the replaygain submenu (and maybe more in the future) has already been added to @::SongCMenu
+-(	{ label => _"Song Properties",	code => sub { DialogSongProp (@{ $_[0]{IDs} }); },	onlyone => 'IDs', stockicon => 'gtk-edit' },
+-	{ label => _"Songs Properties",	code => sub { DialogSongsProp(@{ $_[0]{IDs} }); },	onlymany=> 'IDs', stockicon => 'gtk-edit' },
++(	{ label => _"Song Properties...",	code => sub { DialogSongProp (@{ $_[0]{IDs} }); },	onlyone => 'IDs', stockicon => 'document-edit-symbolic' },
++	{ label => _"Songs Properties...",	code => sub { DialogSongsProp(@{ $_[0]{IDs} }); },	onlymany=> 'IDs', stockicon => 'document-edit-symbolic' },
+ 	{ label => _"Play Only Selected",code => sub { Select(song => 'first', play => 1, staticlist => $_[0]{IDs} ); },
+-		onlymany => 'IDs', 	stockicon => 'gtk-media-play'},
++		onlymany => 'IDs', 	stockicon => 'media-playback-start-symbolic'},
+ 	{ label => _"Play Only Displayed",code => sub { Select(song => 'first', play => 1, staticlist => \@{$_[0]{listIDs}} ); },
+-		test => sub { @{$_[0]{IDs}}<2 }, notmode => 'A',	onlymany => 'listIDs',	stockicon => 'gtk-media-play' },
++		test => sub { @{$_[0]{IDs}}<2 }, notmode => 'A',	onlymany => 'listIDs',	stockicon => 'media-playback-start-symbolic' },
+ 	{ label => _"Append to playlist",code => sub { ::DoActionForList('addplay',$_[0]{IDs}); },
+ 		notempty => 'IDs',	test => sub { $::ListMode }, },
+ 	{ label => _"Enqueue Selected",		code => sub { Enqueue(@{ $_[0]{IDs} }); },	submenu3=> \@submenuQueue,
+-		notempty => 'IDs', notmode => 'QP', stockicon => 'gmb-queue' },
++		notempty => 'IDs', notmode => 'QP', stockicon => 'format-indent-more-symbolic' },
+ 	{ label => _"Enqueue Displayed",	code => sub { Enqueue(@{ $_[0]{listIDs} }); },
+-		empty => 'IDs',	notempty=> 'listIDs', notmode => 'QP', stockicon => 'gmb-queue' },
++		empty => 'IDs',	notempty=> 'listIDs', notmode => 'QP', stockicon => 'format-indent-more-symbolic' },
+ 	{ label => _"Add to list",	submenu => \&AddToListMenu,	notempty => 'IDs' },
+ 	# edit submenu for label-type fields
+-	{ label => sub { Songs::Field_Edit_string($_[0]{field}); },	notempty => 'IDs',
++	{ label => sub { Songs::Field_Edit_string($_[0]{field}); },	stockicon => 'edit-symbolic',	notempty => 'IDs',
+ 	  submenu=>sub { LabelEditMenu($_[0]{field},$_[0]{IDs}); },
+ 	  foreach=>sub { 'field', Songs::FieldList(true=>'editsubmenu',type=>'flags'); }, },
+ 	# edit submenu for rating-type fields
+-	{ label => sub { Songs::Field_Edit_string($_[0]{field}); },	notempty => 'IDs',
++	{ label => sub { Songs::Field_Edit_string($_[0]{field}); },	stockicon => 'edit-symbolic',	notempty => 'IDs',
+ 	  submenu=>sub { Stars::createmenu($_[0]{field},$_[0]{IDs}); },
+ 	  foreach=>sub { 'field', Songs::FieldList(true=>'editsubmenu',type=>'rating'); }, },
+-	{ label => _"Find songs with the same names",	code => sub { SearchSame('title',$_[0]) },	mode => 'B',	notempty => 'IDs' },
+-	{ label => _"Find songs with same artists",	code => sub { SearchSame('artists',$_[0])},	mode => 'B',	notempty => 'IDs' },
+-	{ label => _"Find songs in same albums",	code => sub { SearchSame('album',$_[0]) },	mode => 'B',	notempty => 'IDs' },
+-	{ label => sub { __x(_"Find songs with the same {field}", field=>Songs::FieldName($_[0]{field})); },
+-	  code  => sub { SearchSame($_[0]{field},$_[0]); },
+-	  foreach=>sub { 'field', Songs::FieldList(true=>'samemenu',); },				mode => 'B',	notempty => 'IDs' },
+-	{ label => _"Rename file",	code => sub { DialogRename(	@{ $_[0]{IDs} }); },	onlyone => 'IDs',	test => sub {!$CmdLine{ro}}, },
+-	{ label => _"Mass Rename",	code => sub { DialogMassRename(	@{ $_[0]{IDs} }); },	onlymany=> 'IDs',	test => sub {!$CmdLine{ro}}, },
+-	{ label => _"Copy",	code => sub { CopyMoveFilesDialog($_[0]{IDs},TRUE); },
+-		notempty => 'IDs',	stockicon => 'gtk-copy', notmode => 'P' },
+-	{ label => _"Move",	code => sub { CopyMoveFilesDialog($_[0]{IDs},FALSE); },
+-		notempty => 'IDs',	notmode => 'P',	test => sub {!$CmdLine{ro}}, },
+-	#{ label => sub {'Remove from '.($_[0]{mode} eq 'Q' ? 'queue' : 'this list')}, code => sub { $_[0]{self}->RemoveSelected; },	stockicon => 'gtk-remove',	notempty => 'IDs', mode => 'LQ' }, #FIXME
+-	{ label => _"Remove",	submenu => \@submenuRemove,	stockicon => 'gtk-remove',	notempty => 'IDs',	notmode => 'P' },
+-	{ label => _"Re-read tags",	code => sub { ReReadTags(@{ $_[0]{IDs} }); },
+-		notempty => 'IDs',	notmode => 'P',	stockicon => 'gtk-refresh' },
++	{ label => _"Find songs with the same names",	code => sub { SearchSame('title',$_[0]) },	stockicon => 'edit-find-symbolic',	mode => 'B',	notempty => 'IDs' },
++	{ label => _"Find songs with same artists",	code => sub { SearchSame('artists',$_[0])},	stockicon => 'edit-find-symbolic',	mode => 'B',	notempty => 'IDs' },
++	{ label => _"Find songs in same albums",	code => sub { SearchSame('album',$_[0]) },	stockicon => 'edit-find-symbolic',	mode => 'B',	notempty => 'IDs' },
++	{ label => _"Rename file...",	code => sub { DialogRename(	@{ $_[0]{IDs} }); },	stockicon => 'edit-symbolic',	onlyone => 'IDs',	test => sub {!$CmdLine{ro}}, },
++	{ label => _"Mass Rename...",	code => sub { DialogMassRename(	@{ $_[0]{IDs} }); },	stockicon => 'edit-symbolic',	onlymany=> 'IDs',	test => sub {!$CmdLine{ro}}, },
++	{ label => _"Copy...",	code => sub { CopyMoveFilesDialog($_[0]{IDs},TRUE); },
++		notempty => 'IDs',	stockicon => 'edit-copy-symbolic', notmode => 'P' },
++	{ label => _"Move...",	code => sub { CopyMoveFilesDialog($_[0]{IDs},FALSE); },	stockicon => 'edit-cut-symbolic',	notempty => 'IDs',	notmode => 'P',	test => sub {!$CmdLine{ro}}, },
++	#{ label => sub {'Remove from '.($_[0]{mode} eq 'Q' ? 'queue' : 'this list')}, code => sub { $_[0]{self}->RemoveSelected; },	stockicon => 'list-remove-symbolic',	notempty => 'IDs', mode => 'LQ' }, #FIXME
++	{ label => _"Remove",	submenu => \@submenuRemove,	stockicon => 'list-remove-symbolic',	notempty => 'IDs',	notmode => 'P' },
++	{ label => _"Re-read tags",	code => sub { ReReadTags(@{ $_[0]{IDs} }); },	stockicon => 'view-refresh-symbolic',		notempty => 'IDs',	notmode => 'P',	notmode => 'P'},
+ 	{ label => _"Same Title",     submenu => sub { ChooseSongsTitle(	$_[0]{IDs}[0] ); },	mode => 'P' },
+ 	{ label => _"Edit Lyrics",	code => sub { EditLyrics(	$_[0]{IDs}[0] ); },	mode => 'P' },
+ 	{ label => _"Lookup in google",	code => sub { Google(		$_[0]{IDs}[0] ); },	mode => 'P' },
+-	{ label => _"Open containing folder",	code => sub { openfolder( Songs::Get( $_[0]{IDs}[0], 'path') ); },	onlyone => 'IDs' },
++	{ label => _"Open containing folder",	stockicon => 'folder-open-symbolic',	code => sub { openfolder( Songs::Get( $_[0]{IDs}[0], 'path') ); },	onlyone => 'IDs' },
+ 	{ label => _"Queue options", submenu => \@Layout::MenuQueue, mode => 'Q', }
+ );
+ our @cMenuAA=
+@@ -696,27 +691,27 @@
+ 	{ label => _"Lookup in AMG",	code => sub { AMGLookup( $_[0]{mainfield}, $_[0]{aaname} ); },
+ 	  test => sub { $_[0]{mainfield} =~m/^album$|^artist$|^title$/; },
+ 	},
+-	{ label => _"Filter",		code => sub { Select(filter => Songs::MakeFilterFromGID($_[0]{field},$_[0]{gid})); },	stockicon => 'gmb-filter', mode => 'P' },
++	{ label => _"Filter",		code => sub { Select(filter => Songs::MakeFilterFromGID($_[0]{field},$_[0]{gid})); },	stockicon => 'view-list-symbolic', mode => 'P' },
+ 	{ label => \&SongsSubMenuTitle,		submenu => \&SongsSubMenu, },
+ 	{ label => sub {$_[0]{mode} eq 'P' ? _"Display Songs" : _"Filter"},	code => \&FilterOnAA,
+ 		test => sub { GetSonglist( $_[0]{self} ) }, },
+ 	{ label => _"Set Picture",	code => sub { ChooseAAPicture($_[0]{ID},$_[0]{mainfield},$_[0]{gid}); },
+-		stockicon => 'gmb-picture' },
++		stockicon => 'folder-pictures-symbolic' },
+ );
+ 
+ our @TrayMenu=
+-(	{ label=> sub {$::TogPlay ? _"Pause" : _"Play"}, code => \&PlayPause,	stockicon => sub { $::TogPlay ? 'gtk-media-pause' : 'gtk-media-play'; }, id=>'playpause' },
+-	{ label=> _"Stop", code => \&Stop,	stockicon => 'gtk-media-stop' },
+-	{ label=> _"Next", code => \&NextSong,	stockicon => 'gtk-media-next', id=>'next', },
+-	{ label=> _"Recently played", submenu => sub { my $m=ChooseSongs([GetPrevSongs(8)]); }, stockicon => 'gtk-media-previous' },
++(	{ label=> sub {$::TogPlay ? _"Pause" : _"Play"}, code => \&PlayPause,	stockicon => sub { $::TogPlay ? 'media-playback-pause-symbolic' : 'media-playback-start-symbolic'; }, id=>'playpause' },
++	{ label=> _"Stop", code => \&Stop,	stockicon => 'media-playback-stop-symbolic' },
++	{ label=> _"Next", code => \&NextSong,	stockicon => 'media-skip-forward-symbolic', id=>'next', },
++	{ label=> _"Recently played", submenu => sub { my $m=ChooseSongs([GetPrevSongs(8)]); }, stockicon => 'media-skip-backward-symbolic' },
+ 	{ label=> sub {$::TogLock && $::TogLock eq 'first_artist'? _"Unlock Artist" : _"Lock Artist"},	code => sub {ToggleLock('first_artist');} },
+ 	{ label=> sub {$::TogLock && $::TogLock eq 'album' ? _"Unlock Album"  : _"Lock Album"},	code => sub {ToggleLock('album');} },
+ 	{ label=> _"Windows",	code => \&PresentWindow,	submenu_ordered_hash =>1,
+ 		submenu => sub {  [map { $_->layout_name => $_ } grep $_->isa('Layout::Window'), Gtk3::Window::list_toplevels];  }, },
+ 	{ label=> sub { IsWindowVisible($::MainWindow) ? _"Hide": _"Show"}, code => sub { ShowHide(); }, id=>'showhide', },
+-	{ label=> _"Fullscreen",	code => \&ToggleFullscreenLayout,	stockicon => 'gtk-fullscreen' },
+-	{ label=> _"Settings",		code => 'OpenPref',	stockicon => 'gtk-preferences' },
+-	{ label=> _"Quit",		code => \&Quit,		stockicon => 'gtk-quit' },
++	{ label=> _"Fullscreen",	code => \&ToggleFullscreenLayout,	stockicon => 'view-fullscreen-symbolic' },
++	{ label=> _"Settings",		code => 'OpenPref',	stockicon => 'emblem-system-symbolic' },
++	{ label=> _"Quit",		code => \&Quit,		stockicon => 'system-shutdown-symbolic' },
+ );
+ 
+ our %Artists_split=
+@@ -1295,11 +1290,11 @@
+ my $icon_factory;
+ 
+ my %IconsFallbacks=
+-(	'gmb-queue0'	   => 'gmb-queue',
+-	'gmb-queue-window' => 'gmb-queue',
+-	'gmb-random-album' => 'gmb-random',
+-	'gmb-view-fullscreen'=>'gtk-fullscreen',
+-	#'gmb-media-skip-forward'=> 'media-skip-forward',
++(	'gmb-queue0'	   => 'format-indent-more-symbolic',
++	'gmb-queue-window' => 'view-grid-symbolic',
++	'gmb-random-album' => 'media-playlist-shuffle-symbolic',
++	'gmb-view-fullscreen'=>'view-fullscreen-symbolic',
++	#'gmb-media-skip-forward'=> 'media-skip-forward-symbolic',
+ );
+ our %IconsFallbacksCache;
+ sub check_icon_name
+@@ -1982,7 +1977,7 @@
+ 		'warning','none',''
+ 	);
+ 	$dialog->add_button('gtk-cancel' => 2);
+-	my $button1= Gtk3::Button->new_from_icon_name('gmb-turnoff','button');
++	my $button1= Gtk3::Button->new_from_icon_name('system-shutdown-symbolic','button');
+ 	$button1->set_label(_"Turn Off");
+ 	$dialog->add_action_widget($button1=> 1);
+ 	my $sec=21;
+@@ -2543,7 +2538,7 @@
+ 		{	my $dialog = Gtk3::MessageDialog->new(undef,'modal','error','none','%s', _"The save file seems incomplete, you may want to use a backup instead.");
+ 			$dialog->set_title(PROGRAM_NAME);
+ 			$dialog->add_button_custom(_"Continue anyway",1);
+-			$dialog->add_button_custom(_"Exit",2, icon=>'gtk-quit', tip=>__x(_"You can find backups in {folder}",folder=>dirname($SaveFile)));
++			$dialog->add_button_custom(_"Exit",2, icon=>'window-close-symbolic', tip=>__x(_"You can find backups in {folder}",folder=>dirname($SaveFile)));
+ 			$dialog->show_all;
+ 			exit unless $dialog->run eq '1';
+ 			$dialog->destroy;
+@@ -3159,9 +3154,9 @@
+ our %PPSQ_Icon;
+ INIT
+ { %PPSQ_Icon=
+- (	play	=> ['gtk-media-play', '<span font_family="Sans">▶</span>'],
+-	pause	=> ['gtk-media-pause','<span font_family="Sans">▮▮</span>'],
+-	stop	=> ['gtk-media-stop', '<span font_family="Sans">■</span>'],
++ (	play	=> ['media-playback-start-symbolic', '<span font_family="Sans">▶</span>'],
++	pause	=> ['media-playback-pause-symbolic','<span font_family="Sans">▮▮</span>'],
++	stop	=> ['media-playback-stop-symbolic', '<span font_family="Sans">■</span>'],
+  );
+ }
+ sub Get_PPSQ_Icon	#for a given ID, returns the Play, Pause, Stop or Queue icon, or undef if none applies
+@@ -5117,8 +5112,8 @@
+ 	$eventbox->add($image);
+ 	$eventbox->signal_connect(button_press_event => \&GMB::Picture::pixbox_button_press_cb);
+ 	my $max=my $nb=0; my $lastfile;
+-	my $prev= NewIconButton('gtk-go-back',   undef, sub { $_[0]->get_parent->get_parent->{set_pic}->(-1); });
+-	my $next= NewIconButton('gtk-go-forward',undef, sub { $_[0]->get_parent->get_parent->{set_pic}->(1); });
++	my $prev= NewIconButton('go-previous-symbolic',   undef, sub { $_[0]->get_parent->get_parent->{set_pic}->(-1); });
++	my $next= NewIconButton('go-next-symbolic',	undef, sub { $_[0]->get_parent->get_parent->{set_pic}->(1); });
+ 	my $more= Gtk3::HButtonBox->new;
+ 	$more->add($_) for $prev,$next;
+ 	$preview->pack_start($_,FALSE,FALSE,2) for $more,$eventbox,$label;
+@@ -5236,9 +5231,9 @@
+ 	my $dialog = Gtk3::MessageDialog->new($window, [qw/modal destroy-with-parent/], 'error','none','%s', $summary);
+ 	$dialog->format_secondary_text("%s",$syserr);
+ 	$dialog->set_title($summary);
+-	$dialog->add_button_custom(_"_Retry",    1, icon=>'gtk-refresh');
++	$dialog->add_button_custom(_"_Retry",    1, icon=>'view-refresh-symbolic');
+ 	$dialog->add_button_custom(_"_Cancel",   2, icon=>'gtk-cancel', tip=>$abortmsg);
+-	$dialog->add_button_custom(_"_Skip",     3, icon=>'gtk-go-forward', tip=>_"Proceed to next item.") if $many;
++	$dialog->add_button_custom(_"_Skip",     3, icon=>'go-next-symbolic', tip=>_"Proceed to next item.") if $many;
+ 	$dialog->add_button_custom(_"Skip _All", 4, tip=>_"Skip this and any further errors.") if $many;
+ 	my $expander;
+ 	if ($details)
+@@ -5326,7 +5321,7 @@
+ 		  'warning','cancel','%s',
+ 		  __x(_("About to delete {files}\nAre you sure ?"), files => $text)
+ 		);
+-	$dialog->add_button("gtk-delete", 2);
++	$dialog->add_button("edit-delete-symbolic", 2);
+ 	$dialog->show_all;
+ 	if ('2' eq $dialog->run)
+ 	{ my $skip_all;
+@@ -5649,7 +5644,7 @@
+ 	 };
+ 	my $menu=MakeFlagMenu($field,$menusub_toggled,$hash);
+ 	my $item= Gtk3::ImageMenuItem->new(_("Add new label").'...');
+-	$item->set_image( Gtk3::Image->new_from_stock('gtk-add','menu') );
++	$item->set_image( Gtk3::Image->new_from_stock('list-add-symbolic','menu') );
+ 	$item->signal_connect(activate=>sub { AddNewLabel($field,$IDs); });
+ 	$menu->append($_) for Gtk3::SeparatorMenuItem->new, $item;
+ 	return $menu;
+@@ -6417,7 +6412,7 @@
+ 	my $priority= Gtk3::CheckButton->new(_"High priority");
+ 	$priority->set_tooltip_text(_"If checked, the shortcut has higher priority than the default shortcut of widgets. Warning: this can make some features inaccessible");
+ 
+-	my $butadd= ::NewIconButton('gtk-add',_"Add shorcut key",sub
++	my $butadd= ::NewIconButton('list-add-symbolic',_"Add shorcut key",sub
+ 	 {	my $cmd=$combo->get_value;
+ 		return unless defined $cmd;
+ 		my $key=$key_entry->{key};
+@@ -6431,7 +6426,7 @@
+ 		$Options{CustomKeyBindings}{$key}=$cmd;
+ 		&$refresh_sub;
+ 	 });
+-	my $butrm=  ::NewIconButton('gtk-remove',_"Remove",sub
++	my $butrm=  ::NewIconButton('list-remove-symbolic',_"Remove",sub
+ 	 {	my $iter=$treeview->get_selection->get_selected;
+ 		my $key=$store->get($iter,2);
+ 		delete $Options{CustomKeyBindings}{$_} for $key,"+$key";
+@@ -6868,7 +6863,7 @@
+ 		push @layouts_combos, $combo;
+ 	}
+ 	my $reloadlayouts=Gtk3::Alignment->new(0,.5,0,0);
+-	$reloadlayouts->add( NewIconButton('gtk-refresh',_"Re-load layouts",\&Layout::InitLayouts) );
++	$reloadlayouts->add( NewIconButton('view-refresh-symbolic',_"Re-load layouts",\&Layout::InitLayouts) );
+ 
+ 	#fullscreen button
+ 	my $fullbutton=NewPrefCheckButton(AddFullscreenButton => _"Add a fullscreen button", cb=>sub { Layout::WidgetChangedAutoAdd('Fullscreen'); }, tip=>_"Add a fullscreen button to layouts that can accept extra buttons");
+@@ -7040,8 +7035,8 @@
+ 			AddPath(1,@list);
+ 		}]);
+ 
+-	my $addbut=NewIconButton('gtk-add',_"Add folder", sub { ChooseAddPath(1); });
+-	my $rmdbut=NewIconButton('gtk-remove',_"Remove");
++	my $addbut=NewIconButton('folder-new-symbolic',_"Add folder", sub { ChooseAddPath(1); });
++	my $rmdbut=NewIconButton('list-remove-symbolic',_"Remove");
+ 
+ 	my $selection=$treeview->get_selection;
+ 	$selection->set_mode('multiple');
+@@ -7068,8 +7063,8 @@
+ 
+ 	my $CScan=NewPrefCheckButton(StartScan => _"Search for new songs on startup");
+ 	my $CCheck=NewPrefCheckButton(StartCheck => _"Check for updated/deleted songs on startup");
+-	my $BScan= NewIconButton('gtk-refresh',_"scan now", sub { IdleScan();	});
+-	my $BCheck=NewIconButton('gtk-refresh',_"check now",sub { IdleCheck();	});
++	my $BScan= NewIconButton('view-refresh-symbolic',_"scan now", sub { IdleScan();	});
++	my $BCheck=NewIconButton('view-refresh-symbolic',_"check now",sub { IdleCheck();	});
+ 	my $label= Gtk3::Label->new(_"Folders to search for new songs");
+ 
+ 	my $reorg= Gtk3::Button->new(_("Reorganize files and folders").'...');
+@@ -7084,7 +7079,7 @@
+ 		tip =>	_("mp3 files without a VBR header requires a full scan to check its real length and bitrate")."\n".
+ 			_('You can force a check for these files by holding shift when selecting "Re-read tags"')
+ 		);
+-	my $Blengthcheck= NewIconButton('gtk-refresh',_"check length now",sub { CheckLength(); });
++	my $Blengthcheck= NewIconButton('view-refresh-symbolic',_"check length now",sub { CheckLength(); });
+ 	$Blengthcheck->{timeout}= Glib::Timeout->add(1000, \&PrefLibrary_update_checklength_button,$Blengthcheck);#refresh it 1s after creation
+ 	Watch($Blengthcheck,$_=> sub { my ($button,$IDs,$fields)=@_; $button->{timeout}||= Glib::Timeout->add(2000, \&PrefLibrary_update_checklength_button,$button) if !$fields || grep($_ eq 'length_estimated', @$fields); } ) for qw/SongsAdded SongsChanged/; #refresh it 2s after a change
+ 
+@@ -7388,7 +7383,7 @@
+ 		my $hist= $Options{$key_history} || [];
+ 		$store->set($store->append,0,decode_url($_)) for grep length, @$hist; #won't work with filenames with broken encoding
+ 	}
+-	my $button=NewIconButton('gtk-open');
++	my $button=NewIconButton('document-open-symbolic');
+ 	my $hbox= Gtk3::HBox->new;
+ 	my $hbox2=Gtk3::HBox->new(FALSE,0);
+ 	$hbox2->pack_start($widget,TRUE,TRUE,0);
+@@ -8016,7 +8011,7 @@
+ 	my $self= bless Gtk3::Dialog->new( $typedata->[0], $window,[qw/destroy-with-parent/]), $class;
+ 	$self->add_button('gtk-cancel' => 'none');
+ 	if (defined $name && $name ne '')
+-	{	my $button=::NewIconButton('gtk-save', ::__x( _"save as '{name}'", name => $name) );
++	{	my $button=::NewIconButton('document-save-as-symbolic', ::__x( _"save as '{name}'", name => $name) );
+ 		$button->set_can_default(::TRUE);
+ 		$self->add_action_widget( $button,'ok' );
+ 		$self->{save_name}=$name;
+@@ -8050,14 +8045,14 @@
+ 		( $typedata->[2],$renderer,'text',0)
+ 		);
+ 	my $sw= ::new_scrolledwindow($treeview,'etched-in');
+-	my $butrm=::NewIconButton('gtk-remove',_"Remove");
++	my $butrm=::NewIconButton('list-remove-symbolic',_"Remove");
+ 	$treeview->get_selection->signal_connect( changed => sub
+ 		{	my $sel=$_[0]->count_selected_rows;
+ 			$butrm->set_sensitive($sel);
+ 		});
+ 	$butrm->set_sensitive(0);
+ 	$butrm->signal_connect(clicked => \&Remove_cb,$self);
+-	my $butsave=::NewIconButton('gtk-save');
++	my $butsave=::NewIconButton('document-save-symbolic');
+ 	my $NameEntry= Gtk3::Entry->new;
+ 	$NameEntry->signal_connect(changed => sub { $butsave->set_sensitive(length $_[0]->get_text); });
+ 	$butsave->signal_connect(  clicked  => sub {$self->Save});
+@@ -8181,9 +8176,9 @@
+ 	$sw->set_shadow_type('etched-in');
+ 	$sw->set_policy('never','automatic');
+ 
+-	my $butadd= ::NewIconButton('gtk-add',_"Add");
+-	my $butadd2=::NewIconButton('gtk-add',_"Add multiple condition");
+-	my $butrm=  ::NewIconButton('gtk-remove',_"Remove");
++	my $butadd= ::NewIconButton('list-add-symbolic',_"Add");
++	my $butadd2=::NewIconButton('list-add-symbolic',_"Add multiple condition");
++	my $butrm=  ::NewIconButton('list-remove-symbolic',_"Remove");
+ 	$butadd->signal_connect( clicked => \&Add_cb);
+ 	$butadd2->signal_connect(clicked => \&Add_cb);
+ 	$butrm->signal_connect(  clicked => \&Rm_cb );
+@@ -8467,11 +8462,11 @@
+ 	$treeview2->set_reorderable(TRUE);
+ 	my $order_column= Gtk3::TreeViewColumn->new_with_attributes( 'Order',Gtk3::CellRendererPixbuf->new,'stock-id',2 );
+ 	$treeview2->append_column($order_column);
+-	my $butadd=	$self->{butadd}=	::NewIconButton('gtk-add',	_"Add",		sub {$self->Add_selected});
+-	my $butrm=	$self->{butrm}=		::NewIconButton('gtk-remove',	_"Remove",	sub {$self->Del_selected});
+-	my $butclear=	$self->{butclear}=	::NewIconButton('gtk-clear',	_"Clear",	sub { $self->Set(''); });
+-	my $butup=	$self->{butup}=		::NewIconButton('gtk-go-up',	undef,		sub { $self->Move_Selected(1,0); });
+-	my $butdown=	$self->{butdown}=	::NewIconButton('gtk-go-down',	undef,		sub { $self->Move_Selected(0,0); });
++	my $butadd=	$self->{butadd}=	::NewIconButton('list-add-symbolic',	_"Add",		sub {$self->Add_selected});
++	my $butrm=	$self->{butrm}=		::NewIconButton('list-remove-symbolic',	_"Remove",	sub {$self->Del_selected});
++	my $butclear=	$self->{butclear}=	::NewIconButton('edit-clear-symbolic',	_"Clear",	sub { $self->Set(''); });
++	my $butup=	$self->{butup}=		::NewIconButton('go-up-symbolic',	undef,		sub { $self->Move_Selected(1,0); });
++	my $butdown=	$self->{butdown}=	::NewIconButton('go-down-symbolic',	undef,		sub { $self->Move_Selected(0,0); });
+ 
+ 	$treeview1->get_selection->signal_connect (changed => sub{$self->Buttons_update;});
+ 	$treeview2->get_selection->signal_connect (changed => sub{$self->Buttons_update;});
+@@ -8509,7 +8504,7 @@
+ 	$case_column->set_cell_data_func($caserenderer,	sub
+ 	 {	my ($column,$cell,$store2,$iter)=@_;
+ 		my $i=$store2->get_value($iter,3);
+-		my $stock= !$i ? undef : $i==SENSITIVE ? 'gmb-case_sensitive' : 'gmb-case_insensitive';
++		my $stock= !$i ? undef : $i==SENSITIVE ? 'format-text-larger-symbolic' : 'format-text-larger-symbolic';
+ 		$cell->set(stock_id => $stock);
+ 	 });
+ 	$treeview2->set_has_tooltip(1);
+@@ -8685,7 +8680,7 @@
+ 	$self->add($sw);
+ 
+ 	my $addlist=TextCombo->new({map {$_ => $Random::ScoreTypes{$_}{desc}} keys %Random::ScoreTypes}, (keys %Random::ScoreTypes)[0] );
+-	my $addbut=::NewIconButton('gtk-add',_"Add");
++	my $addbut=::NewIconButton('list-add-symbolic',_"Add");
+ 	my $addhbox= Gtk3::HBox->new(FALSE, 8);
+ 	$addhbox->pack_start($_,FALSE,FALSE,0) for Gtk3::Label->new(_"Add rule : "), $addlist, $addbut;
+ 
+@@ -8826,7 +8821,7 @@
+ 	my $exlabel= $frame->{label}= Gtk3::Label->new;
+ 	$frame->{unit}=$Random::ScoreTypes{$type}{unit};
+ 	$frame->{round}=$Random::ScoreTypes{$type}{round};
+-	my $button=::NewIconButton('gtk-remove',undef,sub
++	my $button=::NewIconButton('list-remove-symbolic',undef,sub
+ 		{ my $button=$_[0];
+ 		  my $self= $button->GET_ancestor;
+ 		  $_->get_parent->remove($_) for $button,$frame;
+@@ -9097,7 +9092,7 @@
+ 
+ 	if (!$opt{noinv})
+ 	{	my $button= $self->{w_invert}= Gtk3::ToggleButton->new;
+-		$button->add( Gtk3::Image->new_from_stock('gmb-invert','menu') );
++		$button->add( Gtk3::Image->new_from_stock('media-playlist-repeat-symbolic','menu') );
+ 		my $on= $cmd=~s/^-//;
+ 		$on= $previous{inv} unless $action eq 'set';
+ 		$button->set_active(1) if $on;
+@@ -9127,7 +9122,7 @@
+ 			push @{$self->{w_pattern}}, $widget;
+ 			if ($opt2{icase} && !$self->{w_icase})
+ 			{	my $button= $self->{w_icase}= Gtk3::ToggleButton->new;
+-				$button->add( Gtk3::Image->new_from_stock('gmb-case_sensitive','menu') );
++				$button->add( Gtk3::Image->new_from_stock('format-text-larger-symbolic','menu') );
+ 				my $on= $cmd!~s/i$//;
+ 				$on= $previous{icase} unless $action eq 'set';
+ 				$button->set_active(1) if $on;
+@@ -9250,7 +9245,7 @@
+ {	my ($class,$val,$opt)=@_;
+ 	my $self= bless Gtk3::HBox->new(0,0),$class;
+ 	my $entry= $self->{entry}= Gtk3::Entry->new;
+-	my $button= ::NewIconButton('gtk-open');
++	my $button= ::NewIconButton('folder-open-symbolic');
+ 	$self->pack_start($entry,1,1,0);
+ 	$self->pack_start($button,0,0,0);
+ 	$self->Set($val);
+@@ -9940,11 +9935,11 @@
+ {	my $self=shift;
+ 	my $store= $self->get_model;
+ 	$store->clear;
+-	$store->set($store->append, 0,_"All songs", 1,Filter->new, 2,'gmb-library');
++	$store->set($store->append, 0,_"All songs", 1,Filter->new, 2,'view-dual-symbolic');
+ 	my $hash=$Options{SavedFilters};
+ 	my @names= sort {::superlc($a) cmp ::superlc($b)} keys %$hash;
+ 	$store->set($store->append, 0,$_, 1,$hash->{$_}) for @names;
+-	$store->set($store->append, 0,_"Edit...", 1,undef, 2,'gtk-preferences');
++	$store->set($store->append, 0,_"Edit...", 1,undef, 2,'emblem-system-symbolic');
+ }
+ 
+ sub set_value

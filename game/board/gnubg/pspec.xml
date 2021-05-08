@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>gnubg</Name>
-        <Homepage>https://www.gnu.org/software/gnubg/</Homepage>
+        <Homepage>http://www.gnubg.org/</Homepage>
         <Packager>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>
@@ -15,22 +15,10 @@
         <Description>GNU BackGammon</Description>
         <Archive sha1sum="1f415ab7eb4e308833fe4fd9b9556998261af423" type="targz">ftp://ftp.gnu.org/gnu/gnubg/gnubg-release-1.06.002-sources.tar.gz</Archive>
         <BuildDependency>
-            <Dependency>gtk2-devel</Dependency>
-            <Dependency>cairo-devel</Dependency>
-            <Dependency>pango-devel</Dependency>
-            <Dependency>glib2-devel</Dependency>
             <Dependency>python-devel</Dependency>
-            <Dependency>libcanberra</Dependency>
-            <Dependency>ftgl-devel</Dependency>
             <Dependency>curl-devel</Dependency>
-            <Dependency>freetype-devel</Dependency>
-            <Dependency>libpng-devel</Dependency>
+            <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>gtkglext-devel</Dependency>
-            <Dependency>readline-devel</Dependency>
-            <Dependency>Bitstream-Vera-fonts</Dependency>
-            <Dependency>sqlite-devel</Dependency>
-            <Dependency>pkgconfig</Dependency>
-            <Dependency>gettext</Dependency>
         </BuildDependency>
         <Patches>
             <Patch level="1">pixmaps_dir_fix.patch</Patch>
@@ -40,24 +28,10 @@
     <Package>
         <Name>gnubg</Name>
         <RuntimeDependencies>
-            <Dependency>gmp</Dependency>
-            <Dependency>gtk2</Dependency>
             <Dependency>python</Dependency>
-            <Dependency>mesa</Dependency>
-            <Dependency>cairo</Dependency>
-            <Dependency>pango</Dependency>
-            <Dependency>glib2</Dependency>
+            <Dependency>libjpeg-turbo</Dependency>
             <Dependency>curl</Dependency>
-            <Dependency>libpng</Dependency>
-            <Dependency>readline</Dependency>
-            <Dependency>freetype</Dependency>
-            <Dependency>mesa-glu</Dependency>
             <Dependency>gtkglext</Dependency>
-            <Dependency>gdk-pixbuf</Dependency>
-            <Dependency>sqlite</Dependency>
-            <Dependency>libcanberra</Dependency>
-            <Dependency>libcanberra-gtk</Dependency>
-            <Dependency>Bitstream-Vera-fonts</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>

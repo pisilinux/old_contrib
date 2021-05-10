@@ -19,7 +19,7 @@
             <Dependency>libvorbis-devel</Dependency>
             <Dependency>libtheora-devel</Dependency>
             <Dependency>libogg-devel</Dependency>
-            <Dependency>ftgl-devel</Dependency>
+            <Dependency release="2.1.3_rc5">ftgl-devel</Dependency>
             <Dependency>sdl-image-devel</Dependency>
             <Dependency>mesa-devel</Dependency>
         </BuildDependencies>
@@ -29,7 +29,7 @@
     <Package>
         <Name>zaz</Name>
         <RuntimeDependencies>
-            <Dependency>ftgl</Dependency>
+            <Dependency release="2.1.3_rc5">ftgl</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>libogg</Dependency>
             <Dependency>libsdl</Dependency>

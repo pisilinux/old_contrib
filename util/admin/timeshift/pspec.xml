@@ -12,7 +12,7 @@
         <IsA>app:gui</IsA>
         <Summary>Timeshift protects your system by taking incremental snapshots of the file system at regular intervals. These snapshots can be restored at a later date to undo all changes to the system.</Summary>
         <Description>Timeshift, düzenli aralıklarla dosya sisteminin artımlı anlık görüntülerini alarak sisteminizi korur. Bu anlık görüntüler, sistemdeki tüm değişiklikleri geri almak için daha sonraki bir tarihte geri yüklenebilir.</Description>
-        <Archive sha1sum="6b4759288eca219437987962d69312248c7df428" type="targz">https://github.com/teejee2008/timeshift/archive/v18.9.1.tar.gz</Archive>
+        <Archive sha1sum="d35653aee927b963791f90edefcc835c2cd18d90" type="targz">https://github.com/teejee2008/timeshift/archive/refs/tags/v20.11.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>atk-devel</Dependency>
             <Dependency>vte-devel</Dependency>
@@ -63,8 +63,8 @@
     
     <History>
         <Update release="1">
-            <Date>2019-01-07</Date>
-            <Version>18.9.1</Version>
+            <Date>2021-05-10</Date>
+            <Version>20.11.1</Version>
             <Comment>First release</Comment>
             <Name>PisiLinux Community</Name>
             <Email>admins@pisilinux.org</Email>

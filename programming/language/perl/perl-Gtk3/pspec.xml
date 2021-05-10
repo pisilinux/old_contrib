@@ -29,7 +29,10 @@
 	<Package>
 		<Name>perl-Gtk3</Name>
 		<RuntimeDependencies>
-			<Dependency>glib2</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>perl-Glib</Dependency>
+			<Dependency>perl-Cairo</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib</Path>

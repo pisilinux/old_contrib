@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 #-*- coding:utf-8 -*-
 
 from pisi.actionsapi import autotools
@@ -14,12 +14,11 @@ def setup():
     autotools.autoheader()
     autotools.automake("--add-missing --copy -Wno-portability")
     autotools.autoconf()
-    autotools.rawConfigure("--prefix=/usr --enable-threads --disable-dependency-tracking")
+    autotools.rawConfigure("--prefix=/usr --enable-threads")
 
 def build():
 	autotools.make()
 
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-	pisitools.dosym("/usr/share/fonts/bitstream-vera","/usr/share/gnubg/fonts/bitstream-vera")
 	pisitools.dosym("/usr/share/pixmaps/gnubg-big.png","/usr/share/gnubg/pixmaps/gnubg-big.png")

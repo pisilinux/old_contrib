@@ -1,0 +1,201 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gtk3</Name>
+		<Homepage>https://github.com/lah7/gtk3-classic</Homepage>
+		<Packager>
+			<Name>PisiLinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>LGPLv2.1</License>
+		<Summary>The GIMP Toolkit version 3</Summary>
+		<Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
+		<Archive sha1sum="2faab763eeeea30c7b81d1a4749594ed39dc9cbe" type="tarxz">
+			mirrors://gnome/gtk+/3.24/gtk+-3.24.29.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>sassc</Dependency>
+			<Dependency>gtk-doc</Dependency>
+			<Dependency>atk-devel</Dependency>
+			<Dependency>cups-devel</Dependency>
+			<Dependency>python-six</Dependency>
+			<Dependency>docbook-xsl</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>wayland-devel</Dependency>
+			<Dependency>fribidi-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>wayland-cursor</Dependency>
+			<Dependency>wayland-client</Dependency>
+			<Dependency>harfbuzz-devel</Dependency>
+			<Dependency>libepoxy-devel</Dependency>
+			<Dependency>json-glib-devel</Dependency>
+			<Dependency>iso-codes-devel</Dependency>
+			<Dependency>graphite2-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>libXfixes-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXdamage-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<Dependency>at-spi2-atk-devel</Dependency>
+			<Dependency>at-spi2-core-devel</Dependency>
+			<Dependency>libxkbcommon-devel</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+			<Dependency>wayland-protocols-devel</Dependency>
+			<Dependency>gobject-introspection-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level="1">gtk3-toolbar.patch</Patch> -->
+			<!-- <Patch level="1">gtk3-calendar.patch</Patch> -->
+			<Patch level="1">gtk3-popovers.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/appearance__buttons-menus-icons.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/appearance__disable-backdrop.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__file-chooser.patch</Patch> -->
+			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__message-dialogs.patch</Patch> -->
+			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__print-dialog.patch</Patch> -->
+			<Patch level="1">gtk3-classic-3.24.29/appearance__smaller-statusbar.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/csd__clean-headerbar.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/csd__disabled-by-default.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/csd__server-side-shadow.patch</Patch> -->
+			<Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/file-chooser__typeahead.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/fixes__atk-bridge-errors.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/fixes__labels-wrapping.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/notebook_wheel_scroll.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/other__default-settings.patch</Patch> -->
+			<Patch level="1">gtk3-classic-3.24.29/other__hide-insert-emoji.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/other__mnemonics-delay.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/popovers__color-chooser.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/popovers__file-chooser-list.patch</Patch>
+			<Patch level="1">gtk3-classic-3.24.29/popovers__places-sidebar.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>gtk3-classic</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>cups</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libXi</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>wayland</Dependency>
+			<Dependency>fribidi</Dependency>
+			<Dependency>freetype</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>libepoxy</Dependency>
+			<Dependency>graphite2</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>fontconfig</Dependency>
+			<Dependency>libXcursor</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>at-spi2-atk</Dependency>
+			<Dependency>libxkbcommon</Dependency>
+			<Dependency>dejavu-fonts</Dependency>
+			<Dependency>libXcomposite</Dependency>
+			<Dependency>wayland-cursor</Dependency>
+			<Dependency>wayland-client</Dependency>
+			<Dependency>icon-theme-adwaita</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="config">/etc</Path>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share/themes</Path>
+			<Path fileType="data">/usr/share/gtk-3.0</Path>
+			<Path fileType="data">/usr/share/</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="library">/usr/lib/libg*</Path>
+			<Path fileType="library">/usr/lib/gtk-3.0</Path>
+			<Path fileType="library">/usr/lib/girepository-1.0</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+		</Files>
+		<!-- Use Clearlooks as default theme for now until native Oxygen GTK style is ready -->
+		<AdditionalFiles>
+			<!-- <AdditionalFile owner="root" permission="0644" target="/usr/share/gtk-3.0/settings.ini">settings.ini</AdditionalFile> -->
+		</AdditionalFiles>
+		<Provides>
+			<COMAR script="pakhandler.py">System.PackageHandler</COMAR>
+		</Provides>
+		<Conflicts>
+			<Package>gtk3</Package>
+		</Conflicts>
+	</Package>
+
+	<Package>
+		<Name>gtk3-classic-demo</Name>
+		<IsA>app:gui</IsA>
+		<Summary>GTK demo application</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">gtk3-classic</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin/gtk3-demo</Path>
+			<Path fileType="executable">/usr/bin/gtk3-demo-application</Path>
+		</Files>
+		<Conflicts>
+			<Package>gtk3-demo</Package>
+		</Conflicts>
+	</Package>
+
+	<Package>
+		<Name>gtk3-classic-devel</Name>
+		<Summary>Development files for gtk3</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">gtk3-classic</Dependency>
+			<Dependency>atk-devel</Dependency>
+			<Dependency>libXi-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<Dependency>fribidi-devel</Dependency>
+			<Dependency>wayland-devel</Dependency>
+			<Dependency>libepoxy-devel</Dependency>
+			<Dependency>libXfixes-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>gdk-pixbuf-devel</Dependency>
+			<Dependency>fontconfig-devel</Dependency>
+			<Dependency>libXdamage-devel</Dependency>
+			<Dependency>libXcursor-devel</Dependency>
+			<Dependency>libXinerama-devel</Dependency>
+			<Dependency>at-spi2-atk-devel</Dependency>
+			<Dependency>libxkbcommon-devel</Dependency>
+			<Dependency>libXcomposite-devel</Dependency>
+			<Dependency>wayland-protocols-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="library">/usr/lib32/pkgconfig</Path>
+			<Path fileType="data">/usr/share/aclocal</Path>
+			<Path fileType="data">/usr/share/gir-1.0</Path>
+		</Files>
+		<Conflicts>
+			<Package>gtk3-devel</Package>
+		</Conflicts>
+	</Package>
+
+	<History>
+		<Update release="15">
+			<Date>2021-05-04</Date>
+			<Version>3.24.29</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>
+

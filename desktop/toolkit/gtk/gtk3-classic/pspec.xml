@@ -61,7 +61,7 @@
 			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__print-dialog.patch</Patch> -->
 			<Patch level="1">gtk3-classic-3.24.29/appearance__smaller-statusbar.patch</Patch>
 			<Patch level="1">gtk3-classic-3.24.29/csd__clean-headerbar.patch</Patch>
-			<Patch level="1">gtk3-classic-3.24.29/csd__disabled-by-default.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/csd__disabled-by-default.patch</Patch> -->
 			<!-- <Patch level="1">gtk3-classic-3.24.29/csd__server-side-shadow.patch</Patch> -->
 			<Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar.patch</Patch>
 			<Patch level="1">gtk3-classic-3.24.29/file-chooser__typeahead.patch</Patch>

@@ -19,6 +19,7 @@
 		</Archive>
 		<BuildDependencies>
 			<!-- <Dependency>git</Dependency> -->
+			<Dependency>cmake</Dependency>
 			<Dependency>meson</Dependency>
 			<Dependency>uthash</Dependency>
 			<Dependency>asciidoc</Dependency>
@@ -28,6 +29,8 @@
 			<Dependency>pixman-devel</Dependency>
 			<Dependency>libxcb-devel</Dependency>
 			<Dependency>libX11-devel</Dependency>
+			<Dependency>libpcre-devel</Dependency>
+			<Dependency>libxslt-devel</Dependency>
 			<Dependency>libglvnd-devel</Dependency>
 			<Dependency>libXext-devel</Dependency>
 			<Dependency>libconfig-devel</Dependency>

@@ -22,6 +22,7 @@
 		<BuildDependencies>
 			<Dependency>flex</Dependency>
 			<Dependency>bison</Dependency>
+			<Dependency>curl-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>gpgme-devel</Dependency>
 			<Dependency>libSM-devel</Dependency>
@@ -29,6 +30,8 @@
 			<Dependency>openssl-devel</Dependency>
 			<Dependency>libical-devel</Dependency>
 			<Dependency>librsvg-devel</Dependency>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>gettext-devel</Dependency>
 			<Dependency>enchant2-devel</Dependency>
 			<Dependency>libetpan-devel</Dependency>
 			<Dependency>compface-devel</Dependency>

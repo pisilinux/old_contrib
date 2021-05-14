@@ -18,6 +18,7 @@ def install():
 	pisitools.dobin("ymuse")
 	pisitools.insinto("/usr/share/applications", "resources/ymuse.desktop", "ymuse.desktop")
 	shelltools.copy("resources/icons", "%s/%s/icons" % (get.installDIR(), get.dataDIR()))
+	shelltools.copy("resources/i18n/generated", "%s/%s/locale" % (get.installDIR(), get.dataDIR()))
 
 	pisitools.dodoc("COPYING", "README.md")
 

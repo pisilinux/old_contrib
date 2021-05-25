@@ -9,7 +9,7 @@
 			<Email>wascheme@tuta.io</Email>
 		</Packager>
 		<License>MIT</License>
-		<IsA>app:comsole</IsA>
+		<IsA>app:console</IsA>
 		<PartOf>util.misc</PartOf>
 		<Summary>Terminal file manager</Summary>
 		<Description>lf is a terminal file manager.</Description>

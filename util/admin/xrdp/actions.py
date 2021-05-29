@@ -9,18 +9,19 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 def setup():
-    autotools.configure("--enable-pixman=yes \
-                         --enable-jpeg=yes \
-                         --enable-tjpeg=yes \
-                         --enable-fuse=yes \
-                         --enable-opus=yes \
-                         --enable-rfxcodec=yes \
-                         --enable-mp3lame=yes \
-                         --enable-kerberos=yes \
-                         --enable-painter=yes \
-                         --enable-vsock=yes \
-                         --enable-ipv6only=yes \
-                         --enable-ipv6=yes")
+    autotools.configure("--prefix=/usr \
+                         --sysconfdir=/etc \
+                         --localstatedir=/var \
+                         --sbindir=/usr/bin \
+                         --enable-jpeg \
+                         --enable-tjpeg \
+                         --enable-fuse \
+                         --enable-opus \
+                         --enable-rfxcodec \
+                         --enable-mp3lame \
+                         --enable-pixman=yes \
+                         --enable-painter \
+                         --enable-vsock")
 
 def build():
     autotools.make()

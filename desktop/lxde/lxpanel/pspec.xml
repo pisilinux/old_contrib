@@ -35,6 +35,7 @@
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">0001-Specify-GTK_REQUEST_CONSTANT_SIZE.-Fixes-773.patch</Patch>
+			<Patch level="1">lxpanel-0.10.1-volume-plugin-fix-mouse-scrolling.patch</Patch>
 		</Patches>
 	</Source>
 

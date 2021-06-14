@@ -32,7 +32,7 @@
 			<Dependency>menu-cache-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<!-- <Patch level="1">missing.patch</Patch> -->
+			<Patch level="1">Fix_background_color_with_gtk+3.patch </Patch>
 		</Patches>
 	</Source>
 

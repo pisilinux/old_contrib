@@ -33,6 +33,10 @@
 			<Dependency>fontconfig-devel</Dependency>
 			<Dependency>lxappearance-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level='1'>Check_if_X11_before_requesting_X11_WM_name.patch</Patch>
+			<Patch level='1'>Repair_and_complete_GTK3_preiview.patch</Patch> -->
+		</Patches>
 	</Source>
 
 	<Package>

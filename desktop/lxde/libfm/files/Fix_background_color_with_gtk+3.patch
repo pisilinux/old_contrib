@@ -1,0 +1,31 @@
+--- a/src/gtk/exo/exo-icon-view.c	2021-01-30 00:02:49.000000000 +0300
++++ b/src/gtk/exo/exo-icon-view.c	2021-06-14 23:45:52.050517091 +0300
+@@ -1878,6 +1878,16 @@
+ 
+   if (!gtk_cairo_should_draw_window (cr, priv->bin_window))
+     return FALSE;
++
++  /* draw a background according to the css theme */
++  style = gtk_widget_get_style_context (widget);
++  gtk_style_context_save (style);
++  gtk_style_context_add_class (style, GTK_STYLE_CLASS_VIEW);
++  gtk_render_background (style, cr,
++                         0, 0,
++                         gtk_widget_get_allocated_width (widget),
++                         gtk_widget_get_allocated_height (widget));
++  gtk_style_context_restore (style);
+ #endif
+ 
+   /* don't handle expose if the layout isn't done yet; the layout
+@@ -1978,10 +1988,8 @@
+ #endif
+     }
+ 
++#if !GTK_CHECK_VERSION(3, 0, 0)
+   if (G_UNLIKELY (dest_item != NULL || priv->doing_rubberband))
+-#if GTK_CHECK_VERSION(3, 0, 0)
+-      style = gtk_widget_get_style_context (widget);
+-#else
+       style = gtk_widget_get_style (widget);
+ #endif
+ 

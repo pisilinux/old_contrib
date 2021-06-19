@@ -19,6 +19,7 @@
 			https://github.com/tristanheaven/gtkhash/releases/download/v1.4/gtkhash-1.4.tar.xz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>intltool</Dependency>
 			<Dependency>zlib-devel</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>caja-devel</Dependency>
@@ -44,6 +45,7 @@
 			<Dependency>openssl</Dependency>
 			<Dependency>libgcrypt</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>gsettings-desktop-schemas</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
@@ -67,6 +69,7 @@
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libgpg-error</Dependency>
 			<Dependency>gobject-introspection</Dependency>
+			<Dependency>gtkhash-plugin-schema</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib/thunarx-3</Path>
@@ -89,6 +92,7 @@
 			<Dependency>libgpg-error</Dependency>
 			<Dependency>caja-extensions</Dependency>
 			<Dependency>gobject-introspection</Dependency>
+			<Dependency>gtkhash-plugin-schema</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib/caja</Path>
@@ -97,6 +101,18 @@
 		</Files>
 	</Package>
 
+	<Package>
+		<Name>gtkhash-plugin-schema</Name>
+		<RuntimeDependencies>
+			<Dependency>glib2</Dependency>
+			<Dependency>gsettings-desktop-schemas</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="data">/usr/share/glib-2.0/schemas/org.gtkhash.plugin.gschema.xml</Path>
+		</Files>
+	</Package>
+
+	<!--
 	<Package>
 		<Name>gtkhash-devel</Name>
 		<RuntimeDependencies>
@@ -109,10 +125,11 @@
 			<Path fileType="library">/usr/lib/pkgconfig</Path>
 		</Files>
 	</Package>
+	-->
 
 	<History>
 		<Update release="1">
-			<Date>2020-08-28</Date>
+			<Date>2021-06-18</Date>
 			<Version>1.4</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

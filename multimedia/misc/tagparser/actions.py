@@ -12,7 +12,7 @@ from pisi.actionsapi import get
 def setup():
 	shelltools.makedirs("build")
 	shelltools.cd("build")
-	cmaketools.configure("-DBUILD_SHARED_LIBS=ON -L", sourceDir = '..')
+	cmaketools.configure("-DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON -L", sourceDir = '..')
 
 def build():
 	shelltools.cd("build")

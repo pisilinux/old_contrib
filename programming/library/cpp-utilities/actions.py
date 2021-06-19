@@ -9,7 +9,8 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
-i = "-DBUILD_SHARED_LIBS=ON \
+i = "-DCMAKE_BUILD_TYPE=Release \
+     -DBUILD_SHARED_LIBS=ON \
      -DUSE_STANDARD_FILESYSTEM=OFF \
      -DFORCE_BOOST_IOSTREAMS_FOR_NATIVE_FILE_BUFFER=ON -L \
 "

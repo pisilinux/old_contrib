@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>libxdg-basedir</Name>
-		<Homepage>https://github.com/davmac314/libxdg-basedir</Homepage>
+		<Homepage>https://github.com/devnev/libxdg-basedir</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
@@ -13,8 +13,8 @@
 		<PartOf>programming.library</PartOf>
 		<Summary>libxdg-basedir is an implementation of the XDG Base Directory specifications.</Summary>
 		<Description>libxdg-basedir is an implementation of the XDG Base Directory specifications.</Description>
-		<Archive sha1sum="1eac3b35b90f3930b730f2f4af8452cba77f425e" type="tarxz">
-			https://github.com/davmac314/libxdg-basedir/releases/download/v1.2.2/libxdg-basedir-1.2.2.tar.xz
+		<Archive sha1sum="41d495868197dc0db4b5b7337d4cb2d215497614" type="targz">
+			https://github.com/devnev/libxdg-basedir/archive/refs/tags/libxdg-basedir-1.2.3.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<!-- <Dependency></Dependency> -->
@@ -44,6 +44,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-06-19</Date>
+			<Version>1.2.3</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="1">
 			<Date>2021-01-23</Date>
 			<Version>1.2.2</Version>

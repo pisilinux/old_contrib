@@ -37,6 +37,7 @@
 			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>ayatana-libappindicator</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc</Path>

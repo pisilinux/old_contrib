@@ -59,6 +59,7 @@
 			<Dependency>libdbusmenu-gtk</Dependency>
 			<Dependency>libdbusmenu-glib</Dependency>
 			<Dependency>libdbusmenu-devel</Dependency>
+			<Dependency>ayatana-libindicator-devel</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="library">/usr/lib/pkgconfig</Path>

@@ -30,6 +30,7 @@
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">use_system_sdl.patch</Patch>
+			<Patch level="1">Fix_extern_C.patch</Patch>
 		</Patches>
 	</Source>
 

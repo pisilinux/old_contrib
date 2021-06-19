@@ -14,7 +14,7 @@
 		<Summary>A basic C implementation of Ponysay.</Summary>
 		<Description>A basic C implementation of Ponysay.</Description>
 		<Archive sha1sum="95096b07f2139fba757731628850172eeaf3b1f3" type="tarxz">
-			https://github.com/4fury-c3440d8/cponysay/releases/download/0.1/cponysay-0.1.tar.xz
+			https://github.com/4fury/sources/raw/master/cponysay-0.1.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>vim</Dependency>

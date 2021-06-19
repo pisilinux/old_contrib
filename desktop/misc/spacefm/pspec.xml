@@ -16,8 +16,8 @@
 		<Description>
 			SpaceFM is a multi-panel tabbed file and desktop manager for Linux with a customisable menu system, and bash integration. SpaceFM aims to provide a stable, capable file manager with significant customisation capabilities.
 		</Description>
-		<Archive sha1sum="a5e941cf0f76c3aba8e9398676b32f2feb890849" type="targz">
-			https://github.com/thermitegod/spacefm/archive/v2.0.0.tar.gz
+		<Archive sha1sum="d0d37d74d8257c08b01e1440024c676eadf0376f" type="targz">
+			https://github.com/thermitegod/spacefm/archive/refs/tags/v2.1.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
@@ -35,6 +35,9 @@
 			<Dependency>ffmpegthumbnailer-devel</Dependency>
 			<Dependency>startup-notification-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level='1'>Fix_glib_segfaults.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>
@@ -43,9 +46,11 @@
 			<!-- <Dependency>git</Dependency> -->
 			<Dependency>gtk2</Dependency>
 			<!-- <Dependency>gtk3</Dependency> -->
+			<Dependency>glib2</Dependency>
 			<Dependency>cairo</Dependency>
 			<Dependency>pango</Dependency>
 			<Dependency>eudev</Dependency>
+			<Dependency>libX11</Dependency>
 			<Dependency>udisks2</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>ffmpegthumbnailer</Dependency>
@@ -61,8 +66,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-10-18</Date>
-			<Version>2.0.0</Version>
+			<Date>2021-06-18</Date>
+			<Version>2.1.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>

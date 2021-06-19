@@ -19,12 +19,14 @@
 			https://sourceforge.net/projects/modem-manager-gui/files/modem-manager-gui-0.0.20.tar.gz
 		</Archive>
 		<BuildDependencies>
+			<Dependency>cmake</Dependency>
 			<Dependency>meson</Dependency>
 			<Dependency>itstool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>gdbm-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>gobject-introspection-devel</Dependency>
+			<Dependency>ayatana-libappindicator-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 

@@ -13,8 +13,8 @@
 		<PartOf>programming.library</PartOf>
 		<Summary>A hash table for C structures.</Summary>
 		<Description>Any C structure can be stored in a hash table using uthash. Just add a UT_hash_handle to the structure and choose one or more fields in your structure to act as the key. Then use these macros to store, retrieve or delete items from the hash table.</Description>
-		<Archive sha1sum="8f80f65096991b7cb60515743d3258799138010c" type="targz">
-			https://github.com/troydhanson/uthash/archive/v2.2.0.tar.gz
+		<Archive sha1sum="fbafa356359ace80787ce6634d84425b40d90907" type="targz">
+			https://github.com/troydhanson/uthash/archive/refs/tags/v2.3.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<!-- <Dependency></Dependency> -->
@@ -32,6 +32,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-06-19</Date>
+			<Version>2.3.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@tuta.io</Email>
+		</Update>
 		<Update release="1">
 			<Date>2021-01-23</Date>
 			<Version>2.2.0</Version>

@@ -24,6 +24,7 @@
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>boost-devel</Dependency>
 			<Dependency>wxGTK-devel</Dependency>
+			<Dependency>lsb-release</Dependency>
 			<Dependency>wxGTK-common</Dependency>
 			<Dependency>glibmm-devel</Dependency>
 			<Dependency>libbsd-devel</Dependency>

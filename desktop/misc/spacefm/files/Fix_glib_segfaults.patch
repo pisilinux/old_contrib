@@ -1,0 +1,73 @@
+From ead6c8f07876bc5c6ac7827265882954bdee0143 Mon Sep 17 00:00:00 2001
+From: thermitegod <thermitethegod@gmail.com>
+Date: Fri, 18 Jun 2021 20:05:20 -0700
+Subject: [PATCH] glib-2.68.x segfaults g_mutex_{lock,unlock}()
+
+---
+ src/vfs/vfs-async-task.c | 3 ++-
+ src/vfs/vfs-dir.c        | 6 ++++--
+ src/vfs/vfs-file-task.c  | 6 ++++--
+ 3 files changed, 10 insertions(+), 5 deletions(-)
+
+diff --git a/src/vfs/vfs-async-task.c b/src/vfs/vfs-async-task.c
+index b7c3bc93..c5d783f8 100644
+--- a/src/vfs/vfs-async-task.c
++++ b/src/vfs/vfs-async-task.c
+@@ -90,7 +90,8 @@ static void vfs_async_task_class_init(VFSAsyncTaskClass* klass)
+ 
+ static void vfs_async_task_init(VFSAsyncTask* task)
+ {
+-    g_mutex_init(&task->lock);
++    task->lock = g_malloc(sizeof(GMutex));
++    g_mutex_init(task->lock);
+ }
+ 
+ void vfs_async_task_lock(VFSAsyncTask* task)
+diff --git a/src/vfs/vfs-dir.c b/src/vfs/vfs-dir.c
+index 60da110d..dcc33e55 100644
+--- a/src/vfs/vfs-dir.c
++++ b/src/vfs/vfs-dir.c
+@@ -185,7 +185,8 @@ static void vfs_dir_class_init(VFSDirClass* klass)
+ /* constructor */
+ static void vfs_dir_init(VFSDir* dir)
+ {
+-    g_mutex_init(&dir->mutex);
++    dir->mutex = g_malloc(sizeof(GMutex));
++    g_mutex_init(dir->mutex);
+ }
+ 
+ void vfs_dir_lock(VFSDir* dir)
+@@ -200,7 +201,8 @@ void vfs_dir_unlock(VFSDir* dir)
+ 
+ static void vfs_dir_clear(VFSDir* dir)
+ {
+-    g_mutex_clear(&dir->mutex);
++    g_mutex_clear(dir->mutex);
++    g_free(dir->mutex);
+ }
+ 
+ /* destructor */
+diff --git a/src/vfs/vfs-file-task.c b/src/vfs/vfs-file-task.c
+index 6bed87cd..d36bfbbe 100644
+--- a/src/vfs/vfs-file-task.c
++++ b/src/vfs/vfs-file-task.c
+@@ -69,7 +69,8 @@ static bool should_abort(VFSFileTask* task);
+ 
+ static void vfs_file_task_init(VFSFileTask* task)
+ {
+-    g_mutex_init(&task->mutex);
++    task->mutex = g_malloc(sizeof(GMutex));
++    g_mutex_init(task->mutex);
+ }
+ 
+ void vfs_file_task_lock(VFSFileTask* task)
+@@ -84,7 +85,8 @@ void vfs_file_task_unlock(VFSFileTask* task)
+ 
+ static void vfs_file_task_clear(VFSFileTask* task)
+ {
+-    g_mutex_clear(&task->mutex);
++    g_mutex_clear(task->mutex);
++    g_free(task->mutex);
+ }
+ 
+ static void append_add_log(VFSFileTask* task, const char* msg, int msg_len)

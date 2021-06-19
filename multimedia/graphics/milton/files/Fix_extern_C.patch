@@ -1,0 +1,31 @@
+--- a/src/platform.h	2019-10-28 01:02:14.000000000 +0300
++++ b/src/platform.h	2021-06-19 08:18:02.825977574 +0300
+@@ -11,6 +11,14 @@
+ #include "utils.h"
+ #include "vector.h"
+ 
++
++#if defined(_WIN32)
++#include "platform_windows.h"
++#elif defined(__linux__) || defined(__MACH__)
++#include "platform_unix.h"
++#endif
++
++
+ #if defined(__cplusplus)
+ extern "C" {
+ #endif
+@@ -225,13 +233,6 @@
+ float perf_count_to_sec(u64 counter);
+ 
+ 
+-#if defined(_WIN32)
+-#include "platform_windows.h"
+-#elif defined(__linux__) || defined(__MACH__)
+-#include "platform_unix.h"
+-#endif
+-
+-
+ #if defined(__cplusplus)
+ }
+ #endif

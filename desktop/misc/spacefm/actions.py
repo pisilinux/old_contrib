@@ -7,10 +7,12 @@
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 
-j = "-Ddeprecated-hw=true \
-     -Dgtk2=true \
-     -Dgtk3=false \
-    "
+j = ''.join([
+    '-Ddeprecated-hw=true ',
+    '-Dgtk2=true ',
+    '-Dgtk3=false ',
+    '-Dxxhash=false ',
+    ])
 
 def setup():
 	mesontools.configure(j)

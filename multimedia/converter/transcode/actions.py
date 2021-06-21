@@ -35,7 +35,6 @@ def setup():
 	--enable-vorbis \
 	--enable-theora \
 	--enable-libxml2 \
-	--enable-libv4l2 \
 	--enable-libjpeg \
 	--enable-libmpeg2 \
 	--enable-freetype2 \

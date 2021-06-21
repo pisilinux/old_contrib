@@ -51,7 +51,8 @@
 		<Patches>
 			<Patch level="1">transcode-1.1.7-ffmpeg4-1.patch</Patch>
 			<Patch level="1">transcode-imagemagick7.patch</Patch>
-			<!-- <Patch level="1">transcode-swresample.patch</Patch> -->
+			<Patch level="1">transcode-glibc-2.32.patch</Patch>
+			<Patch level="1">transcode-gcc10.patch</Patch>
 		</Patches>
 	</Source>
 
@@ -101,6 +102,12 @@
 	</Package>
 
 	<History>
+		<Update release="11">
+			<Date>2021-06-21</Date>
+			<Version>1.1.7</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
 		<Update release="10">
 			<Date>2019-12-28</Date>
 			<Version>1.1.7</Version>

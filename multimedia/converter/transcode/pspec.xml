@@ -108,6 +108,7 @@
 			<Comment>Rebuild.</Comment>
 			<Name>fury</Name>
 			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="10">
 			<Date>2019-12-28</Date>
 			<Version>1.1.7</Version>

@@ -3,7 +3,7 @@
 <PISI>
 	<Source>
 		<Name>ayatana-libappindicator</Name>
-		<Homepage></Homepage>
+		<Homepage>https://github.com/AyatanaIndicators/libayatana-appindicator</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>

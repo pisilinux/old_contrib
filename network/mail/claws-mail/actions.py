@@ -6,12 +6,16 @@
 
 from pisi.actionsapi import shelltools, autotools, pisitools, get
 
+i = ''.join([
+    ' --enable-ldap',
+    ' --enable-startup-notification',
+    ' --enable-alternate-addressbook',
+    ' --disable-static'
+    ])
 def setup():
-	shelltools.system("NOCONFIGURE=1 ./autogen.sh")
-	pisitools.cflags.add("-Wno-deprecated-declarations")
-	autotools.configure("--enable-alternate-addressbook --disable-static")
+	autotools.configure(i)
 
-	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
+#	pisitools.dosed("libtool", " -shared ", " -Wl,-O1,--as-needed -shared ")
 
 def build():
 	autotools.make()

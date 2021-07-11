@@ -9,11 +9,12 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import cmaketools
 from pisi.actionsapi import shelltools
 
-j = "-L \
-     -DUSE_SYSTEM_TAGLIB=ON \
-     -DCMAKE_BUILD_TYPE=Release \
-     -DCMAKE_INSTALL_PREFIX=/usr \
-    "
+j = ''.join([
+    '-DBUILD_WITH_QT5=ON ',
+    '-DUSE_SYSTEM_TAGLIB=ON ',
+    '-DCMAKE_BUILD_TYPE=Release ',
+    '-DCMAKE_INSTALL_PREFIX=/usr -L '
+    ])
 
 def setup():
     shelltools.makedirs("build")

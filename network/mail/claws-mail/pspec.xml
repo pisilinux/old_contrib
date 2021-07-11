@@ -6,7 +6,7 @@
 		<Homepage>https://www.claws-mail.org/</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
@@ -15,9 +15,8 @@
 		<Description>
 			Claws Mail is a lightweight and highly configurable email client and news reader based on the GTK+ GUI toolkit.
 		</Description>
-		<Archive sha1sum="ef3268699adbdea98eefa6bf9c089d58fa57c6d5" type="targz">
-			<!-- snapshot from https://git.claws-mail.org/?p=claws.git;a=snapshot;h=f04096b7c36d5060fa3ce51a1a2a3945bd257c99;sf=tgz -->
-			https://github.com/4fury/sources/raw/master/89149776cbb8bbc3ef50158f2f430085098ebb23.tgz
+		<Archive sha1sum="b4befc25649a28e89274ba72b50e9f9f66bf09b6" type="tarxz">
+			https://claws-mail.org/releases/claws-mail-4.0.0.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>flex</Dependency>
@@ -37,16 +36,22 @@
 			<Dependency>compface-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
 			<Dependency>libsocket-devel</Dependency>
+			<Dependency>openldap-server</Dependency>
+			<Dependency>libarchive-devel</Dependency>
 			<Dependency>NetworkManager-devel</Dependency>
+			<Dependency>python3-pygobject3-devel</Dependency>
+			<Dependency>startup-notification-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">git_version.patch</Patch>
+			<!-- <Patch level="1">missing.patch</Patch> -->
 		</Patches>
 	</Source>
 
 	<Package>
 		<Name>claws-mail</Name>
 		<RuntimeDependencies>
+			<Dependency>db</Dependency>
+			<Dependency>atk</Dependency>
 			<Dependency>curl</Dependency>
 			<Dependency>gtk3</Dependency>
 			<Dependency>perl</Dependency>
@@ -55,22 +60,27 @@
 			<Dependency>expat</Dependency>
 			<Dependency>glib2</Dependency>
 			<Dependency>gpgme</Dependency>
-			<Dependency>pango</Dependency>
 			<Dependency>libSM</Dependency>
-			<Dependency>libICE</Dependency>
+			<Dependency>pango</Dependency>
 			<Dependency>gnutls</Dependency>
+			<Dependency>libICE</Dependency>
 			<Dependency>nettle</Dependency>
 			<Dependency>libical</Dependency>
 			<Dependency>librsvg</Dependency>
-			<Dependency>enchant2</Dependency>
-			<Dependency>libetpan</Dependency>
+			<Dependency>openssl</Dependency>
+			<Dependency>python3</Dependency>
 			<Dependency>compface</Dependency>
+			<Dependency>enchant2</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>libetpan</Dependency>
 			<Dependency>dbus-glib</Dependency>
+			<Dependency>libassuan</Dependency>
 			<Dependency>libnotify</Dependency>
+			<Dependency>cyrus-sasl</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
 			<Dependency>libarchive</Dependency>
 			<Dependency>libgpg-error</Dependency>
-			<!-- <Dependency>openldap-client</Dependency> -->
+			<Dependency>openldap-client</Dependency>
 			<Dependency>startup-notification</Dependency>
 		</RuntimeDependencies>
 		<Files>
@@ -81,12 +91,6 @@
 			<Path fileType="man">/usr/share/man</Path>
 			<Path fileType="doc">/usr/share/doc/clawsmail</Path>
 		</Files>
-		<AdditionalFiles>
-			<!-- <AdditionalFile owner="" permission="" target=""></AdditionalFile> -->
-		</AdditionalFiles>
-		<Provides>
-			<!-- <COMAR script=""></COMAR> -->
-		</Provides>
 	</Package>
 
 	<Package>
@@ -102,11 +106,11 @@
 
 	<History>
 		<Update release="1">
-			<Date>2021-02-20</Date>
-			<Version>3.17.8.23</Version>
-			<Comment>First build from gtk3 branch.</Comment>
+			<Date>2021-07-10</Date>
+			<Version>4.0.0</Version>
+			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

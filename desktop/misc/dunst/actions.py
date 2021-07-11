@@ -9,7 +9,7 @@ from pisi.actionsapi import autotools, pisitools, get
 j = ''.join([
     'PREFIX=/usr ',
     'SYSTEMD=0 ',
-    'SERVICEDIR_DBUS=/usr/share/dbus-1 '
+    'SERVICEDIR_DBUS=/usr/share/dbus-1/services '
     ])
 
 def setup():

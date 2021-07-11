@@ -9,10 +9,16 @@ from pisi.actionsapi import cmaketools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+j = ''.join([
+    ' -DCMAKE_BUILD_TYPE=Release',
+    ' -DBUILD_SHARED_LIBS=ON',
+    ' -DDISABLE_DEPRECATED_QT_FEATURES=ON -L'
+    ])
+
 def setup():
 	shelltools.makedirs("build")
 	shelltools.cd("build")
-	cmaketools.configure("-DBUILD_SHARED_LIBS=ON -DDISABLE_DEPRECATED_QT_FEATURES=ON -L", sourceDir = '..')
+	cmaketools.configure(j, sourceDir = '..')
 
 def build():
 	shelltools.cd("build")

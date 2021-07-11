@@ -15,8 +15,8 @@
 		<Description>
 			This program allows users to configure Qt5 settings (theme, font, icons, etc.) under DE/WM without Qt integration.
 		</Description>
-		<Archive sha1sum="df8364b6bdffa6a585f293dc63f7c7125382dc68" type="tarbz2">
-			https://sourceforge.net/projects/qt5ct/files/qt5ct-1.1.tar.bz2
+		<Archive sha1sum="ca781a3ea185d46e3a30ea5cb375e0ce5d085806" type="tarbz2">
+			mirrors://sourceforge/project/qt5ct/qt5ct-1.2.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>libX11-devel</Dependency>
@@ -46,6 +46,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-07-11</Date>
+			<Version>1.2</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="1">
 			<Date>2021-02-14</Date>
 			<Version>1.1</Version>

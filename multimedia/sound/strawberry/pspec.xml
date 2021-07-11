@@ -22,9 +22,11 @@
             <Dependency>cmake</Dependency>
             <Dependency>ccache</Dependency>
             <Dependency>dbus-devel</Dependency>
+            <Dependency>lsb-release</Dependency>
             <Dependency>glib2-devel</Dependency>
             <Dependency>boost-devel</Dependency>
             <Dependency>fftw3-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
             <Dependency>libmtp-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
@@ -74,6 +76,7 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>libchromaprint</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>gst-plugins-bad</Dependency>
             <Dependency>gst-plugins-base</Dependency>
@@ -90,7 +93,7 @@
 
     <History>
         <Update release="2">
-            <Date>2021-03-31</Date>
+            <Date>2021-07-11</Date>
             <Version>0.9.2</Version>
             <Comment>Version bump.</Comment>
             <Name>Pisi Linux Community</Name>

@@ -76,6 +76,7 @@
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>libchromaprint</Dependency>
+            <Dependency>qt5-sql-sqlite</Dependency>
             <Dependency>pulseaudio-libs</Dependency>
             <Dependency>gst-plugins-bad</Dependency>
             <Dependency>gst-plugins-base</Dependency>

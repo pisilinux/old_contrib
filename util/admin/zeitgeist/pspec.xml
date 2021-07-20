@@ -41,6 +41,7 @@
 			<Dependency>sqlite</Dependency>
 			<Dependency>python3</Dependency>
 			<Dependency>json-glib</Dependency>
+			<Dependency>dbus-python3</Dependency>
 			<Dependency>telepathy-glib</Dependency>
 		</RuntimeDependencies>
 		<Files>

@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>openbox-menu</Name>
-        <Homepage>https://github.com/fabriceT/openbox-menu</Homepage>
+        <Homepage>http://fabrice.thiroux.free.fr/openbox-menu.html</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>

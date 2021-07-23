@@ -14,7 +14,7 @@
 		<Summary>Openbox Key Editor.</Summary>
 		<Description>ObKey - Openbox Key Editor (PyGObject version).</Description>
 		<Archive sha1sum="2bfbe2fa0aa9184a3125929bdb1afd099d275b29" type="tarxz">
-			https://github.com/4fury/sources/raw/master/obkey-1.2.tar.xz
+			https://github.com/4fury/sources/raw/master/obkey-20171004.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>gtk3-devel</Dependency>
@@ -40,7 +40,7 @@
 	<History>
 		<Update release="1">
 			<Date>2021-07-03</Date>
-			<Version>1.2</Version>
+			<Version>20171004</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>

@@ -32,7 +32,7 @@
         <RuntimeDependencies>
             <Dependency>gtk3</Dependency>
             <Dependency>glib2</Dependency>
-	    <Dependency>openbox</Dependency>
+            <Dependency>openbox</Dependency>
             <Dependency>menu-cache</Dependency>
         </RuntimeDependencies>
         <Files>

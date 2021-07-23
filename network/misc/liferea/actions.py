@@ -8,8 +8,14 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+f = ''.join([
+    '-Wno-discarded-qualifiers ',
+    '-Wno-deprecated-declarations ',
+    '-Wno-incompatible-pointer-types '
+    ])
+
 def setup():
-    pisitools.cflags.add("-Wno-deprecated-declarations -Wno-incompatible-pointer-types -Wno-discarded-qualifiers")
+    pisitools.cflags.add(f)
     autotools.configure("--disable-static --disable-schemas-compile --disable-introspection")
 
 def build():

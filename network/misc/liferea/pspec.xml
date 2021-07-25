@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>liferea</Name>
@@ -10,10 +10,13 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:gui</IsA>
-        <Summary>News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds</Summary>
+        <Summary>News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds.</Summary>
         <Description>Liferea (abbreviation of Linux Feed Reader) is a news aggreagator for RSS/RDF feeds which also supports CDF channels, Atom/Echo/PIE feeds and OCS or OPML directories. It is a simple FeedReader clone for Unix.</Description>
-        <Archive sha1sum="355a4cbe17b27ac075285b84e11237915a806d9c" type="tarbz2">https://github.com/lwindolf/liferea/releases/download/v1.13.0/liferea-1.13.0.tar.bz2</Archive>
+        <Archive sha1sum="f226c9f502a59467b2ee0d0d3a9a15fc9a4ba0b8" type="tarbz2">
+            https://github.com/lwindolf/liferea/releases/download/v1.13.6/liferea-1.13.6.tar.bz2
+        </Archive>
         <BuildDependencies>
+            <Dependency>python3</Dependency>
             <Dependency>intltool</Dependency>
             <Dependency>atk-devel</Dependency>
             <Dependency>gtk3-devel</Dependency>
@@ -45,6 +48,7 @@
             <Dependency>libsoup</Dependency>
             <Dependency>libxml2</Dependency>
             <Dependency>libxslt</Dependency>
+            <Dependency>harfbuzz</Dependency>
             <Dependency>json-glib</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>webkit2gtk</Dependency>
@@ -61,6 +65,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2021-07-23</Date>
+            <Version>1.13.6</Version>
+            <Comment>Version bump.</Comment>
+            <Name>fury</Name>
+            <Email>wascheme@tuta.io</Email>
+        </Update>
         <Update release="6">
             <Date>2020-03-15</Date>
             <Version>1.13.0</Version>

@@ -1,28 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
         <Name>openbox-menu</Name>
-        <Homepage>https://bitbucket.org/fabriceT/openbox-menu</Homepage>
+        <Homepage>http://fabrice.thiroux.free.fr/openbox-menu.html</Homepage>
         <Packager>
             <Name>Ayhan Yalçınsoy</Name>
             <Email>ayhanyalcinsoy@pisilinux.org</Email>
         </Packager>
         <License>GPLv2</License>
-	<IsA>app:gui</IsA>
+        <IsA>app:gui</IsA>
         <Summary>Openbox-menu is a pipemenu for Openbox window manager.</Summary>
         <Description>Openbox-menu is a pipemenu for Openbox window manager. It provides a dynamic menu listing installed applications. Most of the work is done by the LXDE library menu-cache.</Description>
-        <Archive sha1sum="2c391c7741d7e1eea080eaf6f38d46db90ce1a5f" type="tarbz2">https://bitbucket.org/fabriceT/openbox-menu/downloads/openbox-menu-0.7.0.tar.bz2</Archive>
+        <Archive sha1sum="e9d0c4f64df43f240a2f745b8ea87bdf5a1e5e9f" type="targz">
+            https://github.com/fabriceT/openbox-menu/archive/refs/tags/v0.8.1.tar.gz
+        </Archive>
         <BuildDependencies>
-            <Dependency>gtk2-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
             <Dependency>glib2-devel</Dependency>
+            <Dependency>openbox-devel</Dependency>
+            <Dependency>librsvg-devel</Dependency>
             <Dependency>menu-cache-devel</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch level="1">Remove_icon_theme_annoying_variable.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
         <Name>openbox-menu</Name>
         <RuntimeDependencies>
-            <Dependency>gtk2</Dependency>
+            <Dependency>gtk3</Dependency>
             <Dependency>glib2</Dependency>
+            <Dependency>openbox</Dependency>
             <Dependency>menu-cache</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -32,6 +42,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2021-07-22</Date>
+            <Version>0.8.1</Version>
+            <Comment>Version update.</Comment>
+            <Name>fury</Name>
+            <Email>uglyside@yandex.ru</Email>
+        </Update>
         <Update release="1">
             <Date>2015-05-22</Date>
             <Version>0.7.0</Version>

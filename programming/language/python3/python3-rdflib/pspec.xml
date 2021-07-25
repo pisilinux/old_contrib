@@ -13,8 +13,8 @@
 		<PartOf>programming.language.python3</PartOf>
 		<Summary>RDFLib is a pure Python package for working with RDF.</Summary>
 		<Description>RDFLib is a pure Python package for working with RDF.</Description>
-		<Archive sha1sum="db495e4c73c9a318e7adbe56966ecd99534b75b3" type="targz">
-			https://github.com/RDFLib/rdflib/archive/refs/tags/5.0.0.tar.gz
+		<Archive sha1sum="9827de44d7b37d873f1105eb5ce439139139ea43" type="targz">
+			https://github.com/RDFLib/rdflib/archive/refs/tags/6.0.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>python3-devel</Dependency>
@@ -39,8 +39,8 @@
 
 	<History>
 		<Update release="1">
-			<Date>2021-06-18</Date>
-			<Version>5.0.0</Version>
+			<Date>2021-07-21</Date>
+			<Version>6.0.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>

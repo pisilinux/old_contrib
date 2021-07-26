@@ -6,7 +6,7 @@
 		<Homepage>http://moc.daper.net/</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:console</IsA>
@@ -89,7 +89,7 @@
 			<Version>2.6.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

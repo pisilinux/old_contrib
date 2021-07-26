@@ -6,7 +6,7 @@
 		<Homepage>https://www.enlightenment.org/</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<License>LGPLv3</License>
@@ -47,14 +47,14 @@
 			<Version>1.25.0</Version>
 			<Comment>Version bump.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 		<Update release="1">
 			<Date>2020-04-30</Date>
 			<Version>1.24.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

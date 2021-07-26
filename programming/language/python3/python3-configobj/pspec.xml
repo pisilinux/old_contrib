@@ -6,7 +6,7 @@
 		<Homepage>https://github.com/DiffSK/configobj</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>BSD</License>
 		<IsA>library</IsA>
@@ -39,7 +39,7 @@
 			<Version>5.0.6</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

@@ -6,7 +6,7 @@
 		<Homepage>https://github.com/Martchus/tageditor</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>GPLv2</License>
 		<IsA>app:gui</IsA>
@@ -54,14 +54,14 @@
 			<Version>3.4.0</Version>
 			<Comment>Version bump.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 		<Update release="1">
 			<Date>2021-05-25</Date>
 			<Version>3.3.10</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

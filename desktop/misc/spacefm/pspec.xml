@@ -6,7 +6,7 @@
 		<Homepage>https://github.com/thermitegod/spacefm</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<License>LGPLv3</License>
@@ -70,7 +70,7 @@
 			<Version>2.1.0</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

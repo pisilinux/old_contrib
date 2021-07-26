@@ -6,7 +6,7 @@
 		<Homepage>https://github.com/qt/qtstyleplugins</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>unknown</License>
 		<IsA>library</IsA>
@@ -45,7 +45,7 @@
 			<Version>2017.01.11</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

@@ -6,7 +6,7 @@
 		<Homepage>https://gmusicbrowser.org</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
@@ -58,7 +58,7 @@
 			<Version>1.1.99.1</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

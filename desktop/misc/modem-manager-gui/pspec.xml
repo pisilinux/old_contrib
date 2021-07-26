@@ -6,7 +6,7 @@
 		<Homepage>https://sourceforge.net/projects/modem-manager-gui/</Homepage>
 		<Packager>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>GPLv3</License>
 		<IsA>app:gui</IsA>
@@ -53,7 +53,7 @@
 			<Version>0.0.20</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
-			<Email>wascheme@tuta.io</Email>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

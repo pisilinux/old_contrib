@@ -11,8 +11,8 @@
 		<License>LGPLv2.1</License>
 		<Summary>The GIMP Toolkit version 3</Summary>
 		<Description>GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-		<Archive sha1sum="2faab763eeeea30c7b81d1a4749594ed39dc9cbe" type="tarxz">
-			mirrors://gnome/gtk+/3.24/gtk+-3.24.29.tar.xz
+		<Archive sha1sum="b16d0ed86c613708b161eb96b56f4df1e52a1e48" type="tarxz">
+			mirrors://gnome/gtk+/3.24/gtk+-3.24.30.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -63,7 +63,8 @@
 			<Patch level="1">gtk3-classic-3.24.29/csd__clean-headerbar.patch</Patch>
 			<!-- <Patch level="1">gtk3-classic-3.24.29/csd__disabled-by-default.patch</Patch> -->
 			<!-- <Patch level="1">gtk3-classic-3.24.29/csd__server-side-shadow.patch</Patch> -->
-			<Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar.patch</Patch> -->
+			<Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar_3_24_30.patch</Patch>
 			<Patch level="1">gtk3-classic-3.24.29/file-chooser__typeahead.patch</Patch>
 			<Patch level="1">gtk3-classic-3.24.29/fixes__atk-bridge-errors.patch</Patch>
 			<Patch level="1">gtk3-classic-3.24.29/fixes__labels-wrapping.patch</Patch>
@@ -191,7 +192,14 @@
 	</Package>
 
 	<History>
-		<Update release="15">
+		<Update release="18">
+			<Date>2021-07-27</Date>
+			<Version>3.24.30</Version>
+			<Comment>Rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+		<Update release="1">
 			<Date>2021-05-04</Date>
 			<Version>3.24.29</Version>
 			<Comment>First build.</Comment>

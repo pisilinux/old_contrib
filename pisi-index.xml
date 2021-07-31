@@ -507,7 +507,7 @@
             <Homepage>https://github.com/lanoxx/tilda</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
@@ -551,7 +551,7 @@
                 <Version>1.5.4</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -661,7 +661,7 @@
                 <Version>0.28.2</Version>
                 <Comment>Old branch rebuild</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2018-07-31</Date>
@@ -760,14 +760,14 @@
                 <Version>2.1.1</Version>
                 <Comment>Version bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2021-01-18</Date>
                 <Version>2.1.0</Version>
                 <Comment>First release</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -900,7 +900,7 @@
     <SpecFile>
         <Source>
             <Name>openbox-menu</Name>
-            <Homepage>https://bitbucket.org/fabriceT/openbox-menu</Homepage>
+            <Homepage>http://fabrice.thiroux.free.fr/openbox-menu.html</Homepage>
             <Packager>
                 <Name>Ayhan Yalçınsoy</Name>
                 <Email>ayhanyalcinsoy@pisilinux.org</Email>
@@ -910,19 +910,25 @@
             <PartOf>x11.wm</PartOf>
             <Summary xml:lang="en">Openbox-menu is a pipemenu for Openbox window manager.</Summary>
             <Description xml:lang="en">Openbox-menu is a pipemenu for Openbox window manager. It provides a dynamic menu listing installed applications. Most of the work is done by the LXDE library menu-cache.</Description>
-            <Archive type="tarbz2" sha1sum="2c391c7741d7e1eea080eaf6f38d46db90ce1a5f" name="openbox-menu-0.7.0.tar.bz2">https://bitbucket.org/fabriceT/openbox-menu/downloads/openbox-menu-0.7.0.tar.bz2</Archive>
+            <Archive type="targz" sha1sum="e9d0c4f64df43f240a2f745b8ea87bdf5a1e5e9f" name="v0.8.1.tar.gz">https://github.com/fabriceT/openbox-menu/archive/refs/tags/v0.8.1.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
                 <Dependency>glib2-devel</Dependency>
+                <Dependency>openbox-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
                 <Dependency>menu-cache-devel</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch level="1">Remove_icon_theme_annoying_variable.patch</Patch>
+            </Patches>
             <SourceURI>x11/wm/openbox-menu/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>openbox-menu</Name>
             <RuntimeDependencies>
-                <Dependency>gtk2</Dependency>
+                <Dependency>gtk3</Dependency>
                 <Dependency>glib2</Dependency>
+                <Dependency>openbox</Dependency>
                 <Dependency>menu-cache</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -931,6 +937,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-22</Date>
+                <Version>0.8.1</Version>
+                <Comment>Version update.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2015-05-22</Date>
                 <Version>0.7.0</Version>
@@ -943,25 +956,22 @@
     <SpecFile>
         <Source>
             <Name>obconf</Name>
-            <Homepage>http://openbox.org</Homepage>
+            <Homepage>http://openbox.org/wiki/ObConf:About</Homepage>
             <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
-            <License>GPLv2</License>
+            <License>GPL-2</License>
             <IsA>app:gui</IsA>
             <PartOf>x11.wm</PartOf>
-            <Summary xml:lang="en">Openbox preferences manager</Summary>
+            <Summary xml:lang="en">Openbox Configuration Manager.</Summary>
             <Summary xml:lang="tr">Openbox ayar yöneticisi</Summary>
             <Description xml:lang="en">ObConf is a graphical configuration tool for the Openbox window manager.</Description>
             <Description xml:lang="tr">ObConf, Openbox pencere yöneticisi için bir grafik yapılandırma aracıdır.</Description>
-            <Icon>obconf</Icon>
-            <Archive type="targz" sha1sum="90638645b53275fda175281a1826c8c4c01746df" name="obconf-2.0.4.tar.gz">http://openbox.org/dist/obconf/obconf-2.0.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="6eb5a51a4a1625fda7230d2f236190836d8b87a3" name="obconf-63ec47c.tar.gz">https://github.com/4fury/sources/raw/master/obconf-63ec47c.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>gtk2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
                 <Dependency>openbox-devel</Dependency>
-                <Dependency>libglade-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
                 <Dependency>startup-notification-devel</Dependency>
             </BuildDependencies>
             <SourceURI>x11/wm/obconf/pspec.xml</SourceURI>
@@ -969,23 +979,30 @@
         <Package>
             <Name>obconf</Name>
             <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>cairo</Dependency>
                 <Dependency>glib2</Dependency>
-                <Dependency>gtk2</Dependency>
                 <Dependency>libX11</Dependency>
                 <Dependency>libxml2</Dependency>
                 <Dependency>openbox</Dependency>
-                <Dependency>libglade</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>startup-notification</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="data">/usr/share</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2021-06-24</Date>
+                <Version>2.0.4</Version>
+                <Comment>Rebuild gtk3(from git snapshot).</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="4">
                 <Date>2014-05-16</Date>
                 <Version>2.0.4</Version>
@@ -1013,6 +1030,50 @@
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>obkey</Name>
+            <Homepage>https://github.com/stevenhoneyman/obkey</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>x11.wm</PartOf>
+            <Summary xml:lang="en">Openbox Key Editor.</Summary>
+            <Description xml:lang="en">ObKey - Openbox Key Editor (PyGObject version).</Description>
+            <Archive type="tarxz" sha1sum="2bfbe2fa0aa9184a3125929bdb1afd099d275b29" name="obkey-20171004.tar.xz">https://github.com/4fury/sources/raw/master/obkey-20171004.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>python-pygobject3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>x11/wm/obkey/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>obkey</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>python-pygobject3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/python2.7/site-packages</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-03</Date>
+                <Version>20171004</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1402,7 +1463,7 @@
                 <Version>0.3.2</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1495,7 +1556,7 @@
                 <Version>1.3.2</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1604,82 +1665,7 @@
                 <Version>0.6.3</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>lxappearance-obconf</Name>
-            <Homepage>https://www.lxde.org/</Homepage>
-            <Packager>
-                <Name>Ayhan Yalçınsy</Name>
-                <Email>ayhanyalcinsoy@pisilinux.org</Email>
-            </Packager>
-            <License>GPL-2</License>
-            <IsA>library</IsA>
-            <PartOf>desktop.lxde</PartOf>
-            <Summary xml:lang="en">Plugin to configure Openbox inside LXAppearance.</Summary>
-            <Description xml:lang="en">This plugin adds an additional tab called &quot;Window Border&quot; to LXAppearance.It is only visible when the plugin is installed and Openbox is in use.</Description>
-            <Archive type="tarxz" sha1sum="dcb5604bb1143add0fb7ea235661ad9313747288" name="lxappearance-obconf-0.2.3.tar.xz">mirrors://sourceforge/lxde/lxappearance-obconf-0.2.3.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>intltool</Dependency>
-                <Dependency>atk-devel</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>libSM-devel</Dependency>
-                <Dependency>libICE-devel</Dependency>
-                <Dependency>imlib2-devel</Dependency>
-                <Dependency>libXft-devel</Dependency>
-                <Dependency>gettext-devel</Dependency>
-                <Dependency>openbox-devel</Dependency>
-                <Dependency>librsvg-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
-                <Dependency>lxappearance-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="1">Check_if_X11_before_requesting_X11_WM_name.patch</Patch>
-                <Patch level="1">Repair_and_complete_GTK3_preiview.patch</Patch>
-            </Patches>
-            <SourceURI>desktop/lxde/lxappearance-obconf/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>lxappearance-obconf</Name>
-            <RuntimeDependencies>
-                <Dependency>atk</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libSM</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>imlib2</Dependency>
-                <Dependency>libICE</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libXft</Dependency>
-                <Dependency>librsvg</Dependency>
-                <Dependency>libxml2</Dependency>
-                <Dependency>openbox</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>harfbuzz</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>fontconfig</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/lxappearance</Path>
-                <Path fileType="data">/usr/share/lxappearance</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2021-02-13</Date>
-                <Version>0.2.3</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1736,7 +1722,7 @@
                 <Version>1.3.2</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1787,7 +1773,7 @@
                 <Version>1.3.2</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1839,14 +1825,14 @@
                 <Version>0.4.0</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2020-01-16</Date>
                 <Version>0.3.2</Version>
                 <Comment>Rebuild.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="3">
                 <Date>2013-10-11</Date>
@@ -1912,7 +1898,7 @@
                 <Version>0.3.5</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -2004,7 +1990,7 @@
                 <Version>0.10.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -2085,73 +2071,7 @@
                 <Version>0.1.5</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>lxhotkey</Name>
-            <Homepage>https://www.lxde.org/</Homepage>
-            <Packager>
-                <Name>Ayhan Yalçınsoy</Name>
-                <Email>ayhanyalcinsoy@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app</IsA>
-            <PartOf>desktop.lxde</PartOf>
-            <Summary xml:lang="en">A lightweight global keyboard shortcuts configurator.</Summary>
-            <Description xml:lang="en">LXHotkey is an universal application for the Lightweight X11 Desktop Environment (LXDE) which allows view and change global keyboard shortcuts for Window Manager actions, including ones to start applications.</Description>
-            <Archive type="tarxz" sha1sum="2f41397a07dc3ae19607be23f61f09cdb93c8a3d" name="lxhotkey-0.1.1.tar.xz">mirrors://sourceforge/lxde/lxhotkey-0.1.1.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>intltool</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>libfm-devel</Dependency>
-                <Dependency>libunistring-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>desktop/lxde/lxhotkey/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>lxhotkey</Name>
-            <RuntimeDependencies>
-                <Dependency>atk</Dependency>
-                <Dependency>gtk3</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libfm</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>harfbuzz</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>libunistring</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>lxhotkey-devel</Name>
-            <RuntimeDependencies>
-                <Dependency>libfm-devel</Dependency>
-                <Dependency release="1">lxhotkey</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2021-02-13</Date>
-                <Version>0.1.1</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -2263,7 +2183,7 @@
                 <Version>1.1.0</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -3358,7 +3278,7 @@
             <Homepage>https://github.com/wlhlm/mpd-notification</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>MIT</License>
             <IsA>library</IsA>
@@ -3392,7 +3312,7 @@
                 <Version>2015.11.26</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -3528,6 +3448,7 @@
     <SpecFile>
         <Source>
             <Name>ayatana-libappindicator</Name>
+            <Homepage>https://github.com/AyatanaIndicators/libayatana-appindicator</Homepage>
             <Packager>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -3605,11 +3526,75 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>dunst</Name>
+            <Homepage>https://dunst-project.org/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>BSD-3-Clause</License>
+            <IsA>service</IsA>
+            <PartOf>desktop.misc</PartOf>
+            <Summary xml:lang="en">Lightweight and customizable notification daemon.</Summary>
+            <Description xml:lang="en">Dunst is a lightweight replacement for the notification daemons provided by most desktop environments. It’s very customizable, isn’t dependent on any toolkits, and therefore fits into those window manager centric setups we all love to customize to perfection.</Description>
+            <Archive type="targz" sha1sum="2ad229080f3e20cad8b80a7162651c54223bd86b" name="v1.6.1.tar.gz">https://github.com/dunst-project/dunst/archive/refs/tags/v1.6.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>dbus-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libXScrnSaver-devel</Dependency>
+                <Dependency>wayland-devel</Dependency>
+                <Dependency>wayland-client</Dependency>
+                <Dependency>wayland-protocols-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/misc/dunst/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dunst</Name>
+            <RuntimeDependencies>
+                <Dependency>dbus</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXScrnSaver</Dependency>
+                <Dependency>wayland-client</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/dunst/dunstrc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/dbus-1</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-04</Date>
+                <Version>1.6.1</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>gtkhash</Name>
             <Homepage>https://github.com/tristanheaven/gtkhash</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
@@ -3711,7 +3696,54 @@
                 <Version>1.4</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>indicator-sound-switcher</Name>
+            <Homepage>https://yktoo.com/en/software/sound-switcher-indicator/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>desktop.misc</PartOf>
+            <Summary xml:lang="en">Sound input/output selector indicator for Linux.</Summary>
+            <Description xml:lang="en">It shows an icon in the indicator area or the system tray (whatever is available in your desktop environment). The icon&apos;s menu allows you to switch the current sound input and output (i.e. source ports and sink ports in PulseAudio&apos;s terms, respectively) with just two clicks.</Description>
+            <Archive type="targz" sha1sum="b9e271aa7d65a0937df7e9b5bf829397ef42f6ce" name="v2.3.6.tar.gz">https://github.com/yktoo/indicator-sound-switcher/archive/refs/tags/v2.3.6.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/misc/indicator-sound-switcher/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>indicator-sound-switcher</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk3</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>keybinder</Dependency>
+                <Dependency>python3-pygobject3</Dependency>
+                <Dependency>ayatana-libappindicator</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/xdg</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-24</Date>
+                <Version>2.3.6</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -3888,7 +3920,7 @@
             <Homepage>https://kolbusa.github.io/stalonetray/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app</IsA>
@@ -3925,14 +3957,14 @@
                 <Version>0.8.4</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2020-09-07</Date>
                 <Version>0.8.3</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -3942,7 +3974,7 @@
             <Homepage>https://sourceforge.net/projects/modem-manager-gui/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
@@ -3984,7 +4016,7 @@
                 <Version>0.0.20</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -3994,7 +4026,7 @@
             <Homepage>https://github.com/FredrikHson/cponysay</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:console</IsA>
@@ -4021,7 +4053,7 @@
                 <Version>0.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -4031,7 +4063,7 @@
             <Homepage>https://github.com/thermitegod/spacefm</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <License>LGPLv3</License>
@@ -4087,7 +4119,7 @@
                 <Version>2.1.0</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -4337,7 +4369,7 @@
             <PartOf>desktop.toolkit.gtk</PartOf>
             <Summary xml:lang="en">The GIMP Toolkit version 3</Summary>
             <Description xml:lang="en">GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-            <Archive type="tarxz" sha1sum="2faab763eeeea30c7b81d1a4749594ed39dc9cbe" name="gtk+-3.24.29.tar.xz">mirrors://gnome/gtk+/3.24/gtk+-3.24.29.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="b16d0ed86c613708b161eb96b56f4df1e52a1e48" name="gtk+-3.24.30.tar.xz">mirrors://gnome/gtk+/3.24/gtk+-3.24.30.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>meson</Dependency>
@@ -4381,7 +4413,7 @@
                 <Patch level="1">gtk3-classic-3.24.29/appearance__disable-backdrop.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/appearance__smaller-statusbar.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/csd__clean-headerbar.patch</Patch>
-                <Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar.patch</Patch>
+                <Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar_3_24_30.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/file-chooser__typeahead.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/fixes__atk-bridge-errors.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/fixes__labels-wrapping.patch</Patch>
@@ -4452,7 +4484,7 @@
             <Summary xml:lang="en">GTK demo application</Summary>
             <IsA>app:gui</IsA>
             <RuntimeDependencies>
-                <Dependency release="15">gtk3-classic</Dependency>
+                <Dependency release="18">gtk3-classic</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/gtk3-demo</Path>
@@ -4466,7 +4498,7 @@
             <Name>gtk3-classic-devel</Name>
             <Summary xml:lang="en">Development files for gtk3</Summary>
             <RuntimeDependencies>
-                <Dependency release="15">gtk3-classic</Dependency>
+                <Dependency release="18">gtk3-classic</Dependency>
                 <Dependency>atk-devel</Dependency>
                 <Dependency>libXi-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
@@ -4501,12 +4533,115 @@
             </Conflicts>
         </Package>
         <History>
-            <Update release="15">
+            <Update release="18">
+                <Date>2021-07-27</Date>
+                <Version>3.24.30</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+            <Update release="1">
                 <Date>2021-05-04</Date>
                 <Version>3.24.29</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gtksourceview5</Name>
+            <Homepage>http://www.gnome.org/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>desktop.toolkit.gtk</PartOf>
+            <Summary xml:lang="en">A text widget implementing syntax highlighting and other features</Summary>
+            <Description xml:lang="en">Gtksourceview improves the gtk+ text widget by implementing syntax highlighting and other features typical of a source editor.</Description>
+            <Archive type="tarxz" sha1sum="8ddf52a88676784f082b1cbc7bd345cd97becc7e" name="gtksourceview-5.1.0.tar.xz">mirrors://gnome/gtksourceview/5.1/gtksourceview-5.1.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>itstool</Dependency>
+                <Dependency>valgrind</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtk-doc</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>gtk4-devel</Dependency>
+                <Dependency>libpcre2-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>yelp-tools</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>autoconf-archive</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+                <Dependency>sysprof-devel</Dependency>
+                <Dependency>glade-devel</Dependency>
+                <Dependency>gtk4-update-icon-cache</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/toolkit/gtk/gtksourceview5/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtksourceview5</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk4</Dependency>
+                <Dependency>libpcre2</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/gir-1.0/</Path>
+                <Path fileType="data">/usr/share/glade/</Path>
+                <Path fileType="data">/usr/share/vala/vapi</Path>
+                <Path fileType="icons">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/gtksourceview-5</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gtksourceview5-docs</Name>
+            <Summary xml:lang="en">Reference documents of gtksourceview</Summary>
+            <IsA>data:doc</IsA>
+            <Files>
+                <Path fileType="doc">/usr/share/gtk-doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>gtksourceview5-devel</Name>
+            <Summary xml:lang="en">Development files for gtksourceview</Summary>
+            <RuntimeDependencies>
+                <Dependency release="1">gtksourceview5</Dependency>
+                <Dependency>gtk4-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>fribidi-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libpcre2-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2021-07-21</Date>
+                <Version>5.1.0</Version>
+                <Comment>First release</Comment>
+                <Name>Mustafa Cinasal</Name>
+                <Email>muscnsl@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -4852,14 +4987,14 @@
                 <Version>0.15.2</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="2">
                 <Date>2020-01-15</Date>
                 <Version>0.14</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2016-10-01</Date>
@@ -4876,7 +5011,7 @@
             <Homepage>https://github.com/monday15/lounge-gtk-theme</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>data</IsA>
@@ -4919,28 +5054,28 @@
                 <Version>1.24</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="3">
                 <Date>2019-11-03</Date>
                 <Version>1.22</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="2">
                 <Date>2019-10-02</Date>
                 <Version>1.21.1</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2019-08-01</Date>
                 <Version>1.20</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -4950,7 +5085,7 @@
             <Homepage>https://github.com/qt/qtstyleplugins</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>unknown</License>
             <IsA>library</IsA>
@@ -4986,7 +5121,7 @@
                 <Version>2017.01.11</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -4996,14 +5131,14 @@
             <Homepage>https://sourceforge.net/projects/qt5ct</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
             <PartOf>desktop.lookandfeel</PartOf>
             <Summary xml:lang="en">Qt5 configuration tool.</Summary>
             <Description xml:lang="en">This program allows users to configure Qt5 settings (theme, font, icons, etc.) under DE/WM without Qt integration.</Description>
-            <Archive type="tarbz2" sha1sum="df8364b6bdffa6a585f293dc63f7c7125382dc68" name="qt5ct-1.1.tar.bz2">https://sourceforge.net/projects/qt5ct/files/qt5ct-1.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="ca781a3ea185d46e3a30ea5cb375e0ce5d085806" name="qt5ct-1.2.tar.bz2">mirrors://sourceforge/project/qt5ct/qt5ct-1.2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>libX11-devel</Dependency>
                 <Dependency>qt5-linguist</Dependency>
@@ -5031,12 +5166,19 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-11</Date>
+                <Version>1.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-02-14</Date>
                 <Version>1.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -5046,7 +5188,7 @@
             <Homepage>https://www.enlightenment.org/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <License>LGPLv3</License>
@@ -5084,14 +5226,14 @@
                 <Version>1.25.0</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2020-04-30</Date>
                 <Version>1.24.0</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -5291,14 +5433,14 @@
                 <Version>1.25.1</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="2">
                 <Date>2020-06-22</Date>
                 <Version>1.24.3</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2014-06-08</Date>
@@ -5352,14 +5494,14 @@
                 <Version>1.9.0</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="6">
                 <Date>2020-08-12</Date>
                 <Version>1.8.1</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="5">
                 <Date>2014-06-08</Date>
@@ -5490,14 +5632,14 @@
                 <Version>0.24.2</Version>
                 <Comment>Rebuild</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="10">
                 <Date>2020-08-12</Date>
                 <Version>0.24.2</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="9">
                 <Date>2014-06-08</Date>
@@ -5607,14 +5749,14 @@
                 <Version>1.1</Version>
                 <Comment>Rebuild.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="3">
                 <Date>2020-04-30</Date>
                 <Version>1.1</Version>
                 <Comment>Rebuild.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="2">
                 <Date>2014-06-08</Date>
@@ -5807,14 +5949,14 @@
             <Homepage>https://github.com/Martchus/cpp-utilities</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>library</IsA>
             <PartOf>programming.library</PartOf>
             <Summary xml:lang="en">Common C++ classes and routines used by my applications such as argument parser, IO and conversion utilities.</Summary>
             <Description xml:lang="en">Common C++ classes and routines used by my applications such as argument parser, IO and conversion utilities.</Description>
-            <Archive type="targz" sha1sum="92695d691094833c66b5e47dc3b13cac67c55fb0" name="v5.10.4.tar.gz">https://github.com/Martchus/cpp-utilities/archive/refs/tags/v5.10.4.tar.gz</Archive>
+            <Archive type="targz" sha1sum="eaffa260b63f53e9a7f0fbc647e4d9e33b52ff90" name="v5.10.5.tar.gz">https://github.com/Martchus/cpp-utilities/archive/refs/tags/v5.10.5.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>boost-devel</Dependency>
@@ -5837,7 +5979,7 @@
         <Package>
             <Name>cpp-utilities-devel</Name>
             <RuntimeDependencies>
-                <Dependency release="2">cpp-utilities</Dependency>
+                <Dependency release="3">cpp-utilities</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -5846,19 +5988,26 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-11</Date>
+                <Version>5.10.5</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-06-19</Date>
                 <Version>5.10.4</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2021-02-20</Date>
                 <Version>5.10.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -6303,7 +6452,7 @@
             <Homepage>https://github.com/BLAKE2/libb2</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>CC0</License>
             <IsA>library</IsA>
@@ -6336,7 +6485,7 @@
                 <Version>0.98.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -6759,14 +6908,14 @@
             <Homepage>https://github.com/Martchus/qtutilities</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>library</IsA>
             <PartOf>programming.library</PartOf>
             <Summary xml:lang="en">Common Qt related C++ classes and routines used by my applications such as dialogs, widgets and models.</Summary>
             <Description xml:lang="en">Common Qt related C++ classes and routines used by my applications such as dialogs, widgets and models.</Description>
-            <Archive type="targz" sha1sum="5dd2c37a47229afc7e020aae77c95b558862a89f" name="v6.4.1.tar.gz">https://github.com/Martchus/qtutilities/archive/refs/tags/v6.4.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="04c5607752e86e920acc79a2b6f6761c11669149" name="v6.4.2.tar.gz">https://github.com/Martchus/qtutilities/archive/refs/tags/v6.4.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>qt5-linguist</Dependency>
@@ -6791,7 +6940,7 @@
         <Package>
             <Name>qtutilities-devel</Name>
             <RuntimeDependencies>
-                <Dependency release="2">qtutilities</Dependency>
+                <Dependency release="3">qtutilities</Dependency>
                 <Dependency>qt5-base-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -6801,19 +6950,26 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-11</Date>
+                <Version>6.4.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-06-19</Date>
                 <Version>6.4.1</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2021-01-20</Date>
                 <Version>6.3.3</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -10817,7 +10973,7 @@
             <Homepage>https://metacpan.org/pod/Gtk3::Notify</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>library</IsA>
@@ -10855,7 +11011,7 @@
                 <Version>0.03</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -10975,7 +11131,7 @@
                 <Version>2.10</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -11013,7 +11169,7 @@
             <Homepage>https://metacpan.org/pod/Glib::Object::Introspection</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>LGPLv2.1</License>
             <IsA>library</IsA>
@@ -11056,7 +11212,7 @@
                 <Version>0.049</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -11066,7 +11222,7 @@
             <Homepage>https://metacpan.org/pod/Devel::CheckLib</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>perl_5</License>
             <IsA>library</IsA>
@@ -11099,7 +11255,7 @@
                 <Version>1.14</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -11139,7 +11295,7 @@
                 <Version>0.8000</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -11206,7 +11362,7 @@
                 <Version>1.7</Version>
                 <Comment>Rebuild.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -11244,7 +11400,7 @@
             <Homepage>https://metacpan.org/pod/Cairo::GObject</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>LGPLv2.1</License>
             <IsA>library</IsA>
@@ -11280,7 +11436,7 @@
                 <Version>1.005</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -11400,7 +11556,7 @@
                 <Version>0.67</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -11441,7 +11597,7 @@
                 <Version>1.01</Version>
                 <Comment>Rebuild.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -11593,7 +11749,7 @@
                 <Version>0.13</Version>
                 <Comment>Rebuild.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -11720,7 +11876,7 @@
                 <Version>2.113</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -11758,7 +11914,7 @@
             <Homepage>https://metacpan.org/pod/Font::FreeType</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>perl_5</License>
             <IsA>library</IsA>
@@ -11794,7 +11950,7 @@
                 <Version>0.16</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -11804,7 +11960,7 @@
             <Homepage>https://metacpan.org/pod/Mock::Config</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>Artistic_2</License>
             <IsA>library</IsA>
@@ -11834,7 +11990,7 @@
                 <Version>0.03</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -11881,7 +12037,7 @@
                 <Version>1.2.0</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -12024,7 +12180,7 @@
                 <Version>0.57</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -12092,7 +12248,7 @@
                 <Version>1.06</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -12168,7 +12324,7 @@
                 <Version>1.109</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -12236,7 +12392,7 @@
                 <Version>1.16</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -12447,7 +12603,7 @@
                 <Version>1.3293</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-09-10</Date>
@@ -12523,7 +12679,7 @@
                 <Version>3.52</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="6">
                 <Date>2014-09-10</Date>
@@ -12568,7 +12724,7 @@
             <Homepage>https://metacpan.org/pod/Gtk3</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>LGPLv2.1</License>
             <IsA>library</IsA>
@@ -12605,7 +12761,7 @@
                 <Version>0.038</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -12891,7 +13047,7 @@
             <Homepage>https://github.com/DiffSK/configobj</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>BSD</License>
             <IsA>library</IsA>
@@ -12923,7 +13079,7 @@
                 <Version>5.0.6</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -14544,7 +14700,7 @@
             <PartOf>programming.language.python3</PartOf>
             <Summary xml:lang="en">RDFLib is a pure Python package for working with RDF.</Summary>
             <Description xml:lang="en">RDFLib is a pure Python package for working with RDF.</Description>
-            <Archive type="targz" sha1sum="db495e4c73c9a318e7adbe56966ecd99534b75b3" name="5.0.0.tar.gz">https://github.com/RDFLib/rdflib/archive/refs/tags/5.0.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="9827de44d7b37d873f1105eb5ce439139139ea43" name="6.0.0.tar.gz">https://github.com/RDFLib/rdflib/archive/refs/tags/6.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python3-devel</Dependency>
                 <Dependency>python3-setuptools</Dependency>
@@ -14567,8 +14723,8 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2021-06-18</Date>
-                <Version>5.0.0</Version>
+                <Date>2021-07-21</Date>
+                <Version>6.0.0</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -16282,7 +16438,7 @@
                 <Version>1.6.2.2</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -16992,7 +17148,7 @@
             <Homepage>https://yktoo.com/en/software/ymuse/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>Apache-2</License>
             <IsA>app:gui</IsA>
@@ -17032,7 +17188,7 @@
                 <Version>0.17</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17056,9 +17212,11 @@
                 <Dependency>cmake</Dependency>
                 <Dependency>ccache</Dependency>
                 <Dependency>dbus-devel</Dependency>
+                <Dependency>lsb-release</Dependency>
                 <Dependency>glib2-devel</Dependency>
                 <Dependency>boost-devel</Dependency>
                 <Dependency>fftw3-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
                 <Dependency>libmtp-devel</Dependency>
                 <Dependency>sqlite-devel</Dependency>
                 <Dependency>gnutls-devel</Dependency>
@@ -17105,6 +17263,7 @@
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>qt5-x11extras</Dependency>
                 <Dependency>libchromaprint</Dependency>
+                <Dependency>qt5-sql-sqlite</Dependency>
                 <Dependency>pulseaudio-libs</Dependency>
                 <Dependency>gst-plugins-bad</Dependency>
                 <Dependency>gst-plugins-base</Dependency>
@@ -17120,7 +17279,7 @@
         </Package>
         <History>
             <Update release="2">
-                <Date>2021-03-31</Date>
+                <Date>2021-07-11</Date>
                 <Version>0.9.2</Version>
                 <Comment>Version bump.</Comment>
                 <Name>Pisi Linux Community</Name>
@@ -17141,7 +17300,7 @@
             <Homepage>https://gmusicbrowser.org</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
@@ -17189,7 +17348,7 @@
                 <Version>1.1.99.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17199,7 +17358,7 @@
             <Homepage>http://moc.daper.net/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app:console</IsA>
@@ -17279,7 +17438,7 @@
                 <Version>2.6.0</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17289,7 +17448,7 @@
             <Homepage>https://sk1project.net/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
@@ -17341,14 +17500,14 @@
                 <Version>2.0_rc5</Version>
                 <Comment>Rebuild from git.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2020-04-16</Date>
                 <Version>2.0_rc4</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17358,14 +17517,14 @@
             <Homepage>https://wiki.gnome.org/Apps/Gthumb</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
             <PartOf>multimedia.graphics</PartOf>
             <Summary xml:lang="en">Image browser, viewer, organizer and simple editor.</Summary>
             <Description xml:lang="en">An image viewer and browser utility for the GNOME environment.</Description>
-            <Archive type="tarxz" sha1sum="89fa21870757418a41bfbe56fc4067ffade6843e" name="gthumb-3.11.2.tar.xz">https://ftp.acc.umu.se/pub/GNOME/sources/gthumb/3.11/gthumb-3.11.2.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="c1a1130711df432f6cb37f75308b8abd4ab243bd" name="gthumb-3.11.3.tar.xz">https://download-fallback.gnome.org/sources/gthumb/3.11/gthumb-3.11.3.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>meson</Dependency>
                 <Dependency>cmake</Dependency>
@@ -17435,7 +17594,7 @@
             <Name>gthumb-devel</Name>
             <RuntimeDependencies>
                 <Dependency>gtk3-devel</Dependency>
-                <Dependency release="1">gthumb</Dependency>
+                <Dependency release="2">gthumb</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="header">/usr/include</Path>
@@ -17443,12 +17602,19 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-23</Date>
+                <Version>3.11.3</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-01-26</Date>
                 <Version>3.11.2</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17500,14 +17666,14 @@
                 <Version>2.2.0</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="2">
                 <Date>2020-01-17</Date>
                 <Version>2.1.0</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2017-01-17</Date>
@@ -17524,7 +17690,7 @@
             <Homepage>https://sk1project.net/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>AGPLv3</License>
             <IsA>app:gui</IsA>
@@ -17569,14 +17735,14 @@
                 <Version>2.0_rc5</Version>
                 <Comment>Rebuild from git.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2020-04-16</Date>
                 <Version>2.0_rc4</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17586,7 +17752,7 @@
             <Homepage>https://www.miltonpaint.com/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
@@ -17647,7 +17813,7 @@
                 <Version>1.9.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17716,7 +17882,7 @@
                 <Version>3.6.6</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2017-01-17</Date>
@@ -17769,7 +17935,7 @@
                 <Version>9.28.0</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2015-02-16</Date>
@@ -17841,7 +18007,7 @@
                 <Version>0.7.7</Version>
                 <Comment>version bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="5">
                 <Date>2015-01-10</Date>
@@ -18012,14 +18178,14 @@
             <Homepage>https://github.com/Martchus/tagparser</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>library</IsA>
             <PartOf>multimedia.misc</PartOf>
             <Summary xml:lang="en">C++ library for reading and writing MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska tags.</Summary>
             <Description xml:lang="en">C++ library for reading and writing MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska tags.</Description>
-            <Archive type="targz" sha1sum="5d5e2e5b7b974050877b0fe968df6b5a8f6a82c1" name="v10.0.0.tar.gz">https://github.com/Martchus/tagparser/archive/refs/tags/v10.0.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="d296ddcedc3c979731148e014c36558d9cc5b2b4" name="v10.0.1.tar.gz">https://github.com/Martchus/tagparser/archive/refs/tags/v10.0.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>iso-codes</Dependency>
@@ -18045,7 +18211,7 @@
         <Package>
             <Name>tagparser-devel</Name>
             <RuntimeDependencies>
-                <Dependency release="2">tagparser</Dependency>
+                <Dependency release="3">tagparser</Dependency>
                 <Dependency>cpp-utilities-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -18055,19 +18221,26 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-11</Date>
+                <Version>10.0.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-06-19</Date>
                 <Version>10.0.0</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2021-05-25</Date>
                 <Version>9.4.0</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -18476,14 +18649,14 @@
                 <Version>1.2.2</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="11">
                 <Date>2020-03-03</Date>
                 <Version>1.1.5</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="10">
                 <Date>2015-03-04</Date>
@@ -18696,14 +18869,14 @@
             <Homepage>https://github.com/Martchus/tageditor</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
             <PartOf>multimedia.editor</PartOf>
             <Summary xml:lang="en">A tag editor with Qt GUI and command-line interface.</Summary>
             <Description xml:lang="en">A tag editor with Qt GUI and command-line interface supporting MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska.</Description>
-            <Archive type="targz" sha1sum="7ee53df93e702e44c6abe0a0ad1a41a58c0538f3" name="v3.4.0.tar.gz">https://github.com/Martchus/tageditor/archive/refs/tags/v3.4.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="e8d253ac24d548613660839e81b31665784addb1" name="v3.4.1.tar.gz">https://github.com/Martchus/tageditor/archive/refs/tags/v3.4.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>qt5-linguist</Dependency>
@@ -18732,19 +18905,26 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-07-11</Date>
+                <Version>3.4.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-06-19</Date>
                 <Version>3.4.0</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2021-05-25</Date>
                 <Version>3.3.10</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -18764,7 +18944,7 @@
             <Description xml:lang="en">HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs. The program is also used to convert DVDs so they can be viewed on iPods, iPhones and most media players.</Description>
             <Description xml:lang="tr">Handbrake,Video dosyalarını portatif medya oynatıcıları için düzenleyebilmenin yanısıra çözünürlülük değişimi desteğide sunan özgür video kodlama ve düzenleme aracıdır.</Description>
             <Icon>HandBrake</Icon>
-            <Archive type="tarbz2" sha1sum="efde8bb8cbb455e92f8bafd0f092db81c4b5827b" name="HandBrake-1.3.3-source.tar.bz2">https://github.com/HandBrake/HandBrake/releases/download/1.3.3/HandBrake-1.3.3-source.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="847c330a6699d69d209659ca781e6f79f52f0735" name="HandBrake-1.4.0-source.tar.bz2">https://github.com/HandBrake/HandBrake/releases/download/1.4.0/HandBrake-1.4.0-source.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>nasm</Dependency>
                 <Dependency>meson</Dependency>
@@ -18799,6 +18979,7 @@
                 <Dependency>gst-plugins-good</Dependency>
                 <Dependency>at-spi2-core-devel</Dependency>
                 <Dependency>libsamplerate-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
                 <Dependency>gst-plugins-base-devel</Dependency>
             </BuildDependencies>
             <SourceURI>multimedia/editor/handbrake/pspec.xml</SourceURI>
@@ -18836,6 +19017,7 @@
                 <Dependency>libtheora</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libsamplerate</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
                 <Dependency>gst-plugins-base</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -18846,19 +19028,26 @@
             </Files>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2021-07-20</Date>
+                <Version>1.4.0</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="8">
                 <Date>2020-09-17</Date>
                 <Version>1.3.3</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="7">
                 <Date>2020-06-24</Date>
                 <Version>1.3.1</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="6">
                 <Date>2016-01-06</Date>
@@ -18950,7 +19139,7 @@
                 <Version>2.0.1</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2015-01-17</Date>
@@ -19037,14 +19226,14 @@
                 <Version>1.9</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2020-04-30</Date>
                 <Version>1.8</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="3">
                 <Date>2014-06-18</Date>
@@ -19118,6 +19307,8 @@
             <Patches>
                 <Patch level="1">transcode-1.1.7-ffmpeg4-1.patch</Patch>
                 <Patch level="1">transcode-imagemagick7.patch</Patch>
+                <Patch level="1">transcode-glibc-2.32.patch</Patch>
+                <Patch level="1">transcode-gcc10.patch</Patch>
             </Patches>
             <SourceURI>multimedia/converter/transcode/pspec.xml</SourceURI>
         </Source>
@@ -19166,12 +19357,19 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2021-06-21</Date>
+                <Version>1.1.7</Version>
+                <Comment>Rebuild.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="10">
                 <Date>2019-12-28</Date>
                 <Version>1.1.7</Version>
                 <Comment>Rebuild with new toolchain.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="9">
                 <Date>2014-12-18</Date>
@@ -19988,7 +20186,7 @@
             <Homepage>https://www.xpdfreader.com/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPL</License>
             <IsA>app</IsA>
@@ -20032,7 +20230,7 @@
                 <Version>4.03</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -20154,7 +20352,7 @@
             <Homepage>http://pybookreader.narod.ru/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
@@ -20203,7 +20401,7 @@
                 <Version>0.5.0</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -20256,7 +20454,7 @@
                 <Version>1.2.4</Version>
                 <Comment>First Beta build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -20266,7 +20464,7 @@
             <Homepage>https://github.com/Cactus64k/simple-fb2-reader</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
@@ -20306,7 +20504,7 @@
                 <Version>1.1.3</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -20730,7 +20928,7 @@
             <Homepage>https://www.etpan.org/libetpan.html</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>custom</License>
             <IsA>library</IsA>
@@ -20782,7 +20980,7 @@
                 <Version>1.9.4</Version>
                 <Comment>First Beta build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -21174,14 +21372,14 @@
                 <Version>1.39</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="5">
                 <Date>2020-04-30</Date>
                 <Version>1.38</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2014-06-14</Date>
@@ -23658,12 +23856,13 @@
             <License>GPLv2</License>
             <IsA>app:gui</IsA>
             <PartOf>network.misc</PartOf>
-            <Summary xml:lang="en">News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds</Summary>
+            <Summary xml:lang="en">News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds.</Summary>
             <Summary xml:lang="tr">RDF/RSS/CDF/Atom/Echo  beslemeler için okuyucu</Summary>
             <Description xml:lang="en">Liferea (abbreviation of Linux Feed Reader) is a news aggreagator for RSS/RDF feeds which also supports CDF channels, Atom/Echo/PIE feeds and OCS or OPML directories. It is a simple FeedReader clone for Unix.</Description>
             <Description xml:lang="tr">Liferea (Linux Feed Reader&apos;in kısaltması), RSS/RDF beslemelerini okumak için yazılmış ve aynı zamanda CDF kanallarını destekleyen haber okuyucudur. Atom/Echo/PIE beslemelerini ve OCS veya OPML dizinlerini ayrıca desteklemektedir. Unix için yazılmış basit bir FeedReader benzeri uygulamadır.</Description>
-            <Archive type="tarbz2" sha1sum="355a4cbe17b27ac075285b84e11237915a806d9c" name="liferea-1.13.0.tar.bz2">https://github.com/lwindolf/liferea/releases/download/v1.13.0/liferea-1.13.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="f226c9f502a59467b2ee0d0d3a9a15fc9a4ba0b8" name="liferea-1.13.6.tar.bz2">https://github.com/lwindolf/liferea/releases/download/v1.13.6/liferea-1.13.6.tar.bz2</Archive>
             <BuildDependencies>
+                <Dependency>python3</Dependency>
                 <Dependency>intltool</Dependency>
                 <Dependency>atk-devel</Dependency>
                 <Dependency>gtk3-devel</Dependency>
@@ -23695,6 +23894,7 @@
                 <Dependency>libsoup</Dependency>
                 <Dependency>libxml2</Dependency>
                 <Dependency>libxslt</Dependency>
+                <Dependency>harfbuzz</Dependency>
                 <Dependency>json-glib</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>webkit2gtk</Dependency>
@@ -23710,12 +23910,19 @@
             </Files>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2021-07-23</Date>
+                <Version>1.13.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="6">
                 <Date>2020-03-15</Date>
                 <Version>1.13.0</Version>
                 <Comment>Ver. up</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="5">
                 <Date>2015-03-04</Date>
@@ -26149,7 +26356,7 @@
                 <Version>3.00</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="4">
                 <Date>2013-07-22</Date>
@@ -26303,14 +26510,14 @@
             <Homepage>https://www.claws-mail.org/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
             <PartOf>network.mail</PartOf>
             <Summary xml:lang="en">Claws Mail is an email client (and news reader), based on GTK+.</Summary>
             <Description xml:lang="en">Claws Mail is a lightweight and highly configurable email client and news reader based on the GTK+ GUI toolkit.</Description>
-            <Archive type="targz" sha1sum="ef3268699adbdea98eefa6bf9c089d58fa57c6d5" name="89149776cbb8bbc3ef50158f2f430085098ebb23.tgz">https://github.com/4fury/sources/raw/master/89149776cbb8bbc3ef50158f2f430085098ebb23.tgz</Archive>
+            <Archive type="tarxz" sha1sum="b4befc25649a28e89274ba72b50e9f9f66bf09b6" name="claws-mail-4.0.0.tar.xz">https://claws-mail.org/releases/claws-mail-4.0.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>flex</Dependency>
                 <Dependency>bison</Dependency>
@@ -26329,16 +26536,19 @@
                 <Dependency>compface-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>libsocket-devel</Dependency>
+                <Dependency>openldap-server</Dependency>
+                <Dependency>libarchive-devel</Dependency>
                 <Dependency>NetworkManager-devel</Dependency>
+                <Dependency>python3-pygobject3-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
             </BuildDependencies>
-            <Patches>
-                <Patch level="1">git_version.patch</Patch>
-            </Patches>
             <SourceURI>network/mail/claws-mail/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>claws-mail</Name>
             <RuntimeDependencies>
+                <Dependency>db</Dependency>
+                <Dependency>atk</Dependency>
                 <Dependency>curl</Dependency>
                 <Dependency>gtk3</Dependency>
                 <Dependency>perl</Dependency>
@@ -26347,21 +26557,27 @@
                 <Dependency>expat</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>gpgme</Dependency>
-                <Dependency>pango</Dependency>
                 <Dependency>libSM</Dependency>
-                <Dependency>libICE</Dependency>
+                <Dependency>pango</Dependency>
                 <Dependency>gnutls</Dependency>
+                <Dependency>libICE</Dependency>
                 <Dependency>nettle</Dependency>
                 <Dependency>libical</Dependency>
                 <Dependency>librsvg</Dependency>
-                <Dependency>enchant2</Dependency>
-                <Dependency>libetpan</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>python3</Dependency>
                 <Dependency>compface</Dependency>
+                <Dependency>enchant2</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libetpan</Dependency>
                 <Dependency>dbus-glib</Dependency>
+                <Dependency>libassuan</Dependency>
                 <Dependency>libnotify</Dependency>
+                <Dependency>cyrus-sasl</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>libarchive</Dependency>
                 <Dependency>libgpg-error</Dependency>
+                <Dependency>openldap-client</Dependency>
                 <Dependency>startup-notification</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -26385,11 +26601,11 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2021-02-20</Date>
-                <Version>3.17.8.23</Version>
-                <Comment>First build from gtk3 branch.</Comment>
+                <Date>2021-07-10</Date>
+                <Version>4.0.0</Version>
+                <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -28422,6 +28638,7 @@
                 <Dependency>sqlite</Dependency>
                 <Dependency>python3</Dependency>
                 <Dependency>json-glib</Dependency>
+                <Dependency>dbus-python3</Dependency>
                 <Dependency>telepathy-glib</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -30252,14 +30469,14 @@
             <Homepage>https://godoc.org/github.com/gokcehan/lf</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>MIT</License>
             <IsA>app:console</IsA>
             <PartOf>util.misc</PartOf>
             <Summary xml:lang="en">Terminal file manager</Summary>
             <Description xml:lang="en">lf is a terminal file manager.</Description>
-            <Archive type="targz" sha1sum="c29f97865091ed115e652231b4fb599aebc192f2" name="r22.tar.gz">https://github.com/gokcehan/lf/archive/refs/tags/r22.tar.gz</Archive>
+            <Archive type="targz" sha1sum="02e0cb757f037eaf1da5bd7bec72a1092fa499c1" name="r24.tar.gz">https://github.com/gokcehan/lf/archive/refs/tags/r24.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>golang</Dependency>
             </BuildDependencies>
@@ -30275,12 +30492,19 @@
             </Files>
         </Package>
         <History>
+            <Update release="2">
+                <Date>2021-07-10</Date>
+                <Version>24</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="1">
                 <Date>2021-04-17</Date>
                 <Version>22</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -30543,7 +30767,7 @@
                 <Version>2.3.6.1</Version>
                 <Comment>First Beta build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -30553,7 +30777,7 @@
             <Homepage>https://www.texstudio.org/</Homepage>
             <Packager>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Packager>
             <License>GPLv3</License>
             <IsA>app:gui</IsA>
@@ -30603,7 +30827,7 @@
                 <Version>3.1.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -30693,7 +30917,7 @@
                 <Version>5.0.4</Version>
                 <Comment>Release bump.</Comment>
                 <Name>fury</Name>
-                <Email>wascheme@tuta.io</Email>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
             <Update release="1">
                 <Date>2015-11-05</Date>

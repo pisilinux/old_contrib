@@ -13,8 +13,8 @@
 		<PartOf>desktop.misc</PartOf>
 		<Summary>Clipboard manager.</Summary>
 		<Description>Aiming to be the best integrated clipboard manager for the Unity desktop.</Description>
-		<Archive sha1sum="fea1653377eb3f44900b2bd7c9216a51b06fff5b" type="tarxz">
-			https://launchpad.net/diodon/trunk/1.11.0/+download/diodon-1.11.0.tar.xz
+		<Archive sha1sum="342ddcedcbe16deb3c306b07be7ef910fe6fed5e" type="tarxz">
+			https://launchpad.net/diodon/trunk/1.11.1/+download/diodon-1.11.1.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -27,6 +27,7 @@
 			<Dependency>zeitgeist-devel</Dependency>
 			<Dependency>xorg-server-xvfb</Dependency>
 			<Dependency>desktop-file-utils</Dependency>
+			<Dependency>ayatana-libappindicator-devel</Dependency>
 		</BuildDependencies>
 	</Source>
 
@@ -40,6 +41,7 @@
 			<Dependency>libpeas</Dependency>
 			<Dependency>zeitgeist</Dependency>
 			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>ayatana-libappindicator</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="config">/etc/xdg</Path>
@@ -66,6 +68,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-09-07</Date>
+			<Version>1.11.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="1">
 			<Date>2021-06-18</Date>
 			<Version>1.11.0</Version>

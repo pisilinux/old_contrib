@@ -13,8 +13,8 @@
 		<PartOf>multimedia.stream</PartOf>
 		<Summary>Radiotray-NG: An Internet radio player for Linux.</Summary>
 		<Description>It became clear as one of the early contributors to the RadioTray project that it was not getting the attention it required and was probably dead. A lot of the technologies it used had moved on to newer versions and the bugs started piling up. I did my best to help users, but a new start was required.</Description>
-		<Archive sha1sum="4f6a3fdaac32bff3679c2f2e2ee8fb7740122b23" type="targz">
-			https://github.com/ebruck/radiotray-ng/archive/v0.2.7.tar.gz
+		<Archive sha1sum="59ee40916407c639a7dedb0e2ee592f57a499da4" type="targz">
+			https://github.com/ebruck/radiotray-ng/archive/refs/tags/v0.2.8.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -37,7 +37,7 @@
 			<Dependency>libappindicator-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">cmake.patch</Patch>
+			<!-- <Patch level="1">missing.patch</Patch> -->
 		</Patches>
 	</Source>
 
@@ -70,6 +70,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-09-12</Date>
+			<Version>0.2.8</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="1">
 			<Date>2021-01-28</Date>
 			<Version>0.2.7</Version>

@@ -4,6 +4,7 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
+from pisi.actionsapi import shelltools
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
@@ -17,6 +18,7 @@ i = "-Wno-deprecated-declarations \
 t = "99-pulseaudio-default.conf"
 
 def setup():
+	shelltools.system("patch -Rp1 < d594c4a311ad523de35bc6ea6d93e0232405f3e7.patch")
 	pisitools.cflags.add(i)
 #	autotools.autoreconf("-fi")
 	autotools.configure("--disable-static --with-speex=lib")

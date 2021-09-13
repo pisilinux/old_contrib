@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>openbox</Name>
+		<Name>openbox-git</Name>
 		<Homepage>http://openbox.org</Homepage>
 		<Packager>
 			<Name>Pisi Linux Admins</Name>
@@ -38,7 +38,7 @@
 	</Source>
 
 	<Package>
-		<Name>openbox</Name>
+		<Name>openbox-git</Name>
 		<RuntimeDependencies>
 			<Dependency>cairo</Dependency>
 			<Dependency>glib2</Dependency>
@@ -80,13 +80,19 @@
 			<AdditionalFile owner="root" permission="0644" target="/etc/xdg/openbox/autostart">autostart</AdditionalFile>
 			<AdditionalFile owner="root" permission="0644" target="/usr/share/openbox/kedicik.png">kedicik.png</AdditionalFile>
 		</AdditionalFiles>
+		<Conflicts>
+			<Package>openbox</Package>
+		</Conflicts>
+		<Replaces>
+			<Package>openbox</Package>
+		</Replaces>
 	</Package>
 
 	<Package>
-		<Name>openbox-devel</Name>
+		<Name>openbox-git-devel</Name>
 		<Summary>Development headers for openbox</Summary>
 		<RuntimeDependencies>
-			<Dependency release="current">openbox</Dependency>
+			<Dependency release="current">openbox-git</Dependency>
 			<Dependency>pango-devel</Dependency>
 			<Dependency>glib2-devel</Dependency>
 			<Dependency>libXft-devel</Dependency>
@@ -98,6 +104,12 @@
 			<Path fileType="header">/usr/include</Path>
 			<Path fileType="data">/usr/lib/pkgconfig</Path>
 		</Files>
+		<!-- <Conflicts>
+			<Package>openbox-devel</Package>
+		</Conflicts> -->
+		<Replaces>
+			<Package>openbox-devel</Package>
+		</Replaces>
 	</Package>
 
 	<History>

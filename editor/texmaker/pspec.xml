@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
 		<Name>texmaker</Name>
@@ -8,20 +8,20 @@
 			<Name>Stefan Gronewold (groni)</Name>
 			<Email>groni@pisilinux.org</Email>
 		</Packager>
-		<License>GPLv2</License>
+		<License>GPL-2</License>
+		<IsA>app:gui</IsA>
 		<PartOf>editor</PartOf>
 		<Summary>Free cross-platform LaTeX editor.</Summary>
 		<Description>
 			Texmaker is a free, modern and cross-platform LaTeX editor for linux, macosx and windows systems that integrates many tools needed to develop documents with LaTeX, in just one application.
 		</Description>
-		<Archive type="tarbz2" sha1sum="2bdf4d801ec2adb7b691e601974048ea8c8c5df8">
-			https://www.xm1math.net/texmaker/texmaker-5.0.4.tar.bz2
+		<Archive sha1sum="ba63552ab5079fb791b715fc4040d5a8c5f2ef4b" type="tarbz2">
+			https://www.xm1math.net/texmaker/texmaker-5.1.2.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>qt5-base</Dependency>
 			<Dependency>qt5-webkit-devel</Dependency>
 			<Dependency>qt5-script-devel</Dependency>
-			<!-- <Dependency>qt5-quick1-devel</Dependency> -->
 			<Dependency>ghostscript-devel</Dependency>
 			<Dependency>qt5-x11extras-devel</Dependency>
 		</BuildDependencies>
@@ -37,6 +37,7 @@
 			<Dependency>qt5-webkit</Dependency>
 			<Dependency>ghostscript</Dependency>
 			<Dependency>poppler-qt5</Dependency>
+			<Dependency>qt5-declarative</Dependency>
 		</RuntimeDependencies>
 		<Files>
 			<Path fileType="executable">/usr/bin</Path>
@@ -45,6 +46,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2021-09-13</Date>
+			<Version>5.1.2</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="2">
 			<Date>2020-02-02</Date>
 			<Version>5.0.4</Version>

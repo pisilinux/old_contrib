@@ -8,7 +8,7 @@
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Packager>
-		<License>BSD</License>
+		<License>MIT</License>
 		<PartOf>programming.language.python3</PartOf>
 		<IsA>library</IsA>
 		<Summary>Sphinx Bootstrap Theme.</Summary>

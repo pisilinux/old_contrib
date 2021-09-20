@@ -13,8 +13,8 @@
 		<PartOf>programming.library</PartOf>
 		<Summary> Common Qt related C++ classes and routines used by my applications such as dialogs, widgets and models.</Summary>
 		<Description> Common Qt related C++ classes and routines used by my applications such as dialogs, widgets and models.</Description>
-		<Archive sha1sum="04c5607752e86e920acc79a2b6f6761c11669149" type="targz">
-			https://github.com/Martchus/qtutilities/archive/refs/tags/v6.4.2.tar.gz
+		<Archive sha1sum="1bfa7f1d38fb10f6d55c8db9f8a72bf500ef3256" type="targz">
+			https://github.com/Martchus/qtutilities/archive/refs/tags/v6.5.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -54,6 +54,13 @@
 	</Package>
 
 	<History>
+		<Update release="4">
+			<Date>2021-09-13</Date>
+			<Version>6.5.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="3">
 			<Date>2021-07-11</Date>
 			<Version>6.4.2</Version>

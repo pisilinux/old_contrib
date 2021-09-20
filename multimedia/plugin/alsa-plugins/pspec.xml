@@ -14,8 +14,8 @@
 		<PartOf>multimedia.plugin</PartOf>
 		<Summary>The Advanced Linux Sound Architecture (ALSA) plugins.</Summary>
 		<Description>alsa-plugins provides plugins like JACK, PulseAudio, etc. for ALSA.</Description>
-		<Archive sha1sum="d6baf41c0aa10104b4963fe95f46aaca534def35" type="tarbz2">
-			ftp://ftp.alsa-project.org/pub/plugins/alsa-plugins-1.2.2.tar.bz2
+		<Archive sha1sum="fde4b9188deff0ae49b4e049f7094d3366a25cea" type="tarbz2">
+			ftp://ftp.alsa-project.org/pub/plugins/alsa-plugins-1.2.5.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>jack-audio-connection-kit-devel</Dependency>
@@ -26,9 +26,11 @@
 			<Dependency>ffmpeg-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<!-- <Patch level="1">Fedora/plugin-config.patch</Patch> -->
 			<!-- <Patch level="1">Arch/pulse_default_conf.patch</Patch> -->
 		</Patches>
+		<AdditionalFiles>
+			<AdditionalFile target="d594c4a311ad523de35bc6ea6d93e0232405f3e7.patch">d594c4a311ad523de35bc6ea6d93e0232405f3e7.patch</AdditionalFile>
+		</AdditionalFiles>
 	</Source>
 
 	<Package>
@@ -62,89 +64,12 @@
 	</Package>
 
 	<History>
-		<Update release="12">
-			<Date>2020-06-24</Date>
-			<Version>1.2.2</Version>
-			<Comment>Ver. bump</Comment>
-			<Name>fury</Name>
-			<Email>uglyside@yandex.ru</Email>
-		</Update>
-		<Update release="11">
-			<Date>2020-03-03</Date>
-			<Version>1.1.5</Version>
-			<Comment>Ver. up</Comment>
-			<Name>fury</Name>
-			<Email>uglyside@yandex.ru</Email>
-		</Update>
-		<Update release="10">
-			<Date>2015-03-04</Date>
-			<Version>1.0.29</Version>
-			<Comment>Version bump.</Comment>
-			<Name>Hakan Yıldız</Name>
-			<Email>hknyldz93@gmail.com</Email>
-		</Update>
-		<Update release="9">
-			<Date>2014-12-18</Date>
-			<Version>1.0.28</Version>
-			<Comment>Rebuild version 28.</Comment>
-			<Name>Osman Erkan</Name>
-			<Email>osman.erkan@pisilinux.org</Email>
-		</Update>
-		<Update release="8">
-			<Date>2014-08-19</Date>
-			<Version>1.0.28</Version>
-			<Comment>Rebuild version 28.</Comment>
-			<Name>Serdar Soytetir</Name>
-			<Email>kaptan@pisilinux.org</Email>
-		</Update>
-		<Update release="7">
-			<Date>2014-08-19</Date>
-			<Version>1.0.28</Version>
-			<Comment>Version bump.</Comment>
-			<Name>Serdar Soytetir</Name>
-			<Email>kaptan@pisilinux.org</Email>
-		</Update>
-		<Update release="6">
-			<Date>2014-05-26</Date>
-			<Version>1.0.27</Version>
-			<Comment>Rebuild.</Comment>
-			<Name>Serdar Soytetir</Name>
-			<Email>kaptan@pisilinux.org</Email>
-		</Update>
-		<Update release="5">
-			<Date>2014-04-05</Date>
-			<Version>1.0.27</Version>
-			<Comment>Rebuild for x264.</Comment>
-			<Name>Marcin Bojara</Name>
-			<Email>marcin@pisilinux.org</Email>
-		</Update>
-		<Update release="4">
-			<Date>2013-11-30</Date>
-			<Version>1.0.27</Version>
-			<Comment>Rebuild for ffmpeg.</Comment>
-			<Name>Osman Erkan</Name>
-			<Email>osman.erkan@pisilinux.org</Email>
-		</Update>
-		<Update release="3">
-			<Date>2013-08-22</Date>
-			<Version>1.0.27</Version>
-			<Comment>Release bump.</Comment>
-			<Name>Marcin Bojara</Name>
-			<Email>marcin@pisilinux.org</Email>
-		</Update>
-		<Update release="2">
-			<Date>2013-07-27</Date>
-			<Version>1.0.27</Version>
-			<Comment>Version bump.</Comment>
-			<Name>Marcin Bojara</Name>
-			<Email>marcin@pisilinux.org</Email>
-		</Update>
 		<Update release="1">
-			<Date>2012-01-29</Date>
-			<Version>1.0.26.20121013</Version>
-			<Comment>First release</Comment>
-			<Name>Erdinç Gültekin</Name>
-			<Email>admins@pisilinux.org</Email>
+			<Date>2021-07-28</Date>
+			<Version>1.2.5</Version>
+			<Comment>For Beta rebuild.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>

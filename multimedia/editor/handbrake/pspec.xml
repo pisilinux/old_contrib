@@ -8,13 +8,13 @@
 			<Name>PisiLinux Community</Name>
 			<Email>admins@pisilinux.org</Email>
 		</Packager>
-		<License>GPLv2</License>
+		<License>GPL-2</License>
 		<Icon>HandBrake</Icon>
 		<IsA>app</IsA>
 		<Summary>The open source video transcoder.</Summary>
 		<Description>HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs. The program is also used to convert DVDs so they can be viewed on iPods, iPhones and most media players.</Description>
-		<Archive sha1sum="847c330a6699d69d209659ca781e6f79f52f0735" type="tarbz2">
-			https://github.com/HandBrake/HandBrake/releases/download/1.4.0/HandBrake-1.4.0-source.tar.bz2
+		<Archive sha1sum="4a6e0152c041f241af59aabfad4c37f8cfe2b4ed" type="tarbz2">
+			https://github.com/HandBrake/HandBrake/releases/download/1.4.1/HandBrake-1.4.1-source.tar.bz2
 		</Archive>
 		<BuildDependencies>
 			<Dependency>nasm</Dependency>
@@ -54,10 +54,7 @@
 			<Dependency>gst-plugins-base-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<!--
-			<Patch level="1">Do-not-require-wget-or-curl.patch</Patch>
-			<Patch level="1">use-libtoolize.patch</Patch>
-			-->
+			<!-- <Patch level="1">missing.patch</Patch> -->
 		</Patches>
 	</Source>
 
@@ -106,6 +103,13 @@
 	</Package>
 
 	<History>
+		<Update release="10">
+			<Date>2021-09-13</Date>
+			<Version>1.4.1</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="9">
 			<Date>2021-07-20</Date>
 			<Version>1.4.0</Version>

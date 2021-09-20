@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>python3-sphinx-bootstrap-theme</Name>
+		<Homepage>https://github.com/ryan-roemer/sphinx-bootstrap-theme</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>MIT</License>
+		<PartOf>programming.language.python3</PartOf>
+		<IsA>library</IsA>
+		<Summary>Sphinx Bootstrap Theme.</Summary>
+		<Description>This Sphinx theme integrates the Bootstrap CSS / JavaScript framework with various layout options, hierarchical menu navigation, and mobile-friendly responsive design.</Description>
+		<Archive sha1sum="eb60254611d4caf3b3f327704ea206281bbf3882" type="targz">
+			https://github.com/ryan-roemer/sphinx-bootstrap-theme/archive/refs/tags/v0.8.0.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>python3-devel</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>python3-sphinx-bootstrap-theme</Name>
+		<RuntimeDependencies>
+			<Dependency>python3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-09-18</Date>
+			<Version>0.8.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>
+

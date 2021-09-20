@@ -15,8 +15,8 @@
 		<Description>
 			A tag editor with Qt GUI and command-line interface supporting MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska.
 		</Description>
-		<Archive sha1sum="e8d253ac24d548613660839e81b31665784addb1" type="targz">
-			https://github.com/Martchus/tageditor/archive/refs/tags/v3.4.1.tar.gz
+		<Archive sha1sum="7e3a6a36057e23bcf2343db23f0e5ac44cf355fb" type="targz">
+			https://github.com/Martchus/tageditor/archive/refs/tags/v3.5.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -49,6 +49,13 @@
 	</Package>
 
 	<History>
+		<Update release="4">
+			<Date>2021-09-13</Date>
+			<Version>3.5.0</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
 		<Update release="3">
 			<Date>2021-07-11</Date>
 			<Version>3.4.1</Version>

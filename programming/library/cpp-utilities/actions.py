@@ -16,8 +16,8 @@ i = "-DCMAKE_BUILD_TYPE=Release \
 "
 
 def setup():
-	shelltools.export("CXX", "/usr/bin/clang++")
-	shelltools.export("CC", "/usr/bin/clang")
+#	shelltools.export("CXX", "/usr/bin/clang++")
+#	shelltools.export("CC", "/usr/bin/clang")
 
 	shelltools.makedirs("build")
 	shelltools.cd("build")

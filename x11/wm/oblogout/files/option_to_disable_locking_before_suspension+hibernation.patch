@@ -1,0 +1,71 @@
+From 2b7db4d2013f53d5f835866452eb8021e524b012 Mon Sep 17 00:00:00 2001
+From: Mikadore <admin@mikadore.eu>
+Date: Sat, 26 Jun 2021 00:29:52 +0200
+Subject: [PATCH] Added option to disable locking before suspension+hibernation
+
+---
+ data/oblogout.conf   |  5 +++++
+ oblogout/__init__.py | 13 +++++++++++--
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+diff --git a/data/oblogout.conf b/data/oblogout.conf
+index e3ae4dc..71e2db7 100644
+--- a/data/oblogout.conf
++++ b/data/oblogout.conf
+@@ -12,6 +12,11 @@ backend = ""
+ # you can specify which one the oblogout will appear in.
+ monitor = 0
+ 
++# Disable lock on
++# By default, before suspension or hibernation, your lock command gets called.
++# You can select to disable that behavior
++# disable_lock_on = hibernate, suspend                                                                                                                                                                                                                                                                                                                          ate
++
+ [looks]
+ # Looks
+ # Look and feel settings.
+diff --git a/oblogout/__init__.py b/oblogout/__init__.py
+index 3b4ae4c..8c2e1ae 100755
+--- a/oblogout/__init__.py
++++ b/oblogout/__init__.py
+@@ -199,6 +199,8 @@ def load_config(self, config):
+         self.bgcolor = Gdk.RGBA()
+         Gdk.RGBA.parse(self.bgcolor, "black")
+         self.monitor = 0
++        self.lock_on_hibernate = True
++        self.lock_on_suspend = True
+         blist = ""
+ 
+         # Check if we're using HAL, and init it as required.
+@@ -211,6 +213,11 @@ def load_config(self, config):
+ 
+             if self.parser.has_option("settings", "monitor"):
+                self.monitor = self.parser.getint("settings", "monitor")
++ 
++            if self.parser.has_option("settings", "disable_lock_on"):
++                lock_on_settings = [_.strip() for _ in self.parser.get("settings", "disable_lock_on")]
++                self.lock_on_hibernate = "hibernate" not in lock_on_settings
++                self.lock_on_suspend = "suspend" not in lock_on_settings
+ 
+         if self.backend == "HAL" or self.backend == "ConsoleKit":
+             from .dbushandler import DbusController
+@@ -394,7 +401,8 @@ def click_button(self, widget, data=None):
+ 
+         elif (data == 'suspend'):
+             self.window.hide()
+-            self.__exec_cmd(self.cmd_lock)
++            if self.lock_on_suspend:
++                self.__exec_cmd(self.cmd_lock)
+             if self.backend:
+                 self.dbus.suspend()
+ 
+@@ -403,7 +411,8 @@ def click_button(self, widget, data=None):
+ 
+         elif (data == 'hibernate'):
+             self.window.hide()
+-            self.__exec_cmd(self.cmd_lock)
++            if self.lock_on_hibernate:
++                self.__exec_cmd(self.cmd_lock)
+             if self.backend:
+                 self.dbus.hibernate()
+             else:

@@ -1,0 +1,22 @@
+From a2df2dfe18c34af58b4163c9b09aceaa03aa1471 Mon Sep 17 00:00:00 2001
+From: Mikadore <admin@mikadore.eu>
+Date: Sat, 26 Jun 2021 01:34:08 +0200
+Subject: [PATCH] fix not splittin
+
+---
+ oblogout/__init__.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/oblogout/__init__.py b/oblogout/__init__.py
+index 8c2e1ae..2202739 100755
+--- a/oblogout/__init__.py
++++ b/oblogout/__init__.py
+@@ -215,7 +215,7 @@ def load_config(self, config):
+                self.monitor = self.parser.getint("settings", "monitor")
+  
+             if self.parser.has_option("settings", "disable_lock_on"):
+-                lock_on_settings = [_.strip() for _ in self.parser.get("settings", "disable_lock_on")]
++                lock_on_settings = [_.strip() for _ in self.parser.get("settings", "disable_lock_on").split(",")]
+                 self.lock_on_hibernate = "hibernate" not in lock_on_settings
+                 self.lock_on_suspend = "suspend" not in lock_on_settings
+ 

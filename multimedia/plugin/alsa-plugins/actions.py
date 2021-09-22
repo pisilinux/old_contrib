@@ -18,7 +18,7 @@ i = "-Wno-deprecated-declarations \
 t = "99-pulseaudio-default.conf"
 
 def setup():
-	shelltools.system("patch -Rp1 < d594c4a311ad523de35bc6ea6d93e0232405f3e7.patch")
+#	shelltools.system("patch -Rp1 < d594c4a311ad523de35bc6ea6d93e0232405f3e7.patch")
 	pisitools.cflags.add(i)
 #	autotools.autoreconf("-fi")
 	autotools.configure("--disable-static --with-speex=lib")

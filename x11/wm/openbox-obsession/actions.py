@@ -2,21 +2,16 @@
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
-# See the file http://www.gnu.org/copyleft/gpl.txt.
+# See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
 from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
-from pisi.actionsapi import shelltools
-
 
 def build():
-    autotools.make()
+    autotools.make("PREFIX=/usr")
 
 def install():
-    autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-    pisitools.domove("/usr/local/bin/*" , "/usr/bin")
-    pisitools.domove("/usr/local/share/obsession/images/*" , "/usr/share/obsession/images")
-    pisitools.domove("/usr/local/share/locale/*" , "/usr/share/local")
-    pisitools.removeDir("/usr/local")
+    autotools.rawInstall("DESTDIR=%s PREFIX=/usr" % get.installDIR())
+
     pisitools.dodoc("AUTHORS", "COPYING")

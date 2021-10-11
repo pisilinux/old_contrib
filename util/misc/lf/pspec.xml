@@ -13,8 +13,8 @@
 		<PartOf>util.misc</PartOf>
 		<Summary>Terminal file manager</Summary>
 		<Description>lf is a terminal file manager.</Description>
-		<Archive sha1sum="02e0cb757f037eaf1da5bd7bec72a1092fa499c1" type="targz">
-			https://github.com/gokcehan/lf/archive/refs/tags/r24.tar.gz
+		<Archive sha1sum="56f1f1951772f7133971c45a614a4b92b6ee036a" type="targz">
+			https://github.com/gokcehan/lf/archive/refs/tags/r25.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>golang</Dependency>
@@ -35,6 +35,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2021-10-12</Date>
+			<Version>25</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="2">
 			<Date>2021-07-10</Date>
 			<Version>24</Version>

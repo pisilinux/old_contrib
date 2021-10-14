@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>arronax</Name>
+		<Homepage>https://www.florian-diesch.de/software/arronax/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>GPL-3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>A desktop files creator.</Summary>
+		<Description>Arronax is a program to create and modify starters (technically: .desktop files) for applications and locations (URLs).</Description>
+		<Archive sha1sum="2c434efc64e38a28e8cf0522d27f88b4bd73a6c6" type="targz">
+			https://www.florian-diesch.de/software/arronax/dist/arronax-0.8.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gettext</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>python3-setuptools</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>arronax</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk3</Dependency>
+			<Dependency>python3</Dependency>
+			<Dependency>python3-pygobject3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-10-14</Date>
+			<Version>0.8</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>
+

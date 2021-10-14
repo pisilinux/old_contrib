@@ -1,0 +1,11 @@
+diff -Naur a/libxfce4kbd-private/xfce-shortcuts-xfwm4.c b/libxfce4kbd-private/xfce-shortcuts-xfwm4.c
+--- a/libxfce4kbd-private/xfce-shortcuts-xfwm4.c	2019-11-23 19:11:49.000000000 +0300
++++ b/libxfce4kbd-private/xfce-shortcuts-xfwm4.c	2021-07-11 03:12:32.415086957 +0300
+@@ -54,6 +54,7 @@
+   { N_("Stick window"), "stick_window_key" },
+   { N_("Raise window"), "raise_window_key" },
+   { N_("Lower window"), "lower_window_key" },
++  { N_("Center window"), "center_window_key" },
+   { N_("Raise or lower window"), "raiselower_window_key" },
+   { N_("Fill window"), "fill_window_key" },
+   { N_("Fill window horizontally"), "fill_horiz_key" },

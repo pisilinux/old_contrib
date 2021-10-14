@@ -1,0 +1,75 @@
+diff -Naur a/src/events.c b/src/events.c
+--- a/src/events.c	2021-01-05 11:18:26.000000000 +0300
++++ b/src/events.c	2021-07-11 03:05:31.291073481 +0300
+@@ -337,6 +337,9 @@
+                     clientWithdraw (c, c->win_workspace, TRUE);
+                 }
+                 break;
++            case KEY_CENTER_WINDOW:
++                clientCenter (c);
++                break;
+             case KEY_MAXIMIZE_WINDOW:
+                 clientToggleMaximized (c, CLIENT_FLAG_MAXIMIZED, TRUE);
+                 break;
+diff -Naur a/src/placement.c b/src/placement.c
+--- a/src/placement.c	2020-11-13 20:40:15.000000000 +0300
++++ b/src/placement.c	2021-07-11 03:05:31.294073481 +0300
+@@ -1055,3 +1055,26 @@
+     }
+ }
+ 
++void
++clientCenter (Client * c)
++{
++    g_return_if_fail (c != NULL);
++
++    ScreenInfo *screen_info = c->screen_info;
++    GdkRectangle rect;
++    int full_x, full_y, full_w, full_h, msx, msy;
++
++    myScreenFindMonitorAtPoint (screen_info, c->x, c->y, &rect);
++
++    full_x = MAX (screen_info->params->xfwm_margins[STRUTS_LEFT], rect.x);
++    full_y = MAX (screen_info->params->xfwm_margins[STRUTS_TOP], rect.y);
++    full_w = MIN (screen_info->width - screen_info->params->xfwm_margins[STRUTS_RIGHT],
++                  rect.x + rect.width) - full_x;
++    full_h = MIN (screen_info->height - screen_info->params->xfwm_margins[STRUTS_BOTTOM],
++                  rect.y + rect.height) - full_y;
++
++    centerPlacement (c, full_x, full_y, full_w, full_h);
++    clientAutoMaximize (c, full_w, full_h);
++    clientReconfigure (c, CFG_NOTIFY | CFG_FORCE_REDRAW);
++}
++
+diff -Naur a/src/placement.h b/src/placement.h
+--- a/src/placement.h	2017-04-24 16:32:23.000000000 +0300
++++ b/src/placement.h	2021-07-11 03:05:31.294073481 +0300
+@@ -53,5 +53,6 @@
+ void                     clientInitPosition                     (Client *);
+ void                     clientFill                             (Client *,
+                                                                  int);
++void                     clientCenter                           (Client *);
+ 
+ #endif /* INC_PLACEMENT_H */
+diff -Naur a/src/settings.c b/src/settings.c
+--- a/src/settings.c	2021-01-09 20:28:49.000000000 +0300
++++ b/src/settings.c	2021-07-11 03:05:31.296073481 +0300
+@@ -570,6 +570,7 @@
+     parseShortcut (screen_info, KEY_UP, "up_key", shortcuts);
+     parseShortcut (screen_info, KEY_ADD_WORKSPACE, "add_workspace_key", shortcuts);
+     parseShortcut (screen_info, KEY_ADD_ADJACENT_WORKSPACE, "add_adjacent_workspace_key", shortcuts);
++    parseShortcut (screen_info, KEY_CENTER_WINDOW, "center_window_key", shortcuts);
+     parseShortcut (screen_info, KEY_CLOSE_WINDOW, "close_window_key", shortcuts);
+     parseShortcut (screen_info, KEY_CYCLE_WINDOWS, "cycle_windows_key", shortcuts);
+     parseShortcut (screen_info, KEY_CYCLE_REVERSE_WINDOWS, "cycle_reverse_windows_key", shortcuts);
+diff -Naur a/src/settings.h b/src/settings.h
+--- a/src/settings.h	2021-01-05 11:18:20.000000000 +0300
++++ b/src/settings.h	2021-07-11 03:05:31.296073481 +0300
+@@ -62,6 +62,7 @@
+     /* FIRST_KEY starts here */
+     KEY_ADD_ADJACENT_WORKSPACE,
+     KEY_ADD_WORKSPACE,
++    KEY_CENTER_WINDOW,
+     KEY_CLOSE_WINDOW,
+     KEY_CYCLE_WINDOWS,
+     KEY_CYCLE_REVERSE_WINDOWS,

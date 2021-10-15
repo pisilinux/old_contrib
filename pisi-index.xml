@@ -1065,6 +1065,9 @@
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>gdk-pixbuf-devel</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch level="1">Avoid_costly_lsb_release_invocation.patch</Patch>
+            </Patches>
             <SourceURI>desktop/lxde/lxsession/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -1089,7 +1092,7 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2021-02-13</Date>
+                <Date>2021-10-15</Date>
                 <Version>0.5.5</Version>
                 <Comment>First build.</Comment>
                 <Name>Ayhan Yalçınsoy</Name>
@@ -1182,7 +1185,7 @@
         </Package>
         <History>
             <Update release="1">
-                <Date>2021-02-13</Date>
+                <Date>2021-10-15</Date>
                 <Version>1.3.2</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
@@ -6647,88 +6650,6 @@
                 <Version>0.2.0</Version>
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>cogl</Name>
-            <Homepage>https://lazka.github.io/pgi-docs/Cogl-1.0/index.html</Homepage>
-            <Packager>
-                <Name>Pisi Linux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>x11.library</PartOf>
-            <Summary xml:lang="en">A low level OpenGL abstraction library</Summary>
-            <Description xml:lang="en">Cogl is a low level OpenGL abstraction library developed for (and part of) Clutter.</Description>
-            <Archive type="tarxz" sha1sum="b92d70f74b1df95ba5aeceff4dd203801982bc4f" name="cogl-1.22.8.tar.xz">mirrors://gnome/cogl/1.22/cogl-1.22.8.tar.xz</Archive>
-            <BuildDependencies>
-                <Dependency>mesa-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>pango-devel</Dependency>
-                <Dependency>libXext-devel</Dependency>
-                <Dependency>libglvnd-devel</Dependency>
-                <Dependency>gtkglext-devel</Dependency>
-                <Dependency>libXfixes-devel</Dependency>
-                <Dependency>libXrandr-devel</Dependency>
-                <Dependency>libXdamage-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>libXcomposite-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>x11/library/cogl/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>cogl</Name>
-            <RuntimeDependencies>
-                <Dependency>mesa</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libXext</Dependency>
-                <Dependency>libglvnd</Dependency>
-                <Dependency>libXfixes</Dependency>
-                <Dependency>libXrandr</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-                <Dependency>libXdamage</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="data">/usr/share</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>cogl-devel</Name>
-            <Summary xml:lang="tr">cogl için geliştirme dosyaları.</Summary>
-            <RuntimeDependencies>
-                <Dependency>mesa-devel</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>libXext-devel</Dependency>
-                <Dependency>libglvnd-devel</Dependency>
-                <Dependency>libXfixes-devel</Dependency>
-                <Dependency>libXrandr-devel</Dependency>
-                <Dependency>gdk-pixbuf-devel</Dependency>
-                <Dependency>libXdamage-devel</Dependency>
-                <Dependency>libXcomposite-devel</Dependency>
-                <Dependency release="1">cogl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/lib/pkgconfig</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2021-01-17</Date>
-                <Version>1.22.8</Version>
-                <Comment>First Beta release.</Comment>
-                <Name>Pisi Linux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Update>
         </History>
@@ -13810,46 +13731,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-isodate</Name>
-            <Homepage>https://github.com/gweis/isodate/</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">ISO 8601 date/time parser.</Summary>
-            <Description xml:lang="en">This module implements ISO 8601 date, time and duration parsing. The implementation follows ISO8601:2004 standard, and implements only date/time representations mentioned in the standard. If something is not mentioned there, then it is treated as non existent, and not as an allowed option.</Description>
-            <Archive type="targz" sha1sum="6b6fd5db5abce3d3f15a7b53bc78b003528ac059" name="0.6.0.tar.gz">https://github.com/gweis/isodate/archive/refs/tags/0.6.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>python3-setuptools</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-isodate/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-isodate</Name>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2021-06-18</Date>
-                <Version>0.6.0</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>python3-monotonic</Name>
             <Homepage>https://github.com/atdt/monotonic</Homepage>
             <Packager>
@@ -15218,50 +15099,6 @@
                 <Comment>First release, rebuilt with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-rdflib</Name>
-            <Homepage>https://rdflib.dev/</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>custom</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">RDFLib is a pure Python package for working with RDF.</Summary>
-            <Description xml:lang="en">RDFLib is a pure Python package for working with RDF.</Description>
-            <Archive type="targz" sha1sum="9827de44d7b37d873f1105eb5ce439139139ea43" name="6.0.0.tar.gz">https://github.com/RDFLib/rdflib/archive/refs/tags/6.0.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-devel</Dependency>
-                <Dependency>python3-setuptools</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-rdflib/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-rdflib</Name>
-            <RuntimeDependencies>
-                <Dependency>python3</Dependency>
-                <Dependency>python3-six</Dependency>
-                <Dependency>python3-isodate</Dependency>
-                <Dependency>python3-pyparsing</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2021-07-21</Date>
-                <Version>6.0.0</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -28844,14 +28681,14 @@
                 <Name>Pisilinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
             </Packager>
-            <License>GPLv3</License>
+            <License>GPL-3</License>
             <IsA>app:gui</IsA>
             <PartOf>multimedia.sound</PartOf>
             <Summary xml:lang="en">Strawberry Music Player.</Summary>
             <Summary xml:lang="tr">Strawberry müzik oynatma yazılımı.</Summary>
             <Description xml:lang="en">Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It&apos;s written in C++ using the Qt 5 or 6 toolkit.</Description>
             <Description xml:lang="tr">Strawberry 2018 yılının clementine yazılımından çatallanmış ve Qt5 platformu üzerine yapılmış bir müzik oynatma yazılımı ve düzenleyicisidir.</Description>
-            <Archive type="tarxz" sha1sum="52461f3f26d77572b59752ecd9338cec4663443f" name="strawberry-0.9.2.tar.xz">https://files.strawberrymusicplayer.org/strawberry-0.9.2.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="d8000c8f8bd0bfb4c3cbc5ea8992259dc48dc4f2" name="strawberry-1.0.0.tar.xz">https://files.strawberrymusicplayer.org/strawberry-1.0.0.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>ccache</Dependency>
@@ -28864,7 +28701,6 @@
                 <Dependency>libmtp-devel</Dependency>
                 <Dependency>sqlite-devel</Dependency>
                 <Dependency>gnutls-devel</Dependency>
-                <Dependency>taglib-devel</Dependency>
                 <Dependency>qt5-sql-odbc</Dependency>
                 <Dependency>qt5-linguist</Dependency>
                 <Dependency>qt5-sql-mysql</Dependency>
@@ -28878,6 +28714,7 @@
                 <Dependency>libnotify-devel</Dependency>
                 <Dependency>liblastfm-devel</Dependency>
                 <Dependency>gstreamer-devel</Dependency>
+                <Dependency>tagparser-devel</Dependency>
                 <Dependency>qt5-sql-postgresql</Dependency>
                 <Dependency>qt5-x11extras-devel</Dependency>
                 <Dependency>libchromaprint-devel</Dependency>
@@ -28897,13 +28734,13 @@
                 <Dependency>libgcc</Dependency>
                 <Dependency>libmtp</Dependency>
                 <Dependency>sqlite</Dependency>
-                <Dependency>taglib</Dependency>
                 <Dependency>libcdio</Dependency>
                 <Dependency>libgpod</Dependency>
                 <Dependency>alsa-lib</Dependency>
                 <Dependency>protobuf</Dependency>
                 <Dependency>qt5-base</Dependency>
                 <Dependency>gstreamer</Dependency>
+                <Dependency>tagparser</Dependency>
                 <Dependency>gdk-pixbuf</Dependency>
                 <Dependency>qt5-x11extras</Dependency>
                 <Dependency>libchromaprint</Dependency>
@@ -28922,6 +28759,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="3">
+                <Date>2021-10-15</Date>
+                <Version>1.0.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Pisi Linux Community</Name>
+                <Email>admin@pisilinux.org</Email>
+            </Update>
             <Update release="2">
                 <Date>2021-07-11</Date>
                 <Version>0.9.2</Version>

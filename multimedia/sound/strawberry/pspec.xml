@@ -9,14 +9,14 @@
             <Email>admins@pisilinux.org</Email>
         </Packager>
         <PartOf>multimedia.sound</PartOf>
-        <License>GPLv3</License>
+        <License>GPL-3</License>
         <IsA>app:gui</IsA>
         <Summary>Strawberry Music Player.</Summary>
         <Description>
             Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It's written in C++ using the Qt 5 or 6 toolkit.
         </Description>
-        <Archive sha1sum="52461f3f26d77572b59752ecd9338cec4663443f" type="tarxz">
-            https://files.strawberrymusicplayer.org/strawberry-0.9.2.tar.xz
+        <Archive sha1sum="d8000c8f8bd0bfb4c3cbc5ea8992259dc48dc4f2" type="tarxz">
+            https://files.strawberrymusicplayer.org/strawberry-1.0.0.tar.xz
         </Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
@@ -30,7 +30,6 @@
             <Dependency>libmtp-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
-            <Dependency>taglib-devel</Dependency>
             <Dependency>qt5-sql-odbc</Dependency>
             <Dependency>qt5-linguist</Dependency>
             <Dependency>qt5-sql-mysql</Dependency>
@@ -44,6 +43,7 @@
             <Dependency>libnotify-devel</Dependency>
             <Dependency>liblastfm-devel</Dependency>
             <Dependency>gstreamer-devel</Dependency>
+            <Dependency>tagparser-devel</Dependency>
             <Dependency>qt5-sql-postgresql</Dependency>
             <Dependency>qt5-x11extras-devel</Dependency>
             <Dependency>libchromaprint-devel</Dependency>
@@ -66,13 +66,13 @@
             <Dependency>libgcc</Dependency>
             <Dependency>libmtp</Dependency>
             <Dependency>sqlite</Dependency>
-            <Dependency>taglib</Dependency>
             <Dependency>libcdio</Dependency>
             <Dependency>libgpod</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>protobuf</Dependency>
             <Dependency>qt5-base</Dependency>
             <Dependency>gstreamer</Dependency>
+            <Dependency>tagparser</Dependency>
             <Dependency>gdk-pixbuf</Dependency>
             <Dependency>qt5-x11extras</Dependency>
             <Dependency>libchromaprint</Dependency>
@@ -92,6 +92,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2021-10-15</Date>
+            <Version>1.0.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="2">
             <Date>2021-07-11</Date>
             <Version>0.9.2</Version>

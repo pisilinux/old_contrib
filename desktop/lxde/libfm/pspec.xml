@@ -32,7 +32,7 @@
 			<Dependency>menu-cache-devel</Dependency>
 		</BuildDependencies>
 		<Patches>
-			<Patch level="1">Fix_background_color_with_gtk+3.patch </Patch>
+			<Patch level="1">Fix_background_color_with_gtk+3.patch</Patch>
 		</Patches>
 	</Source>
 
@@ -93,7 +93,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2021-02-13</Date>
+			<Date>2021-10-15</Date>
 			<Version>1.3.2</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

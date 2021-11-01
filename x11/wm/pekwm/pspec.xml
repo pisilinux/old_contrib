@@ -15,8 +15,8 @@
 		<Description>
 			The Pekwm Window Manager is written by Claes Nästén. The code is based on the aewm++ window manager, but it has evolved enough that it no longer resembles aewm++ at all. It also has an expanded feature-set, including window grouping (similar to ion, pwm, or fluxbox), auto properties, xinerama and keygrabber that supports keychains, and much more.
 		</Description>
-		<Archive sha1sum="d5ef62ffc3728a84dc98aebbb4fca9873d13ab0e" type="targz">
-			https://github.com/pekdon/pekwm/releases/download/release-0.1.18/pekwm-0.1.18.tar.gz
+		<Archive sha1sum="6c353f316a6cf77738f7684bdbc66a828ff78133" type="targz">
+			https://github.com/pekdon/pekwm/releases/download/release-0.2.0/pekwm-0.2.0.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -51,7 +51,7 @@
 			<Dependency>libjpeg-turbo</Dependency>
 		</RuntimeDependencies>
 		<Files>
-			<Path fileType="config">/usr/etc</Path>
+			<Path fileType="config">/etc</Path>
 			<Path fileType="executable">/usr/bin</Path>
 			<Path fileType="data">/usr/share/pekwm</Path>
 			<Path fileType="man">/usr/share/man</Path>
@@ -59,6 +59,13 @@
 	</Package>
 
 	<History>
+		<Update release="2">
+			<Date>2021-10-31</Date>
+			<Version>0.2.0</Version>
+			<Comment>Major version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="1">
 			<Date>2021-02-14</Date>
 			<Version>0.1.18</Version>

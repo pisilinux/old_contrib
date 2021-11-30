@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sqlitebrowser</Name>
+        <Homepage>https://sqlitebrowser.org/</Homepage>
+        <Packager>
+            <Name>Erkan IŞIK</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Summary>SQLite Database browser is a light GUI editor for SQLite databases, built on top of Qt</Summary>
+        <Description>SQLite Database browser is a light GUI editor for SQLite databases, built on top of Qt</Description>
+        <Archive sha1sum="dde75cbf04a1809d41769ff88d45f2d4be090c8b" type="targz">https://github.com/sqlitebrowser/sqlitebrowser/archive/refs/tags/v3.12.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>git</Dependency>
+            <Dependency>cmake</Dependency>
+            <Dependency>ninja</Dependency>
+            <!--<Dependency>qt5-tools</Dependency> -->                       
+        </BuildDependencies>
+       
+    </Source>
+
+    <Package>
+        <Name>sqlitebrowser</Name>
+        <RuntimeDependencies>
+            <Dependency>qt5-base</Dependency>
+            <Dependency>icon-theme-hicolor</Dependency>
+            <Dependency>desktop-file-utils</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2021-11-29</Date>
+            <Version>3.12.2</Version>
+            <Comment>New Release</Comment>
+            <Name>Erkanisik</Name>
+            <Email>erkanisik@pisilinux.org</Email>
+        </Update>
+       
+    </History>
+</PISI>
+ 

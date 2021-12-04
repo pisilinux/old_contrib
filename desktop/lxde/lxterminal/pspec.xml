@@ -24,6 +24,9 @@
 			<Dependency>libpcre2-devel</Dependency>
 			<Dependency>gdk-pixbuf-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level="1">Allow_tab_width_set.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>

@@ -14,7 +14,7 @@
         <IsA>app:gui</IsA>
         <Summary>Opensource flight simulator</Summary>
         <Description>FlightGear is an opensource multiplatform flight simulator project.</Description>
-        <Archive type="tarbz2" sha1sum="8c47fca6fb06d3e6d5d53ef1ccd43da447892982">/var/cache/pisi/archives/flightgear-2020.3.11.tar.bz2</Archive>
+        <Archive type="tarbz2" sha1sum="8c47fca6fb06d3e6d5d53ef1ccd43da447892982">mirrors://sourceforge/project/flightgear/release-2020.3/flightgear-2020.3.11.tar.bz2</Archive>
     </Source>
         <BuildDependencies>
             <Dependency>OpenSceneGraph-devel</Dependency>

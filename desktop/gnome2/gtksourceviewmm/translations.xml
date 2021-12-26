@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>gtksourceviewmm</Name>
-        <Summary xml:lang="tr">C++ bindings for the gtksourceview library</Summary>
-        <Description xml:lang="tr">C++ bindings for the gtksourceview library</Description>
-    </Source>
-</PISI>

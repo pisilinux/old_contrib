@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>gcolor2</Name>
+		<Homepage>https://sourceforge.net/projects/gcolor2/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>GPL-2</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.graphics</PartOf>
+		<Summary>gcolor2 is a simple color selector.</Summary>
+		<Description>gcolor2 is a simple color selector that was originally based on gcolor, ported to use GTK+2, and now has a completely new UI.</Description>
+		<Archive sha1sum="e410a52dcff3d5c6c3d448b68a026d04ccd744be" type="tarbz2">
+			mirrors://sourceforge/project/gcolor2/gcolor2/0.4/gcolor2-0.4.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>perl-XML-Parser</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<Patch level="1">amd64_correction.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>gcolor2</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk2</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+		</Files>
+		<AdditionalFiles>
+			<AdditionalFile target="/usr/share/applications/gcolor2.desktop" owner="root" permission="0644">gcolor2.desktop</AdditionalFile>
+			<AdditionalFile target="/usr/share/pixmaps/gcolor2/icon.png" owner="root" permission="0644">icon.png</AdditionalFile>
+			<AdditionalFile target="/usr/share/pixmaps/gcolor2/about_icon.png" owner="root" permission="0644">about_icon.png</AdditionalFile>
+		</AdditionalFiles>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-12-25</Date>
+			<Version>0.4</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

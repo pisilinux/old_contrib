@@ -1,0 +1,70 @@
+--- a/src/callbacks.c	2005-07-12 22:06:12.000000000 +0400
++++ b/src/callbacks.c	2021-12-25 10:13:39.108142211 +0300
+@@ -9,6 +9,10 @@
+ #include "interface.h"
+ #include "support.h"
+ 
++/* missing headers on original file */
++#include <string.h>
++#include <glib/gprintf.h>
++
+ 
+ GtkWidget        *savedialog;
+ gchar            *colorname;
+@@ -166,9 +170,10 @@
+ void on_copy_color_to_clipboard_activate (GtkMenuItem *menuitem, gpointer user_data)
+ {
+ 	gchar* hex;
++	GtkClipboard *cb;
+ 	
+ 	hex = hex_value (colorvalue);
+-	GtkClipboard *cb = gtk_clipboard_get (gdk_atom_intern ("PRIMARY", FALSE));
++	cb = gtk_clipboard_get (gdk_atom_intern ("PRIMARY", FALSE));
+ 	gtk_clipboard_set_text (cb, hex, strlen (hex));
+ }
+ 
+--- a/src/main.c	2005-07-11 18:55:49.000000000 +0400
++++ b/src/main.c	2021-12-25 10:16:35.094083842 +0300
+@@ -9,6 +9,12 @@
+ #include "support.h"
+ #include "callbacks.h"
+ 
++/* missing headers on original file */
++#include <stdlib.h>
++#include <string.h>
++#include <glib/gprintf.h>
++
++
+ GtkListStore *liststore;
+ GdkWindow    *gdkwin;
+ gchar        *user_filename;
+@@ -48,8 +54,9 @@
+ 
+ void add_list_color (gchar *spec, gchar *name, gchar *type, gboolean is_new_color)
+ {
++	/* pixmap and mask don't used
+ 	GdkPixmap   *pixmap;
+-	GdkBitmap   *mask;
++	GdkBitmap   *mask; */
+ 	GdkPixbuf   *buf;
+ 	GtkTreeIter  iter;
+ 	
+@@ -103,7 +110,7 @@
+ 	gchar *name;
+ 	gchar  buffer[512];
+ 	gchar  spec[8];
+-	gint   r, g, b, lr, lg, lb;
++	gint   r, g, b, lr=0, lg=0, lb=0;
+ 	
+ 	fp = fopen (filename, "r");
+ 	if (!fp)
+@@ -140,7 +147,8 @@
+ 	GtkTreeViewColumn *column;
+ 	GtkWidget         *treeview;
+ 	GtkTreeSelection  *select;
+-	gchar             *buf;
++	/* dont used
++	gchar             *buf;*/
+ 	
+ #ifdef ENABLE_NLS
+ 	bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);

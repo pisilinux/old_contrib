@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>fig2dev</Name>
+		<Homepage>http://mcj.sourceforge.net/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>asis</License>
+		<IsA>app:console</IsA>
+		<PartOf>multimedia.converter</PartOf>
+		<Summary>Fig translation programs.</Summary>
+		<Description>Fig2dev is a set of tools for creating TeX documents with graphics which are portable, in the sense that they can be printed in a wide variety of environments.</Description>
+		<Archive sha1sum="9a85b37a0770d73915584f1e75e58375b093d9bd" type="tarxz">
+			mirrors://sourceforge/project/mcj/fig2dev-3.2.8b.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>zlib-devel</Dependency>
+			<Dependency>libpng-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>fig2dev</Name>
+		<RuntimeDependencies>
+			<Dependency>zlib</Dependency>
+			<Dependency>libpng</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share/fig2dev/i18n</Path>
+			<Path fileType="man">/usr/share/man/man1</Path>
+			<Path fileType="doc">/usr/share/doc/fig2dev/CHANGES</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2021-12-24</Date>
+			<Version>3.2.8</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

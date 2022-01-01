@@ -1,60 +1,57 @@
-﻿<?xml version="1.0" ?>
-<!DOCTYPE PISI SYSTEM "http://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
-    <Source>
-        <Name>musique</Name>
-        <Homepage>http://flavio.tordini.org/musique</Homepage>
-        <Packager>
-            <Name>Stefan Gronewold</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Packager>
-        <License>GPLv3</License>
-        <License>LGPLv2.1</License>
-        <Icon>musique</Icon>
-        <IsA>app:gui</IsA>
-        <PartOf>multimedia.sound</PartOf>
-        <Summary>Minimalistic and innovative music player.</Summary>
-        <Description>Browse your collection by artists pictures and album covers. Also during playing the music Musique shows covers and additional informations about the artists.</Description>
-        <Archive sha1sum="7df2cd43af2da43ca56a285cd5f4cc9ae223f78e" type="targz">https://github.com/flaviotordini/musique/archive/1.5.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>qt5-base-devel</Dependency>
-            <Dependency>qt5-assistant-devel</Dependency>
-            <Dependency>qt5-designer-devel</Dependency>
-            <Dependency>qt5-linguist</Dependency>
-            <Dependency>qt5-phonon-devel</Dependency>
-            <Dependency>taglib-devel</Dependency>
-        </BuildDependencies>
-    </Source>
+	<Source>
+		<Name>musique</Name>
+		<Homepage>https://flavio.tordini.org/musique</Homepage>
+		<Packager>
+			<Name>Pisilinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Packager>
+		<License>GPL-3</License>
+		<IsA>app:gui</IsA>
+		<PartOf>multimedia.sound</PartOf>
+		<Summary>A finely crafted music player.</Summary>
+		<Description>Browse your collection by artists pictures and album covers. Also during playing the music Musique shows covers and additional informations about the artists.</Description>
+		<Archive sha1sum="066b9bc2094cafda242e0fe83f49061b3e540f7d" type="tarbz2">
+			https://github.com/flaviotordini/musique/releases/download/1.10.1/musique-1.10.1.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>taglib-devel</Dependency>
+			<Dependency>qt5-linguist</Dependency>
+			<Dependency>qt5-base-devel</Dependency>
+			<Dependency>mpv-player-devel</Dependency>
+			<Dependency>qt5-designer-devel</Dependency>
+			<Dependency>qt5-assistant-devel</Dependency>
+			<Dependency>qt5-declarative-devel</Dependency>
+			<Dependency>qt5-quickcontrols2-devel</Dependency>
+		</BuildDependencies>
+	</Source>
 
-    <Package>
-        <Name>musique</Name>
-        <RuntimeDependencies>
-            <Dependency>qt5-base</Dependency>
-            <Dependency>qt5-phonon-backend-gstreamer</Dependency>
-            <Dependency>qt5-phonon</Dependency>
-            <Dependency>taglib</Dependency>
-            <Dependency>libgcc</Dependency>
-        </RuntimeDependencies>
-        <Replaces>
-            <Package>minitunes</Package>
-        </Replaces>
-        <Files>
-            <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="localedata">/usr/share/musique/locale</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/pixmaps</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-        </Files>
-    </Package>
+	<Package>
+		<Name>musique</Name>
+		<RuntimeDependencies>
+			<Dependency>libgcc</Dependency>
+			<Dependency>taglib</Dependency>
+			<Dependency>qt5-base</Dependency>
+			<Dependency>mpv-player</Dependency>
+			<Dependency>qt5-sql-sqlite</Dependency>
+			<Dependency>qt5-declarative</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/musique/locale</Path>
+		</Files>
+	</Package>
 
-    <History>
-        <Update release="1">
-            <Date>2018-05-16</Date>
-            <Version>1.5</Version>
-            <Comment>First release</Comment>
-            <Name>Stefan Gronewold</Name>
-            <Email>groni@pisilinux.org</Email>
-        </Update>
-    </History>
+	<History>
+		<Update release="1">
+			<Date>2021-12-24</Date>
+			<Version>1.10.1</Version>
+			<Comment>First release</Comment>
+			<Name>Pisilinux Community</Name>
+			<Email>admins@pisilinux.org</Email>
+		</Update>
+	</History>
 </PISI>

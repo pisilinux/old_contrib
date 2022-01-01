@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-#
 # Licensed under the GNU General Public License, version 2.
 # See the file http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
 
@@ -20,8 +19,4 @@ def install():
     qt5.install()
     pisitools.insinto("/usr/share/pixmaps/musique.png",  "images/app.png")
     pisitools.dodoc("README.md",  "COPYING")
-
-
-
-
 

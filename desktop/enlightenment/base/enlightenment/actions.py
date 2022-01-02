@@ -7,12 +7,13 @@
 from pisi.actionsapi import mesontools
 from pisi.actionsapi import pisitools
 
-j = "-Dwl=true \
-     -Ddrm=true \
-     -Dmount-eeze=true \
-     -Dsystemd=false \
-     -Dgeolocation=false \
-    "
+j = ''.join([
+    ' -Dwl-wl=true',
+    ' -Dwl-drm=true',
+    ' -Dmount-eeze=true',
+    ' -Dsystemd=false',
+    ' -Dgeolocation=false '
+    ])
 
 def setup():
 	mesontools.configure(j)
@@ -23,5 +24,5 @@ def build():
 def install():
 	mesontools.install()
 
-	pisitools.dodoc("AUTHORS", "COPYING", "NEWS", "README", "TODO")
+	pisitools.dodoc("AUTHORS", "NEWS")
 

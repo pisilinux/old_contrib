@@ -11,7 +11,7 @@ from pisi.actionsapi import get
 def setup():
 	pisitools.dosed("configure.ac", "/usr/share/sgml/docbook/stylesheet/xsl/nwalsh", "/usr/share/xml/docbook/xsl-stylesheets")
 	autotools.autoreconf("-fiv")
-	autotools.configure("--disable-native-kde --disable-debug --with-x")
+	autotools.configure("--disable-debug --with-x")
 
 def build():
 	autotools.make()
@@ -19,5 +19,5 @@ def build():
 def install():
 	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-	pisitools.dodoc("AUTHORS", "NEWS", "README.md")
+	pisitools.dodoc("AUTHORS", "NEWS", "stalonetrayrc.sample.in")
 

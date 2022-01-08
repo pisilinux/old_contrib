@@ -10,13 +10,13 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
 j = ''.join([
-    '-Ddemos=true ',
-    '-Dtests=false ',
-    '-Dexamples=false ',
-    '-Dcolord=no ',
-    '-Dquartz_backend=false ',
-    '-Dwin32_backend=false ',
-    '-Dbroadway_backend=true ',
+    ' -Ddemos=true',
+    ' -Dtests=false',
+    ' -Dexamples=false',
+    ' -Dcolord=no',
+    ' -Dquartz_backend=false',
+    ' -Dwin32_backend=false',
+    ' -Dbroadway_backend=true ',
     ])
 
 def setup():

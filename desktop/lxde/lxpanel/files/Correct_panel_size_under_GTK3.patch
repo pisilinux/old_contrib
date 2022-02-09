@@ -1,14 +1,14 @@
-From b46e3a39786a5be04bf9cc3844dd184308cd7495 Mon Sep 17 00:00:00 2001
+From 12576de7b83c634437217e23d74954070a1be2d5 Mon Sep 17 00:00:00 2001
 From: Ben Walsh <b@wumpster.com>
 Date: Sat, 6 Jun 2020 10:38:15 +0100
-Subject: [PATCH] Specify GTK_REQUEST_CONSTANT_SIZE. Fixes #773.
+Subject: [PATCH] Correct panel size under GTK3. Fixes Sourceforge #773.
 
 ---
  src/panel.c | 7 +++++++
  1 file changed, 7 insertions(+)
 
 diff --git a/src/panel.c b/src/panel.c
-index da9e718b..b52fc796 100644
+index 45188dbe..2b5fc9be 100644
 --- a/src/panel.c
 +++ b/src/panel.c
 @@ -293,6 +293,12 @@ lxpanel_get_preferred_height (GtkWidget *widget,
@@ -32,6 +32,3 @@ index da9e718b..b52fc796 100644
  #else
      widget_class->size_request = lxpanel_size_request;
  #endif
--- 
-2.27.0
-

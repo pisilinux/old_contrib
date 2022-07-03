@@ -3285,77 +3285,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>texstudio</Name>
-            <Homepage>https://www.texstudio.org/</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>GPLv3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>editor</PartOf>
-            <Summary xml:lang="en">TeXstudio is a fully featured LaTeX editor.</Summary>
-            <Description xml:lang="en">TeXstudio is an integrated writing environment for creating LaTeX documents. Our goal is to make writing LaTeX as easy and comfortable as possible. Therefore TeXstudio has numerous features like syntax-highlighting, integrated viewer, reference checking and various assistants.</Description>
-            <Archive type="targz" sha1sum="104ffff0f3a527f070cb0cf3a1e6c5659872912a" name="4.0.1.tar.gz">mirrors://sourceforge/project/texstudio/4.0.1/4.0.1.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>quazip-devel</Dependency>
-                <Dependency>qt5-svg-devel</Dependency>
-                <Dependency>hunspell-devel</Dependency>
-                <Dependency>qt5-base-devel</Dependency>
-                <Dependency>qt5-script-devel</Dependency>
-                <Dependency>qt5-phonon-devel</Dependency>
-                <Dependency>poppler-qt5-devel</Dependency>
-                <Dependency>poppler-cpp-devel</Dependency>
-                <Dependency>ghostscript-devel</Dependency>
-                <Dependency>qtermwidget5-devel</Dependency>
-                <Dependency>qt5-declarative-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>editor/texstudio/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>texstudio</Name>
-            <RuntimeDependencies>
-                <Dependency>zlib</Dependency>
-                <Dependency>libX11</Dependency>
-                <Dependency>libgcc</Dependency>
-                <Dependency>quazip</Dependency>
-                <Dependency>qt5-svg</Dependency>
-                <Dependency>hunspell</Dependency>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>qt5-script</Dependency>
-                <Dependency>poppler-qt5</Dependency>
-                <Dependency>texlive-bin</Dependency>
-                <Dependency>texlive-core</Dependency>
-                <Dependency>qtermwidget5</Dependency>
-                <Dependency>qt5-declarative</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="data">/usr/share/texstudio</Path>
-                <Path fileType="icons">/usr/share/icons/hicolor</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="2">
-                <Date>2021-10-12</Date>
-                <Version>4.0.1</Version>
-                <Comment>Version bump.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="1">
-                <Date>2021-02-24</Date>
-                <Version>3.1.1</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>zaz</Name>
             <Homepage>http://zaz.sourceforge.net</Homepage>
             <Packager>
@@ -4374,6 +4303,91 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>virt-viewer</Name>
+            <Homepage>https://www.virt-viewer-space.org/</Homepage>
+            <Packager>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
+            </Packager>
+            <License>LGPL2.1</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>hardware</PartOf>
+            <Summary xml:lang="en">The virtual machine console viewer application code</Summary>
+            <Summary xml:lang="tr">Sanal makine konsolu görüntüleyici uygulama kodu</Summary>
+            <Description xml:lang="en">Virt Viewer provides a graphical viewer for the guest OS display. At this time is supports guest OS using the VNC or SPICE protocols. Further protocols may be supported in the future as user demand dictates.</Description>
+            <Description xml:lang="tr">Virt Viewer, konuk işletim sistemi ekranı için bir grafik görüntüleyici sağlar. Şu anda, VNC veya SPICE protokollerini kullanan konuk işletim sistemini desteklemektedir. Kullanıcı talebinin gerektirdiği şekilde gelecekte daha fazla protokol desteklenebilir.</Description>
+            <Archive type="targz" sha1sum="dbec4c2d36b3703ce8eaa1dc5bf4e18644bb7391" name="virt-viewer-v11.0.tar.gz">https://gitlab.com/virt-viewer/virt-viewer/-/archive/v11.0/virt-viewer-v11.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>meson</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>vte-devel</Dependency>
+                <Dependency>pkgconfig</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>spice-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>librest-devel</Dependency>
+                <Dependency>libvirt-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>gtk-vnc-devel</Dependency>
+                <Dependency>spice-protocol</Dependency>
+                <Dependency>spice-gtk-devel</Dependency>
+                <Dependency>libgovirt-devel</Dependency>
+                <Dependency>bash-completion</Dependency>
+                <Dependency>libvirt-glib-devel</Dependency>
+                <Dependency>libvirt-glib-devel</Dependency>
+                <Dependency>gobject-introspection-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>41cc016278e713d3db156761fce6437dff81a53a.patch</Patch>
+            </Patches>
+            <SourceURI>hardware/virt-viewer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>virt-viewer</Name>
+            <Summary xml:lang="en">Simple Protocol for Independent Computing Environments</Summary>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>pixman</Dependency>
+                <Dependency>libopus</Dependency>
+                <Dependency>openssl</Dependency>
+                <Dependency>gtk-vnc</Dependency>
+                <Dependency>spice-protocol</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/libvirt-viewer-server.so*</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>virt-viewer-devel</Name>
+            <Summary xml:lang="en">Development files for virt-viewer</Summary>
+            <Summary xml:lang="tr">virt-viewer için geliştirme dosyaları</Summary>
+            <RuntimeDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+                <Dependency release="1">virt-viewer</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/virt-viewer-server</Path>
+                <Path fileType="data">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-06-24</Date>
+                <Version>11.0</Version>
+                <Comment>First release</Comment>
+                <Name>Kamil Atlı</Name>
+                <Email>suvari@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -6181,6 +6195,90 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>ettercap</Name>
+            <Homepage>http://ettercap.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>PisiLinux Community</Name>
+                <Email>admins@pisilinux.org</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>network.analyzer</PartOf>
+            <Summary xml:lang="en">Network mapper and analyzer</Summary>
+            <Summary xml:lang="tr">Ağ yapısı inceleyici</Summary>
+            <Description xml:lang="en">ettercap is a suite for man in the middle attacks and network mapping.</Description>
+            <Description xml:lang="tr">ettercap ağ haritası çıkarmak ve bağlantılar arasına girmek için kullanılabilen bir ağ aracıdır.</Description>
+            <Icon>ettercap</Icon>
+            <Archive type="targz" sha1sum="04f50925a5f3b2555371075a048ab7bfe3892976" name="ettercap-0.8.2.tar.gz">https://github.com/Ettercap/ettercap/releases/download/v0.8.2/ettercap-0.8.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>curl-devel</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libbsd-devel</Dependency>
+                <Dependency>libnet-devel</Dependency>
+                <Dependency>libpcap-devel</Dependency>
+                <Dependency>libpcre-devel</Dependency>
+                <Dependency>ncurses-devel</Dependency>
+                <Dependency>openssl-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/analyzer/ettercap/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ettercap</Name>
+            <RuntimeDependencies>
+                <Dependency>curl</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libbsd</Dependency>
+                <Dependency>libnet</Dependency>
+                <Dependency>libpcap</Dependency>
+                <Dependency>libpcre</Dependency>
+                <Dependency>ncurses</Dependency>
+                <Dependency>openssl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/appdata</Path>
+                <Path fileType="data">/usr/share/ettercap</Path>
+                <Path fileType="doc">/usr/share/doc/ettercap</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/polkit-1/actions/org.pkexec.ettercap.policy</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2016-02-27</Date>
+                <Version>0.8.2</Version>
+                <Comment>Version bump, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2014-01-23</Date>
+                <Version>0.8.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+            <Update release="1">
+                <Date>2012-09-01</Date>
+                <Version>0.7.4.1</Version>
+                <Comment>First release</Comment>
+                <Name>Osman Erkan</Name>
+                <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>against</Name>
             <Homepage>http://nullsecurity.net/tools/cracker.html</Homepage>
             <Packager>
@@ -6703,90 +6801,6 @@
                 <Comment>First release</Comment>
                 <Name>Pisi Linux Admins</Name>
                 <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>ettercap</Name>
-            <Homepage>http://ettercap.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:gui</IsA>
-            <IsA>app:console</IsA>
-            <PartOf>network.analyzer</PartOf>
-            <Summary xml:lang="en">Network mapper and analyzer</Summary>
-            <Summary xml:lang="tr">Ağ yapısı inceleyici</Summary>
-            <Description xml:lang="en">ettercap is a suite for man in the middle attacks and network mapping.</Description>
-            <Description xml:lang="tr">ettercap ağ haritası çıkarmak ve bağlantılar arasına girmek için kullanılabilen bir ağ aracıdır.</Description>
-            <Icon>ettercap</Icon>
-            <Archive type="targz" sha1sum="04f50925a5f3b2555371075a048ab7bfe3892976" name="ettercap-0.8.2.tar.gz">https://github.com/Ettercap/ettercap/releases/download/v0.8.2/ettercap-0.8.2.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>cmake</Dependency>
-                <Dependency>curl-devel</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>glib2-devel</Dependency>
-                <Dependency>libbsd-devel</Dependency>
-                <Dependency>libnet-devel</Dependency>
-                <Dependency>libpcap-devel</Dependency>
-                <Dependency>libpcre-devel</Dependency>
-                <Dependency>ncurses-devel</Dependency>
-                <Dependency>openssl-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>network/analyzer/ettercap/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>ettercap</Name>
-            <RuntimeDependencies>
-                <Dependency>curl</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>zlib</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libbsd</Dependency>
-                <Dependency>libnet</Dependency>
-                <Dependency>libpcap</Dependency>
-                <Dependency>libpcre</Dependency>
-                <Dependency>ncurses</Dependency>
-                <Dependency>openssl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="config">/etc</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/appdata</Path>
-                <Path fileType="data">/usr/share/ettercap</Path>
-                <Path fileType="doc">/usr/share/doc/ettercap</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/polkit-1/actions/org.pkexec.ettercap.policy</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2016-02-27</Date>
-                <Version>0.8.2</Version>
-                <Comment>Version bump, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2014-01-23</Date>
-                <Version>0.8.0</Version>
-                <Comment>Version bump</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-01</Date>
-                <Version>0.7.4.1</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -12765,56 +12779,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>expect</Name>
-            <Homepage>https://core.tcl-lang.org/expect/index</Homepage>
-            <Packager>
-                <Name>Kamil Atlı</Name>
-                <Email>suvari@pisilinux.org</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language</PartOf>
-            <Summary xml:lang="fr">Outil pour automatiser les applications interactives</Summary>
-            <Summary xml:lang="en">A tool for automating interactive applications</Summary>
-            <Summary xml:lang="tr">İnteraktif uygulamaları otomatikleştirmek için kullanılan bir araç.</Summary>
-            <Description xml:lang="en">Expect is a tool for automating interactive applications such as telnet, ftp, passwd, fsck, rlogin, tip, etc. Expect really makes this stuff trivial. Expect is also useful for testing these same applications.</Description>
-            <Archive type="targz" sha1sum="a97b2f377c6a799928d6728c2ada55beb7f57d96" name="expect5.45.4.tar.gz">mirrors://sourceforge/expect/Expect/5.45.4/expect5.45.4.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>tcl-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="1">expect-5.44.1.15-ldflags.patch</Patch>
-                <Patch level="1">expect-5.43.0-fixformatsecurity.patch</Patch>
-                <Patch level="1">expect-fedora-5.32.2-random.patch</Patch>
-                <Patch level="1">expect-fedora-5.43.0-log_file.patch</Patch>
-            </Patches>
-            <SourceURI>programming/language/expect/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>expect</Name>
-            <RuntimeDependencies>
-                <Dependency>tcl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-20</Date>
-                <Version>5.45.4</Version>
-                <Comment>First release</Comment>
-                <Name>Kamil Atlı</Name>
-                <Email>suvari@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Cairo-Gobject</Name>
             <Homepage>https://metacpan.org/pod/Cairo::GObject</Homepage>
             <Packager>
@@ -13993,8 +13957,8 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-gpsoauth</Name>
-            <Homepage>https://github.com/simon-weber/gpsoauth</Homepage>
+            <Name>python-iniconfig</Name>
+            <Homepage>https://github.com/RonnyPfannschmidt/iniconfig</Homepage>
             <Packager>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -14002,36 +13966,30 @@
             <License>MIT</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">A python client library for Google Play Services OAuth.</Summary>
-            <Summary xml:lang="tr">Google Play Hizmetleri OAuth için bir python istemci kitaplığı</Summary>
-            <Description xml:lang="en">python-gpsoauth allows python code to use the “master token” flow.</Description>
-            <Description xml:lang="tr">python-gpsoauth, Google Play Hizmetleri OAuth için bir python istemci kitaplığıdır.</Description>
-            <Archive type="targz" sha1sum="1c31aa2f688cb034f3401871a76f2964addf1e39" name="0.4.2-rc.2.tar.gz">https://github.com/simon-weber/gpsoauth/archive/0.4.2-rc.2.tar.gz</Archive>
+            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
+            <Summary xml:lang="tr">iniconfig python modülü çok basit bir ini dosyası çözümleme aracıdır.</Summary>
+            <Description xml:lang="en">iniconfig is a small and simple INI-file parser python module</Description>
+            <Description xml:lang="tr">iniconfig küçük ve basit, kullanışlı bir INI-dosyası çözümleyebilen python modülüdür.</Description>
+            <Archive type="targz" sha1sum="86f7d6e053a50f11940969ac86ddc87182d7b43d" name="v1.0.0.tar.gz">https://github.com/RonnyPfannschmidt/iniconfig/archive/v1.0.0.tar.gz</Archive>
             <BuildDependencies>
+                <Dependency>python-setuptools-scm</Dependency>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>programming/language/python/python-gpsoauth/pspec.xml</SourceURI>
+            <SourceURI>programming/language/python/python-iniconfig/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>python-gpsoauth</Name>
-            <Summary xml:lang="en">A python client library for Google Play Services OAuth.</Summary>
-            <RuntimeDependencies>
-                <Dependency>python-pycryptodomex</Dependency>
-                <Dependency>python-requests</Dependency>
-                <Dependency>python-urllib3</Dependency>
-                <Dependency>python-chardet</Dependency>
-                <Dependency>python-idna</Dependency>
-            </RuntimeDependencies>
+            <Name>python-iniconfig</Name>
+            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
             <Files>
                 <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-gpsoauth</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
             <Update release="1">
-                <Date>2019-12-24</Date>
-                <Version>0.4.2.2</Version>
+                <Date>2019-12-08</Date>
+                <Version>1.0.0</Version>
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -14040,43 +13998,56 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python-pyasn1-modules</Name>
-            <Homepage>https://github.com/etingof/pyasn1-modules/</Homepage>
+            <Name>python-pyelftools</Name>
+            <Homepage>https://github.com/eliben/pyelftools</Homepage>
             <Packager>
-                <Name>Blue Devil</Name>
+                <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Packager>
-            <License>BSD</License>
+            <License>Public Domain</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">A collection of ASN.1-based protocols modules.</Summary>
-            <Summary xml:lang="tr">Python için ASN.1-temelli protokol modülleri kolleksiyonu</Summary>
-            <Description xml:lang="en">A collection of ASN.1 modules expressed in form of pyasn1 classes. Includes protocols PDUs definition (SNMP, LDAP etc.) and various data structures (X.509, PKCS etc.).</Description>
-            <Description xml:lang="tr">python-pyasn1-modules Python için ASN.1-temelli protokol modülleri kolleksiyonunu içerir.</Description>
-            <Archive type="targz" sha1sum="c8018d2eb53c51a74e955b7fdecda59e79f6f001" name="v0.2.8.tar.gz">https://github.com/etingof/pyasn1-modules/archive/v0.2.8.tar.gz</Archive>
+            <Summary xml:lang="en">Python library for analyzing ELF files and DWARF debugging information</Summary>
+            <Summary xml:lang="tr">Python için pyelftools modülü</Summary>
+            <Description xml:lang="en">pyelftools is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information.</Description>
+            <Description xml:lang="tr">pyelftools ELF ve DWARF dosyaları için çözümleme, inceleme ve hata ayıklamak için python ile yazılmış bir kitaplıktır.</Description>
+            <Archive type="targz" sha1sum="62660ac5fa5fa675b14dda384561b63188cd3c69" name="v0.26.tar.gz">https://github.com/eliben/pyelftools/archive/v0.26.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>python-setuptools</Dependency>
                 <Dependency>python-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>programming/language/python/python-pyasn1-modules/pspec.xml</SourceURI>
+            <SourceURI>programming/language/python/python-pyelftools/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>python-pyasn1-modules</Name>
-            <RuntimeDependencies>
-                <Dependency>python-pyasn1</Dependency>
-            </RuntimeDependencies>
+            <Name>python-pyelftools</Name>
+            <Summary xml:lang="en">Python library for analyzing ELF files and DWARF debugging information</Summary>
             <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc/python-pyasn1-modules</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
             </Files>
         </Package>
         <History>
-            <Update release="1">
-                <Date>2019-12-23</Date>
-                <Version>0.2.8</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
+            <Update release="3">
+                <Date>2019-12-12</Date>
+                <Version>0.26</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2019-11-26</Date>
+                <Version>0.25</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-04-22</Date>
+                <Version>0.23</Version>
+                <Comment>First release, rebuilt with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -14919,6 +14890,53 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-gpsoauth</Name>
+            <Homepage>https://github.com/simon-weber/gpsoauth</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>MIT</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">A python client library for Google Play Services OAuth.</Summary>
+            <Summary xml:lang="tr">Google Play Hizmetleri OAuth için bir python istemci kitaplığı</Summary>
+            <Description xml:lang="en">python-gpsoauth allows python code to use the “master token” flow.</Description>
+            <Description xml:lang="tr">python-gpsoauth, Google Play Hizmetleri OAuth için bir python istemci kitaplığıdır.</Description>
+            <Archive type="targz" sha1sum="1c31aa2f688cb034f3401871a76f2964addf1e39" name="0.4.2-rc.2.tar.gz">https://github.com/simon-weber/gpsoauth/archive/0.4.2-rc.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-gpsoauth/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-gpsoauth</Name>
+            <Summary xml:lang="en">A python client library for Google Play Services OAuth.</Summary>
+            <RuntimeDependencies>
+                <Dependency>python-pycryptodomex</Dependency>
+                <Dependency>python-requests</Dependency>
+                <Dependency>python-urllib3</Dependency>
+                <Dependency>python-chardet</Dependency>
+                <Dependency>python-idna</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/python-gpsoauth</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-24</Date>
+                <Version>0.4.2.2</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-greenlet</Name>
             <Homepage>https://github.com/python-greenlet/greenlet</Homepage>
             <Packager>
@@ -15116,47 +15134,6 @@
             <Update release="1">
                 <Date>2019-12-25</Date>
                 <Version>0.1.6</Version>
-                <Comment>First Pisi Release</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-iniconfig</Name>
-            <Homepage>https://github.com/RonnyPfannschmidt/iniconfig</Homepage>
-            <Packager>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
-            <Summary xml:lang="tr">iniconfig python modülü çok basit bir ini dosyası çözümleme aracıdır.</Summary>
-            <Description xml:lang="en">iniconfig is a small and simple INI-file parser python module</Description>
-            <Description xml:lang="tr">iniconfig küçük ve basit, kullanışlı bir INI-dosyası çözümleyebilen python modülüdür.</Description>
-            <Archive type="targz" sha1sum="86f7d6e053a50f11940969ac86ddc87182d7b43d" name="v1.0.0.tar.gz">https://github.com/RonnyPfannschmidt/iniconfig/archive/v1.0.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools-scm</Dependency>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-iniconfig/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-iniconfig</Name>
-            <Summary xml:lang="en">iniconfig module is brain-dead simple parsing of ini files</Summary>
-            <Files>
-                <Path fileType="library">/usr/lib/python2*</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-08</Date>
-                <Version>1.0.0</Version>
                 <Comment>First Pisi Release</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
@@ -15794,6 +15771,48 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python-pyasn1-modules</Name>
+            <Homepage>https://github.com/etingof/pyasn1-modules/</Homepage>
+            <Packager>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python</PartOf>
+            <Summary xml:lang="en">A collection of ASN.1-based protocols modules.</Summary>
+            <Summary xml:lang="tr">Python için ASN.1-temelli protokol modülleri kolleksiyonu</Summary>
+            <Description xml:lang="en">A collection of ASN.1 modules expressed in form of pyasn1 classes. Includes protocols PDUs definition (SNMP, LDAP etc.) and various data structures (X.509, PKCS etc.).</Description>
+            <Description xml:lang="tr">python-pyasn1-modules Python için ASN.1-temelli protokol modülleri kolleksiyonunu içerir.</Description>
+            <Archive type="targz" sha1sum="c8018d2eb53c51a74e955b7fdecda59e79f6f001" name="v0.2.8.tar.gz">https://github.com/etingof/pyasn1-modules/archive/v0.2.8.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python-setuptools</Dependency>
+                <Dependency>python-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python/python-pyasn1-modules/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python-pyasn1-modules</Name>
+            <RuntimeDependencies>
+                <Dependency>python-pyasn1</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python2*</Path>
+                <Path fileType="doc">/usr/share/doc/python-pyasn1-modules</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2019-12-23</Date>
+                <Version>0.2.8</Version>
+                <Comment>First Pisi Release</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python-pycrypto</Name>
             <Homepage>https://www.dlitz.net/software/pycrypto/</Homepage>
             <Packager>
@@ -15961,61 +15980,6 @@
                 <Comment>First release</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python-pyelftools</Name>
-            <Homepage>https://github.com/eliben/pyelftools</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>Public Domain</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python</PartOf>
-            <Summary xml:lang="en">Python library for analyzing ELF files and DWARF debugging information</Summary>
-            <Summary xml:lang="tr">Python için pyelftools modülü</Summary>
-            <Description xml:lang="en">pyelftools is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information.</Description>
-            <Description xml:lang="tr">pyelftools ELF ve DWARF dosyaları için çözümleme, inceleme ve hata ayıklamak için python ile yazılmış bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="62660ac5fa5fa675b14dda384561b63188cd3c69" name="v0.26.tar.gz">https://github.com/eliben/pyelftools/archive/v0.26.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python-setuptools</Dependency>
-                <Dependency>python-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python/python-pyelftools/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python-pyelftools</Name>
-            <Summary xml:lang="en">Python library for analyzing ELF files and DWARF debugging information</Summary>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2019-12-12</Date>
-                <Version>0.26</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-11-26</Date>
-                <Version>0.25</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-22</Date>
-                <Version>0.23</Version>
-                <Comment>First release, rebuilt with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -17108,62 +17072,55 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>python3-msgpack</Name>
-            <Homepage>https://msgpack.org/</Homepage>
+            <Name>python3-pefile</Name>
+            <Homepage>https://github.com/erocarrera/pefile</Homepage>
             <Packager>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Packager>
-            <License>Apache</License>
+            <License>MIT</License>
             <IsA>library</IsA>
             <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Python3 msgpack module</Summary>
-            <Summary xml:lang="tr">Python3 msgpack modülü</Summary>
-            <Description xml:lang="en">MessagePack serializer implementation for Python3.</Description>
-            <Description xml:lang="tr">python3-msgpack, Python3 için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
-            <Archive type="targz" sha1sum="fc44bc073193018f0973e9fb21f17ce4a9567684" name="v1.0.0.tar.gz">https://github.com/msgpack/msgpack-python/archive/v1.0.0.tar.gz</Archive>
+            <Summary xml:lang="en">Python module to read and work with PE files</Summary>
+            <Summary xml:lang="tr">Python3 pefile modülü</Summary>
+            <Description xml:lang="en">pefile is a multi-platform Python module to parse and work with Portable Executable (aka PE) files. Most of the information contained in the PE headers is accessible as well as all sections&apos; details and their data.</Description>
+            <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python3 yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
+            <Archive type="targz" sha1sum="4cadf66db1e8640733054f7b2e1920900dfed704" name="pefile-2019.4.18.tar.gz">https://github.com/erocarrera/pefile/releases/download/v2019.4.18/pefile-2019.4.18.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>python3-setuptools</Dependency>
                 <Dependency>python3-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-msgpack/pspec.xml</SourceURI>
+            <SourceURI>programming/language/python3/python3-pefile/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>python3-msgpack</Name>
-            <Summary xml:lang="en">Python3 msgpack module</Summary>
+            <Name>python3-pefile</Name>
+            <Summary xml:lang="en">Python3 pefile module</Summary>
             <RuntimeDependencies>
+                <Dependency>python3-future</Dependency>
                 <Dependency>python3</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-msgpack</Path>
+                <Path fileType="doc">/usr/share/doc/python3-pefile</Path>
             </Files>
         </Package>
         <History>
-            <Update release="4">
-                <Date>2020-02-24</Date>
-                <Version>1.0.0</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Blue Devil</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
             <Update release="3">
                 <Date>2019-12-13</Date>
-                <Version>0.6.2</Version>
-                <Comment>Rebuilt and split packages</Comment>
+                <Version>2019.4.18</Version>
+                <Comment>Rebuilt, fix deps and split packages</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
             <Update release="2">
-                <Date>2019-11-22</Date>
-                <Version>0.6.2</Version>
+                <Date>2019-11-20</Date>
+                <Version>2019.4.18</Version>
                 <Comment>Ver. bump</Comment>
                 <Name>Blue DeviL</Name>
                 <Email>bluedevil@sctzine.com</Email>
             </Update>
             <Update release="1">
                 <Date>2016-04-22</Date>
-                <Version>0.4.7</Version>
+                <Version>2016.3.28</Version>
                 <Comment>First Pisi Release Built with docker</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
@@ -18096,6 +18053,70 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>python3-msgpack</Name>
+            <Homepage>https://msgpack.org/</Homepage>
+            <Packager>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Packager>
+            <License>Apache</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.python3</PartOf>
+            <Summary xml:lang="en">Python3 msgpack module</Summary>
+            <Summary xml:lang="tr">Python3 msgpack modülü</Summary>
+            <Description xml:lang="en">MessagePack serializer implementation for Python3.</Description>
+            <Description xml:lang="tr">python3-msgpack, Python3 için binary serileştirme yapabilen verimli bir kitaplıktır.</Description>
+            <Archive type="targz" sha1sum="fc44bc073193018f0973e9fb21f17ce4a9567684" name="v1.0.0.tar.gz">https://github.com/msgpack/msgpack-python/archive/v1.0.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/python3/python3-msgpack/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>python3-msgpack</Name>
+            <Summary xml:lang="en">Python3 msgpack module</Summary>
+            <RuntimeDependencies>
+                <Dependency>python3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/python3*</Path>
+                <Path fileType="doc">/usr/share/doc/python3-msgpack</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2020-02-24</Date>
+                <Version>1.0.0</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Blue Devil</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2019-12-13</Date>
+                <Version>0.6.2</Version>
+                <Comment>Rebuilt and split packages</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2019-11-22</Date>
+                <Version>0.6.2</Version>
+                <Comment>Ver. bump</Comment>
+                <Name>Blue DeviL</Name>
+                <Email>bluedevil@sctzine.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2016-04-22</Date>
+                <Version>0.4.7</Version>
+                <Comment>First Pisi Release Built with docker</Comment>
+                <Name>İbrahim KARAGÜZEL</Name>
+                <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>python3-oauth2client</Name>
             <Homepage>https://github.com/googleapis/oauth2client</Homepage>
             <Packager>
@@ -18180,63 +18201,6 @@
                 <Comment>First pisi release.</Comment>
                 <Name>Blue Devil</Name>
                 <Email>bluedevil@sctzine.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>python3-pefile</Name>
-            <Homepage>https://github.com/erocarrera/pefile</Homepage>
-            <Packager>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Packager>
-            <License>MIT</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.python3</PartOf>
-            <Summary xml:lang="en">Python module to read and work with PE files</Summary>
-            <Summary xml:lang="tr">Python3 pefile modülü</Summary>
-            <Description xml:lang="en">pefile is a multi-platform Python module to parse and work with Portable Executable (aka PE) files. Most of the information contained in the PE headers is accessible as well as all sections&apos; details and their data.</Description>
-            <Description xml:lang="tr">pefile, PE(Portable Executable) dosyalarını çözümleyebilen çok platformlu bir python3 yordamıdır. PE dosyalarının başlıklarını ve diğer bölümlerini çözümleyebilir.</Description>
-            <Archive type="targz" sha1sum="4cadf66db1e8640733054f7b2e1920900dfed704" name="pefile-2019.4.18.tar.gz">https://github.com/erocarrera/pefile/releases/download/v2019.4.18/pefile-2019.4.18.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>python3-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/python3/python3-pefile/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>python3-pefile</Name>
-            <Summary xml:lang="en">Python3 pefile module</Summary>
-            <RuntimeDependencies>
-                <Dependency>python3-future</Dependency>
-                <Dependency>python3</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib/python3*</Path>
-                <Path fileType="doc">/usr/share/doc/python3-pefile</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="3">
-                <Date>2019-12-13</Date>
-                <Version>2019.4.18</Version>
-                <Comment>Rebuilt, fix deps and split packages</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2019-11-20</Date>
-                <Version>2019.4.18</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>Blue DeviL</Name>
-                <Email>bluedevil@sctzine.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2016-04-22</Date>
-                <Version>2016.3.28</Version>
-                <Comment>First Pisi Release Built with docker</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>

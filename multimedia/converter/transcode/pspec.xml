@@ -44,7 +44,7 @@
 			<Dependency>libvorbis-devel</Dependency>
 			<Dependency>mjpegtools-devel</Dependency>
 			<Dependency>libdvdread-devel</Dependency>
-			<Dependency>imagemagick-devel</Dependency>
+			<Dependency versionFrom="7.1.0.40">imagemagick-devel</Dependency>
 			<Dependency>libquicktime-devel</Dependency>
 			<Dependency>libjpeg-turbo-devel</Dependency>
 		</BuildDependencies>
@@ -89,7 +89,7 @@
 			<Dependency>libvorbis</Dependency>
 			<Dependency>mjpegtools</Dependency>
 			<Dependency>libdvdread</Dependency>
-			<Dependency>imagemagick</Dependency>
+			<Dependency versionFrom="7.1.0.40">imagemagick</Dependency>
 			<Dependency>libquicktime</Dependency>
 			<Dependency>libjpeg-turbo</Dependency>
 		</RuntimeDependencies>

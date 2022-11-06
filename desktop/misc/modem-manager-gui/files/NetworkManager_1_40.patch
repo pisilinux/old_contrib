@@ -1,0 +1,35 @@
+From 8ccffd6dd6b42625d09d5408f37f155d91411116 Mon Sep 17 00:00:00 2001
+From: Patrizio Tufarolo <patriziotufarolo@gmail.com>
+Date: Tue, 24 May 2022 08:03:03 +0000
+Subject: [PATCH] Fixes Bug#1004258: modem-manager-gui: segfaults on launch
+
+---
+ src/modules/nm09.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/src/modules/nm09.c b/src/modules/nm09.c
+index 2b3098b..8db0f69 100644
+--- a/src/modules/nm09.c
++++ b/src/modules/nm09.c
+@@ -533,6 +533,7 @@ static mmguiconn_t mmgui_module_connection_get_params(mmguicore_t mmguicore, con
+ 	GVariant *addrvar;
+ 	gchar *techstr;
+ 	mmguiconn_t connection;
++	int total;
+ 		
+ 	if ((mmguicore == NULL) || (connpath == NULL)) return NULL;
+ 	
+@@ -630,7 +631,9 @@ static mmguiconn_t mmgui_module_connection_get_params(mmguicore_t mmguicore, con
+ 					if (connipv4sec != NULL) {
+ 						/*DNS*/
+ 						conndnsvar = g_variant_lookup_value(connipv4sec, "dns", G_VARIANT_TYPE_ARRAY);
+-						for (i = 0; i < g_variant_n_children(conndnsvar); i++) {
++						total = 0;
++						if (conndnsvar) total = g_variant_n_children(conndnsvar);
++						for (i = 0; i < total; i++) {
+ 							addrvar = g_variant_get_child_value(conndnsvar, i);
+ 							addrint = ntohl(g_variant_get_uint32(addrvar));
+ 							if (connection->dns1 == NULL) {
+-- 
+GitLab
+

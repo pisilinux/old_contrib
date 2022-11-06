@@ -4,23 +4,17 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import mesontools
-from pisi.actionsapi import pisitools
+from pisi.actionsapi import autotools, pisitools, get
 
 def setup():
-	# version fix.
-	pisitools.dosed("meson.build", "19.1", "20")
-	# missing dependency, not build man pages.
-	pisitools.dosed("meson.build", "^po4a", "#po4a")
-	pisitools.dosed("meson.build", "\'man\'", deleteLine = True)
-	pisitools.dosed("Makefile", "\ man\ ", deleteLine = True)
-	mesontools.configure()
+	autotools.configure()
+	pisitools.dosed("Makefile", "cd\ man", deleteLine = True)
 
 def build():
-	mesontools.build()
+	autotools.make()
 
 def install():
-	mesontools.install()
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
 	pisitools.dodoc("AUTHORS", "Changelog")
 

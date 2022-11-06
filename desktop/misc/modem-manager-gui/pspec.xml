@@ -16,11 +16,9 @@
 			Modem Manager GUI is a simple GTK based graphical interface compatible with Modem manager, Wader and oFono system services able to control EDGE/3G/4G broadband modem specific functions. You can check balance of your SIM card, send or receive SMS messages, control mobile traffic consuption and more using Modem Manager GUI.
 		</Description>
 		<Archive sha1sum="66b602a45a3ca754ebe6e40c7f54d4f0034bc213" type="targz">
-			https://sourceforge.net/projects/modem-manager-gui/files/modem-manager-gui-0.0.20.tar.gz
+			mirrors://sourceforge/project/modem-manager-gui/modem-manager-gui-0.0.20.tar.gz
 		</Archive>
 		<BuildDependencies>
-			<Dependency>cmake</Dependency>
-			<Dependency>meson</Dependency>
 			<Dependency>itstool</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>gdbm-devel</Dependency>
@@ -28,6 +26,11 @@
 			<Dependency>gobject-introspection-devel</Dependency>
 			<Dependency>ayatana-libappindicator-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<Patch level='1'>Missing_tray_icon.patch</Patch>
+			<Patch level='1'>NetworkManager_1_40.patch</Patch>
+			<!-- <Patch level='1'></Patch> -->
+		</Patches>
 	</Source>
 
 	<Package>
@@ -49,7 +52,7 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-11-28</Date>
+			<Date>2022-11-06</Date>
 			<Version>0.0.20</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>

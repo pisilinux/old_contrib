@@ -4,27 +4,32 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import shelltools, mesontools, pisitools, get
+from pisi.actionsapi import shelltools, pisitools, autotools, get
 
-j = ''.join([
-    ' -Dx11_backend=true',
-    ' -Dwayland_backend=true',
-    ' -Dbroadway_backend=true',
-    ' -Dcolord=no',
-    ' -Ddemos=false',
-    ' -Dtests=false',
-    ' -Dexamples=false',
-    ' -Dwin32_backend=false',
-    ' -Dquartz_backend=false '
+i = ''.join([
+    ' --prefix=/usr',
+    ' --sysconfdir=/etc',
+    ' --enable-x11-backend',
+    ' --enable-wayland-backend',
+    ' --enable-broadway-backend '
     ])
 
 def setup():
 	shelltools.export("CFLAGS", get.CFLAGS().replace("-fomit-frame-pointer",""))
-	mesontools.configure(j)
+
+	autotools.autoreconf("-fiv")
+	autotools.configure(i)
+
+	pisitools.dosed("libtool", "( -shared )", r" -Wl,-O1,--as-needed\1")
 
 def build():
-	mesontools.build()
+	autotools.make()
 
 def install():
-	mesontools.install()
+	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+
+	# remove empty dir
+	pisitools.removeDir("/usr/share/man")
+	pisitools.dodoc("AUTHORS", "README*", "HACKING", "ChangeLog*", "NEWS*")
+
 	pisitools.rename("/usr/bin/gtk-update-icon-cache", "gtk3-update-icon-cache")

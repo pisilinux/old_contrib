@@ -1,0 +1,155 @@
+From a4f45483b1203af66eb5b2de52118ecb754c0948 Mon Sep 17 00:00:00 2001
+From: Simon McVittie <smcv@debian.org>
+Date: Sat, 20 Aug 2022 19:24:58 +0100
+Subject: [PATCH] Avoid repeated g_log_set_writer_func in tests
+
+Since GLib 2.73.0 it can only be called once per process.
+
+Based on commit 78c153ae in GTK 4, but combining the icontheme test's
+two custom log writers into one log writer that serves both purposes,
+to avoid the need for a subprocess.
+
+Co-authored-by: Matthias Clasen <mclasen@redhat.com>
+Resolves: https://gitlab.gnome.org/GNOME/gtk/-/issues/5119
+---
+ testsuite/gtk/icontheme.c | 30 ++++++++++++------------------
+ testsuite/gtk/treestore.c | 30 +++++++++++++-----------------
+ 2 files changed, 25 insertions(+), 35 deletions(-)
+
+diff --git a/testsuite/gtk/icontheme.c b/testsuite/gtk/icontheme.c
+index 7eed015ff2..1fdf3d12bd 100644
+--- a/testsuite/gtk/icontheme.c
++++ b/testsuite/gtk/icontheme.c
+@@ -121,6 +121,7 @@ assert_icon_lookup_fails (const char         *icon_name,
+ }
+ 
+ static GList *lookups = NULL;
++static gboolean collecting_lookups = FALSE;
+ 
+ static GLogWriterOutput
+ log_writer (GLogLevelFlags   log_level,
+@@ -128,10 +129,17 @@ log_writer (GLogLevelFlags   log_level,
+             gsize            n_fields,
+             gpointer         user_data)
+ {
++  gboolean *ignore_warnings = user_data;
+   const char *domain = NULL;
+   const char *msg = NULL;
+   int i;
+ 
++  if (log_level == G_LOG_LEVEL_WARNING && *ignore_warnings)
++    return G_LOG_WRITER_HANDLED;
++
++  if (!collecting_lookups)
++    return g_log_writer_default (log_level, fields, n_fields, user_data);
++
+   for (i = 0; i < n_fields; i++)
+     {
+       if (strcmp (fields[i].key, "GLIB_DOMAIN") == 0)
+@@ -173,14 +181,14 @@ assert_lookup_order (const char         *icon_name,
+ 
+   debug_flags = gtk_get_debug_flags ();
+   gtk_set_debug_flags (debug_flags | GTK_DEBUG_ICONTHEME);
+-  g_log_set_writer_func (log_writer, NULL, NULL);
++  collecting_lookups = TRUE;
+ 
+   g_assert (lookups == NULL);
+ 
+   info = gtk_icon_theme_lookup_icon (get_test_icontheme (FALSE), icon_name, size, flags);
+   if (info)
+     g_object_unref (info);
+-  
++
+   va_start (args, first);
+   s = first;
+   l = lookups;
+@@ -197,7 +205,7 @@ assert_lookup_order (const char         *icon_name,
+   g_list_free_full (lookups, g_free);
+   lookups = NULL;
+ 
+-  g_log_set_writer_func (g_log_writer_default, NULL, NULL);
++  collecting_lookups = FALSE;
+   gtk_set_debug_flags (debug_flags);
+ }
+ 
+@@ -778,20 +786,6 @@ test_nonsquare_symbolic (void)
+   g_object_unref (info);
+ }
+ 
+-static GLogWriterOutput
+-log_writer_drop_warnings (GLogLevelFlags   log_level,
+-                          const GLogField *fields,
+-                          gsize            n_fields,
+-                          gpointer         user_data)
+-{
+-  gboolean *ignore_warnings = user_data;
+-
+-  if (log_level == G_LOG_LEVEL_WARNING && *ignore_warnings)
+-    return G_LOG_WRITER_HANDLED;
+-
+-  return g_log_writer_default (log_level, fields, n_fields, user_data);
+-}
+-
+ int
+ main (int argc, char *argv[])
+ {
+@@ -801,7 +795,7 @@ main (int argc, char *argv[])
+ 
+   /* Ignore the one-time warning that the fallback icon theme can’t be found
+    * (because we’ve changed the search paths). */
+-  g_log_set_writer_func (log_writer_drop_warnings, &ignore_warnings, NULL);
++  g_log_set_writer_func (log_writer, &ignore_warnings, NULL);
+   assert_icon_lookup_fails ("this-icon-totally-does-not-exist", 16, 0);
+   ignore_warnings = FALSE;
+ 
+diff --git a/testsuite/gtk/treestore.c b/testsuite/gtk/treestore.c
+index 109b0dcb44..50126f65fe 100644
+--- a/testsuite/gtk/treestore.c
++++ b/testsuite/gtk/treestore.c
+@@ -1049,30 +1049,26 @@ specific_bug_77977 (void)
+   g_object_unref (tree_store);
+ }
+ 
+-static GLogWriterOutput
+-log_writer_drop_warnings (GLogLevelFlags   log_level,
+-                          const GLogField *fields,
+-                          gsize            n_fields,
+-                          gpointer         user_data)
+-{
+-  return G_LOG_WRITER_HANDLED;
+-}
+-
+ static void
+ specific_bug_698396 (void)
+ {
+-  GtkTreeStore *tree_store;
+-  gint new_order[1] = { 0 };
+-
+   g_test_bug ("698396");
+ 
+-  tree_store = gtk_tree_store_new (1, G_TYPE_STRING);
++  if (g_test_subprocess ())
++    {
++      GtkTreeStore *tree_store;
++      int new_order[1] = { 0 };
+ 
+-  g_log_set_writer_func (log_writer_drop_warnings, NULL, NULL);
+-  gtk_tree_store_reorder (tree_store, NULL, new_order);
+-  g_log_set_writer_func (g_log_writer_default, NULL, NULL);
++      tree_store = gtk_tree_store_new (1, G_TYPE_STRING);
++      gtk_tree_store_reorder (tree_store, NULL, new_order);
++      g_object_unref (tree_store);
+ 
+-  g_object_unref (tree_store);
++      return;
++    }
++
++  g_test_trap_subprocess (NULL, 0, 0);
++  g_test_trap_assert_stderr ("*Cannot reorder, parent has no children*");
++  g_test_trap_assert_failed ();
+ }
+ 
+ /* main */
+-- 
+GitLab
+

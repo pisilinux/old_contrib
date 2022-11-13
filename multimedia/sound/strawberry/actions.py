@@ -13,13 +13,12 @@ j = ''.join([
     ' -DBUILD_WITH_QT5=ON',
     ' -DCMAKE_BUILD_TYPE=Release',
     ' -DUSE_TAGPARSER=ON',
-    ' -DCMAKE_INSTALL_PREFIX=/usr -L '
+    ' -DCMAKE_INSTALL_PREFIX=/usr',
+    ' -Bbuild -L '
     ])
 
 def setup():
-    shelltools.makedirs("build")
-    shelltools.cd("build")
-    cmaketools.configure(j, sourceDir = '..')
+    cmaketools.configure(j)
 
 def build():
     shelltools.cd("build")
@@ -29,4 +28,4 @@ def install():
     shelltools.cd("build")
     cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
 
-    pisitools.dodoc("../Changelog", "../COPYING", "../README.md")
+    pisitools.dodoc("../Changelog")

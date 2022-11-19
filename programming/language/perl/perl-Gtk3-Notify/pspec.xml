@@ -19,6 +19,7 @@
 			<Dependency>perl-Gtk3</Dependency>
 			<Dependency>gtk3-devel</Dependency>
 			<Dependency>libnotify-devel</Dependency>
+			<Dependency>perl-Cairo-Gobject</Dependency>
 			<Dependency>perl-ExtUtils-Depends</Dependency>
 			<Dependency>perl-ExtUtils-MakeMaker</Dependency>
 			<Dependency>gobject-introspection-devel</Dependency>

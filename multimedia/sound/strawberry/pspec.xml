@@ -60,7 +60,7 @@
         <Name>strawberry</Name>
         <Summary>Strawberry Music Player.</Summary>
         <RuntimeDependencies>
-			<Dependency>icu4c</Dependency>
+            <Dependency>icu4c</Dependency>
             <Dependency>fftw3</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>gnutls</Dependency>

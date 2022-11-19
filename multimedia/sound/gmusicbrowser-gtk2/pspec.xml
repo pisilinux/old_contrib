@@ -2,46 +2,42 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>gmusicbrowser</Name>
+		<Name>gmusicbrowser-gtk2</Name>
 		<Homepage>https://gmusicbrowser.org</Homepage>
 		<Packager>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Packager>
-		<License>GPLv3</License>
+		<License>GPL-3</License>
 		<IsA>app:gui</IsA>
 		<PartOf>multimedia.sound</PartOf>
 		<Summary>A customizable open-source jukebox for large collections.</Summary>
 		<Description>An open-source jukebox for large collections of mp3, ogg, flac, etc.., files, written in perl.</Description>
-		<Archive sha1sum="555af27af4c5b0ce38b6bf3755a8d2e4e3206f2f" type="targz">
-			https://github.com/squentin/gmusicbrowser/archive/v1.1.99.1.tar.gz
+		<Archive sha1sum="9c9d085967b1b1f9fe22c064822fef197a336371" type="targz">
+			https://gmusicbrowser.org/download/gmusicbrowser-1.1.16.tar.gz
 		</Archive>
 		<BuildDependencies>
-			<!-- <Dependency>git</Dependency> -->
 			<Dependency>discount</Dependency>
-			<Dependency>perl-Gtk3</Dependency>
+			<Dependency>perl-Gtk2</Dependency>
 			<Dependency>perl-Glib-Object-Introspection</Dependency>
 		</BuildDependencies>
-		<Patches>
-			<Patch level="1">use_symbolic_system_theme_icons_where_possible.patch</Patch>
-		</Patches>
 	</Source>
 
 	<Package>
-		<Name>gmusicbrowser</Name>
+		<Name>gmusicbrowser-gtk2</Name>
 		<Conflicts>
-			<Package>gmusicbrowser-gtk2</Package>
+			<Package>gmusicbrowser</Package>
 		</Conflicts>
 		<RuntimeDependencies>
-			<Dependency>gtk3</Dependency>
+			<Dependency>gtk2</Dependency>
 			<Dependency>flac</Dependency>
 			<Dependency>mpg123</Dependency>
-			<Dependency>perl-Gtk3</Dependency>
+			<Dependency>perl-Gtk2</Dependency>
 			<Dependency>alsa-utils</Dependency>
 			<Dependency>vorbis-tools</Dependency>
 			<Dependency>perl-Net-DBus</Dependency>
 			<Dependency>perl-XML-Parser</Dependency>
-			<Dependency>perl-Gtk3-Notify</Dependency>
+			<Dependency>perl-Gtk2-Notify</Dependency>
 			<Dependency>gst-plugins-ugly</Dependency>
 			<Dependency>gst-plugins-base</Dependency>
 			<Dependency>gst-plugins-good</Dependency>
@@ -57,12 +53,11 @@
 
 	<History>
 		<Update release="1">
-			<Date>2020-11-28</Date>
-			<Version>1.1.99.1</Version>
+			<Date>2022-11-19</Date>
+			<Version>1.1.16</Version>
 			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>
-

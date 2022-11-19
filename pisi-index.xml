@@ -1044,6 +1044,64 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>gmusicbrowser-gtk2</Name>
+            <Homepage>https://gmusicbrowser.org</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">A customizable open-source jukebox for large collections.</Summary>
+            <Description xml:lang="en">An open-source jukebox for large collections of mp3, ogg, flac, etc.., files, written in perl.</Description>
+            <Archive type="targz" sha1sum="9c9d085967b1b1f9fe22c064822fef197a336371" name="gmusicbrowser-1.1.16.tar.gz">https://gmusicbrowser.org/download/gmusicbrowser-1.1.16.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>discount</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>perl-Glib-Object-Introspection</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/gmusicbrowser-gtk2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gmusicbrowser-gtk2</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>mpg123</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>alsa-utils</Dependency>
+                <Dependency>vorbis-tools</Dependency>
+                <Dependency>perl-Net-DBus</Dependency>
+                <Dependency>perl-XML-Parser</Dependency>
+                <Dependency>perl-Gtk2-Notify</Dependency>
+                <Dependency>gst-plugins-ugly</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gst-plugins-good</Dependency>
+                <Dependency>perl-Locale-gettext</Dependency>
+                <Dependency>perl-Glib-Object-Introspection</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/gmusicbrowser</Path>
+            </Files>
+            <Conflicts>
+                <Package>gmusicbrowser</Package>
+            </Conflicts>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>1.1.16</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>tizonia-all</Name>
             <Homepage>https://tizonia.org/</Homepage>
             <Packager>
@@ -1234,6 +1292,9 @@
                 <Path fileType="data">/usr/share</Path>
                 <Path fileType="data">/usr/share/gmusicbrowser</Path>
             </Files>
+            <Conflicts>
+                <Package>gmusicbrowser-gtk2</Package>
+            </Conflicts>
         </Package>
         <History>
             <Update release="1">
@@ -1307,7 +1368,7 @@
             <Summary xml:lang="tr">Strawberry müzik oynatma yazılımı.</Summary>
             <Description xml:lang="en">Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It&apos;s written in C++ using the Qt 5 or 6 toolkit.</Description>
             <Description xml:lang="tr">Strawberry 2018 yılının clementine yazılımından çatallanmış ve Qt5 platformu üzerine yapılmış bir müzik oynatma yazılımı ve düzenleyicisidir.</Description>
-            <Archive type="tarxz" sha1sum="8654abb9f141b1f410971ea641ee2cc9f039c882" name="strawberry-1.0.5.tar.xz">https://files.strawberrymusicplayer.org/strawberry-1.0.5.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="b1dc0ada45cba5b3cf0ad6941977041ebe2c42de" name="strawberry-1.0.10.tar.xz">https://files.strawberrymusicplayer.org/strawberry-1.0.10.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>ccache</Dependency>
@@ -1317,6 +1378,7 @@
                 <Dependency>boost-devel</Dependency>
                 <Dependency>fftw3-devel</Dependency>
                 <Dependency>libSM-devel</Dependency>
+                <Dependency>icu4c-devel</Dependency>
                 <Dependency>libmtp-devel</Dependency>
                 <Dependency>sqlite-devel</Dependency>
                 <Dependency>gnutls-devel</Dependency>
@@ -1346,6 +1408,7 @@
             <Name>strawberry</Name>
             <Summary xml:lang="en">Strawberry Music Player.</Summary>
             <RuntimeDependencies>
+                <Dependency>icu4c</Dependency>
                 <Dependency>fftw3</Dependency>
                 <Dependency>glib2</Dependency>
                 <Dependency>gnutls</Dependency>
@@ -1378,6 +1441,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="5">
+                <Date>2022-11-11</Date>
+                <Version>1.0.10</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Pisi Linux Community</Name>
+                <Email>admin@pisilinux.org</Email>
+            </Update>
             <Update release="4">
                 <Date>2022-07-10</Date>
                 <Version>1.0.5</Version>
@@ -2607,6 +2677,60 @@
                 <Comment>First release</Comment>
                 <Name>Mustafa Cinasal</Name>
                 <Email>muscnsl@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libdockapp</Name>
+            <Homepage>https://repo.or.cz/dockapps.git</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">DockApp Development Standard Library.</Summary>
+            <Description xml:lang="en">libdockapp provides functions that set up a dock app in such a way that they can be properly docked. It also provides some event handlers and makes it very simple to write dockapps.</Description>
+            <Archive type="targz" sha1sum="05eff84cb5592b3743389a8c36db72921d9b42a3" name="libdockapp-0.7.3.tar.gz">https://www.dockapps.net/download/libdockapp-0.7.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>xorg-app</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libXpm-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/library/libdockapp/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libdockapp</Name>
+            <RuntimeDependencies>
+                <Dependency>libX11</Dependency>
+                <Dependency>libXpm</Dependency>
+                <Dependency>libXext</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/fonts/X11</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>libdockapp-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">libdockapp</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-09</Date>
+                <Version>0.7.3</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -9106,6 +9230,45 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-ExtUtils-Helpers</Name>
+            <Homepage>https://metacpan.org/pod/ExtUtils::Helpers</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Various portability utilities for module builders.</Summary>
+            <Description xml:lang="en">This module provides various portable helper functions for module building modules.</Description>
+            <Archive type="targz" sha1sum="1a8b0c9cfe9dfe3df7aadf91e29af8637a00bdd4" name="ExtUtils-Helpers-0.026.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-ExtUtils-Helpers/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-ExtUtils-Helpers</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.026</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>perl-Text-Iconv</Name>
             <Homepage>https://metacpan.org/pod/Text::Iconv</Homepage>
             <Packager>
@@ -9236,6 +9399,94 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Bit-Vector</Name>
+            <Homepage>https://metacpan.org/pod/Bit::Vector</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Efficient bit vector, set of integers and big int math library.</Summary>
+            <Description xml:lang="en">Bit::Vector is an efficient C library which allows you to handle bit vectors, sets (of integers), &quot;big integer arithmetic&quot; and boolean matrices, all of arbitrary sizes.</Description>
+            <Description xml:lang="tr">Bit::Vector,  istenilen boyutlardaki bit vektörleri, (tamsayı)setleri, “büyük tamsayı aritmatiği” ve  mantıksal matriksleri  tanıtmaya izin veren etkili bir C dili kütüphanesidir.</Description>
+            <Description xml:lang="es">Bit::Vector es una librería C eficiente que le permite manipular vectores de bits, conjuntos (sets de enteros), &quot;big integer arithmetic&quot; y matrices booleanos, todos de tamaño arbitrario.</Description>
+            <Archive type="targz" sha1sum="18bc47c97e5299e368acff76c59aa8636ae0f955" name="Bit-Vector-7.4.tar.gz">https://cpan.metacpan.org/authors/id/S/ST/STBEY/Bit-Vector-7.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Carp-Clan</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Bit-Vector/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Bit-Vector</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Carp-Clan</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-18</Date>
+                <Version>7.4</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Module-Build-Tiny</Name>
+            <Homepage>https://metacpan.org/pod/Module::Build::Tiny</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">A tiny replacement for Module::Build.</Summary>
+            <Description xml:lang="en">Many Perl distributions use a Build.PL file instead of a Makefile.PL file to drive distribution configuration, build, test and installation. Traditionally, Build.PL uses Module::Build as the underlying build system. This module provides a simple, lightweight, drop-in replacement.</Description>
+            <Archive type="targz" sha1sum="2127b3e52d59c545ff587ca127ee1686f2a50177" name="Module-Build-Tiny-0.039.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.039.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-ExtUtils-Config</Dependency>
+                <Dependency>perl-ExtUtils-Helpers</Dependency>
+                <Dependency>perl-ExtUtils-InstallPaths</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Module-Build-Tiny/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Module-Build-Tiny</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-ExtUtils-Config</Dependency>
+                <Dependency>perl-ExtUtils-Helpers</Dependency>
+                <Dependency>perl-ExtUtils-InstallPaths</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.039</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -9423,6 +9674,45 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-ExtUtils-Config</Name>
+            <Homepage>https://metacpan.org/pod/ExtUtils::Config</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">A wrapper for perl&apos;s configuration.</Summary>
+            <Description xml:lang="en">ExtUtils::Config is an abstraction around the %Config hash. By itself it is not a particularly interesting module by any measure, however it ties together a family of modern toolchain modules.</Description>
+            <Archive type="targz" sha1sum="971584d0fbc7a1e072465be2b8a34fc608269ef0" name="ExtUtils-Config-0.008.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Config-0.008.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-ExtUtils-Config/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-ExtUtils-Config</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.008</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>perl-IO-stringy</Name>
             <Homepage>https://metacpan.org/pod/IO::Stringy</Homepage>
             <Packager>
@@ -9491,6 +9781,47 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-File-Spec-Link</Name>
+            <Homepage>https://metacpan.org/pod/File::Spec::Link</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl extension for reading and resolving symbolic links.</Summary>
+            <Description xml:lang="en">File::Spec::Link is an extension to File::Spec, adding methods for resolving symbolic links; it was created to implement File::Copy::Link.</Description>
+            <Archive type="targz" sha1sum="515178bc42ab25eb2248bd5fb854e1c805fdf12d" name="File-Copy-Link-0.140.tar.gz">https://cpan.metacpan.org/authors/id/R/RM/RMBARKER/File-Copy-Link-0.140.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-File-Spec-Link/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-File-Spec-Link</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.140</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>perl-MPV-Simple</Name>
             <Homepage>https://metacpan.org/pod/MPV::Simple</Homepage>
             <Packager>
@@ -9526,6 +9857,50 @@
             <Update release="1">
                 <Date>2020-12-06</Date>
                 <Version>0.67</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-File-Find-Rule</Name>
+            <Homepage>https://metacpan.org/pod/File::Find::Rule</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>custom</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">File::Find::Rule - Alternative interface to File::Find.</Summary>
+            <Description xml:lang="en">File::Find::Rule is a friendlier interface to File::Find. It allows you to build rules which specify the desired files and directories.</Description>
+            <Archive type="targz" sha1sum="05fe46cc142279b0716d058a51f7214bd80d34ff" name="File-Find-Rule-0.34.tar.gz">https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/File-Find-Rule-0.34.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Text-Glob</Dependency>
+                <Dependency>perl-Number-Compare</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-File-Find-Rule/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-File-Find-Rule</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Text-Glob</Dependency>
+                <Dependency>perl-Number-Compare</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.34</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -9598,6 +9973,66 @@
                 <Comment>First release</Comment>
                 <Name>PisiLinux Community</Name>
                 <Email>admins@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Gtk2-Notify</Name>
+            <Homepage>https://metacpan.org/pod/Gtk2::Notify</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl interface to libnotify.</Summary>
+            <Description xml:lang="en">Gtk2::Notify - Perl interface to libnotify.</Description>
+            <Archive type="targz" sha1sum="b0223dd5a85358c9b92ebc99040201e640612348" name="Gtk2-Notify-0.05.tar.gz">https://cpan.metacpan.org/authors/id/F/FL/FLORA/Gtk2-Notify-0.05.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>perl-Module-Install</Dependency>
+                <Dependency>perl-Test-Exception</Dependency>
+                <Dependency>perl-ExtUtils-Depends</Dependency>
+                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+                <Dependency>perl-Module-Build-XSUtil</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="0">libnotify.patch</Patch>
+            </Patches>
+            <SourceURI>programming/language/perl/perl-Gtk2-Notify/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Gtk2-Notify</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.05</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -9695,6 +10130,131 @@
                 <Comment>First release, built with docker.</Comment>
                 <Name>İbrahim KARAGÜZEL</Name>
                 <Email>karaguzelibrahim@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Module-Install</Name>
+            <Homepage>https://metacpan.org/pod/Module::Install</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Standalone, extensible Perl module installer.</Summary>
+            <Description xml:lang="en">Module::Install is a package for writing installers for CPAN (or CPAN-like) distributions that are clean, simple, minimalist, act in a strictly correct manner with ExtUtils::MakeMaker, and will run on any Perl installation version 5.005 or newer.</Description>
+            <Archive type="targz" sha1sum="6c77b2ec0cd84e07d7c7ae03d1cfa5c21d758f81" name="Module-Install-1.19.tar.gz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Install-1.19.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-YAML-Tiny</Dependency>
+                <Dependency>perl-File-Remove</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+                <Dependency>perl-Module-ScanDeps</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Module-Install/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Module-Install</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>1.19</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-YAML-Tiny</Name>
+            <Homepage>https://metacpan.org/pod/YAML::Tiny</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Read/Write YAML files with as little code as possible.</Summary>
+            <Description xml:lang="en">YAML::Tiny is a perl class for reading and writing YAML-style files, written with as little code as possible, reducing load time and memory overhead.</Description>
+            <Archive type="targz" sha1sum="32ee7a7d499c7d8c2b4672f9735901fb4de1ab88" name="YAML-Tiny-1.73.tar.gz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/YAML-Tiny-1.73.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-YAML-Tiny/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-YAML-Tiny</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>1.73</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Carp-Clan</Name>
+            <Homepage>https://metacpan.org/pod/Carp::Clan</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Report errors from perspective of caller of a clan of modules.</Summary>
+            <Description xml:lang="en">perl-Carp-CLan reports errors from the perspective of the caller of a clan of modules, similar to Carp.pm itself. But instead of giving it a number of levels to skip on the calling stack, you give it a pattern to characterize the package names of the clan of modules which shall never be blamed for any error.</Description>
+            <Description xml:lang="tr">Bu modül Carp.pm gibi hataları bir grup modülün açısından bildirir. Çağrılan yığındaki (stack) atlanacak seviye sayısını vermek yerine modül grubunun isimlerini verirsiniz. Böylece hata oluşması önlenmiş olur.</Description>
+            <Description xml:lang="es">Este módulo reporta errores desde la perspectiva del caller a un clan de módulos, similar al mismo Carp.pm. Pero en vez de retornar un número de niveles a saltar en la pila de llamadas, se le da un patrón que caracteriza los nombres de paquetes del clan que nunca deben ser culpados por un error.</Description>
+            <Archive type="targz" sha1sum="b5d8ab497cc3a22ec7c5bc61bd6f0034dfa43827" name="Carp-Clan-6.08.tar.gz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/Carp-Clan-6.08.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Test-Exception</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Carp-Clan/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Carp-Clan</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Test-Exception</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-18</Date>
+                <Version>6.08</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -9858,6 +10418,48 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-Devel-CheckCompiler</Name>
+            <Homepage>https://metacpan.org/pod/Devel::CheckCompiler</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Check the compiler&apos;s availability.</Summary>
+            <Description xml:lang="en">Devel::CheckCompiler is checker for compiler&apos;s availability.</Description>
+            <Archive type="targz" sha1sum="eb90cfe52ff6b026f99fdbcc41403440e5f7619d" name="Devel-CheckCompiler-0.07.tar.gz">https://cpan.metacpan.org/authors/id/S/SY/SYOHEX/Devel-CheckCompiler-0.07.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+                <Dependency>perl-Test-Requires</Dependency>
+                <Dependency>perl-Module-Build-Tiny</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Devel-CheckCompiler/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Devel-CheckCompiler</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.07</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>perl-Linux-Desktopfiles</Name>
             <Homepage>https://metacpan.org/module/Linux::DesktopFiles</Homepage>
             <Packager>
@@ -10011,6 +10613,7 @@
             <Archive type="targz" sha1sum="6446a8ffde84c940efe130672fbce63cc36be9eb" name="Net-DBus-1.2.0.tar.gz">https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.2.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>perl</Dependency>
+                <Dependency>dbus-devel</Dependency>
                 <Dependency>perl-XML-Twig</Dependency>
                 <Dependency>perl-Test-Pod</Dependency>
                 <Dependency>perl-Pod-Coverage</Dependency>
@@ -10022,6 +10625,7 @@
         <Package>
             <Name>perl-Net-DBus</Name>
             <RuntimeDependencies>
+                <Dependency>dbus</Dependency>
                 <Dependency>perl</Dependency>
                 <Dependency>perl-XML-Twig</Dependency>
             </RuntimeDependencies>
@@ -10066,6 +10670,132 @@
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Module-Build-XSUtil</Name>
+            <Homepage>https://metacpan.org/pod/Module::Build::XSUtil</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">A Module::Build class for building XS modules.</Summary>
+            <Description xml:lang="en">Module::Build::XSUtil is subclass of Module::Build for support building XS modules.</Description>
+            <Archive type="targz" sha1sum="30ca8525d93f74f8f8f00387dc9b4fbee3965a86" name="Module-Build-XSUtil-0.19.tar.gz">https://cpan.metacpan.org/authors/id/H/HI/HIDEAKIO/Module-Build-XSUtil-0.19.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Cwd-Guard</Dependency>
+                <Dependency>perl-Capture-Tiny</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+                <Dependency>perl-File-Copy-Recursive-Reduced</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Module-Build-XSUtil/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Module-Build-XSUtil</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Devel-CheckCompiler</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.19</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-ExtUtils-InstallPaths</Name>
+            <Homepage>https://metacpan.org/pod/ExtUtils::InstallPaths</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Build.PL install path logic made easy.</Summary>
+            <Description xml:lang="en">This module tries to make install path resolution as easy as possible.</Description>
+            <Archive type="targz" sha1sum="79a8f1c64d8dce0577bbbbad55583569ab920613" name="ExtUtils-InstallPaths-0.012.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-InstallPaths-0.012.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-ExtUtils-Config</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-ExtUtils-InstallPaths/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-ExtUtils-InstallPaths</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.012</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Module-ScanDeps</Name>
+            <Homepage>https://metacpan.org/pod/Module::ScanDeps</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Recursively scan Perl code for dependencies.</Summary>
+            <Description xml:lang="en">This module scans potential modules used by perl programs, and returns a hash reference; its keys are the module names as appears in %INC (e.g. Test/More.pm).</Description>
+            <Archive type="targz" sha1sum="ee199d23a005ceef7f1adf549548bc1d0cfac26f" name="Module-ScanDeps-1.31.tar.gz">https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/Module-ScanDeps-1.31.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Test-Requires</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Module-ScanDeps/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Module-ScanDeps</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Test-Requires</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin/scandeps.pl</Path>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>1.31</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -10147,6 +10877,86 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-Text-Glob</Name>
+            <Homepage>https://metacpan.org/pod/Text::Glob</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>perl5</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Text::Glob - match globbing patterns against text.</Summary>
+            <Description xml:lang="en">Text::Glob implements glob(3) style matching that can be used to match against text, rather than fetching names from a filesystem. If you want to do full file globbing use the File::Glob module instead.</Description>
+            <Archive type="targz" sha1sum="1af2218ee602f25541473918fbfa2c78389c3803" name="Text-Glob-0.11.tar.gz">https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Text-Glob-0.11.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Text-Glob/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Text-Glob</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.11</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-File-Remove</Name>
+            <Homepage>https://metacpan.org/pod/File::Remove</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Remove files and directories.</Summary>
+            <Description xml:lang="en">File::Remove::remove removes files and directories. It acts like /bin/rm, for the most part. Although unlink can be given a list of files, it will not remove directories; this module remedies that. It also accepts wildcards, * and ?, as arguments for filenames.</Description>
+            <Archive type="targz" sha1sum="02a1c619ef2f6e02ba70015756c55bfb70518290" name="File-Remove-1.61.tar.gz">https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/File-Remove-1.61.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-File-Remove/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-File-Remove</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>1.61</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>perl-Gtk3-Notify</Name>
             <Homepage>https://metacpan.org/pod/Gtk3::Notify</Homepage>
             <Packager>
@@ -10163,6 +10973,7 @@
                 <Dependency>perl-Gtk3</Dependency>
                 <Dependency>gtk3-devel</Dependency>
                 <Dependency>libnotify-devel</Dependency>
+                <Dependency>perl-Cairo-Gobject</Dependency>
                 <Dependency>perl-ExtUtils-Depends</Dependency>
                 <Dependency>perl-ExtUtils-MakeMaker</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
@@ -10187,6 +10998,89 @@
             <Update release="1">
                 <Date>2020-11-28</Date>
                 <Version>0.03</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-LWP-UserAgent-Cached</Name>
+            <Homepage>https://metacpan.org/pod/LWP::UserAgent::Cached</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>perl5</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">LWP::UserAgent::Cached - LWP::UserAgent with simple caching mechanism.</Summary>
+            <Description xml:lang="en">pass</Description>
+            <Archive type="targz" sha1sum="bd61cfbf1da613f7efc2359ae5240799c46bb881" name="LWP-UserAgent-Cached-0.08.tar.gz">https://cpan.metacpan.org/authors/id/O/OL/OLEG/LWP-UserAgent-Cached-0.08.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-libwww</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-LWP-UserAgent-Cached/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-LWP-UserAgent-Cached</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-libwww</Dependency>
+                <Dependency>perl-Digest-MD5</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-18</Date>
+                <Version>0.08</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Cwd-Guard</Name>
+            <Homepage>https://metacpan.org/pod/Cwd::Guard</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Temporary changing working directory (chdir).</Summary>
+            <Description xml:lang="en">CORE::chdir Cwd:: Guard can change the current directory (chdir) using a limited scope.</Description>
+            <Archive type="targz" sha1sum="9226dd929e1cd33e6328eb2e45ba9618015c59b9" name="Cwd-Guard-0.05.tar.gz">https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Cwd-Guard-0.05.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Module-Build</Dependency>
+                <Dependency>perl-Test-Requires</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Cwd-Guard/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Cwd-Guard</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.05</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -10279,6 +11173,129 @@
                 <Comment>First release</Comment>
                 <Name>Osman Erkan</Name>
                 <Email>osman.erkan@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Date-Calc</Name>
+            <Homepage>https://metacpan.org/pod/Date::Calc</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>perl5</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Date::Calc - Gregorian calendar date calculations.</Summary>
+            <Description xml:lang="en">pass</Description>
+            <Archive type="targz" sha1sum="0ddc322b9b2b7774f4fefb08e3db95eab34044b7" name="Date-Calc-6.4.tar.gz">https://cpan.metacpan.org/authors/id/S/ST/STBEY/Date-Calc-6.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Carp-Clan</Dependency>
+                <Dependency>perl-Bit-Vector</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Date-Calc/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Date-Calc</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Carp-Clan</Dependency>
+                <Dependency>perl-Bit-Vector</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-18</Date>
+                <Version>6.4</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-File-Copy-Recursive-Reduced</Name>
+            <Homepage>https://metacpan.org/pod/File::Copy::Recursive::Reduced</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>Artistic</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Recursive copying of files and directories within Perl 5 toolchain.</Summary>
+            <Description xml:lang="en">This library is intended as a not-quite-drop-in replacement for certain functionality provided by CPAN distribution File-Copy-Recursive.</Description>
+            <Archive type="targz" sha1sum="a169b5b484de39ad37870c2b1e29feaafeb91f2d" name="File-Copy-Recursive-Reduced-0.006.tar.gz">https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/File-Copy-Recursive-Reduced-0.006.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-path-tiny</Dependency>
+                <Dependency>perl-Capture-Tiny</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-File-Copy-Recursive-Reduced/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-File-Copy-Recursive-Reduced</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.006</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Number-Compare</Name>
+            <Homepage>https://metacpan.org/pod/Number::Compare</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>custom</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Number::Compare - numeric comparisons.</Summary>
+            <Description xml:lang="en">Number::Compare compiles a simple comparison to an anonymous subroutine, which you can call with a value to be tested again.</Description>
+            <Archive type="targz" sha1sum="8c3f2744486ae0732f96415deafad1229d1325df" name="Number-Compare-0.03.tar.gz">https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Number-Compare-0.03.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Number-Compare/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Number-Compare</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-19</Date>
+                <Version>0.03</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>

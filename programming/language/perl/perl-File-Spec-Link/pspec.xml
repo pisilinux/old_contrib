@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-File-Spec-Link</Name>
+		<Homepage>https://metacpan.org/pod/File::Spec::Link</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>Artistic</License>
+		<IsA>library</IsA>
+		<PartOf>programming.language.perl</PartOf>
+		<Summary>Perl extension for reading and resolving symbolic links.</Summary>
+		<Description>
+			File::Spec::Link is an extension to File::Spec, adding methods for resolving symbolic links; it was created to implement File::Copy::Link.
+		</Description>
+		<Archive sha1sum="515178bc42ab25eb2248bd5fb854e1c805fdf12d" type="targz">
+			https://cpan.metacpan.org/authors/id/R/RM/RMBARKER/File-Copy-Link-0.140.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Module-Build</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-File-Spec-Link</Name>
+		<RuntimeDependencies>
+			<Dependency>perl</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+			<Path fileType="data">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-19</Date>
+			<Version>0.140</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-Carp-Clan</Name>
+		<Homepage>https://metacpan.org/pod/Carp::Clan</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>Artistic</License>
+		<IsA>library</IsA>
+		<Summary>Report errors from perspective of caller of a clan of modules.</Summary>
+		<Description>perl-Carp-CLan reports errors from the perspective of the caller of a clan of modules, similar to Carp.pm itself. But instead of giving it a number of levels to skip on the calling stack, you give it a pattern to characterize the package names of the clan of modules which shall never be blamed for any error.</Description>
+		<Archive sha1sum="b5d8ab497cc3a22ec7c5bc61bd6f0034dfa43827" type="targz">
+			https://cpan.metacpan.org/authors/id/E/ET/ETHER/Carp-Clan-6.08.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Test-Exception</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-Carp-Clan</Name>
+		<RuntimeDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Test-Exception</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/perl5/vendor_perl</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-18</Date>
+			<Version>6.08</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

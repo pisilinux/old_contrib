@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-Date-Calc</Name>
+		<Homepage>https://metacpan.org/pod/Date::Calc</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>perl5</License>
+		<IsA>library</IsA>
+		<PartOf>programming.language.perl</PartOf>
+		<Summary>Date::Calc - Gregorian calendar date calculations.</Summary>
+		<Description>pass</Description>
+		<Archive sha1sum="0ddc322b9b2b7774f4fefb08e3db95eab34044b7" type="targz">
+			https://cpan.metacpan.org/authors/id/S/ST/STBEY/Date-Calc-6.4.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Carp-Clan</Dependency>
+			<Dependency>perl-Bit-Vector</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-Date-Calc</Name>
+		<RuntimeDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Carp-Clan</Dependency>
+			<Dependency>perl-Bit-Vector</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+			<Path fileType="data">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-18</Date>
+			<Version>6.4</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

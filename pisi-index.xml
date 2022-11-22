@@ -1078,7 +1078,9 @@
                 <Dependency>gst-plugins-ugly</Dependency>
                 <Dependency>gst-plugins-base</Dependency>
                 <Dependency>gst-plugins-good</Dependency>
+                <Dependency>perl-Gnome2-Wnck</Dependency>
                 <Dependency>perl-Locale-gettext</Dependency>
+                <Dependency>perl-Gtk2-AppIndicator</Dependency>
                 <Dependency>perl-Glib-Object-Introspection</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -9822,6 +9824,53 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>perl-Gnome2-Wnck</Name>
+            <Homepage>https://metacpan.org/pod/Gnome2::Wnck</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>LGPL-2.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl interface to the Window Navigator Construction Kit.</Summary>
+            <Description xml:lang="en">Perl interface to the Window Navigator Construction Kit.</Description>
+            <Archive type="targz" sha1sum="171f58fc59cd1f9db3673e48b63017d9675ff710" name="Gnome2-Wnck-0.18.tar.gz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Gnome2-Wnck-0.18.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>perl-Glib</Dependency>
+                <Dependency>libwnck2-devel</Dependency>
+                <Dependency>perl-ExtUtils-Depends</Dependency>
+                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Gnome2-Wnck/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Gnome2-Wnck</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>perl-Glib</Dependency>
+                <Dependency>libwnck2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-22</Date>
+                <Version>0.18</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>perl-MPV-Simple</Name>
             <Homepage>https://metacpan.org/pod/MPV::Simple</Homepage>
             <Packager>
@@ -10452,6 +10501,51 @@
             <Update release="1">
                 <Date>2022-11-19</Date>
                 <Version>0.07</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>perl-Gtk2-AppIndicator</Name>
+            <Homepage>https://metacpan.org/pod/Gtk2::AppIndicator</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>library</IsA>
+            <PartOf>programming.language.perl</PartOf>
+            <Summary xml:lang="en">Perl extension for libappindicator.</Summary>
+            <Description xml:lang="en">This module gives an interface to the new ubuntu Unity libappindicator stuff.</Description>
+            <Archive type="targz" sha1sum="8a63d442a7bcb31a832363d06b6ac185a7852566" name="Gtk2-AppIndicator-0.15.tar.gz">https://cpan.metacpan.org/authors/id/O/OE/OESTERHOL/Gtk2-AppIndicator-0.15.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>libdbusmenu-devel</Dependency>
+                <Dependency>libindicator-gtk2-devel</Dependency>
+                <Dependency>libappindicator-gtk2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/language/perl/perl-Gtk2-AppIndicator/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>perl-Gtk2-AppIndicator</Name>
+            <RuntimeDependencies>
+                <Dependency>perl</Dependency>
+                <Dependency>perl-Gtk2</Dependency>
+                <Dependency>libappindicator-gtk2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+                <Path fileType="data">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-22</Date>
+                <Version>0.15</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -21230,6 +21324,7 @@
                 <Patch level="1">gtk3-classic-3.24.29/popovers__file-chooser-list.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/popovers__places-sidebar.patch</Patch>
                 <Patch level="1">784e93ba4a62e3b863a981ab9ac4b8ed898efc6e.patch</Patch>
+                <Patch level="1">gtk3-atk.patch</Patch>
             </Patches>
             <SourceURI>desktop/toolkit/gtk/gtk3-classic/pspec.xml</SourceURI>
         </Source>
@@ -21288,7 +21383,7 @@
             <Summary xml:lang="en">GTK demo application</Summary>
             <IsA>app:gui</IsA>
             <RuntimeDependencies>
-                <Dependency release="1">gtk3</Dependency>
+                <Dependency release="21">gtk3</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/gtk3-demo</Path>
@@ -21299,7 +21394,7 @@
             <Name>gtk3-devel</Name>
             <Summary xml:lang="en">Development files for gtk3</Summary>
             <RuntimeDependencies>
-                <Dependency release="1">gtk3</Dependency>
+                <Dependency release="21">gtk3</Dependency>
                 <Dependency>atk-devel</Dependency>
                 <Dependency>libXi-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
@@ -21331,7 +21426,7 @@
             </Files>
         </Package>
         <History>
-            <Update release="1">
+            <Update release="21">
                 <Date>2022-11-06</Date>
                 <Version>3.24.34</Version>
                 <Comment>Version bump.</Comment>

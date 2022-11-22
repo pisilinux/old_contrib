@@ -41,7 +41,9 @@
 			<Dependency>gst-plugins-ugly</Dependency>
 			<Dependency>gst-plugins-base</Dependency>
 			<Dependency>gst-plugins-good</Dependency>
+			<Dependency>perl-Gnome2-Wnck</Dependency>
 			<Dependency>perl-Locale-gettext</Dependency>
+			<Dependency>perl-Gtk2-AppIndicator</Dependency>
 			<Dependency>perl-Glib-Object-Introspection</Dependency>
 		</RuntimeDependencies>
 		<Files>

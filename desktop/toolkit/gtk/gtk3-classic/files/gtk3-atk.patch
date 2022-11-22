@@ -1,0 +1,53 @@
+diff -urNp gtk+-3.24.5-orig/configure.ac gtk+-3.24.5/configure.ac
+--- gtk+-3.24.5-orig/configure.ac	2019-02-04 18:48:56.000000000 +0200
++++ gtk+-3.24.5/configure.ac	2019-02-13 13:58:46.578995289 +0200
+@@ -1402,11 +1402,7 @@ AC_SUBST(GDK_DEP_CFLAGS)
+ # Check for Accessibility Toolkit flags
+ ########################################
+ 
+-if test x$enable_x11_backend = xyes; then
+-   ATK_PACKAGES="atk atk-bridge-2.0"
+-else
+-   ATK_PACKAGES="atk"
+-fi
++ATK_PACKAGES="atk"
+ 
+ PKG_CHECK_MODULES(ATK, $ATK_PACKAGES)
+ 
+diff -urNp gtk+-3.24.5-orig/gtk/a11y/gtkaccessibility.c gtk+-3.24.5/gtk/a11y/gtkaccessibility.c
+--- gtk+-3.24.5-orig/gtk/a11y/gtkaccessibility.c	2019-01-23 22:46:13.000000000 +0200
++++ gtk+-3.24.5/gtk/a11y/gtkaccessibility.c	2019-02-13 13:57:54.237995513 +0200
+@@ -37,10 +37,6 @@
+ #include <gtk/gtktogglebutton.h>
+ #include <gtk/gtkaccessible.h>
+ 
+-#ifdef GDK_WINDOWING_X11
+-#include <atk-bridge.h>
+-#endif
+-
+ static gboolean gail_focus_watcher      (GSignalInvocationHint *ihint,
+                                          guint                  n_param_values,
+                                          const GValue          *param_values,
+@@ -988,9 +984,5 @@ _gtk_accessibility_init (void)
+   _gtk_accessibility_override_atk_util ();
+   do_window_event_initialization ();
+ 
+-#ifdef GDK_WINDOWING_X11
+-  atk_bridge_adaptor_init (NULL, NULL);
+-#endif
+-
+   atk_misc_instance = g_object_new (GTK_TYPE_MISC_IMPL, NULL);
+ }
+diff -urNp gtk+-3.24.5-orig/gtk/gtkmodules.c gtk+-3.24.5/gtk/gtkmodules.c
+--- gtk+-3.24.5-orig/gtk/gtkmodules.c	2019-01-23 22:46:13.000000000 +0200
++++ gtk+-3.24.5/gtk/gtkmodules.c	2019-02-13 13:57:54.238995513 +0200
+@@ -248,8 +248,7 @@ static gboolean
+ module_is_blacklisted (const gchar *name,
+                        gboolean     verbose)
+ {
+-  if (g_str_equal (name, "gail") ||
+-      g_str_equal (name, "atk-bridge"))
++  if (g_str_equal (name, "gail"))
+     {
+       if (verbose)
+         g_message ("Not loading module \"%s\": The functionality is provided by GTK natively. Please try to not load it.", name);

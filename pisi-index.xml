@@ -12277,6 +12277,147 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>compiz</Name>
+            <Homepage>https://launchpad.net/compiz</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>MIT</License>
+            <License>GPLv2</License>
+            <License>LGPLv2.1</License>
+            <IsA>app</IsA>
+            <PartOf>x11.wm</PartOf>
+            <Summary xml:lang="en">Compiz window manager.</Summary>
+            <Description xml:lang="en">OpenGL compositing window manager. It has a plug-in system to be changed at runtime.</Description>
+            <Archive type="tarxz" sha1sum="12881f9f6d974100352909f2ea831da3231f18e7" name="compiz-0.9.14.2.tar.xz">https://launchpad.net/compiz/0.9.14/0.9.14.2/+download/compiz-0.9.14.2.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libXdamage-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>glibmm-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>libwnck3-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>mesa-devel</Dependency>
+                <Dependency>python3-devel</Dependency>
+                <Dependency>protobuf-devel</Dependency>
+                <Dependency>python3-setuptools</Dependency>
+                <Dependency>python3-pygobject3-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency>libnotify-devel</Dependency>
+                <Dependency>mesa-glu-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>libglvnd-devel</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>fuse-devel</Dependency>
+                <Dependency>xorg-app</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>cython3</Dependency>
+                <Dependency>vulkan-devel</Dependency>
+                <Dependency>vulkan-headers</Dependency>
+            </BuildDependencies>
+            <SourceURI>x11/wm/compiz/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>compiz</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>dbus</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>glibmm</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>libwnck3</Dependency>
+                <Dependency>protobuf</Dependency>
+                <Dependency>libglvnd</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>libnotify</Dependency>
+                <Dependency>libsigc++</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXcomposite</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+                <Dependency>startup-notification</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="config">/etc/compizconfig/config.conf</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="library">/usr/lib/python3.9/site-packages</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>compiz-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">compiz</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>libXrender-devel</Dependency>
+                <Dependency>libXext-devel</Dependency>
+                <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libXi-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>libXcursor-devel</Dependency>
+                <Dependency>libXinerama-devel</Dependency>
+                <Dependency>libICE-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>libxml2-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>libxslt-devel</Dependency>
+                <Dependency>startup-notification-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-24</Date>
+                <Version>0.9.14.2</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>openbox-git</Name>
             <Homepage>http://openbox.org</Homepage>
             <Packager>
@@ -12388,6 +12529,89 @@
                 <Comment>Rebuild with tiling.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>metacity</Name>
+            <Homepage>https://gitlab.gnome.org/GNOME/metacity</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>app</IsA>
+            <PartOf>x11.wm</PartOf>
+            <Summary xml:lang="en">Window Manager.</Summary>
+            <Description xml:lang="en">GNOME Flashback window manager.</Description>
+            <Archive type="tarxz" sha1sum="7a0147661c4e49a261c77b92fd48418a5f813273" name="metacity-3.46.0.tar.xz">mirrors://gnome/metacity/3.46/metacity-3.46.0.tar.xz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>libXres-devel</Dependency>
+                <Dependency>libSM-devel</Dependency>
+                <Dependency>vulkan-devel</Dependency>
+                <Dependency>vulkan-headers</Dependency>
+                <Dependency>libXpresent-devel</Dependency>
+                <Dependency>zenity</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>gsettings-desktop-schemas-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>x11/wm/metacity/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>metacity</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk3</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libSM</Dependency>
+                <Dependency>libICE</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>vulkan</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXres</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>libXfixes</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libXcursor</Dependency>
+                <Dependency>libXdamage</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXpresent</Dependency>
+                <Dependency>libXinerama</Dependency>
+                <Dependency>libXcomposite</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>metacity-devel</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2-devel</Dependency>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency release="1">metacity</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib/pkgconfid</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-11-25</Date>
+                <Version>3.46.0</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>wascheme@tuta.io</Email>
             </Update>
         </History>
     </SpecFile>
@@ -22468,6 +22692,42 @@
                 <Comment>First release</Comment>
                 <Name>Doruk Fişek</Name>
                 <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>clamav-database</Name>
+            <Homepage>https://www.clamav.net/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>custom</License>
+            <IsA>data</IsA>
+            <PartOf>util.antivirus</PartOf>
+            <Summary xml:lang="en">Virus database for clamav.</Summary>
+            <Description xml:lang="en">Virus database for clamav.</Description>
+            <Archive type="binary" sha1sum="a89e024f0dbc6c6584d0c7577af83c031c6265ac" name="bytecode.cvd">https://db.local.clamav.net/bytecode.cvd</Archive>
+            <Archive type="binary" sha1sum="abdc6e37e893debeea80e0cbbbf021c89513790f" name="safebrowsing.cvd">https://db.local.clamav.net/safebrowsing.cvd</Archive>
+            <Archive type="binary" sha1sum="029931779fb5d13625464995549421c108ae5518" name="main.cvd">https://db.local.clamav.net/main.cvd</Archive>
+            <SourceURI>util/antivirus/clamav-database/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>clamav-database</Name>
+            <Files>
+                <Path fileType="data">/var/lib/clamav/main.cvd</Path>
+                <Path fileType="data">/var/lib/clamav/bytecode.cvd</Path>
+                <Path fileType="data">/var/lib/clamav/safebrowsing.cvd</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2022-11-15</Date>
+                <Version>0.0.20221115</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>

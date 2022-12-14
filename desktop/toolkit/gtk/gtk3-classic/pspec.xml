@@ -59,27 +59,28 @@
 			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__file-chooser.patch</Patch> -->
 			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__message-dialogs.patch</Patch> -->
 			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__print-dialog.patch</Patch> -->
-			<Patch level="1">gtk3-classic-3.24.29/appearance__smaller-statusbar.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/appearance__smaller-statusbar.patch</Patch> -->
 			<Patch level="1">gtk3-classic-3.24.29/csd__clean-headerbar.patch</Patch>
 			<!-- <Patch level="1">gtk3-classic-3.24.29/csd__disabled-by-default.patch</Patch> -->
 			<!-- <Patch level="1">gtk3-classic-3.24.29/csd__server-side-shadow.patch</Patch> -->
 			<!-- <Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar.patch</Patch> -->
-			<Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar_3_24_30.patch</Patch>
-			<Patch level="1">gtk3-classic-3.24.29/file-chooser__typeahead.patch</Patch>
-			<Patch level="1">gtk3-classic-3.24.29/fixes__atk-bridge-errors.patch</Patch>
-			<Patch level="1">gtk3-classic-3.24.29/fixes__labels-wrapping.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/file-chooser__places-sidebar_3_24_30.patch</Patch> -->
+			<!-- <Patch level="1">gtk3-classic-3.24.29/file-chooser__typeahead.patch</Patch> -->
+			<!-- <Patch level="1">gtk3-classic-3.24.29/fixes__atk-bridge-errors.patch</Patch> --><!-- unneeded -->
+			<!-- <Patch level="1">gtk3-classic-3.24.29/fixes__labels-wrapping.patch</Patch> -->
 			<Patch level="1">gtk3-classic-3.24.29/notebook_wheel_scroll.patch</Patch>
 			<!-- <Patch level="1">gtk3-classic-3.24.29/other__default-settings.patch</Patch> -->
 			<Patch level="1">gtk3-classic-3.24.29/other__hide-insert-emoji.patch</Patch>
-			<Patch level="1">gtk3-classic-3.24.29/other__mnemonics-delay.patch</Patch>
+			<!-- <Patch level="1">gtk3-classic-3.24.29/other__mnemonics-delay.patch</Patch> -->
 			<Patch level="1">gtk3-classic-3.24.29/popovers__color-chooser.patch</Patch>
 			<Patch level="1">gtk3-classic-3.24.29/popovers__file-chooser-list.patch</Patch>
 			<Patch level="1">gtk3-classic-3.24.29/popovers__places-sidebar.patch</Patch>
+			<Patch level="1">784e93ba4a62e3b863a981ab9ac4b8ed898efc6e.patch</Patch>
 		</Patches>
 	</Source>
 
 	<Package>
-		<Name>gtk3-classic</Name>
+		<Name>gtk3</Name>
 		<RuntimeDependencies>
 			<Dependency>atk</Dependency>
 			<Dependency>cups</Dependency>
@@ -124,15 +125,39 @@
 			<Path fileType="library">/usr/lib/girepository-1.0</Path>
 			<Path fileType="localedata">/usr/share/locale</Path>
 		</Files>
+		<!-- Use Clearlooks as default theme for now until native Oxygen GTK style is ready -->
+		<AdditionalFiles>
+			<!-- <AdditionalFile owner="root" permission="0644" target="/usr/share/gtk-3.0/settings.ini">settings.ini</AdditionalFile> -->
+		</AdditionalFiles>
 		<Provides>
 			<COMAR script="pakhandler.py">System.PackageHandler</COMAR>
 		</Provides>
+		<Conflicts>
+			<!-- <Package>gtk3</Package> -->
+		</Conflicts>
 	</Package>
 
 	<Package>
-		<Name>gtk3-classic-devel</Name>
+		<Name>gtk3-demo</Name>
+		<IsA>app:gui</IsA>
+		<Summary>GTK demo application</Summary>
 		<RuntimeDependencies>
-			<Dependency release="current">gtk3-classic</Dependency>
+			<Dependency release="current">gtk3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin/gtk3-demo</Path>
+			<Path fileType="executable">/usr/bin/gtk3-demo-application</Path>
+		</Files>
+		<Conflicts>
+			<!-- <Package>gtk3-demo</Package> -->
+		</Conflicts>
+	</Package>
+
+	<Package>
+		<Name>gtk3-devel</Name>
+		<Summary>Development files for gtk3</Summary>
+		<RuntimeDependencies>
+			<Dependency release="current">gtk3</Dependency>
 			<Dependency>atk-devel</Dependency>
 			<Dependency>libXi-devel</Dependency>
 			<Dependency>cairo-devel</Dependency>
@@ -162,13 +187,16 @@
 			<Path fileType="data">/usr/share/aclocal</Path>
 			<Path fileType="data">/usr/share/gir-1.0</Path>
 		</Files>
+		<Conflicts>
+			<!-- <Package>gtk3-devel</Package> -->
+		</Conflicts>
 	</Package>
 
 	<History>
 		<Update release="1">
-			<Date>2022-07-10</Date>
+			<Date>2022-11-06</Date>
 			<Version>3.24.34</Version>
-			<Comment>Rebuild.</Comment>
+			<Comment>Version bump.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Update>

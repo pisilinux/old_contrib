@@ -13,15 +13,16 @@
         <IsA>app:gui</IsA>
         <Summary>GNU BackGammon</Summary>
         <Description>GNU BackGammon</Description>
-        <Archive sha1sum="1f415ab7eb4e308833fe4fd9b9556998261af423" type="targz">ftp://ftp.gnu.org/gnu/gnubg/gnubg-release-1.06.002-sources.tar.gz</Archive>
-        <BuildDependency>
+        <Archive sha1sum="ebc109d9059df301c36cdfce0f51a3048ebcfc56" type="targz">ftp://ftp.gnu.org/gnu/gnubg/gnubg-release-1.07.001-sources.tar.gz</Archive>
+        <BuildDependencies>
             <Dependency>python-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
             <Dependency>curl-devel</Dependency>
             <Dependency>libjpeg-turbo-devel</Dependency>
             <Dependency>gtkglext-devel</Dependency>
-        </BuildDependency>
+        </BuildDependencies>
         <Patches>
-            <Patch level="1">pixmaps_dir_fix.patch</Patch>
+<!--             <Patch level="1">pixmaps_dir_fix.patch</Patch> -->
         </Patches>
     </Source>
 
@@ -32,6 +33,17 @@
             <Dependency>libjpeg-turbo</Dependency>
             <Dependency>curl</Dependency>
             <Dependency>gtkglext</Dependency>
+            <Dependency>gmp</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libpng</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>readline</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -50,8 +62,8 @@
 
     <History>
         <Update release="1">
-            <Date>2020-10-08</Date>
-            <Version>1.06.002</Version>
+            <Date>2022-12-15</Date>
+            <Version>1.07.001</Version>
             <Comment>First release</Comment>
             <Name>Ali Cengiz Kurt</Name>
             <Email>alicengizkurt@gmail.com</Email>

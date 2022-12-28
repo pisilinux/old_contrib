@@ -2,35 +2,50 @@
 # -*- coding: utf-8 -*-
 #
 # Licensed under the GNU General Public License, version 3.
-# See the file https://www.gnu.org/licenses/gpl-3.0.txt
+# See the file http://www.gnu.org/licenses/gpl.txt
 
-from pisi.actionsapi import shelltools, pisitools, autotools, get
-
-i = ''.join([
-    ' --prefix=/usr',
-    ' --sysconfdir=/etc',
-    ' --enable-x11-backend',
-    ' --enable-wayland-backend',
-    ' --enable-broadway-backend '
-    ])
+from pisi.actionsapi import get
+from pisi.actionsapi import pisitools
+from pisi.actionsapi import shelltools
+from pisi.actionsapi import mesontools
 
 def setup():
-	shelltools.unlink('testsuite/gtk/gtkresources.c')
-	shelltools.export("CFLAGS", get.CFLAGS().replace("-fomit-frame-pointer",""))
+    options = "-Dbroadway_backend=true \
+                     -Dxinerama=yes \
+                     -Dgtk_doc=false \
+                     -Dcloudproviders=true \
+                    "
 
-	autotools.autoreconf("-fiv")
-	autotools.configure(i)
+    shelltools.export("CFLAGS", get.CFLAGS().replace("-fomit-frame-pointer", ""))
 
-	pisitools.dosed("libtool", "( -shared )", r" -Wl,-O1,--as-needed\1")
+    if get.buildTYPE() == "emul32":
+        options += " --libdir=/usr/lib32 \
+                     --bindir=/usr/bin32 \
+                     --sbindir=/usr/sbin32 \
+                     -Dcolord=no \
+                   "
+
+        shelltools.export("CC", "%s -m32" % get.CC())
+        shelltools.export("CXX", "%s -m32" % get.CC())
+        shelltools.export("CFLAGS", "%s -m32" % get.CFLAGS().replace("-fomit-frame-pointer",""))
+        shelltools.export("CXXFLAGS", "%s -m32" % get.CFLAGS())
+        shelltools.export("LDFLAGS", "%s -m32" % get.LDFLAGS())
+        shelltools.export("PKG_CONFIG_PATH", "/usr/lib32/pkgconfig")
+
+    mesontools.configure(options)
 
 def build():
-	autotools.make()
+    mesontools.build()
 
 def install():
-	autotools.rawInstall("DESTDIR=%s" % get.installDIR())
+    mesontools.install()
 
-	# remove empty dir
-	pisitools.removeDir("/usr/share/man")
-	pisitools.dodoc("AUTHORS", "README*", "HACKING", "ChangeLog*", "NEWS*")
+    # remove empty dir
+    # pisitools.removeDir("/usr/share/man")
+    pisitools.dodoc("README*", "COPYING*", "NEWS*")
 
-	pisitools.rename("/usr/bin/gtk-update-icon-cache", "gtk3-update-icon-cache")
+    if get.buildTYPE() == "emul32":
+        for binaries in ["gtk-query-immodules-3.0"]:
+            pisitools.domove("/usr/bin/%s" % binaries, "/usr/bin/", "%s-32bit" % binaries)
+        pisitools.removeDir("/usr/bin32")
+    pisitools.rename("/usr/bin/gtk-update-icon-cache", "gtk3-update-icon-cache")

@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-LWP-UserAgent-Cached</Name>
+		<Homepage>https://metacpan.org/pod/LWP::UserAgent::Cached</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>perl5</License>
+		<IsA>library</IsA>
+		<PartOf>programming.language.perl</PartOf>
+		<Summary>LWP::UserAgent::Cached - LWP::UserAgent with simple caching mechanism.</Summary>
+		<Description>pass</Description>
+		<Archive sha1sum="bd61cfbf1da613f7efc2359ae5240799c46bb881" type="targz">
+			https://cpan.metacpan.org/authors/id/O/OL/OLEG/LWP-UserAgent-Cached-0.08.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-libwww</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-LWP-UserAgent-Cached</Name>
+		<RuntimeDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-libwww</Dependency>
+			<Dependency>perl-Digest-MD5</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+			<Path fileType="data">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-18</Date>
+			<Version>0.08</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

@@ -29,6 +29,9 @@
 
 	<Package>
 		<Name>gmusicbrowser</Name>
+		<Conflicts>
+			<Package>gmusicbrowser-gtk2</Package>
+		</Conflicts>
 		<RuntimeDependencies>
 			<Dependency>gtk3</Dependency>
 			<Dependency>flac</Dependency>

@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-File-Find-Rule</Name>
+		<Homepage>https://metacpan.org/pod/File::Find::Rule</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>custom</License>
+		<IsA>library</IsA>
+		<PartOf>programming.language.perl</PartOf>
+		<Summary>File::Find::Rule - Alternative interface to File::Find.</Summary>
+		<Description>File::Find::Rule is a friendlier interface to File::Find. It allows you to build rules which specify the desired files and directories.</Description>
+		<Archive sha1sum="05fe46cc142279b0716d058a51f7214bd80d34ff" type="targz">
+			https://cpan.metacpan.org/authors/id/R/RC/RCLAMP/File-Find-Rule-0.34.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Text-Glob</Dependency>
+			<Dependency>perl-Number-Compare</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-File-Find-Rule</Name>
+		<RuntimeDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Text-Glob</Dependency>
+			<Dependency>perl-Number-Compare</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
+			<Path fileType="data">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-19</Date>
+			<Version>0.34</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

@@ -15,6 +15,7 @@ i = ''.join([
     ])
 
 def setup():
+	shelltools.unlink('testsuite/gtk/gtkresources.c')
 	shelltools.export("CFLAGS", get.CFLAGS().replace("-fomit-frame-pointer",""))
 
 	autotools.autoreconf("-fiv")

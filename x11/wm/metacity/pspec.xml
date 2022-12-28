@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>metacity</Name>
+		<Homepage>https://gitlab.gnome.org/GNOME/metacity</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Packager>
+		<License>GPL-2</License>
+		<IsA>app</IsA>
+		<Summary>Window Manager.</Summary>
+		<Description>GNOME Flashback window manager.</Description>
+		<Archive sha1sum="7a0147661c4e49a261c77b92fd48418a5f813273" type="tarxz">
+			mirrors://gnome/metacity/3.46/metacity-3.46.0.tar.xz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>libXres-devel</Dependency>
+			<Dependency>libSM-devel</Dependency>
+			<Dependency>vulkan-devel</Dependency>
+			<Dependency>vulkan-headers</Dependency>
+			<Dependency>libXpresent-devel</Dependency>
+			<Dependency>zenity</Dependency>
+			<Dependency>python3</Dependency>
+			<Dependency>gsettings-desktop-schemas-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>metacity</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk3</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libSM</Dependency>
+			<Dependency>libICE</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>vulkan</Dependency>
+			<Dependency>libXext</Dependency>
+			<Dependency>libXres</Dependency>
+			<Dependency>harfbuzz</Dependency>
+			<Dependency>libXfixes</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<Dependency>libXcursor</Dependency>
+			<Dependency>libXdamage</Dependency>
+			<Dependency>libXrender</Dependency>
+			<Dependency>libXpresent</Dependency>
+			<Dependency>libXinerama</Dependency>
+			<Dependency>libXcomposite</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>metacity-devel</Name>
+		<RuntimeDependencies>
+			<Dependency>glib2-devel</Dependency>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency release="current">metacity</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+			<Path fileType="library">/usr/lib/pkgconfid</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-25</Date>
+			<Version>3.46.0</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>wascheme@tuta.io</Email>
+		</Update>
+	</History>
+</PISI>

@@ -15,8 +15,8 @@
         <Description>
             Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It's written in C++ using the Qt 5 or 6 toolkit.
         </Description>
-        <Archive sha1sum="8654abb9f141b1f410971ea641ee2cc9f039c882" type="tarxz">
-            https://files.strawberrymusicplayer.org/strawberry-1.0.5.tar.xz
+        <Archive sha1sum="b1dc0ada45cba5b3cf0ad6941977041ebe2c42de" type="tarxz">
+            https://files.strawberrymusicplayer.org/strawberry-1.0.10.tar.xz
         </Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
@@ -27,6 +27,7 @@
             <Dependency>boost-devel</Dependency>
             <Dependency>fftw3-devel</Dependency>
             <Dependency>libSM-devel</Dependency>
+            <Dependency>icu4c-devel</Dependency>
             <Dependency>libmtp-devel</Dependency>
             <Dependency>sqlite-devel</Dependency>
             <Dependency>gnutls-devel</Dependency>
@@ -59,6 +60,7 @@
         <Name>strawberry</Name>
         <Summary>Strawberry Music Player.</Summary>
         <RuntimeDependencies>
+            <Dependency>icu4c</Dependency>
             <Dependency>fftw3</Dependency>
             <Dependency>glib2</Dependency>
             <Dependency>gnutls</Dependency>
@@ -92,6 +94,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2022-11-11</Date>
+            <Version>1.0.10</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Pisi Linux Community</Name>
+            <Email>admin@pisilinux.org</Email>
+        </Update>
         <Update release="4">
             <Date>2022-07-10</Date>
             <Version>1.0.5</Version>

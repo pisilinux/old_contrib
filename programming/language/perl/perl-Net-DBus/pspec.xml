@@ -18,6 +18,7 @@
 		</Archive>
 		<BuildDependencies>
 			<Dependency>perl</Dependency>
+			<Dependency>dbus-devel</Dependency>
 			<Dependency>perl-XML-Twig</Dependency>
 			<Dependency>perl-Test-Pod</Dependency>
 			<Dependency>perl-Pod-Coverage</Dependency>
@@ -29,6 +30,7 @@
 	<Package>
 		<Name>perl-Net-DBus</Name>
 		<RuntimeDependencies>
+			<Dependency>dbus</Dependency>
 			<Dependency>perl</Dependency>
 			<Dependency>perl-XML-Twig</Dependency>
 		</RuntimeDependencies>

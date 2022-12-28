@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>libdockapp</Name>
+		<Homepage>https://repo.or.cz/dockapps.git</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>GPL</License>
+		<IsA>library</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>DockApp Development Standard Library.</Summary>
+		<Description>
+			libdockapp provides functions that set up a dock app in such a way that they can be properly docked. It also provides some event handlers and makes it very simple to write dockapps.
+		</Description>
+		<Archive sha1sum="05eff84cb5592b3743389a8c36db72921d9b42a3" type="targz">
+			https://www.dockapps.net/download/libdockapp-0.7.3.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>xorg-app</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>libXpm-devel</Dependency>
+			<Dependency>libXext-devel</Dependency>
+			<!-- <Dependency></Dependency> -->
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level='1'></Patch> -->
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>libdockapp</Name>
+		<RuntimeDependencies>
+			<!-- <Dependency></Dependency> -->
+			<Dependency>libX11</Dependency>
+			<Dependency>libXpm</Dependency>
+			<Dependency>libXext</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+			<Path fileType="data">/usr/share/fonts/X11</Path>
+		</Files>
+	</Package>
+
+	<Package>
+		<Name>libdockapp-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">libdockapp</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="header">/usr/include</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-09</Date>
+			<Version>0.7.3</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

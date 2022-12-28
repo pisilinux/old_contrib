@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>perl-Bit-Vector</Name>
+		<Homepage>https://metacpan.org/pod/Bit::Vector</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>Artistic</License>
+		<IsA>library</IsA>
+		<Summary>Efficient bit vector, set of integers and big int math library.</Summary>
+		<Description>Bit::Vector is an efficient C library which allows you to handle bit vectors, sets (of integers), "big integer arithmetic" and boolean matrices, all of arbitrary sizes.</Description>
+		<Archive sha1sum="18bc47c97e5299e368acff76c59aa8636ae0f955" type="targz">
+			https://cpan.metacpan.org/authors/id/S/ST/STBEY/Bit-Vector-7.4.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Carp-Clan</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>perl-Bit-Vector</Name>
+		<RuntimeDependencies>
+			<Dependency>perl</Dependency>
+			<Dependency>perl-Carp-Clan</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/perl5/vendor_perl</Path>
+			<Path fileType="man">/usr/share/man</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-11-18</Date>
+			<Version>7.4</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

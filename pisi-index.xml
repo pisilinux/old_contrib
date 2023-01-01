@@ -13267,6 +13267,140 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>crengine-ng</Name>
+            <Homepage>https://gitlab.com/coolreader-ng/crengine-ng</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>library</IsA>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">crengine-ng is cross-platform library designed to implement text viewers and e-book readers.</Summary>
+            <Description xml:lang="en">Supported document formats: fb2, fb3, epub (without DRM), rtf, doc, docx, odt, htm, chm, pdb, mobi (without DRM), txt, trc, prc. In fact, this is a fork of the CoolReader project.</Description>
+            <Archive type="tarbz2" sha1sum="12a9680151451825761db083615dae909e25ecad" name="crengine-ng-0.9.3.tar.bz2">https://gitlab.com/coolreader-ng/crengine-ng/-/archive/0.9.3/crengine-ng-0.9.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>ninja</Dependency>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>zstd-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>fribidi-devel</Dependency>
+                <Dependency>utf8proc-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>libunibreak-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>office/misc/crengine-ng/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>crengine-ng</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib</Dependency>
+                <Dependency>zstd</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>utf8proc</Dependency>
+                <Dependency>freetype</Dependency>
+                <Dependency>harfbuzz</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>libunibreak</Dependency>
+                <Dependency>libjpeg-turbo</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/libcrengine-ng.so</Path>
+                <Path fileType="data">/usr/share/crengine-ng</Path>
+                <Path fileType="data">/usr/share/crengine-ng/hyph</Path>
+                <Path fileType="data">/usr/share/doc/crengine-ng</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>crengine-ng-devel</Name>
+            <RuntimeDependencies>
+                <Dependency>zlib-devel</Dependency>
+                <Dependency>zstd-devel</Dependency>
+                <Dependency>libpng-devel</Dependency>
+                <Dependency>fribidi-devel</Dependency>
+                <Dependency>utf8proc-devel</Dependency>
+                <Dependency>freetype-devel</Dependency>
+                <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>fontconfig-devel</Dependency>
+                <Dependency>libunibreak-devel</Dependency>
+                <Dependency>libjpeg-turbo-devel</Dependency>
+                <Dependency release="1">crengine-ng</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/crengine-ng</Path>
+                <Path fileType="data">/usr/lib/cmake/crengine-ng</Path>
+                <Path fileType="data">/usr/lib/pkgconfig/crengine-ng.pc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-12-27</Date>
+                <Version>0.9.3</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>crqt</Name>
+            <Homepage>https://gitlab.com/coolreader-ng/crqt-ng</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>office.misc</PartOf>
+            <Summary xml:lang="en">crqt-ng - cross-platform open source e-book reader using crengine-ng.</Summary>
+            <Description xml:lang="en">It is a fork of the CoolReader project. Supported e-book formats: fb2, fb3 (incomplete), epub (non-DRM), doc, docx, odt, rtf, pdb, mobi (non-DRM), txt, html, chm, tcr.</Description>
+            <Archive type="tarbz2" sha1sum="9ce7946f1d1888c1ffdbf18a781c241680fe1c3e" name="crqt-ng-1.0.3.tar.bz2">https://gitlab.com/coolreader-ng/crqt-ng/-/archive/1.0.3/crqt-ng-1.0.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>cmake</Dependency>
+                <Dependency>ninja</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
+                <Dependency>crengine-ng-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>office/misc/crqt/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>crqt</Name>
+            <RuntimeDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>qt5-base</Dependency>
+                <Dependency>crengine-ng</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/crqt</Path>
+                <Path fileType="data">/usr/share/crqt/i18n</Path>
+                <Path fileType="data">/usr/share/doc/crqt</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-12-27</Date>
+                <Version>1.0.3</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>simple-fb2-reader</Name>
             <Homepage>https://github.com/Cactus64k/simple-fb2-reader</Homepage>
             <Packager>
@@ -21499,7 +21633,7 @@
             <PartOf>desktop.toolkit.gtk</PartOf>
             <Summary xml:lang="en">The GIMP Toolkit version 3</Summary>
             <Description xml:lang="en">GTK+ is a multi-platform toolkit for creating graphical user interfaces. Offering a complete set of widgets, GTK+ is suitable for projects ranging from small one-off projects to complete application suites.</Description>
-            <Archive type="tarxz" sha1sum="3114e45e248f9902bc836c4f23f46c63f6da5146" name="gtk+-3.24.35.tar.xz">mirrors://gnome/gtk+/3.24/gtk+-3.24.35.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="05b0241ebc51183b6e2491f711e2f7c7f671bc4f" name="gtk+-3.24.36.tar.xz">mirrors://gnome/gtk+/3.24/gtk+-3.24.36.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
                 <Dependency>meson</Dependency>
@@ -21533,6 +21667,7 @@
                 <Dependency>at-spi2-core-devel</Dependency>
                 <Dependency>libxkbcommon-devel</Dependency>
                 <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libcloudproviders-devel</Dependency>
                 <Dependency>wayland-protocols-devel</Dependency>
                 <Dependency>gobject-introspection-devel</Dependency>
             </BuildDependencies>
@@ -21547,7 +21682,6 @@
                 <Patch level="1">gtk3-classic-3.24.29/popovers__color-chooser.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/popovers__file-chooser-list.patch</Patch>
                 <Patch level="1">gtk3-classic-3.24.29/popovers__places-sidebar.patch</Patch>
-                <Patch level="1">gtk3-atk.patch</Patch>
             </Patches>
             <SourceURI>desktop/toolkit/gtk/gtk3-classic/pspec.xml</SourceURI>
         </Source>
@@ -21581,6 +21715,7 @@
                 <Dependency>libXcomposite</Dependency>
                 <Dependency>wayland-cursor</Dependency>
                 <Dependency>wayland-client</Dependency>
+                <Dependency>libcloudproviders</Dependency>
                 <Dependency>icon-theme-adwaita</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -21606,7 +21741,7 @@
             <Summary xml:lang="en">GTK demo application</Summary>
             <IsA>app:gui</IsA>
             <RuntimeDependencies>
-                <Dependency release="22">gtk3</Dependency>
+                <Dependency release="23">gtk3</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin/gtk3-demo</Path>
@@ -21617,7 +21752,7 @@
             <Name>gtk3-devel</Name>
             <Summary xml:lang="en">Development files for gtk3</Summary>
             <RuntimeDependencies>
-                <Dependency release="22">gtk3</Dependency>
+                <Dependency release="23">gtk3</Dependency>
                 <Dependency>atk-devel</Dependency>
                 <Dependency>libXi-devel</Dependency>
                 <Dependency>cairo-devel</Dependency>
@@ -21638,6 +21773,7 @@
                 <Dependency>at-spi2-atk-devel</Dependency>
                 <Dependency>libxkbcommon-devel</Dependency>
                 <Dependency>libXcomposite-devel</Dependency>
+                <Dependency>libcloudproviders-devel</Dependency>
                 <Dependency>wayland-protocols-devel</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -21649,9 +21785,9 @@
             </Files>
         </Package>
         <History>
-            <Update release="22">
-                <Date>2022-11-23</Date>
-                <Version>3.24.35</Version>
+            <Update release="23">
+                <Date>2022-12-29</Date>
+                <Version>3.24.36</Version>
                 <Comment>Version bump.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>

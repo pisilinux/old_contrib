@@ -24,6 +24,7 @@
 		</BuildDependencies>
 		<Patches>
 			<Patch level="1">use_symbolic_system_theme_icons_where_possible.patch</Patch>
+			<Patch level="1">fix_show_hide_option_of_window_in_pekwm.patch</Patch>
 		</Patches>
 	</Source>
 

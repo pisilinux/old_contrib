@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>jgmenu</Name>
+		<Homepage>https://jgmenu.github.io/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>GPL-2</License>
+		<IsA>app</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>An X11 menu.</Summary>
+		<Description>A simple, independent, contemporary-looking X11 menu, designed for scripting, ricing and tweaking.</Description>
+		<Archive sha1sum="1657b9ef9d5bcfbb3f1bdcfd77c7555cb2e051e5" type="targz">
+			https://github.com/jgmenu/jgmenu/archive/refs/tags/v4.4.1.tar.gz
+		</Archive>
+		<BuildDependencies>
+			<Dependency>gtk3-devel</Dependency>
+			<Dependency>pango-devel</Dependency>
+			<Dependency>cairo-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+			<Dependency>librsvg-devel</Dependency>
+			<Dependency>libXrandr-devel</Dependency>
+			<Dependency>menu-cache-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level='1'></Patch> -->
+			<Patch level='1'>button_release.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>jgmenu</Name>
+		<RuntimeDependencies>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>libX11</Dependency>
+			<Dependency>libpng</Dependency>
+			<Dependency>python3</Dependency>
+			<Dependency>librsvg</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>libXrandr</Dependency>
+			<Dependency>menu-cache</Dependency>
+			<Dependency>python3-pygobject3</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib/jgmenu</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="manpages">/usr/share/man/man1</Path>
+			<Path fileType="manpages">/usr/share/man/man7</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2023-01-14</Date>
+			<Version>4.4.1</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

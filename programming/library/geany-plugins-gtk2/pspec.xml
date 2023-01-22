@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>geany-plugins-gtk2</Name>
+		<Homepage>https://plugins.geany.org/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>GPL</License>
+		<IsA>app:gui</IsA>
+		<PartOf>programming.library</PartOf>
+		<Summary>Plugins for Geany</Summary>
+		<Description>Plugins for Geany</Description>
+		<Archive sha1sum="0036e5b5261de59eda8afa68cb3190cc71cb47ef" type="tarbz2">
+			https://plugins.geany.org/geany-plugins/geany-plugins-1.37.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<!-- <Dependency>cppcheck</Dependency> -->
+			<Dependency>vala-devel</Dependency>
+			<Dependency>ctpl-devel</Dependency>
+			<Dependency>vte28-devel</Dependency>
+			<Dependency>check-devel</Dependency>
+			<!-- geany must built with gtk2 -->
+			<Dependency>lua51-devel</Dependency>
+			<Dependency>gpgme-devel</Dependency>
+			<Dependency>python-devel</Dependency>
+			<Dependency>gnutls-devel</Dependency>
+			<Dependency>libsoup-devel</Dependency>
+			<Dependency>libgit2-devel</Dependency>
+			<Dependency>libpcre2-devel</Dependency>
+			<Dependency>enchant2-devel</Dependency>
+			<Dependency>gtkspell3-devel</Dependency>
+			<Dependency>geany-gtk2-devel</Dependency>
+			<!-- <Dependency>webkit-gtk2-devel</Dependency> -->
+		</BuildDependencies>
+		<Patches>
+			<Patch level="1">Add_support_for_libgit2_1_4.patch</Patch>
+			<Patch level="1">Simplify_libgit2_version_checks.patch</Patch>
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>geany-plugins-gtk2</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>zlib</Dependency>
+			<Dependency>ctpl</Dependency>
+			<Dependency>gtk2</Dependency>
+			<Dependency>vte28</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>glib2</Dependency>
+			<!-- geany must built with gtk2 -->
+			<Dependency>lua51</Dependency>
+			<Dependency>gpgme</Dependency>
+			<Dependency>gnutls</Dependency>
+			<Dependency>libsoup</Dependency>
+			<Dependency>libxml2</Dependency>
+			<Dependency>libgit2</Dependency>
+			<Dependency>libpcre2</Dependency>
+			<Dependency>enchant2</Dependency>
+			<Dependency>gtkspell3</Dependency>
+			<Dependency>libassuan</Dependency>
+			<Dependency>geany-gtk2</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+			<!-- <Dependency>webkit-gtk2</Dependency> -->
+			<Dependency>libgpg-error</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+		<Conflicts>
+			<Package>geany-plugins</Package>
+		</Conflicts>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2023-01-22</Date>
+			<Version>1.37</Version>
+			<Comment>Rebuild with gtk2.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

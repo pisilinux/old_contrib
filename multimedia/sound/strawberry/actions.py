@@ -4,28 +4,24 @@
 # Licensed under the GNU General Public License, version 3.
 # See the file https://www.gnu.org/licenses/gpl-3.0.txt
 
-from pisi.actionsapi import shelltools
-from pisi.actionsapi import cmaketools
-from pisi.actionsapi import pisitools
-from pisi.actionsapi import get
+from pisi.actionsapi import cmaketools, mesontools, pisitools
 
 j = ''.join([
     ' -DBUILD_WITH_QT5=ON',
     ' -DCMAKE_BUILD_TYPE=Release',
     ' -DUSE_TAGPARSER=ON',
     ' -DCMAKE_INSTALL_PREFIX=/usr',
-    ' -Bbuild -L '
+    ' -Bbuild -G Ninja -L '
     ])
 
 def setup():
+    pisitools.dosed("ext/libstrawberry-tagreader/tagreadertagparser.cpp", "core/timeconstants.h", "utilities/timeconstants.h")
     cmaketools.configure(j)
 
 def build():
-    shelltools.cd("build")
-    cmaketools.make()
+    mesontools.build("-C build")
 
 def install():
-    shelltools.cd("build")
-    cmaketools.rawInstall("DESTDIR=%s" % get.installDIR())
+    mesontools.install("-C build")
 
-    pisitools.dodoc("../Changelog")
+    pisitools.dodoc("Changelog")

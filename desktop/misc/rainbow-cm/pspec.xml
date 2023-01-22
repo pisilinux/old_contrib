@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>rainbow-cm</Name>
+		<Homepage>https://github.com/sde-gui/rainbow-cm</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>GPL-3</License>
+		<IsA>app</IsA>
+		<PartOf>desktop.misc</PartOf>
+		<Summary>Rainbow CM is a lightweight GTK2-based clipboard manager for X11.</Summary>
+		<Description>It was initially forked from Parcellite and substantially reworked to improve the code stability and robustness.</Description>
+		<Archive sha1sum="97201b304b30711411e4d972b828b64024ce6579" type="zip">
+			https://github.com/sde-gui/rainbow-cm/archive/398fac17f3341e3c4aa53cb9ec6c007b410eca06.zip
+		</Archive>
+		<BuildDependencies>
+			<Dependency>intltool</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>libX11-devel</Dependency>
+		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level='1'>_port_to_gtk+-3.patch</Patch> -->
+		</Patches>
+	</Source>
+
+	<Package>
+		<Name>rainbow-cm</Name>
+		<RuntimeDependencies>
+			<Dependency>gtk2</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libX11</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="data">/etc/xdg/autostart</Path>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+		</Files>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2022-12-15</Date>
+			<Version>1.0.0a</Version>
+			<Comment>First build.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

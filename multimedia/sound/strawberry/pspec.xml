@@ -15,11 +15,12 @@
         <Description>
             Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It's written in C++ using the Qt 5 or 6 toolkit.
         </Description>
-        <Archive sha1sum="b1dc0ada45cba5b3cf0ad6941977041ebe2c42de" type="tarxz">
-            https://files.strawberrymusicplayer.org/strawberry-1.0.10.tar.xz
+        <Archive sha1sum="5508d2965f0520c9a10dc528c56ceac7bbf09615" type="tarxz">
+            https://files.strawberrymusicplayer.org/strawberry-1.0.14.tar.xz
         </Archive>
         <BuildDependencies>
             <Dependency>cmake</Dependency>
+            <Dependency>ninja</Dependency>
             <Dependency>ccache</Dependency>
             <Dependency>dbus-devel</Dependency>
             <Dependency>lsb-release</Dependency>
@@ -94,6 +95,13 @@
     </Package>
 
     <History>
+        <Update release="6">
+            <Date>2023-01-22</Date>
+            <Version>1.0.14</Version>
+            <Comment>Version bump.</Comment>
+            <Name>fury</Name>
+            <Email>uglyside@yandex.ru</Email>
+        </Update>
         <Update release="5">
             <Date>2022-11-11</Date>
             <Version>1.0.10</Version>
@@ -131,4 +139,3 @@
         </Update>
     </History>
 </PISI>
-

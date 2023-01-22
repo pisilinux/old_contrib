@@ -1044,66 +1044,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>gmusicbrowser-gtk2</Name>
-            <Homepage>https://gmusicbrowser.org</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>GPL-3</License>
-            <IsA>app:gui</IsA>
-            <PartOf>multimedia.sound</PartOf>
-            <Summary xml:lang="en">A customizable open-source jukebox for large collections.</Summary>
-            <Description xml:lang="en">An open-source jukebox for large collections of mp3, ogg, flac, etc.., files, written in perl.</Description>
-            <Archive type="targz" sha1sum="9c9d085967b1b1f9fe22c064822fef197a336371" name="gmusicbrowser-1.1.16.tar.gz">https://gmusicbrowser.org/download/gmusicbrowser-1.1.16.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>discount</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>perl-Glib-Object-Introspection</Dependency>
-            </BuildDependencies>
-            <SourceURI>multimedia/sound/gmusicbrowser-gtk2/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>gmusicbrowser-gtk2</Name>
-            <RuntimeDependencies>
-                <Dependency>gtk2</Dependency>
-                <Dependency>flac</Dependency>
-                <Dependency>mpg123</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>alsa-utils</Dependency>
-                <Dependency>vorbis-tools</Dependency>
-                <Dependency>perl-Net-DBus</Dependency>
-                <Dependency>perl-XML-Parser</Dependency>
-                <Dependency>perl-Gtk2-Notify</Dependency>
-                <Dependency>gst-plugins-ugly</Dependency>
-                <Dependency>gst-plugins-base</Dependency>
-                <Dependency>gst-plugins-good</Dependency>
-                <Dependency>perl-Gnome2-Wnck</Dependency>
-                <Dependency>perl-Locale-gettext</Dependency>
-                <Dependency>perl-Gtk2-AppIndicator</Dependency>
-                <Dependency>perl-Glib-Object-Introspection</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="data">/usr/share/gmusicbrowser</Path>
-            </Files>
-            <Conflicts>
-                <Package>gmusicbrowser</Package>
-            </Conflicts>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>1.1.16</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>tizonia-all</Name>
             <Homepage>https://tizonia.org/</Homepage>
             <Packager>
@@ -1268,6 +1208,7 @@
             </BuildDependencies>
             <Patches>
                 <Patch level="1">use_symbolic_system_theme_icons_where_possible.patch</Patch>
+                <Patch level="1">fix_show_hide_option_of_window_in_pekwm.patch</Patch>
             </Patches>
             <SourceURI>multimedia/sound/gmusicbrowser/pspec.xml</SourceURI>
         </Source>
@@ -1370,9 +1311,10 @@
             <Summary xml:lang="tr">Strawberry müzik oynatma yazılımı.</Summary>
             <Description xml:lang="en">Strawberry is a music player and music collection organizer. It is a fork of Clementine released in 2018 aimed at music collectors and audiophiles. It&apos;s written in C++ using the Qt 5 or 6 toolkit.</Description>
             <Description xml:lang="tr">Strawberry 2018 yılının clementine yazılımından çatallanmış ve Qt5 platformu üzerine yapılmış bir müzik oynatma yazılımı ve düzenleyicisidir.</Description>
-            <Archive type="tarxz" sha1sum="b1dc0ada45cba5b3cf0ad6941977041ebe2c42de" name="strawberry-1.0.10.tar.xz">https://files.strawberrymusicplayer.org/strawberry-1.0.10.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="5508d2965f0520c9a10dc528c56ceac7bbf09615" name="strawberry-1.0.14.tar.xz">https://files.strawberrymusicplayer.org/strawberry-1.0.14.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
+                <Dependency>ninja</Dependency>
                 <Dependency>ccache</Dependency>
                 <Dependency>dbus-devel</Dependency>
                 <Dependency>lsb-release</Dependency>
@@ -1443,6 +1385,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="6">
+                <Date>2023-01-22</Date>
+                <Version>1.0.14</Version>
+                <Comment>Version bump.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
             <Update release="5">
                 <Date>2022-11-11</Date>
                 <Version>1.0.10</Version>
@@ -2114,6 +2063,78 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>geany-gtk2</Name>
+            <Homepage>https://geany.org/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>editor</PartOf>
+            <Summary xml:lang="en">GTK+ based fast and lightweight IDE.</Summary>
+            <Description xml:lang="en">Geany is a text editor using the GTK+ toolkit with basic features of an integrated development environment.</Description>
+            <Archive type="tarbz2" sha1sum="9760a600905a2e17b9ed1970df909e6d3f32a7b2" name="geany-1.37.1.tar.bz2">https://download.geany.org/geany-1.37.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libgcc</Dependency>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>vte28-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>editor/geany-gtk2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>geany-gtk2</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>vte28</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libgcc</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Conflicts>
+                <Package>geany</Package>
+            </Conflicts>
+        </Package>
+        <Package>
+            <Name>geany-gtk2-devel</Name>
+            <RuntimeDependencies>
+                <Dependency release="1">geany-gtk2</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>glib2-devel</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/pkgconfig</Path>
+                <Path fileType="include">/usr/include/geany/*</Path>
+            </Files>
+            <Conflicts>
+                <Package>geany-devel</Package>
+            </Conflicts>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2023-01-22</Date>
+                <Version>1.37.1</Version>
+                <Comment>Rebuild with gtk2.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>texmaker</Name>
             <Homepage>https://www.xm1math.net/texmaker/index.html</Homepage>
             <Packager>
@@ -2408,6 +2429,88 @@
                 <Comment>First release</Comment>
                 <Name>Kamil Atlı</Name>
                 <Email>suvari@pisilinux.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>geany-plugins-gtk2</Name>
+            <Homepage>https://plugins.geany.org/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL</License>
+            <IsA>app:gui</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">Plugins for Geany</Summary>
+            <Description xml:lang="en">Plugins for Geany</Description>
+            <Archive type="tarbz2" sha1sum="0036e5b5261de59eda8afa68cb3190cc71cb47ef" name="geany-plugins-1.37.tar.bz2">https://plugins.geany.org/geany-plugins/geany-plugins-1.37.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>vala-devel</Dependency>
+                <Dependency>ctpl-devel</Dependency>
+                <Dependency>vte28-devel</Dependency>
+                <Dependency>check-devel</Dependency>
+                <Dependency>lua51-devel</Dependency>
+                <Dependency>gpgme-devel</Dependency>
+                <Dependency>python-devel</Dependency>
+                <Dependency>gnutls-devel</Dependency>
+                <Dependency>libsoup-devel</Dependency>
+                <Dependency>libgit2-devel</Dependency>
+                <Dependency>libpcre2-devel</Dependency>
+                <Dependency>enchant2-devel</Dependency>
+                <Dependency>gtkspell3-devel</Dependency>
+                <Dependency>geany-gtk2-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">Add_support_for_libgit2_1_4.patch</Patch>
+                <Patch level="1">Simplify_libgit2_version_checks.patch</Patch>
+            </Patches>
+            <SourceURI>programming/library/geany-plugins-gtk2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>geany-plugins-gtk2</Name>
+            <RuntimeDependencies>
+                <Dependency>atk</Dependency>
+                <Dependency>zlib</Dependency>
+                <Dependency>ctpl</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>vte28</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>lua51</Dependency>
+                <Dependency>gpgme</Dependency>
+                <Dependency>gnutls</Dependency>
+                <Dependency>libsoup</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libgit2</Dependency>
+                <Dependency>libpcre2</Dependency>
+                <Dependency>enchant2</Dependency>
+                <Dependency>gtkspell3</Dependency>
+                <Dependency>libassuan</Dependency>
+                <Dependency>geany-gtk2</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
+                <Dependency>libgpg-error</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Conflicts>
+                <Package>geany-plugins</Package>
+            </Conflicts>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2023-01-22</Date>
+                <Version>1.37</Version>
+                <Comment>Rebuild with gtk2.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
             </Update>
         </History>
     </SpecFile>
@@ -9232,180 +9335,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-ExtUtils-Helpers</Name>
-            <Homepage>https://metacpan.org/pod/ExtUtils::Helpers</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Various portability utilities for module builders.</Summary>
-            <Description xml:lang="en">This module provides various portable helper functions for module building modules.</Description>
-            <Archive type="targz" sha1sum="1a8b0c9cfe9dfe3df7aadf91e29af8637a00bdd4" name="ExtUtils-Helpers-0.026.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Helpers-0.026.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-ExtUtils-Helpers/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-ExtUtils-Helpers</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.026</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Text-Iconv</Name>
-            <Homepage>https://metacpan.org/pod/Text::Iconv</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">A Perl interface to the iconv() codeset conversion function.</Summary>
-            <Description xml:lang="en">This module provides a Perl interface to the iconv() codeset conversion function, as defined by the Single UNIX Specification.</Description>
-            <Archive type="targz" sha1sum="542849325b2d66c72e19ffb48bdc67fdd7e4bbea" name="Text-Iconv-1.7.tar.gz">https://cpan.metacpan.org/authors/id/M/MP/MPIOTR/Text-Iconv-1.7.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Text-Iconv/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Text-Iconv</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2020-11-28</Date>
-                <Version>1.7</Version>
-                <Comment>Rebuild.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>1.7</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-28</Date>
-                <Version>1.7</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-11-07</Date>
-                <Version>1.7</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-07</Date>
-                <Version>1.7</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Unicode-String</Name>
-            <Homepage>https://metacpan.org/pod/Unicode::String</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">String manipulation for Unicode strings</Summary>
-            <Description xml:lang="en">Perl modules to handle various Unicode issues.</Description>
-            <Archive type="targz" sha1sum="24834f6155adf070204c56f9ddae01aab485a287" name="Unicode-String-2.10.tar.gz">https://cpan.metacpan.org/authors/id/G/GA/GAAS/GAAS/Unicode-String-2.10.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-ExtUtils-MakeMaker</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Unicode-String/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Unicode-String</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2020-11-28</Date>
-                <Version>2.10</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>2.09</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-28</Date>
-                <Version>2.09</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-11-07</Date>
-                <Version>2.09</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-11</Date>
-                <Version>2.09</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Bit-Vector</Name>
             <Homepage>https://metacpan.org/pod/Bit::Vector</Homepage>
             <Packager>
@@ -9449,340 +9378,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-Module-Build-Tiny</Name>
-            <Homepage>https://metacpan.org/pod/Module::Build::Tiny</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">A tiny replacement for Module::Build.</Summary>
-            <Description xml:lang="en">Many Perl distributions use a Build.PL file instead of a Makefile.PL file to drive distribution configuration, build, test and installation. Traditionally, Build.PL uses Module::Build as the underlying build system. This module provides a simple, lightweight, drop-in replacement.</Description>
-            <Archive type="targz" sha1sum="2127b3e52d59c545ff587ca127ee1686f2a50177" name="Module-Build-Tiny-0.039.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.039.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-ExtUtils-Config</Dependency>
-                <Dependency>perl-ExtUtils-Helpers</Dependency>
-                <Dependency>perl-ExtUtils-InstallPaths</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Module-Build-Tiny/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Module-Build-Tiny</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-ExtUtils-Config</Dependency>
-                <Dependency>perl-ExtUtils-Helpers</Dependency>
-                <Dependency>perl-ExtUtils-InstallPaths</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.039</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-XML-Twig</Name>
-            <Homepage>https://metacpan.org/pod/XML::Twig</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">A perl module for processing huge XML documents in tree mode.</Summary>
-            <Description xml:lang="en">This module provides a way to process XML documents. It is build on top of XML::Parser. XML::Twig offers a tree interface to the document, while allowing you to output the parts of it that have been completely processed. It allows minimal resource (CPU and memory) usage by building the tree only for the parts of the documents that need actual processing, through the use of the twig_roots and twig_print_outside_roots options.</Description>
-            <Archive type="targz" sha1sum="ce4ad6f055ea677ab5526e55677faffcc6457eb8" name="XML-Twig-3.52.tar.gz">https://cpan.metacpan.org/authors/id/M/MI/MIROD/XML-Twig-3.52.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-IO-stringy</Dependency>
-                <Dependency>perl-XML-Simple</Dependency>
-                <Dependency>perl-Text-Iconv</Dependency>
-                <Dependency>perl-HTML-Parser</Dependency>
-                <Dependency>perl-Unicode-Map8</Dependency>
-                <Dependency>perl-XML-SAX-Writer</Dependency>
-                <Dependency>perl-Unicode-String</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-XML-Twig/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-XML-Twig</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-XML-Parser</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="7">
-                <Date>2020-11-28</Date>
-                <Version>3.52</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="6">
-                <Date>2014-09-10</Date>
-                <Version>3.48</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="5">
-                <Date>2014-05-24</Date>
-                <Version>3.48</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="4">
-                <Date>2013-11-06</Date>
-                <Version>3.44</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2013-06-06</Date>
-                <Version>3.44</Version>
-                <Comment>V.Bump</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>Osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-11</Date>
-                <Version>3.40</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Glib-Object-Introspection</Name>
-            <Homepage>https://metacpan.org/pod/Glib::Object::Introspection</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Glib::Object::Introspection - Dynamically create Perl language bindings.</Summary>
-            <Description xml:lang="en">Glib::Object::Introspection uses the gobject-introspection and libffi projects to dynamically create Perl bindings for a wide variety of libraries. Examples include gtk+, webkit, libsoup and many more.</Description>
-            <Archive type="targz" sha1sum="0eb18bebb83a22a4fcf4e9f2f521ce2cff4cd148" name="Glib-Object-Introspection-0.049.tar.gz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Glib-Object-Introspection-0.049.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Glib</Dependency>
-                <Dependency>perl-Cairo</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>perl-Cairo-Gobject</Dependency>
-                <Dependency>perl-ExtUtils-Depends</Dependency>
-                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
-                <Dependency>gobject-introspection-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Glib-Object-Introspection/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Glib-Object-Introspection</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>glib2</Dependency>
-                <Dependency>libffi</Dependency>
-                <Dependency>gobject-introspection</Dependency>
-                <Dependency>perl-ExtUtils-Depends</Dependency>
-                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2020-12-13</Date>
-                <Version>0.049</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Cairo-Gobject</Name>
-            <Homepage>https://metacpan.org/pod/Cairo::GObject</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Cairo::GObject - Integrate Cairo into the Glib type system.</Summary>
-            <Description xml:lang="en">Cairo::GObject registers Cairo&apos;s types (Cairo::Context, Cairo::Surface, etc.) with Glib&apos;s type systems so that they can be used normally in signals and properties.</Description>
-            <Archive type="targz" sha1sum="57d0ad960dff09755e2fbb02c2b745fa79d31517" name="Cairo-GObject-1.005.tar.gz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Cairo-GObject-1.005.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl-Glib</Dependency>
-                <Dependency>perl-Cairo</Dependency>
-                <Dependency>cairo-devel</Dependency>
-                <Dependency>perl-ExtUtils-Depends</Dependency>
-                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Cairo-Gobject/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Cairo-Gobject</Name>
-            <RuntimeDependencies>
-                <Dependency>glib2</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>freetype</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2019-12-12</Date>
-                <Version>1.005</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-ExtUtils-Config</Name>
-            <Homepage>https://metacpan.org/pod/ExtUtils::Config</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">A wrapper for perl&apos;s configuration.</Summary>
-            <Description xml:lang="en">ExtUtils::Config is an abstraction around the %Config hash. By itself it is not a particularly interesting module by any measure, however it ties together a family of modern toolchain modules.</Description>
-            <Archive type="targz" sha1sum="971584d0fbc7a1e072465be2b8a34fc608269ef0" name="ExtUtils-Config-0.008.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-Config-0.008.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-ExtUtils-Config/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-ExtUtils-Config</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.008</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-IO-stringy</Name>
-            <Homepage>https://metacpan.org/pod/IO::Stringy</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">I/O on in-core objects like strings and arrays</Summary>
-            <Description xml:lang="en">This toolkit primarily provides modules for performing both traditional and object-oriented I/O) on things *other* than normal filehandles; in particular, IO::Scalar, IO::ScalarArray, and IO::Lines.</Description>
-            <Archive type="targz" sha1sum="5be396929c469c8a62aee6f0ff9e91d112a0abe7" name="IO-Stringy-2.113.tar.gz">https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/IO-Stringy-2.113.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-IO-stringy/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-IO-stringy</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2020-11-28</Date>
-                <Version>2.113</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>2.110</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-28</Date>
-                <Version>2.110</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-12-07</Date>
-                <Version>2.110</Version>
-                <Comment>Rebuild for perl</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-07</Date>
-                <Version>2.110</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-File-Spec-Link</Name>
             <Homepage>https://metacpan.org/pod/File::Spec::Link</Homepage>
             <Packager>
@@ -9816,53 +9411,6 @@
             <Update release="1">
                 <Date>2022-11-19</Date>
                 <Version>0.140</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Gnome2-Wnck</Name>
-            <Homepage>https://metacpan.org/pod/Gnome2::Wnck</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>LGPL-2.1</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl interface to the Window Navigator Construction Kit.</Summary>
-            <Description xml:lang="en">Perl interface to the Window Navigator Construction Kit.</Description>
-            <Archive type="targz" sha1sum="171f58fc59cd1f9db3673e48b63017d9675ff710" name="Gnome2-Wnck-0.18.tar.gz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Gnome2-Wnck-0.18.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>perl-Glib</Dependency>
-                <Dependency>libwnck2-devel</Dependency>
-                <Dependency>perl-ExtUtils-Depends</Dependency>
-                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Gnome2-Wnck/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Gnome2-Wnck</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>perl-Glib</Dependency>
-                <Dependency>libwnck2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-22</Date>
-                <Version>0.18</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -9958,182 +9506,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-XML-Filter-BufferText</Name>
-            <Homepage>https://metacpan.org/pod/XML::Filter::BufferText</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Filter to put all characters() in one event</Summary>
-            <Description xml:lang="en">This module does the trivial but oft-repeated task of putting all characters into a single event.</Description>
-            <Archive type="targz" sha1sum="32ada41fb4d8843c1e587945279535e5cbf44cf1" name="XML-Filter-BufferText-1.01.tar.gz">http://search.cpan.org/CPAN/authors/id/R/RB/RBERJON/XML-Filter-BufferText-1.01.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-XML-SAX</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-XML-Filter-BufferText/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-XML-Filter-BufferText</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-XML-SAX</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2020-11-28</Date>
-                <Version>1.01</Version>
-                <Comment>Rebuild.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>1.01</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-28</Date>
-                <Version>1.01</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-11-06</Date>
-                <Version>1.01</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-07</Date>
-                <Version>1.01</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Gtk2-Notify</Name>
-            <Homepage>https://metacpan.org/pod/Gtk2::Notify</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>GPL-2</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl interface to libnotify.</Summary>
-            <Description xml:lang="en">Gtk2::Notify - Perl interface to libnotify.</Description>
-            <Archive type="targz" sha1sum="b0223dd5a85358c9b92ebc99040201e640612348" name="Gtk2-Notify-0.05.tar.gz">https://cpan.metacpan.org/authors/id/F/FL/FLORA/Gtk2-Notify-0.05.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>gtk2-devel</Dependency>
-                <Dependency>libnotify-devel</Dependency>
-                <Dependency>perl-Module-Install</Dependency>
-                <Dependency>perl-Test-Exception</Dependency>
-                <Dependency>perl-ExtUtils-Depends</Dependency>
-                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
-                <Dependency>perl-Module-Build-XSUtil</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="0">libnotify.patch</Patch>
-            </Patches>
-            <SourceURI>programming/language/perl/perl-Gtk2-Notify/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Gtk2-Notify</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>atk</Dependency>
-                <Dependency>gtk2</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>pango</Dependency>
-                <Dependency>freetype</Dependency>
-                <Dependency>harfbuzz</Dependency>
-                <Dependency>libnotify</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>gdk-pixbuf</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.05</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Gtk3</Name>
-            <Homepage>https://metacpan.org/pod/Gtk3</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Gtk3 - Perl interface to the 3.x series of the gtk+ toolkit.</Summary>
-            <Description xml:lang="en">Perl bindings to the 3.x series of the gtk+ toolkit. This module allows you to write graphical user interfaces in a Perlish and object-oriented way, freeing you from the casting and memory management in C, yet remaining very close in spirit to original API.</Description>
-            <Archive type="targz" sha1sum="d5dfdc7e502caf6af8dcde4a31825b10380dd8d5" name="Gtk3-0.038.tar.gz">https://cpan.metacpan.org/authors/id/X/XA/XAOC/Gtk3-0.038.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl-Glib</Dependency>
-                <Dependency>gtk3-devel</Dependency>
-                <Dependency>perl-Cairo</Dependency>
-                <Dependency>perl-Cairo-Gobject</Dependency>
-                <Dependency>perl-Glib-Object-Introspection</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Gtk3/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Gtk3</Name>
-            <RuntimeDependencies>
-                <Dependency>gtk3</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>perl-Glib</Dependency>
-                <Dependency>perl-Cairo</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2021-01-20</Date>
-                <Version>0.038</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Term-Menu</Name>
             <Homepage>https://metacpan.org/pod/Term::Menu</Homepage>
             <Packager>
@@ -10184,88 +9556,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-Module-Install</Name>
-            <Homepage>https://metacpan.org/pod/Module::Install</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Standalone, extensible Perl module installer.</Summary>
-            <Description xml:lang="en">Module::Install is a package for writing installers for CPAN (or CPAN-like) distributions that are clean, simple, minimalist, act in a strictly correct manner with ExtUtils::MakeMaker, and will run on any Perl installation version 5.005 or newer.</Description>
-            <Archive type="targz" sha1sum="6c77b2ec0cd84e07d7c7ae03d1cfa5c21d758f81" name="Module-Install-1.19.tar.gz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/Module-Install-1.19.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-YAML-Tiny</Dependency>
-                <Dependency>perl-File-Remove</Dependency>
-                <Dependency>perl-Module-Build</Dependency>
-                <Dependency>perl-Module-ScanDeps</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Module-Install/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Module-Install</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>1.19</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-YAML-Tiny</Name>
-            <Homepage>https://metacpan.org/pod/YAML::Tiny</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Read/Write YAML files with as little code as possible.</Summary>
-            <Description xml:lang="en">YAML::Tiny is a perl class for reading and writing YAML-style files, written with as little code as possible, reducing load time and memory overhead.</Description>
-            <Archive type="targz" sha1sum="32ee7a7d499c7d8c2b4672f9735901fb4de1ab88" name="YAML-Tiny-1.73.tar.gz">https://cpan.metacpan.org/authors/id/E/ET/ETHER/YAML-Tiny-1.73.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-YAML-Tiny/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-YAML-Tiny</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>1.73</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Carp-Clan</Name>
             <Homepage>https://metacpan.org/pod/Carp::Clan</Homepage>
             <Packager>
@@ -10304,83 +9594,6 @@
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-IO-Socket-INET6</Name>
-            <Homepage>https://metacpan.org/pod/IO::Socket::INET6</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Object interface for AF_INET|AF_INET6 domain sockets</Summary>
-            <Summary xml:lang="tr">AF_INET|AF_INET6 domain soketleri için nesne arayüzü</Summary>
-            <Description xml:lang="en">IO::Socket::INET6 provides an object interface to creating and using sockets in either AF_INET or AF_INET6 domains. It is built upon the IO::Socket interface and inherits all the methods defined by IO::Socket.</Description>
-            <Description xml:lang="tr">IO::Socket::INET6, AF_INET ya da AF_INET6 domainleri kullanılarak soket kullanma veya yaratmaya yarayan nesne arayüzü sağlar.</Description>
-            <Description xml:lang="es">IO::Socket::INET6 facilita una interfaz a objetos para la creación  y uso de sockets en dominios AF_INET o AF_INET6. Está construido sobre la interfaz IO::Socket y hereda todos los métodos definidos en IO::Socket.</Description>
-            <Archive type="targz" sha1sum="37917b558b71cad29aaf2b4791a99684341a1793" name="IO-Socket-INET6-2.72.tar.gz">http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/IO-Socket-INET6-2.72.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl-Socket6</Dependency>
-                <Dependency>perl-Test-Pod</Dependency>
-                <Dependency>perl-Module-Build</Dependency>
-                <Dependency>perl-Test-Pod-Coverage</Dependency>
-                <Dependency>perl</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-IO-Socket-INET6/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-IO-Socket-INET6</Name>
-            <RuntimeDependencies>
-                <Dependency>perl-Socket6</Dependency>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="data">/usr/share/perl</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2016-04-24</Date>
-                <Version>2.72</Version>
-                <Comment>Docker built.</Comment>
-                <Name>İbrahim KARAGÜZEL</Name>
-                <Email>karaguzelibrahim@gmail.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>2.72</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-24</Date>
-                <Version>2.72</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-12-07</Date>
-                <Version>2.69</Version>
-                <Comment>Rebuild for perl</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-07</Date>
-                <Version>2.69</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
             </Update>
         </History>
     </SpecFile>
@@ -10467,93 +9680,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-Devel-CheckCompiler</Name>
-            <Homepage>https://metacpan.org/pod/Devel::CheckCompiler</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Check the compiler&apos;s availability.</Summary>
-            <Description xml:lang="en">Devel::CheckCompiler is checker for compiler&apos;s availability.</Description>
-            <Archive type="targz" sha1sum="eb90cfe52ff6b026f99fdbcc41403440e5f7619d" name="Devel-CheckCompiler-0.07.tar.gz">https://cpan.metacpan.org/authors/id/S/SY/SYOHEX/Devel-CheckCompiler-0.07.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Module-Build</Dependency>
-                <Dependency>perl-Test-Requires</Dependency>
-                <Dependency>perl-Module-Build-Tiny</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Devel-CheckCompiler/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Devel-CheckCompiler</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.07</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Gtk2-AppIndicator</Name>
-            <Homepage>https://metacpan.org/pod/Gtk2::AppIndicator</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>GPL</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl extension for libappindicator.</Summary>
-            <Description xml:lang="en">This module gives an interface to the new ubuntu Unity libappindicator stuff.</Description>
-            <Archive type="targz" sha1sum="8a63d442a7bcb31a832363d06b6ac185a7852566" name="Gtk2-AppIndicator-0.15.tar.gz">https://cpan.metacpan.org/authors/id/O/OE/OESTERHOL/Gtk2-AppIndicator-0.15.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>libdbusmenu-devel</Dependency>
-                <Dependency>libindicator-gtk2-devel</Dependency>
-                <Dependency>libappindicator-gtk2-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Gtk2-AppIndicator/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Gtk2-AppIndicator</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Gtk2</Dependency>
-                <Dependency>libappindicator-gtk2</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-22</Date>
-                <Version>0.15</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Linux-Desktopfiles</Name>
             <Homepage>https://metacpan.org/module/Linux::DesktopFiles</Homepage>
             <Packager>
@@ -10621,356 +9747,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>perl-Unicode-Map8</Name>
-            <Homepage>https://metacpan.org/pod/Unicode::Map8</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>app:console</IsA>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Convert between most 8bit encodings.</Summary>
-            <Description xml:lang="en">A Perl module implement efficient mapping tables between 8-bit character sets and 16 bit character sets like Unicode.</Description>
-            <Archive type="targz" sha1sum="ad8dad5e9741ff02b94dec62cb9b5926078a226a" name="Unicode-Map8-0.13.tar.gz">https://cpan.metacpan.org/authors/id/G/GA/GAAS/Unicode-Map8-0.13.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Unicode-String</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Unicode-Map8/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Unicode-Map8</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Unicode-String</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2020-11-28</Date>
-                <Version>0.13</Version>
-                <Comment>Rebuild.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>0.13</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-28</Date>
-                <Version>0.13</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2012-11-07</Date>
-                <Version>0.13</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-11</Date>
-                <Version>0.13</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Net-DBus</Name>
-            <Homepage>https://metacpan.org/pod/Net::DBus</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Perl extension for the DBus message system</Summary>
-            <Description xml:lang="en">perl-Net-DBus provides a Perl API for the DBus message system.</Description>
-            <Archive type="targz" sha1sum="6446a8ffde84c940efe130672fbce63cc36be9eb" name="Net-DBus-1.2.0.tar.gz">https://cpan.metacpan.org/authors/id/D/DA/DANBERR/Net-DBus-1.2.0.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>dbus-devel</Dependency>
-                <Dependency>perl-XML-Twig</Dependency>
-                <Dependency>perl-Test-Pod</Dependency>
-                <Dependency>perl-Pod-Coverage</Dependency>
-                <Dependency>perl-ExtUtils-Depends</Dependency>
-                <Dependency>perl-ExtUtils-PkgConfig</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Net-DBus/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Net-DBus</Name>
-            <RuntimeDependencies>
-                <Dependency>dbus</Dependency>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-XML-Twig</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="man">/usr/share/man</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2020-11-28</Date>
-                <Version>1.2.0</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>1.0.0</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-28</Date>
-                <Version>1.0.0</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-12-06</Date>
-                <Version>1.0.0</Version>
-                <Comment>rebuild for perl</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-11</Date>
-                <Version>1.0.0</Version>
-                <Comment>First release</Comment>
-                <Name>Osman Erkan</Name>
-                <Email>osman.erkan@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Module-Build-XSUtil</Name>
-            <Homepage>https://metacpan.org/pod/Module::Build::XSUtil</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">A Module::Build class for building XS modules.</Summary>
-            <Description xml:lang="en">Module::Build::XSUtil is subclass of Module::Build for support building XS modules.</Description>
-            <Archive type="targz" sha1sum="30ca8525d93f74f8f8f00387dc9b4fbee3965a86" name="Module-Build-XSUtil-0.19.tar.gz">https://cpan.metacpan.org/authors/id/H/HI/HIDEAKIO/Module-Build-XSUtil-0.19.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Cwd-Guard</Dependency>
-                <Dependency>perl-Capture-Tiny</Dependency>
-                <Dependency>perl-Module-Build</Dependency>
-                <Dependency>perl-File-Copy-Recursive-Reduced</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Module-Build-XSUtil/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Module-Build-XSUtil</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Devel-CheckCompiler</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.19</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-ExtUtils-InstallPaths</Name>
-            <Homepage>https://metacpan.org/pod/ExtUtils::InstallPaths</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Build.PL install path logic made easy.</Summary>
-            <Description xml:lang="en">This module tries to make install path resolution as easy as possible.</Description>
-            <Archive type="targz" sha1sum="79a8f1c64d8dce0577bbbbad55583569ab920613" name="ExtUtils-InstallPaths-0.012.tar.gz">https://cpan.metacpan.org/authors/id/L/LE/LEONT/ExtUtils-InstallPaths-0.012.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-ExtUtils-Config</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-ExtUtils-InstallPaths/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-ExtUtils-InstallPaths</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.012</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Module-ScanDeps</Name>
-            <Homepage>https://metacpan.org/pod/Module::ScanDeps</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Recursively scan Perl code for dependencies.</Summary>
-            <Description xml:lang="en">This module scans potential modules used by perl programs, and returns a hash reference; its keys are the module names as appears in %INC (e.g. Test/More.pm).</Description>
-            <Archive type="targz" sha1sum="ee199d23a005ceef7f1adf549548bc1d0cfac26f" name="Module-ScanDeps-1.31.tar.gz">https://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/Module-ScanDeps-1.31.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Test-Requires</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Module-ScanDeps/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Module-ScanDeps</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Test-Requires</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin/scandeps.pl</Path>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>1.31</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-XML-SAX-Writer</Name>
-            <Homepage>https://metacpan.org/pod/XML::SAX::Writer</Homepage>
-            <Packager>
-                <Name>Pisi Linux Admins</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">SAX2 Writer</Summary>
-            <Description xml:lang="en">Perl SAX is a common parser interface for XML parsers. It allows to write applications that use XML parsers.</Description>
-            <Archive type="targz" sha1sum="ecf83062fe57be6c92405ad66478fa75a00530c6" name="XML-SAX-Writer-0.57.tar.gz">https://cpan.metacpan.org/authors/id/P/PE/PERIGRIN/XML-SAX-Writer-0.57.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-XML-SAX</Dependency>
-                <Dependency>perl-Text-Iconv</Dependency>
-                <Dependency>perl-XML-NamespaceSupport</Dependency>
-                <Dependency>perl-XML-Filter-BufferText</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-XML-SAX-Writer/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-XML-SAX-Writer</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-XML-SAX</Dependency>
-                <Dependency>perl-Text-Iconv</Dependency>
-                <Dependency>perl-XML-NamespaceSupport</Dependency>
-                <Dependency>perl-XML-Filter-BufferText</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2020-11-28</Date>
-                <Version>0.57</Version>
-                <Comment>Ver. bump</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-            <Update release="4">
-                <Date>2014-09-10</Date>
-                <Version>0.54</Version>
-                <Comment>Release bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="3">
-                <Date>2014-05-24</Date>
-                <Version>0.54</Version>
-                <Comment>Version bump.</Comment>
-                <Name>Marcin Bojara</Name>
-                <Email>marcin@pisilinux.org</Email>
-            </Update>
-            <Update release="2">
-                <Date>2013-11-06</Date>
-                <Version>0.53</Version>
-                <Comment>Rebuild</Comment>
-                <Name>Richard de Bruin</Name>
-                <Email>richdb@pisilinux.org</Email>
-            </Update>
-            <Update release="1">
-                <Date>2012-09-07</Date>
-                <Version>0.53</Version>
-                <Comment>First release</Comment>
-                <Name>PisiLinux Community</Name>
-                <Email>admins@pisilinux.org</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>perl-Text-Glob</Name>
             <Homepage>https://metacpan.org/pod/Text::Glob</Homepage>
             <Packager>
@@ -11002,47 +9778,6 @@
             <Update release="1">
                 <Date>2022-11-19</Date>
                 <Version>0.11</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-File-Remove</Name>
-            <Homepage>https://metacpan.org/pod/File::Remove</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Remove files and directories.</Summary>
-            <Description xml:lang="en">File::Remove::remove removes files and directories. It acts like /bin/rm, for the most part. Although unlink can be given a list of files, it will not remove directories; this module remedies that. It also accepts wildcards, * and ?, as arguments for filenames.</Description>
-            <Archive type="targz" sha1sum="02a1c619ef2f6e02ba70015756c55bfb70518290" name="File-Remove-1.61.tar.gz">https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/File-Remove-1.61.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Module-Build</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-File-Remove/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-File-Remove</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Module-Build</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>1.61</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -11134,47 +9869,6 @@
             <Update release="1">
                 <Date>2022-11-18</Date>
                 <Version>0.08</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-Cwd-Guard</Name>
-            <Homepage>https://metacpan.org/pod/Cwd::Guard</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Temporary changing working directory (chdir).</Summary>
-            <Description xml:lang="en">CORE::chdir Cwd:: Guard can change the current directory (chdir) using a limited scope.</Description>
-            <Archive type="targz" sha1sum="9226dd929e1cd33e6328eb2e45ba9618015c59b9" name="Cwd-Guard-0.05.tar.gz">https://cpan.metacpan.org/authors/id/K/KA/KAZEBURO/Cwd-Guard-0.05.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-Module-Build</Dependency>
-                <Dependency>perl-Test-Requires</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-Cwd-Guard/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-Cwd-Guard</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.05</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -11307,47 +10001,6 @@
             <Update release="1">
                 <Date>2022-11-18</Date>
                 <Version>6.4</Version>
-                <Comment>First build.</Comment>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>perl-File-Copy-Recursive-Reduced</Name>
-            <Homepage>https://metacpan.org/pod/File::Copy::Recursive::Reduced</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>Artistic</License>
-            <IsA>library</IsA>
-            <PartOf>programming.language.perl</PartOf>
-            <Summary xml:lang="en">Recursive copying of files and directories within Perl 5 toolchain.</Summary>
-            <Description xml:lang="en">This library is intended as a not-quite-drop-in replacement for certain functionality provided by CPAN distribution File-Copy-Recursive.</Description>
-            <Archive type="targz" sha1sum="a169b5b484de39ad37870c2b1e29feaafeb91f2d" name="File-Copy-Recursive-Reduced-0.006.tar.gz">https://cpan.metacpan.org/authors/id/J/JK/JKEENAN/File-Copy-Recursive-Reduced-0.006.tar.gz</Archive>
-            <BuildDependencies>
-                <Dependency>perl</Dependency>
-                <Dependency>perl-path-tiny</Dependency>
-                <Dependency>perl-Capture-Tiny</Dependency>
-            </BuildDependencies>
-            <SourceURI>programming/language/perl/perl-File-Copy-Recursive-Reduced/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>perl-File-Copy-Recursive-Reduced</Name>
-            <RuntimeDependencies>
-                <Dependency>perl</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="data">/usr/lib/perl5/vendor_perl</Path>
-                <Path fileType="data">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="1">
-                <Date>2022-11-19</Date>
-                <Version>0.006</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
@@ -13267,133 +11920,70 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>crengine-ng</Name>
-            <Homepage>https://gitlab.com/coolreader-ng/crengine-ng</Homepage>
+            <Name>coolreader-qt</Name>
+            <Homepage>https://github.com/buggins/coolreader</Homepage>
             <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
+                <Name>Pisi Linux Community</Name>
+                <Email>admin@pisilinux.org</Email>
             </Packager>
             <License>GPL-2</License>
-            <IsA>library</IsA>
+            <IsA>app:gui</IsA>
             <PartOf>office.misc</PartOf>
-            <Summary xml:lang="en">crengine-ng is cross-platform library designed to implement text viewers and e-book readers.</Summary>
-            <Description xml:lang="en">Supported document formats: fb2, fb3, epub (without DRM), rtf, doc, docx, odt, htm, chm, pdb, mobi (without DRM), txt, trc, prc. In fact, this is a fork of the CoolReader project.</Description>
-            <Archive type="tarbz2" sha1sum="12a9680151451825761db083615dae909e25ecad" name="crengine-ng-0.9.3.tar.bz2">https://gitlab.com/coolreader-ng/crengine-ng/-/archive/0.9.3/crengine-ng-0.9.3.tar.bz2</Archive>
+            <Summary xml:lang="en">CoolReader 3 - cross platform open source e-book reader.</Summary>
+            <Description xml:lang="en">CoolReader 3 - cross platform open source e-book reader.</Description>
+            <Archive type="targz" sha1sum="72e57c86458d38c3d638e39fb40630d205f92bbc" name="cr3.2.59.tar.gz">https://github.com/buggins/coolreader/archive/refs/tags/cr3.2.59.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>cmake</Dependency>
-                <Dependency>ninja</Dependency>
                 <Dependency>zlib-devel</Dependency>
                 <Dependency>zstd-devel</Dependency>
+                <Dependency>libxcb-devel</Dependency>
                 <Dependency>libpng-devel</Dependency>
-                <Dependency>libX11-devel</Dependency>
+                <Dependency>qt5-linguist</Dependency>
                 <Dependency>fribidi-devel</Dependency>
-                <Dependency>utf8proc-devel</Dependency>
+                <Dependency>qt5-base-devel</Dependency>
                 <Dependency>freetype-devel</Dependency>
                 <Dependency>harfbuzz-devel</Dependency>
+                <Dependency>utf8proc-devel</Dependency>
                 <Dependency>fontconfig-devel</Dependency>
                 <Dependency>libunibreak-devel</Dependency>
                 <Dependency>libjpeg-turbo-devel</Dependency>
             </BuildDependencies>
-            <SourceURI>office/misc/crengine-ng/pspec.xml</SourceURI>
+            <SourceURI>office/misc/coolreader-qt/pspec.xml</SourceURI>
         </Source>
         <Package>
-            <Name>crengine-ng</Name>
+            <Name>coolreader-qt</Name>
             <RuntimeDependencies>
                 <Dependency>zlib</Dependency>
                 <Dependency>zstd</Dependency>
                 <Dependency>libgcc</Dependency>
                 <Dependency>libpng</Dependency>
-                <Dependency>libX11</Dependency>
                 <Dependency>fribidi</Dependency>
-                <Dependency>utf8proc</Dependency>
                 <Dependency>freetype</Dependency>
                 <Dependency>harfbuzz</Dependency>
+                <Dependency>utf8proc</Dependency>
+                <Dependency>qt5-base</Dependency>
                 <Dependency>fontconfig</Dependency>
                 <Dependency>libunibreak</Dependency>
                 <Dependency>libjpeg-turbo</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="library">/usr/lib/libcrengine-ng.so</Path>
-                <Path fileType="data">/usr/share/crengine-ng</Path>
-                <Path fileType="data">/usr/share/crengine-ng/hyph</Path>
-                <Path fileType="data">/usr/share/doc/crengine-ng</Path>
-            </Files>
-        </Package>
-        <Package>
-            <Name>crengine-ng-devel</Name>
-            <RuntimeDependencies>
-                <Dependency>zlib-devel</Dependency>
-                <Dependency>zstd-devel</Dependency>
-                <Dependency>libpng-devel</Dependency>
-                <Dependency>fribidi-devel</Dependency>
-                <Dependency>utf8proc-devel</Dependency>
-                <Dependency>freetype-devel</Dependency>
-                <Dependency>harfbuzz-devel</Dependency>
-                <Dependency>fontconfig-devel</Dependency>
-                <Dependency>libunibreak-devel</Dependency>
-                <Dependency>libjpeg-turbo-devel</Dependency>
-                <Dependency release="1">crengine-ng</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include/crengine-ng</Path>
-                <Path fileType="data">/usr/lib/cmake/crengine-ng</Path>
-                <Path fileType="data">/usr/lib/pkgconfig/crengine-ng.pc</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/cr3</Path>
             </Files>
         </Package>
         <History>
-            <Update release="1">
-                <Date>2022-12-27</Date>
-                <Version>0.9.3</Version>
-                <Comment>First build.</Comment>
+            <Update release="2">
+                <Date>2022-07-30</Date>
+                <Version>3.2.59</Version>
+                <Comment>Rebuild</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
             </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>crqt</Name>
-            <Homepage>https://gitlab.com/coolreader-ng/crqt-ng</Homepage>
-            <Packager>
-                <Name>fury</Name>
-                <Email>uglyside@yandex.ru</Email>
-            </Packager>
-            <License>GPL-2</License>
-            <IsA>app:gui</IsA>
-            <PartOf>office.misc</PartOf>
-            <Summary xml:lang="en">crqt-ng - cross-platform open source e-book reader using crengine-ng.</Summary>
-            <Description xml:lang="en">It is a fork of the CoolReader project. Supported e-book formats: fb2, fb3 (incomplete), epub (non-DRM), doc, docx, odt, rtf, pdb, mobi (non-DRM), txt, html, chm, tcr.</Description>
-            <Archive type="tarbz2" sha1sum="9ce7946f1d1888c1ffdbf18a781c241680fe1c3e" name="crqt-ng-1.0.3.tar.bz2">https://gitlab.com/coolreader-ng/crqt-ng/-/archive/1.0.3/crqt-ng-1.0.3.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>cmake</Dependency>
-                <Dependency>ninja</Dependency>
-                <Dependency>libX11-devel</Dependency>
-                <Dependency>qt5-linguist</Dependency>
-                <Dependency>qt5-base-devel</Dependency>
-                <Dependency>crengine-ng-devel</Dependency>
-            </BuildDependencies>
-            <SourceURI>office/misc/crqt/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>crqt</Name>
-            <RuntimeDependencies>
-                <Dependency>libgcc</Dependency>
-                <Dependency>qt5-base</Dependency>
-                <Dependency>crengine-ng</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share</Path>
-                <Path fileType="data">/usr/share/crqt</Path>
-                <Path fileType="data">/usr/share/crqt/i18n</Path>
-                <Path fileType="data">/usr/share/doc/crqt</Path>
-            </Files>
-        </Package>
-        <History>
             <Update release="1">
-                <Date>2022-12-27</Date>
-                <Version>1.0.3</Version>
-                <Comment>First build.</Comment>
+                <Date>2021-12-21</Date>
+                <Version>3.2.59</Version>
+                <Comment>First build</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>
             </Update>
@@ -19865,6 +18455,52 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>rainbow-cm</Name>
+            <Homepage>https://github.com/sde-gui/rainbow-cm</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-3</License>
+            <IsA>app</IsA>
+            <PartOf>desktop.misc</PartOf>
+            <Summary xml:lang="en">Rainbow CM is a lightweight GTK2-based clipboard manager for X11.</Summary>
+            <Description xml:lang="en">It was initially forked from Parcellite and substantially reworked to improve the code stability and robustness.</Description>
+            <Archive type="zip" sha1sum="97201b304b30711411e4d972b828b64024ce6579" name="398fac17f3341e3c4aa53cb9ec6c007b410eca06.zip">https://github.com/sde-gui/rainbow-cm/archive/398fac17f3341e3c4aa53cb9ec6c007b410eca06.zip</Archive>
+            <BuildDependencies>
+                <Dependency>intltool</Dependency>
+                <Dependency>gtk2-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>desktop/misc/rainbow-cm/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>rainbow-cm</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>libX11</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/etc/xdg/autostart</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2022-12-15</Date>
+                <Version>1.0.0a</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>log4cxx</Name>
             <Homepage>http://logging.apache.org/log4cxx</Homepage>
             <Packager>
@@ -20200,6 +18836,67 @@
             <Update release="1">
                 <Date>2021-02-24</Date>
                 <Version>0.1</Version>
+                <Comment>First build.</Comment>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>jgmenu</Name>
+            <Homepage>https://jgmenu.github.io/</Homepage>
+            <Packager>
+                <Name>fury</Name>
+                <Email>uglyside@yandex.ru</Email>
+            </Packager>
+            <License>GPL-2</License>
+            <IsA>app</IsA>
+            <PartOf>desktop.misc</PartOf>
+            <Summary xml:lang="en">An X11 menu.</Summary>
+            <Description xml:lang="en">A simple, independent, contemporary-looking X11 menu, designed for scripting, ricing and tweaking.</Description>
+            <Archive type="targz" sha1sum="1657b9ef9d5bcfbb3f1bdcfd77c7555cb2e051e5" name="v4.4.1.tar.gz">https://github.com/jgmenu/jgmenu/archive/refs/tags/v4.4.1.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>gtk3-devel</Dependency>
+                <Dependency>pango-devel</Dependency>
+                <Dependency>cairo-devel</Dependency>
+                <Dependency>libX11-devel</Dependency>
+                <Dependency>librsvg-devel</Dependency>
+                <Dependency>libXrandr-devel</Dependency>
+                <Dependency>menu-cache-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">button_release.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/misc/jgmenu/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>jgmenu</Name>
+            <RuntimeDependencies>
+                <Dependency>glib2</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>libX11</Dependency>
+                <Dependency>libpng</Dependency>
+                <Dependency>python3</Dependency>
+                <Dependency>librsvg</Dependency>
+                <Dependency>libxml2</Dependency>
+                <Dependency>libXrandr</Dependency>
+                <Dependency>menu-cache</Dependency>
+                <Dependency>python3-pygobject3</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/jgmenu</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="manpages">/usr/share/man/man1</Path>
+                <Path fileType="manpages">/usr/share/man/man7</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2023-01-14</Date>
+                <Version>4.4.1</Version>
                 <Comment>First build.</Comment>
                 <Name>fury</Name>
                 <Email>uglyside@yandex.ru</Email>

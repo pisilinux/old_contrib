@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "https://www.pisilinux.org/projeler/pisi/pisi-spec.dtd">
+<PISI>
+	<Source>
+		<Name>geany-gtk2</Name>
+		<Homepage>https://geany.org/</Homepage>
+		<Packager>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Packager>
+		<License>GPLv2</License>
+		<IsA>app:gui</IsA>
+		<PartOf>editor</PartOf>
+		<Summary>GTK+ based fast and lightweight IDE.</Summary>
+		<Description>
+			Geany is a text editor using the GTK+ toolkit with basic features of an integrated development environment.
+		</Description>
+		<Archive sha1sum="9760a600905a2e17b9ed1970df909e6d3f32a7b2" type="tarbz2">
+			https://download.geany.org/geany-1.37.1.tar.bz2
+		</Archive>
+		<BuildDependencies>
+			<Dependency>libgcc</Dependency>
+			<Dependency>intltool</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>vte28-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+		</BuildDependencies>
+	</Source>
+
+	<Package>
+		<Name>geany-gtk2</Name>
+		<RuntimeDependencies>
+			<Dependency>atk</Dependency>
+			<Dependency>gtk2</Dependency>
+			<Dependency>vte28</Dependency>
+			<Dependency>glib2</Dependency>
+			<Dependency>cairo</Dependency>
+			<Dependency>pango</Dependency>
+			<Dependency>libgcc</Dependency>
+			<Dependency>gdk-pixbuf</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="executable">/usr/bin</Path>
+			<Path fileType="library">/usr/lib</Path>
+			<Path fileType="data">/usr/share</Path>
+			<Path fileType="localedata">/usr/share/locale</Path>
+			<Path fileType="man">/usr/share/man/man1</Path>
+			<Path fileType="doc">/usr/share/doc</Path>
+		</Files>
+		<Conflicts>
+			<Package>geany</Package>
+		</Conflicts>
+	</Package>
+
+	<Package>
+		<Name>geany-gtk2-devel</Name>
+		<RuntimeDependencies>
+			<Dependency release="current">geany-gtk2</Dependency>
+			<Dependency>gtk2-devel</Dependency>
+			<Dependency>glib2-devel</Dependency>
+		</RuntimeDependencies>
+		<Files>
+			<Path fileType="library">/usr/lib/pkgconfig</Path>
+			<Path fileType="include">/usr/include/geany/*</Path>
+		</Files>
+		<Conflicts>
+			<Package>geany-devel</Package>
+		</Conflicts>
+	</Package>
+
+	<History>
+		<Update release="1">
+			<Date>2023-01-22</Date>
+			<Version>1.37.1</Version>
+			<Comment>Rebuild with gtk2.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
+	</History>
+</PISI>

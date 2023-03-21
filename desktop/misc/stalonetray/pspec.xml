@@ -15,8 +15,8 @@
 		<Description>
 			Stalonetray is a stand-alone freedesktop.org and KDE system tray (notification area) for X Window System/X11 (e.g. X.Org or XFree86). It has full XEMBED support and minimal dependencies: an X11 lib only. Stalonetray works with virtually any EWMH-compliant window manager.
 		</Description>
-		<Archive sha1sum="66e5e75b480bfa52b28380202f2c25cf4121dce0" type="targz">
-			https://github.com/kolbusa/stalonetray/archive/v0.8.4.tar.gz
+		<Archive sha1sum="eb77fdaafff5299601752b8e222807dd8b742e3c" type="targz">
+			https://github.com/kolbusa/stalonetray/archive/refs/tags/v0.8.5.tar.gz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>libSM</Dependency>
@@ -44,6 +44,13 @@
 	</Package>
 
 	<History>
+		<Update release="3">
+			<Date>2023-03-21</Date>
+			<Version>0.8.5</Version>
+			<Comment>Version bump.</Comment>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
+		</Update>
 		<Update release="2">
 			<Date>2022-01-03</Date>
 			<Version>0.8.4</Version>
@@ -60,4 +67,3 @@
 		</Update>
 	</History>
 </PISI>
-

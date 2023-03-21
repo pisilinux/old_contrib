@@ -5,16 +5,16 @@
 		<Name>terminology</Name>
 		<Homepage>https://www.enlightenment.org/about-terminology</Homepage>
 		<Packager>
-			<Name>Erdinç Gültekin</Name>
-			<Email>admins@pisilinux.org</Email>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>BSD</License>
 		<IsA>app:gui</IsA>
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>A terminal emulator for Enlightenment.</Summary>
 		<Description>A EFL terminal emulator with some extra bells and whistles for Enlightenment.</Description>
-		<Archive sha1sum="dd671e4a22424a69d9f2d7e6c57e5cf07942686d" type="tarxz">
-			https://download.enlightenment.org/rel/apps/terminology/terminology-1.11.0.tar.xz
+		<Archive sha1sum="7707de84fcf25604536449ae01080f09589c2dee" type="tarxz">
+			https://download.enlightenment.org/rel/apps/terminology/terminology-1.13.0.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>meson</Dependency>
@@ -38,9 +38,9 @@
 
 	<History>
 		<Update release="1">
-			<Date>2022-01-02</Date>
-			<Version>1.11.0</Version>
-			<Comment>First rebuild.</Comment>
+			<Date>2023-03-19</Date>
+			<Version>1.13.0</Version>
+			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Update>

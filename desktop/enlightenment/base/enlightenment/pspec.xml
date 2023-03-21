@@ -5,16 +5,16 @@
 		<Name>enlightenment</Name>
 		<Homepage>https://www.enlightenment.org/</Homepage>
 		<Packager>
-			<Name>PisiLinux Community</Name>
-			<Email>admins@pisilinux.org</Email>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>BSD</License>
 		<IsA>app:gui</IsA>
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>Enlightenment Desktop Shell</Summary>
 		<Description>Enlightenment is a window manager for the X Window System that is designed to be powerful, extensible, configurable and pretty darned good looking! It is one of the more graphically intense window managers.</Description>
-		<Archive sha1sum="112648a9ce05268732cdd494ef276b8402973543" type="tarxz">
-			https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.25.0.tar.xz
+		<Archive sha1sum="be4bd266cfa89f1d110f6fda30fb8af806dcbcca" type="tarxz">
+			https://download.enlightenment.org/rel/apps/enlightenment/enlightenment-0.25.4.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -30,7 +30,7 @@
 			<Dependency>bluez-libs-devel</Dependency>
 			<Dependency>xkeyboard-config</Dependency>
 			<Dependency>libxkbcommon-devel</Dependency>
-			<Dependency>xorg-server-xwayland</Dependency>
+			<Dependency>xorg-xwayland-devel</Dependency>
 			<Dependency>pulseaudio-libs-devel</Dependency>
 			<Dependency>xcb-util-keysyms-devel</Dependency>
 		</BuildDependencies>
@@ -87,9 +87,9 @@
 
 	<History>
 		<Update release="1">
-			<Date>2022-01-02</Date>
-			<Version>0.25.0</Version>
-			<Comment>First rebuild.</Comment>
+			<Date>2023-03-19</Date>
+			<Version>0.25.4</Version>
+			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Update>

@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "https://pisilinux.org/projeler/pisi/pisi-spec.dtd">
 <PISI>
 	<Source>
-		<Name>python-efl</Name>
+		<Name>python3-efl</Name>
 		<Homepage>https://www.enlightenment.org/</Homepage>
 		<Packager>
 			<Name>fury</Name>
@@ -14,22 +14,22 @@
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>efl python bindings</Summary>
 		<Description>PYTHON-EFL are the python bindings for the whole EFL stack.</Description>
-		<Archive sha1sum="346e79cc70f169c381c2c6b096b7e4a08a0c1a6f" type="tarxz">
-			https://download.enlightenment.org/rel/bindings/python/python-efl-1.25.0.tar.xz
+		<Archive sha1sum="9c86e79480db07ddcca22fcd71083cc20032bc32" type="tarxz">
+			https://download.enlightenment.org/rel/bindings/python/python-efl-1.26.0.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cython3</Dependency>
-			<Dependency>python3</Dependency>
 			<Dependency>efl-devel</Dependency>
 			<Dependency>dbus-python3</Dependency>
 			<Dependency>python3-devel</Dependency>
+			<Dependency>python3-packaging</Dependency>
 			<Dependency>python3-setuptools</Dependency>
 			<Dependency>dbus-python-common</Dependency>
 		</BuildDependencies>
 	</Source>
 
 	<Package>
-		<Name>python-efl</Name>
+		<Name>python3-efl</Name>
 		<RuntimeDependencies>
 			<Dependency>efl</Dependency>
 			<Dependency>dbus</Dependency>
@@ -43,12 +43,11 @@
 
 	<History>
 		<Update release="1">
-			<Date>2022-01-02</Date>
-			<Version>1.25.0</Version>
-			<Comment>First rebuild.</Comment>
+			<Date>2023-03-19</Date>
+			<Version>1.26.0</Version>
+			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Update>
 	</History>
 </PISI>
-

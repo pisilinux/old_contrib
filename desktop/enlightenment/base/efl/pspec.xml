@@ -5,8 +5,8 @@
 		<Name>efl</Name>
 		<Homepage>https://www.enlightenment.org/</Homepage>
 		<Packager>
-			<Name>Alihan Öztürk</Name>
-			<Email>alihan@pisilinux.org</Email>
+			<Name>fury</Name>
+			<Email>uglyside@yandex.ru</Email>
 		</Packager>
 		<License>BSD</License>
 		<License>LGPLv2.1</License>
@@ -15,8 +15,8 @@
 		<PartOf>desktop.enlightenment.base</PartOf>
 		<Summary>Enlightenment Foundation Libraries.</Summary>
 		<Description>Enlightenment Foundation Libraries, powers millions of systems from mobile phones to set-top boxes, desktops, laptops, game systems and more. EFL is recognized for its forward-thinking approach which allows product designers and developers to offer more than the run-of-the-mill user experience of the past.</Description>
-		<Archive sha1sum="5c0b8661b4034a97ada38ad36b00624729ab7718" type="tarxz">
-			https://download.enlightenment.org/rel/libs/efl/efl-1.26.0.tar.xz
+		<Archive sha1sum="392ebdb853a85119ed098c360bdcd8c70bed7b38" type="tarxz">
+			https://download.enlightenment.org/rel/libs/efl/efl-1.26.3.tar.xz
 		</Archive>
 		<BuildDependencies>
 			<Dependency>cmake</Dependency>
@@ -196,9 +196,9 @@
 
 	<History>
 		<Update release="1">
-			<Date>2022-01-02</Date>
-			<Version>1.26.0</Version>
-			<Comment>First rebuild.</Comment>
+			<Date>2023-03-19</Date>
+			<Version>1.26.3</Version>
+			<Comment>First build.</Comment>
 			<Name>fury</Name>
 			<Email>uglyside@yandex.ru</Email>
 		</Update>

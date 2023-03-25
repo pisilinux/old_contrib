@@ -34,6 +34,10 @@
 			<Dependency>pulseaudio-libs-devel</Dependency>
 			<Dependency>xcb-util-keysyms-devel</Dependency>
 		</BuildDependencies>
+		<Patches>
+			<!-- <Patch level='1'></Patch> -->
+			<Patch level='1'>unset_QT_STYLE.patch</Patch>
+		</Patches>
 	</Source>
 
 	<Package>

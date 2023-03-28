@@ -15,7 +15,7 @@ j = ''.join([
     ])
 
 def setup():
-    pisitools.dosed("ext/libstrawberry-tagreader/tagreadertagparser.cpp", "core/timeconstants.h", "utilities/timeconstants.h")
+    #pisitools.dosed("ext/libstrawberry-tagreader/tagreadertagparser.cpp", "core/timeconstants.h", "utilities/timeconstants.h")
     cmaketools.configure(j)
 
 def build():
